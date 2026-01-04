@@ -152,7 +152,7 @@ Player Input → TCP/WebSocket → Command Queue → Game Loop
 | 1991 | Merc | Major rewrite of Diku |
 | 1993 | ROM | "Rivers of Mud" - Enhanced Merc |
 | 1996 | ROT | "Rivers of Time" - Enhanced ROM with OLC, clans, quests |
-| 2024 | Go Port | Modern reimplementation in Go |
+| 2025 | Go Port | Modern reimplementation in Go |
 
 ## Related
 
