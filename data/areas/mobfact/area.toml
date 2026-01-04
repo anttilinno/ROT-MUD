@@ -1,0 +1,8 @@
+id = "mob_factory"
+name = "Mob Factory"
+credits = "{09 30} PinkF   Mob Factory"
+reset_interval = 120
+
+[vnum_range]
+min = 9400
+max = 9499

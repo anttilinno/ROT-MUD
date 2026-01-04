@@ -1,0 +1,8 @@
+id = "mega_city_one"
+name = "Mega City One"
+credits = "{09 70} Glop    Mega-City One "
+reset_interval = 120
+
+[vnum_range]
+min = 8000
+max = 8099

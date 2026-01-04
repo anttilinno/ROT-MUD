@@ -1,0 +1,34 @@
+[[objects]]
+vnum = 13500
+keywords = ["raft"]
+short_desc = "a raft"
+long_desc = "A raft has been left here."
+item_type = "boat"
+level = 0
+weight = 750
+cost = 400
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 13501
+keywords = ["canoe"]
+short_desc = "a canoe"
+long_desc = "A canoe has been left here."
+item_type = "boat"
+level = 0
+weight = 320
+cost = 900
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 13502
+keywords = ["compass"]
+short_desc = "a navigater's compass"
+long_desc = "A navigater's compass has been left here."
+item_type = "light"
+level = 0
+weight = 5
+cost = 100
+wear_flags = ["take"]
+extra_flags = ["glow"]
+

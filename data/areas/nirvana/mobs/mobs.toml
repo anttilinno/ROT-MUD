@@ -1,0 +1,283 @@
+[[mobiles]]
+vnum = 9000
+keywords = ["tridrone"]
+short_desc = "the tridrone"
+long_desc = "A tridrone is here doing a menial task."
+description = """
+You see what appears to be a 3 sided pyramid with spidery arms and legs."""
+level = 16
+sex = "none"
+act_flags = ["npc", "scavenger", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 20
+  bonus = 80
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 9001
+keywords = ["quadrone"]
+short_desc = "the quadrone"
+long_desc = "A quadrone is here watching for trespassers."
+description = "A cubic creature, with spiny arms and legs."
+level = 21
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area", "warrior"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 14
+  size = 10
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9002
+keywords = ["pentadrone"]
+short_desc = "the pentadrone"
+long_desc = "The pentadrone is here policing the area."
+description = """
+A five-armed creature which resembles a starfish on thin stilt-like legs."""
+level = 27
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 12
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 3
+
+[[mobiles]]
+vnum = 9003
+keywords = ["decaton"]
+short_desc = "the decaton"
+long_desc = "A decaton is here overseeing the other modrons."
+description = "The decaton is a large, ten-tentacled sphere on stumpy legs."
+level = 34
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 9004
+keywords = ["nonaton"]
+short_desc = "the nonaton"
+long_desc = "A nonaton is here preserving law and order."
+description = "A cylidrical modron with 9 tentacles and stubby legs."
+level = 40
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 11
+  size = 8
+  bonus = 250
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 9005
+keywords = ["octon"]
+short_desc = "the octon"
+long_desc = "An octon is here governing his ward of responsilbility."
+description = """
+The octon has a collar at shoulder level with 8 tentacled arms growing out of
+it."""
+level = 43
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 5
+
+[[mobiles]]
+vnum = 9006
+keywords = ["septon"]
+short_desc = "the septon"
+long_desc = "A septon is here preserving order."
+description = """
+The septon appears as a human with a large bald head. It has a shoulder collar
+with 7 tentacles coming from it."""
+level = 48
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 30
+  size = 10
+  bonus = 350
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 9007
+keywords = ["hexton"]
+short_desc = "the hexton"
+long_desc = "A hexton is here watching over his armies."
+description = """
+A hexton appears as a humanoid with 6 arms: 2 large human arms with 6 fingers,
+and 4 tentacles below tipped with sharp claws."""
+level = 52
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 35
+  size = 20
+  bonus = 300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 8
+  bonus = 6
+
+[[mobiles]]
+vnum = 9008
+keywords = ["quinton"]
+short_desc = "the quinton"
+long_desc = "A quinton is here keeping records."
+description = """
+Quintons look like tall, stocky humanoids with 4 flexible arms jutting from the
+shoulders.  A prehensile tail serves as the creature's 5th arm, and they have
+fan-like wings attached to their shoulders."""
+level = 56
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 100
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 8
+  bonus = 7
+
+[[mobiles]]
+vnum = 9009
+keywords = ["tertian"]
+short_desc = "the tertian"
+long_desc = "A tertian is here administering the law."
+description = """
+Tertians look very human, save for their 12 foot size, the horns jutting from
+the sides of their bald heads, and the long prehensile tail ending in a mace-
+like ball."""
+level = 66
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 999
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 6
+  bonus = 12
+
+[[mobiles]]
+vnum = 9010
+keywords = ["secundus"]
+short_desc = "secundus"
+long_desc = "A Secundus, one of the Viceroys of Nirvana, is here."
+description = """
+The secundi is an incredibly thin, tall humanoids with long, narrow faces
+and deepset eyes. It radiates intense power."""
+level = 71
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 1599
+
+  [mobiles.damage_dice]
+  number = 7
+  size = 8
+  bonus = 15
+
+[[mobiles]]
+vnum = 9011
+keywords = ["Primus"]
+short_desc = "Primus"
+long_desc = "Primus, ruler of the Plane of Nirvana, forms out of an energy pool."
+description = """
+Primus is a huge being who rises out of the energy pool and glares at you with
+violet eyes. His right hand is wreathed in darkness, his left in light, and
+he looks very displeased to see you."""
+level = 80
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 3999
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 10
+  bonus = 25
+

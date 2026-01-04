@@ -1,0 +1,8 @@
+id = "elemental_canyon"
+name = "Elemental Canyon"
+credits = "{09 60} Raff    Elemental Canyon"
+reset_interval = 120
+
+[vnum_range]
+min = 9200
+max = 9299

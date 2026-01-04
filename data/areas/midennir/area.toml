@@ -1,0 +1,8 @@
+id = "midennir"
+name = "Miden'nir"
+credits = "{09 30} Copper  Miden'nir"
+reset_interval = 120
+
+[vnum_range]
+min = 3500
+max = 3599

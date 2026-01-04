@@ -1,0 +1,8 @@
+id = "moria"
+name = "Moria"
+credits = "{09 30} Alfa    Moria"
+reset_interval = 120
+
+[vnum_range]
+min = 3900
+max = 4199

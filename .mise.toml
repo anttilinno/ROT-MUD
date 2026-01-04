@@ -1,0 +1,27 @@
+[tools]
+go = "1.23"
+
+[tasks.build]
+description = "Build the ROT MUD server"
+run = "go build -o rotmud ./cmd/rotmud"
+
+[tasks.dev]
+description = "Build and run the ROT MUD server"
+run = "go build -o rotmud ./cmd/rotmud && ./rotmud"
+
+[tasks.test]
+description = "Run all tests"
+run = "go test ./..."
+
+[tasks.clean]
+description = "Clean build artifacts"
+run = "rm -f rotmud && go clean"
+
+[tasks.areconv]
+description = "Build the area converter tool"
+run = "go build -o areconv ./cmd/areconv"
+
+[tasks.convert-areas]
+description = "Convert all ROM areas to TOML format"
+depends = ["areconv"]
+run = "./areconv --all ../area ./data/areas"

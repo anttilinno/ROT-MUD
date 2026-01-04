@@ -1,0 +1,8 @@
+id = "sewers"
+name = "Sewers"
+credits = "{09 60} Diku    Sewer"
+reset_interval = 120
+
+[vnum_range]
+min = 7000
+max = 7499

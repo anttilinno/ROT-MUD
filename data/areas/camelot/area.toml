@@ -1,0 +1,8 @@
+id = "camelot"
+name = "Camelot"
+credits = "{20 35} Spencer Camelot"
+reset_interval = 120
+
+[vnum_range]
+min = 3800
+max = 3899

@@ -1,0 +1,8 @@
+id = "dylans_area"
+name = "Dylan's Area"
+credits = "{29 50} Dylan   Dylan's Area"
+reset_interval = 120
+
+[vnum_range]
+min = 9100
+max = 9199

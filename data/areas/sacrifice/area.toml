@@ -1,0 +1,8 @@
+id = "sacrifice"
+name = "Sacrifice"
+credits = "{ LOCK} Veng    Sacrifice"
+reset_interval = 120
+
+[vnum_range]
+min = 13500
+max = 13699

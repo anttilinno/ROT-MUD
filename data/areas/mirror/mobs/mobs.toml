@@ -1,0 +1,791 @@
+[[mobiles]]
+vnum = 5300
+keywords = ["oldstyle", "baby", "beholder"]
+short_desc = "the baby beholder"
+long_desc = "You meet a baby beholder's cute gaze!"
+description = """
+It has a large central eye that blinks like a guppy and eyestalks atop the 
+round body which can charm you with its cuteness.  Baby beholders are known for
+their playful personality.  Hmmm....  It looks like the baby is teething!"""
+level = 9
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 5301
+keywords = ["oldstyle", "lamia", "pet"]
+short_desc = "the pet lamia"
+long_desc = "A pet lamia stands here waiting for her next command."
+description = """
+This is a creature with the upper torso of a beautiful woman, but the lower
+body of a four-legged beast."""
+level = 8
+sex = "female"
+act_flags = ["npc", "scavenger", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 5302
+keywords = ["oldstyle", "citizen", "man"]
+short_desc = "a citizen of Thalos"
+long_desc = "A citizen of Thalos is here, conversing with everyone."
+description = """
+He smiles at you, almost as if he knows you.  He is so friendly, you have no
+choice but to reciprocate."""
+level = 9
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 5303
+keywords = ["oldstyle", "guard", "imperial", "cityguard"]
+short_desc = "an imperial cityguard"
+long_desc = "An imperial cityguard is here, keeping the peace of Thalos."
+description = """
+He is dressed in plate, and he looks quite formidable.  At the moment, though,
+he is just giggling with a kid running about."""
+level = 33
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 5304
+keywords = ["oldstyle", "citizen", "woman", "female"]
+short_desc = "a female citizen of Thalos"
+long_desc = "A female citizen of Thalos is here, showing off her new dress."
+description = """
+She is beautiful, dressed in a sundress that sparkles with gems sown in.  She
+smiles at you, and your heart flutters at the thought that you have her
+attention, if only for a moment."""
+level = 9
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 5305
+keywords = ["oldstyle", "gordon", "defender"]
+short_desc = "Gordon the Brave"
+long_desc = "Gordon the Brave, the Defender of Thalos, is here, looking at no\none but you, the only stranger in town."
+description = """
+Gordon is dressed in full mithril plate, and he looks indestructible.  He eyes
+you suspiciously not only because you are a stranger, but because you are an
+ARMED stranger.  Better not do any funny stuff in his presence."""
+level = 70
+sex = "male"
+act_flags = ["npc", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1400
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 5306
+keywords = ["oldstyle", "priest"]
+short_desc = "the fanatic priest"
+long_desc = "A fanatic priest is here, foretelling the destruction of Thalos."
+description = """
+The priest must have lost his mind.  He keeps saying that one day, evil will
+prevail and take over Thalos and bring the whole city down.  Obviously, no one
+listens to this fool.  The priest's right fist is covered in golden silk,
+and he clenches it at you.  Other than that, he is dressed all in black."""
+level = 19
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy", "cleric"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5307
+keywords = ["oldstyle", "priest"]
+short_desc = "the priest of Thalos"
+long_desc = "The priest of Thalos tells you of the glories of this city."
+description = """
+He stands here gloriously telling of Thalos's history, how it is now referred by
+the world as 'The City of Peace'.  He is very happy to be the high priest here."""
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 5308
+keywords = ["oldstyle", "golem", "stone"]
+short_desc = "the stone golem"
+long_desc = "In the corner you see a large, stone golem faithfully standing watch."
+description = """
+It is a big chunk of rock that has been magically formed into a giant
+stone creature.  It stands here guarding the city."""
+level = 59
+sex = "none"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5309
+keywords = ["oldstyle", "mayor"]
+short_desc = "the mayor of Thalos"
+long_desc = "The mayor of Thalos is sitting here, doing his paperwork."
+description = """
+He looks very busy, but he takes the time to say, 'Hi!  Welcome to Thalos!'
+He looks very proud of his work."""
+level = 40
+sex = "female"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 5310
+keywords = ["oldstyle", "dan", "barkeep"]
+short_desc = "Dan the Barkeep"
+long_desc = "Dan the Barkeep stands by the counter wiping a glass."
+description = "He looks at you, and says, 'What's your poison, stranger?'"
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5311
+keywords = ["oldstyle", "george", "butcher"]
+short_desc = "George the Butcher"
+long_desc = "George the Butcher is here whacking away at a side of beef."
+description = """
+Looking down at you with blood splattered all over his face and apron,
+he asks, 'How much you want?'"""
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5312
+keywords = ["oldstyle", "farmer", "betty"]
+short_desc = "Farmer Betty"
+long_desc = "Farmer Betty looks at you sweetly offering you some apples."
+description = "She smiles at you meekly."
+level = 60
+sex = "female"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5313
+keywords = ["oldstyle", "thaellor", "dwarf"]
+short_desc = "Thaellor the dwarf"
+long_desc = "Thaellor is here selling his metal wares."
+description = """
+Thaellor sweats rivers and complains about the heat as he pounds the
+metal into items of defense and destruction."""
+level = 59
+sex = "female"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5314
+keywords = ["oldstyle", "ben", "smith"]
+short_desc = "Ben the Smith"
+long_desc = "Ben the Smith sells metal odds and ends to anyone interested."
+description = "Ben tries to pawn his various wares to you."
+level = 59
+sex = "male"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5315
+keywords = ["oldstyle", "librarian"]
+short_desc = "the librarian"
+long_desc = "The librarian is here shelving books away neatly."
+description = "The librarian looks busy and whispers, 'Shhh!'"
+level = 16
+sex = "female"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5316
+keywords = ["oldstyle", "scholar", "boy"]
+short_desc = "a young scholar"
+long_desc = "A young scholar studies quietly in the corner."
+description = "This young scholar is studying to be a priest."
+level = 12
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 5317
+keywords = ["oldstyle", "wizard"]
+short_desc = "an old wizard"
+long_desc = "An old wizard sits quietly at the counter waiting for a sale."
+description = """
+This old wizard almost looks like he is about to fall over and sleep."""
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 5318
+keywords = ["oldstyle", "masseuse", "woman"]
+short_desc = "a beautiful masseuse"
+long_desc = "A beautiful woman is here offering you a massage."
+description = """
+She is beautiful, dressed in a sundress that sparkles with gems sown in.  She
+smiles at you, and your heart flutters at the thought that you have her
+attention, and you jump to her offer for a massage."""
+level = 8
+sex = "female"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 5319
+keywords = ["oldstyle", "bather", "man"]
+short_desc = "a man"
+long_desc = "A man is here bathing."
+description = """
+He smiles at you, almost as if he knows you.  He is so friendly, you have no
+choice but to reciprocate and join him and the others in the soothing pool."""
+level = 10
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 5320
+keywords = ["oldstyle", "guard", "imperial", "cityguard"]
+short_desc = "An imperial cityguard"
+long_desc = "An imperial cityguard overseeing patrols in the city."
+description = """
+He is dressed in plate, and he looks quite formidable.  At the moment,
+he is looking at a map of Thalos aside his fellow co-workers keeping
+track of each city patrol."""
+level = 33
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 5321
+keywords = ["oldstyle", "guard", "cityguard"]
+short_desc = "an imperial cityguard"
+long_desc = "An imperial cityguard guards the Grand Gate."
+description = """
+He is dressed in plate, and he looks quite formidable.  At the moment,
+he is watching the children play with amusement."""
+level = 34
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 5322
+keywords = ["oldstyle", "doe"]
+short_desc = "a doe"
+long_desc = "A doe munches on grass."
+description = """
+This peaceful creature looks at you with big dark eyes.  Her nose twitches as
+she sniffs at you, but she goes back to chewing some grass."""
+level = 9
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 5323
+keywords = ["oldstyle", "deer"]
+short_desc = "a deer"
+long_desc = "A deer stares back at you."
+description = """
+The deer looks angered at your intrusion.  He butts his head against you, 
+albeit ineffectively."""
+level = 11
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 5324
+keywords = ["oldstyle", "stag", "deer"]
+short_desc = "a stag"
+long_desc = "A large deer stag protects his territory."
+description = """
+He eyes you with contained anger.  You'd better leave him alone!"""
+level = 16
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5325
+keywords = ["oldstyle", "bunny", "rabbit"]
+short_desc = "a small bunny"
+long_desc = "A small bunny pokes from bush to bush."
+description = """
+This bunny looks so adorable, you wished you had one just like this!"""
+level = 4
+sex = "none"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 5326
+keywords = ["oldstyle", "snake"]
+short_desc = "a harmless snake"
+long_desc = "A small snake slithers between the grass."
+description = "Upon careful inspection, you are sure it is NOT a cobra!"
+level = 7
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 5327
+keywords = ["oldstyle", "druid"]
+short_desc = "a druid"
+long_desc = "A druid is here in meditation."
+description = """
+He doesn't like you bothering him, but is too polite to ask you to leave."""
+level = 19
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5328
+keywords = ["oldstyle", "druidess"]
+short_desc = "a druidess"
+long_desc = "A druidess peers at you."
+description = """
+She wonders why you are staring at her, and how you got in here."""
+level = 20
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5329
+keywords = ["oldstyle", "musician", "bard"]
+short_desc = "bard of Thalos"
+long_desc = "A bard sings of the glory of Thalos."
+description = """
+This musical fellow plays a happy song with his fellow comrades."""
+level = 16
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5330
+keywords = ["oldstyle", "musician", "bard"]
+short_desc = "bard of Thalos"
+long_desc = "This bard merrily skips along singing of the glory of Thalos."
+description = """
+This musical fellow wanders the world singing of the glory of Thalos."""
+level = 17
+sex = "male"
+act_flags = ["npc", "scavenger"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 5331
+keywords = ["oldstyle", "cityguard", "guard"]
+short_desc = "the cityguard"
+long_desc = "A cityguard stands here."
+description = "A big, strong, helpful, trustworthy guard."
+level = 30
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 5332
+keywords = ["oldstyle", "janitor"]
+short_desc = "the janitor"
+long_desc = "A janitor is walking around, cleaning up."
+level = 1
+sex = "male"
+act_flags = ["npc"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 5333
+keywords = ["oldstyle", "fido", "dog"]
+short_desc = "the beastly fido"
+long_desc = "Beastly Fido is here."
+description = """
+Fido is a small dog that has a foul smell and pieces of rotted meat hanging
+around his teeth."""
+level = 0
+sex = "male"
+act_flags = ["npc", "aggressive", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 2
+  bonus = 0
+
+[[mobiles]]
+vnum = 5334
+keywords = ["oldstyle", "cityguard", "guard"]
+short_desc = "the cityguard"
+long_desc = "A cityguard is here, guarding the gate."
+description = "A big, strong, helpful, trustworthy guard."
+level = 30
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+

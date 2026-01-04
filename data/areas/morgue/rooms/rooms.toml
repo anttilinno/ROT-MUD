@@ -1,0 +1,15 @@
+[[rooms]]
+vnum = 30201
+name = "The Morgue"
+sector = "inside"
+description = """
+You are standing in the city morgue. It stinks like death in here and
+all areound you are corpses of the people who got killed in battle. The
+walls are an off white and the floor is covered with blood. As you get
+everything from your corpse you realize that your floating object is
+in the place where you got killed."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3014
+

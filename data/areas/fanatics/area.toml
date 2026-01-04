@@ -1,0 +1,8 @@
+id = "fanatics_tower"
+name = "Fanatics' Tower"
+credits = "{70 140} Artema  Fanatics' Tower"
+reset_interval = 120
+
+[vnum_range]
+min = 19900
+max = 19999

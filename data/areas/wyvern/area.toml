@@ -1,0 +1,8 @@
+id = "wyverns_tower"
+name = "Wyvern's Tower"
+credits = "{09 60} Tyrst   Wyvern's Tower"
+reset_interval = 120
+
+[vnum_range]
+min = 1600
+max = 1799

@@ -1,0 +1,291 @@
+[[objects]]
+vnum = 1
+keywords = ["coin", "silver", "gcash"]
+short_desc = "a silver coin"
+long_desc = "One miserable silver coin."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2
+keywords = ["coin", "gold", "gcash"]
+short_desc = "a gold coin"
+long_desc = "One valuable gold coin."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3
+keywords = ["coins", "gold", "gcash"]
+short_desc = "%d gold coins"
+long_desc = "A pile of gold coins."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 4
+keywords = ["coins", "silver", "gcash"]
+short_desc = "%d silver coins"
+long_desc = "A pile of silver coins."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 5
+keywords = ["coins", "money", "gcash"]
+short_desc = "a pile of money"
+long_desc = "A pile of money."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 6
+keywords = ["coins", "platinum", "gcash"]
+short_desc = "a platinum coin"
+long_desc = "One valuable platinum coin."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7
+keywords = ["coins", "platinum", "gcash"]
+short_desc = "%d platinum coins"
+long_desc = "A pile of platinum coins."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 10
+keywords = ["corpse"]
+short_desc = "the corpse of %s"
+long_desc = "The corpse of %s is lying here."
+item_type = "npc_corpse"
+level = 0
+weight = 1000
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 11
+keywords = ["corpse"]
+short_desc = "the corpse of %s"
+long_desc = "The corpse of %s is lying here."
+item_type = "pc_corpse"
+level = 0
+weight = 1000
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["nopurge"]
+
+[[objects]]
+vnum = 12
+keywords = ["%s", "head"]
+short_desc = "the head of %s"
+long_desc = "The severed head of %s is lying here."
+item_type = "trash"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 13
+keywords = ["%s", "heart"]
+short_desc = "the heart of %s"
+long_desc = "The torn-out heart of %s is lying here."
+item_type = "food"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 14
+keywords = ["%s", "arm"]
+short_desc = "the arm of %s"
+long_desc = "The sliced-off arm of %s is lying here."
+item_type = "food"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 15
+keywords = ["%s", "leg"]
+short_desc = "the leg of %s"
+long_desc = "The sliced-off leg of %s is lying here."
+item_type = "food"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 16
+keywords = ["%s", "guts", "entrails"]
+short_desc = "the guts of %s"
+long_desc = "A steaming pile of %s's entrails is lying here."
+item_type = "food"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 17
+keywords = ["%s", "brains", "brain"]
+short_desc = "the brains of %s"
+long_desc = "The splattered brains of %s are lying here."
+item_type = "food"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 18
+keywords = ["pool", "blood"]
+short_desc = "{Ra pool of blood{x"
+long_desc = "A small {Rpool of blood{x is here."
+item_type = "fountain"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["rot_death", "melt_drop"]
+
+[[objects]]
+vnum = 20
+keywords = ["mushroom"]
+short_desc = "a Magic Mushroom"
+long_desc = "A delicious magic mushroom is here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 21
+keywords = ["ball", "light"]
+short_desc = "a bright ball of light"
+long_desc = "A bright ball of light shimmers in the air."
+item_type = "light"
+level = 0
+weight = 0
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 22
+keywords = ["spring"]
+short_desc = "a magical spring"
+long_desc = "A magical spring flows from the ground here."
+item_type = "fountain"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 23
+keywords = ["disc", "disk", "floating", "black"]
+short_desc = "a floating disc"
+long_desc = "A floating black disc hangs in the air."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+wear_flags = ["take", "float"]
+extra_flags = ["magic", "noremove", "rot_death", "had_timer"]
+
+[[objects]]
+vnum = 25
+keywords = ["gate", "portal"]
+short_desc = "a shimmering gate"
+long_desc = "A shimmering black gate rises from the ground, leading to parts unknown."
+item_type = "portal"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["magic", "nopurge", "melt_drop"]
+
+[[objects]]
+vnum = 50
+keywords = ["pill", "quest", "white"]
+short_desc = "a shimmering white pill"
+long_desc = "A shimmering white pill has been dropped here."
+item_type = "pill"
+level = 0
+weight = 1
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow", "magic", "nodrop", "melt_drop"]
+
+[[objects]]
+vnum = 51
+keywords = ["%s", "voodoo", "doll"]
+short_desc = "a voodoo doll of %s"
+long_desc = "A voodoo doll of %s is lying here."
+item_type = "treasure"
+level = 20
+weight = 5
+cost = 50
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 52
+keywords = ["exit"]
+short_desc = "exit"
+long_desc = "Nothing special there."
+item_type = "exit"
+level = 1
+weight = 1
+cost = 1
+extra_flags = ["nopurge", "nonmetal", "melt_drop"]
+
+[[objects]]
+vnum = 53
+keywords = ["exit", "chain", "up"]
+short_desc = "the chain"
+long_desc = "The chain disappears in the clouds."
+item_type = "exit"
+level = 1
+weight = 1
+cost = 1
+extra_flags = ["nopurge", "nonmetal", "melt_drop"]
+
+[[objects]]
+vnum = 54
+keywords = ["bag"]
+short_desc = "a paper bag"
+long_desc = "A small paper bag."
+item_type = "container"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+

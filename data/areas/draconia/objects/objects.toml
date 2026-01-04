@@ -1,0 +1,588 @@
+[[objects]]
+vnum = 2200
+keywords = ["spear", "jagged"]
+short_desc = "a jagged spear"
+long_desc = "A jagged spear has been left here."
+item_type = "weapon"
+level = 19
+weight = 150
+cost = 153
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+[[objects]]
+vnum = 2201
+keywords = ["dagger", "silver"]
+short_desc = "a silver dagger"
+long_desc = "A silver dagger is lying here."
+item_type = "weapon"
+level = 43
+weight = 10
+cost = 2000
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+[[objects]]
+vnum = 2202
+keywords = ["knife", "tooth", "dragon"]
+short_desc = "a dragon's tooth knife"
+long_desc = "A dangerous looking knife made from a dragon's tooth has been left here."
+item_type = "weapon"
+level = 59
+weight = 80
+cost = 3200
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+[[objects]]
+vnum = 2203
+keywords = ["bracelet", "dragon"]
+short_desc = "a dragon skin bracelet"
+long_desc = "A scaly bracelet lies on the ground."
+item_type = "armor"
+level = 29
+weight = 100
+cost = 1170
+wear_flags = ["take", "wrist"]
+
+[[objects]]
+vnum = 2204
+keywords = ["belt", "silk", "black"]
+short_desc = "a black silk belt"
+long_desc = "A black belt made of the finest silk is hanging here."
+item_type = "armor"
+level = 33
+weight = 250
+cost = 3900
+wear_flags = ["take", "waist"]
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+[[objects]]
+vnum = 2210
+keywords = ["belt", "silk", "white"]
+short_desc = "a white silk belt"
+long_desc = "A white belt made of the finest silk is hanging here."
+item_type = "armor"
+level = 33
+weight = 250
+cost = 3900
+wear_flags = ["take", "waist"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+[[objects]]
+vnum = 2211
+keywords = ["bracelet", "platinum"]
+short_desc = "a platinum bracelet."
+long_desc = "A tarnished platinum bracelet has been dropped here."
+item_type = "armor"
+level = 39
+weight = 50
+cost = 1450
+wear_flags = ["take", "wrist"]
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 2220
+keywords = ["symbol", "holy"]
+short_desc = "a holy symbol"
+long_desc = "A golden holy symbol is here."
+item_type = "jewelry"
+level = 19
+weight = 20
+cost = 270
+wear_flags = ["take", "neck", "hold"]
+extra_flags = ["glow"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 15
+
+[[objects]]
+vnum = 2221
+keywords = ["robe", "black"]
+short_desc = "a plain black robe"
+long_desc = "A black robe is hanging on a hook on the wall."
+item_type = "armor"
+level = 41
+weight = 30
+cost = 2000
+wear_flags = ["take", "about"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 2222
+keywords = ["sword", "emerald"]
+short_desc = "an emerald sword"
+long_desc = "An emerald long sword is leaning against the wall."
+item_type = "weapon"
+level = 55
+weight = 240
+cost = 2300
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 6
+
+[[objects]]
+vnum = 2223
+keywords = ["club", "stone"]
+short_desc = "a stone club"
+long_desc = "A heavy looking stone club is here."
+item_type = "weapon"
+level = 35
+weight = 180
+cost = 940
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 6
+
+[[objects]]
+vnum = 2224
+keywords = ["ring", "diamond"]
+short_desc = "a diamond ring"
+long_desc = "A diamond ring lies gleaming on the ground."
+item_type = "jewelry"
+level = 73
+weight = 60
+cost = 6800
+wear_flags = ["take", "finger"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 2230
+keywords = ["ring", "copper"]
+short_desc = "a copper ring"
+long_desc = "A copper ring is here."
+item_type = "jewelry"
+level = 29
+weight = 10
+cost = 2600
+wear_flags = ["take", "finger"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+[[objects]]
+vnum = 2231
+keywords = ["key", "steel"]
+short_desc = "a steel key"
+long_desc = "A steel key."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2232
+keywords = ["key", "ruby"]
+short_desc = "a ruby key"
+long_desc = "A ruby key."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2233
+keywords = ["key", "white"]
+short_desc = "a white key"
+long_desc = "A white key."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2234
+keywords = ["key", "grey"]
+short_desc = "a grey key"
+long_desc = "A grey key is resting on the ground here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2237
+keywords = ["key", "stone"]
+short_desc = "a stone key"
+long_desc = "A stone key."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2240
+keywords = ["key", "black"]
+short_desc = "a black key"
+long_desc = "A black key."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2241
+keywords = ["key", "platinum"]
+short_desc = "a platinum key"
+long_desc = "A platinum key."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2242
+keywords = ["shield", "crested"]
+short_desc = "a crested shield"
+long_desc = "A large crested shield draws your attention."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 3900
+wear_flags = ["take", "shield"]
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 1
+
+[[objects]]
+vnum = 2243
+keywords = ["wand", "golden"]
+short_desc = "a golden wand"
+long_desc = "A golden wand has been dropped here."
+item_type = "wand"
+level = 27
+weight = 50
+cost = 5500
+wear_flags = ["take", "hold"]
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 2244
+keywords = ["staff", "silver"]
+short_desc = "a silver staff"
+long_desc = "A silver staff."
+item_type = "staff"
+level = 27
+weight = 50
+cost = 11700
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+[[objects]]
+vnum = 2245
+keywords = ["staff", "dragon"]
+short_desc = "the staff of the dragon"
+long_desc = "A powerful oak staff has been left here."
+item_type = "staff"
+level = 29
+weight = 50
+cost = 10200
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+[[objects]]
+vnum = 2246
+keywords = ["mail", "scale"]
+short_desc = "scale mail"
+long_desc = "A set of scale mail has been abandoned here."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 3900
+wear_flags = ["take", "body"]
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 2250
+keywords = ["staff", "black"]
+short_desc = "a black staff"
+long_desc = "You notice the faint outline of a staff."
+item_type = "staff"
+level = 27
+weight = 250
+cost = 5300
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "anti_good"]
+
+[[objects]]
+vnum = 2251
+keywords = ["potion", "cyan"]
+short_desc = "a cyan potion"
+long_desc = "A small cyan potion has been left here."
+item_type = "potion"
+level = 17
+weight = 10
+cost = 1060
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2252
+keywords = ["potion", "magenta"]
+short_desc = "a magenta potion"
+long_desc = "A magenta potion."
+item_type = "potion"
+level = 13
+weight = 10
+cost = 600
+wear_flags = ["take"]
+extra_flags = ["nodrop"]
+
+[[objects]]
+vnum = 2254
+keywords = ["gauntlets", "spiked"]
+short_desc = "a pair of spiked gauntlets"
+long_desc = "A pair of spiked gauntlets."
+item_type = "armor"
+level = 39
+weight = 100
+cost = 2500
+wear_flags = ["take", "hands"]
+extra_flags = ["glow", "magic"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 2260
+keywords = ["scimitar", "golden"]
+short_desc = "a golden scimitar"
+long_desc = "A golden scimitar."
+item_type = "weapon"
+level = 31
+weight = 100
+cost = 2500
+wear_flags = ["take", "wield"]
+extra_flags = ["glow"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+[[objects]]
+vnum = 2261
+keywords = ["brooch", "diamond"]
+short_desc = "a diamond brooch"
+long_desc = "A diamond brooch."
+item_type = "jewelry"
+level = 49
+weight = 20
+cost = 980
+wear_flags = ["take", "neck"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 25
+
+[[objects]]
+vnum = 2270
+keywords = ["scroll"]
+short_desc = "a runed scroll"
+long_desc = "A runed scroll."
+item_type = "scroll"
+level = 23
+weight = 10
+cost = 1960
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 2271
+keywords = ["gloves", "dragon"]
+short_desc = "a pair of dragon skin gloves"
+long_desc = "A pair of dragon skin gloves are lying on the ground."
+item_type = "armor"
+level = 33
+weight = 50
+cost = 4000
+wear_flags = ["take", "hands"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+[[objects]]
+vnum = 2275
+keywords = ["helm", "dragon"]
+short_desc = "a helm of dragon kind"
+long_desc = "A helm made of a dragon's skull is lying on the ground."
+item_type = "armor"
+level = 69
+weight = 150
+cost = 4100
+wear_flags = ["take", "head"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 15
+
+[[objects]]
+vnum = 2276
+keywords = ["fur", "cloak"]
+short_desc = "a fur cloak"
+long_desc = "A large mound of fur is lying here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1910
+wear_flags = ["take", "about"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 2280
+keywords = ["leggings", "dragon", "scale"]
+short_desc = "a pair of dragon scale leggings"
+long_desc = "A pair of dragon scale leggings is lying on the ground."
+item_type = "armor"
+level = 39
+weight = 150
+cost = 1590
+wear_flags = ["take", "legs"]
+
+[[objects]]
+vnum = 2281
+keywords = ["sleeves", "dragon", "scale"]
+short_desc = "a set of dragon scale sleeves"
+long_desc = "A set of dragon scale sleeves is lying on the ground."
+item_type = "armor"
+level = 39
+weight = 120
+cost = 1590
+wear_flags = ["take", "arms"]
+
+[[objects]]
+vnum = 2285
+keywords = ["whip", "dragon", "tail"]
+short_desc = "a dragon tailed whip"
+long_desc = "A dragon tailed whip is lying on the ground."
+item_type = "weapon"
+level = 47
+weight = 140
+cost = 1530
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "anti_good"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 2286
+keywords = ["hammer", "copper"]
+short_desc = "a copper hammer"
+long_desc = "A copper hammer is lying on the ground."
+item_type = "weapon"
+level = 29
+weight = 120
+cost = 750
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+[[objects]]
+vnum = 2287
+keywords = ["dagger", "silver"]
+short_desc = "a silver dagger"
+long_desc = "A silver dagger is lying here."
+item_type = "weapon"
+level = 9
+weight = 10
+cost = 360
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 2299
+keywords = ["key", "gold", "tarnished"]
+short_desc = "a tarnished gold key"
+long_desc = "A tarnished gold key lies here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+

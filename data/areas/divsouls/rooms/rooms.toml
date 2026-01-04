@@ -1,0 +1,2176 @@
+[[rooms]]
+vnum = 11600
+name = "Intersection on a Pebbled Path"
+sector = "city"
+description = """
+Shiny white pebbles form a narrow path between tall hedges running north and
+south.  A large well is visible through a break in the hedges to the east.
+A brass plaque rests against the hedges at the edge of the path."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11601
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11622
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11624
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9304
+
+[[rooms]]
+vnum = 11601
+name = "Between the Hedges"
+sector = "city"
+description = """
+The pebbles gleam brightly in the sunlight pouring in from a clearing in the
+hedges to the west.  The path opens north onto a lush garden and continues
+south into the hedges."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11603
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11600
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11602
+
+  [[rooms.mob_resets]]
+  vnum = 11602
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11614
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 11614
+  max = 5
+
+[[rooms]]
+vnum = 11602
+name = "Bright Clearing"
+sector = "city"
+description = """
+Light seems to focus on this clearing as if attracted by some invisible magnet.
+Large bushes dot the ground, hacked into strange, somewhat recognizable forms
+reminiscient of a child's daydreams."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11601
+
+  [[rooms.mob_resets]]
+  vnum = 11612
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11613
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11614
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 11615
+  max = 1
+
+[[rooms]]
+vnum = 11603
+name = "Garden Path"
+sector = "city"
+description = """
+A huge variety of multicolored plants surrounds you in a rainbow of exotic
+beauty.  Their mingled fragrance fills the air with a sweet, slightly tangy
+perfume.  A large white gazebo rises from the flower beds to the north.
+The dirt path you are on continues east and west around the gazebo."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11604
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11610
+
+[[rooms]]
+vnum = 11604
+name = "Garden Path"
+sector = "city"
+description = """
+A huge variety of multicolored plants surrounds you in a rainbow of exotic
+beauty.  Their mingled fragrance fills the air with a sweet, slightly tangy
+perfume.  A large white gazebo rises from the flower beds to the northwest.
+The dirt path you are on continues west and north around the gazebo.
+To the east, the path opens into a large clearing."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11605
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11612
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11603
+
+  [[rooms.mob_resets]]
+  vnum = 11610
+  max = 1
+
+[[rooms]]
+vnum = 11605
+name = "Garden Path"
+sector = "city"
+description = """
+A huge variety of multicolored plants surrounds you in a rainbow of exotic
+beauty.  Their mingled fragrance fills the air with a sweet, slightly tangy
+perfume.  A large white gazebo rises from the flower beds to the west.
+The dirt path you are on continues north and south around the gazebo."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11606
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11604
+
+  [[rooms.mob_resets]]
+  vnum = 11608
+  max = 3
+
+[[rooms]]
+vnum = 11606
+name = "Garden Path"
+sector = "city"
+description = """
+A huge variety of multicolored plants surrounds you in a rainbow of exotic
+beauty.  Their mingled fragrance fills the air with a sweet, slightly tangy
+perfume.  A large white gazebo rises from the flower beds to the southwest.
+The dirt path you are on continues south and west around the gazebo."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11605
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11607
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11615
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11605
+  max = 1
+
+[[rooms]]
+vnum = 11607
+name = "Hippo Fountain"
+sector = "city"
+description = """
+A tall marble fountain, carved in the form of two frolicking white hippos cuts
+the path here.  Water spews from one hippo's mouth into the basin below.
+While the sculpture is evidently someone's idea of artistry, it seems almost
+grotesque, especially since the hippo acting as the fountain appears to be 
+barfing on the other..  Marble steps lead into the gazebo to the south.  
+The dirt path continues west and east around the gazebo."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11606
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11611
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11608
+
+  [[rooms.mob_resets]]
+  vnum = 11614
+  max = 5
+
+[[rooms]]
+vnum = 11608
+name = "Garden Path"
+sector = "city"
+description = """
+A huge variety of multicolored plants surrounds you in a rainbow of exotic
+beauty.  Their mingled fragrance fills the air with a sweet, slightly tangy
+perfume.  A large white gazebo rises from the flower beds to the southeast.
+The dirt path you are on continues east and south around the gazebo."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11617
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11607
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11609
+
+[[rooms]]
+vnum = 11609
+name = "Garden Path"
+sector = "city"
+description = """
+A huge variety of multicolored plants surrounds you in a rainbow of exotic
+beauty.  Their mingled fragrance fills the air with a sweet, slightly tangy
+perfume.  A large white gazebo rises from the flower beds to the east.
+The dirt path you are on continues north and south around the gazebo."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11608
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11610
+
+  [[rooms.mob_resets]]
+  vnum = 11608
+  max = 3
+
+[[rooms]]
+vnum = 11610
+name = "Garden Path"
+sector = "city"
+description = """
+A huge variety of multicolored plants surrounds you in a rainbow of exotic
+beauty.  Their mingled fragrance fills the air with a sweet, slightly tangy
+perfume.  A large white gazebo rises from the flower beds to the northeast.
+The dirt path you are on continues north and east around the gazebo."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11609
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11603
+
+  [[rooms.mob_resets]]
+  vnum = 11602
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11609
+  max = 1
+
+[[rooms]]
+vnum = 11611
+name = "Inside the Gazebo"
+sector = "inside"
+description = """
+You stand inside a large, white gazebo.  A lacework of white painted 
+ashwood arcs overhead, marking the grey marble floor with strips of dark
+shadow.  A carved white altar rises out of the center of the floor."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11607
+
+  [[rooms.obj_resets]]
+  vnum = 11607
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11607
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11646
+  max = 1
+
+[[rooms]]
+vnum = 11612
+name = "Strange Artwork"
+sector = "field"
+description = """
+A ring of bluish-green shrubbery encircles a grassy clearing dominated by
+the hulking white.. thing (?) rising up from the center.  The grass surrounding
+the object is charred and seems to smolder as if newly burned.  The object
+itself is unburned."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11604
+
+  [[rooms.mob_resets]]
+  vnum = 11614
+  max = 5
+
+[[rooms]]
+vnum = 11613
+name = "Inside Artwork"
+sector = "inside"
+description = """
+The green of a lush garden is visible through the twisting lattice of bones
+forming the walls of this structure.  A ladder disappears into a hole in the
+center of the ground."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11614
+
+  [[rooms.obj_resets]]
+  vnum = 11600
+  max = 1
+
+[[rooms]]
+vnum = 11614
+name = "Hole"
+sector = "inside"
+description = """
+The center of the floor drops away into a churning multicolored void.
+Go down if you dare.."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11613
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11685
+
+  [[rooms.mob_resets]]
+  vnum = 11611
+  max = 1
+
+[[rooms]]
+vnum = 11615
+name = "Quiet Tunnel"
+sector = "inside"
+description = """
+A narrow north-south tunnel has been carved from the packed clay here.  Light
+filters in through an opening in the ceiling.  The rhythmic dripping of water
+is audible to the north, where the tunnel widens into a large cave."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11616
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11606
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11616
+name = "Mirror Pool"
+sector = "inside"
+description = """
+Wet walls of packed clay frame a huge circular cave.  Water drips from crevices
+in the ceiling and walls, flowing in rivulets and small streams to form a 
+clear, flat pool in the center of the cavern."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11615
+
+  [[rooms.obj_resets]]
+  vnum = 11601
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11606
+  max = 1
+
+[[rooms]]
+vnum = 11617
+name = "Redwood Platform"
+sector = "city"
+description = """
+A pentagonal redwood platform rises from the multicolored clusters of flowers 
+and shrubbery.  An granite tome is mounted in the center of the pentagon.
+Two low marbles pedestals, grey and white, stand on either side of the tome."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11608
+
+  [[rooms.mob_resets]]
+  vnum = 11603
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11604
+  max = 1
+
+[[rooms]]
+vnum = 11618
+name = "Base of a Large Tree"
+sector = "city"
+description = """
+The dirt path curves east and south here.  A huge oak tree looms to the
+northwest, its lower branches shading a large section of the path."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11608
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11619
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11620
+
+  [[rooms.mob_resets]]
+  vnum = 11648
+  max = 1
+
+[[rooms]]
+vnum = 11619
+name = "Ash Grove"
+sector = "field"
+description = """
+A ring of ash trees form a small, shaded grove here.  Glints of light filter
+through the overlapping branches to flicker in the shadows like fireflies.
+A narrow dirt path exits the grove to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11618
+
+  [[rooms.mob_resets]]
+  vnum = 11600
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11602
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11602
+  max = 6
+
+[[rooms]]
+vnum = 11620
+name = "Up a Large Oak Tree"
+sector = "forest"
+description = """
+You stand on a low branch near the huge trunk of the oak tree.  The thick
+network of branches above makes it impossible to climb higher.  The base
+of an enormous birdfeeder is visible along the branch to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11621
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11618
+
+[[rooms]]
+vnum = 11621
+name = "Inside the Birdfeeder"
+sector = "inside"
+description = """
+You find yourself at the edge of an enormous octagonal room.  Thick wooden
+walls disapppear out of sight above.  Blue sky and oaken branches are visible
+through 3 huge doorways cut into the walls.  The floor is littered with
+tan and grey egg-shaped spheres.  Between the spheres are clusters of birdseed."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11620
+
+  [[rooms.mob_resets]]
+  vnum = 11601
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11602
+  max = 6
+
+[[rooms]]
+vnum = 11622
+name = "Stone Well"
+sector = "city"
+description = """
+You stand in a wide grassy clearing framed by high hedges.  To one side,
+a stone well rises from the turf."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11600
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11623
+
+  [[rooms.mob_resets]]
+  vnum = 11602
+  max = 6
+
+[[rooms]]
+vnum = 11623
+name = "Inside the Well"
+sector = "city"
+description = """
+The smooth stone walls of the well tower above you on all sides.  The stone
+appears rough and unworn, as if the well has never been used.  A broken
+humanoid skeleton lies sprawled across the bottom of the well.  A dark wooden
+ladder ascends to the top of the well."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11622
+
+  [[rooms.mob_resets]]
+  vnum = 11616
+  max = 1
+
+[[rooms]]
+vnum = 11624
+name = "Misty Pathway"
+sector = "city"
+description = """
+Tendrils of cool mist creep across the pathway from the south, leaving the
+white pebbles of the path cool and shiny.  Tall hedges frame the path to the
+north.  The mist thickens to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11600
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11625
+
+  [[rooms.mob_resets]]
+  vnum = 11608
+  max = 3
+
+[[rooms]]
+vnum = 11625
+name = "Shore of the Lake of Mist"
+sector = "city"
+description = """
+You stand on the rocky shore of a lake which seems to be composed entirely of
+mist.  Dense white vapor from the lake overflows up and over the path to the
+north.  Below, the shore dips into the lake."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11624
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11626
+
+[[rooms]]
+vnum = 11626
+name = "Misty Lake"
+sector = "field"
+description = """
+Cool, dense mist swirls around you, limiting vision to less than a meter.
+The lake bottom is dotted with large grey-white boulders and clumps of 
+slippery grass.  To the north, the lakeshore ascends above the mist.  The 
+lake continues south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11625
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11628
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11627
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11617
+  max = 1
+
+[[rooms]]
+vnum = 11627
+name = "Mossy Cave"
+sector = "field"
+description = """
+A small natural cave is set into the grey-white rocks of the lake here.  
+Patches of phosphorescent green blue moss dot the slick cave walls, glowing
+eerily in the mist.  A clump of large bushes to the east shields the cave
+from the rest of the lake."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11626
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11618
+  max = 1
+
+[[rooms]]
+vnum = 11628
+name = "Misty Lake"
+sector = "field"
+description = """
+The chill mist of the lake tingles damply against your skin.  Through the
+white haze, you can make out a path heading east and west between the large
+boulders littering the lake floor.  The lake floor continues north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11626
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11629
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11631
+
+[[rooms]]
+vnum = 11629
+name = "Misty Lake"
+sector = "field"
+description = """
+The path along the lake floor leads west and south here.  To the south, the
+path opens onto a wide misty pool."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11630
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11628
+
+  [[rooms.mob_resets]]
+  vnum = 11619
+  max = 1
+
+[[rooms]]
+vnum = 11630
+name = "Pool of Mist"
+sector = "field"
+description = """
+The lake walls curve here to form a large misty pool.  A moss-covered marble
+pedestal rests in a depression in the center of the pool.  To the north, a
+path leads back into the lake."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11629
+
+  [[rooms.mob_resets]]
+  vnum = 11620
+  max = 1
+
+[[rooms]]
+vnum = 11631
+name = ""
+sector = "field"
+description = """
+A dark opening, partially obscured by a clump of green weeds, cuts into the 
+lake wall to the south.  The lake floor continues east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11628
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11632
+
+[[rooms]]
+vnum = 11632
+name = "Dark Tunnel"
+sector = "inside"
+description = """
+A high, narrow granite tunnel has been hewn from the granite lake wall.  White
+mist seeps in from the opening to the north, leaving the rock walls slippery
+and cold.  The darkness seems to deepen to the west, where the tunnel widens
+into a cave."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11631
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11633
+
+[[rooms]]
+vnum = 11633
+name = "Shadowy Cavern"
+sector = "inside"
+description = """
+Dark granite walls form a large cavern here.  Darkness and shadows seem to 
+deepen here, as if attracted by some unseen force.  Barely visible through
+the darkness, a tunnel exits the cave to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11632
+
+  [[rooms.obj_resets]]
+  vnum = 11602
+  max = 1
+
+[[rooms]]
+vnum = 11634
+name = "Onyx Hallway"
+sector = "inside"
+description = """
+Chill air from the north causes the torches to gutter occassionally,
+picking out eerie shadows against the dark onyx walls.  A plain oaken door
+is set into the east wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11658
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11656
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11635
+
+[[rooms]]
+vnum = 11635
+name = "Onyx Hallway"
+sector = "inside"
+description = """
+The smooth black walls are broken by streaks of blood, both new and old.
+Distant screams echo through the hallway.  To the south, the hall intersects
+a dark corridor.  A solid black door is set into the west wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11634
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11637
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11636
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11625
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11637
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 11637
+  max = 5
+
+[[rooms]]
+vnum = 11636
+name = "Chamber of the High Priest"
+sector = "inside"
+description = """
+Black marble walls frame a large circular room and a high stone ceiling
+supported by marble pillars.  Dull brownish patches dot the polished walls
+where spattered blood has dried."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11635
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11635
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11636
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11637
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 11638
+  max = 1
+
+[[rooms]]
+vnum = 11637
+name = "Dark corridor"
+sector = "inside"
+description = """
+Walls of dark stone line a corridor running east and west here.  Shadows,
+almost invisible against the stone, flicker eerily in the dim torchlight.
+An onyx hallway intersects the corridor here and continues north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11635
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11644
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11638
+
+[[rooms]]
+vnum = 11638
+name = "Dark corridor"
+sector = "inside"
+description = """
+The dark corridor runs east and south here.  A feeling of forboding permeates
+the air.  It seems like the walls are watching.."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11637
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11639
+
+  [[rooms.mob_resets]]
+  vnum = 11633
+  max = 1
+
+[[rooms]]
+vnum = 11639
+name = "Dark corridor"
+sector = "inside"
+description = """
+The dark corridor runs north and south here.  Distant screams echo eerily
+against the stone walls."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11638
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11640
+
+  [[rooms.mob_resets]]
+  vnum = 11631
+  max = 3
+
+[[rooms]]
+vnum = 11640
+name = "Dark corridor"
+sector = "inside"
+description = """
+The corridor branches north and east here.  A stone archway leads west into
+a large hall.  Huge, forbidding double doors loom over the corridor to the 
+south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11639
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11641
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11651
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11652
+
+  [[rooms.mob_resets]]
+  vnum = 11628
+  max = 1
+
+[[rooms]]
+vnum = 11641
+name = "Dark corridor"
+sector = "inside"
+description = """
+The dark corridor runs west and east here.  To the north, black marble steps
+lead up to a pair of bloodstained bronze doors."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11645
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11642
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11640
+
+  [[rooms.mob_resets]]
+  vnum = 11637
+  max = 5
+
+[[rooms]]
+vnum = 11642
+name = "Dark corridor"
+sector = "inside"
+description = """
+The corridor branches north and west here.  A humanoid skeleton has been
+entombed in the corridor ceiling.  The bones gleam whitely against the 
+dark stone, and the hollow eyesockets seem to glare accusingly at you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11643
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11641
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11649
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11643
+name = "Dark corridor"
+sector = "inside"
+description = "The dark corridor runs north and south here."
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11644
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11642
+
+  [[rooms.mob_resets]]
+  vnum = 11631
+  max = 3
+
+[[rooms]]
+vnum = 11644
+name = "Dark corridor"
+sector = "inside"
+description = """
+The dark corridor runs west and south here.  A narrow marble archway opens
+east into a large room."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11646
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11643
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11637
+
+  [[rooms.mob_resets]]
+  vnum = 11625
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11632
+  max = 1
+
+[[rooms]]
+vnum = 11645
+name = "Bloody Altar"
+sector = "inside"
+description = """
+A black marble dais dominates the room.  Mounted in the center of the dais,
+an obsidian altar gleams dully with fresh blood.  Lit copper braziers 
+mounted on either side of the altar fill the room with a cloying smoke."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11641
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 11608
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11630
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11647
+  max = 1
+
+[[rooms]]
+vnum = 11646
+name = "Room of Faces"
+sector = "inside"
+description = """
+Hideous stone faces protrude from the black walls and ceiling, their 
+polished surfaces partly obscured by the smoke from the copper braziers
+set into the four corners.  Rising from the center of the room is a huge
+demonic face, sculpted of grey-streaked black marble.  A marble archway
+opens west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11644
+
+  [[rooms.obj_resets]]
+  vnum = 11603
+  max = 1
+
+[[rooms]]
+vnum = 11647
+name = "Inside the Mouth"
+sector = "inside"
+description = """
+You stand on the stone tongue inside the cavernous mouth of the sculpture.
+The shape of the slippery tongue seems to writhe even as you stand on it,
+preventing both exit from the mouth and movement farther into it.  A
+weighted rope, vaguely tonsil-shaped, ascends through an opening above."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11648
+
+  [[rooms.mob_resets]]
+  vnum = 11637
+  max = 5
+
+[[rooms]]
+vnum = 11648
+name = "Beneath the churning void"
+sector = "inside"
+description = """
+You hang suspended on a heavy rope halfway up a narrow stone chute.
+The rope disappears into the center of what appears to be a churning
+multicolored void.  Who know where it may lead.."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11692
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11647
+
+  [[rooms.mob_resets]]
+  vnum = 11634
+  max = 1
+
+[[rooms]]
+vnum = 11649
+name = "Narrow Passageway"
+sector = "inside"
+description = """
+You find yourself in a narrow stone passageway leading south.  The low
+ceiling forces all but the shortest to stoop in order to pass through.
+A skeleton is embedded in the rock below."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11650
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11642
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11650
+name = "Damp Cavern"
+sector = "inside"
+description = """
+A rhythmic dripping echoes through the large stone chamber.  Rivulets 
+of water run down the stalagtites clinging to the ceiling, collecting to
+form a large, round pool in the center of the cave.  A narrow passage
+exits the cave to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11649
+
+  [[rooms.obj_resets]]
+  vnum = 11604
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11629
+  max = 1
+
+[[rooms]]
+vnum = 11651
+name = "Pentagram Chamber"
+sector = "inside"
+description = """
+Engraved across the center of the stone floor is a large pentagram.  At
+the center of the star rests a large grey tome, apparently mounted to
+the floor of the room.  A pair of black steel doors are set into the
+north wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11640
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11626
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11627
+  max = 1
+
+[[rooms]]
+vnum = 11652
+name = "Dining Hall"
+sector = "inside"
+description = """
+You stand in a long, black tiled hall.  A stone table dominates the center 
+of the room, stretching nearly the length of the hall.  Half-eaten carcasses 
+litter the table and floor, surrounded by sticky puddles of blood and other 
+less recognizable fluids.  A trapdoor is set into the corner of the floor.
+Foul odors and smoke drift into the room from the doorway to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11653
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11640
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11654
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11649
+  max = 1
+
+[[rooms]]
+vnum = 11653
+name = "Kitchen"
+sector = "inside"
+description = """
+The dark stone floor is slippery with blood and pieces of raw flesh and 
+intestines.  A long spit in the center of the floor bears a the roasting
+form of a headless human body.  Shiny cleavers of varying lengths and sizes
+lie on the bloody chopping board, one still half embedded in a chunk of meat."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11652
+
+  [[rooms.mob_resets]]
+  vnum = 11623
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11625
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11625
+  max = 6
+
+[[rooms]]
+vnum = 11654
+name = "Damp Stairwell"
+sector = "inside"
+description = """
+Slippery stone stairs wind down into the darkness.  Threads of light filter
+in from above, where a wide trapdoor is set into the ceiling."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11652
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11655
+
+[[rooms]]
+vnum = 11655
+name = "Cellar"
+sector = "inside"
+description = """
+The slick granite walls of a cold, dank cellar rise up around you.  Shelves,
+stacked with cases of stored foods and beverages, line the walls.  Some
+form of magical containment glimmers faintly above the shelves, both preserving
+their contents and keeping nosy adventurers out..  Then again, considering
+putrid odor permeating the cellar, you're not sure you really want to know
+anymore about the contents.."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11654
+
+  [[rooms.mob_resets]]
+  vnum = 11624
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11625
+  max = 6
+
+[[rooms]]
+vnum = 11656
+name = "Storage Closet"
+sector = "inside"
+description = """
+You stand in a narrow closet, stacked with various cleaning utensils and
+other odds and ends.  A thin layer of dust coats the assorted objects, as
+if they haven't been used in a while.  However, footprints mark the grit
+of the floor, and a thin line of darkness picks out a square in the dusty
+ceiling.  An oaken door opens into the west wall."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11634
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11657
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11625
+  max = 6
+
+[[rooms]]
+vnum = 11657
+name = "Narrow Crawlspace"
+sector = "inside"
+description = """
+Claw marks and blood scar the stone walls framing the narrow crawlspace.
+A trapdoor is set into one corner, nearly invisible in the shadows."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11656
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 11605
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11639
+  max = 1
+
+[[rooms]]
+vnum = 11658
+name = "Onyx Hallway"
+sector = "inside"
+description = """
+The dark onyx walls gleam eerily in the dim torchlight.  A chill breeze
+wafts in through the archway to the north.  The hallway continues south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11659
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11634
+
+  [[rooms.mob_resets]]
+  vnum = 11631
+  max = 3
+
+[[rooms]]
+vnum = 11659
+name = "Open Courtyard"
+sector = "inside"
+description = """
+Tall marble pillars frame a wide circular courtyard of black granite.  A
+forbidding archway enters into a dark, sprawling building to the south.
+To the north, a narrow path winds away from the courtyard into a range of
+low, dark hills."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11660
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11658
+
+[[rooms]]
+vnum = 11660
+name = "Path among the haunted hills"
+sector = "hills"
+description = """
+You stand on a narrow dirt path winding between dark, rolling hills.  Icy
+winds howl across the hilltops, and dark shapes seem to flit among the
+scattered brush.  The path branches west and north here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11662
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11661
+
+  [[rooms.mob_resets]]
+  vnum = 11640
+  max = 1
+
+[[rooms]]
+vnum = 11661
+name = "Sheltered valley"
+sector = "hills"
+description = """
+The hills rise steeply on all sides, forming a small valley protected from
+the chilling winds.  Grey brush, leafless and dead-looking, ring the valley,
+casting eerie shadows along the grassy floor.  A path exits the valley to
+the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11660
+
+  [[rooms.mob_resets]]
+  vnum = 11641
+  max = 1
+
+[[rooms]]
+vnum = 11662
+name = "Deep among the haunted hills"
+sector = "hills"
+description = """
+The icy winds batter at you like vengeful ghosts.  You can almost make out
+words in the howling gusts..  The path branches east and west here and
+continues south out of the hills."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11663
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11660
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11665
+
+[[rooms]]
+vnum = 11663
+name = ""
+sector = "hills"
+description = """
+The path winds north and west here, in a momentary shelter against the raging
+winds.  To the north, the brush thickens, casting eerie shadows across the
+path."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11664
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11662
+
+  [[rooms.mob_resets]]
+  vnum = 11642
+  max = 1
+
+[[rooms]]
+vnum = 11664
+name = "Shadowed Clearing"
+sector = "hills"
+description = """
+The dark brush grows thickly here, forming a shadowed clearing between the
+hills.  Silent shapes seem to flicker among the brush in your peripheral
+vision, but are never visible when you turn to look.  A narrow path leads
+south out of the clearing."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11663
+
+  [[rooms.mob_resets]]
+  vnum = 11643
+  max = 1
+
+[[rooms]]
+vnum = 11665
+name = "Dead end"
+sector = "hills"
+description = """
+The narrow path ends abruptly at a sheer rock face.  To the north, stunted
+grey shrubs grow from between huge, stacked boulders."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11666
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11662
+
+[[rooms]]
+vnum = 11666
+name = "Rocky Cave"
+sector = "inside"
+description = """
+You find yourself in a dark, rocky cave.  Dim light seeps in through an 
+opening to the south.  The cave darkens to the west."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11665
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11667
+
+[[rooms]]
+vnum = 11667
+name = "Dark Cavern"
+sector = "inside"
+description = """
+Darkness envelopes the cavern, seeming to soak up even the dim light as
+if a vacuum..  A glimmer of light is visible to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11666
+
+  [[rooms.obj_resets]]
+  vnum = 11606
+  max = 1
+
+[[rooms]]
+vnum = 11668
+name = "Shimmering Tunnel"
+sector = "inside"
+description = """
+Flickering white light arcs above to form a long tunnel leading east.
+Streaks of green energy lance intermittently through the tunnel walls,
+lighting the area with a pulsing green glow."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11669
+
+  [[rooms.mob_resets]]
+  vnum = 11621
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11622
+  max = 1
+
+[[rooms]]
+vnum = 11669
+name = "Globe of Light"
+sector = "inside"
+description = """
+You find yourself floating in what appears to be a globe formed of pure
+white light.  Green energy streaks through the globe like lances of 
+colored lightning.  A long silk carpet stretches from the mouth of the
+tunnel to the west to a tall white throne in the center of the globe."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11668
+
+  [[rooms.obj_resets]]
+  vnum = 11609
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11644
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11645
+  max = 1
+
+[[rooms]]
+vnum = 11670
+name = "Tunnel of Darkness"
+sector = "inside"
+description = """
+You find yourself in a dark tunnel.  Shafts of dim light enter the through
+the tunnel mouth to the east, to be absorbed as soon as they touch the
+black walls."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11671
+
+[[rooms]]
+vnum = 11671
+name = "Darkness"
+sector = "inside"
+description = """
+You find yourself floating in what appears to be an endless expanse of
+darkness. A blood red carpet stretches between the tunnel mouth to the east 
+and a forbidding black throne suspended upright at the opposite end.  The
+throne seems to glow with a light of its own, filling the area with a dim
+greyish glow."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11670
+
+  [[rooms.obj_resets]]
+  vnum = 11610
+  max = 1
+
+[[rooms]]
+vnum = 11672
+name = "Shadowy Clearing"
+sector = "forest"
+description = """
+Tall pine trees frame a dark circular clearing here.  A path crosses the
+clearing and bends north and east.  Two ancient trees, one black oak and one
+white, face each other to the east and west, casting long shadows across
+the earthen floor."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11673
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11674
+
+  [[rooms.obj_resets]]
+  vnum = 11611
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 11612
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11651
+  max = 1
+
+[[rooms]]
+vnum = 11673
+name = "Dark Thicket"
+sector = "forest"
+description = """
+You stand in a dark thicket encircled by tall pines.  The twisted pine
+boughs above resemble the waiting claws of some huge predator.  A narrow
+dirt path exits the thicket to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11672
+
+  [[rooms.mob_resets]]
+  vnum = 11650
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11652
+  max = 1
+
+[[rooms]]
+vnum = 11674
+name = "Winding path through the dark forest"
+sector = "forest"
+description = """
+Tall, silent pines loom on all sides, filling the air with the scent of
+fresh wood and pine needles.  The narrow path on which you stand runs 
+west and south here.  One particularly large pine grows at the near the path
+to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11681
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11676
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11672
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11675
+
+  [[rooms.mob_resets]]
+  vnum = 11653
+  max = 1
+
+[[rooms]]
+vnum = 11675
+name = "Birdnest"
+sector = "forest"
+description = """
+You stand perched on the edge of a large nest which stretches at least 
+five meters from side to side.  The bowl of the nest appears to be formed
+of large sticks and bits of hair and other odds and ends, woven together
+to form a sturdy base.  The curved white fragments of what must have been
+a good sized shell are scattered across the bottom of the nest, intermixed
+with black-brown feathers and what pieces of what look like humanoid bones..
+The tree branches below appear sturdy and climbable."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11674
+
+  [[rooms.mob_resets]]
+  vnum = 11654
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11655
+  max = 1
+
+[[rooms]]
+vnum = 11676
+name = "Forest Path"
+sector = "forest"
+description = """
+The silent forms of tall pine trees frame the narrow dirt path.  The path
+branches north and east here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11674
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11677
+
+  [[rooms.mob_resets]]
+  vnum = 11656
+  max = 1
+
+[[rooms]]
+vnum = 11677
+name = "Dead End"
+sector = "forest"
+description = """
+The forest path dead ends here in a stand of tall pines.  Large boulders
+dot the earthen floor.  The huge, severed stump of what must have been
+an impressive oak tree rises from the pines to the south."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11678
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11657
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11658
+  max = 1
+
+[[rooms]]
+vnum = 11678
+name = "Quiet tunnel"
+sector = "inside"
+description = """
+You find yourself in a narrow earthen tunnel.  Thin shafts of light enter
+the tunnel through the opening above.  To the east, the tunnel opens into
+a dark chamber."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11679
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11677
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11659
+  max = 1
+
+[[rooms]]
+vnum = 11679
+name = "Meeting Chamber"
+sector = "inside"
+description = """
+A huge chamber has been carved from the packed clay here.  A semicircular
+stone table dominates the center of the floor.  Along the inner edge of
+the table stands a grey oak chair flanked by two chairs of white and black
+oak.  Plainer redwood chairs line the outer edge.  A narrow tunnel exits
+the chamber to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11678
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11680
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11660
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11661
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11662
+  max = 1
+
+[[rooms]]
+vnum = 11680
+name = "Shadowy Lair"
+sector = "inside"
+description = """
+You find yourself in a large, dark cavern.  Bits of wood and gleaming
+white bones litter the earthen floor.  Leaves and vines are piled in one
+corner to form a large nest."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11679
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11663
+  max = 1
+
+[[rooms]]
+vnum = 11681
+name = "Inside the Tree Base"
+sector = "forest"
+description = """
+You stand in the hollow base of a large pine tree.  A wooden platform is
+visible far above."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11674
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11682
+
+[[rooms]]
+vnum = 11682
+name = "Heart of the Tree"
+sector = "air"
+description = """
+You find yourself balanced on a wide wooden platform in the dark heart of
+the pine tree.  The wood of the tree, somehow fresh and very alive despite
+the hollow inside, fills the air with the sharp scent of pine.  An opening
+to one side of the platform allows descent to the earthen floor below."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11681
+
+  [[rooms.mob_resets]]
+  vnum = 11664
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11665
+  max = 1
+
+[[rooms]]
+vnum = 11683
+name = "Twisting Brick Road"
+sector = "city"
+description = """
+You stand on a road paved of red bricks which seems to twist and turn at
+impossible angles, like the rails of a roller coaster ride.  Off the edge
+of the road is a churning multicolored void.  A neat white outhouse rests
+off the side of the road to the east, and a ribbon of white light winds
+into the void to the north.  The brick road continues west to a crossroads."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11684
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11695
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11686
+
+[[rooms]]
+vnum = 11684
+name = "Ribbon of Light"
+sector = "city"
+description = """
+You stand balanced on a meter wide ribbon of pure white light twisting
+west and south through a churning multicolored void.  Just glancing at
+the void is enough to twist your guts inside out, which doesn't help
+your precarious balance at all...  but maybe if you don't look up you'll
+be okay.  You notice that you can see right through the path at your feet."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11683
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11685
+
+  [[rooms.mob_resets]]
+  vnum = 11667
+  max = 1
+
+[[rooms]]
+vnum = 11685
+name = ""
+sector = "city"
+description = """
+You find yourself standing on a wooden platform floating in the middle of
+a multicolored void.  What looks like a shimmering rip in the void hovers 
+within reach overhead.  A ribbon of white light twists into the void to 
+the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11684
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11614
+
+  [[rooms.obj_resets]]
+  vnum = 11697
+  max = 1
+
+[[rooms]]
+vnum = 11686
+name = "Something Resembling an Intersection.."
+sector = "city"
+description = """
+The brick road loops under and over itself, shooting off in various
+directions.  It would resemble a knot more than an intersection except
+that this is supposed to lead somewhere.  Then again..
+As you watch, the intersection seems to twist and change."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11689
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11683
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11687
+
+  [[rooms.obj_resets]]
+  vnum = 11613
+  max = 1
+
+[[rooms]]
+vnum = 11687
+name = "Entrance to the Funny Farm"
+sector = "city"
+description = """
+Brilliant purple fences wall off rows of animal pens.  Aside from the
+barking cats and flying pigs, this could be a cosy little farm..
+A purple farmhouse is visible in the distance."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11686
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11688
+
+  [[rooms.mob_resets]]
+  vnum = 11668
+  max = 1
+
+[[rooms]]
+vnum = 11688
+name = "Amidst the Animal Pens"
+sector = "city"
+description = """
+You stand among the purple animal pens.  Closer up, you notice that the
+farmhouse is tilted to one side, as if part of the foundation has sunken in.
+You also notice the corner of a bed sticking out of the outhouse door..
+and judging from the odor of the house, people are living in the outhouse
+and using the farmhouse for um.."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11687
+
+  [[rooms.mob_resets]]
+  vnum = 11669
+  max = 1
+
+[[rooms]]
+vnum = 11689
+name = "Red Brick Road"
+sector = "city"
+description = "The red brick road twists east and south here."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11686
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11690
+
+  [[rooms.mob_resets]]
+  vnum = 11670
+  max = 1
+
+[[rooms]]
+vnum = 11690
+name = "Another Intersection.."
+sector = "city"
+description = """
+Oh god.. not another intersection.  The road loops around itself so many
+times that it's amazing it ever goes anywhere.  As you watch, the intersection
+rearranges itself again, nearly taking your lunch with it.  The bricks at one
+edge of the road have been torn out, revealing a dark hole leading down."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11689
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11691
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11694
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11697
+
+[[rooms]]
+vnum = 11691
+name = "Red Brick Road"
+sector = "city"
+description = "The brick road twists east and south through the void."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11690
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11692
+
+  [[rooms.mob_resets]]
+  vnum = 11671
+  max = 1
+
+[[rooms]]
+vnum = 11692
+name = "Checkered Clearing"
+sector = "field"
+description = """
+Patches of alternating blue and yellow flowers cover the wide clearing
+with a checkered carpet.  The ground dips and rises, forming shallow hills
+and valleys across the clearing.  As you watch, the ground moves, and a hill
+forms beneath your feet."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11691
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11693
+
+  [[rooms.obj_resets]]
+  vnum = 11698
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11672
+  max = 1
+
+[[rooms]]
+vnum = 11693
+name = "Checkered Clearing"
+sector = "field"
+description = """
+You stand at the east end of a wide clearing carpeted by alternating squares
+of yellow and blue flowers.  The ground occasionally shifts, forming
+the clearing into scattered hills and valleys."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11692
+
+  [[rooms.mob_resets]]
+  vnum = 11666
+  max = 1
+
+[[rooms]]
+vnum = 11694
+name = "Clinic"
+sector = "city"
+description = """
+You stand in a little white office.  A window faces east onto the churning
+void outside.  A long leather couch dominates the center of the office."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11690
+
+  [[rooms.obj_resets]]
+  vnum = 11614
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11673
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11674
+  max = 1
+
+[[rooms]]
+vnum = 11695
+name = "Inside an Outhouse"
+sector = "inside"
+description = """
+You find yourself inside a narrow, white walled outhouse, wedged between
+the door and a really Big toilet.  Probably one of those times when you
+reeally don't want to look down.."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11683
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11696
+
+[[rooms]]
+vnum = 11696
+name = "Inside the Toilet"
+sector = "inside"
+description = """
+Oh yuck.. what are you doing inside the toilet?  The stench is awful, and
+what's worse.. claw marks on the walls indicate that something has made
+its home here."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11695
+
+  [[rooms.mob_resets]]
+  vnum = 11675
+  max = 1
+
+[[rooms]]
+vnum = 11697
+name = "Down a Mole Hole"
+sector = "inside"
+description = """
+Something has dug a narrow north-south tunnel here.  Light streams in
+through the opening above, drying the fresh dirt."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11698
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11690
+
+  [[rooms.mob_resets]]
+  vnum = 11676
+  max = 1
+
+[[rooms]]
+vnum = 11698
+name = "Ouch!"
+sector = "inside"
+description = """
+You are momentarily blinded as a glaring array of colors assaults your eyes.
+Gaudy mauve curtains decorate the earthen walls, clashing with the loud
+chartreuse carpet.  A neon green throne and a short, thick perch dominate
+the center of the room."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11697
+
+  [[rooms.obj_resets]]
+  vnum = 11615
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 11616
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11677
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11678
+  max = 1
+
+[[rooms]]
+vnum = 11699
+name = "Temple of Unbelief"
+sector = "inside"
+description = "Seeing is believing.."
+

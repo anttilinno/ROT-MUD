@@ -1,0 +1,8 @@
+id = "holy_grove"
+name = "Holy Grove"
+credits = "{09 40} Alfa    Holy Grove"
+reset_interval = 120
+
+[vnum_range]
+min = 8900
+max = 8999

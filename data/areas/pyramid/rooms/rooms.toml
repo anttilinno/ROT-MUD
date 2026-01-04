@@ -1,0 +1,1362 @@
+[[rooms]]
+vnum = 8700
+name = "The Great Eastern Desert"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sands constantly shifting around you.
+Rising out of the sand to the east you see a mighty pyramid."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8700
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8701
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8700
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5057
+
+[[rooms]]
+vnum = 8701
+name = "At the Base of the Pyramid"
+sector = "desert"
+description = """
+The mighty pyramid towers above you out of the hot desert sands, made from
+huge blocks of stone that have been coated over with a rough sandy plaster-like
+substance.  The face of the pyramid is steep, but you think you might be able
+to climb it."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8700
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8702
+
+[[rooms]]
+vnum = 8702
+name = "Climbing the Great Pyramid"
+sector = "desert"
+description = """
+Hot air rises off the sides of the pyramid, and the wind chokes you with a
+flurry of sand and dust.  So far you have made it halfway up the side.  The
+walls of the pyramid are quite steep."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8703
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8704
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8707
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8701
+
+  [[rooms.mob_resets]]
+  vnum = 8700
+  max = 6
+
+[[rooms]]
+vnum = 8703
+name = "Climbing the Great Pyramid"
+sector = "desert"
+description = """
+Hot air rises off the sides of the pyramid, and the wind chokes you with a
+flurry of sand and dust.  The walls of the pyramid are quite steep, and you
+are having trouble keeping from sliding down into the sands below."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8705
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8702
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8707
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8707
+
+  [[rooms.mob_resets]]
+  vnum = 8701
+  max = 4
+
+[[rooms]]
+vnum = 8704
+name = "Climbing the Great Pyramid"
+sector = "desert"
+description = """
+Hot air rises off the sides of the pyramid, and the wind chokes you with a
+flurry of sand and dust.  The walls of the pyramid are quite steep, and you
+are having trouble keeping from sliding down into the sands below."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8705
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8702
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8707
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8707
+
+[[rooms]]
+vnum = 8705
+name = "Climbing the Great Pyramid"
+sector = "desert"
+description = """
+Here on the eastern side of the pyramid there is a little more shelter
+from the heat and wind.  The stone side is not nearly so slippery smooth
+from the ravages of time, and you think you may be able to even reach the
+top from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8703
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8704
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8706
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8707
+
+  [[rooms.mob_resets]]
+  vnum = 8700
+  max = 6
+
+[[rooms]]
+vnum = 8706
+name = "The Apex of the Great Pyramid"
+sector = "desert"
+description = """
+Bathed in sweat, you have managed to reach the summit of the great pyramid.
+The four sides of the pyramid slope sharply down into the hot sands in all four
+cardinal directions.
+   A plaque has been set into the sandy stones beneath your feet."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8707
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8705
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8707
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8707
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8708
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 8702
+  max = 3
+
+[[rooms]]
+vnum = 8707
+name = "Climbing the Great Pyramid"
+sector = "desert"
+description = """
+Here the elements have carved away at the sides of the pyramid quite a 
+bit.  You aren't so sure of your footing anymore...
+
+Suddenly the wind picks up, and you lose your balance!
+You tumble down the side of the pyramid, and fall to your death!
+
+SPLAT."""
+
+[[rooms]]
+vnum = 8708
+name = "A Ladder"
+sector = "inside"
+description = """
+You are climbing an ancient ladder that leads down into the depths of
+the pyramid.  The air around is thick with layers of dust and a strange
+musty smell.  Above you you see tiny beams of light coming through the
+stones of the ceiling."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8706
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8709
+
+[[rooms]]
+vnum = 8709
+name = "A Musty Chamber"
+sector = "inside"
+description = """
+You are standing in a dank, musty chamber just inside the pyramid. 
+Footprints and other strange marks are set into the dusty floor here.
+It would seem that some of the tenants of this monument are still alive.
+   Exits lead in all directions.   The door to the west is covered with
+inscriptions."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8712
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8739
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8724
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8710
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8708
+
+  [[rooms.mob_resets]]
+  vnum = 8703
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8703
+  max = 6
+
+[[rooms]]
+vnum = 8710
+name = "The Fire Pool"
+sector = "inside"
+description = """
+This room is dominated by a massive raised pool that is filled with
+not water but flames of intense heat.  The multicoloured flames lick out
+at you, searching for things to burn.
+   The pool proceeds to the west into a small chamber."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8709
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8711
+
+[[rooms]]
+vnum = 8711
+name = "The Chamber of the Efreet"
+sector = "water_noswim"
+description = """
+You make your way across the fire pool, and into a small stone chamber.
+Here the flames are nearly as high as your head, singeing your face and 
+evaporating your sweat instantaneously."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8710
+
+  [[rooms.mob_resets]]
+  vnum = 8709
+  max = 1
+
+[[rooms]]
+vnum = 8712
+name = "A Tiny Crawlway"
+sector = "inside"
+description = """
+You have to go down onto your hands and knees to fit inside this tiny
+space.  The crawlway is thick with sand and dust, and markings of the
+passage of other creatures."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8713
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8709
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8737
+
+[[rooms]]
+vnum = 8713
+name = "A Tiny Crawlway"
+sector = "inside"
+description = """
+You are on your hands and knees, inside a small crawlway that winds
+through the inside of the pyramid.  The crawlway is thick with sand, dust, 
+and markings of the passage of other creatures."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8712
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8714
+
+  [[rooms.mob_resets]]
+  vnum = 8700
+  max = 6
+
+[[rooms]]
+vnum = 8714
+name = "A Tiny Crawlway"
+sector = "inside"
+description = """
+You are on your hands and knees, inside a small crawlway that winds
+through the inside of the pyramid.  The crawlway is thick with sand, dust, 
+and markings of the passage of other creatures."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8713
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8715
+
+[[rooms]]
+vnum = 8715
+name = "A Tightening in the Crawlway"
+sector = "inside"
+description = """
+Here you are forced to slide on your belly through a particularly tight
+section of the crawlway, as the stones of the pyramid close together
+about you.  Below you is a small, slippery-looking hole that plummets into
+blackness."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8714
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8716
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8717
+
+[[rooms]]
+vnum = 8716
+name = "The Crawlway's End"
+sector = "inside"
+description = """
+The crawlway shrinks away to nothing as the sandy stones of the pyramid
+close together into a space through which only a snake could fit.   There is
+barely enough space to turn around and make your way back through the tiny
+crawlway to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8715
+
+  [[rooms.mob_resets]]
+  vnum = 8702
+  max = 3
+
+[[rooms]]
+vnum = 8717
+name = "A Slippery Hole"
+sector = "inside"
+description = """
+The sides of this hole are slippery-smooth.  You lower yourself in, and 
+proceed to move downward... when suddenly you lose your purchase!
+
+You fall for what seems like an eternity, and smash into the stones below...
+
+Under the Hole
+   You are in a small chamber underneath the slippery hole, far below
+the pyramid now.   The floor is strewn with bones.  To the south is a
+small rocky crevasse."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8719
+
+[[rooms]]
+vnum = 8718
+name = "Under the Hole"
+sector = "inside"
+description = """
+You are in a small chamber underneath the slippery hole, far below
+the pyramid now.   The floor is strewn with bones.  To the south is a
+small rocky crevasse."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8719
+
+[[rooms]]
+vnum = 8719
+name = "A Rough Crevasse"
+sector = "inside"
+description = """
+You are now exploring deep within a strange rocky crevasse that plunges
+down into the rock on which the pyramid was constructed.  To the south you
+see the flickering light of a fire, and the crevasse proceeds downward."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8718
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8720
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8721
+
+  [[rooms.obj_resets]]
+  vnum = 8723
+  max = 1
+
+[[rooms]]
+vnum = 8720
+name = "A Small Fire"
+sector = "inside"
+description = """
+Here a small fire burns in a nook in the rocks, providing some warmth and
+comforting light in the cold, dark, dry air.
+
+Standing here is a strange-looking old man, who stares at you balefully."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8719
+
+[[rooms]]
+vnum = 8721
+name = "Down the Crevasse"
+sector = "inside"
+description = """
+The crevasse proceeds downward into the dark depths of the earth.
+The air about you is now cold and quite dry, and your light source
+gutters in a cool breeze that wafts up from below."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8719
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8722
+
+[[rooms]]
+vnum = 8722
+name = "At the Crevasse's End"
+sector = "inside"
+description = """
+Here the crevasse comes to an abrupt end.  A chilling wind howls
+at your face from a black shape to the south, but the light from your
+source is too dim to see exactly what it is."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8723
+  key = 8723
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8721
+
+[[rooms]]
+vnum = 8723
+name = "The Vault of the Lamp"
+sector = "inside"
+description = """
+The jaws of the massive stone tiger part wide to reveal a great vault.
+An arched ceiling lies far above your head... and all about you is a low
+guttural rumbling noise and a chill wind.
+
+Giant heaps of ancient treasure, gold coins, and valuables surround you
+on all sides."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8722
+  key = 8723
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 8706
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 8711
+  max = 1
+
+[[rooms]]
+vnum = 8724
+name = "A Crack in the Wall"
+sector = "inside"
+description = """
+You exhale, and squeeze yourself into the narrow crack in the wall.
+Dust fills your eyes as you disturb it, and chunks of mortar and stone
+mixed with a touch of sand fall on you as you scrape your way through."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8709
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8725
+
+[[rooms]]
+vnum = 8725
+name = "A Looted Tomb"
+sector = "inside"
+description = """
+The floor of this small tomb is littered with the lids of 
+smashed sarcophagi, bits of treasure dropped by thieves and
+looters, and corpses pulled from their resting places."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8724
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8733
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8726
+
+  [[rooms.mob_resets]]
+  vnum = 8704
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8707
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 8707
+  max = 4
+
+[[rooms]]
+vnum = 8726
+name = "A Demolished Tomb"
+sector = "inside"
+description = """
+This tomb has been utterly destroyed by thieves and looters in search of
+the treasures of the pharoahs.  Nothing of interest remains in this room,
+except a large stone coffin that leans against the western wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8725
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8727
+  key = 8712
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 8702
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 8704
+  max = 6
+
+[[rooms]]
+vnum = 8727
+name = "A Stairway"
+sector = "inside"
+description = """
+You stand now at the head of a stairway that goes down into darkness.
+The steps and walls are smooth sandy stone, covered with a thick layer
+of dust.  Some inscriptions are carved into the wall here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8726
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8728
+
+[[rooms]]
+vnum = 8728
+name = "A Stairway"
+sector = "inside"
+description = """
+You are on a stairway that disappears into darkness in both directions.
+The smooth, uneven steps of the stairway have not been travelled in what
+appears to be centuries."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8727
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8729
+
+[[rooms]]
+vnum = 8729
+name = "A Stairway"
+sector = "inside"
+description = """
+You stand now at the base of the uneven stairway.  The walls, floor,
+and ceiling of this small landing are covered with strange hieroglyphics."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8730
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8728
+
+[[rooms]]
+vnum = 8730
+name = "The Ancient Hall"
+sector = "inside"
+description = """
+Here the air is deathly still, motes of dust thickly obscuring your
+vision.  Several stone statues line the walls of the hall, depicting the 
+gods of an ancient society.  Strange glyphs and sigils cover the walls, a 
+peculiar pictorial form of written language that you don't understand.
+   Some steps lead to a raised dais to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8729
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8731
+
+  [[rooms.obj_resets]]
+  vnum = 8728
+  max = 1
+
+[[rooms]]
+vnum = 8731
+name = "A Raised Dais"
+sector = "inside"
+description = """
+You are at the southern end of the ancient hall, the dust and darkness
+absorbing your light so that you cannot see past the steps of the dais.
+A low pedestal rests here.  You see something written into the face of it."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8730
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8732
+  flags = ["door"]
+
+[[rooms]]
+vnum = 8732
+name = "The Tomb of Ramses"
+sector = "inside"
+description = """
+You stand in an empty tomb, a cubicle no more then ten feet to a side."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8731
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 8717
+  max = 1
+
+[[rooms]]
+vnum = 8733
+name = "A Ransacked Tomb"
+sector = "inside"
+description = """
+This tomb has been completely ransacked and destroyed by the actions
+of pyramid thieves and looters.  The floor is littered with junk."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8734
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8725
+
+  [[rooms.mob_resets]]
+  vnum = 8704
+  max = 6
+
+[[rooms]]
+vnum = 8734
+name = "A Tunnel"
+sector = "inside"
+description = "The low-ceilinged tunnel runs east-west."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8735
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8733
+
+  [[rooms.mob_resets]]
+  vnum = 8704
+  max = 6
+
+[[rooms]]
+vnum = 8735
+name = "A Fork in the Tunnel"
+sector = "inside"
+description = """
+Here the tunnel forks off through a gaping hole down in the
+southern wall, continuing onward to the east and west as well."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8736
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8734
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8746
+
+  [[rooms.mob_resets]]
+  vnum = 8704
+  max = 6
+
+[[rooms]]
+vnum = 8736
+name = "A Tunnel"
+sector = "inside"
+description = """
+The low-ceilinged tunnel makes a turn to the west and ends
+to the north as it spills out into a dusty hallway."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8742
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8735
+
+[[rooms]]
+vnum = 8737
+name = "A Dank Chamber"
+sector = "inside"
+description = """
+This chamber has a dank, dusty, musty smell to it.  Small footprints
+in the dust betray the recent passage of some sort of creatures.  A hole 
+in the floor lies to the west and a stairway is to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8738
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8712
+
+  [[rooms.mob_resets]]
+  vnum = 8703
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8703
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8707
+  max = 4
+
+[[rooms]]
+vnum = 8738
+name = "A Spiral Stairway"
+sector = "inside"
+description = """
+Some dusty, broken stone stairs here spiral slowly in a constricted
+space down towards a dusty hallway."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8737
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8741
+
+[[rooms]]
+vnum = 8739
+name = "A Dust-Covered Hallway"
+sector = "inside"
+description = """
+This hallway is covered with dust that has accumulated over the
+centuries that the pyramid has stood.  Small markings and footprints
+in the dust betray the recent passage of others -- perhaps thieves?"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8740
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8709
+
+[[rooms]]
+vnum = 8740
+name = "A Smelly Chamber"
+sector = "inside"
+description = """
+This small chamber has a sickly putrescent smell to it, the
+smell of formaldehyde and other ointments used to preserve the
+corpses of those who died ages ago."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8741
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8739
+
+  [[rooms.mob_resets]]
+  vnum = 8700
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8703
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8703
+  max = 6
+
+[[rooms]]
+vnum = 8741
+name = "A Dust-Covered Hallway"
+sector = "inside"
+description = """
+This hallway is covered with a thick, choking dust that rises
+up to obscure your light source and sting your eyes.  Small marks
+and footprints in the dust betray the recent passage of others."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8742
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8740
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8738
+
+  [[rooms.mob_resets]]
+  vnum = 8701
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 8707
+  max = 4
+
+[[rooms]]
+vnum = 8742
+name = "A Turn in the Hallway"
+sector = "inside"
+description = """
+You are standing in an elbow turn in a dust-covered stone hallway,
+that dead ends to the north and continues on to the west.  To the south
+the stones of the pyramid have been torn asunder by thieves, making
+a low-ceilinged tunnel."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8743
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8736
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8741
+
+  [[rooms.mob_resets]]
+  vnum = 8704
+  max = 6
+
+[[rooms]]
+vnum = 8743
+name = "A Dead End"
+sector = "inside"
+description = """
+The dust-covered hallway has come to an abrupt end at a stony,
+featureless wall.  Here and there are signs of the recent passage
+of others in the dust."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8742
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8744
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 8705
+  max = 1
+
+[[rooms]]
+vnum = 8744
+name = "The Tomb Entrance"
+sector = "inside"
+description = """
+You are in a small, dark chamber that has stood undisturbed for
+many years.  To the north stands a massive stone tomb, which is
+covered in hieroglyphics and gold-lined carvings that mark it as the
+final resting place of the mighty pharoahs of this land."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8745
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8743
+  flags = ["door"]
+
+[[rooms]]
+vnum = 8745
+name = "The Tomb of the Pharoahs"
+sector = "inside"
+description = """
+Great golden sarcophogai line the walls of this massive tomb.  It has
+withstood the passage of time intact, untouched by the hands of thieves
+and looters.  The treasures taken by the pharoahs to their graves still
+lie before your feet."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8744
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 8710
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8710
+  max = 2
+
+  [[rooms.obj_resets]]
+  vnum = 8710
+  max = 1
+
+[[rooms]]
+vnum = 8746
+name = "A Rubble-Strewn Hallway"
+sector = "inside"
+description = """
+This hallway formerly had a beautiful arch to the ceiling, now
+collapsed under the weight of the slowly settling stones of the
+pyramid.  Now, a massive pile of rubble leads up into a hole high 
+in the northern portion of the hallway.  To the south, through the 
+rubble and fallen stones you see a sandstone crypt."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8747
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8735
+
+[[rooms]]
+vnum = 8747
+name = "A Sandstone Crypt"
+sector = "inside"
+description = """
+This small crypt is lit by a hole in the wall to the south, through
+which sand pours from the desert outside.  A hot wind blows in from the
+desert, drying your skin instantly.  To the east and north the arched
+hallway continues."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8746
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8748
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8753
+
+  [[rooms.mob_resets]]
+  vnum = 8715
+  max = 1
+
+[[rooms]]
+vnum = 8748
+name = "An Arched Hall"
+sector = "inside"
+description = """
+This hallway has a beautiful arch to it, formed painstakingly and
+exquisitely out of the sandy stones of the pyramid.  The dust that
+covers most of the rest of the pyramid interior is not present here,
+scoured away by the blowing of the desert winds that howl about
+your ears."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8749
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8747
+
+  [[rooms.mob_resets]]
+  vnum = 8712
+  max = 3
+
+[[rooms]]
+vnum = 8749
+name = "An Arched Hall"
+sector = "inside"
+description = """
+This hallway has a beautiful arch to it, formed painstakingly and
+exquisitely out of the sandy stones of the pyramid.  To the east is
+a small, golden-coloured crypt, and the hall proceeds to the south
+and north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8748
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8750
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8751
+
+  [[rooms.mob_resets]]
+  vnum = 8712
+  max = 3
+
+[[rooms]]
+vnum = 8750
+name = "A Golden Crypt"
+sector = "inside"
+description = """
+You stand inside a small crypt with walls and ceiling made of
+golden bricks that obscure the large sandy stones of the pyramid.
+Small rugs and tapestries are scattered about the floor here, and
+they appear to have been used recently."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8749
+
+  [[rooms.mob_resets]]
+  vnum = 8713
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8713
+  max = 2
+
+[[rooms]]
+vnum = 8751
+name = "An Arched Hall"
+sector = "inside"
+description = """
+This hallway has a beautiful arch to it, formed painstakingly and
+exquisitely out of the sandy stones of the pyramid.  The arched
+hall proceeds to the north and ends to the south in a small vault."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8749
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8752
+
+  [[rooms.mob_resets]]
+  vnum = 8712
+  max = 3
+
+[[rooms]]
+vnum = 8752
+name = "A Shining Vault"
+sector = "inside"
+description = """
+The stones of the pyramid here take on a strange, twinkling quality,
+almost seeming to shine with an internal light.  As you look closer you
+see tiny glass-like glittery particles within the stones, that reflect
+the light from your light source so perfectly that they seem to shine."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8751
+
+  [[rooms.mob_resets]]
+  vnum = 8714
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8714
+  max = 2
+
+[[rooms]]
+vnum = 8753
+name = "A Massive Sand Dune"
+sector = "desert"
+description = """
+You stand now on a massive sand dune on the southern side of
+the pyramid.  At the foot of the sand dune to the north you see a
+small hole where the stones of the pyramid have collapsed.  Not
+far to the south is a massive roiling sandstorm; the wind from the
+storm howls and bites at your face even here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8747
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8754
+
+[[rooms]]
+vnum = 8754
+name = "A Swirling Sandstorm"
+sector = "desert"
+description = """
+You are caught in the midst of a massive sandstorm.  Howling winds
+buffet you from all sides, and the sand tears at your skin, blinding
+you and choking you.  You have lost all sense of direction."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8754
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8753
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8755
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8754
+
+  [[rooms.mob_resets]]
+  vnum = 8708
+  max = 4
+
+[[rooms]]
+vnum = 8755
+name = "A Swirling Sandstorm"
+sector = "desert"
+description = """
+You are caught in the midst of a massive sandstorm.  Howling winds
+buffet you from all sides, and the sand tears at your skin, blinding
+you and choking you.  You have lost all sense of direction."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8755
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8756
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8755
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8754
+
+  [[rooms.mob_resets]]
+  vnum = 8708
+  max = 4
+
+[[rooms]]
+vnum = 8756
+name = "A Swirling Sandstorm"
+sector = "desert"
+description = """
+You are caught in the midst of a massive sandstorm.  Howling winds
+buffet you from all sides, and the sand tears at your skin, blinding
+you and choking you.  You have lost all sense of direction."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8756
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8757
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8756
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8755
+
+  [[rooms.mob_resets]]
+  vnum = 8708
+  max = 4
+
+[[rooms]]
+vnum = 8757
+name = "A Swirling Sandstorm"
+sector = "desert"
+description = """
+You are caught in the midst of a massive sandstorm.  Howling winds
+buffet you from all sides, and the sand tears at your skin, blinding
+you and choking you.  You have lost all sense of direction."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8757
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8756
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8758
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8757
+
+  [[rooms.mob_resets]]
+  vnum = 8708
+  max = 4
+
+[[rooms]]
+vnum = 8758
+name = "A Massive Sand Dune"
+sector = "desert"
+description = """
+Somehow you managed to make your way through the howling winds
+of the sandstorm, and clamber up on this sand dune.  You can see the
+storm to the north of you, and presumably the pyramid is somewhere
+beyond it.  Nothing but flat, featureless, open dunes of sand lie in
+every other direction."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8757
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8759
+  key = 8717
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 8716
+  max = 1
+
+[[rooms]]
+vnum = 8759
+name = "Through the Hole in the Sand"
+sector = "inside"
+description = """
+You squeeze through the small hole in the sand and land in a small
+white chamber.  Above you is a small hole, reachable by climbing up
+the small sandy slope down which you slid."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8753
+
+  [[rooms.obj_resets]]
+  vnum = 8718
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 8724
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 8725
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 8726
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 8727
+  max = 1
+

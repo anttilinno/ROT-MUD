@@ -1,0 +1,8 @@
+id = "olympus"
+name = "Olympus"
+credits = "{09 99} Generic Olympus"
+reset_interval = 120
+
+[vnum_range]
+min = 900
+max = 999

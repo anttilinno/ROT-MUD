@@ -1,0 +1,8 @@
+id = "galaxy"
+name = "Galaxy"
+credits = "{39 60} Doctor  Galaxy"
+reset_interval = 120
+
+[vnum_range]
+min = 9300
+max = 9399

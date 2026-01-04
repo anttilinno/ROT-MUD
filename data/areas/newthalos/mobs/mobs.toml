@@ -1,0 +1,2227 @@
+[[mobiles]]
+vnum = 9500
+keywords = ["mage", "guildmaster"]
+short_desc = "the guildmaster"
+long_desc = "Your guildmaster stands here."
+description = "An old man peering through ancient tomes rests here."
+level = 80
+sex = "male"
+act_flags = ["npc", "sentinel", "train", "practice", "mage", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 30000
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9501
+keywords = ["cleric", "guildmaster"]
+short_desc = "the guildmaster"
+long_desc = "Your guildmaster stands here."
+description = """
+An older man wrapped in purple, long-flowing robes meditates here."""
+level = 79
+sex = "male"
+act_flags = ["npc", "sentinel", "train", "practice", "cleric", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 30000
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 7
+  bonus = 8
+
+[[mobiles]]
+vnum = 9502
+keywords = ["warrior", "guildmaster"]
+short_desc = "the guildmaster"
+long_desc = "Your guildmaster stands here."
+description = """
+A smaller man dressed in nothing but a tunic stands here waiting to train you."""
+level = 80
+sex = "male"
+act_flags = ["npc", "sentinel", "train", "practice", "warrior", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 30000
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 30
+
+[[mobiles]]
+vnum = 9503
+keywords = ["thief", "guildmaster"]
+short_desc = "the guildmaster"
+long_desc = "Your guildmaster stands here."
+description = """
+A small elf dressed in black rests in the corner. As you enter he grabs
+a knife an throws it at you. It lands the wall next to your left ear. We
+will now begin, is all he says."""
+level = 80
+sex = "male"
+act_flags = ["npc", "sentinel", "train", "practice", "warrior", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 30000
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 10
+
+[[mobiles]]
+vnum = 9504
+keywords = ["oldstyle", "receptionist"]
+short_desc = "the receptionist"
+long_desc = "A dark skinned, veiled woman greets you from behind the desk."
+description = """
+This arabian beauty is obviously the daughter of some high ranking
+official. As you attempt to sneak a peek under her veil you notice
+a small moon-shaped birthmark on her left cheek."""
+level = 40
+sex = "female"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9505
+keywords = ["oldstyle", "bartender"]
+short_desc = "the withered mage/bartender"
+long_desc = "An old withered mage/bartender leans against the bar."
+description = """
+He looks distracted as he pours five drinks at once without error."""
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "mage", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9506
+keywords = ["oldstyle", "john", "brother", "singer", "lead"]
+short_desc = "Brother John"
+long_desc = "Brother John, lead singer for the Lokettes, stands on stage."
+description = """
+You see the lead singer of the Lokettes lip synching to an old Zeppelin tune."""
+level = 35
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 9507
+keywords = ["oldstyle", "panhandler"]
+short_desc = "a panhandler"
+long_desc = "A panhandler rests here."
+description = "A small skinny man rests here hoping to find a warm heart."
+level = 3
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 9508
+keywords = ["oldstyle", "panhandler"]
+short_desc = "a panhandler"
+long_desc = "A panhandler rests here."
+description = "A small skinny man rests here staring at your clothes."
+level = 5
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 9509
+keywords = ["oldstyle", "beggar"]
+short_desc = "a beggar"
+long_desc = "A grubby beggar sits here in the filth."
+description = """
+This poor soul seems down on his luck, perhaps you might spare a dime?"""
+level = 2
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "thief"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 9510
+keywords = ["oldstyle", "baker"]
+short_desc = "the baker"
+long_desc = "The baker stands here playing solitaire."
+description = """
+You see a large man in a white apron covered in flour from head to toe."""
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9511
+keywords = ["oldstyle", "shopkeeper"]
+short_desc = "the shopkeeper"
+long_desc = "The shopkeeper stands here."
+description = "You see a half-elf sitting on a stool behind his counter."
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9512
+keywords = ["oldstyle", "Nabil", "shopkeeper"]
+short_desc = "Nabil"
+long_desc = "Nabil, purveyor of exotic pets, is waiting to serve you."
+description = """
+A large, well-fed shopkeeper, Nabil is adept at finding animals from all 
+parts of the world. He welcomes you warmly and offers to show you a pair
+of priceless parrots."""
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9513
+keywords = ["oldstyle", "ahkeem", "tailor"]
+short_desc = "Ahkeem the tailor"
+long_desc = "Ahkeem the tailor welcomes you to his store."
+description = """
+This middle-aged man looks over you with disdain and quickly suggests a new
+wardrobe."""
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9514
+keywords = ["oldstyle", "vera"]
+short_desc = "Vera the veggie lady"
+long_desc = "Vera the veggie lady beams as you look over her stand."
+description = "A tall slender elf stands before you smiling broadly."
+level = 45
+sex = "female"
+act_flags = ["npc", "sentinel", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9515
+keywords = ["oldstyle", "butch"]
+short_desc = "Butch the meatcutter"
+long_desc = "Butch the meatcutter stands here in his bloodied apron."
+description = """
+This stocky dwarf has a mad glint in his eye as he twirls his cleaver
+carelessly into the air."""
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9516
+keywords = ["oldstyle", "abdul", "armorer"]
+short_desc = "Abdul the armorer"
+long_desc = "Abdul stands here, waiting to help you."
+description = """
+Abdul returns your gaze with a steady eye. You quickly glance away under
+his cold stare and place your order."""
+level = 46
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9517
+keywords = ["oldstyle", "igor", "weaponsmith"]
+short_desc = "Igor the weaponsmith"
+long_desc = "Igor stands here doing... something."
+description = """
+You see a small dwarf with a large hump on his left shoulder."""
+level = 46
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9518
+keywords = ["oldstyle", "cassandra"]
+short_desc = "Cassandra"
+long_desc = "Cassandra stands proudly over her selection."
+description = """
+You see a happy weather-worn face whose lines suggest many years on the
+open sea. It is only through years of fishing that she is able to withstand
+the smell that permeates the air."""
+level = 46
+sex = "female"
+act_flags = ["npc", "sentinel"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9519
+keywords = ["oldstyle", "foreman", "man"]
+short_desc = "the foreman"
+long_desc = "The foreman stands here screaming at the workers."
+description = """
+A worried working dwarf stands here constantly making notes in his
+book and looking at his watch."""
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 9520
+keywords = ["oldstyle", "construction", "worker"]
+short_desc = "a construction worker"
+long_desc = "A construction worker steadily works here."
+description = "A large sweaty looking man doesn't even return your glance."
+level = 20
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9521
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Nati"
+long_desc = "The statue of Nati stands here."
+level = 70
+sex = "female"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 11
+
+[[mobiles]]
+vnum = 9522
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Alander"
+long_desc = "The statue of Alander stands here."
+description = """
+Alander has been caught in the pose of casting a bolt of flame
+down to some hapless victim.  He is dressed in the robes of a mage,
+yet bears a sword carved into the glittering stone of his statue."""
+level = 61
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 928
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 9
+
+[[mobiles]]
+vnum = 9523
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Zump"
+long_desc = "The statue of Zump stands here."
+description = """
+A statue of a stocky, angry looking dwarf with a cigarette in his mouth."""
+level = 62
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 928
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 9
+
+[[mobiles]]
+vnum = 9524
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Nightshade"
+long_desc = "The statue of Nightshade stands here."
+description = """
+A tall, swirling dark stone formed this statue.  As you peer at him
+longer, it seems to chuckle."""
+level = 61
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 928
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 9
+
+[[mobiles]]
+vnum = 9525
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Satin"
+long_desc = "The statue of Satin stands here."
+description = """
+The statue of Satin, a small elven woman in mage robes, smiles serenely
+and her eyes twinkle with gentle humour.  You take a step back in fear."""
+level = 61
+sex = "female"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 928
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 9
+
+[[mobiles]]
+vnum = 9526
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Shandra"
+long_desc = "The statue of Shandra stands here."
+description = """
+This statue poses the Lady of the Mountains in a simple robe, with
+her long tresses sensibly pulled back from her smooth, smiling face."""
+level = 61
+sex = "female"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 928
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 9
+
+[[mobiles]]
+vnum = 9527
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Furey"
+long_desc = "There a statue of Furey standing here."
+description = "A statue of Furey."
+level = 68
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric", "mage", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1200
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 10
+
+[[mobiles]]
+vnum = 9528
+keywords = ["oldstyle", "statue"]
+short_desc = "the statue of Landru"
+long_desc = "The statue of Landru stands here."
+description = """
+Landru is carved from shimmering polished hematite, and a smile seems
+to flicker over his face.  A pair of dice are enclosed in one hand."""
+level = 69
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric", "mage", "warrior", "no_align", "outdoors"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 11
+
+[[mobiles]]
+vnum = 9529
+keywords = ["oldstyle", "aziz"]
+short_desc = "Aziz"
+long_desc = "Aziz the Human Canon stands here."
+description = "You see nothing special..."
+level = 21
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "cleric", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 9530
+keywords = ["oldstyle", "mustafah"]
+short_desc = "Mustafah"
+long_desc = "Mustafah the Human Robber stands here."
+description = "You see nothing special..."
+level = 14
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 9531
+keywords = ["oldstyle", "fatima"]
+short_desc = "Fatima"
+long_desc = "Fatima the Elven Invoker stands here."
+description = "You see nothing special..."
+level = 17
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "mage", "no_align"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 9532
+keywords = ["oldstyle", "kareem"]
+short_desc = "Kareem"
+long_desc = "Kareem the Dwarven Mercenary stands here."
+description = "You see nothing special..."
+level = 24
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9533
+keywords = ["oldstyle", "nomad", "merchant"]
+short_desc = "A nomad merchant"
+long_desc = "A nomad merchant looks you over."
+description = """
+This robust fellow returns your gaze with a smile, but something inside
+tells you not to trust him very far."""
+level = 20
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "wimpy", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9534
+keywords = ["oldstyle", "bodyguard"]
+short_desc = "A bodyguard"
+long_desc = "A bodyguard sizes you up."
+description = """
+The large half-orc quickly glances you over and returns to his duties."""
+level = 23
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9535
+keywords = ["oldstyle", "kid", "thief"]
+short_desc = "the skinny kid"
+long_desc = "A skinny kid wanders around."
+description = """
+This small child sees you looking at him and quickly looks away."""
+level = 13
+sex = "male"
+act_flags = ["npc", "scavenger", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 9536
+keywords = ["oldstyle", "dockworker"]
+short_desc = "the dockworker"
+long_desc = "A strong dockworker walks by moving crates."
+description = """
+Although seemingly dull witted, this hulking mass carries the huge
+crates from the boats like so many lilies."""
+level = 23
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9537
+keywords = ["oldstyle", "man", "tax", "collector"]
+short_desc = "the tax collector"
+long_desc = "A small man walks around scribbling in a notebook."
+description = """
+The city's tax collector walks from store to store collecting the
+Sultan's fee for living in his grand city."""
+level = 9
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9538
+keywords = ["oldstyle", "gord"]
+short_desc = "Gord"
+long_desc = "Gord the Rogue stands here."
+description = "You see nothing special."
+level = 50
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "thief", "warrior", "no_align"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 6
+
+[[mobiles]]
+vnum = 9539
+keywords = ["oldstyle", "caramon"]
+short_desc = "Caramon"
+long_desc = "Caramon the Knight stands here."
+description = "You see nothing special."
+level = 49
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 600
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 9540
+keywords = ["oldstyle", "raistlin"]
+short_desc = "Raistlin"
+long_desc = "Raistlin, the Arch-Magician stands here."
+description = "You see nothing special."
+level = 50
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 9541
+keywords = ["oldstyle", "curley", "greenleaf"]
+short_desc = "Curley GreenLeaf"
+long_desc = "Curley GreenLeaf stands here."
+description = "You see nothing special."
+level = 49
+sex = "male"
+act_flags = ["npc", "stay_area", "cleric", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 7
+
+[[mobiles]]
+vnum = 9542
+keywords = ["oldstyle", "man", "wandering", "prophet"]
+short_desc = "the wandering prophet"
+long_desc = "A small grey-haired man walks around spouting gospel."
+description = """
+This sad case may have been an evangelist in another lifetime. He is known
+to stand on corners and accost passers-by with his doomsday preaching."""
+level = 13
+sex = "male"
+act_flags = ["npc", "wimpy", "cleric"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9543
+keywords = ["oldstyle", "alley", "cat", "feline"]
+short_desc = "the alley cat"
+long_desc = "A small harmless feline searches for food."
+description = "You see a small starved cat."
+level = 4
+sex = "male"
+act_flags = ["npc", "scavenger", "wimpy", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 9544
+keywords = ["oldstyle", "vulture"]
+short_desc = "the vulture"
+long_desc = "A vulture circles above you."
+description = """
+As you look up at this bird, you see the only thing it wants is a corpse."""
+level = 4
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 9545
+keywords = ["oldstyle", "old", "man"]
+short_desc = "the old man"
+long_desc = "An old man sits here playing chess."
+description = "He seems intent on winning."
+level = 8
+sex = "male"
+act_flags = ["npc", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 9546
+keywords = ["oldstyle", "conan", "librarian"]
+short_desc = "Conan the Librarian"
+long_desc = "Conan the Librarian sits behind a desk."
+description = "The huge hulking mass rises as someone asks him a question."
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9547
+keywords = ["oldstyle", "dirt", "devil"]
+short_desc = "the dirt devil"
+long_desc = "The wind kicks up some dust."
+description = "What you see before you is really a baby air elemental."
+level = 2
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 9548
+keywords = ["oldstyle", "lamia"]
+short_desc = "the lamia"
+long_desc = "A lamia stands here."
+description = "A half snake half woman creature rears back to attack you."
+level = 15
+sex = "female"
+act_flags = ["npc", "scavenger", "aggressive", "mage", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9549
+keywords = ["oldstyle", "dervish"]
+short_desc = "the raggety dervish"
+long_desc = "A raggety dervish stands here."
+description = "This man looks like he could use a lot of rest."
+level = 17
+sex = "male"
+act_flags = ["npc", "aggressive", "mage"]
+affected_by = ["pass_door"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 9550
+keywords = ["oldstyle", "sultan"]
+short_desc = "The Sultan"
+long_desc = "The Sultan rests here on his throne."
+description = "You see a large wealthy man in red robes smiling at you."
+level = 70
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "outdoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 9551
+keywords = ["oldstyle", "harem", "girl"]
+short_desc = "a harem girl"
+long_desc = "A lovely, veiled harem girl stands here."
+description = """
+You see a dark skinned beauty, wearing almost transparent silks and 
+light blue viel. Her loyalty to the sultan is unwavering."""
+level = 6
+sex = "female"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 9552
+keywords = ["oldstyle", "jailer"]
+short_desc = "the jailer"
+long_desc = "The Jailer sleeps here, snoring loudly."
+description = """
+You see a pathetic soul lying here. Some ex-nobleman that has fallen
+out of grace with the Sultan."""
+level = 35
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "wimpy", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 9553
+keywords = ["oldstyle", "eunuch"]
+short_desc = "a eunuch"
+long_desc = "A eunuch stands here watching over the girls."
+description = """
+You see a large man whose only duty is to protect the harem. He has been
+castrated for the ladies' safety."""
+level = 29
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 9554
+keywords = ["oldstyle", "sultans", "favorite", "girl", "nichole"]
+short_desc = "Nichole, the sultan's favorite"
+long_desc = "Nichole, the sultan's favorite girl rests on a mound of pillows."
+description = """
+You see the most beautiful arabian girl that has ever met your eyes. Too
+bad she's about to kill you."""
+level = 40
+sex = "female"
+act_flags = ["npc", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9555
+keywords = ["oldstyle", "allah"]
+short_desc = "Allah"
+long_desc = "Allah is here."
+description = "You see the all-knowing Allah."
+level = 64
+sex = "none"
+act_flags = ["npc", "sentinel", "cleric", "mage", "warrior", "no_align", "outdoors"]
+affected_by = ["detect_invis", "pass_door"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1000
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 9
+
+[[mobiles]]
+vnum = 9556
+keywords = ["oldstyle", "mage", "guildguard"]
+short_desc = "the guildguard"
+long_desc = "The Guard for the Guild of Mages stands here."
+description = """
+This man looks like a mage/warrior, i wouldn't mess with him."""
+level = 42
+sex = "male"
+act_flags = ["npc", "sentinel", "mage", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 9557
+keywords = ["oldstyle", "cleric", "guildguard"]
+short_desc = "the guildguard"
+long_desc = "The Guard for the Guild of Clerics stands here."
+description = """
+This man looks like a cleric/warrior, I wouldn't mess with him."""
+level = 41
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 9558
+keywords = ["oldstyle", "warrior", "guildguard"]
+short_desc = "the guildguard"
+long_desc = "The Guard for the Guild of Warriors stands here."
+description = "The man looks like Conan's cousin, I wouldn't mess with him."
+level = 42
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_align"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 9559
+keywords = ["oldstyle", "thief", "guildguard"]
+short_desc = "the guildguard"
+long_desc = "The Guard for the Guild of theives stands here."
+description = """
+You see a thief dressed all in black, he quickly stands as you enter
+and steps to bar your way. You notice his hands resting on two sheafs."""
+level = 41
+sex = "male"
+act_flags = ["npc", "sentinel", "thief", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 9560
+keywords = ["oldstyle", "servant", "boy"]
+short_desc = "a servant boy"
+long_desc = "A servant boy is here running errands."
+description = "You see a small boy running around the halls of the palace."
+level = 3
+sex = "male"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 9561
+keywords = ["oldstyle", "sultans", "guard"]
+short_desc = "the sultan's guard"
+long_desc = "A guard stands here, protecting the innocent."
+description = "You see a trained fighter, ready to help those in need."
+level = 19
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9562
+keywords = ["oldstyle", "sultans", "guard"]
+short_desc = "the sultans guard"
+long_desc = "A guard stands here, watching the gate."
+description = "You see a trained fighter, ready to defend the city."
+level = 20
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9563
+keywords = ["oldstyle", "sultans", "guard", "chief"]
+short_desc = "The chief guard"
+long_desc = "The chief of the sultan's guard stands here."
+description = "You see a large man skilled in hunting and killing."
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "warrior", "no_align"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9564
+keywords = ["oldstyle", "mercenary"]
+short_desc = "the mercenary"
+long_desc = "A mercenary stands here waiting for a job."
+description = """
+You see an assassin down on his luck looking to be freelanced out."""
+level = 10
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9565
+keywords = ["oldstyle", "shipwright", "captain"]
+short_desc = "the shipwright"
+long_desc = "An old captain rests here carving on a stick."
+description = """
+You see the shipwright of New Thalos, waiting to make someone a boat. He
+beams a smile at you through his beard as you walk in."""
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge", "indoors"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9566
+keywords = ["oldstyle", "blacksmith"]
+short_desc = "the blacksmith"
+long_desc = "The blacksmith stands here pumping air into his fire."
+description = """
+You see a large human, dripping in sweat, standing before you. He takes a
+break from his swealtering work to bid you welcome."""
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge", "indoors"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9567
+keywords = ["oldstyle", "horse"]
+short_desc = "a horse"
+long_desc = "A horse stands here."
+description = "You see one of the fine arabian beasts known about the land."
+level = 8
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 9568
+keywords = ["oldstyle", "tourist"]
+short_desc = "a tourist"
+long_desc = "A tourist stands here looking lost."
+description = """
+You see a small round japanese man, with a camera around his neck and
+a nose guard. He's looking at a small road map that he seems to be holding
+upside down."""
+level = 7
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 9569
+keywords = ["oldstyle", "shelbye"]
+short_desc = "Shelbye"
+long_desc = "Shelbye stands here."
+description = "You see nothing special."
+level = 59
+sex = "male"
+act_flags = ["npc"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9570
+keywords = ["oldstyle", "cryohydra"]
+short_desc = "the cryohydra"
+long_desc = "The cryohydra stands here."
+description = """
+A grey-brown reptillian creature with amber eyes stands before you."""
+level = 15
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area", "warrior", "outdoors"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 9571
+keywords = ["oldstyle", "giant", "minotaur", "lizard"]
+short_desc = "the minotaur lizard"
+long_desc = "The minotaur lizard stands here."
+description = "A huge lizard like reptile with horns like a minotaur."
+level = 16
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 9572
+keywords = ["oldstyle", "dog", "death"]
+short_desc = "the death dog"
+long_desc = "The death dog stands here."
+description = "A large two-headed hound barks at you viciously."
+level = 15
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 9573
+keywords = ["oldstyle", "lion", "spotted"]
+short_desc = "the spotted lion"
+long_desc = "The spotted lion stands here."
+description = "A large fierce dapple skinned lion glares at you."
+level = 16
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 9574
+keywords = ["oldstyle", "behir"]
+short_desc = "the behir"
+long_desc = "A behir slithers on the ground."
+description = """
+You see a large snake like reptile with more than a dozen legs."""
+level = 23
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9575
+keywords = ["oldstyle", "chimera"]
+short_desc = "the chimera"
+long_desc = "A creature with three heads: lion, goat, and dragon stands here."
+description = """
+The chimera is still a mystery, better left unexplored. This creature has
+the hindquarters of a goat, the forepaws of a lion and the body of a red
+dragon."""
+level = 17
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 9576
+keywords = ["oldstyle", "couatl"]
+short_desc = "the couatl"
+long_desc = "A couatl hovers here."
+description = """
+A beautiful creature with the body of a serpent and feathered wings the
+color of the rainbow."""
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 9577
+keywords = ["oldstyle", "giant", "hornet"]
+short_desc = "the giant hornet"
+long_desc = "The giant hornet hovers here."
+description = """
+The giant hornet hits you very hard!
+You wish you wounds would stop BLEEDING so much!"""
+level = 10
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9578
+keywords = ["oldstyle", "pegasus"]
+short_desc = "the pegasus"
+long_desc = "The pegasus stands here, flexing its wings."
+description = """
+A magnificant winged steed, this horse looks much like the arabian
+thoroughbred you've seen in the stables."""
+level = 20
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9579
+keywords = ["oldstyle", "elvira"]
+short_desc = "Elvira"
+long_desc = "Elvira stands here mixing a love potion."
+description = """
+You see a very healthy female dressed in black, with long flowing
+hair to match her outfit."""
+level = 59
+sex = "female"
+act_flags = ["npc", "sentinel", "mage", "no_purge", "indoors"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9580
+keywords = ["oldstyle", "braheem"]
+short_desc = "Braheem"
+long_desc = "Braheem stands here talking to the walls."
+description = "You see a powerful but slighty insane mage."
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "mage", "no_purge", "indoors"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9581
+keywords = ["oldstyle", "high", "priest"]
+short_desc = "the high priest"
+long_desc = "The high priest rests here meditating, well he WAS meditating."
+description = "He does NOT look real happy that you have disturbed him."
+level = 59
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9582
+keywords = ["oldstyle", "royal", "guard", "elite"]
+short_desc = "The Royal Guard"
+long_desc = "An Elite Royal Guard stands here smiling happily."
+description = """
+You see one of the Royal Guards from Midgaard who seems to have gone
+through some training."""
+level = 61
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "warrior", "no_align"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1000
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 9
+
+[[mobiles]]
+vnum = 9583
+keywords = ["oldstyle", "patch", "bartender"]
+short_desc = "Patch the bartender"
+long_desc = "A large half-orc with a patch over one eye pours beer behind the counter"
+description = """
+You see a really big guy here who seems to have lost an eye in one manner
+or another."""
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9584
+keywords = ["oldstyle", "stitch"]
+short_desc = "Stitch, the leather dude."
+long_desc = "Stitch, the leather dude reclines in his chair."
+description = """
+You see a small hobbit with his feet kicked up on his desk waiting for
+some sucker, um, customer to walk in his store."""
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy", "no_purge", "indoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9585
+keywords = ["oldstyle", "gardener", "small", "elf"]
+short_desc = "the gardener"
+long_desc = "A small elf stands here tending the garden."
+description = """
+A young elf stands here in dirt covered overalls. He seems to be weeding
+his garden."""
+level = 40
+sex = "male"
+act_flags = ["npc", "sentinel", "no_align"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9586
+keywords = ["oldstyle", "nightmare", "demon", "horse"]
+short_desc = "the nightmare"
+long_desc = "A large horse, black as night, stands here."
+description = """
+You see the largest horse you have ever seen before. Standing 10' at the
+shoulder he breathes flame from his nostrils and leaps to protect
+his love."""
+level = 24
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "warrior", "no_align"]
+affected_by = ["detect_invis", "pass_door"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9587
+keywords = ["oldstyle", "wolverine"]
+short_desc = "the wolverine"
+long_desc = "A large wolf like creature leaps out from the darkness."
+description = """
+You see a half wolf- half human beast wearing a glove with long thin
+blades on it."""
+level = 24
+sex = "female"
+act_flags = ["npc", "sentinel", "warrior", "no_align", "outdoors"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9588
+keywords = ["oldstyle", "mimic", "painting"]
+short_desc = "the mimic"
+long_desc = "You see an incredibly life-like painting of the Sultan's mother."
+description = "Boy is she ugly."
+level = 20
+sex = "male"
+act_flags = ["npc", "sentinel", "mage"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9589
+keywords = ["oldstyle", "mayor"]
+short_desc = "the mayor"
+long_desc = "The Mayor of New Thalos stands here."
+description = "You see a chubby hobbit dressed in his best suit."
+level = 39
+sex = "male"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9590
+keywords = ["oldstyle", "chef"]
+short_desc = "the chef"
+long_desc = "The chef stands here making dinner."
+description = """
+You see a very large human who seems to taste everything he makes."""
+level = 40
+sex = "male"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9591
+keywords = ["oldstyle", "ixitxachitl"]
+short_desc = "the Ixitxachitl"
+long_desc = "A very large ray with a wicked looking tail swims here."
+description = "You see a large ray with sharp fangs and a barbed tail."
+level = 59
+sex = "none"
+act_flags = ["npc", "sentinel", "cleric", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9592
+keywords = ["oldstyle", "guard", "bodyguard"]
+short_desc = "the bodyguard"
+long_desc = "A bodyguard stands here."
+description = "A big, strong, helpful, trustworthy guard."
+level = 19
+sex = "male"
+act_flags = ["npc", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9593
+keywords = ["ranger", "guildmaster"]
+short_desc = "the guildmaster"
+long_desc = "Your guildmaster stands here."
+description = """
+There is a sinewy, harsh-looking woman here who seems to glide as she moves."""
+level = 80
+sex = "female"
+act_flags = ["npc", "sentinel", "train", "practice", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 30000
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9594
+keywords = ["druid", "guildmaster"]
+short_desc = "the guildmaster"
+long_desc = "Your guildmaster sits here."
+description = """
+An ancient-looking man is sitting cross-legged in the middle of the room."""
+level = 80
+sex = "male"
+act_flags = ["npc", "sentinel", "train", "practice", "undead", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 30000
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9595
+keywords = ["vampire", "guildmaster"]
+short_desc = "the guildmaster"
+long_desc = "Your guildmaster stands here."
+description = "An ancient man dressed in jet black."
+level = 80
+sex = "male"
+act_flags = ["npc", "sentinel", "train", "practice", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 30000
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9596
+keywords = ["oldstyle", "ranger", "guildguard"]
+short_desc = "the guildguard"
+long_desc = "The Guard for the Guild of Rangers sleeps here."
+description = "This man looks like one mean SOB, i wouldn't wake him."
+level = 42
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 9597
+keywords = ["oldstyle", "druid", "guildguard"]
+short_desc = "the guildguard"
+long_desc = "The Guard for the Guild of Druids stands here."
+description = "He gives you a friendly smile, but that may just be his job."
+level = 42
+sex = "male"
+act_flags = ["npc", "sentinel", "undead", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 9598
+keywords = ["oldstyle", "vampire", "guildguard"]
+short_desc = "the guildguard"
+long_desc = "The Guard for the Guild of Vampires stands here."
+description = """
+A thin man, draped in black.  An aura of evil radiates from him."""
+level = 42
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+

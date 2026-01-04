@@ -1,0 +1,8 @@
+id = "area"
+name = ""
+credits = ""
+reset_interval = 120
+
+[vnum_range]
+min = 0
+max = 0

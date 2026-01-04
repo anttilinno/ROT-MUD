@@ -1,0 +1,8 @@
+id = "valhalla"
+name = "Valhalla"
+credits = "{ IMM } ROM     Immortal Zone"
+reset_interval = 120
+
+[vnum_range]
+min = 1200
+max = 1299

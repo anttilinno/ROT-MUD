@@ -1,0 +1,821 @@
+[[help]]
+keywords = ["look", "l"]
+syntax = "look [target]"
+description = """
+Look at your surroundings, a character, or an object.
+
+Without arguments, 'look' shows the current room description,
+visible exits, objects on the ground, and characters present.
+
+With a target, 'look' examines that specific thing:
+  look sword     - Look at a sword in your inventory or the room
+  look guard     - Look at a character named 'guard'
+  look north     - Look at the exit to the north
+"""
+see_also = ["examine", "scan"]
+
+[[help]]
+keywords = ["north", "south", "east", "west", "up", "down"]
+syntax = "<direction>"
+description = """
+Move in the specified direction.
+
+Available directions: north, south, east, west, up, down
+Abbreviations: n, s, e, w, u, d
+
+Some exits may be blocked by closed doors. Use 'open <direction>'
+to open a door before passing through.
+"""
+
+[[help]]
+keywords = ["get", "take"]
+syntax = "get <item> [container]"
+description = """
+Pick up an item from the ground or a container.
+
+Examples:
+  get sword        - Pick up a sword from the ground
+  get all          - Pick up all items from the ground
+  get all.sword    - Pick up all swords from the ground
+  get sword bag    - Get a sword from your bag
+"""
+see_also = ["drop", "put"]
+
+[[help]]
+keywords = ["drop"]
+syntax = "drop <item>"
+description = """
+Drop an item from your inventory onto the ground.
+
+Examples:
+  drop sword       - Drop a sword
+  drop all         - Drop all items
+  drop all.potion  - Drop all potions
+"""
+see_also = ["get", "put"]
+
+[[help]]
+keywords = ["inventory", "i", "inv"]
+syntax = "inventory"
+description = """
+Display a list of items you are carrying in your inventory.
+
+This shows items that are not equipped. Use 'equipment' to see
+what you are currently wearing or wielding.
+"""
+see_also = ["equipment", "get", "drop"]
+
+[[help]]
+keywords = ["equipment", "eq"]
+syntax = "equipment"
+description = """
+Display a list of items you are currently wearing or wielding.
+
+Shows what is equipped in each equipment slot:
+- Light, head, neck, body, arms, hands
+- Finger, wrist, legs, feet
+- Shield, wield, held
+"""
+see_also = ["inventory", "wear", "wield", "remove"]
+
+[[help]]
+keywords = ["wear"]
+syntax = "wear <item>"
+description = """
+Equip a piece of armor or clothing from your inventory.
+
+The item will be worn in the appropriate location. If something
+is already worn there, you must 'remove' it first.
+"""
+see_also = ["equipment", "wield", "remove"]
+
+[[help]]
+keywords = ["wield"]
+syntax = "wield <weapon>"
+description = """
+Wield a weapon from your inventory.
+
+You can only wield one weapon at a time (unless you have
+the 'dual wield' skill). The weapon must be appropriate
+for your class and level.
+"""
+see_also = ["equipment", "wear", "remove"]
+
+[[help]]
+keywords = ["remove"]
+syntax = "remove <item>"
+description = """
+Remove a piece of equipment you are wearing or wielding.
+
+The item will be placed in your inventory.
+"""
+see_also = ["equipment", "wear", "wield"]
+
+[[help]]
+keywords = ["score", "sc"]
+syntax = "score"
+description = """
+Display your character's statistics and status.
+
+Shows: level, class, race, experience, gold, hit points,
+mana, movement, stats (STR/INT/WIS/DEX/CON), and active affects.
+"""
+
+[[help]]
+keywords = ["who"]
+syntax = "who"
+description = """
+Display a list of players currently online.
+
+Shows player names, levels, and races. Immortals may be
+shown separately at the top of the list.
+"""
+
+[[help]]
+keywords = ["say", "'"]
+syntax = "say <message>"
+description = """
+Speak to everyone in the same room.
+
+Anything you say will be heard by all characters present.
+You can use ' as a shortcut (e.g., 'Hello everyone!)
+"""
+see_also = ["tell"]
+
+[[help]]
+keywords = ["tell"]
+syntax = "tell <player> <message>"
+description = """
+Send a private message to another player.
+
+The target player does not need to be in the same room.
+They can use 'reply' to respond to you.
+"""
+see_also = ["say", "reply"]
+
+[[help]]
+keywords = ["reply"]
+syntax = "reply <message>"
+description = """
+Reply to the last person who sent you a tell.
+
+This is a convenient shortcut for sending tells back
+and forth with someone.
+"""
+see_also = ["tell"]
+
+[[help]]
+keywords = ["kill", "attack"]
+syntax = "kill <target>"
+description = """
+Attack a mobile (monster) or player.
+
+Once combat starts, you will automatically attack each round
+until one of you is dead, or you 'flee'.
+
+Be careful - some mobs are much stronger than they appear!
+"""
+see_also = ["flee", "cast"]
+
+[[help]]
+keywords = ["flee"]
+syntax = "flee"
+description = """
+Attempt to escape from combat.
+
+You will run in a random direction if successful.
+Fleeing may result in experience loss and has a chance to fail.
+"""
+see_also = ["kill"]
+
+[[help]]
+keywords = ["cast"]
+syntax = "cast <spell> [target]"
+description = """
+Cast a spell.
+
+Some spells require a target (offensive spells), while others
+affect yourself (buffs) or everyone in the room (area spells).
+
+Use 'spells' to see what spells you know and their mana cost.
+"""
+see_also = ["spells"]
+
+[[help]]
+keywords = ["spells"]
+syntax = "spells"
+description = """
+Display a list of spells you know.
+
+Shows spell name, level, and mana cost for each spell
+you have learned.
+"""
+see_also = ["cast", "practice"]
+
+[[help]]
+keywords = ["skills"]
+syntax = "skills"
+description = """
+Display a list of skills you know.
+
+Shows skill name and your current proficiency percentage.
+Use 'practice' at a trainer to improve your skills.
+"""
+see_also = ["practice"]
+
+[[help]]
+keywords = ["practice", "prac"]
+syntax = "practice [skill]"
+description = """
+Practice a skill or spell to improve your proficiency.
+
+Without arguments, shows what you can practice.
+With a skill name, you spend practice sessions to learn it.
+
+You gain practice sessions when you level up.
+You must be at a trainer mob to practice.
+"""
+see_also = ["skills", "spells"]
+
+[[help]]
+keywords = ["buy"]
+syntax = "buy <item>"
+description = """
+Buy an item from a shopkeeper.
+
+You must be in a shop to use this command.
+Use 'list' to see what items are available for purchase.
+"""
+see_also = ["sell", "list", "value"]
+
+[[help]]
+keywords = ["sell"]
+syntax = "sell <item>"
+description = """
+Sell an item to a shopkeeper.
+
+You must be in a shop to use this command.
+Use 'value' to see how much a shopkeeper will pay.
+Some shopkeepers only buy certain types of items.
+"""
+see_also = ["buy", "list", "value"]
+
+[[help]]
+keywords = ["list"]
+syntax = "list [item]"
+description = """
+List items for sale at a shop.
+
+Without arguments, shows all available items.
+With an argument, filters to matching items.
+"""
+see_also = ["buy", "sell", "value"]
+
+[[help]]
+keywords = ["value"]
+syntax = "value <item>"
+description = """
+Ask a shopkeeper how much they would pay for an item.
+
+The price depends on the item's condition and
+the shopkeeper's profit margins.
+"""
+see_also = ["buy", "sell", "list"]
+
+[[help]]
+keywords = ["group"]
+syntax = "group [player]"
+description = """
+Manage your group membership.
+
+Without arguments, shows current group members.
+With a player name, attempts to add them to your group.
+
+You must be the group leader to add members.
+New members must be following you.
+"""
+see_also = ["follow"]
+
+[[help]]
+keywords = ["follow"]
+syntax = "follow <player>"
+description = """
+Follow another player.
+
+When you follow someone, you automatically move when they do.
+You must be following the group leader to be added to their group.
+Use 'follow self' to stop following.
+"""
+see_also = ["group"]
+
+[[help]]
+keywords = ["help", "?"]
+syntax = "help [topic]"
+description = """
+Get help on a specific topic or command.
+
+Without arguments, displays general help and tips.
+With a topic, shows detailed help for that command or subject.
+
+Examples:
+  help          - Show general help
+  help look     - Help on the 'look' command
+  help combat   - Help on combat mechanics
+  help newbie   - Tips for new players
+"""
+see_also = ["commands"]
+
+[[help]]
+keywords = ["commands", "cmds"]
+syntax = "commands"
+description = """
+Display a list of all available commands.
+
+Commands are organized by category:
+- Movement: north, south, east, west, up, down
+- Information: look, score, who, inventory, equipment
+- Objects: get, drop, wear, wield, remove
+- Communication: say, tell, reply
+- Combat: kill, flee
+- Magic: cast, spells
+- Skills: skills, practice
+- Group: group, follow
+- Shop: buy, sell, list, value
+- System: help, quit, save
+"""
+see_also = ["help"]
+
+[[help]]
+keywords = ["quit", "exit"]
+syntax = "quit"
+description = """
+Leave the game and disconnect.
+
+Your character will be saved automatically when you quit.
+You can reconnect at any time to continue playing.
+
+Note: If you quit while in combat, your character may die!
+"""
+see_also = ["save"]
+
+[[help]]
+keywords = ["save"]
+syntax = "save"
+description = """
+Save your character to disk.
+
+Your character is saved automatically when you quit,
+but you can use this command to save at any time.
+
+Saving records your current stats, inventory, equipment,
+and location.
+"""
+see_also = ["quit"]
+
+# === Position Commands ===
+
+[[help]]
+keywords = ["stand"]
+syntax = "stand"
+description = """
+Stand up from a resting, sitting, or sleeping position.
+
+You must be standing to move around or engage in combat.
+"""
+see_also = ["sit", "rest", "sleep", "wake"]
+
+[[help]]
+keywords = ["sit"]
+syntax = "sit"
+description = """
+Sit down.
+
+While sitting, you regenerate health and mana faster than standing,
+but slower than resting. You can still perform most actions.
+"""
+see_also = ["stand", "rest", "sleep", "wake"]
+
+[[help]]
+keywords = ["rest"]
+syntax = "rest"
+description = """
+Lay down and rest.
+
+While resting, you regenerate health, mana, and movement much faster.
+You can still look around and communicate but cannot fight or move.
+"""
+see_also = ["stand", "sit", "sleep", "wake"]
+
+[[help]]
+keywords = ["sleep"]
+syntax = "sleep"
+description = """
+Go to sleep.
+
+While sleeping, you regenerate at the maximum rate.
+You cannot see what happens around you or communicate.
+Use 'wake' or 'stand' to wake up.
+"""
+see_also = ["stand", "sit", "rest", "wake"]
+
+[[help]]
+keywords = ["wake"]
+syntax = "wake [player]"
+description = """
+Wake up from sleeping.
+
+Without an argument, wakes yourself up.
+With a player name, attempts to wake that player.
+
+You cannot wake someone who is magically asleep.
+"""
+see_also = ["stand", "sit", "rest", "sleep"]
+
+# === Utility Commands ===
+
+[[help]]
+keywords = ["recall"]
+syntax = "recall"
+description = """
+Teleport instantly back to the temple.
+
+Recall costs half your current movement points.
+You cannot recall while in combat or if you are cursed.
+
+This is useful for escaping dangerous situations or
+returning quickly after exploring.
+"""
+see_also = ["flee"]
+
+[[help]]
+keywords = ["affects", "aff"]
+syntax = "affects"
+description = """
+Show all spells and effects currently affecting you.
+
+Displays:
+  - Spell name
+  - Duration remaining (in ticks)
+  - Stat modifications
+
+This helps you track active buffs and debuffs.
+"""
+see_also = ["score", "spells"]
+
+# === Door Commands ===
+
+[[help]]
+keywords = ["open"]
+syntax = "open <direction|door>"
+description = """
+Open a door or container.
+
+Examples:
+  open north    - Open the door to the north
+  open gate     - Open a door named 'gate'
+  open chest    - Open a container
+
+Some doors may be locked. Use 'unlock' first.
+"""
+see_also = ["close", "lock", "unlock", "pick"]
+
+[[help]]
+keywords = ["close"]
+syntax = "close <direction|door>"
+description = """
+Close a door or container.
+
+Examples:
+  close south   - Close the door to the south
+  close door    - Close a door by name
+"""
+see_also = ["open", "lock", "unlock"]
+
+[[help]]
+keywords = ["lock"]
+syntax = "lock <direction|door>"
+description = """
+Lock a door with a key.
+
+You must have the correct key in your inventory.
+The door must be closed first.
+"""
+see_also = ["open", "close", "unlock"]
+
+[[help]]
+keywords = ["unlock"]
+syntax = "unlock <direction|door>"
+description = """
+Unlock a door with a key.
+
+You must have the correct key in your inventory.
+"""
+see_also = ["open", "close", "lock", "pick"]
+
+[[help]]
+keywords = ["pick"]
+syntax = "pick <direction|door>"
+description = """
+Attempt to pick a lock without a key.
+
+Requires the 'pick lock' skill.
+Success depends on your skill level, dexterity,
+and the difficulty of the lock.
+
+Some locks are pick-proof and cannot be opened this way.
+"""
+see_also = ["unlock", "lock"]
+
+# === Channel Commands ===
+
+[[help]]
+keywords = ["gossip", "."]
+syntax = "gossip <message>"
+description = """
+Broadcast a message to all players on the gossip channel.
+
+Use '.' as a shortcut (e.g., .Hello everyone!)
+
+Without a message, toggles the gossip channel on/off.
+"""
+see_also = ["shout", "yell", "say", "tell"]
+
+[[help]]
+keywords = ["shout"]
+syntax = "shout <message>"
+description = """
+Shout a message to all players in the game.
+
+Shouting has a longer delay (lag) than gossip.
+Use sparingly.
+"""
+see_also = ["gossip", "yell"]
+
+[[help]]
+keywords = ["yell"]
+syntax = "yell <message>"
+description = """
+Yell a message to all players in the same area.
+
+Unlike gossip or shout, yell only reaches players
+in your current area (zone).
+"""
+see_also = ["gossip", "shout", "say"]
+
+[[help]]
+keywords = ["emote", ","]
+syntax = "emote <action>"
+description = """
+Perform a custom emote/action.
+
+Examples:
+  emote dances a jig.    -> "Yourname dances a jig."
+  , waves happily.       -> "Yourname waves happily."
+
+The comma (,) can be used as a shortcut.
+"""
+see_also = ["socials", "say"]
+
+[[help]]
+keywords = ["socials"]
+syntax = "socials"
+description = """
+List all available social commands.
+
+Socials are predefined emotes like smile, laugh, wave, etc.
+You can use them with or without a target:
+  smile          -> "You smile happily."
+  smile guard    -> "You smile at the guard."
+"""
+see_also = ["emote"]
+
+# === Note Commands ===
+
+[[help]]
+keywords = ["note"]
+syntax = "note <command> [args]"
+description = """
+The note system allows persistent communication between players.
+
+Commands:
+  note list           - List all notes you can read
+  note read [num]     - Read a note (or the first unread)
+  note to <recipient> - Start writing a note
+  note subject <text> - Set the subject
+  note + <text>       - Add a line of text
+  note -              - Remove last line
+  note show           - Preview your note
+  note clear          - Discard your note
+  note post           - Send your note
+  note remove <num>   - Delete a note you wrote
+
+Recipients can be: a player name, 'all', or 'imm' (immortals).
+"""
+see_also = ["idea", "news", "changes"]
+
+[[help]]
+keywords = ["idea"]
+syntax = "idea <command> [args]"
+description = """
+Post ideas and suggestions for the game.
+
+Works exactly like the 'note' command but posts to the
+ideas board for immortals to review.
+
+Use this to suggest new features, improvements, or
+report things that could be better.
+"""
+see_also = ["note", "news", "changes"]
+
+[[help]]
+keywords = ["news"]
+syntax = "news [command] [args]"
+description = """
+Read announcements and news from the immortals.
+
+Commands:
+  news list       - List all news posts
+  news read [num] - Read a news post
+
+News is typically posted by immortals to announce
+game changes, events, or important information.
+"""
+see_also = ["note", "changes"]
+
+[[help]]
+keywords = ["changes"]
+syntax = "changes [command] [args]"
+description = """
+Read about recent code changes and updates.
+
+Commands:
+  changes list       - List all change logs
+  changes read [num] - Read a change entry
+
+This shows what has been added, fixed, or modified
+in recent updates to the game.
+"""
+see_also = ["note", "news"]
+
+# === Combat Commands ===
+
+[[help]]
+keywords = ["scan"]
+syntax = "scan [direction]"
+description = """
+Look for creatures in adjacent rooms.
+
+Without a direction, scans all directions.
+With a direction, scans up to 3 rooms in that direction.
+
+Shows: distance, direction, and creature name.
+Cannot scan through closed doors.
+"""
+see_also = ["look"]
+
+[[help]]
+keywords = ["consider", "con"]
+syntax = "consider <target>"
+description = """
+Evaluate how tough a fight against the target would be.
+
+Compares your combat stats (HP, AC, damage) against theirs.
+Results range from 'easy kill' to 'Death will thank you for your gift'.
+
+This is an estimate - actual fights may vary!
+"""
+see_also = ["kill"]
+
+[[help]]
+keywords = ["backstab", "bs"]
+syntax = "backstab <target>"
+description = """
+Attack from behind for massive damage.
+
+Requirements:
+  - Must have the backstab skill
+  - Must be wielding a piercing weapon
+  - Target must not be in combat
+  - You must not be in combat
+
+Damage is multiplied based on your level and skill.
+"""
+see_also = ["kill", "circle"]
+
+[[help]]
+keywords = ["bash"]
+syntax = "bash [target]"
+description = """
+Attempt to knock your opponent down with your shield.
+
+Requirements:
+  - Must have the bash skill
+  - Target must be fighting you (or specify target)
+
+Success depends on your strength, size, and skill.
+A successful bash dazes the target for a few rounds.
+"""
+see_also = ["kick", "trip"]
+
+[[help]]
+keywords = ["kick"]
+syntax = "kick [target]"
+description = """
+Kick your opponent for extra damage.
+
+Requirements:
+  - Must have the kick skill
+  - Must be in combat (or specify target)
+
+A quick attack that deals damage based on your level.
+"""
+see_also = ["bash", "trip"]
+
+[[help]]
+keywords = ["trip"]
+syntax = "trip [target]"
+description = """
+Trip your opponent, knocking them to the ground.
+
+Requirements:
+  - Must have the trip skill
+  - Target must be fighting you (or specify target)
+  - Target must not be flying
+
+A successful trip knocks the target down and dazes them.
+"""
+see_also = ["bash", "kick"]
+
+[[help]]
+keywords = ["disarm"]
+syntax = "disarm [target]"
+description = """
+Attempt to knock the weapon from your opponent's hands.
+
+Requirements:
+  - Must have the disarm skill
+  - Must be wielding a weapon yourself
+  - Opponent must be wielding a weapon
+
+Success depends on your skill and the opponent's grip skill.
+"""
+see_also = ["kill"]
+
+# === Object Commands ===
+
+[[help]]
+keywords = ["eat"]
+syntax = "eat <food>"
+description = """
+Eat food to reduce hunger.
+
+Food can be found, bought from shops, or created with magic.
+Some food may be poisoned - be careful what you eat!
+"""
+see_also = ["drink"]
+
+[[help]]
+keywords = ["drink"]
+syntax = "drink [source]"
+description = """
+Drink from a fountain or container.
+
+Without arguments, drinks from a fountain in the room.
+With an argument, drinks from the specified container.
+"""
+see_also = ["eat"]
+
+[[help]]
+keywords = ["give"]
+syntax = "give <item> <player>"
+description = """
+Give an item from your inventory to another character.
+
+The item is transferred directly to their inventory.
+Some cursed items cannot be given away.
+"""
+see_also = ["drop", "put"]
+
+[[help]]
+keywords = ["put"]
+syntax = "put <item> <container>"
+description = """
+Put an item into a container.
+
+The container can be in your inventory or on the ground.
+Some containers have limited capacity.
+"""
+see_also = ["get", "give", "drop"]
+
+[[help]]
+keywords = ["sacrifice", "sac", "junk"]
+syntax = "sacrifice <item>"
+description = """
+Sacrifice an item to the gods for a small reward.
+
+The item is destroyed and you receive silver coins
+based on the item's value.
+
+Useful for disposing of unwanted items.
+"""
+see_also = ["drop"]

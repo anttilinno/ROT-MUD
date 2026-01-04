@@ -1,0 +1,467 @@
+[[rooms]]
+vnum = 8301
+name = "Muddy Path"
+sector = "field"
+description = """
+This section of the path is slowly being drowned by the nearby swamp to the
+south, which is creeping slowly inland.  Several caved-in buildings sprawl
+here, torn apart both by battle and the elements."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6125
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8302
+
+[[rooms]]
+vnum = 8302
+name = "Swamp's Edge"
+sector = "mountain"
+description = """
+Briars and marsh plants stick to your boots and clothes, and clouds cover the
+skies above the murky marsh, leaving the path before you dark and sinister.
+You see some disturbances in the marsh, but after a few strangled screams,
+the sounds stop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8301
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8303
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8304
+
+[[rooms]]
+vnum = 8303
+name = "Marshy Forest"
+sector = "mountain"
+description = """
+This area is by no means a forest, but for those who dwell in these sparse
+trees it is one.  Occasionally you see a whole humanoid form floating face down
+in the water, but mostly you only find pieces.  You hear a loud bellow in the
+distance.  And feel fear creep into your heart."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8305
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8302
+
+  [[rooms.mob_resets]]
+  vnum = 8301
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8302
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8303
+  max = 3
+
+[[rooms]]
+vnum = 8304
+name = "On a hill."
+sector = "hills"
+description = """
+You stand atop a hill on the northwestern side of the evil swamp. Dark
+clouds whip around you and the wind raises its voice and assails you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8302
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8309
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8310
+
+  [[rooms.mob_resets]]
+  vnum = 8302
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8306
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8310
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8314
+  max = 6
+
+[[rooms]]
+vnum = 8305
+name = "An Oozing Bog"
+sector = "mountain"
+description = """
+You stand in an oozing quagmire.  A creaking beat fills the air, 
+accompanied by groans and soughing of the air.  Several large winged
+beasts flap over you and send chilling glares your way.  You feel out
+of place, and feel that the occupants of this realm will soon 
+have you for a feast."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8306
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8303
+
+  [[rooms.mob_resets]]
+  vnum = 8307
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8309
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8310
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8314
+  max = 6
+
+[[rooms]]
+vnum = 8306
+name = "An Oozing Bog"
+sector = "mountain"
+description = """
+The ground here is soft and oozing.  You feel slimy water seeping into your
+boots.  Better stop and check for leeches when you get out of here."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8305
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 8302
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8305
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8314
+  max = 6
+
+[[rooms]]
+vnum = 8307
+name = "Swamp Thing's Lair"
+sector = "water_swim"
+description = """
+A horrible swamp thing resides here.  Mutilated corpses suffuse the air with
+the overwhelming stench of putrid flesh."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8308
+
+  [[rooms.mob_resets]]
+  vnum = 8303
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 8304
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 8314
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8320
+  max = 5
+
+[[rooms]]
+vnum = 8308
+name = "Pool of Quick Sand"
+sector = "water_swim"
+description = """
+You stand by a large oozing pool of quick sand.  Luckily only a complete
+klutz could not avoid it.  Dancing lights fly about you and one seems to
+be taunting you towards the pool."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8307
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8314
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8309
+
+  [[rooms.mob_resets]]
+  vnum = 8301
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8308
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 8314
+  max = 6
+
+[[rooms]]
+vnum = 8309
+name = "A Dark Pool."
+sector = "water_swim"
+description = """
+You stand beside a large dark pond.  The water boils not with heat, but with
+motion, as if it is alive.  A creaking beat pulses through the air, leaving
+you with a cold sweat and fear in your heart."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8308
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8311
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8304
+
+  [[rooms.mob_resets]]
+  vnum = 8312
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8314
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 8320
+  max = 5
+
+[[rooms]]
+vnum = 8310
+name = "Gloomy Path Through the Marsh."
+sector = "water_swim"
+description = """
+To the north lies a hill, shrouded in dark clouds, and to the south lies
+a huge patch of vegetation.  You sense an evil presence and notice 
+a beast flying overhead to the south east, towards what looks to be a 
+huge fortress, half buried in the marsh."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8304
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8312
+
+  [[rooms.mob_resets]]
+  vnum = 8306
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8312
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8313
+  max = 1
+
+[[rooms]]
+vnum = 8311
+name = "Cloud of Darkness."
+sector = "water_swim"
+description = """
+As you travel through this cloud of darkness, a fear such as you have never
+known before assails you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8309
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8313
+
+  [[rooms.mob_resets]]
+  vnum = 8309
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8320
+  max = 5
+
+[[rooms]]
+vnum = 8312
+name = "Near Vegetation from Hell."
+sector = "water_swim"
+description = """
+You stand near some of the strangest plant life you have ever seen, a mixture
+of tumescent vegetables, evil-smelling fruit trees, and malignant ferns."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8310
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8313
+
+  [[rooms.mob_resets]]
+  vnum = 8318
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8318
+  max = 2
+
+[[rooms]]
+vnum = 8313
+name = "By the Monolith."
+sector = "mountain"
+description = """
+You are standing near a monolith which protrudes some 20 feet from the
+marsh into the air.  Its black obsidian surface shines darkly in the 
+strange, almost unearthly light that enters through the clouds above."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8311
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8314
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8312
+
+  [[rooms.mob_resets]]
+  vnum = 8303
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 8307
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8320
+  max = 5
+
+[[rooms]]
+vnum = 8314
+name = "Murky Bog."
+sector = "mountain"
+description = """
+A murky bog surrounds you.  To the east a black monolith juts forth from the
+ground.  Far to the north lies a huge pool of quicksand.  Snarls can be heard
+echoing as if from a great distance."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8308
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8315
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8313
+
+[[rooms]]
+vnum = 8315
+name = "Northern Lake Side."
+sector = "water_noswim"
+description = """
+Floating on this boiling lake is not what you would consider an enjoyable 
+experience.  Many a creature bumps the bottom of your boat, and glares 
+at you through unblinking eyes from the waters below.  The southern 
+portion of the lake looks calm and serene compared to this wild place."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8316
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8314
+
+  [[rooms.mob_resets]]
+  vnum = 8320
+  max = 5
+
+[[rooms]]
+vnum = 8316
+name = "Southern Lake Side."
+sector = "water_noswim"
+description = """
+You are floating on a calm section of blue crystal water.  You feel much more
+at ease then you were before in this area.  Then a wave of fear passes over
+you.  You are not alone."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8315
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8317
+
+[[rooms]]
+vnum = 8317
+name = "Beach"
+sector = "mountain"
+description = """
+You are on a sandy shore.  Marsh life creeps across the surface.  To the west
+lies an evil fortress.  You see figures walking along the battlements."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8316
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8318
+
+[[rooms]]
+vnum = 8318
+name = "Before the Great Gates."
+sector = "forest"
+description = """
+You stand before the gates of a huge fortress.  The drawbridge is up, the
+gates closed, and the portcullis down.  This place looks very dangerous,
+and you decide not to continue onward."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8317
+
+  [[rooms.mob_resets]]
+  vnum = 8321
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8321
+  max = 2
+

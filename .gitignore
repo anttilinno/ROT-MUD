@@ -1,0 +1,27 @@
+# Go build artifacts
+coverage.out
+*.out
+*.test
+*.exe
+
+# AI assistant
+CLAUDE.md
+
+# Binaries
+rotmud
+areconv
+go_port/rotmud
+go_port/areconv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

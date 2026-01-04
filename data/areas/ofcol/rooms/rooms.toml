@@ -1,0 +1,159 @@
+[[rooms]]
+vnum = 5550
+name = "Village street"
+sector = "city"
+description = """
+You stand at the small village street in Ofcol.
+From here you see small houses and only few people.
+North of here the village street continues up to the small
+square where some people are gathered as always."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5551
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 314
+
+  [[rooms.mob_resets]]
+  vnum = 303
+  max = 5
+
+[[rooms]]
+vnum = 5551
+name = "Village street"
+sector = "city"
+description = """
+You are standing on the village street of Ofcol.
+East from here is a small alley and north you enter the village
+square. Towards the south you can leave Ofcol."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5552
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5553
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5550
+
+[[rooms]]
+vnum = 5552
+name = "Village square"
+sector = "city"
+description = """
+The village square is a place where inhabitants of Ofcol gather
+to talk, trade and sell items and just have a good time.
+You see a small shop to the west and the local inn to the north.
+If you leave south you go to village street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5556
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5551
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5555
+
+  [[rooms.mob_resets]]
+  vnum = 304
+  max = 5
+
+[[rooms]]
+vnum = 5553
+name = "The small alley"
+sector = "city"
+description = """
+You are in a small, quiet alley.  From here you see the village street
+to the west and a small room lies to the south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 601
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5554
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5551
+
+  [[rooms.mob_resets]]
+  vnum = 304
+  max = 5
+
+[[rooms]]
+vnum = 5554
+name = "The future training room"
+sector = "city"
+description = """
+This is the future site of a training room.  The only exit is north
+leading to the small alley."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5553
+
+[[rooms]]
+vnum = 5555
+name = "Luxan's mixed shop"
+sector = "city"
+description = """
+You are standing in a small shop, filled with all kinds of goods.
+Here you might be able to find just the thing you're looking for.
+The only exit is east to village square."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5552
+
+  [[rooms.mob_resets]]
+  vnum = 306
+  max = 1
+
+[[rooms]]
+vnum = 5556
+name = "The Local Inn"
+sector = "city"
+description = """
+You are in the local inn, where the peaceful citizens of Ofcol
+gather to have a drink or 5 if they have dry throats.
+You can't help thinking that Ofcol is a dry city, when you see the
+many people here.
+The only exit is south to the village square."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5552
+
+  [[rooms.mob_resets]]
+  vnum = 303
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 308
+  max = 1
+
+[[rooms]]
+vnum = 5577
+name = "Ravan's hideout"
+sector = "inside"
+description = """
+This place is a small, cosy place where no one disturbs you all
+the time. The room has little decoration except for some pictures
+on the wall.
+You notice that there are no exits from this room."""
+
+  [[rooms.mob_resets]]
+  vnum = 350
+  max = 1
+

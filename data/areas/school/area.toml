@@ -1,0 +1,8 @@
+id = "mud_school"
+name = "Mud School"
+credits = "{01 09} Hatchet Mud School"
+reset_interval = 120
+
+[vnum_range]
+min = 3700
+max = 3799

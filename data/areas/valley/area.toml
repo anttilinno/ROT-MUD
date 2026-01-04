@@ -1,0 +1,8 @@
+id = "valley_of_the_elves"
+name = "Valley of the Elves"
+credits = "{09 40} Hatchet Valley of the Elves"
+reset_interval = 120
+
+[vnum_range]
+min = 7800
+max = 7899

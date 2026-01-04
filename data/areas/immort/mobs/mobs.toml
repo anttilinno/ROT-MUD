@@ -1,0 +1,51 @@
+[[mobiles]]
+vnum = 1200
+keywords = ["Heimdall"]
+short_desc = "Heimdall"
+long_desc = "Heimdall, guardian of Bifrost, stands guard over the Rainbow Bridge."
+description = """
+Standing over 7 feet tall and muscled as only a god can be, Heimdall keeps
+his unsleeping gaze over the Rainbow bridge.  His trusty Gjallor-horn never
+leaves his side, and shall remain unwinded until the dread ship Naglfar sails
+towards Valhalla on the dawn of Ragnarok."""
+level = 107
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_purge"]
+affected_by = ["detect_evil", "detect_invis", "detect_hidden", "infrared", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 19999
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 40
+
+[[mobiles]]
+vnum = 1201
+keywords = ["white", "cat"]
+short_desc = "the white cat"
+long_desc = "A white cat is here, basking in the light."
+description = """
+Snowy white fur gleams softly in the light.  You feel the urge to pet
+it.. but as you reach out your hand, the slitted green eyes snap open
+and the cat hisses warningly."""
+level = 72
+sex = "either"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["sneak", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 100
+  size = 10
+  bonus = 13500
+
+  [mobiles.damage_dice]
+  number = 7
+  size = 10
+  bonus = 32
+

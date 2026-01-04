@@ -1,0 +1,260 @@
+[[objects]]
+vnum = 8000
+keywords = ["spitgun", "spit", "gun"]
+short_desc = "a spit gun"
+long_desc = "There is a spit gun laying here."
+item_type = "wand"
+level = 33
+weight = 20
+cost = 48900
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 8001
+keywords = ["knee", "pads"]
+short_desc = "a set of knee pads"
+long_desc = "There are some knee pads laying here."
+item_type = "armor"
+level = 9
+weight = 30
+cost = 480
+wear_flags = ["take", "legs"]
+
+[[objects]]
+vnum = 8002
+keywords = ["stooky", "gland"]
+short_desc = "a stooky gland"
+long_desc = "There is a stooky gland laying here."
+item_type = "pill"
+level = 25
+weight = 10
+cost = 1000
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8003
+keywords = ["lawgiver"]
+short_desc = "a lawgiver"
+long_desc = "There is a lawgiver laying here."
+item_type = "wand"
+level = 53
+weight = 20
+cost = 58000
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 8004
+keywords = ["safe"]
+short_desc = "the magnetically shielded safe"
+long_desc = "A indestructible, immobile safe is here."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["hum"]
+
+[[objects]]
+vnum = 8005
+keywords = ["code", "box"]
+short_desc = "a code box"
+long_desc = "A code box of indeterminate use is here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "hold"]
+extra_flags = ["hum"]
+
+[[objects]]
+vnum = 8006
+keywords = ["bashball", "bat", "two-handed"]
+short_desc = "a bashball bat"
+long_desc = "A bashball bat is laying here."
+item_type = "weapon"
+level = 27
+weight = 30
+cost = 870
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 8007
+keywords = ["vibroblade"]
+short_desc = "the vibroblade"
+long_desc = "The vibroblade is here."
+item_type = "weapon"
+level = 35
+weight = 20
+cost = 2800
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "invis"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 8008
+keywords = ["vacuum", "cleaner", "two-handed"]
+short_desc = "a Hoover vacuum cleaner"
+long_desc = "A Hoover vacuum cleaner is here idling."
+item_type = "weapon"
+level = 29
+weight = 100
+cost = 2100
+wear_flags = ["take", "wield"]
+extra_flags = ["hum"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 4
+
+[[objects]]
+vnum = 8009
+keywords = ["knife"]
+short_desc = "a knife"
+long_desc = "A knife is sitting here...contemplating life."
+item_type = "weapon"
+level = 9
+weight = 10
+cost = 360
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 8010
+keywords = ["wet", "noodle"]
+short_desc = "a wet noodle"
+long_desc = "A wet noodle is laying here with clam sauce on it."
+item_type = "weapon"
+level = 9
+weight = 10
+cost = 670
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+[[objects]]
+vnum = 8011
+keywords = ["judge", "club"]
+short_desc = "a Judge's club"
+long_desc = "A Judge's club is resting here."
+item_type = "weapon"
+level = 33
+weight = 30
+cost = 1050
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 8012
+keywords = ["vault", "key"]
+short_desc = "a vault key"
+long_desc = "A vault key is here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "hold"]
+extra_flags = ["hum"]
+
+[[objects]]
+vnum = 8013
+keywords = ["key", "card"]
+short_desc = "a key card"
+long_desc = "A key card is laying here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 8014
+keywords = ["judge", "club"]
+short_desc = "a Judge's club"
+long_desc = "A Judge's club is resting here."
+item_type = "weapon"
+level = 51
+weight = 30
+cost = 1700
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 12
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 8015
+keywords = ["club", "electric", "shock"]
+short_desc = "a shock club"
+long_desc = "A sparking electric club is here."
+item_type = "weapon"
+level = 29
+weight = 30
+cost = 750
+wear_flags = ["take", "wield"]
+extra_flags = ["glow"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+[[objects]]
+vnum = 8016
+keywords = ["stunner", "police", "stick"]
+short_desc = "a police stun stick"
+long_desc = "A police issue stunner is here, must be stolen."
+item_type = "weapon"
+level = 45
+weight = 20
+cost = 1160
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 11
+

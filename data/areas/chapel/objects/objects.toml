@@ -1,0 +1,324 @@
+[[objects]]
+vnum = 3400
+keywords = ["candlestick"]
+short_desc = "a candlestick"
+long_desc = "A pewter candlestick is standing here."
+item_type = "light"
+level = 0
+weight = 50
+cost = 50
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 3402
+keywords = ["tickler"]
+short_desc = "a nightgaunt's tickler"
+long_desc = "A nightgaunt's tickler has been left here."
+item_type = "weapon"
+level = 13
+weight = 80
+cost = 540
+wear_flags = ["take", "wield"]
+extra_flags = ["nodrop"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 3403
+keywords = ["plasma", "webbing"]
+short_desc = "disgusting pinkish plasma webbing"
+long_desc = "A pile of pink material is lying here"
+item_type = "armor"
+level = 19
+weight = 100
+cost = 1800
+wear_flags = ["take", "body"]
+extra_flags = ["anti_good", "anti_neutral"]
+
+[[objects]]
+vnum = 3410
+keywords = ["rod", "key"]
+short_desc = "a queerly shaped rod"
+long_desc = "A queerly shaped rod is lying here."
+item_type = "key"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3411
+keywords = ["large", "black", "dirty", "key"]
+short_desc = "a large black dirty key"
+long_desc = "A large black dirty key is lying here"
+item_type = "key"
+level = 0
+weight = 30
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3412
+keywords = ["head", "jubal", "mummy"]
+short_desc = "the mummified head of Jubal the Benevolent"
+long_desc = "The mummified head of Jubal the Benevolent is lolling back and forth."
+item_type = "container"
+level = 0
+weight = 200
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["anti_evil"]
+
+[[objects]]
+vnum = 3413
+keywords = ["ring", "black", "marble"]
+short_desc = "a black marble ring"
+long_desc = "A black marble ring is lying here on the ground."
+item_type = "treasure"
+level = 5
+weight = 20
+cost = 26
+wear_flags = ["take", "finger"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 10
+
+[[objects]]
+vnum = 3414
+keywords = ["rapier", "thin"]
+short_desc = "a whisper thin rapier"
+long_desc = "A rapier is lying here."
+item_type = "weapon"
+level = 31
+weight = 40
+cost = 3500
+wear_flags = ["take", "wield"]
+extra_flags = ["hum"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+[[objects]]
+vnum = 3415
+keywords = ["sarcophagus", "coffin"]
+short_desc = "a stone sarcophagus"
+long_desc = "A stone sarcophagus is sitting here."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 3416
+keywords = ["iron", "heavy", "key"]
+short_desc = "a heavy iron key"
+long_desc = "A heavy iron key is lying here."
+item_type = "key"
+level = 0
+weight = 40
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3417
+keywords = ["flask", "wineflask"]
+short_desc = "a wineflask"
+long_desc = "A wineflask has been been left here."
+item_type = "drink"
+level = 0
+weight = 10
+cost = 400
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 3418
+keywords = ["coins"]
+short_desc = "a mound of coins fit for a dead king"
+long_desc = "You see a mound of coins fit for a dead king here"
+item_type = "money"
+level = 0
+weight = 500
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3419
+keywords = ["key"]
+short_desc = "key to the coffin"
+long_desc = "The key to the coffin is lying here"
+item_type = "key"
+level = 0
+weight = 30
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3420
+keywords = ["rathcor"]
+short_desc = "a hidden compartment in the room"
+long_desc = ""
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["dark"]
+
+[[objects]]
+vnum = 3421
+keywords = ["rusty", "sword", "curved", "scimitar"]
+short_desc = "a rusty curved scimitar"
+long_desc = "A sword has been left lying here"
+item_type = "weapon"
+level = 5
+weight = 60
+cost = 370
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 3
+
+[[objects]]
+vnum = 3422
+keywords = ["piece", "slime"]
+short_desc = "a piece of slime"
+long_desc = "You step on a piece of slime...your foot squishes a bit"
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3423
+keywords = ["smock"]
+short_desc = "an artist's smock"
+long_desc = "An artist's smock is lying here on the floor."
+item_type = "clothing"
+level = 0
+weight = 70
+cost = 0
+wear_flags = ["take", "body"]
+
+[[objects]]
+vnum = 3424
+keywords = ["scroll", "tightly", "rolled"]
+short_desc = "a tightly rolled scroll"
+long_desc = "A yellowing tightly rolled scroll is here"
+item_type = "scroll"
+level = 15
+weight = 50
+cost = 1070
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 3425
+keywords = ["auburn", "orb"]
+short_desc = "an auburn-colored orb"
+long_desc = "An orb is here"
+item_type = "staff"
+level = 29
+weight = 100
+cost = 4700
+wear_flags = ["take", "hold"]
+extra_flags = ["hum", "magic"]
+
+[[objects]]
+vnum = 3426
+keywords = ["bar", "gold"]
+short_desc = "a bar of gold"
+long_desc = "A bar of gold is lying here"
+item_type = "treasure"
+level = 0
+weight = 30
+cost = 1000
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3427
+keywords = ["cape", "dark", "black"]
+short_desc = "a dark black cape"
+long_desc = "A dark black cape is lying here"
+item_type = "armor"
+level = 0
+weight = 100
+cost = 100
+wear_flags = ["take", "about"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 3428
+keywords = ["flaming", "black", "sword", "long", "longsword"]
+short_desc = "the pitch-black flaming longsword"
+long_desc = "A pitch-black long sword here"
+item_type = "weapon"
+level = 55
+weight = 200
+cost = 2200
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 12
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 3429
+keywords = ["breast", "plate", "dented", "worn"]
+short_desc = "a worn and dented breast plate"
+long_desc = "A piece of armour is here."
+item_type = "armor"
+level = 29
+weight = 500
+cost = 2100
+wear_flags = ["take", "body"]
+
+[[objects]]
+vnum = 3430
+keywords = ["key", "silver"]
+short_desc = "a silver key"
+long_desc = "You see a silver key here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+

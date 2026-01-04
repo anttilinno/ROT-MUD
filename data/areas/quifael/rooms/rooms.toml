@@ -1,0 +1,102 @@
+[[rooms]]
+vnum = 6900
+name = "Quifael's monster pen"
+sector = "inside"
+description = """
+You are in a big, subterranean room with heavy massive stone walls and no
+windows whatsoever.  A virtual ladder leads upwards."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 6902
+
+[[rooms]]
+vnum = 6901
+name = "Quifael's study"
+sector = "inside"
+description = """
+You are in a small, comfortable study room.  The walls are lined with
+bookcases filled with dusty volumes of all sizes.  In the fireplace burns a
+crackling fire that makes the room warm and cosy, and in front of an oakwood
+reading desk is a large old-fashioned chair."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6904
+
+[[rooms]]
+vnum = 6902
+name = "Quifael's laboratory"
+sector = "inside"
+description = """
+You are in a room filled with shelves containing all sorts of weird equipment.
+The walls are lined with numerous shelves and a massive working desk is by
+the north wall.  The air smells of rare chemicals and spices.
+A virtual ladder leads downwards.
+A magical portal is hovering in the air just in front of the east wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6903
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6904
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 6900
+
+[[rooms]]
+vnum = 6903
+name = "Quifael's virtual balcony"
+sector = "inside"
+description = """
+You are on a transparent balcony hanging in mid-air.  You notice a faint blue
+glow surrounding everything, even yourself, making it seem as transparent as
+the balcony itself.  From here, you have a terrific view of the whole Forest
+of Haon-Dor.
+A transparent bronze plate has been bolted to the balcony railing.
+A magical portal is hovering in the air to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6902
+
+[[rooms]]
+vnum = 6904
+name = "Quifael's hall"
+sector = "inside"
+description = """
+You are in sparsely decorated and quite dusty hall.  Old wooden doors lead
+north, east and south and to the west is the front door.
+An old mirror hangs on the wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6901
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6902
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6905
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3126
+  key = 3301
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 6905
+name = "Quifael's kitchen"
+sector = "inside"
+description = "You are in an old-fashioned kitchen."
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6904
+

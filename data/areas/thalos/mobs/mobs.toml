@@ -1,0 +1,200 @@
+[[mobiles]]
+vnum = 5200
+keywords = ["oldstyle", "beholder"]
+short_desc = "The mighty beholder"
+long_desc = "You meet a beholder's deadly gaze!"
+description = """
+It has a large central eye that projects an anti-magic ray and ten
+eyestalks atop the round body which can do anything from charm you
+to disintegrate you.  Beholders are not known for their personality."""
+level = 50
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 5201
+keywords = ["oldstyle", "lamia", "beast"]
+short_desc = "The lamia"
+long_desc = "A strange lamia stands here waiting for her next meal."
+description = """
+This is a creature with the upper torso of a beautiful woman, but the lower
+body of a four-legged beast.  She licks her lips as she looks at you greedily."""
+level = 17
+sex = "female"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 5202
+keywords = ["oldstyle", "mimic", "chest"]
+short_desc = "The mimic"
+long_desc = "A strong chest lies in one corner of the room."
+description = """
+A strong, wooden chest bound with iron straps and a heavy pad-lock on the
+front."""
+level = 21
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 5203
+keywords = ["oldstyle", "mimic", "boulder"]
+short_desc = "The mimic"
+long_desc = "Two skeletons lie crushed under a large boulder."
+level = 22
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 5204
+keywords = ["oldstyle", "mimic", "floor"]
+short_desc = "The mimic"
+long_desc = "The stone floor of this house has been ripped apart."
+level = 22
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 5205
+keywords = ["oldstyle", "mimic", "pottery"]
+short_desc = "The mimic"
+long_desc = "Some broken shards of pottery lie strewn about the floor."
+level = 22
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 5206
+keywords = ["oldstyle", "mimic", "planks"]
+short_desc = "The mimic"
+long_desc = "A few wooden planks lie stacked on a low shelf."
+level = 21
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 5207
+keywords = ["oldstyle", "lizard", "horned"]
+short_desc = "The horned lizard"
+long_desc = "A small horned lizard flicks his tongue and slithers away."
+description = "A cute little lizard, that is, if you like reptiles!"
+level = 6
+sex = "none"
+act_flags = ["npc", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 5208
+keywords = ["oldstyle", "golem", "stone"]
+short_desc = "The stone golem"
+long_desc = "In the corner you see a large, stone golem faithfully standing watch."
+description = """
+It is a big chunk of rock that has been magically formed into a giant
+stone creature. He stands here still guarding the city."""
+level = 50
+sex = "none"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+

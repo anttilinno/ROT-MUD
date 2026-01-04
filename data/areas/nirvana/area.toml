@@ -1,0 +1,8 @@
+id = "nirvana"
+name = "Nirvana"
+credits = "{59 70} Fstall  Nirvana"
+reset_interval = 120
+
+[vnum_range]
+min = 9000
+max = 9099

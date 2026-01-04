@@ -1,0 +1,676 @@
+[[rooms]]
+vnum = 3600
+name = "A Gravel Road in the Graveyard"
+sector = "field"
+description = """
+You are on a well-kept gravel road that leads north-south through the
+graveyard.  On both sides of the road grow dark evergreen trees.  An iron
+grate is to the north and narrow gravel paths lead east and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3124
+  key = 3121
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3650
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3601
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3606
+
+[[rooms]]
+vnum = 3601
+name = "A Gravel Road in the Graveyard"
+sector = "field"
+description = """
+You are on a well-kept gravel road that leads north-south through the
+graveyard.  On both sides of the road grow dark evergreen trees."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3600
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3602
+
+[[rooms]]
+vnum = 3602
+name = "A Gravel Road in the Graveyard"
+sector = "field"
+description = """
+You are on a well-kept gravel road that leads north-south through the
+graveyard.  On both sides of the road grow dark evergreen trees."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3601
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3603
+
+[[rooms]]
+vnum = 3603
+name = "A Gravel Road in the Graveyard"
+sector = "field"
+description = """
+You are on a well-kept gravel road that leads north-south through the
+graveyard.  On both sides of the road grow dark evergreen trees."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3602
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3604
+
+[[rooms]]
+vnum = 3604
+name = "In front of the Chapel"
+sector = "field"
+description = """
+You are on an open space before a small chapel.  A gravel road leads north
+through the graveyard and the chapel entrance is to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3603
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3638
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3405
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3618
+
+  [[rooms.mob_resets]]
+  vnum = 3604
+  max = 4
+
+[[rooms]]
+vnum = 3606
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3600
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3608
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3607
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3604
+  max = 4
+
+[[rooms]]
+vnum = 3607
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3606
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 3610
+  max = 1
+
+[[rooms]]
+vnum = 3608
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and west.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3606
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3610
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3609
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3609
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3608
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3603
+  max = 4
+
+[[rooms]]
+vnum = 3610
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads east and south.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3608
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3612
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3611
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3611
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3610
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3603
+  max = 4
+
+  [[rooms.obj_resets]]
+  vnum = 3613
+  max = 1
+
+[[rooms]]
+vnum = 3612
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and east.  A small shed is to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3610
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3614
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3613
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3604
+  max = 4
+
+[[rooms]]
+vnum = 3613
+name = "In a shed on the Graveyard"
+sector = "city"
+description = """
+You are in a small shed that looks as if it is used to store all sorts of
+gardening equipment.  The only exit appears to be through a door to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3612
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3600
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 3602
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 3603
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 3604
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 3605
+  max = 1
+
+[[rooms]]
+vnum = 3614
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads south and west.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3616
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3612
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3615
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3615
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3614
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 3610
+  max = 1
+
+[[rooms]]
+vnum = 3616
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and south.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3614
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3618
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3617
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3617
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3616
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3602
+  max = 1
+
+[[rooms]]
+vnum = 3618
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and east.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3616
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3604
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3619
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3619
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3618
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 3610
+  max = 1
+
+[[rooms]]
+vnum = 3638
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and west.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3640
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3604
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3639
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3605
+  max = 3
+
+[[rooms]]
+vnum = 3639
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3638
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3603
+  max = 4
+
+[[rooms]]
+vnum = 3640
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and south.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3642
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3638
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3641
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3604
+  max = 4
+
+[[rooms]]
+vnum = 3641
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3640
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 3610
+  max = 1
+
+[[rooms]]
+vnum = 3642
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads east and south.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3644
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3640
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3643
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3643
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3642
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 3603
+  max = 1
+
+[[rooms]]
+vnum = 3644
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and west.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3646
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3642
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3645
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3605
+  max = 3
+
+[[rooms]]
+vnum = 3645
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3644
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3601
+  max = 1
+
+[[rooms]]
+vnum = 3646
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads south and west.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3644
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3648
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3647
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3647
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3646
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 3610
+  max = 1
+
+[[rooms]]
+vnum = 3648
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads north and east.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3650
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3646
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3649
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3649
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3648
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3603
+  max = 4
+
+[[rooms]]
+vnum = 3650
+name = "A Gravel Path on the Graveyard"
+sector = "field"
+description = """
+You are on a gravel path winding its way between dark evergreen trees on
+the graveyard.  The path leads south and west.  An old tomb is here."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3648
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3600
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3651
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3651
+name = "In a dusty Tomb"
+sector = "city"
+description = """
+You are in a dark burial chamber beneath a large tomb stone.
+The only exit appears to be up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3650
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3605
+  max = 3
+

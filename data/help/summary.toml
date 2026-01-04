@@ -1,0 +1,44 @@
+[[help]]
+keywords = ["summary", "motd", "welcome"]
+description = """
+Welcome to Rivers of Time MUD!
+
+Use 'commands' to see a list of available commands.
+Use 'help <topic>' to get help on a specific topic.
+
+Quick start:
+- Use compass directions (north, south, east, west, up, down) to move
+- 'look' to see your surroundings
+- 'score' to see your character stats
+- 'who' to see who is online
+- 'quit' to leave the game
+
+For new players, try 'help newbie' for tips.
+"""
+
+[[help]]
+keywords = ["newbie", "new player", "beginner"]
+description = """
+Welcome, new adventurer!
+
+Here are some tips to get started:
+
+1. EXPLORATION: Use 'look' to see the room description and exits.
+   Move with 'north', 'south', 'east', 'west', 'up', 'down'.
+
+2. COMBAT: Type 'kill <monster>' to attack. You will automatically
+   fight until you or the monster is dead. Use 'flee' to escape.
+
+3. INVENTORY: 'get <item>' picks up items. 'drop <item>' puts them
+   down. 'inventory' shows what you're carrying.
+
+4. EQUIPMENT: 'wear <item>' or 'wield <weapon>' to equip items.
+   'equipment' shows what you're wearing.
+
+5. LEVELING: Killing monsters earns experience. When you have enough,
+   you'll gain a level and become more powerful.
+
+6. HEALING: Rest to recover health. Some rooms heal faster than others.
+   The temple is usually a safe place to recover.
+"""
+see_also = ["summary", "commands"]

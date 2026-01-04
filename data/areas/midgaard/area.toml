@@ -1,0 +1,8 @@
+id = "midgaard"
+name = "Midgaard"
+credits = "{ ALL } Diku    Midgaard"
+reset_interval = 120
+
+[vnum_range]
+min = 2900
+max = 3399

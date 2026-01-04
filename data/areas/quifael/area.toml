@@ -1,0 +1,8 @@
+id = "quifaels"
+name = "Quifael's"
+credits = "{61 70} Quifael Quifael's Area"
+reset_interval = 120
+
+[vnum_range]
+min = 6900
+max = 6999

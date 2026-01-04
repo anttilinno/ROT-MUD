@@ -1,0 +1,963 @@
+[[rooms]]
+vnum = 5001
+name = "A long tunnel"
+sector = "water_noswim"
+description = """
+You encounter some rapids as you enter this tunnel cut out of
+the mountains by the river."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5002
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3205
+
+[[rooms]]
+vnum = 5002
+name = "A long tunnel"
+sector = "water_noswim"
+description = "The tunnel branches off north."
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5008
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5003
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5001
+
+[[rooms]]
+vnum = 5003
+name = "A long tunnel"
+sector = "water_noswim"
+description = "The tunnel branches off south."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5004
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5017
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5002
+
+[[rooms]]
+vnum = 5004
+name = "A long tunnel"
+sector = "water_noswim"
+description = "The tunnel branches off to the south."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5005
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5018
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5003
+
+[[rooms]]
+vnum = 5005
+name = "An underground lake"
+sector = "water_noswim"
+description = """
+You are floating on a jet-black underground lake fed by dripping
+water and lime from above. The tunnel continues to the east and the river
+leads back west. To the north is a roughly-hewn hallway. There is also
+a tunnel south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5016
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5006
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5023
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5004
+
+[[rooms]]
+vnum = 5006
+name = "A long narrow tunnel"
+sector = "mountain"
+description = "The tunnel rises sharply to the east."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5007
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5005
+
+[[rooms]]
+vnum = 5007
+name = "A wide tunnel"
+sector = "mountain"
+description = """
+The tunnel continues east and west. To the east the tunnel dives
+down into a bright light."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5027
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5006
+
+[[rooms]]
+vnum = 5008
+name = "Cave-in"
+sector = "mountain"
+description = """
+You stand at the edge of a large pile of rubble created from the last
+rockslide."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5002
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5009
+
+[[rooms]]
+vnum = 5009
+name = "At the foot of the rubble"
+sector = "mountain"
+description = """
+You are at the bottom of a large pile of rubble. A tunnel branches
+off to the north and east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5010
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5012
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5008
+
+  [[rooms.mob_resets]]
+  vnum = 5011
+  max = 3
+
+[[rooms]]
+vnum = 5010
+name = "Cave entrance"
+sector = "mountain"
+description = """
+You stand in the middle of a large and beautiful cave. A path leads
+deeper into the darkness."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5009
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5011
+
+[[rooms]]
+vnum = 5011
+name = "Giant cave"
+sector = "mountain"
+description = """
+This cavern overwhelms you. The walls and ceiling seem miles away.
+Bones of previous adventurers lie strewn on the cavern floor."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5010
+
+  [[rooms.mob_resets]]
+  vnum = 5010
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 5005
+  max = 1
+
+[[rooms]]
+vnum = 5012
+name = "Narrow bend"
+sector = "mountain"
+description = "The tunnel turns to the south and west."
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5013
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5009
+
+[[rooms]]
+vnum = 5013
+name = "Large cave"
+sector = "mountain"
+description = """
+You are standing in a large cave. Many furs are spread out on the floor."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5012
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5014
+
+[[rooms]]
+vnum = 5014
+name = "Damp hallway"
+sector = "mountain"
+description = "The walls here are extremely damp, as well as the floor."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5015
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5013
+
+  [[rooms.mob_resets]]
+  vnum = 5012
+  max = 3
+
+[[rooms]]
+vnum = 5015
+name = "Underground pool"
+sector = "water_swim"
+description = "You are wading in a knee deep pool of lime-water."
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5016
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5014
+
+[[rooms]]
+vnum = 5016
+name = "Damp hallway"
+sector = "mountain"
+description = """
+The walls of the tunnel are extremely damp here. You hear the faint
+sound of running water to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5015
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5005
+
+[[rooms]]
+vnum = 5017
+name = "Narrow crawlway"
+sector = "mountain"
+description = """
+This crawlway is just big enough for a human to crawl through or a
+halfling to walk through."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5003
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5018
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5019
+
+[[rooms]]
+vnum = 5018
+name = "Large cavern"
+sector = "mountain"
+description = """
+You have entered a very large cavern. The rock formations would amaze
+almost any dwarf."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5004
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5017
+
+[[rooms]]
+vnum = 5019
+name = "Fungus patch"
+sector = "mountain"
+description = """
+As you walk through the fungus patch, you are shot at by many millions of
+spores. You can hardly breathe."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5017
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5020
+
+[[rooms]]
+vnum = 5020
+name = "Fungus path"
+sector = "mountain"
+description = """
+As you walk along the path, millions of spores are shot at you. You can
+hardly breathe."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5021
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5019
+
+[[rooms]]
+vnum = 5021
+name = "Fungus temple"
+sector = "mountain"
+description = """
+You find yourself standing inside of a giant mushroom. The inside
+is decorated in the fashion of a temple."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5020
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5022
+
+  [[rooms.mob_resets]]
+  vnum = 5013
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 5014
+  max = 1
+
+[[rooms]]
+vnum = 5022
+name = "Sloping passage"
+sector = "mountain"
+description = "You follow a path sloping down from the fungus temple."
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5021
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5023
+
+[[rooms]]
+vnum = 5023
+name = "Sloping passage"
+sector = "mountain"
+description = """
+You are on a path that gently slopes up from the underground pool."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5005
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5022
+
+[[rooms]]
+vnum = 5024
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5030
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5025
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5027
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5026
+
+  [[rooms.mob_resets]]
+  vnum = 5015
+  max = 4
+
+[[rooms]]
+vnum = 5025
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5056
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5026
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5028
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5024
+
+  [[rooms.mob_resets]]
+  vnum = 5000
+  max = 3
+
+[[rooms]]
+vnum = 5026
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5032
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5024
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5029
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5025
+
+  [[rooms.mob_resets]]
+  vnum = 5015
+  max = 4
+
+[[rooms]]
+vnum = 5027
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5024
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5028
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5030
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5007
+
+  [[rooms.mob_resets]]
+  vnum = 5000
+  max = 3
+
+[[rooms]]
+vnum = 5028
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5025
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5029
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5031
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5027
+
+  [[rooms.mob_resets]]
+  vnum = 5003
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 5004
+  max = 1
+
+[[rooms]]
+vnum = 5029
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5026
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5062
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5032
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5028
+
+  [[rooms.mob_resets]]
+  vnum = 5000
+  max = 3
+
+[[rooms]]
+vnum = 5030
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5027
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5031
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5024
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5032
+
+  [[rooms.mob_resets]]
+  vnum = 5015
+  max = 4
+
+[[rooms]]
+vnum = 5031
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5028
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5032
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5063
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5030
+
+  [[rooms.mob_resets]]
+  vnum = 5001
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5002
+  max = 5
+
+[[rooms]]
+vnum = 5032
+name = "The Sands of Sorrow"
+sector = "desert"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around you.
+You feel lost."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5029
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5030
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5026
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5031
+
+  [[rooms.mob_resets]]
+  vnum = 5015
+  max = 4
+
+[[rooms]]
+vnum = 5056
+name = "A nomad camp"
+sector = "field"
+description = """
+This small group of desert nomads has stopped for the day to rest
+and refresh themselves beside this beautiful oasis. Three tents and some
+camels make up the party. From within two of the tents you hear muffled
+voices, obviously surprised at your visit."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5058
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5057
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5025
+
+[[rooms]]
+vnum = 5057
+name = "Inside a small tent"
+sector = "field"
+description = """
+This is a small and simple tent with few possessions in sight. Lying
+here and there are young-looking men and women, possibly slaves to the
+leader of this band."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8700
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5056
+
+  [[rooms.mob_resets]]
+  vnum = 5009
+  max = 6
+
+[[rooms]]
+vnum = 5058
+name = "Beside the camels"
+sector = "field"
+description = """
+Here stand about ten camels, all hitched to some stakes plugged into
+the ground. To the east you see a small tent while to the north you see a
+larger, fancier tent."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5060
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5059
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5056
+
+  [[rooms.mob_resets]]
+  vnum = 5017
+  max = 1
+
+[[rooms]]
+vnum = 5059
+name = "The warrior's tent."
+sector = "field"
+description = """
+This tent has a few furnishings, but mainly it holds the band's
+protectors. They all stare at you coldly as you enter."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5058
+
+  [[rooms.mob_resets]]
+  vnum = 5008
+  max = 5
+
+[[rooms]]
+vnum = 5060
+name = "The main tent"
+sector = "field"
+description = """
+This tent is as lavishly decorated on the inside as it is on the
+outside. A fancy carpet lies on the sand and numerous baskets line the
+walls."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5061
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5058
+
+  [[rooms.mob_resets]]
+  vnum = 5007
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 5007
+  max = 1
+
+[[rooms]]
+vnum = 5061
+name = "The main tent"
+sector = "field"
+description = """
+This is where the leader of this band of nomads resides. He is
+definitely rich as you inspect the tapestries, baskets, and a few
+paintings as well."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5060
+
+  [[rooms.mob_resets]]
+  vnum = 5006
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 5008
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 5009
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 5010
+  max = 1
+
+[[rooms]]
+vnum = 5062
+name = "Strange Glowing Sand"
+sector = "mountain"
+description = """
+A vast desert stretches for miles, the sand constantly shifting around
+you.  But this patch of desert looks different...the sand glows.  You see a
+futuristic city to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8001
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5029
+
+[[rooms]]
+vnum = 5063
+name = "The wind-swept ledge"
+sector = "mountain"
+description = """
+Being very careful not to lose your balance, you look around and
+find that this canyon is about a half a kilometer deep. To the west is
+a dark cave leading under the desert sands."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5031
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5064
+
+[[rooms]]
+vnum = 5064
+name = "The cave mouth"
+sector = "mountain"
+description = """
+The air in here is MUCH cooler than outside. From the west you hear
+strange sounds, but can see nothing. The cave slopes down into the
+darkness."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5063
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5065
+
+[[rooms]]
+vnum = 5065
+name = "The mysterious lair."
+sector = "mountain"
+description = """
+You have stumbled upon the home of something. From the treasure
+haphazardly strewn about and the rotting carcasses, you would guess that
+this is a dragon's lair. As to what type, you can't really say. The cave
+narrows out into a tunnel to the west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5064
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5066
+  key = 5024
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 5005
+  max = 1
+
+[[rooms]]
+vnum = 5066
+name = "A wide tunnel"
+sector = "mountain"
+description = """
+This tunnel seems to go on forever into the darkness. You carefully
+feel your way along the walls."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5065
+  key = 5024
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5067
+
+[[rooms]]
+vnum = 5067
+name = "A narrower tunnel"
+sector = "mountain"
+description = """
+The tunnel becomes very narrow and you fight to squeeze your way through.
+The floor seems to level off a little."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5066
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5068
+
+[[rooms]]
+vnum = 5068
+name = "A narrow crack"
+sector = "mountain"
+description = """
+This part of the tunnel is the hardest to move through as the walls
+move in to meet you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5067
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5069
+
+[[rooms]]
+vnum = 5069
+name = "A small cavern."
+sector = "mountain"
+description = """
+It is dark and damp and bats hang from the ceiling. A narrow crack is
+in the east wall. The floor now slopes upwards."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5070
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5068
+
+[[rooms]]
+vnum = 5070
+name = "A small shaft"
+sector = "mountain"
+description = """
+From within this shaft you can see a narrow hole in the roof just
+large enough for one person. Back south is the cavern."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5069
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5009
+
+  [[rooms.obj_resets]]
+  vnum = 5023
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 5015
+  max = 1
+

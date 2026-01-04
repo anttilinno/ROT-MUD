@@ -1,0 +1,8 @@
+id = "ofcol"
+name = "Ofcol"
+credits = "{ ALL } Alfa    Ofcol"
+reset_interval = 120
+
+[vnum_range]
+min = 5500
+max = 5599

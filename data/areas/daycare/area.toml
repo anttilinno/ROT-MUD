@@ -1,0 +1,8 @@
+id = "day_care"
+name = "Day Care"
+credits = "{01 05} Sandman Dwarven Day Care"
+reset_interval = 120
+
+[vnum_range]
+min = 6600
+max = 6699

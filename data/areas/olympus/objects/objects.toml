@@ -1,0 +1,429 @@
+[[objects]]
+vnum = 900
+keywords = ["aegis", "plate"]
+short_desc = "the Aegis"
+long_desc = "A powerful breast plate has been left here."
+item_type = "armor"
+level = 69
+weight = 500
+cost = 8400
+wear_flags = ["take", "body"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 901
+keywords = ["hammer", "thunder", "bolt", "thunderbolt"]
+short_desc = "the Thunder Bolt"
+long_desc = "A huge hammer has been carelessly dropped here."
+item_type = "weapon"
+level = 99
+weight = 240
+cost = 5400
+wear_flags = ["take", "wield"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 7
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = -1
+
+[[objects]]
+vnum = 902
+keywords = ["helmet", "winged"]
+short_desc = "a Winged Helmet"
+long_desc = "A helmet with small wings lies here."
+item_type = "armor"
+level = 69
+weight = 50
+cost = 7300
+wear_flags = ["take", "head"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+[[objects]]
+vnum = 903
+keywords = ["spear", "ares"]
+short_desc = "the spear of Ares"
+long_desc = "A wicked spear rests on the ground here."
+item_type = "weapon"
+level = 95
+weight = 180
+cost = 2000
+wear_flags = ["take", "wield"]
+extra_flags = ["invis", "magic", "anti_good"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 904
+keywords = ["sandals", "winged"]
+short_desc = "a pair of winged sandals"
+long_desc = "A pair of well made sandals lies here."
+item_type = "armor"
+level = 49
+weight = 50
+cost = 2200
+wear_flags = ["take", "feet"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+[[objects]]
+vnum = 905
+keywords = ["staff", "ivory"]
+short_desc = "an ivory staff"
+long_desc = "An ivory staff."
+item_type = "staff"
+level = 29
+weight = 80
+cost = 5800
+wear_flags = ["take", "hold"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+[[objects]]
+vnum = 906
+keywords = ["trident", "poseidon"]
+short_desc = "poseidon's Trident"
+long_desc = "A huge three pronged spear lies here."
+item_type = "weapon"
+level = 93
+weight = 160
+cost = 5700
+wear_flags = ["take", "wield"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 7
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+[[objects]]
+vnum = 907
+keywords = ["bow", "silver"]
+short_desc = "a silver bow"
+long_desc = "A silver bow."
+item_type = "weapon"
+level = 93
+weight = 150
+cost = 10300
+wear_flags = ["take", "wield"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 6
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 908
+keywords = ["gauntlets", "flaming"]
+short_desc = "flaming gauntlets"
+long_desc = "A pair of metal gauntlets flame here."
+item_type = "armor"
+level = 53
+weight = 60
+cost = 2900
+wear_flags = ["take", "hands"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 25
+
+[[objects]]
+vnum = 909
+keywords = ["vial", "potion", "ambrosia"]
+short_desc = "ambrosia"
+long_desc = "A vial of ambrosia lies here."
+item_type = "potion"
+level = 21
+weight = 10
+cost = 1130
+wear_flags = ["take"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+[[objects]]
+vnum = 910
+keywords = ["necklace", "glowing"]
+short_desc = "a glowing necklace"
+long_desc = "A necklace with an inner glow lies here."
+item_type = "jewelry"
+level = 49
+weight = 20
+cost = 980
+wear_flags = ["take", "neck"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 25
+
+[[objects]]
+vnum = 911
+keywords = ["ring", "sapphire"]
+short_desc = "a sapphire ring"
+long_desc = "A sapphire ring lies here."
+item_type = "jewelry"
+level = 69
+weight = 10
+cost = 6900
+wear_flags = ["take", "finger"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+[[objects]]
+vnum = 912
+keywords = ["shield", "glowing"]
+short_desc = "a brightly glowing shield"
+long_desc = "A shield lies here, filling the room with its aura."
+item_type = "armor"
+level = 59
+weight = 100
+cost = 5300
+wear_flags = ["take", "shield"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+[[objects]]
+vnum = 913
+keywords = ["axe", "notched"]
+short_desc = "a notched axe"
+long_desc = "A notched axe."
+item_type = "weapon"
+level = 69
+weight = 120
+cost = 3600
+wear_flags = ["take", "wield"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 11
+
+[[objects]]
+vnum = 914
+keywords = ["grapes"]
+short_desc = "a bunch of grapes"
+long_desc = "A bunch of grapes."
+item_type = "food"
+level = 0
+weight = 10
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 915
+keywords = ["fan"]
+short_desc = "a fan made of peacock feathers"
+long_desc = "A fan made of peacock feathers."
+item_type = "trash"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 916
+keywords = ["lute"]
+short_desc = "a lute"
+long_desc = "A lute."
+item_type = "trash"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 917
+keywords = ["nugget", "gold"]
+short_desc = "a gold nugget"
+long_desc = "A gold nugget lies gleaming here."
+item_type = "treasure"
+level = 0
+weight = 50
+cost = 5000
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 918
+keywords = ["apple"]
+short_desc = "an apple"
+long_desc = "An apple is here."
+item_type = "pill"
+level = 0
+weight = 10
+cost = 340
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 919
+keywords = ["pear"]
+short_desc = "a pear"
+long_desc = "A pear is here."
+item_type = "pill"
+level = 11
+weight = 10
+cost = 530
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 920
+keywords = ["orange"]
+short_desc = "a orange"
+long_desc = "A orange is here."
+item_type = "pill"
+level = 0
+weight = 10
+cost = 340
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 921
+keywords = ["kiwi"]
+short_desc = "a kiwi"
+long_desc = "A kiwi is here."
+item_type = "pill"
+level = 11
+weight = 10
+cost = 530
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 922
+keywords = ["amulet"]
+short_desc = "the Amulet of Ra"
+long_desc = "A sun shaped medallion is lying here."
+item_type = "jewelry"
+level = 79
+weight = 10
+cost = 4900
+wear_flags = ["take", "neck"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 50
+
+[[objects]]
+vnum = 923
+keywords = ["sun", "sword"]
+short_desc = "the Sword of the Sun"
+long_desc = "A beautiful sword with the rising sun etched on the pommel is lying here."
+item_type = "weapon"
+level = 99
+weight = 200
+cost = 6800
+wear_flags = ["take", "wield"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 11
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 924
+keywords = ["robe", "blue"]
+short_desc = "a blue robe"
+long_desc = "A deep blue robe is on the ground here."
+item_type = "armor"
+level = 33
+weight = 100
+cost = 1960
+wear_flags = ["take", "about"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 15
+
+[[objects]]
+vnum = 925
+keywords = ["hat"]
+short_desc = "a wide brimmed hat"
+long_desc = "A hat is lying here."
+item_type = "armor"
+level = 9
+weight = 50
+cost = 580
+wear_flags = ["take", "head"]
+extra_flags = ["invis", "magic", "anti_evil"]
+
+[[objects]]
+vnum = 926
+keywords = ["nectar"]
+short_desc = "nectar"
+long_desc = "A vial of nectar is lying here."
+item_type = "potion"
+level = 23
+weight = 10
+cost = 810
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 927
+keywords = ["key", "cell"]
+short_desc = "a Cell key"
+long_desc = "A key has been left here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 928
+keywords = ["map", "olympus", "secret"]
+short_desc = "a secret map of Olympus"
+long_desc = "A rolled up map is here."
+item_type = "map"
+level = 0
+weight = 10
+cost = 500
+wear_flags = ["take"]
+

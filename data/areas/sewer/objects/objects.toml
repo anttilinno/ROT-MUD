@@ -1,0 +1,556 @@
+[[objects]]
+vnum = 7190
+keywords = ["ring", "silver"]
+short_desc = "a glinting ring of silver"
+long_desc = "A lovely silver ring has been left here."
+item_type = "jewelry"
+level = 13
+weight = 10
+cost = 468
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -1
+
+[[objects]]
+vnum = 7200
+keywords = ["rod", "devil"]
+short_desc = "the devil rod"
+long_desc = "The mysterious devil rod lies on the floor."
+item_type = "weapon"
+level = 29
+weight = 60
+cost = 2300
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 7201
+keywords = ["mace", "large"]
+short_desc = "the large mace"
+long_desc = "A large mace lies here."
+item_type = "weapon"
+level = 15
+weight = 100
+cost = 610
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 10
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 7202
+keywords = ["mace", "small"]
+short_desc = "the small mace"
+long_desc = "A small mace has been left here."
+item_type = "weapon"
+level = 15
+weight = 60
+cost = 480
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 7203
+keywords = ["cloak", "purple"]
+short_desc = "a purple cloak"
+long_desc = "A purple cloak lies on the floor."
+item_type = "armor"
+level = 29
+weight = 200
+cost = 1250
+wear_flags = ["take", "neck"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 7204
+keywords = ["potion", "neon", "blue"]
+short_desc = "an neon blue potion"
+long_desc = "A neon blue potion stands on the floor."
+item_type = "potion"
+level = 33
+weight = 40
+cost = 1490
+wear_flags = ["take"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 7205
+keywords = ["key", "black"]
+short_desc = "a black key"
+long_desc = "A black key has been left on the floor."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7206
+keywords = ["skull", "white"]
+short_desc = "a strange white skull"
+long_desc = "A strange white skull lies on the floor looking at you."
+item_type = "armor"
+level = 0
+weight = 300
+cost = 10
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "nodrop"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -4
+
+[[objects]]
+vnum = 7208
+keywords = ["stick", "small", "light"]
+short_desc = "a small stick"
+long_desc = "A small stick lies here."
+item_type = "light"
+level = 0
+weight = 10
+cost = 5
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 7209
+keywords = ["boots", "muddy"]
+short_desc = "a pair of muddy boots"
+long_desc = "A pair of muddy boots has been dropped here."
+item_type = "armor"
+level = 13
+weight = 200
+cost = 900
+wear_flags = ["take", "feet"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+[[objects]]
+vnum = 7210
+keywords = ["treasure", "coins"]
+short_desc = "a huge treasure"
+long_desc = "There is a huge treasure here, looking very valuable."
+item_type = "money"
+level = 0
+weight = 0
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7211
+keywords = ["sword", "short"]
+short_desc = "a short sword"
+long_desc = "There lies a short sword."
+item_type = "weapon"
+level = 9
+weight = 40
+cost = 540
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 7216
+keywords = ["claw", "red", "redclaw"]
+short_desc = "a red dragon claw"
+long_desc = "On the floor rests an enormous red claw."
+item_type = "weapon"
+level = 61
+weight = 190
+cost = 5800
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 15
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = 2
+
+[[objects]]
+vnum = 7217
+keywords = ["plate", "breast", "silvery"]
+short_desc = "a silvery breast plate"
+long_desc = "There is a silvery breast plate on the floor."
+item_type = "armor"
+level = 63
+weight = 400
+cost = 12400
+wear_flags = ["take", "body"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+[[objects]]
+vnum = 7218
+keywords = ["plates", "leg", "silvery"]
+short_desc = "some silvery leg plates"
+long_desc = "On the floor you see some silvery leg plates."
+item_type = "armor"
+level = 63
+weight = 200
+cost = 10100
+wear_flags = ["take", "legs"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+[[objects]]
+vnum = 7219
+keywords = ["gloves", "silvery"]
+short_desc = "a pair of silvery gloves"
+long_desc = "You can see a pair of silvery gloves on the floor."
+item_type = "armor"
+level = 53
+weight = 140
+cost = 3700
+wear_flags = ["take", "hands"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 7220
+keywords = ["helmet", "silvery"]
+short_desc = "a silvery helmet"
+long_desc = "The silvery helmet lies here."
+item_type = "armor"
+level = 63
+weight = 350
+cost = 10600
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 3
+
+[[objects]]
+vnum = 7221
+keywords = ["shield"]
+short_desc = "the shield of the rose"
+long_desc = "The shield of the rose rests on the floor."
+item_type = "armor"
+level = 59
+weight = 600
+cost = 5800
+wear_flags = ["take", "shield"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -7
+
+[[objects]]
+vnum = 7222
+keywords = ["boots", "silvery"]
+short_desc = "a pair of silvery boots"
+long_desc = "A pair of silvery boots stand on the floor."
+item_type = "armor"
+level = 63
+weight = 400
+cost = 10100
+wear_flags = ["take", "feet"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+[[objects]]
+vnum = 7223
+keywords = ["plates", "arm", "silvery"]
+short_desc = "some silvery arm plates"
+long_desc = "On the floor you see some silvery arm plates."
+item_type = "armor"
+level = 63
+weight = 400
+cost = 10100
+wear_flags = ["take", "arms"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 3
+
+[[objects]]
+vnum = 7224
+keywords = ["cloak", "white"]
+short_desc = "a white cloak"
+long_desc = "A white cloak lies on the floor."
+item_type = "armor"
+level = 61
+weight = 200
+cost = 3700
+wear_flags = ["take", "about"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+[[objects]]
+vnum = 7298
+keywords = ["treasure", "coins"]
+short_desc = "a huge treasure"
+long_desc = "A huge treasure is lying here, looking very valuable."
+item_type = "money"
+level = 0
+weight = 0
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7299
+keywords = ["sword", "short"]
+short_desc = "a short sword"
+long_desc = "There lies a short sword."
+item_type = "weapon"
+level = 13
+weight = 40
+cost = 610
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+[[objects]]
+vnum = 7300
+keywords = ["backpack", "pack", "back"]
+short_desc = "a backpack"
+long_desc = "A backpack stands upright here."
+item_type = "container"
+level = 0
+weight = 20
+cost = 100
+wear_flags = ["take", "about"]
+
+[[objects]]
+vnum = 7301
+keywords = ["beltpouch", "pouch"]
+short_desc = "a large beltpouch"
+long_desc = "A large beltpouch lies here on the ground."
+item_type = "container"
+level = 0
+weight = 10
+cost = 20
+wear_flags = ["take", "waist"]
+
+[[objects]]
+vnum = 7303
+keywords = ["orb", "dragonorb"]
+short_desc = "the Red DragonOrb"
+long_desc = "A large reddish sphere is in the center of the room."
+item_type = "staff"
+level = 41
+weight = 50
+cost = 18600
+wear_flags = ["take", "hold"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+[[objects]]
+vnum = 7304
+keywords = ["red", "torso"]
+short_desc = "a red dragon torso"
+long_desc = "There is a pile of red dragonscale on the floor."
+item_type = "armor"
+level = 57
+weight = 300
+cost = 6400
+wear_flags = ["take", "body"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+[[objects]]
+vnum = 7305
+keywords = ["leggings", "red"]
+short_desc = "red dragonscale leggings"
+long_desc = "On the floor you see two red dragonscale leggings."
+item_type = "armor"
+level = 57
+weight = 170
+cost = 3700
+wear_flags = ["take", "legs"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+[[objects]]
+vnum = 7306
+keywords = ["claws", "dragonclaws", "red"]
+short_desc = "a pair of red dragon claws"
+long_desc = "You can see a pair of large red dragon claws on the floor."
+item_type = "furniture"
+level = 39
+weight = 40
+cost = 1150
+wear_flags = ["take", "hands"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 7307
+keywords = ["skull", "dragonhelm", "red"]
+short_desc = "a red dragonhelm"
+long_desc = "A helmet fashioned into the likeness of a dragon skull is here."
+item_type = "armor"
+level = 57
+weight = 150
+cost = 7000
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+[[objects]]
+vnum = 7308
+keywords = ["shield", "red"]
+short_desc = "the red dragon shield"
+long_desc = "A large red dragon shield rests on the floor."
+item_type = "armor"
+level = 69
+weight = 100
+cost = 6900
+wear_flags = ["take", "shield"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 7309
+keywords = ["greaves", "red"]
+short_desc = "a pair of a red dragon's rear claws"
+long_desc = "A pair of a red dragon's rear claws is on the floor."
+item_type = "armor"
+level = 57
+weight = 400
+cost = 3700
+wear_flags = ["take", "feet"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 7310
+keywords = ["arm", "guards", "red"]
+short_desc = "red dragon arm guards"
+long_desc = "On the ground you see two red arm guards."
+item_type = "armor"
+level = 57
+weight = 400
+cost = 3700
+wear_flags = ["take", "arms"]
+extra_flags = ["magic", "anti_good"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+

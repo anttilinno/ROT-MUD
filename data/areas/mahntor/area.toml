@@ -1,0 +1,8 @@
+id = "mahntor"
+name = "Mahn-Tor"
+credits = "{09 70} Chris   The Keep of Mahn-Tor"
+reset_interval = 120
+
+[vnum_range]
+min = 2300
+max = 2399

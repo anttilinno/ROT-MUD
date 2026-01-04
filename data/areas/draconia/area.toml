@@ -1,0 +1,8 @@
+id = "dragon_tower"
+name = "Dragon Tower"
+credits = "{09 60} Wench   Dragon Tower"
+reset_interval = 120
+
+[vnum_range]
+min = 2200
+max = 2299

@@ -1,0 +1,1735 @@
+[[rooms]]
+vnum = 1501
+name = "Entrance to Gnome Village"
+sector = "field"
+description = """
+You stand on a dusty path that leads north and east.  To the east you hear
+the sounds of a small village."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3526
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1502
+
+[[rooms]]
+vnum = 1502
+name = "A Dusty Path"
+sector = "city"
+description = """
+This is a path leading into the village.  It continues east and west and
+there is a small house to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1509
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1503
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1501
+
+[[rooms]]
+vnum = 1503
+name = "A Road in the Village"
+sector = "city"
+description = """
+This road runs north and south through the center of the village.  There
+are a few people moving around, but not many."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1505
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1504
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1507
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1502
+
+  [[rooms.mob_resets]]
+  vnum = 1502
+  max = 3
+
+[[rooms]]
+vnum = 1504
+name = "A Dusty Path"
+sector = "city"
+description = """
+You are on a dusty path on the far side of the village.  Houses are to the
+north and south, while the path continues east.  There is a sign here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1512
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1559
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1513
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1503
+
+[[rooms]]
+vnum = 1505
+name = "A Road in the Village"
+sector = "city"
+description = """
+This road runs north and south through the center of the village.  There
+are a few people moving around, but not many."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1506
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1511
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1503
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1510
+
+  [[rooms.mob_resets]]
+  vnum = 1502
+  max = 3
+
+[[rooms]]
+vnum = 1506
+name = "A Road in the Village"
+sector = "city"
+description = """
+This road runs north and south through the center of the village.  There
+are a few people moving around, but not many."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1526
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1505
+
+  [[rooms.mob_resets]]
+  vnum = 1502
+  max = 3
+
+[[rooms]]
+vnum = 1507
+name = "A Road in the Village"
+sector = "city"
+description = """
+This road runs north and south through the center of the village.  There
+are a few people moving around, but not many."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1503
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1508
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1514
+
+[[rooms]]
+vnum = 1508
+name = "A Road in the Village"
+sector = "city"
+description = """
+This road runs north and south through the center of the village.  There
+are a few people moving around, but not many."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1507
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1516
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1517
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1515
+
+[[rooms]]
+vnum = 1509
+name = "A Small Gnome House"
+sector = "inside"
+description = """
+This is a small suburban house made from quality wood.  You can see the
+expert workmanship that went into making it, but it lacks creativity."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1502
+
+  [[rooms.mob_resets]]
+  vnum = 1500
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 1501
+  max = 3
+
+[[rooms]]
+vnum = 1510
+name = "A Small Gnome House"
+sector = "inside"
+description = """
+This is a small suburban house made from quality wood.  You can see the
+expert workmanship that went into making it, but it lacks creativity."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1505
+
+  [[rooms.mob_resets]]
+  vnum = 1500
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 1501
+  max = 3
+
+[[rooms]]
+vnum = 1511
+name = "A Small Gnome House"
+sector = "inside"
+description = """
+This is a small suburban house made from quality wood.  You can see the
+expert workmanship that went into making it, but it lacks creativity."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1505
+
+  [[rooms.mob_resets]]
+  vnum = 1500
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 1501
+  max = 3
+
+[[rooms]]
+vnum = 1512
+name = "A Small Gnome House"
+sector = "inside"
+description = """
+This is a small suburban house made from quality wood.  You can see the
+expert workmanship that went into making it, but it lacks creativity."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1504
+
+[[rooms]]
+vnum = 1513
+name = "A Small Gnome House"
+sector = "inside"
+description = """
+This is a small suburban house made from quality wood.  You can see the
+expert workmanship that went into making it, but it lacks creativity."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1504
+
+  [[rooms.mob_resets]]
+  vnum = 1503
+  max = 3
+
+[[rooms]]
+vnum = 1514
+name = "A Gnome Shop"
+sector = "inside"
+description = """
+You are in one of the several shops of this fine town.  The wares look fine,
+but unfortunately the gnomes don't do business with outsiders."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1507
+
+  [[rooms.mob_resets]]
+  vnum = 1503
+  max = 3
+
+[[rooms]]
+vnum = 1515
+name = "A Gnome Shop"
+sector = "inside"
+description = """
+You are in one of the several shops of this fine town.  The wares look fine,
+but unfortunately the gnomes don't do business with outsiders."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1508
+
+  [[rooms.mob_resets]]
+  vnum = 1503
+  max = 3
+
+[[rooms]]
+vnum = 1516
+name = "A Gnome Shop"
+sector = "inside"
+description = """
+You are in one of the several shops of this fine town.  The wares look fine,
+but unfortunately the gnomes don't do business with outsiders."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1508
+
+[[rooms]]
+vnum = 1517
+name = "Path by a Stream"
+sector = "field"
+description = """
+You are on a small path leading north and west, that is surrounded on the
+other two sides by a small stream.  The water looks mighty cold."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1508
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1520
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1518
+
+[[rooms]]
+vnum = 1518
+name = "Path by a Stream"
+sector = "field"
+description = """
+You are on a small east-west path.  The path shows new grass, as if it
+has stopped being used sometime in the recent past.  A river is to the south,
+and a small hut is to the west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1517
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1521
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1519
+
+[[rooms]]
+vnum = 1519
+name = "A Small Hut"
+sector = "inside"
+description = """
+The hut is a mess!  Blood has stained the grass walls into a dark rich
+crimson color.  Torn clothes and trash lie all around, and you think you
+see a skeleton in the corner."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1518
+
+  [[rooms.mob_resets]]
+  vnum = 1504
+  max = 6
+
+[[rooms]]
+vnum = 1520
+name = "On the Stream"
+sector = "water_noswim"
+description = """
+The stream is cold and frigid, yet it supports plenty of life beneath its
+surface.  The current trickles west and there is a field to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1517
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1522
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1521
+
+[[rooms]]
+vnum = 1521
+name = "On the Stream"
+sector = "water_noswim"
+description = """
+The current here flows from the east, but a logjam blocks you from 
+continuing onward."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1518
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1520
+
+[[rooms]]
+vnum = 1522
+name = "The Field of Mice's Dreams"
+sector = "field"
+description = """
+This is a large green field of waist high grass.  You feel something
+scurry over your feet.  There is a cave to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1520
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1523
+
+  [[rooms.mob_resets]]
+  vnum = 1508
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 1508
+  max = 2
+
+[[rooms]]
+vnum = 1523
+name = "The Dark Cave"
+sector = "forest"
+description = """
+The cave gleams as your light reflects off of it.  As you squint your eyes
+and try to look ahead, you think you see something move."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1524
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1522
+
+[[rooms]]
+vnum = 1524
+name = "Darker Cave"
+sector = "forest"
+description = """
+The cave gets even darker as your terror grows stronger.  You fear for your
+life as something emerges out of the shadows."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1523
+
+  [[rooms.mob_resets]]
+  vnum = 1507
+  max = 1
+
+[[rooms]]
+vnum = 1526
+name = "A Dusty Path"
+sector = "city"
+description = """
+You are on a well traveled path that leads in many directions.  To the north
+is a large house, and to the west is a fortress."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1558
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1506
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1527
+
+[[rooms]]
+vnum = 1527
+name = "The Iron Gateway"
+sector = "city"
+description = """
+You stand at the entrance to the gnome fortress.  The place seems to be
+well fortified."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1526
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1528
+
+  [[rooms.mob_resets]]
+  vnum = 1504
+  max = 6
+
+[[rooms]]
+vnum = 1528
+name = "A Long Hallway"
+sector = "inside"
+description = """
+You are now inside of the fortress; you must be lucky that the guards 
+haven't killed you.  As you glance around, you notice that the walls and
+floors are spotlessly cleaned.  The barracks are to the north and a
+storage room is to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1530
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1527
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1532
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1529
+
+[[rooms]]
+vnum = 1529
+name = "A Long Hallway"
+sector = "inside"
+description = """
+You are now inside of the fortress; you must be lucky that the guards 
+haven't killed you.  As you glance around, you notice that the walls and
+floors are spotlessly cleaned.  A mess hall is to the south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1528
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1534
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1535
+
+[[rooms]]
+vnum = 1530
+name = "The Barracks"
+sector = "inside"
+description = """
+You now stand in the sleeping quarters of the gnome guards.  Every bed is
+made perfectly, and not single article of clothing is on the floor.  There
+is a small storage room to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1531
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1528
+
+  [[rooms.mob_resets]]
+  vnum = 1504
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1504
+  max = 6
+
+[[rooms]]
+vnum = 1531
+name = "A Small Storage Room"
+sector = "inside"
+description = """
+This is where the gnomes store all their spare clothing and armor.
+There is not much here, but you might come up with something."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1530
+
+[[rooms]]
+vnum = 1532
+name = "A Small Storage Room"
+sector = "inside"
+description = """
+This is where the gnomes store all their spare weapons.  A door leads off
+to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1528
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1533
+
+[[rooms]]
+vnum = 1533
+name = "A Small Storage Room"
+sector = "inside"
+description = """
+This is yet another room for storing gnome stuff.  Maps and battle plans
+are stored in neat stacks on the shelves."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1532
+
+[[rooms]]
+vnum = 1534
+name = "The Mess Hall"
+sector = "inside"
+description = """
+You are in the room where the guards come to get their grub.  The benches 
+and tables are neatly cleaned and straightened, while shiny plates line
+the walls."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1529
+
+  [[rooms.mob_resets]]
+  vnum = 1504
+  max = 6
+
+[[rooms]]
+vnum = 1535
+name = "A Small Room"
+sector = "inside"
+description = """
+This is a small plain room.  Its only interesting feature is a ladder down."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1529
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 1536
+
+[[rooms]]
+vnum = 1536
+name = "A Small Unused Room"
+sector = "city"
+description = """
+You stand in a small room in an unused section of the fortress.  The whole
+room is coated with dust and cobwebs.  The ladder leads back up, and
+a rusty door is to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1537
+  key = 1500
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 1535
+
+[[rooms]]
+vnum = 1537
+name = "Dark Hallway"
+sector = "field"
+description = """
+You find yourself in a very old section of the fortress.  You must be the
+first person to pass through here in years.  The hallway continues south
+and a door leads off to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1538
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1539
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1536
+  key = 1500
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 1538
+name = "Torture Chamber"
+sector = "field"
+description = """
+This is a room that was once used to extract lies out of helpless victims.
+The machines look unused, but could still work."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1537
+
+[[rooms]]
+vnum = 1539
+name = "Dark Hallway"
+sector = "field"
+description = """
+The hall continues in a north-south direction.  The floor is coated with
+some kind of molded slime.  Doors lead east and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1537
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1542
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1540
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1541
+
+[[rooms]]
+vnum = 1540
+name = "Dark Hallway"
+sector = "field"
+description = """
+The hall continues in a north-south direction.  The floor is coated with
+some kind of molded slime.  Doors lead east and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1539
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1544
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1543
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1545
+
+[[rooms]]
+vnum = 1541
+name = "Prison Cell"
+sector = "field"
+description = """
+You are in a dark and nasty prison cell.  Bodies lying on the floor give off
+an unbearable stench."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1539
+
+  [[rooms.mob_resets]]
+  vnum = 1509
+  max = 3
+
+[[rooms]]
+vnum = 1542
+name = "Prison Cell"
+sector = "field"
+description = """
+You are in a dark and nasty prison cell.  Bodies lying on the floor give off
+an unbearable stench."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1539
+
+  [[rooms.mob_resets]]
+  vnum = 1510
+  max = 3
+
+[[rooms]]
+vnum = 1543
+name = "Prison Cell"
+sector = "field"
+description = """
+You are in a dark and nasty prison cell.  Bodies lying on the floor give off
+an unbearable stench."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1540
+
+  [[rooms.mob_resets]]
+  vnum = 1511
+  max = 3
+
+[[rooms]]
+vnum = 1544
+name = "Prison Cell"
+sector = "field"
+description = """
+You are in a dark and nasty prison cell.  Bodies lying on the floor give off
+an unbearable stench."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1540
+
+[[rooms]]
+vnum = 1545
+name = "End of the Dark Hallway"
+sector = "field"
+description = """
+You have reached the end of the dark hallway and maybe the end of your puny
+life.  Something lumbers its way out of the shadows."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1540
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1546
+  key = 1501
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 1512
+  max = 1
+
+[[rooms]]
+vnum = 1546
+name = "A Ladder"
+sector = "forest"
+description = "You have come into a vertical tunnel with a ladder."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1545
+  key = 1501
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 1547
+
+[[rooms]]
+vnum = 1547
+name = "Lair"
+sector = "field"
+description = """
+You have entered a new lair in the fortress.  Anything could be lurking
+around the corner."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1548
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 1546
+
+[[rooms]]
+vnum = 1548
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1547
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1549
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1551
+
+  [[rooms.mob_resets]]
+  vnum = 1513
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 1514
+  max = 10
+
+[[rooms]]
+vnum = 1549
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1550
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1548
+
+[[rooms]]
+vnum = 1550
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1555
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1549
+
+  [[rooms.mob_resets]]
+  vnum = 1513
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 1514
+  max = 10
+
+[[rooms]]
+vnum = 1551
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1552
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1548
+
+  [[rooms.mob_resets]]
+  vnum = 1513
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 1514
+  max = 10
+
+[[rooms]]
+vnum = 1552
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1553
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1551
+
+[[rooms]]
+vnum = 1553
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1552
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1554
+
+  [[rooms.mob_resets]]
+  vnum = 1513
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 1514
+  max = 10
+
+[[rooms]]
+vnum = 1554
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1555
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1556
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1553
+
+[[rooms]]
+vnum = 1555
+name = "A Damp Hallway"
+sector = "field"
+description = """
+You are wandering in a dark, damp, twisting hallway.  The temperature
+seems to be greater here, as well as your fear."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1550
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1554
+
+  [[rooms.mob_resets]]
+  vnum = 1513
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 1514
+  max = 10
+
+[[rooms]]
+vnum = 1556
+name = "The End of the Hallway"
+sector = "field"
+description = """
+You make your way out of the hallway, just to find yourself in greater
+danger.  Before you looms the source of the great heat."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1557
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1554
+
+  [[rooms.mob_resets]]
+  vnum = 1515
+  max = 1
+
+[[rooms]]
+vnum = 1557
+name = "The Altar"
+sector = "field"
+description = """
+You finally reach the end of the maze.  There is a great altar here in the
+shape of a bat.  A passageway leads off to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1556
+
+  [[rooms.obj_resets]]
+  vnum = 1517
+  max = 1
+
+[[rooms]]
+vnum = 1558
+name = "The Chief's House"
+sector = "inside"
+description = """
+You enter into a large and luxurious house.  The floor is coated with carpets
+and the walls are covered in paintings.  You feel privileged just for stepping
+inside."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1526
+
+  [[rooms.mob_resets]]
+  vnum = 1505
+  max = 1
+
+[[rooms]]
+vnum = 1559
+name = "The Unused Path"
+sector = "city"
+description = """
+You are now on a fairly unused path that leads east out of the village.  
+You wonder what could be out this way."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1560
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1504
+
+[[rooms]]
+vnum = 1560
+name = "The Overgrown Path"
+sector = "field"
+description = """
+As the path continues on, the grass grows higher.  You can't imagine
+what could possibly be out this way."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1561
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1559
+
+[[rooms]]
+vnum = 1561
+name = "The Clearing"
+sector = "field"
+description = """
+Your progress is suddenly stopped by mountains on all sides.  The path leads
+back to the west, and there appears to be an old mine shaft to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1562
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1560
+
+[[rooms]]
+vnum = 1562
+name = "Entrance to the Mine Shaft"
+sector = "field"
+description = """
+As you enter the mine shaft, you get a sudden fear of the walls closing
+in on you.  You are surprised to notice that you don't need a light."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1563
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1561
+
+[[rooms]]
+vnum = 1563
+name = "Mine Shaft"
+sector = "field"
+description = """
+This mine shaft looks stable, at least in this area.  The wooden supports are
+thick and strong.  Torches line the walls.  Exits lead in all directions."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1582
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1564
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1574
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1562
+
+  [[rooms.mob_resets]]
+  vnum = 1520
+  max = 6
+
+[[rooms]]
+vnum = 1564
+name = "Mine Shaft"
+sector = "field"
+description = """
+This mine shaft looks stable, at least in this area.  The wooden supports are
+thick and strong.  Torches line the walls.  Exits lead in all directions."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1583
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1565
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1573
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1563
+
+[[rooms]]
+vnum = 1565
+name = "Mine Shaft"
+sector = "field"
+description = """
+This mine shaft looks stable, at least in this area.  The wooden supports are
+thick and strong.  Torches line the walls.  Exits lead in all directions
+except north."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1566
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1572
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1564
+
+  [[rooms.mob_resets]]
+  vnum = 1520
+  max = 6
+
+[[rooms]]
+vnum = 1566
+name = "Walkway"
+sector = "city"
+description = """
+You are on a well built path in the middle of a mountain.  You sense something
+great up ahead, considering the hard work that must have gone into creating
+this passage."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1567
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1565
+
+[[rooms]]
+vnum = 1567
+name = "Walkway"
+sector = "city"
+description = """
+You are on a well built path in the middle of a mountain.  You sense something
+great up ahead, considering the hard work that must have gone into creating
+this passage."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1566
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1568
+
+[[rooms]]
+vnum = 1568
+name = "The Grand Hall"
+sector = "inside"
+description = """
+You have stepped into the Grand Hall of the hobgoblin kingdom; your luck
+must be running low by now.  Golden pillars span the hallway, and you
+notice a red carpet beneath your feet."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1567
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1569
+
+[[rooms]]
+vnum = 1569
+name = "The Throne Room"
+sector = "inside"
+description = """
+This is large bright room filled with Hobgoblins.  To the south there is
+a large golden throne against the wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1568
+
+  [[rooms.mob_resets]]
+  vnum = 1518
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1518
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1518
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1518
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1518
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1519
+  max = 1
+
+[[rooms]]
+vnum = 1570
+name = "The Treasury"
+sector = "inside"
+description = """
+You are inside the hobgoblin's treasury.  Your eyes are almost blinded by the
+gold, silver and copper coins."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1571
+
+  [[rooms.mob_resets]]
+  vnum = 1521
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 1516
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 1517
+  max = 1
+
+[[rooms]]
+vnum = 1571
+name = "Guarded Room"
+sector = "city"
+description = """
+You are inside a well guarded room.  The place is slightly better built than
+the mine shafts, and is lit by lanterns."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1572
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1570
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+[[rooms]]
+vnum = 1572
+name = "Guarded Room"
+sector = "city"
+description = """
+You are inside a well guarded room.  The place is slightly better built than
+the mine shafts, and is lit by lanterns."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1565
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1571
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+[[rooms]]
+vnum = 1573
+name = "Hobgoblin Armory"
+sector = "city"
+description = """
+The guards store their spare weapons and armor here.  There are rusty swords
+on rotting shelves, and armor hanging from hooks or laying on the floor."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1564
+
+  [[rooms.obj_resets]]
+  vnum = 1521
+  max = 1
+
+[[rooms]]
+vnum = 1574
+name = "Mine Shaft"
+sector = "field"
+description = """
+You enter a part of the mine shaft where the torches have grown dim
+and are almost ready to go out.  From what you can see, there are plenty
+of cobwebs on the walls and rats at your feet."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1563
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1575
+
+[[rooms]]
+vnum = 1575
+name = "Entrance to a Dungeon"
+sector = "field"
+description = """
+The floor dips slightly as you walk into this dark and nasty place.  Your
+skin crawls as you look at the filth on the walls and see it move.  Most
+of the exits lead into jail cells."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1574
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1577
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1576
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1581
+
+[[rooms]]
+vnum = 1576
+name = "A Dungeon"
+sector = "field"
+description = """
+You are in the deepest and darkest part of the mine shafts.  The light from
+the torches barely reaches to where you are.  Most directions from here
+lead to jail cells."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1575
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1578
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1579
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1580
+
+[[rooms]]
+vnum = 1577
+name = "A Jail Cell"
+sector = "field"
+description = """
+You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
+The walls glisten with slime.  You see something stir in the straw."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1575
+
+  [[rooms.mob_resets]]
+  vnum = 1522
+  max = 5
+
+[[rooms]]
+vnum = 1578
+name = "The Jail Cell"
+sector = "field"
+description = """
+You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
+The walls glisten with slime.  You see something stir in the straw."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1576
+
+  [[rooms.mob_resets]]
+  vnum = 1522
+  max = 5
+
+[[rooms]]
+vnum = 1579
+name = "The Jail Cell"
+sector = "field"
+description = """
+You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
+The walls glisten with slime.  You see something stir in the straw."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1576
+
+  [[rooms.mob_resets]]
+  vnum = 1522
+  max = 5
+
+[[rooms]]
+vnum = 1580
+name = "The Jail Cell"
+sector = "field"
+description = """
+You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
+The walls glisten with slime.  You see something stir in the straw."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1576
+
+  [[rooms.mob_resets]]
+  vnum = 1523
+  max = 5
+
+[[rooms]]
+vnum = 1581
+name = "The Jail Cell"
+sector = "field"
+description = """
+You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
+The walls glisten with slime.  You see something stir in the straw."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1575
+
+  [[rooms.mob_resets]]
+  vnum = 1523
+  max = 5
+
+[[rooms]]
+vnum = 1582
+name = "Small Mine Shaft"
+sector = "field"
+description = """
+You are in a small extension of the mine shaft.  The dust on the floor is
+undisturbed by footprints."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1588
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1563
+
+[[rooms]]
+vnum = 1583
+name = "Hobgoblin Barracks"
+sector = "field"
+description = """
+You are suddenly surrounded by a small army of hobgoblin guards.  The room
+itself is a mess with clothes and armor everywhere.  The beds are unmade and
+stained."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1584
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1585
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1564
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+[[rooms]]
+vnum = 1584
+name = "Hobgoblin Barracks"
+sector = "field"
+description = """
+Yech!  As you continue forward, the smell just keeps getting worse.
+What are you DOING here?"""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1583
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+  [[rooms.mob_resets]]
+  vnum = 1517
+  max = 30
+
+[[rooms]]
+vnum = 1585
+name = "Mess Hall"
+sector = "field"
+description = """
+You stand in the hobgoblin eating area.  There are a few rotting tables
+and many broken dishes scattered around the room.  You almost slip on a
+rotten piece of meat, but catch yourself just in time."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1586
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1587
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1583
+
+[[rooms]]
+vnum = 1586
+name = "A Store Room"
+sector = "city"
+description = """
+You stand in a small room filled with flour, grain, fruit, and bat droppings."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1585
+
+[[rooms]]
+vnum = 1587
+name = "The Kitchen"
+sector = "field"
+description = """
+This kitchen hasn't been cleaned since the creation of humans.  The trash and
+spoiled food laying on the floor reach up to your knees.  Off to the side a
+pot is boiling over.  A human hand floats in it."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1585
+
+  [[rooms.mob_resets]]
+  vnum = 1526
+  max = 1
+
+[[rooms]]
+vnum = 1588
+name = "A Small Mine Shaft"
+sector = "field"
+description = """
+You come to a place in the mine shaft where a tunnel leads down.  The
+small passage continues north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1589
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1582
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 1590
+
+[[rooms]]
+vnum = 1589
+name = "Hermit's Lair"
+sector = "field"
+description = """
+You are in a small section where the mine wall has collapsed to reveal a
+tiny one-room cave.  The area is barely lit, but you can make out something
+moving towards you."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1588
+
+  [[rooms.mob_resets]]
+  vnum = 1524
+  max = 1
+
+[[rooms]]
+vnum = 1590
+name = "A Hole"
+sector = "forest"
+description = "You are in a hole."
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 1588
+
+  [[rooms.mob_resets]]
+  vnum = 1520
+  max = 6
+

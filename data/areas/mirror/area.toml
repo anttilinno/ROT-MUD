@@ -1,0 +1,8 @@
+id = "old_thalos"
+name = "Old Thalos"
+credits = "{01 60} Kahn    Old Thalos"
+reset_interval = 120
+
+[vnum_range]
+min = 5300
+max = 5399

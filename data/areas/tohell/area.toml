@@ -1,0 +1,8 @@
+id = "hell"
+name = "Hell"
+credits = "{63 99} Strahd  Descent to Hell"
+reset_interval = 120
+
+[vnum_range]
+min = 10400
+max = 10599

@@ -1,0 +1,8 @@
+id = "redfernes"
+name = "Redferne's"
+credits = "{39 60} Diku    Redferne's Residence"
+reset_interval = 120
+
+[vnum_range]
+min = 7900
+max = 7999

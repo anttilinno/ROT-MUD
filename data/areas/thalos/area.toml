@@ -1,0 +1,8 @@
+id = "thalos"
+name = "Thalos"
+credits = "{19 50} Drkside Thalos"
+reset_interval = 120
+
+[vnum_range]
+min = 5200
+max = 5299

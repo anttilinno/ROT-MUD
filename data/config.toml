@@ -1,0 +1,12 @@
+[server]
+telnet_port = 4000
+websocket_port = 4001
+pulse_ms = 250
+data_path = "data"
+
+[logging]
+level = "info"
+format = "text"  # "text" or "json"
+
+[security]
+api_key = "changeme"  # Change this in production!

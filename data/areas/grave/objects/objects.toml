@@ -1,0 +1,135 @@
+[[objects]]
+vnum = 3600
+keywords = ["candlestick"]
+short_desc = "a candlestick"
+long_desc = "A pewter candlestick is standing here."
+item_type = "light"
+level = 0
+weight = 50
+cost = 10
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 3601
+keywords = ["brandy", "bottle"]
+short_desc = "a brandy bottle"
+long_desc = "A brandy bottle is lying here."
+item_type = "drink"
+level = 0
+weight = 20
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3602
+keywords = ["brandy", "bottle"]
+short_desc = "a brandy bottle"
+long_desc = "A brandy bottle is lying here."
+item_type = "drink"
+level = 0
+weight = 20
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3603
+keywords = ["wheelbarrow"]
+short_desc = "a wheelbarrow"
+long_desc = "A green-painted wheelbarrow is standing here."
+item_type = "boat"
+level = 0
+weight = 1000
+cost = 50
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3604
+keywords = ["shovel"]
+short_desc = "a shovel"
+long_desc = "A shovel is lying here."
+item_type = "weapon"
+level = 0
+weight = 80
+cost = 169
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 5
+
+[[objects]]
+vnum = 3605
+keywords = ["rake"]
+short_desc = "a rake"
+long_desc = "A rake is lying here."
+item_type = "weapon"
+level = 0
+weight = 80
+cost = 140
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 4
+
+[[objects]]
+vnum = 3610
+keywords = ["skeleton"]
+short_desc = "a dusty skeleton"
+long_desc = "A dusty skeleton lies here."
+item_type = "furniture"
+level = 0
+weight = 150
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3611
+keywords = ["amethyst", "gem"]
+short_desc = "a amethyst"
+long_desc = "A large, beautifully polished amethyst has been left here."
+item_type = "warp_stone"
+level = 0
+weight = 10
+cost = 2500
+wear_flags = ["take", "hold"]
+extra_flags = ["melt_drop"]
+
+[[objects]]
+vnum = 3612
+keywords = ["pendant", "silver"]
+short_desc = "a silver pendant"
+long_desc = "A silver pendant has been left here."
+item_type = "jewelry"
+level = 13
+weight = 10
+cost = 800
+wear_flags = ["take", "neck"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -1
+
+[[objects]]
+vnum = 3613
+keywords = ["dagger", "silver"]
+short_desc = "a silver dagger"
+long_desc = "A long silver dagger is lying here."
+item_type = "weapon"
+level = 11
+weight = 10
+cost = 430
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+

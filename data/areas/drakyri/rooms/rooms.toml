@@ -1,0 +1,2378 @@
+[[rooms]]
+vnum = 11700
+name = "Wooded Path"
+sector = "forest"
+description = """
+You stand on a narrow path winding through the forest.  To the south,
+the path enters a small grove of trees."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13596
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11701
+
+[[rooms]]
+vnum = 11701
+name = "Strange Grove"
+sector = "forest"
+description = """
+The air seems strangely silent here, devoid even of birdsong.  Tall trees
+frame the clearing, their leaves motionless in the still air.  In the
+center of the clearing rests a circular pool of clear water.  A narrow
+path leads into the forest to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11700
+
+  [[rooms.obj_resets]]
+  vnum = 11704
+  max = 1
+
+[[rooms]]
+vnum = 11702
+name = "Silvery Gates"
+sector = "city"
+description = """
+You find yourself on a dirt path before a tall gateway.  The double
+gates gleam silvery blue in the light, formed of fine bars of mithril
+interwoven into an intricate, twisting pattern.  Though the bars are
+spaced widely apart in places, you can't seem to see what lays beyond."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11703
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11788
+  max = 1
+
+[[rooms]]
+vnum = 11703
+name = "Shimmering Pathway"
+sector = "city"
+description = """
+Strands of some strange, silvery substance glimmer beneath your feet,
+interwoven to form a wide east-west pathway framed by tall trees.
+Narrower paths branch off to the north and south, and the pathway
+continues east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11704
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11708
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11707
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11702
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11783
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11783
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11784
+  max = 7
+
+[[rooms]]
+vnum = 11704
+name = "Winding path"
+sector = "forest"
+description = """
+You stand on a narrow path of silver strands which winds east and south
+here through the trees.  A large house is visible in the distance to
+the north."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11705
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11703
+
+  [[rooms.mob_resets]]
+  vnum = 11785
+  max = 5
+
+[[rooms]]
+vnum = 11705
+name = "Winding path"
+sector = "forest"
+description = """
+The path bends north and west here.  A large blue house is visible
+in the distance to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11706
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11704
+
+  [[rooms.mob_resets]]
+  vnum = 11783
+  max = 6
+
+[[rooms]]
+vnum = 11706
+name = "Large clearing"
+sector = "forest"
+description = """
+The path expands here to form a large clearing framed by trees.  The
+ground remains the interwoven silvery strands which formed the
+pathway to the south.  A blue courtyard is visible a short distance
+off the clearing to the north, and a tall white oak door leads into a
+large white house to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11719
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11705
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11736
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11784
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 11784
+  max = 7
+
+[[rooms]]
+vnum = 11707
+name = "Winding path"
+sector = "forest"
+description = """
+You stand on a narrow path formed of interwoven strands of some
+strange silvery material.  To the south, a bronze door leads into
+a house which appears to be made entirely of jade.  A gold inscription
+glimmers above the doorway."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11703
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11790
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11779
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11784
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 11785
+  max = 5
+
+[[rooms]]
+vnum = 11708
+name = "Shimmering pathway"
+sector = "forest"
+description = """
+You stand on a shimmering pathway formed of strange interwoven silvery
+strands.  The pathway continues east and west, framed by tall trees."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11709
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11703
+
+  [[rooms.mob_resets]]
+  vnum = 11785
+  max = 5
+
+[[rooms]]
+vnum = 11709
+name = "Shimmering pathway"
+sector = "forest"
+description = """
+A narrow path branches off to the south.  Through the trees, you can
+make out the forms of large houses.  A particularly large tree towers
+over the pathway to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11717
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11713
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11710
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11708
+
+  [[rooms.mob_resets]]
+  vnum = 11778
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11784
+  max = 7
+
+[[rooms]]
+vnum = 11710
+name = "Narrow path"
+sector = "forest"
+description = """
+Interwoven silvery strands form a narrow north-south path between the
+trees.  Tall wrought iron gates stand to the west of the path,
+opening onto a granite courtyard.  The path continues south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11709
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11711
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11780
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11785
+  max = 5
+
+[[rooms]]
+vnum = 11711
+name = "End of the narrow path"
+sector = "forest"
+description = """
+A short walkway leads east off the path to a set of towering black
+gates.  The path leads back northward."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11710
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11753
+
+  [[rooms.mob_resets]]
+  vnum = 11776
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11786
+  max = 3
+
+[[rooms]]
+vnum = 11712
+name = "Outside of space"
+sector = "inside"
+description = """
+A wave of vertigo washes over you as you gaze around what appears to
+be a formless multicolored void.  A variety of strange objects float
+around you, enticingly near, yet somehow unreachable.  Before you,
+A black counter hangs in midair."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11713
+
+  [[rooms.obj_resets]]
+  vnum = 11706
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11774
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11783
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11784
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 11786
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 11787
+  max = 1
+
+[[rooms]]
+vnum = 11713
+name = "Shimmering pathway"
+sector = "forest"
+description = """
+The pathway continues east and west here.  A strange rope ladder,
+formed of the same material as the pathway, hangs suspended above the
+road, apparently without support."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11712
+
+  [[rooms.mob_resets]]
+  vnum = 11775
+  max = 1
+
+[[rooms]]
+vnum = 11714
+name = "Before the Grey Tower"
+sector = "forest"
+description = """
+The pathway ends here at a tall grey tower.  Through the open doorway,
+you see marble steps leading up into the tower center."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11713
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11715
+
+  [[rooms.mob_resets]]
+  vnum = 11783
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11783
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 11785
+  max = 5
+
+[[rooms]]
+vnum = 11715
+name = "Chamber of the Guardian"
+sector = "inside"
+description = """
+Dim torchlight permeates the chamber, filling it with a strange greyish
+glow.  The walls, formed of something akin to marble seem impossible
+smooth.  Strangely, you can find no seams in the material, as if the
+entire tower were carved of a single block of stone.  Marble steps
+lead up to double silver doors."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11716
+  key = 11705
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11714
+
+  [[rooms.mob_resets]]
+  vnum = 11781
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11784
+  max = 7
+
+[[rooms]]
+vnum = 11716
+name = "Council Chamber"
+sector = "inside"
+description = """
+You find yourself in a wide circular chamber carved of the same strange
+grey stone as the rest of the tower.  A large crescent shaped table
+dominates the center of the room.  Twelve chairs line the outer edge
+of the crescent, and a single larger chair rests at the center of the
+inner edge.  The crests of each of the six drakyri houses are engraved
+in two outer chairs each.  The inner chair is engraved with a depiction
+of a circle bisected by a cross."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11715
+  key = 11705
+  flags = ["closed"]
+
+  [[rooms.obj_resets]]
+  vnum = 11707
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11782
+  max = 1
+
+[[rooms]]
+vnum = 11717
+name = "Hidden lane"
+sector = "forest"
+description = """
+You stand on a narrow strip of silver leading south to a huge tree
+and east to a black oaken door.  The air seems strangely still
+and quiet."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11770
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11709
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11777
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11786
+  max = 3
+
+[[rooms]]
+vnum = 11718
+name = "Laerkai Headquarters"
+sector = "inside"
+description = """
+You find yourself in a large room enclosed by midnight black onyx
+walls.  In the center of the room is a large stone table encircled
+by 7 dark stone chairs, each inscribed with a different symbol."""
+
+  [[rooms.obj_resets]]
+  vnum = 11708
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11780
+  max = 1
+
+[[rooms]]
+vnum = 11719
+name = "Blue stone courtyard"
+sector = "city"
+description = """
+Gleaming ice blue stone paves a wide circular courtyard centered by a
+sculpted marble fountain.  Strands of silvery green ivy twine around
+the encircling pillars, appearing at first glance to be perfectly crafted
+works of delicate silver filligree.  A marble archway frames a pair
+of gleaming double doors to the north.  Glittering silver forms a strange
+symbol above the archway."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11720
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11706
+
+  [[rooms.obj_resets]]
+  vnum = 11700
+  max = 1
+
+[[rooms]]
+vnum = 11720
+name = "Blue Marble Corridor"
+sector = "inside"
+description = """
+Dark blue marble walls frame a wide north-south corridor.  Brilliant
+streaks of white slash the darker blue stone like shafts of lightning.
+Darker swirls of grey and black twine among the white like shadows.
+Archways open east and west, and the corridor continues north.  To the
+south, double silver doors are set into the wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11724
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11722
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11719
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11721
+
+  [[rooms.mob_resets]]
+  vnum = 11713
+  max = 2
+
+[[rooms]]
+vnum = 11721
+name = "Wood Panelled Ballroom"
+sector = "inside"
+description = """
+The dark polished stone of a dance floor gleams amidst the oak panelled
+walls framing the ballroom.  Silver tapestries adorn the walls, glittering
+against the darkened wood.  Suspended from the center of the high ceiling
+is an enormous crystal chandelier."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11720
+
+[[rooms]]
+vnum = 11722
+name = "Dining Hall"
+sector = "inside"
+description = """
+Dark, white streaked blue marble frames a long hall running east and
+west.  Dominating the center of the hall is a long table of some
+strange ice blue substance similar to metal.  A feast covers the
+table top from end to end.  You notice a faint shimmer about a meter
+above the table, encasing the entire top."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11723
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11720
+
+  [[rooms.mob_resets]]
+  vnum = 11711
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 11711
+  max = 4
+
+[[rooms]]
+vnum = 11723
+name = "Kitchen"
+sector = "inside"
+description = """
+You stand inside a huge, blue walled kitchen.  Pots and pans hang in
+racks along the walls, alongside knife sets and various silver utensils.
+Over each hangs the telltale shimmer of a protective shield.  A huge
+chopping block dominates the center of the kitchen, littered with 
+what appears to be a meal in preparation.  To one side, a lamb sizzles
+on a spit."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11722
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11711
+  max = 4
+
+[[rooms]]
+vnum = 11724
+name = "Blue Marble Corridor"
+sector = "inside"
+description = """
+Torchlight flickers over deep blue marble walls, picking out streaks
+of white and darker greys.  Silver, inlayed in the dark marble,
+forms the the insignia:
+
+                {B((+*+)){x
+
+A winding stairwell is visible to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11725
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11720
+
+  [[rooms.mob_resets]]
+  vnum = 11703
+  max = 1
+
+[[rooms]]
+vnum = 11725
+name = "Spiral Stairwell"
+sector = "inside"
+description = """
+A varnished wood stairwell is set against the north wall, spiraling
+up and down to disappear into the floor and ceiling here.  A blue
+marble corridor runs south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11724
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11730
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11726
+
+[[rooms]]
+vnum = 11726
+name = "Granite storage room"
+sector = "inside"
+description = """
+You stand in a dimly lit cavern hewn of solid granite.  Shelves inset in
+the rock walls bear a variety of crates and boxes.  Longer crates lean
+against the eastern and western walls, filling the gaps between shelves.
+A spiral stairwell winds into the light above."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11727
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11725
+
+  [[rooms.mob_resets]]
+  vnum = 11713
+  max = 2
+
+[[rooms]]
+vnum = 11727
+name = "Magic Workroom"
+sector = "inside"
+description = """
+Shelves line the east and west walls, filled to overflowing with dusty
+tomes and stacks of parchment.  Long tables line the two remaining walls
+and the center of the floor, stacked with strange implements and
+half-written documents."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11728
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11729
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11726
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11700
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11711
+  max = 4
+
+[[rooms]]
+vnum = 11728
+name = "Chemical Lab"
+sector = "inside"
+description = """
+One sniff, and a raunchy stench nearly bowls you over.  The sounds of
+liquid, bubbling and dripping in the constructions of tubing and beakers
+lining the workbenches, fills the air.  Accompanying are clouds of
+white and multicolored steam, which accounts for the stench.  Chemists.."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11727
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11702
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11704
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11710
+  max = 1
+
+[[rooms]]
+vnum = 11729
+name = "Summoning Chamber"
+sector = "inside"
+description = """
+A warning prickle climbs along the back of your spine as you survey the
+dark walled stone room.  Inlayed in silver in the center of the floor
+is a huge pentagram, filled with strange glimmering runes.  The walls,
+in contrast, are plain black stone, polished to a glossy sheen which
+seems to soak up the flickering torchlight.  A long stone shelf runs
+the length of the north and east walls."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11727
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11712
+  max = 1
+
+[[rooms]]
+vnum = 11730
+name = "Mirrored Hallway"
+sector = "inside"
+description = """
+You stand in a long hallway.  Doors open into the north, south, east,
+and west wall.  The walls between the doors are filled with a variety
+of strange, warped mirrors, filling the hall with twisted images
+of its occupants.  A spiral staircase cuts through the northern
+portion of the hall, leading up and down."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11734
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11733
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11732
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11731
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11735
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11725
+
+[[rooms]]
+vnum = 11731
+name = "Emerald Suite"
+sector = "inside"
+description = """
+Deep green tapestries adorn varnished black oak wall panels framing a 
+luxurious bedroom suite.  Emerald inlay forms swirling patterns in
+the dark ceiling, glittering in the torchlight.  An inscription in
+silver is visible above the door to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11730
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11706
+  max = 1
+
+[[rooms]]
+vnum = 11732
+name = "Amethyst Suite"
+sector = "inside"
+description = """
+White oak walls support layers of rich purple tapestries.  Radiating
+from the center of the ceiling is a huge starburst pattern, formed of
+dozens of glittering amethysts.  Inlayed silver forms an inscription
+in the wood above the northern door."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11730
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11708
+  max = 1
+
+[[rooms]]
+vnum = 11733
+name = "Sapphire Suite"
+sector = "inside"
+description = """
+You find yourself in a huge suite adorned with azure blue tapestries.
+Brass sconces holding torches are spaced along the redwood panelled
+walls, each bearing a tiny starcut sapphire.  A matching larger sapphire
+is embedded in the center of the ceiling.  Silver lettering glimmers
+against the redwood framing the doorway to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11730
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11707
+  max = 1
+
+[[rooms]]
+vnum = 11734
+name = "Ruby Suite"
+sector = "inside"
+description = """
+Deep red wall hangings grace the varnished golden oak panelled walls, 
+shimmering softly in the torchlight.  Five square cut rubies form a
+pentagon shape embedded in the center of the ceiling.  Above the
+doorway to the south, a silver inscription gleams against the wood."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11730
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11705
+  max = 1
+
+[[rooms]]
+vnum = 11735
+name = "Diamond Suite"
+sector = "inside"
+description = """
+White streaked blue marble walls frame an enormous suite decorated with
+shimmering white tapestries.  Woven in silver are depictions of
+spellcasters in battle, surrounded by strange glyphs and runes.
+Inlayed diamond lettering forms an inscription across the center of
+the dark marble ceiling."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11730
+
+  [[rooms.mob_resets]]
+  vnum = 11701
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11709
+  max = 1
+
+[[rooms]]
+vnum = 11736
+name = "Ivory Foyer"
+sector = "inside"
+description = """
+A crystal chandelier hangs suspended in the center of the room, its
+bright light gleaming off polished ivory and gold trim.  The huge
+white oak entrance door opens into the east wall, framed by a polished
+golden oak archway.  A golden crest is emblazoned across the top of the
+archway, surrounded by silvery lettering.
+
+An archway opens north, and a hallway leads into the house to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11737
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11706
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11738
+
+  [[rooms.mob_resets]]
+  vnum = 11722
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 11722
+  max = 4
+
+[[rooms]]
+vnum = 11737
+name = "Art Gallery"
+sector = "inside"
+description = """
+Shallow niches, spaced evenly along the long white walls of the gallery,
+display a wide variety of portraits and figurines, each obviously
+valuable and protected behind a glass case.  Low marble pedestals
+support larger sculptures in the center of the floor."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11736
+
+  [[rooms.mob_resets]]
+  vnum = 11717
+  max = 1
+
+[[rooms]]
+vnum = 11738
+name = "White Hallway"
+sector = "inside"
+description = """
+Gleaming grey streaked white marble frames a long hallway running
+east-west here.  The glow of torches, affixed in golden sconces along
+the walls, plays over finely woven tapestries.  Archways open east
+and south, and the hallway continues west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11736
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11739
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11740
+
+[[rooms]]
+vnum = 11739
+name = "Dining Hall"
+sector = "inside"
+description = """
+Dim candlelight picks out the golden grains of the oak table stretching
+the length of the hall, set with white placemats and matching golden 
+silverware.  A wide archway opens north onto a white hallway."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11738
+
+[[rooms]]
+vnum = 11740
+name = "White Hallway"
+sector = "inside"
+description = """
+The hallway stretches west to the base of a spiral staircase and east
+towards the foyer.  A polished golden oak archway opens north into a
+circular stone chamber."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11741
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11738
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11744
+
+  [[rooms.mob_resets]]
+  vnum = 11718
+  max = 1
+
+[[rooms]]
+vnum = 11741
+name = "Tower Base"
+sector = "inside"
+description = """
+You stand in a circular white marble room, apparently the base of a tall
+tower.  A staircase spirals through the center of the room, leading up.
+A golden oak archway opens south onto a white hallway."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11740
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11742
+
+[[rooms]]
+vnum = 11742
+name = "Tower Center"
+sector = "inside"
+description = """
+Curving white marble walls frame a narrow circular room.  The view
+from the small windows spaced along the tower walls shows that you are
+about 15-20 meters above the ground, on the second floor of the tower.
+A spiral staircase winds through the center of the room, leading up
+and down.  A glass enclosed tunnel opens off the western face of the
+tower."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11752
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11743
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11741
+
+  [[rooms.mob_resets]]
+  vnum = 11722
+  max = 4
+
+[[rooms]]
+vnum = 11743
+name = "Observatory"
+sector = "inside"
+description = """
+You find yourself about 25 meters above the ground surrounded by glass
+walls and a domed ceiling, giving an excellent view of the surrounding
+landscape.  A city stretches to the south and east, and a dark blue and
+silver house rises to the northeast.  Surrounding the city and stretching
+out to the west is a roiling, formless void.  A spiral staircase descends
+through the center of the room to the floor below."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11742
+
+  [[rooms.mob_resets]]
+  vnum = 11715
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11716
+  max = 1
+
+[[rooms]]
+vnum = 11744
+name = "Spiral Staircase"
+sector = "inside"
+description = """
+You stand at the base of a wide spiral staircase ascending to the
+second floor.  A white marble hallway stretches east from here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11740
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11745
+
+[[rooms]]
+vnum = 11745
+name = "Second Floor Hallway"
+sector = "inside"
+description = """
+A wide hallway stretches west from here, the gleaming marble walls
+broken at intervals by varnished wood doors to the north and south.
+Here, a carved oak door opens into the north wall, and a smaller
+mahogany door opens south.  A spiral staircase descends to the first
+floor."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11750
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11746
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11747
+
+  [[rooms.mob_resets]]
+  vnum = 11722
+  max = 4
+
+[[rooms]]
+vnum = 11746
+name = "Heir's Bedroom"
+sector = "inside"
+description = """
+A huge, luxuriously appointed bedroom stretches out around you.  Golden
+threads, interwoven in the white curtains adorning the walls, glitter
+in the torchlight.  A large mahogany door opens northward.  An
+inscription is engraved in the center of the door."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11745
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11719
+  max = 1
+
+[[rooms]]
+vnum = 11747
+name = "Wide Hallway"
+sector = "inside"
+description = """
+You stand at the western end of a wide white marble hallway.  A dark
+oaken door opens northward, and an ashwood door opens west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11749
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11745
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11748
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11748
+name = "Ashwood Panelled Bedroom"
+sector = "inside"
+description = """
+Varnished white ashwood walls frame a large, well decorated bedroom.
+Dark tapestries of battling heroes adorn the walls.  Behind a glass case
+affixed to the west wall hang a collection of strange, ornate masks.
+To the east, an ashwood door is set into the wall.  Across the top of the
+door is a short inscription."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11747
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11720
+  max = 1
+
+[[rooms]]
+vnum = 11749
+name = "Dark Oak Panelled Bedroom"
+sector = "inside"
+description = """
+The light from several torches in golden sconces spaced along the oak
+panelled walls plays over dark velvet curtains and intricately woven
+silken rugs.  A collection of swords gleams beneath a glass case against
+the northern wall.  An inscription is carved into the dark oaken door
+to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11747
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11721
+  max = 1
+
+[[rooms]]
+vnum = 11750
+name = "Marble Sitting Room"
+sector = "inside"
+description = """
+You stand in a large, marble walled sitting room.  Golden holders hold
+large white candles set in shallow niches spaced along the walls of the
+room.  A glass enclosed tunnel is visible through the sliding door to
+the east, and a pair of golden doors opens north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11751
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11752
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11745
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11751
+name = "Golden Bedchamber"
+sector = "inside"
+description = """
+Shimmering golden tapestries hang from the walls, reflecting the torchlight
+in a soft golden glow.  The tapestries part across the center of the
+north wall to reveal a design inlayed in gold in the white marble.
+Double golden doors open into the south wall.  Ornate letters form an
+inscription across the center of the doors."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11750
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11714
+  max = 1
+
+[[rooms]]
+vnum = 11752
+name = "Glass Tunnel"
+sector = "inside"
+description = """
+You find yourself in a narrow east-west glass tunnel spanning the midair
+gap between the tower to the east and the second floor of the house to
+the west.  The ground appears to be about 25 meters below, though the
+curve of the tunnel floor probably distorts it to seem farther than it is."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11742
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11750
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11753
+name = "Before the Black Gates"
+sector = "city"
+description = """
+Huge black gates loom over the path to the east.  What appears to be
+a humanoid skull is embedded in the archway above the gates, surrounded
+by an inscription in silver.  Tower in the background is a huge black
+stone manor."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11754
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11711
+
+[[rooms]]
+vnum = 11754
+name = "Black Marble Entryway"
+sector = "inside"
+description = """
+Obsidian wall gleam coldly in the dim torchlight, broken only by the
+dark gates to the west and a wide archway leading east.  A symbol is
+carved into the stone above the archway."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11755
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11753
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11732
+  max = 1
+
+[[rooms]]
+vnum = 11755
+name = "Domed Room"
+sector = "inside"
+description = """
+Curving obsidian walls arch above, forming a hermispherical ceiling
+above the large circular chamber.  Bits of silver and small diamonds,
+embedded in the ceiling above, glitter in the faint torchlight, giving
+the illusion of an eternal night sky."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11762
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11756
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11754
+
+[[rooms]]
+vnum = 11756
+name = "Dark tunnel"
+sector = "inside"
+description = """
+Plain black obsidian walls arch overhead to form a narrow north-south
+tunnel.  Deep niches open off the walls of the tunnel to the east, west,
+and south.  To the north, the tunnel opens onto a a huge domed room."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11755
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11757
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11759
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11758
+
+[[rooms]]
+vnum = 11757
+name = "Dark niche"
+sector = "inside"
+description = """
+You stand in a dark, narrow niche carved of plain black stone.  A
+wide black marble pedestal stands in the center of the floor, probably
+designed to display some large object."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11756
+
+  [[rooms.mob_resets]]
+  vnum = 11733
+  max = 1
+
+[[rooms]]
+vnum = 11758
+name = "Dark niche"
+sector = "inside"
+description = """
+You stand in a dark, narrow niche carved of plain black stone.  A
+wide black marble pedestal stands in the center of the floor, probably
+designed to display some large object."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11756
+
+  [[rooms.mob_resets]]
+  vnum = 11734
+  max = 1
+
+[[rooms]]
+vnum = 11759
+name = "Dark niche"
+sector = "inside"
+description = """
+You stand in a dark, narrow niche carved of plain black stone.  A
+wide black marble pedestal stands in the center of the floor, probably
+designed to display some large object."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11756
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11760
+  key = 11701
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 11735
+  max = 1
+
+[[rooms]]
+vnum = 11760
+name = "Forbidding Doorway"
+sector = "inside"
+description = """
+Huge double doors, carved of polished black stone, loom forbiddingly to
+the south.  The archway surrounding the door is carved in the shape of
+5 thick, writhing tentacles, topped by a wicked beaked mouth.  Blood,
+both dried and fresh, spatters the door handles, dulling the polished
+sheen.  Strange claw marks gouge the stone floor, their depth and width
+betraying the dangerous strength of their maker."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11761
+  key = 11702
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11759
+  key = 11701
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 11736
+  max = 1
+
+[[rooms]]
+vnum = 11761
+name = "Pentagram Chamber"
+sector = "inside"
+description = """
+You find yourself in a large chamber hewn of black stone.  A huge
+pentagram is etched into the stone of the floor, dominating the center
+of the chamber.  A rectangular black altar rises from the space
+between the lines in the center of the pentagram.  You notice
+trails of blood streaking the floor between the doors and the altar."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11760
+  key = 11702
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 11723
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11737
+  max = 1
+
+[[rooms]]
+vnum = 11762
+name = "Black Marble Corridor"
+sector = "inside"
+description = """
+Black marble walls tower above, defining a tall corridor leading east
+and south here.  The faint odor of what could have been blood lingers
+in the air, adding to the gloom of the dark corridor."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11763
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11755
+
+  [[rooms.mob_resets]]
+  vnum = 11726
+  max = 1
+
+[[rooms]]
+vnum = 11763
+name = "Black Marble Corridor"
+sector = "inside"
+description = """
+The black marble walls gleam coldly in the dim light.  A tall oak
+door opens to the north, and a similar ash door opens south from here.
+The corridor continues east and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11765
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11766
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11764
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11762
+
+[[rooms]]
+vnum = 11764
+name = "Dark ash bedroom"
+sector = "inside"
+description = """
+A single blood red candle in the center of the room bathes the room in
+an eerie reddish glow, picking out the dark grains of black ashwood
+wall panels.  Reddish silks canopy the large bed resting against the east
+wall, and a matching carpet covers the floorboards.  A tall ash door
+exits the room to the north.  Golden lettering along the door frame
+glitters reddish in the light."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11763
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11729
+  max = 1
+
+[[rooms]]
+vnum = 11765
+name = "Black oak bedroom"
+sector = "inside"
+description = """
+Black oak wall panels seem to absorb the dim light of the few torches
+spaced along the walls.  Braces of throwing daggers gleam from behind a
+glass case against the north wall.  A short golden inscription gleams
+from above the tall oak door to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11763
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11730
+  max = 1
+
+[[rooms]]
+vnum = 11766
+name = "Black Marble Corridor"
+sector = "inside"
+description = """
+The tall black marble walls are broken to the north, east, and south
+by doorways.  The door to the north is carved mahogany, to the south
+carved ash.  Double black steel doors fill the east wall, framed by
+a black stone archway.  Embedded in the apex of the archway is a humanoid
+skull, surrounded by gold lettering."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11768
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11769
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11767
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11725
+  max = 1
+
+[[rooms]]
+vnum = 11767
+name = "Ash bedroom"
+sector = "inside"
+description = """
+A humanoid skull hangs suspended from the center of the ceiling, an inner
+light giving it's eyes a reddish glow white permeates dimly throughout
+the room.  Dark ash wall panels, carved with strange figures, frame the
+room.  To the north, an ash door is set into the wall.  Above the door
+is a short inscription in gold."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11766
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11731
+  max = 1
+
+[[rooms]]
+vnum = 11768
+name = "Charred mahogany bedroom"
+sector = "inside"
+description = """
+Streaks of charred and blackened wood mar the once-reddish brown mahogany
+wall panels, as if a thunderstorm once raged through the room, throwing
+random bolts of lightning against the walls.  The acrid odor of smoke
+permeates the chamber.  Gold lettering gleams above the blackened
+mahogany door to the south, somewhow untouched the heat."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11766
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11728
+  max = 1
+
+[[rooms]]
+vnum = 11769
+name = "Dark Chamber"
+sector = "inside"
+description = """
+Black obsidian walls seem to absorb all light in the room, leaving a
+forbidding darkness.  Full humanoid skeletons, embedded in the walls around
+the room, gleam a ghastly white against the dark stone.  Huge double
+black steel doors loom to the west.  Barely visible in the darkness is
+an inscription carved into the stone archway framing the doorway."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11766
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11724
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11727
+  max = 1
+
+[[rooms]]
+vnum = 11770
+name = "Quiet foyer"
+sector = "inside"
+description = """
+A still quiet permeates the area, broken only by your movements and the
+occasional crackle of flickering torches.  Above the eastern archway,
+a stooping hawk is carved into the smooth marble wall.  Archways open
+north and south, and an inscription winds around the archway framing the
+entrance door to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11771
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11772
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11773
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11717
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11771
+name = "Alcove"
+sector = "inside"
+description = """
+Dim torchlight illuminates the interior of a quiet, stone walled alcove.
+Benches line the north, west, and east walls, and an archway leads south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11770
+
+  [[rooms.mob_resets]]
+  vnum = 11749
+  max = 1
+
+[[rooms]]
+vnum = 11772
+name = "Alcove"
+sector = "inside"
+description = """
+Dim torchlight illuminates the interior of a quiet, stone walled alcove.
+Benches line the north, west, and east walls, and an archway leads south."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11770
+
+  [[rooms.mob_resets]]
+  vnum = 11750
+  max = 1
+
+[[rooms]]
+vnum = 11773
+name = "Alcove"
+sector = "inside"
+description = """
+Dim torchlight illuminates the interior of a quiet, stone walled alcove.
+Benches line the north, west, and east walls, and an archway leads south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11770
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11774
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11774
+name = "Plain stone room"
+sector = "inside"
+description = """
+You stand in a plain room hewn of dark grey stone.  Wooden targets affixed
+to the walls bear deep gouges and slash marks.  Empty racks, probably
+for knives, line the upper northern wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11775
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11773
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11742
+  max = 1
+
+[[rooms]]
+vnum = 11775
+name = "Dark cavern"
+sector = "inside"
+description = """
+Intricate carvings cover the stone walls, floors, and ceiling.  Most
+of the engraving seems to blend into one continuous, amorphous twisting
+design, amid which a few recongnizable figures.. an archer, a panther,
+a hawk, and a dagger among them."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11776
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11778
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11774
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11779
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11741
+  max = 1
+
+[[rooms]]
+vnum = 11776
+name = "Chamber of the Panther"
+sector = "inside"
+description = """
+Engravings of prowling and striking panthers grace the dark onyx walls,
+so intricate that they almost seem alive..  The polished form of a
+leaping panther arcs above the door to the south, forming an archway.
+The door itself is flush with the wall and nearly invisible."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11777
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11775
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11744
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11746
+  max = 1
+
+[[rooms]]
+vnum = 11777
+name = "Chamber of the Dagger"
+sector = "inside"
+description = """
+Grey streaked black marble walls gleam coldly in the dim light, broken
+only by the depiction of a thrown dagger in the center of the northern wall.
+Resting on a low table in the center of the room is a glass case containing 
+3 daggers on black cloth."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11778
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11776
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11740
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11743
+  max = 1
+
+[[rooms]]
+vnum = 11778
+name = "Chamber of the Lynx"
+sector = "inside"
+description = """
+A striking lynx fills the eastern wall, cut into the otherwise unadorned
+black onyx walls of the chamber.  A leaping lynx forms an archway above
+the door to the west.  A single emerald forms the eye of the lynx,
+glittering against the dark stone."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11777
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11775
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11745
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11747
+  max = 1
+
+[[rooms]]
+vnum = 11779
+name = "Chamber of Shadows"
+sector = "inside"
+description = """
+Shadows seem to coallesce here, extinguishing nearly all light to
+pinpoints, dulling the polished gleam of the framing onyx walls and
+ceiling.  Engraved in the southern wall are two hawks, one soaring
+and one stooping for a kill.  A midnight black rug, nearly invisible
+in the darkness, muffles all sound to mere whispers."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11775
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11738
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11739
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11748
+  max = 1
+
+[[rooms]]
+vnum = 11780
+name = "Granite Courtyard"
+sector = "city"
+description = """
+Thick stone columns frame a wide courtyard paved with rough granite.
+Wrought iron gates bar entrance to the courtyard to the east, and a
+carved oaken door opens into the large house to the west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11710
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11781
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11760
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 11760
+  max = 2
+
+[[rooms]]
+vnum = 11781
+name = "Iron Hallway"
+sector = "inside"
+description = """
+Imposing iron walls tower above to form a long north-south hallway.
+Thick steel double doors loom to the west, and a carved oaken door
+opens east.  The hallway continues north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11788
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11780
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11782
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11784
+  flags = ["door"]
+
+[[rooms]]
+vnum = 11782
+name = "Iron Hallway"
+sector = "inside"
+description = """
+The hallway terminates to the south at a thick steel door.  Above the
+doorway is the Xaek crest over a crossed shield and sword."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11781
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11783
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11761
+  max = 2
+
+[[rooms]]
+vnum = 11783
+name = "Private Arena"
+sector = "inside"
+description = """
+Tall iron walls enclose a wide circular arena.  Thick sand covers the
+floor, scuffed by recent practice bouts.  Dark clumps of what appear
+to be dried blood clot the sand in places.  A thick steel door leads
+out of the arena to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11782
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11756
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11757
+  max = 1
+
+[[rooms]]
+vnum = 11784
+name = "Training and Practice Field"
+sector = "forest"
+description = """
+A wide grassy field stretches out around you, the grass torn up
+frequently, probably by recent weapons practice.  Huge double steel
+doors reenter the house to the east.  A long wooden building frames the
+rest of the practice field, entered through doors to the north,
+west, and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11785
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11781
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11787
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11786
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11761
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 11762
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 11762
+  max = 2
+
+[[rooms]]
+vnum = 11785
+name = "Second Commander's Office"
+sector = "inside"
+description = """
+You stand in a sparsely furnished office framed by plain oak panelled
+walls.  A desk rests near the western wall, accompanied by several
+cabinets.  An oak door to the south leads out of the room.  An
+inscription in bronze glimmers above the doorway, the only ornamentation
+in the room."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11784
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11754
+  max = 1
+
+[[rooms]]
+vnum = 11786
+name = "First Commander's Office"
+sector = "inside"
+description = """
+Varnished white beechwood walls frame a spacious office.  Polished
+forms the floor, and a large window overlooks the practice field
+to the east.  Next to the window stands a beechwood door carved with
+an inscription in burnished bronze."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11784
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11753
+  max = 1
+
+[[rooms]]
+vnum = 11787
+name = "Third Commander's Office"
+sector = "inside"
+description = """
+The varnished reddish brown of mahogany wall panels glimmers slightly
+in the torchlight.  Darker wood forms a doorframe around the door to
+the north.  Engraved above the door is an inscription in bronze."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11784
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11755
+  max = 1
+
+[[rooms]]
+vnum = 11788
+name = "Iron Hallway"
+sector = "inside"
+description = """
+The hallway comes to an abrupt end before two huge granite doors.
+The depiction of a huge lion is carved in relief at the crest of
+the archway above the doors, its sculpted eyes appearing to follow
+your every move.  Across the center of the doors, a crest is
+carved into the stone."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11789
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11781
+
+  [[rooms.mob_resets]]
+  vnum = 11758
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11759
+  max = 1
+
+[[rooms]]
+vnum = 11789
+name = "Marble Bedchamber"
+sector = "inside"
+description = """
+You find yourself in a huge bedchamber walled with white streaked grey
+marble.  Parted white silk tapestries to the north reveal an engraving
+of a huge prowling lion.  A white marble archway frames huge double
+granite doors in the south wall."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11788
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11751
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11752
+  max = 1
+
+[[rooms]]
+vnum = 11790
+name = "Jade Entry Hall"
+sector = "inside"
+description = """
+The light from thick wax candles spaced in niches along the walls
+plays over jade walls, permeating the hall with a soft greenish glow.
+A burnished bronze door stands framed by a dark jade archway to the
+north.  A corridor exits the hall to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11707
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11791
+
+  [[rooms.mob_resets]]
+  vnum = 11773
+  max = 1
+
+[[rooms]]
+vnum = 11791
+name = "Jade Corridor"
+sector = "inside"
+description = """
+Polished jade forms the walls of a short north-south corridor, the
+green of the stone fading from dark to light and back again.
+The walls seem to glow with an inner light, giving the darker portions
+the impression of long patches of phosphorescent moss.  A white
+door leads east and a glass door south.  The corridor continues west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11790
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11792
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11793
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11795
+
+[[rooms]]
+vnum = 11792
+name = "Shrine of Healing"
+sector = "inside"
+description = """
+You stand in a small, jade walled shrine.  In the center of the shrine,
+a low white marble dais supports a kneeling statue of a praying drakyri.
+Arranged around the dais are several padded wooden pallets.  Slim
+white candles in niches around the room and on the dais light the room
+with a soft glow.  You feel healthy and at peace here."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11791
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 11703
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11765
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11766
+  max = 1
+
+[[rooms]]
+vnum = 11793
+name = "Garden Path"
+sector = "forest"
+description = """
+The mingled odor of fresh herbs and fresh earth permeates the air with
+a sweet earthy scent.  To the east and west, a variety of herbs are 
+planted in neat rows, separated by short white markers.  The path on
+which you stand winds southwards towards a large white wooden gazebo.
+A glass door leads into the house to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11791
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11794
+
+  [[rooms.mob_resets]]
+  vnum = 11767
+  max = 1
+
+[[rooms]]
+vnum = 11794
+name = "White Gazebo"
+sector = "city"
+description = """
+You stand in the shade of a large white gazebo.  Woven wood arcs above,
+leaving streaks of light and shadow on the grey marble floor.  A large
+herb garden surrounds the gazebo on all sides, save the north, where
+a narrow path winds up to a large white house."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11793
+
+  [[rooms.mob_resets]]
+  vnum = 11763
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 11764
+  max = 1
+
+[[rooms]]
+vnum = 11795
+name = "Jade Corridor"
+sector = "inside"
+description = """
+The soft glow of candlelight shimmers over deep green jade walls.
+Varnished wood doors lead north, south, and west, and a staircase spirals
+upwards towards a pair of double white doors above."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11796
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11791
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11798
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 11797
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 11799
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11772
+  max = 1
+
+[[rooms]]
+vnum = 11796
+name = "Candlelit Bedroom"
+sector = "inside"
+description = """
+Light from a single white candle, supported on a table in the center
+of the room, glows golden amidst varnished ashwood wall panels.
+Engraved in the eastern wall, above the canopied bed, is a depiction
+of an open hand over a glowing ring.  A golden inscription glimmers above
+the door to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11795
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11769
+  max = 1
+
+[[rooms]]
+vnum = 11797
+name = "Teak Panelled Bedroom"
+sector = "inside"
+description = """
+The golden grains of teak wall panels glow warmly in the torchlight.
+Carved above the doorway to the east is a strange, five-pointed leaf.
+Beneath the leaf, you notice an inscription in gold."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11795
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11768
+  max = 1
+
+[[rooms]]
+vnum = 11798
+name = "Booklined Bedroom"
+sector = "inside"
+description = """
+Bookshelves line the east and south walls, and a large canopied bed
+rests against the west wall.  Battered tomes of herb lore and
+handwritten parchment notes are stacked neatly on the shelves, labelled
+in some strange, ornate script.  A redwood door opens northward.  Above
+the doorway, you notice a short inscription in gold."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 11795
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11770
+  max = 1
+
+[[rooms]]
+vnum = 11799
+name = "Sunlit Bedchamber"
+sector = "inside"
+description = """
+Curved glass panels form a domed roof overhead, filling the chamber
+with the warm glow of sunlight.  An inlayed engraving of a huge bear
+fills the north wall, gleaming gold against the deep green jade.
+Double white oaken doors open onto the stairwell to the floor below."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 11795
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 11771
+  max = 1
+

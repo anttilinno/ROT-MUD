@@ -1,0 +1,8 @@
+id = "catacombs"
+name = "Catacombs"
+credits = "{19 40} Raff    Dwarven Catacombs"
+reset_interval = 120
+
+[vnum_range]
+min = 2000
+max = 2099

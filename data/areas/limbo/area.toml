@@ -1,0 +1,8 @@
+id = "limbo"
+name = "Limbo"
+credits = "{ NONE} Diku    Limbo"
+reset_interval = 120
+
+[vnum_range]
+min = 1
+max = 54

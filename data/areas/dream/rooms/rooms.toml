@@ -1,0 +1,1053 @@
+[[rooms]]
+vnum = 8600
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8620
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8610
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8602
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8606
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8603
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8601
+
+[[rooms]]
+vnum = 8601
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8600
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8611
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8621
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8604
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8607
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8602
+
+[[rooms]]
+vnum = 8602
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8608
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8601
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8612
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8600
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8605
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8622
+
+[[rooms]]
+vnum = 8603
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8623
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8600
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8605
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8604
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8613
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8606
+
+[[rooms]]
+vnum = 8604
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8601
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8605
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3050
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8603
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8607
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8614
+
+[[rooms]]
+vnum = 8605
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8625
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8608
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8603
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8615
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8602
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8604
+
+[[rooms]]
+vnum = 8606
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8600
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8626
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8607
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8608
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8616
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8603
+
+[[rooms]]
+vnum = 8607
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8601
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8617
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8606
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8627
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8604
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8608
+
+[[rooms]]
+vnum = 8608
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8605
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8628
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8618
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8602
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8606
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8607
+
+[[rooms]]
+vnum = 8610
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8612
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8600
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8616
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8620
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8611
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8613
+
+[[rooms]]
+vnum = 8611
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8614
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8630
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8612
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8601
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8610
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8621
+
+[[rooms]]
+vnum = 8612
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8615
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8611
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8622
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8602
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8610
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8618
+
+[[rooms]]
+vnum = 8613
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8623
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8614
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8603
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8636
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8616
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8610
+
+[[rooms]]
+vnum = 8614
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8613
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8611
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8615
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8617
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8604
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8624
+
+[[rooms]]
+vnum = 8615
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8625
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8632
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8605
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8614
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8612
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8618
+
+[[rooms]]
+vnum = 8616
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8617
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8610
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8618
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8613
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8606
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8626
+
+[[rooms]]
+vnum = 8617
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8634
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8616
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8614
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8627
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8618
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8607
+
+[[rooms]]
+vnum = 8618
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8608
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8615
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8628
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8612
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8617
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8616
+
+[[rooms]]
+vnum = 8620
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8610
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8623
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8622
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8621
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8626
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8600
+
+[[rooms]]
+vnum = 8621
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8624
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8622
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8627
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8611
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8601
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8620
+
+[[rooms]]
+vnum = 8622
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8612
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8621
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8602
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8625
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8620
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8628
+
+[[rooms]]
+vnum = 8623
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8626
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8613
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8620
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8625
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8603
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8624
+
+[[rooms]]
+vnum = 8624
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8614
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8621
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8625
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8638
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8627
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8623
+
+[[rooms]]
+vnum = 8625
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8623
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8605
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8622
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8615
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8628
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8624
+
+[[rooms]]
+vnum = 8626
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8616
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8606
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8627
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8620
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8628
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8623
+
+[[rooms]]
+vnum = 8627
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8626
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8607
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8621
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8628
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8624
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8617
+
+[[rooms]]
+vnum = 8628
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8608
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8626
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8618
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8625
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8627
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8622
+
+[[rooms]]
+vnum = 8630
+name = "Road to Newfane"
+sector = "field"
+description = """
+You are on a gently curving north-south road.  On your east side a youthful
+river sparkles blue and rushes in the sunlight.  On the west, green leaves and
+green ferns burst against the rich brown earth.  You feel the heat of your
+healthy muscles as you travel swiftly down the well-paved road.
+You may recall now if you like."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8631
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8611
+
+[[rooms]]
+vnum = 8631
+name = "Newfane Village Square"
+sector = "field"
+description = """
+You are on the lawn of the village square of Newfane, resting against an oak
+after your vigorous journey.  The late spring breeze feels warm and sensuous
+on your body.  An Ale is in progress: you spy more than a dozen fiddlers and
+hundreds of Morris Dancers dressed in white cotton and wearing colorful hats
+and bells."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8630
+
+  [[rooms.obj_resets]]
+  vnum = 8600
+  max = 1
+
+[[rooms]]
+vnum = 8632
+name = "A Large Dance Hall"
+sector = "field"
+description = """
+You are inside a large dance hall with a very polished, very slippery wooden
+floor.  You see three long lines of dancers, alternating men and women, in
+some sort of progressive country dance.  Two fiddlers, a flautist, and a
+harpsichord player provide the music.  You hear scattered screams of joy
+from the dancers.
+You may recall now if you like."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8615
+
+  [[rooms.obj_resets]]
+  vnum = 8601
+  max = 1
+
+[[rooms]]
+vnum = 8634
+name = "A Small Hall"
+sector = "field"
+description = """
+You are inside a small hall with a rough wooden floor.  You see dozens of
+people in the hall chasing one poor man who is yelling at the top of
+his lungs.  Wait a minute.  These people are all holding hands and smiling!
+The man in front is leading them in a spiral!  They're DANCING!  And you
+thought people didn't dance like this any more!
+You may recall now if you like."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8617
+
+  [[rooms.obj_resets]]
+  vnum = 8601
+  max = 1
+
+[[rooms]]
+vnum = 8636
+name = "Road by a Pond"
+sector = "field"
+description = """
+You are passing by a large pond, almost a small lake.  You notice a small
+wooden shack by the side of the road.
+You may recall now if you like."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8613
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8637
+
+[[rooms]]
+vnum = 8637
+name = "An Old Wooden Church"
+sector = "field"
+description = """
+As you enter the hall, you see the largest crowd of people you've ever seen in
+your life.  They're also the noisiest crowd you've ever heard, and as they
+press around you, the SWEATIEST crowd you've ever felt!  At the front of the
+hall, a group of musicians are playing 'Chorus Jig'."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8636
+
+  [[rooms.obj_resets]]
+  vnum = 8602
+  max = 1
+
+[[rooms]]
+vnum = 8638
+name = "Mountain Road"
+sector = "field"
+description = """
+You are following a road at the top of a mountain ridge with sky all around
+you.  Distant valleys are spread out below you on both sides.  There are
+many horsemen and horsewomen on this road, riding hell-for-leather out of
+sheer exhilaration.  You wish you had a horse!
+You may recall now if you like."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 8639
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8624
+
+[[rooms]]
+vnum = 8639
+name = "Yule Tree Farm"
+sector = "field"
+description = """
+This is the Yule Tree Farm at the top of Mountain Road.  All around you,
+young Yule Trees saturate your senses with dark green needles and pine
+essence."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 8638
+
+  [[rooms.obj_resets]]
+  vnum = 8603
+  max = 1
+
+[[rooms]]
+vnum = 8699
+name = "The Void"
+sector = "field"
+description = """
+You are suspended in cool electric space above a translucent plain.  You feel
+synesthesia invading your nerves and reshuffling your senses.  The sky is the
+same obsidian color as the ground and you can't find a horizon."""
+
+  [[rooms.mob_resets]]
+  vnum = 8600
+  max = 1
+

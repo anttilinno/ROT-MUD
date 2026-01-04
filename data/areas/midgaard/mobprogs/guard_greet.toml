@@ -1,0 +1,10 @@
+# Guard greeting mobprog
+# This triggers when a player enters the room (50% chance)
+
+name = "guard_greet"
+trigger = "greet"
+trigger_arg = "50"
+commands = [
+  "say Halt! State your business in Midgaard.",
+  "emote looks at you suspiciously."
+]

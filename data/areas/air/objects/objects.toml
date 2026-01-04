@@ -1,0 +1,11 @@
+[[objects]]
+vnum = 1001
+keywords = ["rose"]
+short_desc = "a red rose"
+long_desc = "A red rose is lying on the ground."
+item_type = "treasure"
+level = 0
+weight = 80
+cost = 0
+wear_flags = ["take", "head"]
+

@@ -1,0 +1,8 @@
+id = "graveyard"
+name = "Graveyard"
+credits = "{09 20} Alfa    Graveyard"
+reset_interval = 120
+
+[vnum_range]
+min = 3600
+max = 3699

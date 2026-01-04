@@ -1,0 +1,140 @@
+[[mobiles]]
+vnum = 3600
+keywords = ["oldstyle", "henry", "gardener"]
+short_desc = "Henry the Gardener"
+long_desc = "Henry the Gardener is sitting here, looking drunk."
+description = """
+He is a tall but bulky man in his late fifties.  His features are worn with
+decades of hard work and his somewhat crouched expression is one of deep
+sorrow and depression.  He is haunted by a memory of a lost paradise."""
+level = 8
+sex = "male"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 3601
+keywords = ["oldstyle", "zombie"]
+short_desc = "the rotting zombie"
+long_desc = "A rotting zombie is staggering towards you with outstretched hands."
+description = "Maggots crawl all over its decaying body."
+level = 8
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 3602
+keywords = ["oldstyle", "ghoul"]
+short_desc = "the ghastly ghoul"
+long_desc = "A ghastly ghoul is here."
+description = """
+It is a walking corpse with long fangs and long, sharp nails that most of
+resemble claws.  Its eyes are a dark yellow colour and glare hungrily at you."""
+level = 11
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 3603
+keywords = ["oldstyle", "skeleton"]
+short_desc = "a dusty skeleton"
+long_desc = "A dusty skeleton lies here."
+description = """
+The dusty bones are almost brown.  It must have been buried for a very long
+time."""
+level = 5
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 3604
+keywords = ["oldstyle", "skeleton"]
+short_desc = "a dusty skeleton"
+long_desc = "A dusty skeleton lies here."
+description = """
+The dusty bones are almost brown.  It must have been buried for a very long
+time."""
+level = 6
+sex = "male"
+act_flags = ["npc", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 3605
+keywords = ["oldstyle", "zombie"]
+short_desc = "the rotting zombie"
+long_desc = "A rotting zombie is staggering towards you with outstretched hands."
+description = "Maggots crawl all over its decaying body."
+level = 7
+sex = "male"
+act_flags = ["npc", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+

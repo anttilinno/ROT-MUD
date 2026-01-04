@@ -1,0 +1,159 @@
+package magic
+
+import (
+	"rotmud/pkg/types"
+)
+
+// TargetType defines what a spell can target
+type TargetType int
+
+const (
+	TargetIgnore      TargetType = iota // No target needed (area effects)
+	TargetCharOffense                   // Offensive spell on character
+	TargetCharDefense                   // Defensive spell on character
+	TargetCharSelf                      // Self-only spell
+	TargetObjInv                        // Object in inventory
+	TargetObjCharDef                    // Object on defensive character
+	TargetObjCharOff                    // Object on offensive character
+)
+
+// SpellFunc is the function signature for spell implementations
+type SpellFunc func(caster *types.Character, level int, target interface{}) bool
+
+// Spell defines a magical spell
+type Spell struct {
+	Name        string         // Spell name
+	Slot        int            // Unique spell slot number
+	Target      TargetType     // Target type
+	MinPosition types.Position // Minimum position to cast
+	ManaCost    int            // Base mana cost
+	Beats       int            // Lag after casting (in pulses)
+	NounDamage  string         // Damage noun for combat messages
+	WearOff     string         // Message when affect wears off
+	WearOffObj  string         // Message when object affect wears off
+	Func        SpellFunc      // Spell function
+	Levels      map[string]int // Level required by class (class name -> level)
+}
+
+// NewSpell creates a new spell with basic configuration
+func NewSpell(name string, slot int, target TargetType, mana int, fn SpellFunc) *Spell {
+	return &Spell{
+		Name:        name,
+		Slot:        slot,
+		Target:      target,
+		MinPosition: types.PosStanding,
+		ManaCost:    mana,
+		Beats:       12, // Default: 3 seconds lag (12 pulses at 250ms each)
+		Func:        fn,
+		Levels:      make(map[string]int),
+	}
+}
+
+// SetLevels sets the class level requirements
+func (s *Spell) SetLevels(levels map[string]int) *Spell {
+	s.Levels = levels
+	return s
+}
+
+// SetDamageNoun sets the damage noun for combat messages
+func (s *Spell) SetDamageNoun(noun string) *Spell {
+	s.NounDamage = noun
+	return s
+}
+
+// SetWearOff sets the wear-off message
+func (s *Spell) SetWearOff(msg string) *Spell {
+	s.WearOff = msg
+	return s
+}
+
+// CanCast checks if a character can cast this spell
+func (s *Spell) CanCast(ch *types.Character) bool {
+	// Check position
+	if ch.Position < s.MinPosition {
+		return false
+	}
+
+	// Check mana
+	if ch.Mana < s.ManaCost {
+		return false
+	}
+
+	// NPCs can cast any spell at their level
+	if ch.IsNPC() {
+		return true
+	}
+
+	// Check class level requirement using class index
+	reqLevel := s.GetClassLevel(ch.Class)
+	if reqLevel == 0 {
+		return false // Class can't learn this spell
+	}
+	return ch.Level >= reqLevel
+}
+
+// GetClassLevel returns the level requirement for a class index
+func (s *Spell) GetClassLevel(classIndex int) int {
+	// Map class index to name and look up
+	className := types.ClassName(classIndex)
+	if reqLevel, ok := s.Levels[className]; ok {
+		return reqLevel
+	}
+	return 0 // Can't cast
+}
+
+// GetManaCost returns the mana cost adjusted for level
+func (s *Spell) GetManaCost(ch *types.Character, level int) int {
+	// Base mana cost, could be modified by skills, equipment, etc.
+	return s.ManaCost
+}
+
+// SpellRegistry holds all registered spells
+type SpellRegistry struct {
+	byName map[string]*Spell
+	bySlot map[int]*Spell
+}
+
+// NewSpellRegistry creates a new spell registry
+func NewSpellRegistry() *SpellRegistry {
+	return &SpellRegistry{
+		byName: make(map[string]*Spell),
+		bySlot: make(map[int]*Spell),
+	}
+}
+
+// Register adds a spell to the registry
+func (r *SpellRegistry) Register(spell *Spell) {
+	r.byName[spell.Name] = spell
+	r.bySlot[spell.Slot] = spell
+}
+
+// FindByName finds a spell by name (prefix match)
+func (r *SpellRegistry) FindByName(name string) *Spell {
+	// Exact match first
+	if spell, ok := r.byName[name]; ok {
+		return spell
+	}
+
+	// Prefix match
+	for spellName, spell := range r.byName {
+		if len(name) <= len(spellName) && spellName[:len(name)] == name {
+			return spell
+		}
+	}
+	return nil
+}
+
+// FindBySlot finds a spell by slot number
+func (r *SpellRegistry) FindBySlot(slot int) *Spell {
+	return r.bySlot[slot]
+}
+
+// All returns all registered spells
+func (r *SpellRegistry) All() []*Spell {
+	spells := make([]*Spell, 0, len(r.byName))
+	for _, spell := range r.byName {
+		spells = append(spells, spell)
+	}
+	return spells
+}

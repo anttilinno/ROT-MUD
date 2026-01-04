@@ -1,0 +1,8 @@
+id = "morgue"
+name = "Morgue"
+credits = "{ All } Lestat    Morgue"
+reset_interval = 120
+
+[vnum_range]
+min = 30200
+max = 30299

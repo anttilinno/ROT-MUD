@@ -1,0 +1,8 @@
+id = "machine_dreams"
+name = "Machine Dreams"
+credits = "{01 05} Furey   Machine Dreams"
+reset_interval = 120
+
+[vnum_range]
+min = 8600
+max = 8699

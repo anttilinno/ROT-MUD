@@ -1,0 +1,163 @@
+[[objects]]
+vnum = 8901
+keywords = ["closet"]
+short_desc = "a closet"
+long_desc = "There is a wooden closet tucked into a corner."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 8902
+keywords = ["jar"]
+short_desc = "a spice jar"
+long_desc = "A small unlabeled spice jar is standing here."
+item_type = "container"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8903
+keywords = ["powder", "black"]
+short_desc = "some black powder"
+long_desc = "Some strong-smelling black powder has been carelessly scattered here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8904
+keywords = ["kernel", "kernels"]
+short_desc = "some small yellow kernels"
+long_desc = "Some small yellow kernels have been accidentally left here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 8905
+keywords = ["paper", "wad"]
+short_desc = "a crumpled wad of paper"
+long_desc = "There is a crumpled wad of paper here, left behind by some messy bypasser."
+item_type = "trash"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 8910
+keywords = ["staff", "wooden"]
+short_desc = "a wooden staff"
+long_desc = "You see a wooden staff on the floor."
+item_type = "weapon"
+level = 31
+weight = 50
+cost = 1500
+wear_flags = ["take", "wield"]
+extra_flags = ["anti_evil"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 6
+
+[[objects]]
+vnum = 8911
+keywords = ["robe", "brown", "cloth"]
+short_desc = "a brown robe"
+long_desc = "Some brown cloth is on the floor."
+item_type = "armor"
+level = 31
+weight = 50
+cost = 2300
+wear_flags = ["take", "body"]
+extra_flags = ["anti_evil"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 10
+
+[[objects]]
+vnum = 8913
+keywords = ["bluish", "herbs"]
+short_desc = "some bluish herbs"
+long_desc = "Some bluish herbs are scattered here."
+item_type = "pill"
+level = 1
+weight = 10
+cost = 270
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8914
+keywords = ["purplish", "herbs"]
+short_desc = "some purplish herbs"
+long_desc = "Some purplish herbs are scattered here."
+item_type = "pill"
+level = 0
+weight = 10
+cost = 250
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8915
+keywords = ["blackish", "herbs"]
+short_desc = "some blackish herbs"
+long_desc = "Some blackish herbs are scattered here."
+item_type = "pill"
+level = 0
+weight = 10
+cost = 178
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8916
+keywords = ["grayish", "herbs"]
+short_desc = "some grayish herbs"
+long_desc = "Some grayish herbs are scattered here."
+item_type = "pill"
+level = 9
+weight = 10
+cost = 360
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8917
+keywords = ["reddish", "herbs"]
+short_desc = "some reddish herbs"
+long_desc = "Some reddish herbs are scattered here."
+item_type = "pill"
+level = 0
+weight = 10
+cost = 250
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8918
+keywords = ["orangish", "herbs"]
+short_desc = "some orangish herbs"
+long_desc = "Some orangish herbs are scattered here."
+item_type = "pill"
+level = 0
+weight = 10
+cost = 150
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8919
+keywords = ["pinkish", "herbs"]
+short_desc = "some pinkish herbs"
+long_desc = "Some pinkish herbs are scattered here."
+item_type = "pill"
+level = 11
+weight = 10
+cost = 430
+wear_flags = ["take"]
+

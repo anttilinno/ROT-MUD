@@ -1,0 +1,71 @@
+[[objects]]
+vnum = 1200
+keywords = ["eye", "eyeball", "dragon", "crystal"]
+short_desc = "a crystal dragons eyeball"
+long_desc = "This is disgusting looking."
+item_type = "gem"
+level = 110
+weight = 10
+cost = 11
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -50
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 200
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 200
+
+[[objects]]
+vnum = 1201
+keywords = ["god", "embrace"]
+short_desc = "a gods embrace"
+long_desc = "The warm embrace of a deity is protecting you."
+item_type = "gem"
+level = 102
+weight = 10
+cost = 11
+wear_flags = ["take", "float"]
+extra_flags = ["glow", "magic", "nodrop"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -50
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 200
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 200
+
+[[objects]]
+vnum = 1202
+keywords = ["mana", "blue", "pill"]
+short_desc = "a small blue pill"
+long_desc = "A small blue pill sits here."
+item_type = "pill"
+level = 1
+weight = 10
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1203
+keywords = ["survival", "pack"]
+short_desc = "a survival pack"
+long_desc = "A survival pack is here."
+item_type = "container"
+level = 0
+weight = 90
+cost = 100
+wear_flags = ["take", "about", "hold"]
+extra_flags = ["magic"]
+

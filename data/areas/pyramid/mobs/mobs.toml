@@ -1,0 +1,448 @@
+[[mobiles]]
+vnum = 8700
+keywords = ["oldstyle", "asp", "snake"]
+short_desc = "A horrible asp"
+long_desc = "A small, poisonous asp slithers over your feet."
+description = """
+The asp is a small, smooth-scaled snake the color of worn pottery.
+The poison bite of this snake has felled many a mighty pharoah."""
+level = 9
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 8701
+keywords = ["oldstyle", "cobra", "snake"]
+short_desc = "A hooded cobra snake"
+long_desc = "A cobra snake rears up and opens its fearsome hood."
+description = """
+The cobra snake waves back and forth before you, its hood displaying brilliant
+colors designed to serve notice to its prey that it is about to strike."""
+level = 13
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 8702
+keywords = ["oldstyle", "mongoose"]
+short_desc = "A wily little mongoose"
+long_desc = "A small mongoose slinks along the ground, hunting snakes."
+description = """
+The mongoose is a wily rodent, a quick hunter of nasty poisonous snakes.
+She sniffs you and appears to be looking for food in your hand."""
+level = 21
+sex = "female"
+act_flags = ["npc", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 8703
+keywords = ["oldstyle", "pyramid", "watcher"]
+short_desc = "A pyramid watcher"
+long_desc = "The pyramid watcher protects the tombs from intruders."
+description = """
+The pyramid watcher has made a pledge to destroy any would-be looters of
+the tombs of the pharoahs.  He is clad from head to foot in utilitarian
+sand-colored clothing."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 8704
+keywords = ["oldstyle", "thief", "tomb"]
+short_desc = "A tomb thief"
+long_desc = "A sneaky tomb thief moves about in search of treasure."
+description = """
+The thief brushes against you briefly, then slinks back into the shadows."""
+level = 19
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 8705
+keywords = ["oldstyle", "ali", "baba", "thief"]
+short_desc = "Ali Baba"
+long_desc = "Ali Baba is here, hunting for the pharoah's tomb."
+description = """
+You see a tall, full-bearded man with a mischevious glint in his eye.  Ali Baba
+has made his life from stealing things from others, including many items stolen
+recently from under the nose of the hapless guardians of this pyramid.  Someday
+he might get caught, but not today..."""
+level = 35
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "thief"]
+affected_by = ["detect_invis", "detect_hidden", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 258
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 8706
+keywords = ["oldstyle", "magic", "carpet"]
+short_desc = "The magic carpet"
+long_desc = "A small woven carpet lies under your feet."
+description = """
+The carpet is simply beautiful, made from intricately woven silken material.  
+It seems to rise up at the touch of your feet.  Wait, it is rising, a few feet
+above the ground!  In fact, it seems to be ALIVE!"""
+level = 17
+sex = "none"
+act_flags = ["npc", "sentinel"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 8707
+keywords = ["oldstyle", "mummy", "corpse"]
+short_desc = "A mummy"
+long_desc = "A mummy reaches for you, disturbed by your presence."
+description = """
+You only see the disfigured, rotting features of decaying human flesh,
+animated by the distempered spirit of a long-deceased person."""
+level = 23
+sex = "none"
+act_flags = ["npc", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 8708
+keywords = ["oldstyle", "sand", "man", "sandman"]
+short_desc = "A sandman"
+long_desc = "A sandman rises up from the desert floor."
+description = """
+The sandman is exactly that -- some sort of strange being formed from the sands
+of the desert floor.  It seems quite large and strong and at home in the heat
+and sandy winds."""
+level = 28
+sex = "male"
+act_flags = ["npc", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 8709
+keywords = ["oldstyle", "efreeti", "efreet"]
+short_desc = "The efreeti"
+long_desc = "The efreeti stands here, sheathed in a column of fire."
+description = """
+The efreeti is a mighty being formed from living fire.  He gazes down at you 
+with disdain and scorn, arms folded across his mighty chest."""
+level = 40
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 8710
+keywords = ["oldstyle", "caryatid", "column"]
+short_desc = "A caryatid"
+long_desc = "A sandstone column stands here, carved into a feminine figure."
+description = """
+The column has been carved into a set of four shapely women, each facing
+outward into the room.  The sandstone of the caryatid is smooth with age,
+but you can still make out a deadly stone sword in the hands of each figure."""
+level = 47
+sex = "female"
+act_flags = ["npc", "sentinel"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 6
+
+[[mobiles]]
+vnum = 8711
+keywords = ["oldstyle", "djinn", "genie"]
+short_desc = "The djinn"
+long_desc = "The djinn issues forth from the confines of a small lamp."
+description = """
+The djinn is a mighty being formed from the air itself and frequently
+imprisoned in a small lamp, used to do the bidding of those who find him.
+He smiles down at you congenially, arms folded across his blue-tinged 
+skin, and strokes his goatee."""
+level = 56
+sex = "male"
+act_flags = ["npc", "sentinel", "mage"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 650
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 8712
+keywords = ["oldstyle", "hieracosphinx", "sphinx"]
+short_desc = "A hieracosphinx"
+long_desc = "A hieracosphinx looks at you cunningly."
+description = """
+The hieracosphinx are cunning, small, but nasty creatures, having the heads
+of birds, mighty wingspans, and a full set of four paws to rend their victims
+to pieces.  They tend to be quite jealous of the sharper wits of their older
+cousins."""
+level = 30
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 8713
+keywords = ["oldstyle", "gynosphinx", "sphinx"]
+short_desc = "A gynosphinx"
+long_desc = "A gynosphinx sits here, befuddled by a riddle."
+description = """
+The gynosphinx is a crafty but gentle creature, having the body of a
+beautiful dark-skinned woman from the waist up, a feathery set of wings
+and the hind legs of a mighty cat.  Right now she is confused, having 
+just heard a puzzling riddle from a cousin criosphinx."""
+level = 37
+sex = "female"
+act_flags = ["npc", "sentinel", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 8714
+keywords = ["oldstyle", "criosphinx", "sphinx"]
+short_desc = "A criosphinx"
+long_desc = "A criosphinx calmly watches you."
+description = """
+The criosphinx is a calm and friendly creature, having the head of a ram atop
+the body of a well-furred feline with eagle-like wings.  He delights in riddles,
+and in poking occasional fun at his easily confused lesser cousins."""
+level = 46
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 8715
+keywords = ["oldstyle", "androsphinx", "sphinx"]
+short_desc = "An androsphinx"
+long_desc = "A mighty androsphinx tosses its lion-like mane."
+description = """
+The mighty androsphinx is a huge creature, with the body of a lion whose
+face  is quite man-like, perhaps even handsome, and a massive pair of feathered
+wings.  Tales are told of pharoahs that were rendered permanently deaf by the 
+mighty roar of this sphinx."""
+level = 54
+sex = "none"
+act_flags = ["npc", "sentinel", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 650
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 8716
+keywords = ["oldstyle", "great", "sphinx"]
+short_desc = "The great sphinx"
+long_desc = "A mighty sphinx rests here in the sand, dormant now for centuries.\nThe great sphinx appears to be indestructible!"
+description = """
+The great sphinx towers tens of feet above you, resting here in a state of 
+dormancy.  It has become almost indistinguishable from the sand that surrounds
+it, although you can still make out the features of the handsome face that once
+advised many rulers."""
+level = 81
+sex = "none"
+act_flags = ["npc", "sentinel"]
+affected_by = ["detect_invis", "detect_magic"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 2000
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 8
+  bonus = 14
+
+[[mobiles]]
+vnum = 8717
+keywords = ["oldstyle", "ramses", "mummy"]
+short_desc = "Ramses the Damned"
+long_desc = "You have awakened the mighty servant to the pharoahs, Ramses."
+description = """
+As your light spills over his face and body, you can see his features begin
+to fill out, swell, and harden, until an apparently healthy man stands before
+you, clad only in the raiments he was left in when he last slept.  His hair is
+a soft black, his skin a deep chocolate, and his tall frame is totally still, 
+his chest not even moving to breathe."""
+level = 75
+sex = "male"
+act_flags = ["npc", "sentinel", "cleric"]
+affected_by = ["detect_invis", "detect_magic", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1600
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 10
+  bonus = 12
+

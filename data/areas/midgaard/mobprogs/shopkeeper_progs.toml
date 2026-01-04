@@ -1,0 +1,20 @@
+# Multiple mobprogs for shopkeeper behavior
+
+[[progs]]
+name = "shopkeeper_greet"
+trigger = "greet"
+trigger_arg = "100"
+commands = [
+  "say Welcome to my shop! Browse my wares.",
+  "emote smiles warmly at you."
+]
+
+[[progs]]
+name = "shopkeeper_bribe"
+trigger = "bribe"
+trigger_arg = "100"
+commands = [
+  "say Thank you for the generous donation!",
+  "emote pockets the coins quickly.",
+  "say Perhaps I can offer you a special discount..."
+]

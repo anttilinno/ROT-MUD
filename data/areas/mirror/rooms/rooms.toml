@@ -1,0 +1,2039 @@
+[[rooms]]
+vnum = 5300
+name = "The Grand Gate of Thalos"
+sector = "city"
+description = """
+You stand in the archway of a gigantic stone archway. The two
+steel gates look indestructible, yet they are elaborate in engravings.  You can
+hear laughter and good cheer from the other side of these gates.  Obviously, 
+the city is teeming with activity!  There is a small gold plaque on mounted
+on the archway."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5356
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5301
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5330
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5321
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 5321
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5301
+name = "Main Street"
+sector = "city"
+description = """
+This is a magnificent street, immaculate all over. The streets are filled
+with people rushing from building to building and a balmy zephyr blows by
+you.  The whole city is teeming with activity.  A cobbled alley leads north
+and south.  Children run pass you as they play tag."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5339
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5300
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5355
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5302
+
+[[rooms]]
+vnum = 5302
+name = "Main Street"
+sector = "city"
+description = """
+This is a magnificent street, immaculate all over.  The streets are filled
+with people rushing from building to building and a balmy zephyr blows by you.
+The whole city is teeming with activity.  On one side is a beautiful house 
+while on the other is the entrance to a large mansion.  Sounds of people hard
+at work echo within the mansion.  Near the center of town you see a large 
+domed building, magnificent and immense."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5336
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5301
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5332
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5303
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5303
+name = "A Garden Path"
+sector = "city"
+description = """
+A circular path surrounds a magnificent domed temple in the center
+of the city. Flowers grow on the sides of the path and the lush trees are 
+laden with fruit.  Vines and ivy snake up the sides of the temple, making this
+temple truly a blend of nature and man's work of art."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5304
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5302
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5306
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5350
+
+[[rooms]]
+vnum = 5304
+name = "A Garden Path"
+sector = "city"
+description = """
+A circular path surrounds a magnificent domed temple in the center
+of the city. Flowers grow on the sides of the path and the lush trees are
+laden with fruit.  Vines and ivy snake up the sides of the temple, making this
+temple truly a blend of nature and man's work of art."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5311
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5303
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5305
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+[[rooms]]
+vnum = 5305
+name = "A garden path"
+sector = "city"
+description = """
+A circular path surrounds a magnificent domed temple in the center
+of the city. Flowers grow on the sides of the path and the lush trees are
+laden with fruit.  Vines and ivy snake up the sides of the temple, making this
+temple truly a blend of nature and man's work of art."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5304
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5350
+
+[[rooms]]
+vnum = 5306
+name = "A Garden Path"
+sector = "city"
+description = """
+A circular path surrounds a magnificent domed temple in the center
+of the city. Flowers grow on the sides of the path and the lush trees are
+laden with fruit.  Vines and ivy snake up the sides of the temple, making this
+temple truly a blend of nature and man's work of art."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5303
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5312
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+[[rooms]]
+vnum = 5307
+name = "The market place"
+sector = "city"
+description = """
+You stand in the middle of a large square lined on each side with
+baskets, carts, and stands of all shapes and sizes.  The little shops are 
+filled with goods sold to the demanding public."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5325
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5320
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5308
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5308
+name = "The market place"
+sector = "city"
+description = """
+You stand in the middle of a large square lined on each side with
+baskets, carts, and stands of all shapes and sizes.  The little shops are
+filled with goods sold to the demanding public."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5322
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5307
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5317
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+[[rooms]]
+vnum = 5309
+name = "A Side Street"
+sector = "city"
+description = """
+This small side street leads east and west into back alleys while
+to the south you see a beautifully designed temple. Shrieks of little
+children playing games in the distance catch your attention."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5343
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5310
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5328
+
+[[rooms]]
+vnum = 5310
+name = "A Side Street"
+sector = "city"
+description = """
+You are in the common section of the city. More buildings made of
+clay and stone be dazzles you. Most of these homes are designed so
+beautifully you just cant keep your eyes off them.  The street
+continues north and south and buildings line the street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5309
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5344
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5311
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5326
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+[[rooms]]
+vnum = 5311
+name = "A Side Street"
+sector = "city"
+description = """
+This small side street leads away from the garden path to the south.
+Around you stand large numbers of commoners' houses.  Many citizens
+pass by you with a friendly hello.  You almost feel like home here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5310
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5337
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5304
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5327
+
+[[rooms]]
+vnum = 5312
+name = "A side street"
+sector = "city"
+description = """
+This small side street leads south away from the temple into the
+business section of town. To the east is the famous City Hall of Thalos.  
+Well disciplined guards stand at attention, watching over the city hall, but
+you don't see any source of threats in THIS city.  North is a garden path,
+west is a smithy, and this side street continues south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5306
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5332
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5313
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5321
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5313
+name = "A side street"
+sector = "city"
+description = """
+This small side street is lined with great beautifully designed
+buildings. To the north is the magnificent temple while to the
+east lies the entrance to a small friendly tavern. The street continues
+north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5312
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5330
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5314
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5319
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5314
+name = "A side street"
+sector = "city"
+description = """
+You are at the end of a long street leading to the center of the city.
+A long alley runs east and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5313
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5351
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5329
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5318
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+[[rooms]]
+vnum = 5315
+name = "Under another grand watchtower"
+sector = "city"
+description = """
+You stand at the base of a tall ivy covered watchtower built to
+protect the city from invaders.  You get the feeling of safety here in
+Thalos."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5316
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5318
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5347
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5316
+name = "A back alley"
+sector = "city"
+description = """
+This alley leads to the rear of meat stand. The aroma of fresh and
+char-broiled meat catches your sense of smell.  You wipe the drool
+off your chin the instant you know it is there."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5317
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5315
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+[[rooms]]
+vnum = 5317
+name = "The meat stand"
+sector = "city"
+description = """
+A large stand has been set up here with metal hooks and wooden racks
+in the background.  Hanging on the hooks are huge slabs of meat
+and other game.  This stand is packed with produce, and a sudden burst
+of laughter catches you by surprise as little children play around
+your ankles."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5308
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5320
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5316
+
+  [[rooms.mob_resets]]
+  vnum = 5311
+  max = 1
+
+[[rooms]]
+vnum = 5318
+name = "A back alley"
+sector = "city"
+description = """
+A narrow alley leads east to a wider street and west to one of
+the city watchtowers."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5314
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5315
+
+[[rooms]]
+vnum = 5319
+name = "The guild house"
+sector = "city"
+description = """
+You are standing in this city's ONLY guild house.  Tables and chairs
+are set about for the occupants' comfort.  Weapons are stacked neatly on the
+weapons rack.  Each weapon looks polished, sharpened, and oiled.
+Draped along the back wall is the proud banner of Thalos in all its glory."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5313
+
+  [[rooms.mob_resets]]
+  vnum = 5306
+  max = 1
+
+[[rooms]]
+vnum = 5320
+name = "The produce stand"
+sector = "city"
+description = """
+A large cart sits here carrying fresh fruit and vegetables.
+Hungry children swarm all about the tasty treats the merchants are
+giving out for free."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5307
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5317
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5312
+  max = 1
+
+[[rooms]]
+vnum = 5321
+name = "The smithy"
+sector = "city"
+description = """
+In here you find tools and anvils used to make various weapons
+and items. The walls are fully stocked with pieces of armor and weaponry."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5312
+
+  [[rooms.mob_resets]]
+  vnum = 5314
+  max = 1
+
+[[rooms]]
+vnum = 5322
+name = "The tapestry stand"
+sector = "city"
+description = """
+Beautiful tapestries and rugs hang all over the walls.  Fancy
+robes and various articles of clothing hang about for sale. You stare with
+awe at how much work must have been put into these cloths."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5323
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5325
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5308
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+[[rooms]]
+vnum = 5323
+name = "A back alley"
+sector = "city"
+description = """
+A narrow alley leads north to one of the city watchtowers while
+to the south there lies a market stand full of expensive clothes and rugs."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5324
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5322
+
+[[rooms]]
+vnum = 5324
+name = "Under the watchtower"
+sector = "city"
+description = """
+You stand under one of the city watchtowers built to protect
+the city from invaders.  You know that you are safe from any danger."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5328
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5323
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5346
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5325
+name = "The jewelery stand"
+sector = "city"
+description = """
+A table stands covered with fine jewelery and gems.  The jeweler
+stands proudly over his collection as he polishes and cleans each one."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5307
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5322
+
+[[rooms]]
+vnum = 5326
+name = "A simple clay dwelling"
+sector = "city"
+description = """
+This is a very plain house with a few chairs and a bed.
+A warmed and lit fireplace suggests that the dwelling is currently
+occupied.  You should leave before the owner finds you here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5310
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5327
+name = "A stone dwelling"
+sector = "city"
+description = """
+This small house is the dwelling of a humble citizen of Thalos.
+A few rafters stand with thatched straw blowing with the wind gusts
+blowing through the city."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5311
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+[[rooms]]
+vnum = 5328
+name = "A back alley"
+sector = "city"
+description = """
+A narrow alley leads east to one of the city watchtowers and west to
+a small side street."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5309
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5324
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+[[rooms]]
+vnum = 5329
+name = "A busy shop"
+sector = "city"
+description = """
+From the outside this place looks like an ordinary building,
+but inside these cramped quarters you discover a shop filled with
+armor, weapons, and various other goods. A small sign posted on the wall
+flutters in the wind."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5314
+
+  [[rooms.mob_resets]]
+  vnum = 5313
+  max = 1
+
+[[rooms]]
+vnum = 5330
+name = "The Tavern of the Sun"
+sector = "city"
+description = """
+A glorious place, this tavern is second home for many citizens of
+Thalos.  Tables and chairs are set in rows, bottles and glasses filled, and
+a small performance stage teaming with dazzling entertainment. Musical
+instruments and personal belongings lie in piles belonging to each member
+of this room."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5313
+
+  [[rooms.mob_resets]]
+  vnum = 5329
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 5329
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 5310
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+[[rooms]]
+vnum = 5331
+name = "South wing of the city hall"
+sector = "city"
+description = """
+You stand in a large room attached to this end of the hallway which
+leads back north to the reception area. Pedestals and columns stand
+faithfully.  Valuable items hang from the walls each to be admired
+by onlookers.  Chairs lie around, and a large curved desk. To the east
+is a vine-covered archway leading out into a private courtyard."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5332
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5334
+
+  [[rooms.mob_resets]]
+  vnum = 5309
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 5307
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5332
+name = "The city hall"
+sector = "city"
+description = """
+This is the main reception area of Thalos' city hall. The walls have
+been painted in pure white and thick lush carpet line the floor wall to wall.
+A side door on the west wall allows you to go out to one of the city's side 
+streets.  Hallways lead south and east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5302
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5333
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5331
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5312
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5333
+name = "East wing of the city hall"
+sector = "city"
+description = """
+Here lies fancy office, possibly the mayor's. A few green plants
+and pieces of furniture make this place breathtaking.  There is a large
+glass cabinet along the wall. A long hallway leads west back to the
+reception area and an ivy-covered archway leads south into a private
+courtyard."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5334
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5332
+
+  [[rooms.obj_resets]]
+  vnum = 5308
+  max = 1
+
+[[rooms]]
+vnum = 5334
+name = "The private gardens and courtyard of Thalos"
+sector = "city"
+description = """
+You stare in awe as the beauty of this place takes you by
+surprise.  Exotic flowers and trees are planted in neat rows and lawn
+benches line the walk ways.  A large marble fountain in the center of the
+courtyard stands. Above stands one of the four watchtowers. Archways
+north and west lead back into the city hall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5333
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5331
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.obj_resets]]
+  vnum = 5306
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5335
+name = "A small guard house"
+sector = "city"
+description = """
+This is the barracks for Thalos' cityguards.  Guards populate this
+shack ready, willing, and able to ward off any trouble.  This small
+shack stands guarding both to the entrance to the city and to the city hall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5355
+
+  [[rooms.mob_resets]]
+  vnum = 5320
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 5320
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 5320
+  max = 3
+
+[[rooms]]
+vnum = 5336
+name = "An impressive house"
+sector = "city"
+description = """
+This house houses the Defender of Thalos.  He represents all that
+is good and right in this city.  As the most skilled fighting machine,
+he is the commander of the guard."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5302
+
+  [[rooms.mob_resets]]
+  vnum = 5305
+  max = 1
+
+[[rooms]]
+vnum = 5337
+name = "A Public Library"
+sector = "city"
+description = """
+This seems to be the tallest structure in the city.  Rows and rows of books
+line the 20 foot tall bookcases, and a quiet serenity can be felt by all here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5338
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5311
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5345
+
+  [[rooms.mob_resets]]
+  vnum = 5315
+  max = 1
+
+[[rooms]]
+vnum = 5338
+name = "The Library Addition"
+sector = "city"
+description = """
+There are more shelves and tables here.  Vials of strange potions line a
+section of the wall, and books and other items of power line another.  The exit
+is to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5337
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5317
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+[[rooms]]
+vnum = 5339
+name = "A back alley"
+sector = "city"
+description = """
+A narrow back alley goes south to main street and north towards
+a watchtower.  People quietly pass you by."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5340
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5301
+
+[[rooms]]
+vnum = 5340
+name = "A back alley"
+sector = "city"
+description = """
+A narrow back alley leads north to one of the city watchtowers
+and south towards main street.  The shade cast by the watchtower is very
+refreshing."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5341
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5339
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5341
+name = "Under a watchtower"
+sector = "city"
+description = """
+You stand under a tall watchtower. Narrow back alleys lead west and
+south and a sturdy ladder leads up into the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5340
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5343
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5348
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5342
+name = "A bath house"
+sector = "city"
+description = """
+This is the bath house for the commoners of the city. Hot steamy water 
+wells up from a hole in the floor. Obviously there is a hot spring located 
+under the city (making the decision to put a city here seem much more 
+reasonable). To the west is another room."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5343
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5344
+
+  [[rooms.mob_resets]]
+  vnum = 5319
+  max = 2
+
+[[rooms]]
+vnum = 5343
+name = "A back alley"
+sector = "city"
+description = """
+A narrow back alley leads west to a small side street and east to one
+of the city watchtowers. Great amounts of steam issue forth from the
+building to the south.  It looks very inviting."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5341
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5342
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5309
+
+[[rooms]]
+vnum = 5344
+name = "A Resting Room"
+sector = "city"
+description = """
+You are in a resting room.  Soft mats line the floor, and you see many
+people just relaxing on them.  The comfort of this place is so inviting, you 
+want to join them.  Great amounts of steam issue forth from the hole in the 
+east wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5342
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5310
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5318
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5345
+name = "On the second floor of the library"
+sector = "city"
+description = """
+You see more books here.  Through windows, you have a glorious view of
+a nearby bay.  Birds fly by your window."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5337
+
+  [[rooms.mob_resets]]
+  vnum = 5316
+  max = 2
+
+[[rooms]]
+vnum = 5346
+name = "The north-west watchtower"
+sector = "city"
+description = """
+You stand atop one of the city watchtowers. The view is magnificent
+from here and you can see all the way to the western mountains.  You are 
+confident nothing can touch this tower."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5324
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5308
+  max = 8
+
+[[rooms]]
+vnum = 5347
+name = "The south-west watchtower"
+sector = "city"
+description = """
+You stand atop one of the city watchtowers. The view is magnificent
+from here and you can see all the way to the western mountains. To the
+south bay stretches to the horizon.  You are confident nothing can touch this
+tower."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5315
+
+  [[rooms.mob_resets]]
+  vnum = 5308
+  max = 8
+
+[[rooms]]
+vnum = 5348
+name = "The north-east watchtower"
+sector = "city"
+description = """
+You stand atop one of the city watchtowers. The view is magnificent
+from here.  Green fields stretch to the horizon.  You are confident nothing
+can touch this tower."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5341
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5308
+  max = 8
+
+[[rooms]]
+vnum = 5350
+name = "The Temple of Thalos"
+sector = "city"
+description = """
+You stand within one of the most holy places in the realm. This stunning 
+domed temple houses the city's worshipers en masse. Long benches line the 
+aisles and the altar glistens with the gold and platinum inlay.The walls and 
+roof are all made of ceramic, making this place reflect the sun well.  
+    The greenery around the temple itself makes this place a great blend of
+nature and man's works of art."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5305
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5303
+
+  [[rooms.mob_resets]]
+  vnum = 5300
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5307
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+[[rooms]]
+vnum = 5351
+name = "A back alley"
+sector = "city"
+description = """
+A narrow alley leads east to a wider street and west to one of
+the city watchtowers.  Little kids play tag around you."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5352
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5314
+
+[[rooms]]
+vnum = 5352
+name = "Under a watchtower"
+sector = "city"
+description = """
+You stand at the base of a tall watchtower built to protect the city
+from invaders.  From the looks of things, its doing a great job."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5353
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5351
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5354
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5303
+  max = 11
+
+[[rooms]]
+vnum = 5353
+name = "A back alley"
+sector = "city"
+description = "A narrow alley leads south to one of the city watchtowers."
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5355
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5352
+
+[[rooms]]
+vnum = 5354
+name = "The south-east watchtower"
+sector = "city"
+description = """
+You stand atop one of the city watchtowers. The view is magnificent
+from here and you can see all the way to the western mountains. To the
+south the you see the bay.  You're confident nothing can touch this tower."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5352
+
+  [[rooms.mob_resets]]
+  vnum = 5301
+  max = 20
+
+  [[rooms.mob_resets]]
+  vnum = 5308
+  max = 8
+
+[[rooms]]
+vnum = 5355
+name = "A back alley"
+sector = "city"
+description = """
+A narrow alley leads north to the main street, and south toward a tall
+watchtower.  A building is to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5301
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5353
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5335
+
+[[rooms]]
+vnum = 5356
+name = "A trail at the end of the dwarf forest"
+sector = "field"
+description = """
+The trail ends here, with tall, leafy, green trees all around you.
+To the west, you can see a huge beautiful and radiant city.  Something
+about it gives you a relaxed feeling.  To the east is your way back home."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5357
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5300
+
+  [[rooms.mob_resets]]
+  vnum = 5326
+  max = 4
+
+[[rooms]]
+vnum = 5357
+name = "A trail at the end of the dwarf forest"
+sector = "field"
+description = """
+A side trail here leads from the dwarf forest.  It is definitely milder
+here.  The trail continues to the east from here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5358
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5356
+
+[[rooms]]
+vnum = 5358
+name = "The dwarf forest"
+sector = "forest"
+description = """
+You see tall, healthy green trees here.  The trail bends north to
+west from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5359
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5357
+
+  [[rooms.mob_resets]]
+  vnum = 5323
+  max = 3
+
+[[rooms]]
+vnum = 5359
+name = "The dwarf forest"
+sector = "forest"
+description = """
+You see more big green trees here.  It looks almost as if this place was
+blessed by a god to be green and mild.  The trail leads north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5360
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5358
+
+[[rooms]]
+vnum = 5360
+name = "The dwarf forest"
+sector = "forest"
+description = """
+You see more big green trees here.  It looks almost as if this place was
+blessed by a god to be green and mild.  The trail leads north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5361
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5359
+
+[[rooms]]
+vnum = 5361
+name = "The dwarf forest"
+sector = "forest"
+description = """
+You see many big green trees here.  You see many leaves on these huge
+trees.  Grass layer the ground with 2 inches of padding."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5362
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5360
+
+  [[rooms.mob_resets]]
+  vnum = 5304
+  max = 9
+
+[[rooms]]
+vnum = 5362
+name = "The Cross Roads"
+sector = "city"
+description = """
+The roads cross here.  Midgaard is to the west.  To the east, you see the
+stately oaks and poplars of the holy grove.  A wide path leads south through
+the dwarven forest.  To the north is a very desolate trail."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5363
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5369
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5361
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5364
+
+[[rooms]]
+vnum = 5363
+name = "The Lane"
+sector = "city"
+description = """
+You are strolling along a pleasant, shady lane. The road is lined on both
+sides by tall, stately trees which lend the scene with a sense of quiet
+serenity. You can follow the road north or south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5365
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5362
+
+[[rooms]]
+vnum = 5364
+name = "City Entrance"
+sector = "city"
+description = """
+You stand on the outskirts of a construction site - Midgaard; the capital
+of this land. The road leads east into the peace and quiet - and dangers -
+of the forest; and to the west it becomes the main street of the town;
+surrounded by building foundations of unfinished shops, houses, and temple."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5362
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5385
+
+[[rooms]]
+vnum = 5365
+name = "The Plains"
+sector = "city"
+description = """
+You are standing on the plains. This is a vast desolate place where the
+wind can howl undisturbed since nothing but you bars its way. However you
+are not the first to wander here. Before you somebody has left footprints.
+The footprints make a path that looks rather bewildered and is not the kind
+of path to lead to anywhere significant or important but it seems to have
+made up its mind to enter the hills far away north.  A little distance
+further, you lose the trail and decide not to get lost."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5363
+
+[[rooms]]
+vnum = 5366
+name = "The holy grove"
+sector = "forest"
+description = """
+You are standing amidst the ancient oaks and poplars in the holy grove. You
+can feel a strange sensation of contentedness and relief seeping through You,
+as if great burdens have been lifted from Your shoulders. From here, friendly-
+looking paths lead east and south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5367
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5369
+
+[[rooms]]
+vnum = 5367
+name = "The holy grove"
+sector = "forest"
+description = """
+You are standing amidst the ancient oaks and poplars in the holy grove. You
+feel unusually happy here, as if great burdens have been lifted from Your
+shoulders. From here, pleasant-looking paths lead east, west and south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5368
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5370
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5366
+
+  [[rooms.mob_resets]]
+  vnum = 5302
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 5322
+  max = 2
+
+[[rooms]]
+vnum = 5368
+name = "A clearing in the woods"
+sector = "forest"
+description = """
+You are standing in a clearing in the light woods. Somehow, this place
+seems powerfully DIFFERENT from the rest of the forest, as if something is
+severely strained in the fabric of reality here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5375
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5371
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5367
+
+  [[rooms.mob_resets]]
+  vnum = 5327
+  max = 2
+
+[[rooms]]
+vnum = 5369
+name = "The holy grove"
+sector = "forest"
+description = """
+You are standing amidst the ancient oaks and poplars in the holy grove. You
+feel calm and relaxed here, as if great burdens have been lifted from Your
+shoulders. From here, pleasant-looking paths lead east, north and south. To
+the west, through the trees, You can see the road to Midgaard's construction
+site."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5366
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5370
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5372
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5362
+
+  [[rooms.mob_resets]]
+  vnum = 5324
+  max = 1
+
+[[rooms]]
+vnum = 5370
+name = "The sacred glade"
+sector = "forest"
+description = """
+You are standing in the middle of the sacred glades, where the citizens of
+Thalos come to celebrate the spring, where farmers give thanks for bountiful
+harvest in the fall, and where lovers stroll in summer. You feel seasons of
+remembered happiness and joy taking Your sorrows and worries away from You,
+leaving You calm and invigorate, ready for the world. Paths lead into the
+holy grove to the east, north and west, while to the south a wide, sunny field
+slopes down to a sparkling lake."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5367
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5371
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5373
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5369
+
+  [[rooms.mob_resets]]
+  vnum = 5323
+  max = 3
+
+[[rooms]]
+vnum = 5371
+name = "The holy grove"
+sector = "forest"
+description = """
+You are standing amidst the ancient oaks and poplars in the holy grove. You
+can feel a strange sensation of joy and calm seeping through You, as if great
+burdens have been lifted from Your shoulders. To the south, You glimpse an open
+area through the trees, while paths lead away north and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5368
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5374
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5370
+
+  [[rooms.mob_resets]]
+  vnum = 5327
+  max = 2
+
+[[rooms]]
+vnum = 5372
+name = "The holy grove"
+sector = "forest"
+description = """
+You are standing amidst the tall, majestic trees in the southern end of the
+holy grove. Paths lead north and east. To the east, You can see a wide, open
+field, sloping gently down towards a bright, glittering lake. Somehow, here
+you feel an inexplicable happiness, as if the world's troubles no longer
+really matter to you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5369
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5373
+
+  [[rooms.mob_resets]]
+  vnum = 5328
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 5326
+  max = 4
+
+[[rooms]]
+vnum = 5373
+name = "The sunny field"
+sector = "field"
+description = """
+You are standing in the middle of a wide, summery, sunlit field. There is a
+fragrance of spring in the air, a sound of summer and a feeling of eternal
+Saturday afternoon. To the south is a clear, sparkling lake, and to the north
+and west is the holy grove. In the wood's edge, to the east, is construction,
+shimmering softly through the colors of the rainbow. You feel as if You
+could spend the rest of your life here, lying on your back and looking at the
+patterns of the clouds as they gently drift across the sky."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5370
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5372
+
+  [[rooms.mob_resets]]
+  vnum = 5325
+  max = 3
+
+[[rooms]]
+vnum = 5374
+name = "The croquet lawn"
+sector = "field"
+description = """
+You are standing on a immaculately manicured green lawn, the kind you only
+get after 200 years of meticulous work. There is a winding stone path leading
+from the wood's edge to the north, to the softly shimmering, rainbow-colored
+dome covering construction to the south. This place enjoys a perpetual cool,
+sunny summers after-noon."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5371
+
+  [[rooms.mob_resets]]
+  vnum = 5328
+  max = 2
+
+[[rooms]]
+vnum = 5375
+name = "The Void"
+sector = "forest"
+description = """
+You are standing in the middle of something you cannot explain.  You see
+stars yet you cannot see what you are standing on.  You are not standing
+on any sort of physical 'ground' as you can see yet you are not floating
+either.  Occasionally, the starry 'sky' fades into a fuzzy, yet bright,
+rainbow then back to its normal state.  In the middle of this room is
+a ladder standing vertical."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5378
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5368
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5376
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5378
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5376
+
+[[rooms]]
+vnum = 5376
+name = "The Void"
+sector = "forest"
+description = """
+You are standing in the middle of something you cannot explain.  You see
+stars yet you cannot see what you are standing on.  You are not standing
+on any sort of physical 'ground' as you can see yet you are not floating
+either.  Occasionally, the starry 'sky' fades into a fuzzy, yet bright,
+rainbow then back to its normal state."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5376
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5376
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5375
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5375
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5377
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5377
+
+[[rooms]]
+vnum = 5377
+name = "The Void"
+sector = "forest"
+description = """
+You are standing in the middle of something you cannot explain.  You see
+stars yet you cannot see what you are standing on.  You are not standing
+on any sort of physical 'ground' as you can see yet you are not floating
+either.  Occasionally, the starry 'sky' fades into a fuzzy, yet bright,
+rainbow then back to its normal state."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5376
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5376
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5377
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5377
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5378
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5378
+
+[[rooms]]
+vnum = 5378
+name = "The Void"
+sector = "forest"
+description = """
+You are standing in the middle of something you cannot explain.  You see
+stars yet you cannot see what you are standing on.  You are not standing
+on any sort of physical 'ground' as you can see yet you are not floating
+either.  Occasionally, the starry 'sky' fades into a fuzzy, yet bright,
+rainbow then back to its normal state.  In the middle of this room is
+a ladder standing vertical."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8903
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5375
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 5377
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5375
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5377
+
+[[rooms]]
+vnum = 5379
+name = "The Temple Of Midgaard"
+sector = "inside"
+description = """
+You are in the southern end of the temple hall in the Temple of Midgaard.
+The temple has been constructed from giant marble blocks, eternal in
+appearance, and most of the walls are covered by ancient wall paintings
+picturing Gods, Giants and peasants.
+   Large steps lead down through the grand temple gate, descending the huge
+mound upon which the temple is built and ends on the temple square below.
+   You notice that this building is quite new.  A small plaque is on this wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5386
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5380
+
+[[rooms]]
+vnum = 5380
+name = "The Temple Square"
+sector = "city"
+description = """
+You are standing on the temple square.  Huge marble steps lead up to the
+temple gate.  The ground is just dirt but there are plans to make the road
+cobble stone.  Just south of here you see a blooming market square, the
+center of Midgaard."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5379
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5381
+
+  [[rooms.mob_resets]]
+  vnum = 5332
+  max = 2
+
+[[rooms]]
+vnum = 5381
+name = "Market Square"
+sector = "city"
+description = """
+You are standing on the market square, the Square of Midgaard.  It seems
+that a large, peculiar looking statue is being built here in the middle of
+the square.  Roads lead to the north and east, north to the temple square,
+east is the main street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5380
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5382
+
+  [[rooms.mob_resets]]
+  vnum = 5331
+  max = 1
+
+[[rooms]]
+vnum = 5382
+name = "The Main Street"
+sector = "city"
+description = """
+You are on Main Street crossing through this booming town.  The main
+street continues east.  To the west you see and hear a small market place."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5383
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5381
+
+  [[rooms.mob_resets]]
+  vnum = 5333
+  max = 3
+
+[[rooms]]
+vnum = 5383
+name = "The Main Street"
+sector = "city"
+description = """
+The main street, to the east you leave town and to the west the street
+leads to the market square."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5384
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5382
+
+[[rooms]]
+vnum = 5384
+name = "Inside the East Gate of Midgaard"
+sector = "city"
+description = """
+You are by two small newly built towers that have been built into the
+city wall and connected with a footbridge across the heavy wooden gate.
+Main Street leads west from here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5385
+  key = 3133
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5383
+
+  [[rooms.mob_resets]]
+  vnum = 5334
+  max = 1
+
+[[rooms]]
+vnum = 5385
+name = "Outside the East Gate of Midgaard"
+sector = "city"
+description = """
+You are by two small towers that have been built into the city wall and
+connected with a footbridge across the heavy wooden gate.  To the east the
+plains stretch out in the distance."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 5364
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 5384
+  key = 3133
+  flags = ["door"]
+
+[[rooms]]
+vnum = 5386
+name = "By the Temple Altar"
+sector = "inside"
+description = """
+You are by the temple altar in the northern end of the Temple of Midgaard.
+A huge altar made from white polished marble is standing in front of you and
+behind it is a ten foot tall sitting statue of Odin, the King of the Gods."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 5379
+

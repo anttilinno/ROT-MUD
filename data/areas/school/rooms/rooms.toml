@@ -1,0 +1,1327 @@
+[[rooms]]
+vnum = 3700
+name = "Entrance to Mud School"
+sector = "inside"
+description = """
+This is the entrance to the Merc Mud School.  Go north to go through mud
+school.  If you have been here before and want to go directly to the arena,
+go south.
+
+A sign warns 'You may not pass these doors once you have passed level 9.'"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3757
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3744
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3001
+
+[[rooms]]
+vnum = 3701
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  The exits are west and south.  A small plaque is on the
+wall."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3757
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3702
+
+  [[rooms.mob_resets]]
+  vnum = 3700
+  max = 1
+
+[[rooms]]
+vnum = 3702
+name = "The Center Room"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  Exits lead in ALL directions."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3703
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3701
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3705
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3704
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3708
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3707
+
+[[rooms]]
+vnum = 3703
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  Exits lead north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3709
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3702
+
+[[rooms]]
+vnum = 3704
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3702
+
+[[rooms]]
+vnum = 3705
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  The only exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3702
+
+[[rooms]]
+vnum = 3707
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  The only exit is up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3702
+
+[[rooms]]
+vnum = 3708
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  The only exit is down."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3702
+
+[[rooms]]
+vnum = 3709
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  Exits reach west and down."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3711
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3710
+
+[[rooms]]
+vnum = 3710
+name = "The Blob Cage"
+sector = "inside"
+description = """
+You are in a smelly cage.  Strangely, the walls are still clean!
+You see a sign here.  The only exit is up."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3709
+
+  [[rooms.mob_resets]]
+  vnum = 3701
+  max = 1
+
+[[rooms]]
+vnum = 3711
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3709
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3712
+
+[[rooms]]
+vnum = 3712
+name = "The Cage Room"
+sector = "inside"
+description = """
+You are in the cage room.  All around are 4 cages.  Light fluoresces off the
+ceiling in soft white tones.  Of course, there is a big sign on the wall.
+Exits lead into the cardinal directions plus down."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3713
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3716
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3715
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3714
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3717
+
+  [[rooms.mob_resets]]
+  vnum = 3707
+  max = 1
+
+[[rooms]]
+vnum = 3713
+name = "A Cage"
+sector = "inside"
+description = """
+You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
+in the upkeep here!  There is a sign on the wall.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3712
+
+  [[rooms.mob_resets]]
+  vnum = 3704
+  max = 1
+
+[[rooms]]
+vnum = 3714
+name = "A Cage"
+sector = "inside"
+description = """
+You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
+in the upkeep here!  There is a sign on the wall.  The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3712
+
+  [[rooms.mob_resets]]
+  vnum = 3705
+  max = 1
+
+[[rooms]]
+vnum = 3715
+name = "A Cage"
+sector = "inside"
+description = """
+You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
+in the upkeep here!  There is a sign on the wall.  The only exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3712
+
+  [[rooms.mob_resets]]
+  vnum = 3703
+  max = 1
+
+[[rooms]]
+vnum = 3716
+name = "A Cage"
+sector = "inside"
+description = """
+You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
+in the upkeep here!  There is a sign on the wall.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3712
+
+  [[rooms.mob_resets]]
+  vnum = 3702
+  max = 1
+
+[[rooms]]
+vnum = 3717
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  Find your own exit here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3719
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3718
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3712
+
+[[rooms]]
+vnum = 3718
+name = "The Store in Mud School"
+sector = "inside"
+description = """
+You are in a cramped room.  Stacked neatly on shelves everywhere are items
+and packages.  Light fluoresces off the ceiling in soft white tones.  Of
+course, there is a sign on the wall.  The only exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3717
+
+  [[rooms.mob_resets]]
+  vnum = 3717
+  max = 1
+
+[[rooms]]
+vnum = 3719
+name = "A Room in Mud School"
+sector = "inside"
+description = """
+You are in a square white room.  The walls are all blank, with no windows.
+Light fluoresces off the ceiling in soft white tones.  Of course, there is a
+sign on the wall.  The exits are north and west, with a door to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3720
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3721
+  key = 3714
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3717
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3720
+name = "The Darkened Room"
+sector = "inside"
+description = """
+This room was purposefully darkened so that you would need to hold on to a
+light source to go through.  The walls are, of course, blank, and white.
+The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3719
+
+  [[rooms.mob_resets]]
+  vnum = 3706
+  max = 1
+
+[[rooms]]
+vnum = 3721
+name = "The End of Mud School!"
+sector = "inside"
+description = """
+This is a very bright room, with a marble pedestal in the center.  Behind
+the pedestal stands a person cloaked in Silver.  Tapestries flow from every
+wall, and you feel very happy to be here right now.  There is a big sign here.
+The only exit is on the other side of the gate north of you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3722
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3720
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 3708
+  max = 1
+
+[[rooms]]
+vnum = 3722
+name = "South Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3729
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3725
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3723
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3723
+name = "South Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3728
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3722
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3724
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3724
+name = "South West Corner of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3727
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3723
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+  [[rooms.mob_resets]]
+  vnum = 3713
+  max = 5
+
+[[rooms]]
+vnum = 3725
+name = "South Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3730
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3726
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3722
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3726
+name = "South East Corner of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3731
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3725
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+  [[rooms.mob_resets]]
+  vnum = 3712
+  max = 3
+
+[[rooms]]
+vnum = 3727
+name = "West Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3732
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3728
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3724
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3728
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3733
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3729
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3723
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3727
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3729
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3734
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3730
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3722
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3728
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3730
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3735
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3731
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3725
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3729
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3731
+name = "East Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3736
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3726
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3730
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3732
+name = "West Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3737
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3733
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3727
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3733
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3738
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3734
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3728
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3732
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3734
+name = "Center of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being.  There is a BIG SIGN here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3739
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3735
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3729
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3733
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3748
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 3709
+  max = 4
+
+[[rooms]]
+vnum = 3735
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3740
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3736
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3730
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3734
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3736
+name = "East Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3741
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3731
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3735
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3737
+name = "West Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3742
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3738
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3732
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3738
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3743
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3739
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3733
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3737
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3739
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3744
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3740
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3734
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3738
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3740
+name = "Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3745
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3741
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3735
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3739
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3741
+name = "East Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3746
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3736
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3740
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3742
+name = "North West Corner of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3743
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3737
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+  [[rooms.mob_resets]]
+  vnum = 3710
+  max = 3
+
+[[rooms]]
+vnum = 3743
+name = "North Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  You can barely see the ceiling.  You feel as if you are being watched
+by some divine being."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3744
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3738
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3742
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3744
+name = "North Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3745
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3739
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3743
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3745
+name = "North Wall of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3746
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3740
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3744
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+[[rooms]]
+vnum = 3746
+name = "North East Corner of Arena"
+sector = "inside"
+description = """
+You are in the Arena.  Remember, if you wish to get out of this Arena, just
+go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
+being watched by some divine being."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3741
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3745
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3760
+
+  [[rooms.mob_resets]]
+  vnum = 3711
+  max = 3
+
+[[rooms]]
+vnum = 3748
+name = "The Center of the Dungeon"
+sector = "inside"
+description = """
+You are in the center of a large room.  A faint light from above shows that
+the floors are all covered with slime.  A feeling of dread comes over you as
+you notice that this is NOT a great place to go.  Exits go in all directions.
+Of special note is the one that brings you back up!!!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3750
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3753
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3755
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3752
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3734
+  flags = ["door"]
+
+[[rooms]]
+vnum = 3749
+name = "The North West Corner of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3750
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3752
+
+  [[rooms.mob_resets]]
+  vnum = 3714
+  max = 1
+
+[[rooms]]
+vnum = 3750
+name = "The North Wall of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3751
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3748
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3749
+
+[[rooms]]
+vnum = 3751
+name = "The North East Corner of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3753
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3750
+
+  [[rooms.mob_resets]]
+  vnum = 3715
+  max = 2
+
+[[rooms]]
+vnum = 3752
+name = "The West Wall of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3749
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3748
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3754
+
+[[rooms]]
+vnum = 3753
+name = "The East Wall of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3751
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3756
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3748
+
+[[rooms]]
+vnum = 3754
+name = "The South West Corner of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3752
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3755
+
+  [[rooms.mob_resets]]
+  vnum = 3716
+  max = 2
+
+[[rooms]]
+vnum = 3755
+name = "The South Wall of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3748
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3756
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3754
+
+[[rooms]]
+vnum = 3756
+name = "The South East Corner of the Dungeon"
+sector = "inside"
+description = """
+You are against a wall in the dungeon.  It is quite dark here.  The lack of
+any windows in the area explains the smell around you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3753
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3755
+
+[[rooms]]
+vnum = 3757
+name = "A Room in Mud School"
+sector = "city"
+description = """
+You are in a room in Mud School.  Paintings of the heroic graduates of mud
+school adorn the walls. To the west is Furey's Training Room, and to the east
+is Zump's Guild Room.  North of you is the next Station of Mud School.
+There is a sign on the wall (type 'LOOK SIGN' to read it)."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3701
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3759
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3700
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3758
+
+[[rooms]]
+vnum = 3758
+name = "Furey's Training Room"
+sector = "city"
+description = """
+You are in Furey's Training Room.  Around you are all sorts of physical
+and mental training tools.  The whole room is filled with magic, holiness, 
+and sweat.  There is a sign on the wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3757
+
+  [[rooms.mob_resets]]
+  vnum = 3718
+  max = 1
+
+[[rooms]]
+vnum = 3759
+name = "Zump's Guild Room"
+sector = "city"
+description = """
+You are in a room filled with weapons, books, and many combat dummies, some
+cut and stabbed many times, others burnt to a crisp.  The room is filled with
+sweat and an aura of magic.  There is a sign on the wall."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3757
+
+  [[rooms.mob_resets]]
+  vnum = 3719
+  max = 1
+
+[[rooms]]
+vnum = 3760
+name = "A Safe Room"
+sector = "inside"
+description = """
+You are in a safe room, away from all the mean rabbits and snails of the Arena.
+You can rest here, and go up to go back to the Temple of Midgaard."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3001
+

@@ -1,0 +1,8 @@
+id = "stonebow_dale"
+name = "StoneBow Dale"
+credits = "{ ALL } Eriana  StoneBow Dale"
+reset_interval = 120
+
+[vnum_range]
+min = 13000
+max = 13199

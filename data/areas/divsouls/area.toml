@@ -1,0 +1,8 @@
+id = "divided_souls"
+name = "Divided Souls"
+credits = "{45 85} Ydri    Divided Souls"
+reset_interval = 120
+
+[vnum_range]
+min = 11600
+max = 11699

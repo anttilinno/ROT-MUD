@@ -1,0 +1,276 @@
+[[objects]]
+vnum = 13000
+keywords = ["black", "tails", "tuxedo"]
+short_desc = "a black tuxedo"
+long_desc = "A black satin-lapelled tuxedo."
+item_type = "clothing"
+level = 5
+weight = 30
+cost = 7500
+wear_flags = ["take", "body"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13001
+keywords = ["worn", "used", "black", "tuxedo", "coat"]
+short_desc = "a worn black tuxedo"
+long_desc = "A worn black tuxedo."
+item_type = "clothing"
+level = 5
+weight = 30
+cost = 15
+wear_flags = ["take", "body"]
+extra_flags = ["bless", "inventory"]
+
+[[objects]]
+vnum = 13002
+keywords = ["white", "beaded", "satin", "wedding", "gown"]
+short_desc = "a white beaded satin gown"
+long_desc = "A white beaded satin gown."
+item_type = "clothing"
+level = 5
+weight = 30
+cost = 20000
+wear_flags = ["take", "about"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13003
+keywords = ["faded", "wedding", "gown", "gray"]
+short_desc = "a faded gray wedding gown"
+long_desc = "A faded soiled gown."
+item_type = "clothing"
+level = 5
+weight = 80
+cost = 30
+wear_flags = ["take", "about"]
+extra_flags = ["bless", "inventory"]
+
+[[objects]]
+vnum = 13004
+keywords = ["black", "wool", "pants"]
+short_desc = "black wool pants"
+long_desc = "Black wool pants."
+item_type = "clothing"
+level = 5
+weight = 20
+cost = 3500
+wear_flags = ["take", "legs"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13005
+keywords = ["worn", "black", "trousers"]
+short_desc = "worn black trousers"
+long_desc = "Worn black threadbare trousers."
+item_type = "clothing"
+level = 5
+weight = 15
+cost = 100
+wear_flags = ["take", "legs"]
+extra_flags = ["bless", "inventory"]
+
+[[objects]]
+vnum = 13006
+keywords = ["black", "satin", "bow", "tie"]
+short_desc = "black satin bow tie"
+long_desc = "A black satin bow tie."
+item_type = "clothing"
+level = 5
+weight = 5
+cost = 500
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13007
+keywords = ["stained", "black", "bow", "tie"]
+short_desc = "stained black bow tie"
+long_desc = "A worn, stained black bow tie."
+item_type = "clothing"
+level = 5
+weight = 5
+cost = 10
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13008
+keywords = ["crisp", "starched", "white", "shirt"]
+short_desc = "a crisp, starched white shirt"
+long_desc = "A crisp, starched white shirt."
+item_type = "clothing"
+level = 5
+weight = 8
+cost = 2500
+wear_flags = ["take", "body"]
+extra_flags = ["glow", "noremove", "inventory"]
+
+[[objects]]
+vnum = 13009
+keywords = ["greg", "brady", "ruffled", "white", "shirt"]
+short_desc = "a Greg Brady ruffled white shirt"
+long_desc = "A Greg Brady ruffled white shirt radiates its warmth."
+item_type = "clothing"
+level = 5
+weight = 10
+cost = 0
+wear_flags = ["take", "body"]
+extra_flags = ["glow", "noremove", "inventory"]
+
+[[objects]]
+vnum = 13010
+keywords = ["black", "cummerbund", "satin"]
+short_desc = "a black satin cummerbund"
+long_desc = "A black satin cummerbund."
+item_type = "clothing"
+level = 5
+weight = 5
+cost = 1000
+wear_flags = ["take", "waist"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13011
+keywords = ["worn", "black", "polyester", "cummerbund"]
+short_desc = "a worn black polyester cummerbund"
+long_desc = "A worn black polyester cummerbund with a mysterious green stain."
+item_type = "clothing"
+level = 5
+weight = 5
+cost = 5
+wear_flags = ["take", "waist"]
+extra_flags = ["glow", "noremove", "inventory", "had_timer"]
+
+[[objects]]
+vnum = 13012
+keywords = ["black", "wingtips"]
+short_desc = "shiny black wingtips"
+long_desc = "Shiny black wingtips."
+item_type = "clothing"
+level = 5
+weight = 1
+cost = 500
+wear_flags = ["take", "feet"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13013
+keywords = ["bowling", "shoes"]
+short_desc = "{rred{x {Yand {bblue{x bowling shoes"
+long_desc = "{rRed{x {Yand {bblue{x bowling shoes are here."
+item_type = "clothing"
+level = 5
+weight = 1
+cost = 3
+wear_flags = ["take", "feet"]
+extra_flags = ["glow", "noremove", "inventory"]
+
+[[objects]]
+vnum = 13014
+keywords = ["black", "felt", "tophat"]
+short_desc = "a black felt tophat"
+long_desc = "A black felt tophat."
+item_type = "clothing"
+level = 5
+weight = 8
+cost = 1500
+wear_flags = ["take", "head"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13015
+keywords = ["white", "silk", "gloves"]
+short_desc = "white silk gloves"
+long_desc = "White silk gloves."
+item_type = "clothing"
+level = 5
+weight = 1
+cost = 500
+wear_flags = ["take", "hands"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13016
+keywords = ["tammy", "faye", "bakker", "makeup"]
+short_desc = "Tammy Faye Bakker makeup"
+long_desc = "A thick, gooey layer of nasty makeup...comes with its own spatula."
+item_type = "clothing"
+level = 5
+weight = 150
+cost = 10
+wear_flags = ["take", "face"]
+extra_flags = ["glow", "evil", "magic", "nodrop", "anti_good", "noremove", "inventory", "nopurge", "had_timer"]
+
+[[objects]]
+vnum = 13017
+keywords = ["white", "garter", "lace"]
+short_desc = "a white lace garter"
+long_desc = "A white lace garter."
+item_type = "clothing"
+level = 5
+weight = 5
+cost = 150
+wear_flags = ["take", "legs"]
+extra_flags = ["bless", "inventory"]
+
+[[objects]]
+vnum = 13018
+keywords = ["edible", "undies"]
+short_desc = "Eri's edible undies"
+long_desc = "Tasty cinammon flavored candy undies from your favorite goddess."
+item_type = "food"
+level = 0
+weight = 2
+cost = 500
+wear_flags = ["take", "waist"]
+extra_flags = ["inventory", "had_timer"]
+
+[[objects]]
+vnum = 13019
+keywords = ["white", "silk", "veil"]
+short_desc = "a white silk veil"
+long_desc = "A white silk veil."
+item_type = "clothing"
+level = 5
+weight = 2
+cost = 2000
+wear_flags = ["take", "face"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13020
+keywords = ["sheer", "silk", "stockings", "white"]
+short_desc = "white sheer silk stockings"
+long_desc = "White sheer silk stockings."
+item_type = "clothing"
+level = 5
+weight = 1
+cost = 500
+wear_flags = ["take", "legs"]
+extra_flags = ["bless", "inventory"]
+
+[[objects]]
+vnum = 13021
+keywords = ["white", "patent", "pumps"]
+short_desc = "white patent pumps"
+long_desc = "White patent pumps."
+item_type = "clothing"
+level = 5
+weight = 3
+cost = 1200
+wear_flags = ["take", "feet"]
+extra_flags = ["glow", "bless", "inventory"]
+
+[[objects]]
+vnum = 13022
+keywords = ["flowers"]
+short_desc = "sumkinda flowers"
+long_desc = "We need flowers."
+item_type = "clothing"
+level = 5
+weight = 3
+cost = 1200
+wear_flags = ["take", "feet"]
+extra_flags = ["glow", "bless", "inventory"]
+

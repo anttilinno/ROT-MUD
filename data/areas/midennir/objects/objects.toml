@@ -1,0 +1,95 @@
+[[objects]]
+vnum = 3500
+keywords = ["sword", "short"]
+short_desc = "a goblin's short sword"
+long_desc = "A rusted sword lies on the ground."
+item_type = "weapon"
+level = 9
+weight = 40
+cost = 460
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -1
+
+[[objects]]
+vnum = 3501
+keywords = ["spear", "long"]
+short_desc = "a long spear"
+long_desc = "A blackened spear with an evil-looking blade lies here."
+item_type = "weapon"
+level = 11
+weight = 80
+cost = 100
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = 2
+
+[[objects]]
+vnum = 3502
+keywords = ["helmet", "horned", "black"]
+short_desc = "a black horned helmet"
+long_desc = "A helmet with sharp black horns sits here."
+item_type = "armor"
+level = 9
+weight = 30
+cost = 490
+wear_flags = ["take", "head"]
+
+[[objects]]
+vnum = 3503
+keywords = ["cloak", "stained"]
+short_desc = "a stained travelling cloak"
+long_desc = "A worn and stained cloak is crumpled up on the floor."
+item_type = "armor"
+level = 5
+weight = 40
+cost = 310
+wear_flags = ["take", "neck"]
+
+[[objects]]
+vnum = 3504
+keywords = ["bracer", "leather", "enchanted"]
+short_desc = "an enchanted leather bracer"
+long_desc = "A leather bracer with mystic symbols sits here."
+item_type = "armor"
+level = 13
+weight = 10
+cost = 690
+wear_flags = ["take", "wrist"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 3505
+keywords = ["knife", "dagger"]
+short_desc = "a rune-covered knife"
+long_desc = "A wide-bladed knife sits undisturbed on the floor."
+item_type = "weapon"
+level = 9
+weight = 10
+cost = 420
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+

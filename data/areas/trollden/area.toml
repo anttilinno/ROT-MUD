@@ -1,0 +1,8 @@
+id = "troll_den"
+name = "Troll Den"
+credits = "{19 30} Merc    Troll Den"
+reset_interval = 120
+
+[vnum_range]
+min = 2800
+max = 2899

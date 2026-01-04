@@ -1,0 +1,8 @@
+id = "chapel"
+name = "Chapel"
+credits = "{29 50} Copper  Chapel Catacombs"
+reset_interval = 120
+
+[vnum_range]
+min = 3400
+max = 3499

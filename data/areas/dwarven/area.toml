@@ -1,0 +1,8 @@
+id = "dwarven_kingdom"
+name = "Dwarven Kingdom"
+credits = "{19 50} Anon    Dwarven Kingdom"
+reset_interval = 120
+
+[vnum_range]
+min = 6500
+max = 6599

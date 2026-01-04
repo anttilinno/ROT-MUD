@@ -1,0 +1,107 @@
+[[objects]]
+vnum = 8301
+keywords = ["spear", "long", "two-handed"]
+short_desc = "a long spear"
+long_desc = "A strange spear lies here."
+item_type = "weapon"
+level = 21
+weight = 100
+cost = 1330
+wear_flags = ["take", "wield"]
+extra_flags = ["anti_good"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 12
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+[[objects]]
+vnum = 8302
+keywords = ["horned", "helmet"]
+short_desc = "a dark horned helmet"
+long_desc = "A wicked looking horned helmet lies here."
+item_type = "armor"
+level = 19
+weight = 50
+cost = 0
+wear_flags = ["take", "head"]
+extra_flags = ["anti_good"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = -3
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 8303
+keywords = ["chain", "mail", "chainmail"]
+short_desc = "a suit of chainmail"
+long_desc = "An old suit of chainmail lies here, corroded by the marsh."
+item_type = "armor"
+level = 39
+weight = 200
+cost = 2700
+wear_flags = ["take", "body"]
+extra_flags = ["anti_good"]
+
+[[objects]]
+vnum = 8306
+keywords = ["scythe"]
+short_desc = "a huge, wicked-looking scythe"
+long_desc = "An evil, wicked-looking scythe lies in the shadows."
+item_type = "weapon"
+level = 37
+weight = 160
+cost = 1770
+wear_flags = ["take", "wield"]
+extra_flags = ["nodrop", "anti_good"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 8307
+keywords = ["green", "potion"]
+short_desc = "a murky green potion"
+long_desc = "A murky green potion lies here in the mud."
+item_type = "potion"
+level = 9
+weight = 10
+cost = 690
+wear_flags = ["take"]
+extra_flags = ["glow", "hum"]
+
+[[objects]]
+vnum = 8308
+keywords = ["claymore", "rusty", "sword"]
+short_desc = "a rusty claymore"
+long_desc = "A huge rusted sword lies in a pool of water."
+item_type = "weapon"
+level = 55
+weight = 100
+cost = 3000
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 7
+

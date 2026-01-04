@@ -1,0 +1,2234 @@
+[[rooms]]
+vnum = 7700
+name = "The Bottom of the Rainbow"
+sector = "city"
+description = """
+You are standing before a shimmering rainbow arching high up into the
+sky.  You feel somehow separated from the natural world, even though the
+temple spire is only a few meters below you."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7701
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 1036
+
+[[rooms]]
+vnum = 7701
+name = "On the Rainbow"
+sector = "mountain"
+description = """
+You are standing on the rainbow, surrounded by many beams of multicoloured
+light.  Through the bottom of the rainbow you can barely make out the Temple
+of Midgaard, which is now quite far away."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7702
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7700
+
+[[rooms]]
+vnum = 7702
+name = "On the Rainbow"
+sector = "mountain"
+description = """
+You are standing on the rainbow, surrounded by many beams of multicoloured
+light.  Through the bottom of the rainbow you see the City of Midgaard and the 
+land surrounding it.  It seems to be miles below you."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7703
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7701
+
+[[rooms]]
+vnum = 7703
+name = "On the Rainbow"
+sector = "mountain"
+description = """
+You are standing on the rainbow, surrounded by many beams of multicoloured
+light.  The rainbow extends above and below you as far as you can see."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7704
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7702
+
+[[rooms]]
+vnum = 7704
+name = "On the Rainbow"
+sector = "mountain"
+description = """
+You are nearing the end of the rainbow.  The beams of multicoloured
+light have begun to merge and solidify.  All around you you see glowing
+starlike motes of dust.  Ahead of you is a bridge."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7705
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7703
+
+[[rooms]]
+vnum = 7705
+name = "The Glowing Bridge at the Rainbow's End"
+sector = "city"
+description = """
+After a long climb you have reached the end of the rainbow.  The brilliant
+colours have twisted and merged into a beautiful glowing bridge that leads
+toward a massive white gate to the north.  All around you is a soft, peaceful 
+glow interrupted only by the passing of starlike dust motes before your eyes."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7706
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7704
+
+[[rooms]]
+vnum = 7706
+name = "The Astral Gate"
+sector = "city"
+description = """
+Here the bridge ends before a massive, pearly-coloured gate beyond which
+you can see a field of blackness filled with silvery snake-like tendrils,
+stars, and occasional flashes of of light."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7707
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7705
+
+  [[rooms.mob_resets]]
+  vnum = 7700
+  max = 1
+
+[[rooms]]
+vnum = 7707
+name = "Into the Astral Plane"
+sector = "field"
+description = """
+You step through the gate, and into another reality...
+
+   You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is very disorienting, although it is not too late to return
+through the gate to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7708
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7709
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7706
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7710
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7711
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7712
+
+[[rooms]]
+vnum = 7708
+name = "Exploring the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is very disorienting, and it is difficult to maintain your 
+bearings and sense of direction."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7712
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7707
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7713
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7714
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7710
+
+[[rooms]]
+vnum = 7709
+name = "Exploring the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is very disorienting, and it is difficult to maintain your 
+bearings and sense of direction."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7716
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7714
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7711
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7707
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7710
+
+[[rooms]]
+vnum = 7710
+name = "Exploring the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is very disorienting, and it is difficult to maintain your 
+bearings and sense of direction."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7709
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7708
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7715
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7707
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7713
+
+[[rooms]]
+vnum = 7711
+name = "Exploring the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is very disorienting, and it is difficult to maintain your 
+bearings and sense of direction."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7717
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7712
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7709
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7707
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7716
+
+[[rooms]]
+vnum = 7712
+name = "Exploring the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is very disorienting, and it is difficult to maintain your 
+bearings and sense of direction."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7711
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7715
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7707
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7708
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7717
+
+[[rooms]]
+vnum = 7713
+name = "Roaming the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is somewhat disorienting.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7708
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7718
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7714
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7720
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7710
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7715
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+[[rooms]]
+vnum = 7714
+name = "Roaming the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is somewhat disorienting.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7708
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7709
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7719
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7718
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7717
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7713
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+[[rooms]]
+vnum = 7715
+name = "Roaming the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is somewhat disorienting, though your instincts say you are 
+close to home.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7720
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7712
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7722
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7716
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7710
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7713
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+[[rooms]]
+vnum = 7716
+name = "Roaming the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is somewhat disorienting, though your instincts say you are 
+close to home.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7715
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7709
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7711
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7717
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7721
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7719
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+[[rooms]]
+vnum = 7717
+name = "Roaming the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is somewhat disorienting, though your instincts say you are 
+close to home.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7714
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7722
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7712
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7716
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7721
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7711
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+[[rooms]]
+vnum = 7718
+name = "Wandering the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is highly disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7709
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7713
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7714
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7733
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7736
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7719
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 7705
+  max = 8
+
+[[rooms]]
+vnum = 7719
+name = "Wandering the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is highly disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7734
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7718
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7738
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7716
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7710
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7714
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+[[rooms]]
+vnum = 7720
+name = "Wandering the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is highly disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7715
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7721
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7713
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7735
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7740
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7711
+
+  [[rooms.mob_resets]]
+  vnum = 7703
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 7705
+  max = 8
+
+[[rooms]]
+vnum = 7721
+name = "Wandering the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is highly disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7720
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7717
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7742
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7712
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7733
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7716
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+[[rooms]]
+vnum = 7722
+name = "Wandering the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is highly disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7734
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7715
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7717
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7744
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7712
+
+  [[rooms.mob_resets]]
+  vnum = 7704
+  max = 10
+
+  [[rooms.mob_resets]]
+  vnum = 7705
+  max = 8
+
+[[rooms]]
+vnum = 7723
+name = "Travelling the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7726
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7728
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7732
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7735
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7737
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7724
+
+  [[rooms.mob_resets]]
+  vnum = 7706
+  max = 6
+
+[[rooms]]
+vnum = 7724
+name = "Travelling the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7730
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7725
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7733
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7739
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7723
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7729
+
+  [[rooms.mob_resets]]
+  vnum = 7703
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 7705
+  max = 8
+
+[[rooms]]
+vnum = 7725
+name = "Travelling the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7741
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7727
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7734
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7728
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7730
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7724
+
+[[rooms]]
+vnum = 7726
+name = "Travelling the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7723
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7727
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7735
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7729
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7731
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7743
+
+  [[rooms.mob_resets]]
+  vnum = 7703
+  max = 4
+
+[[rooms]]
+vnum = 7727
+name = "Travelling the Astral Plane"
+sector = "field"
+description = """
+You find yourself floating in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting.  Nearby you see a large silvery
+strand of light.
+   Most exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7733
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7725
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7726
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7744
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7732
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7731
+
+  [[rooms.mob_resets]]
+  vnum = 7706
+  max = 6
+
+[[rooms]]
+vnum = 7728
+name = "Traversing the Astral Plane"
+sector = "field"
+description = """
+You find yourself deep within in a dark field filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting, and you are having trouble 
+keeping your sense of direction.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7723
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7734
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7725
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7747
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7709
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7745
+
+[[rooms]]
+vnum = 7729
+name = "Traversing the Astral Plane"
+sector = "field"
+description = """
+You find yourself deep within in a dark field filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting, and you are having trouble 
+keeping your sense of direction.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7749
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7726
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7746
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7730
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7735
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7724
+
+  [[rooms.mob_resets]]
+  vnum = 7710
+  max = 6
+
+[[rooms]]
+vnum = 7730
+name = "Traversing the Astral Plane"
+sector = "field"
+description = """
+You find yourself deep within in a dark field filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting, and you are having trouble 
+keeping your sense of direction.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7745
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7724
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7747
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7725
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7733
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7729
+
+  [[rooms.mob_resets]]
+  vnum = 7703
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 7708
+  max = 3
+
+[[rooms]]
+vnum = 7731
+name = "Traversing the Astral Plane"
+sector = "field"
+description = """
+You find yourself deep within in a dark field filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting, and you are having trouble 
+keeping your sense of direction.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7734
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7746
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7727
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7748
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7726
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7732
+
+  [[rooms.mob_resets]]
+  vnum = 7710
+  max = 6
+
+[[rooms]]
+vnum = 7732
+name = "Traversing the Astral Plane"
+sector = "field"
+description = """
+You find yourself deep within in a dark field filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is extremely disorienting, and you are having trouble 
+keeping your sense of direction.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7749
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7731
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7723
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7727
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7748
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7735
+
+[[rooms]]
+vnum = 7733
+name = "Lost in the Astral Plane"
+sector = "field"
+description = """
+You find yourself in in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is incredibly disorienting, and you are having trouble 
+keeping your senses straight.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7721
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7727
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7730
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7718
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7724
+
+  [[rooms.mob_resets]]
+  vnum = 7701
+  max = 2
+
+[[rooms]]
+vnum = 7734
+name = "Lost in the Astral Plane"
+sector = "field"
+description = """
+You find yourself in in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is incredibly disorienting, and you are having trouble 
+keeping your senses straight.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7725
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7728
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7719
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7722
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7731
+
+  [[rooms.mob_resets]]
+  vnum = 7701
+  max = 2
+
+[[rooms]]
+vnum = 7735
+name = "Lost in the Astral Plane"
+sector = "field"
+description = """
+You find yourself in in a field of blackness, filled with tiny tendrils
+of silvery light and insubstantial shining motes of dust.  The weightlessness
+of this environment is incredibly disorienting, and you are having trouble 
+keeping your senses straight.
+   All exits lead off into the astral field."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7723
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7729
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7732
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7720
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7726
+
+[[rooms]]
+vnum = 7736
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7737
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7718
+
+[[rooms]]
+vnum = 7737
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7736
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7723
+
+[[rooms]]
+vnum = 7738
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7739
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7719
+
+[[rooms]]
+vnum = 7739
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7738
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7724
+
+[[rooms]]
+vnum = 7740
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7741
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7720
+
+[[rooms]]
+vnum = 7741
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7740
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7725
+
+[[rooms]]
+vnum = 7742
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7721
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7743
+
+[[rooms]]
+vnum = 7743
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7726
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7742
+
+[[rooms]]
+vnum = 7744
+name = "Walking the Silvery Strand"
+sector = "field"
+description = """
+You are standing atop a silvery strand of light that twists and turns
+through the astral field."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7722
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7727
+
+[[rooms]]
+vnum = 7745
+name = "Deep Within the Astral Plane"
+sector = "field"
+description = """
+You have travelled deep inside the astral field.  Here the fabric of the
+field has become twisted and warped due to the proximity of another plane of
+existence.  Some of the tendrils of light that line the astral field have been
+warped and twisted into portals to other worlds.
+   Take care before you step through one -- you might never return."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7746
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7730
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7749
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7750
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7728
+
+  [[rooms.mob_resets]]
+  vnum = 7715
+  max = 3
+
+[[rooms]]
+vnum = 7746
+name = "Deep Within the Astral Plane"
+sector = "field"
+description = """
+You have travelled deep inside the astral field.  Here the fabric of the
+field has become twisted and warped due to the proximity of another plane of
+existence.  Some of the tendrils of light that line the astral field have been
+warped and twisted into portals to other worlds.
+   Take care before you step through one -- you might never return."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7733
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7745
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7747
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7729
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7731
+
+  [[rooms.mob_resets]]
+  vnum = 7702
+  max = 1
+
+[[rooms]]
+vnum = 7747
+name = "Deep Within the Astral Plane"
+sector = "field"
+description = """
+You have travelled deep inside the astral field.  Here the fabric of the
+field has become twisted and warped due to the proximity of another plane of
+existence.  Some of the tendrils of light that line the astral field have been
+warped and twisted into portals to other worlds.
+   Take care before you step through one -- you might never return."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7734
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7746
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7730
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7728
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7748
+
+  [[rooms.mob_resets]]
+  vnum = 7715
+  max = 3
+
+[[rooms]]
+vnum = 7748
+name = "Deep Within the Astral Plane"
+sector = "field"
+description = """
+You have travelled deep inside the astral field.  Here the fabric of the
+field has become twisted and warped due to the proximity of another plane of
+existence.  Some of the tendrils of light that line the astral field have been
+warped and twisted into portals to other worlds.
+   Take care before you step through one -- you might never return."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7735
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7731
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7749
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7747
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7732
+
+[[rooms]]
+vnum = 7749
+name = "Deep Within the Astral Plane"
+sector = "field"
+description = """
+You have travelled deep inside the astral field.  Here the fabric of the
+field has become twisted and warped due to the proximity of another plane of
+existence.  Some of the tendrils of light that line the astral field have been
+warped and twisted into portals to other worlds.
+   Take care before you step through one -- you might never return."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7748
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7745
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7732
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7729
+
+  [[rooms.mob_resets]]
+  vnum = 7715
+  max = 3
+
+[[rooms]]
+vnum = 7750
+name = "Inside the Githyanki Keep"
+sector = "inside"
+description = """
+You are standing just inside a nexial portal that leads out onto the
+Astral Plane.  It seems that you have found the lair of the Githyanki,
+the once-human followers of Lord Gith.  Ahead of you stands a steel door
+leading into the keep hewn from stone."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7751
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7745
+
+[[rooms]]
+vnum = 7751
+name = "A guard station"
+sector = "inside"
+description = """
+This is a small building just inside the keep.  Doors lead out to the east
+and west.  Some small weapons hang on hooks on the walls, for use in defense
+of the keep.
+   Doors stand in all directions save north."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7761
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7750
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7752
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+[[rooms]]
+vnum = 7752
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+   The cobblestone road turns to the north, ending to the east at an iron door."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7753
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7751
+  flags = ["door"]
+
+[[rooms]]
+vnum = 7753
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+   The cobblestone road continues to the north and south.  Doors to the east
+and west lead into stone buildings."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7754
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7762
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7752
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7769
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7711
+  max = 6
+
+[[rooms]]
+vnum = 7754
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+  The cobblestone road turns to the south and continues on to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7755
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7753
+
+[[rooms]]
+vnum = 7755
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+  The cobblestone road continues to the east and west.  To the north you see a 
+massive building and a pair of large doors."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7774
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7756
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7754
+
+  [[rooms.mob_resets]]
+  vnum = 7708
+  max = 3
+
+[[rooms]]
+vnum = 7756
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+  The cobblestone road continues to the east and west.  A door to the south
+leads into a tall stone building."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7757
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7764
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7755
+
+[[rooms]]
+vnum = 7757
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+   The cobblestone road turns to the west and continues to the south.  A door
+to the north leads into a tall stone building."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7773
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7758
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7756
+
+[[rooms]]
+vnum = 7758
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+   The cobblestone road continues to the north and south.  To the east is a
+door in a large stone building."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7757
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7767
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7759
+
+[[rooms]]
+vnum = 7759
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+   The cobblestone road continues to the north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7758
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7760
+
+  [[rooms.mob_resets]]
+  vnum = 7711
+  max = 6
+
+[[rooms]]
+vnum = 7760
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+   The cobblestone road turns to the north and continues on to the west.  To
+the east is a door in a large stone building."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7759
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7765
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7761
+
+[[rooms]]
+vnum = 7761
+name = "A grey road"
+sector = "city"
+description = """
+The ground beneath your feet is a uniformly grey cobblestone.  A dull red
+sun hangs in an orange sky above your head; you hear none of the sounds you
+would commonly associate with a normal city.
+   The cobblestone road goes on to the east, ending to the west at an iron door.
+A door to the north leads into a small stone building."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7763
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7760
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7751
+  flags = ["door"]
+
+[[rooms]]
+vnum = 7762
+name = "A small building"
+sector = "inside"
+description = """
+You have stepped inside a dimly lit building, which apparently serves as
+living quarters for several githyanki gish.  The walls are heavy stone blocks, 
+covered with panels of strangely knotted and twisted wood.  A couple of candles
+burn dimly in sconces here and there."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7753
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7711
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 7711
+  max = 6
+
+[[rooms]]
+vnum = 7763
+name = "A small building"
+sector = "inside"
+description = """
+You have stepped inside a dimly lit building, which apparently serves as
+living quarters for several githyanki gish.  The walls are heavy stone blocks, 
+covered with panels of strangely knotted and twisted wood.  A couple of candles
+burn dimly in sconces here and there."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7761
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7711
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 7711
+  max = 6
+
+[[rooms]]
+vnum = 7764
+name = "A large dwelling"
+sector = "inside"
+description = """
+You have stepped inside a dimly lit building with vaulted ceilings and high
+windows.  The walls are heavy stone blocks that rise tens of feet above your
+head, covered with panels of strangely knotted and twisted wood.  On the floor
+are charcoal stencils of pentagrams and various other ominous sigils."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7756
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7712
+  max = 4
+
+[[rooms]]
+vnum = 7765
+name = "The Githyanki Weaponry"
+sector = "inside"
+description = """
+A large chamber, full of weapons in various states of completion.  Strange
+glowing blocks of silvery metal are being pounded and rolled out into deadly 
+razor-sharp knives, daggers, and swords.
+   Sounds of hammering and blasts of heat and strange smells come from the open
+doorway to the north.  An iron door stands to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7766
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7760
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+[[rooms]]
+vnum = 7766
+name = "The Forge"
+sector = "inside"
+description = """
+In the center of the room is a massive furnace which emits great gouts of
+heat and a strange smell which comes from the melting of the silvery metal used
+by the githyanki.  A large trough of icy water stands to the west, used for 
+quenching hot metal.
+   Doorways stand to the north and south.  The furnace door lies to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7767
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7768
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7765
+
+[[rooms]]
+vnum = 7767
+name = "The Githyanki Armoury"
+sector = "inside"
+description = """
+A large chamber, full of suits of armor in various states of completion.  In
+this chamber the hard steels of the githyanki are shaped into ornately fashioned
+suits of mail.
+   Sounds of hammering and blasts of heat and strange smells come from the open
+doorway to the south.  An iron door stands to the west."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7766
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7758
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+[[rooms]]
+vnum = 7768
+name = "Inside the furnace"
+sector = "inside"
+description = """
+You gasp for breath and choke on toxic sulphur and brimstone.  The sweat
+on your forehead is instantly vaporized by the flames that surround you.  You
+begin to feel faint and dizzy from the heat...
+
+... you'd better leave before you pass out and burn to a cinder!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7768
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7768
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7766
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7718
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 7719
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 7719
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 7719
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 7719
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 7719
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 7719
+  max = 6
+
+[[rooms]]
+vnum = 7769
+name = "A guard station"
+sector = "inside"
+description = """
+You are standing in a small, fairly empty building that serves as the prison
+for the keep.  The building is small because the githyanki do not make a habit 
+of taking prisoners, and those that they do capture do not last long.
+   The cellblock lies to the west and the grey stone road is to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7753
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 7770
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 7707
+  max = 8
+
+[[rooms]]
+vnum = 7770
+name = "The cellblock"
+sector = "inside"
+description = """
+A torch flickers in the western wall, providing some illumination for this
+dim corridor.  Some whips, manacles, and chains hang on the walls -- they seem
+to have been used recently.
+   Cell doors stand to the north and south.  The guard station is to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7771
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 7769
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7772
+  flags = ["door"]
+
+[[rooms]]
+vnum = 7771
+name = "A cramped cell"
+sector = "inside"
+description = """
+You are in a tiny, cold, dank cell.
+  The only exit is back through the door to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7770
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7717
+  max = 1
+
+[[rooms]]
+vnum = 7772
+name = "A tiny cell"
+sector = "inside"
+description = """
+You are in a cold, dank, cramped cell.
+   The only exit is back through the door to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7770
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7716
+  max = 1
+
+[[rooms]]
+vnum = 7773
+name = "A large dwelling"
+sector = "inside"
+description = """
+You have stepped inside a dimly lit building with vaulted ceilings and high
+windows.  The walls are heavy stone blocks that rise tens of feet above your
+head, covered with panels of strangely knotted and twisted wood.  On the floor
+are charcoal stencils of pentagrams and various other ominous sigils."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7757
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7712
+  max = 4
+
+[[rooms]]
+vnum = 7774
+name = "South End of the Hall"
+sector = "inside"
+description = """
+This is a massive stone hall, lit by flaming blue stones set into the walls.
+Massive suits of armor line the walls, holding weapons fashioned from a strange
+silvery metal.
+   The great hall continues to the north and ends in a pair of huge metal doors
+to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7775
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7755
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7712
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 7712
+  max = 4
+
+[[rooms]]
+vnum = 7775
+name = "North End of the Hall"
+sector = "inside"
+description = """
+This is a massive stone hall, lit by flaming blue stones set into the walls.
+Massive suits of armor line the walls, holding weapons fashioned from a strange
+silvery metal.
+   The great hall continues to the south.  An archway leads into a dimly lit
+room to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7776
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7774
+
+[[rooms]]
+vnum = 7776
+name = "The Altar Chamber"
+sector = "inside"
+description = """
+Your eyes have trouble adjusting to the dim lighting.  All around you are
+columnar statues of githyanki turned towards the altar standing at the top
+of a series of steps."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7777
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7775
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7709
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 7709
+  max = 2
+
+[[rooms]]
+vnum = 7777
+name = "Before the Altar"
+sector = "inside"
+description = """
+You have climbed the mighty steps of the altar chamber and stand before a
+huge altar use to pay tribute to Lord Gish, long-dead ruler of the githyanki.
+The altar is covered in blood and radiates unspeakable power that is absorbed
+by the horrible presence which stands before you."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 7776
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7778
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 7713
+  max = 1
+
+[[rooms]]
+vnum = 7778
+name = "A Gateway to the Underworld"
+sector = "city"
+description = """
+You step through the tiny hole in the altar, and stand before a swirling
+field of blackness.  Through the field you can hear the howls of lost souls
+and long-dead beings."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 7777
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 7779
+  key = 7724
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 7779
+name = "Utter darkness and despair"
+sector = "air"
+description = """
+It is pitch black...
+
+  You are overwhelmed by the sensation of death and horrible pain as a shape
+begins to coalesce before you."""
+
+  [[rooms.mob_resets]]
+  vnum = 7714
+  max = 1
+

@@ -1,0 +1,457 @@
+[[mobiles]]
+vnum = 2200
+keywords = ["oldstyle", "hatchling", "dragon", "baby"]
+short_desc = "the dragon hatchling"
+long_desc = "A dragon hatchling is here, chewing on a bone."
+description = """
+This small dragon hisses at you as you enter the room.  Although it is only a
+few feet long, its sharp teeth make you think twice about petting it."""
+level = 13
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 2201
+keywords = ["oldstyle", "draconian"]
+short_desc = "the Draconian"
+long_desc = "The Draconian is standing here."
+description = """
+This horrible creature is a bizarre cross between a man and a dragon.  He 
+has black scales and a seven foot wingspan.  He scowls at you and hefts his 
+spear as you enter the room."""
+level = 25
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 2202
+keywords = ["oldstyle", "lord", "crypt", "master"]
+short_desc = "the dragon master"
+long_desc = "The lord of this crypt is here."
+description = "He doesn't look happy to see you."
+level = 54
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 650
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 2203
+keywords = ["oldstyle", "man", "mage", "wizard"]
+short_desc = "a powerful mage"
+long_desc = "A man is here, studying some books."
+description = """
+A powerful looking mage is standing in this room studying his spells.  You are
+surprised at the fact that he is human, and realize that he must be very
+powerful to have been accepted by the creatures which live here."""
+level = 43
+sex = "male"
+act_flags = ["npc", "sentinel", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 2204
+keywords = ["oldstyle", "cleric", "draconian"]
+short_desc = "the holy Draconian"
+long_desc = "A Draconian is here, deep in thought."
+description = """
+A Draconian stands here, dressed in simple robes.  Around his neck you 
+notice a golden medallion in the shape of a five headed dragon."""
+level = 43
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 400
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 6
+
+[[mobiles]]
+vnum = 2205
+keywords = ["oldstyle", "king", "draconian"]
+short_desc = "the Draconian King"
+long_desc = "A Draconian wearing fine clothes is here, pondering his greatness."
+description = """
+The king of the draconians sits here on a golden throne.  He looks as 
+though he could crush your head with a single blow.  Yet you sense that he 
+is controlled by a greater power."""
+level = 52
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 600
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 7
+  bonus = 7
+
+[[mobiles]]
+vnum = 2206
+keywords = ["oldstyle", "concubine", "draconian"]
+short_desc = "a concubine"
+long_desc = "A concubine is resting here."
+description = """
+This is a concubine of the king.  She is lounging here, wearing nothing at 
+all.  You find yourself strangely repulsed as she draws a knife and 
+prepares to defend herself."""
+level = 11
+sex = "female"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 2207
+keywords = ["oldstyle", "bodyguard", "draconian"]
+short_desc = "A bodyguard"
+long_desc = "A bodyguard is here, staring at you menacingly."
+description = """
+This creature has devoted its life to defending the king.  Your intrusion has
+not pleased it."""
+level = 36
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_evil", "detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 2220
+keywords = ["oldstyle", "tiamat", "dragon"]
+short_desc = "Tiamat"
+long_desc = "A five headed dragon hisses at you as you enter this room."
+description = """
+You see before you the master of this Tower, Tiamat.  She frowns at you as she
+prepares to make you pay for your insolence ... with your lives!"""
+level = 102
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "flying", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 5500
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 7
+  bonus = 20
+
+[[mobiles]]
+vnum = 2221
+keywords = ["oldstyle", "dragon", "red"]
+short_desc = "the Great Red Dragon"
+long_desc = "A red dragon is here, contemplating your existence."
+description = """
+This huge red dragon dominates the chamber.  As you turn to flee, he grins at
+you and invites you to stay ... forever!"""
+level = 89
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 3000
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 4
+  bonus = 16
+
+[[mobiles]]
+vnum = 2222
+keywords = ["oldstyle", "dragon", "black"]
+short_desc = "the Great Black Dragon"
+long_desc = "A black dragon is here, laughing at your insolence."
+description = """
+This huge black wyrm laughs at your puny weapons.  You realize that he is not
+going to roll over and die for you."""
+level = 78
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 10
+  bonus = 1700
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 6
+  bonus = 13
+
+[[mobiles]]
+vnum = 2223
+keywords = ["oldstyle", "dragon", "white"]
+short_desc = "the Great White Dragon"
+long_desc = "A white dragon is here, waiting for you."
+description = """
+This dragon towers over you.  Recalling your previous experiences with white
+dragons, you are not afraid.  She smiles at you and says 'I think you will find
+me a greater challenge than my offspring.'"""
+level = 74
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1500
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 10
+  bonus = 12
+
+[[mobiles]]
+vnum = 2225
+keywords = ["oldstyle", "dragon", "green"]
+short_desc = "the Ancient Green Dragon"
+long_desc = "A green dragon is here, looking distraught."
+description = """
+This huge beast appears to be the most directly related to the draconians. 
+She looks at you with sorrow in her eyes and says 'You have slaughtered my 
+children.  Prepare to die.'"""
+level = 81
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 2000
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 8
+  bonus = 14
+
+[[mobiles]]
+vnum = 2226
+keywords = ["oldstyle", "hydra"]
+short_desc = "a large hydra"
+long_desc = "A hydra is here, blocking the doorway."
+description = """
+A hydra is here, guarding the entrance to a sealed vault.  You have the feeling
+it isn't happy to see you."""
+level = 36
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 2227
+keywords = ["oldstyle", "slave", "human"]
+short_desc = "A human slave"
+long_desc = "A Human slave is here, hard at work."
+description = """
+He looks like he's under a lot of stress.  He would probably like it if you
+left him alone."""
+level = 9
+sex = "male"
+act_flags = ["npc", "sentinel", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 2240
+keywords = ["oldstyle", "zombie", "draconian"]
+short_desc = "a Draconian zombie"
+long_desc = "A Draconian zombie is here, staring at nothing in particular."
+description = """
+This used to be one of the warriors of this tribe.  He was denied his final
+rest, however, and now guards this corridor tirelessly as a zombie."""
+level = 18
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 2241
+keywords = ["oldstyle", "dragon", "phase"]
+short_desc = "the phase dragon"
+long_desc = "A Phase Dragon is darting around the room."
+description = "This small dragon looks like he's up to no good."
+level = 20
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 2242
+keywords = ["oldstyle", "fool", "draconian"]
+short_desc = "the draconian fool"
+long_desc = "A Fool is here, making fun of you."
+description = """
+This dragon man looks VERY foolish, dressed in a green and blue striped 
+suit.  As you enter the room, he points at you and laughs."""
+level = 9
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 2243
+keywords = ["oldstyle", "queen", "draconian"]
+short_desc = "the Draconian Queen"
+long_desc = "A Female Draconian sits, here, looking very important."
+description = """
+This draconian looks VERY busy as she orders her slaves around.  You think 
+it might be a good idea to leave her alone."""
+level = 39
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+

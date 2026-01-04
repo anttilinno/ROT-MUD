@@ -1,0 +1,130 @@
+[[objects]]
+vnum = 6600
+keywords = ["axe", "toy"]
+short_desc = "a toy axe"
+long_desc = "An axe made of wood lies here."
+item_type = "weapon"
+level = 0
+weight = 30
+cost = 250
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 5
+
+[[objects]]
+vnum = 6601
+keywords = ["ring", "pink", "ice"]
+short_desc = "a pink ice ring"
+long_desc = "A pink ice ring draws your eye."
+item_type = "treasure"
+level = 5
+weight = 10
+cost = 620
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 6621
+keywords = ["robe", "linen"]
+short_desc = "a linen robe"
+long_desc = "A linen robe is crumpled into a ball here."
+item_type = "armor"
+level = 13
+weight = 50
+cost = 780
+wear_flags = ["take", "about"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+[[objects]]
+vnum = 6622
+keywords = ["broom"]
+short_desc = "a broom"
+long_desc = "A stout straw broom lies on the floor."
+item_type = "weapon"
+level = 7
+weight = 30
+cost = 270
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -1
+
+[[objects]]
+vnum = 6644
+keywords = ["meat", "steak"]
+short_desc = "a juicy steak"
+long_desc = "A juicy steak sits on a plate here."
+item_type = "food"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 6645
+keywords = ["steak", "rotten"]
+short_desc = "a rotten steak"
+long_desc = "A dry steak lies on the floor."
+item_type = "food"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 6646
+keywords = ["potion", "amber"]
+short_desc = "an amber potion"
+long_desc = "An amber potion sits in a corner."
+item_type = "potion"
+level = 0
+weight = 10
+cost = 150
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 6647
+keywords = ["gun", "toy"]
+short_desc = "a toy gun"
+long_desc = "A toy gun with a sharp bayonet lies here."
+item_type = "weapon"
+level = 7
+weight = 20
+cost = 300
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -1
+

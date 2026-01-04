@@ -1,0 +1,8 @@
+id = "haon_dor"
+name = "Haon Dor"
+credits = "{09 20} Diku    Haon Dor"
+reset_interval = 120
+
+[vnum_range]
+min = 6000
+max = 6199

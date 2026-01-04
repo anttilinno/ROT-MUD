@@ -1,0 +1,4136 @@
+[[rooms]]
+vnum = 13000
+name = "Florist shop & Herbalist"
+sector = "inside"
+description = """
+You are standing in a fragrant, sunny room surrounded by dried herbs,
+fresh-cut and potted flowers, and plants.  Sprigs of herbs hang from
+the stucco walls, tied with twine or ribbon; pots of herbal extracts
+and medicines line the wall behind the long marble counter in the
+back corner.  A large skylight opening allows sunlight to stream across
+the leafy, lush green plants.  Small stands and carts are arranged
+throughout.  Large bouquets of fresh-cut flowers and garlands festoon
+the marble counter, ready to be purchased for the last-minute wedding...
+or a quick romantic evening.  A stone door is located to the west,
+and there is a staircase leading down."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13153
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13001
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13002
+
+  [[rooms.mob_resets]]
+  vnum = 13006
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 13007
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 13008
+  max = 1
+
+[[rooms]]
+vnum = 13001
+name = "A stone vault"
+sector = "inside"
+description = """
+A small stone vault lined with shelves of various planters, plants,
+fresh-cut flowers, and bags of soil.  The variety of flowers is endless;
+roses, tulips, violets, and daffodils; fragrant jasmine, hyacinths, and
+magnolias; long-stemmed irises; brilliant peonies; soft fern, heather,
+and lilacs; garlands, baby's breath, and broad-leaved laurels..."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13000
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13002
+name = "A dark, cool cellar"
+sector = "inside"
+description = """
+This cellar is rather humid and cool.  Surprisingly clean for such a
+dark place, the room is filled with the aroma of damp earth and wet
+stone; fresh growth, and fertilizer.  Along one wall a variety of
+smooth, bulbous mushrooms are growing in long, shallow troughs.  A low,
+heavy wood-plank table sits in one corner.  A variety of herbs and
+leaves are spread here on drying racks.  A mortar and pestle of dark
+grey granite rest here.  Bunches of herbs and drying mosses are caught
+up into bunches, and hang from the low ceiling.  Along the left wall is
+a row of colorful spools of ribbon, a spool of floral wire, and a
+variety of floral supplies."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13000
+
+[[rooms]]
+vnum = 13003
+name = "An empty, abandoned shop"
+sector = "inside"
+description = """
+The room is dark and musty, its windows boarded up.  There is trash
+littering the floor."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13152
+
+[[rooms]]
+vnum = 13004
+name = "An empty, abandoned shop"
+sector = "inside"
+description = """
+The room is better lit than the one next door.  There are two windows on
+the east wall.  Through them, you can see a north-south running street, and
+buildings across the way."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13151
+
+[[rooms]]
+vnum = 13005
+name = "Howell's Jeweller's"
+sector = "inside"
+description = """
+This well-lit shop is accentuated by the light dancing off the surfaces
+of virtually hundreds of gems, jewels, and precious & semi-precious
+stones.  Along the north wall is a padded counter lined with silk.  On
+the east wall is a glass counter of blue gems.  To the south, red gems
+line another case; and to the west, green gems radiantly glow in a
+fourth case.  With so many beautiful items from which to choose, it
+should be a simple task to select a ring or gift.  There is a sign on
+the counter."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13154
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13149
+
+  [[rooms.mob_resets]]
+  vnum = 13005
+  max = 1
+
+[[rooms]]
+vnum = 13006
+name = "A dark alleyway"
+sector = "city"
+description = """
+An eerie, silent black alleyway is here.  You can hear a soft
+"scratch-scratch", as though of scales or claws on stone from the
+darkened corners."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13007
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13155
+
+[[rooms]]
+vnum = 13007
+name = "A dark alleyway"
+sector = "city"
+description = """
+An eerie, silent black alleyway is here.  You can hear a soft
+"scratch-scratch", as though of scales or claws on stone from the
+darkened corners."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13006
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13008
+
+[[rooms]]
+vnum = 13008
+name = "A dark alleyway"
+sector = "city"
+description = """
+An eerie, silent black alleyway is here.  You can hear a soft
+"scratch-scratch", as though of scales or claws on stone from the
+darkened corners."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13007
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13148
+
+[[rooms]]
+vnum = 13009
+name = "Magnum's Formalwear"
+sector = "inside"
+description = """
+This unusual formal wear shop has typical vertical racks of clothing to
+the east and the west.  The racks on the left contain new, clean,
+sharply-pressed clothing; suits, trousers, tuxedos, and clawhammer-style
+coats.  To the right are racks and bundles of worn, forlorn, threadbare,
+grungy items for the groom-on-a-budget.  At the back of the shop is the
+typical counter; but prominently displayed on and around it on a shelf
+are bright, gaudy, shocking Hawaiian-print shirts, pants, and shorts."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13010
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13013
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13156
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 13001
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 13004
+  max = 1
+
+[[rooms]]
+vnum = 13010
+name = "The men's dressing room"
+sector = "inside"
+description = """
+This small foyer leads into two dressing areas; one to the east, one to
+the west.  Due north is a full-length, three-sided mirror."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13011
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13009
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13012
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13011
+name = "The dressing room cubicle"
+sector = "inside"
+description = """
+This small dressing room has a bench against one wall, and a mirror on
+the other.  Small wooden pegs are driven into the wall about six feet
+from the floor level."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13010
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13012
+name = "The dressing room cubicle"
+sector = "inside"
+description = """
+This small dressing room has a bench against one wall, and a mirror on
+the other.  Small wooden pegs are driven into the wall about six feet
+from the floor level."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13010
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13013
+name = "Sherri Bridals"
+sector = "inside"
+description = """
+This neat, airy shop is bustling with activity.  The seamstress seems to
+virtually fly from customer to customer to keep up with the rush.  Along
+the east and west walls are long racks of white and off-white wedding
+dresses, and sequined formal gowns in every color.  A wooden shelf of
+lingerie and hoopskirts hangs above the rack.  Along the back wall is a
+counter in one corner, and a carpeted pedestal in the other, surrounded
+by a three-sided full-length mirror.  Racks of flowing veils are scattered
+throughout the shop.  A small counter containing tiaras, lace gloves,
+handkerchiefs, and various bridal accessories is located near the front of
+the shop.  There are windows along the east wall of the shop, showing the
+street outside."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13014
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13157
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13009
+
+  [[rooms.mob_resets]]
+  vnum = 13000
+  max = 1
+
+[[rooms]]
+vnum = 13014
+name = "The ladies' dressing room"
+sector = "inside"
+description = """
+This spacious area was constructed with the bride and her maids-of-honor
+in mind; it is large enough for at least ten people to sit or stand
+comfortably.  There are no adjacent dressing rooms here; all changes are
+done in some part of this general room.  Mirrors line the walls, and a
+large three-sided mirror is at the back of the room.  Large racks of
+discarded dresses are prominent.  Comfortable chairs and couches are
+spread around the room."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13013
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13015
+name = "An empty, abandoned store"
+sector = "inside"
+description = """
+Cobwebs canopy the ceiling and blanket the piles of trash and fallen
+debris in this abandoned building.  Litter is scattered across the floor,
+covered with dust and rat droppings.  There are exits east & north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13145
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13187
+
+[[rooms]]
+vnum = 13016
+name = "Photographer's studio"
+sector = "inside"
+description = """
+Hmmm...this place looks more like a mad scientist's laboratory than a
+photographer's studio...test tubes, bubbling potions, steaming flasks,
+and coils of copper and glass tubing litter the main counter, as well as
+those along each wall.  Long strips of sticky yellow film hang from the
+rafters, twisting lazily.  Upon closer examination, you discover
+partially decomposed fly bodies scattered on the strips....EWWWW! This
+is a flystrip, not a roll of film!!! Exits are north to the street and
+west to a darkened room."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13144
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13017
+
+  [[rooms.mob_resets]]
+  vnum = 13009
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 13010
+  max = 1
+
+[[rooms]]
+vnum = 13017
+name = "A darkened room"
+sector = "inside"
+description = """
+This room is completely black.  There appear to be no windows, and no
+exits, save the one through which you entered."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13016
+
+[[rooms]]
+vnum = 13018
+name = "An abandoned storehouse"
+sector = "inside"
+description = """
+This old storehouse has long shelves lining each of the walls.  A few
+dusty wooden bins line the east wall.  Pieces of withered, desiccated
+corn hulls and bits of grain litter the floor.  The place smells musty.
+There are exits to the north and to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13143
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13146
+
+[[rooms]]
+vnum = 13019
+name = "Higgins' Haberdashery"
+sector = "inside"
+description = """
+This small, well-tended shop has a clean-pressed, immaculate look to it.
+The north wall is lined with trim, narrow shelves sporting a wide array
+of hats in all shapes, styles, and colors.  The south wall is similarly
+constructed, thought these hats look slightly more worn.  A neat row of
+hat racks lines each side of the aisle leading to the back of the shop
+and a long, polished wooden counter.  You can hear classical music being
+played faintly from somewhere nearby."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13147
+
+  [[rooms.mob_resets]]
+  vnum = 13003
+  max = 1
+
+[[rooms]]
+vnum = 13020
+name = "The Cobbler & Shoe Store"
+sector = "inside"
+description = """
+A small shop containing a maze of tall racks, each containing several
+horizontal rows of shelves.  Each shelf has, prominently displayed, a
+variety of boots, shoes, dancing slippers, and "mules".  A tall rack
+near the door contains laces, polish, shoehorns, and shoe trees.  Along
+the south side of the aisle running down the middle of store are several
+long, low, padded benches.  The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13148
+
+  [[rooms.mob_resets]]
+  vnum = 13002
+  max = 1
+
+[[rooms]]
+vnum = 13021
+name = "A Gift Shop"
+sector = "inside"
+description = """
+This mid-sized shop is crammed full of items both rare and common.
+Although there seems to be nothing holding the items up for display, you
+think you can see a bit of wooden shelving peeking through the items
+here and there.  Blenders, antique furniture, afghans, books, jewelry,
+glass doorknobs, rusty chainmail, brass lamps, carved ivory tusks...it
+ALL seems to be here.  There is an exit east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13147
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13021
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 13022
+name = "An empty room."
+sector = "inside"
+description = """
+This room is completely empty.  The walls are dull grey, and you can
+peer through the cracks in the planks.  The floor is dirty and dusty.
+The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13146
+
+[[rooms]]
+vnum = 13023
+name = "An alleyway"
+sector = "city"
+description = """
+An alleyway running north and south.  To the north, you can see the
+church square.  To the south, you can see an unkempt courtyard and a
+large tree."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13139
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13024
+
+[[rooms]]
+vnum = 13024
+name = "An abandoned, unkempt courtyard"
+sector = "city"
+description = """
+Scraggly weeds lie forlornly tangled at about knee-height.  Ivy clings
+desperately to the cobbles of the surrounding buildings, and creeps
+upward toward the eaves.  A huge tree with faded, papery silver bark
+grows in the center of the courtyard, its branches spreading parallel
+to the ground, and reaching up much farther than the eyes can see.
+Small, dull gold-brown leaves seem to cling for dear life to the tree,
+and appear to be long dead.  There is an exit north, and one to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13023
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13021
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13025
+name = "A caterer's shop"
+sector = "inside"
+description = """
+This small shop is sparsely decorated, save for a long glass counter and
+a few chairs.  There are a few engravings of various food items carved
+into the wooden walls on each side.  A delightful aroma of roasting meat
+and fresh baked goods wafts from the back of the shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13140
+
+[[rooms]]
+vnum = 13026
+name = "Erasmus' Mystical Oils and Potions"
+sector = "inside"
+description = """
+This moderately-lit, aromatic shop is totally disorganized....vials,
+flasks, jars, canisters, and tubes of all shapes and sizes seem to be
+cast about the shop haphazardly.  Despite the disarray, the place has
+a cheery feel; the scent of orange peel and rose hips, cinnamon and
+cloves, bergamot, jasmine, berries, and cedar and sandalwood intermingle
+and seem to seep into your senses.  In the middle of the store is a
+narrow granite counter, almost hidden by potions, petals, and powders.
+In the center of it is a large mortar and pestle, and a burner upon
+which some mysterious but arousing liquid bubbles and foams."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13141
+
+[[rooms]]
+vnum = 13027
+name = "The Linens Shop"
+sector = "inside"
+description = """
+A well-lighted, dazzlingly bright shop.  Shelves line each wall, and
+are loaded with neatly-folded, crisply-pressed sheets, pillowcases, and
+shams.  Fluffy towels are piled high on the west wall, their colors
+varying from pristine, brilliant white to deepest midnight blue.
+Finger towels, hand towels, and washcloths are stacked neatly on the
+counter."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13142
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13167
+
+[[rooms]]
+vnum = 13028
+name = "An Overgrown Room"
+sector = "inside"
+description = """
+Outcast plants seem to congregate here.  They grow out of the floorboard,
+out of the walls, and down from the ceiling.  In fact, they seem to walk
+in unaccompanied and sit in the corner.  Go figure.  There is a fern in
+the corner.  Ivy dribbles down the south wall.  A lack of oxygen makes
+it difficult to breathe."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13168
+
+[[rooms]]
+vnum = 13029
+name = "The Library"
+sector = "inside"
+description = """
+This is a very nice place to spend an afternoon.  Books are scattered
+about shelves that run N-S across the entire length of the room.  The
+librarian must be either very lazy or very dead.  Most of the books here
+are heaped into the book return bin."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13169
+
+[[rooms]]
+vnum = 13030
+name = "We Be Weddings"
+sector = "inside"
+description = """
+This wooden-plank lined room is....unimpressive at best.  Black and
+pink checkered curtains hang limply from the windows.  A single,
+tattered brown streamer is tiredly tacked to the front of the plywood
+podium.  A gilded-frame picture of the Almighty Elvis hangs lopsidedly
+next to an old photo labeled "Forrest Gump".  Near the ramshackle podium
+is an old willow rocker, in which slumps perhaps the OLDEST creature
+living...you know it's alive, as a thin trickle of smoke dribbles lazily
+from a drooping corncob pipe between its withered lips.  A large
+sunflower is displayed prominently in front of the podium."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13031
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13143
+
+[[rooms]]
+vnum = 13031
+name = "The Church foyer"
+sector = "inside"
+description = """
+This foyer is rather sparse in furnishings.  There are a few iron candle
+stick holders and candelabras scattered about, with dimly-glowing tapers
+atop them.  A long, heavy tapestry hangs from each side of the northern
+door; fairly simplistic in design, it is nonetheless richly embroidered
+with blue and gold threads.  There is an exit to the north into the
+sanctuary, east into another foyer, west into the Budget Wedding chapel,
+and south to the church square."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13036
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13032
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13144
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13030
+
+[[rooms]]
+vnum = 13032
+name = "The Church foyer"
+sector = "inside"
+description = """
+This foyer is rather sparse in furnishings.  There are a few iron candle
+stick holders and candelabras scattered about, with dimly-glowing tapers
+atop them.  A long, heavy tapestry hangs from each side of the northern
+door; fairly simplistic in design, it is nonetheless richly embroidered
+with blue and gold threads.  There is an exit to the north, into the
+sanctuary, west into another foyer, and south to the church square."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13035
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13145
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13031
+
+[[rooms]]
+vnum = 13033
+name = "The healing room"
+sector = "inside"
+description = """
+This peaceful, quiet room is the epitome of tranquillity; pecan paneling
+and flooring glisten throughout, its medium-colored wood polished to an
+unearthly brightness.  A small fountain, spring-fed from the watersource
+behind the church, bubbles quietly in the center of the room, and is
+surrounded by four walkways, each leading from the four central
+directions to its edge.  The cistern is cool black marble, and a light
+from some unknown source glows from within its depths.  Bright,
+brilliant goldfish and carp flash and flip about the pool surrounding
+the central square.  Leafy, feathery plants grow throughout and surround
+the fountain and the wall perimeter.  The south wall is paneled in a
+darker-pecan carved screen, from behind which a soft yellow light glows
+peacefully.  Zabuton pillows, thin yet comfortable, are scattered about
+the floor.  The exit is to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13034
+
+[[rooms]]
+vnum = 13034
+name = "The chapel"
+sector = "inside"
+description = """
+This small, intimate chapel is more druidic than not; it is filled with
+trees and leafy green plants.  Sunshine streams in through skylights and
+the east wall, which is paneled in carved wooden screens.  A small brook
+winds through the chapel from north to south, and disappears under the
+floor to the south.  A small footbridge divides the brook, and small fish
+can be seen darting about beneath the water.  There is a carved wooden
+altar near the north wall; small, comfortable benches face the altar in
+two columns forming a single row from north to south.  There is a paneled
+door to the north, a door to the south, and an exit to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13046
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13033
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13035
+
+[[rooms]]
+vnum = 13035
+name = "The sanctuary"
+sector = "inside"
+description = """
+This massive room is lavishly paneled in dark, rich mahogany, polished
+to an unearthly glow.  Rows and rows of matching dark pews are lined
+up neatly on either side of a long central aisle.  A lavishly
+embroidered runner in blues, golds, and reds runs between the rows of
+pews.  Four ceiling-high, elaborately-colored stained glass windows
+decorate the north wall behind the main altar, and depict the four
+primary gods and goddess of Thera in various poses: Vengeance, Eriana,
+Felix, and Tim, as they represent the four primary directions of the map.
+Deep, rolling bass organ music plays softly from a hidden source, and
+seems to roll from the top of the carved wooden cathedral ceiling.
+Silver candelabras holding long white tapers glow softly at the back of
+the room, along the aisle, and around the altar.  There is a door to the
+north, near the altar, an exit east into the chapel, one south to the
+vestibule, and one west into the sister-sanctuary."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13045
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13034
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13032
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13036
+
+[[rooms]]
+vnum = 13036
+name = "The sister-sanctuary"
+sector = "inside"
+description = """
+This sanctuary is paneled in modest oak.  The benches, which form two
+parallel rows running alongside a central aisle, and the wall paneling
+re also oak.  Clear, multi-paned windows stretching to the ceiling allow
+sunlight to flood the sanctuary with an almost holy light.  Beyond the
+windows, you see the church garden and the summerhouse, in which many
+weddings are performed.  There is an exit to the north, to the gazebo
+and gardens; an exit east into the sister-sanctuary; an exit south into
+the vestibule; and an exit west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13040
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13035
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13031
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13037
+
+[[rooms]]
+vnum = 13037
+name = "An empty room"
+sector = "inside"
+description = """
+This room is featureless and empty, save a few benches piled against the
+west wall.  There is a door north and an exit east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13038
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13036
+
+[[rooms]]
+vnum = 13038
+name = "A corner of the garden"
+sector = "city"
+description = """
+A large 10' hedge runs the perimeter of this corner of the garden.
+Close-cropped, cool green grass peeks from between flagstone footpaths,
+and from beneath groundflowers.  The flagstones twist about through the
+garden and disappear under the willows.  A narrow brook bubbles merrily
+at the north end, running east to west, and disappears beneath the
+willows and cattails to the east.  There is an exit east, into another
+part of the garden, and one south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13039
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13037
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13039
+name = "The garden"
+sector = "city"
+description = """
+This expanse of garden is very like the rest; a large 10' hedge runs the
+perimeter of this corner of the garden.  Close-cropped, cool green grass
+peeks from between flagstone footpaths, and from beneath groundflowers.
+The flagstones twist about through the garden and disappear under the
+willows.  A narrow brook bubbles merrily at the north end, running east
+to west, and disappears beneath the willows and cattails to the east.
+However, to the northeast you can see the large gazebo, towering over
+the trees and disappearing from view.  There is an exit east into
+another section of garden, and another exit west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13040
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13038
+
+[[rooms]]
+vnum = 13040
+name = "The main garden"
+sector = "city"
+description = """
+This expanse of lush, cool, manicured lawn runs basically north-south.
+Cool, matronly willows are scattered here, their branches high enough
+to not annoy most guests.  A sanded path leads from the south exit to
+the sanctuary to the gazebo at the north end.  On either side of the
+path is a row of smooth, polished brown stones, interspersed with
+groundflowers; violets, starflowers, dandelions, and chrysanthemums.
+There is ample room on each side of the path for benches or chairs,
+used frequently for large weddings and parties.  The large, glistening
+white summerhouse is to the north; beneath it runs the east-west
+running brook, from which an outlet has been formed to create a large
+rock garden and waterfall to the southeast of the gazebo.  A tall hedge
+grows behind it, running north-south, and obscuring a corner of the
+gardens.  The exits here are north to the summerhouse, east to the
+garden, south into the sanctuary, and west into another garden corner."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13041
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13045
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13036
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13039
+
+[[rooms]]
+vnum = 13041
+name = "The gazebo (summerhouse)"
+sector = "inside"
+description = """
+This immaculately painted white summerhouse is a popular locale for
+spring and summer weddings.  It is octagonal, with white latticework
+paneling on the off-walls.  Leafy plants and dazzling flowers trail
+lazily from hanging baskets anchored around the ceiling perimeter.
+Padded, comfortable white benches are arranged in two rows on either
+side of the central north-south aisle.  The garden brook runs beneath
+the summerhouse in an east-west direction; one arm of it bends southward
+and spills into a waterfall and rock garden immediately to the southeast.
+The paneling north is butted up against a tight privet hedge, beyond
+which nothing can be seen.  The only exit is south, into the central
+garden."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13040
+
+[[rooms]]
+vnum = 13042
+name = "A gardener's hut"
+sector = "inside"
+description = """
+This small hut is lined in shelves containing typical gardening
+equipment; shears, trimmers, pruners, etc.  A few bags of fertilizer
+and sand are piled on the dusty floor.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13044
+  key = 1
+
+[[rooms]]
+vnum = 13043
+name = "A quiet section of garden"
+sector = "city"
+description = """
+This area is secluded and quiet.  Protected on all four sides by a tall,
+thick hedge, many people are unaware that it exists.  At ground level to
+the north, you can catch glimpses of the brook.  A thick canopy of
+willows obscures the sky here, and the temperature is much cooler here
+than in any part of the garden.  This is an excellent place to meditate,
+rest, or recuperate; it seems well-protected and hidden enough that no
+enemy could easily find it.  In the north east corner is a small
+alabaster statue of the goddess Eriana, and an inscription at her feet.
+There are hidden exits to the east and to the south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13044
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13045
+
+[[rooms]]
+vnum = 13044
+name = "The northeastern corner of the garden"
+sector = "city"
+description = """
+This corner of the garden is secluded enough that it is nearly hidden.
+A few flowers are neatly planted in stone planters.  Trees overhang the
+section, and it is cool and pleasant.  There is a shed to the north, and
+an exit to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13042
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13046
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13043
+
+[[rooms]]
+vnum = 13045
+name = "A part of the garden"
+sector = "city"
+description = """
+This part of the garden is well-traveled; sanded footpaths run from the
+southern door to the east and to the west.  Trees are more sparse here
+than in other areas of the garden.  Flowers are planted neatly along the
+footpaths.  Eastward is another corner of garden; westward is the main
+garden and summerhouse.  The exits here are east, south to the sanctuary,
+and west to the main garden."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13043
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13046
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13035
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13040
+
+[[rooms]]
+vnum = 13046
+name = "A corner of the garden"
+sector = "city"
+description = """
+This corner of garden is less-traveled.  There are fewer flowers and
+plants here.  There is an exit to the north, one south into the chapel,
+and one west into another portion of garden."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13044
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13034
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13045
+
+[[rooms]]
+vnum = 13047
+name = "The Willowtree Inn"
+sector = "inside"
+description = """
+This quiet little inn is a popular spot both for the townsfolk and
+newlyweds.  This main room sports a long, L-shaped bar in the southeast
+corner, behind which is a long mirror.  The paneling throughout the inn
+is a warm lacquered golden oak.  A few tables are scattered about,
+surrounded by chairs and benches.  Round iron candle racks are suspended
+from the flat plank ceiling, and give off a bright, cheery light.  There
+is a cobblestone hearth in the northeast corner, complete with an iron
+beetle and rotisserie.  There are exits to the north, into the dining
+area, and to the west onto the street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13048
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13159
+
+[[rooms]]
+vnum = 13048
+name = "The dining room"
+sector = "inside"
+description = """
+This cozy room is lit by hanging candleracks and a large stone hearth in
+the southeast corner.  A haunch of deer is roasting and sizzling on a
+rotisserie on the fire; and the aroma of rabbit stew, roasting corn, and
+fresh soda bread drift in from the kitchen.  In the center of the room
+is a wooden staircase leading both down to the cellar, and up to the
+rooms.  The other exits are east into the kitchen, and south to the main
+room."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13049
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13047
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13050
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13056
+
+[[rooms]]
+vnum = 13049
+name = "The kitchen"
+sector = "inside"
+description = """
+This large room is lined neatly with shelves of spices, condiments, and
+staples.  In the center of the room is a long, heavy butcher block;
+overhead is an iron butcher's rack from which hang ladles, stirring
+spoons, whisks, and bowls.  A knife block is filled with knives of
+varying shapes & sizes on the counter.  Along the north wall is a long
+wooden counter; at the far end is an enormous washtub filled with dirty
+dishes.  On the south wall is a large iron cookstove.  Shelves of serving
+utensils and earthenware plates and cups and bowls are on either side of
+the door.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13048
+
+[[rooms]]
+vnum = 13050
+name = "The upstairs hallway"
+sector = "inside"
+description = """
+This simple hallway is lighted by sconces every few feet along both
+walls at shoulder height.  There are a few braided rag rugs tossed on
+the floor.  The exits are north, east, west, and down."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13053
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13051
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13052
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13048
+
+[[rooms]]
+vnum = 13051
+name = "An inn room"
+sector = "inside"
+description = """
+This cozy bedroom is fairly simple; against the east wall is an
+enormous, heavy, oak-post bed layered in featherbeds.  Matching
+nightstands are on either side of the bed, beneath paned windows.
+Against the south wall is a low, heavy dresser.  There is a basin and
+pitcher atop the dresser; braided rag rugs are scattered across the
+smooth plank floor.  There are bright cotton curtains in the windows,
+and a matching comforter atop the bed.  In the northwest corner is a
+tall, narrow chiffarobe.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13050
+
+[[rooms]]
+vnum = 13052
+name = "An inn room"
+sector = "inside"
+description = """
+This cozy bedroom is fairly simple; against the west wall is an
+enormous, heavy, oak-post bed layered in featherbeds.  Matching
+nightstands are on either side of the bed, beneath paned windows.
+Against the south wall is a low, heavy dresser.  There is a basin and
+pitcher atop the dresser; braided rag rugs are scattered across the
+smooth plank floor.  There are bright cotton curtains in the windows,
+and a matching comforter atop the bed.  In the northeast corner is a
+tall, narrow chiffarobe.  The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13050
+
+[[rooms]]
+vnum = 13053
+name = "The upstairs hallway"
+sector = "inside"
+description = """
+This simple hallway is lighted by sconces every few feet along both
+walls at shoulder height.  There are a few braided rag rugs tossed on
+the floor.  The exits are south, east, and west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13054
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13050
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13055
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13054
+name = "An inn room"
+sector = "inside"
+description = """
+This cozy bedroom is fairly simple; against the east wall is an
+enormous, heavy, oak-post bed layered in featherbeds.  Matching
+nightstands are on either side of the bed, beneath paned windows.
+Against the south wall is a low, heavy dresser.  There is a basin and
+pitcher atop the dresser; braided rag rugs are scattered across the
+smooth plank floor.  There are bright cotton curtains in the windows,
+and a matching comforter atop the bed.  In the northwest corner is a
+tall, narrow chiffarobe.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13050
+
+[[rooms]]
+vnum = 13055
+name = "An inn room"
+sector = "inside"
+description = """
+This cozy bedroom is fairly simple; against the west wall is an
+enormous, heavy, oak-post bed layered in featherbeds.  Matching
+nightstands are on either side of the bed, beneath paned windows.
+Against the south wall is a low, heavy dresser.  There is a basin and
+pitcher atop the dresser; braided rag rugs are scattered across the
+smooth plank floor.  There are bright cotton curtains in the windows,
+and a matching comforter atop the bed.  In the northeast corner is a
+tall, narrow chiffarobe.  The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13050
+
+[[rooms]]
+vnum = 13056
+name = "The wine cellar"
+sector = "inside"
+description = """
+This dark, cool cellar smells faintly of alcohol and rancid berries.
+It is quiet and clean, and much cooler than the rest of the inn.  Large
+wooden casks line the north and east walls.  Wine racks line the south
+wall, and form freestanding rows to the south.  There is a small door
+to the west, and the staircase leading up."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13057
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13048
+
+[[rooms]]
+vnum = 13057
+name = "The meat locker"
+sector = "inside"
+description = """
+It is extremely cold in here! Sides of pork, beef, goat, and mutton hang
+from heavy ceiling hooks.  Chickens, turkeys, ducks, and geese hang by
+the neck in the northeast corner.  Various other types of meat, mostly
+unidentifiable, are hanging here as well.  The south wall contains a
+long shelved rack of vegetables; onions, peppers, potatoes, carrots,
+leeks, celery, and others.  The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13056
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13058
+name = "The winery"
+sector = "inside"
+description = """
+This is a large, clean, well-tended room.  Huge wooden casks line all
+three walls; each is fitted with a tap.  An enormous wooden vat in the
+center of the room is partly encircled by a wooden platform, and a
+ladder leading into it.  Alongside the vat, to the south, is a long
+table, upon which are a variety of bottles and corks.  There are dark
+stains deeply embedded into the floorboards; the air is filled with a
+heavy, sickish-sweet odour of fermented grapes.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13059
+
+  [[rooms.mob_resets]]
+  vnum = 13018
+  max = 6
+
+[[rooms]]
+vnum = 13059
+name = "The vineyards"
+sector = "field"
+description = """
+This part of the vineyard is surrounded on the north, south, and west
+sides by a tall, impenetrable hedge.  Long, staked rows of grapevines
+grow in twisted lines here.  Each row is separated by roughly five feet
+of turf.  Rich, sweet clusters of varied grapes...concord, flamereds,
+Billings, Marcuses, Schwemps, and Heinekens cling ponderously from the
+vines.  Bees dance lazily around the clusters, and the air is redolent
+with the scent of dew-washed fruit.  The exits are north to the street,
+east to the winery, south to the orchard, and west to the rest of the
+vineyards."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13152
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13058
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13062
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13060
+
+[[rooms]]
+vnum = 13060
+name = "The west vineyard."
+sector = "field"
+description = """
+This corner of the vineyard is surrounded by a tall, impenetrable hedge.
+More rows of orderly-planted grapevines are planted here.  The exits are
+east and south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13059
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13061
+
+[[rooms]]
+vnum = 13061
+name = "The west orchards"
+sector = "field"
+description = """
+A surprisingly wide variety of fruit trees, lined up in neat rows, grows
+here; apples, plums, peaches, pears, oranges, lemons, nectarines, and
+cherries.  Songbirds flit and warble joyously among the many differed
+branches, feasting here and there on the wide array of nectars available.
+There is a tall hedge in every direction, with exits through it to the
+north and east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13060
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13062
+
+  [[rooms.mob_resets]]
+  vnum = 13018
+  max = 6
+
+[[rooms]]
+vnum = 13062
+name = "The east orchard"
+sector = "field"
+description = """
+A surprisingly wide variety of fruit trees lined up in neat rows, grows
+here; apples, plums, peaches, pears, oranges, lemons, nectarines, and
+cherries.  Songbirds flit and warble joyously among the many differed
+branches, feasting here and there on the wide array of nectars available.
+There is a tall hedge in every direction, with exits through it to the
+north and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13059
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13061
+
+  [[rooms.mob_resets]]
+  vnum = 13016
+  max = 8
+
+[[rooms]]
+vnum = 13063
+name = "An abandoned shop"
+sector = "inside"
+description = """
+Boards cover the windows on the west and south walls; daylight barely
+peers through them.  A thin film of dust and cobwebs covers the plank
+floor, and you can hear the occasional skittering of dry insects and
+clawed feet from the shadows.  The exits are south and west."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13176
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13174
+
+[[rooms]]
+vnum = 13064
+name = "The leather shop"
+sector = "inside"
+description = """
+A delightful aroma of newly-tanned leather touches you immediately.  A
+few leather items are hung from wooden pegs throughout the store; the
+only furniture is a long wooden counter at the back of the shop.  A stove
+against the back wall crackles quietly, and a large black pot atop it bubbles
+and gives off a meaty, bitter smell.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13177
+
+  [[rooms.mob_resets]]
+  vnum = 13023
+  max = 4
+
+[[rooms]]
+vnum = 13065
+name = "An empty shop"
+sector = "inside"
+description = """
+This room is completely empty; there are no windows, back rooms, or
+exits, save the one to the south.  A few cobwebs stretch across the
+corners; desiccated roach carcasses litter the floor intermingled with
+dust and leaves."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13178
+
+[[rooms]]
+vnum = 13066
+name = "The metalsmith"
+sector = "inside"
+description = """
+This store is incredibly HOT and stuffy.  In the northwest corner is a
+rack sporting several implements used for extruding and working metal
+objects.  Displays of tinware, metal jewelry, iron and steel implements
+of all sorts, garden tools, and tin snuffboxes are lined on wall shelves
+and racks near the counter in the northeast corner.  A large magnifying
+glass on a pivoting pedestal is on the counter.  Exits are east and south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13159
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13179
+
+  [[rooms.mob_resets]]
+  vnum = 13016
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 13017
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 13023
+  max = 4
+
+[[rooms]]
+vnum = 13067
+name = "An empty shop"
+sector = "inside"
+description = """
+This shop appears to once have sold some sort of foodstuffs; loose,
+dried chaff and bits of grain are scattered across the floor; dried
+rinds and seeds are intermingled with dirt, cobwebs, and general filth.
+The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13158
+
+  [[rooms.mob_resets]]
+  vnum = 13016
+  max = 8
+
+[[rooms]]
+vnum = 13068
+name = "The Blacksmith shop"
+sector = "inside"
+description = """
+This room is enormous.  The heat from the huge forge against the east wall
+is STAGGERING; your face seems to want to crisp like a leg of mutton over a
+campfire.  Against the north wall is a long counter of farrier and blacksmith
+supplies; hoof knives, halters, heavy sledgehammers, long iron tongs.
+Horseshoes are scattered everywhere; staked to the support posts, scattered
+on the floor, around the furnace, and on the counter.  Anvils in varying sizes
+are located throughout the room.  Along the west wall is a row of stalls,and
+large iron rings attach to the wall, to allow a horse to be tied while being
+shoed.  Straw, hay, iron filings, and tools are scattered over the floor.  The
+exits are north into the carriage house, and south to the street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13132
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13139
+
+  [[rooms.mob_resets]]
+  vnum = 13016
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 13017
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 13021
+  max = 8
+
+[[rooms]]
+vnum = 13069
+name = "The convent gardens"
+sector = "field"
+description = """
+This enormous garden spreads out across a vast area of ground, and
+disappears northward.  Arranged in neat, well-hoed rows are a vast array of
+vegetables and fruits; stakes of tomatoes; stalks of tall corn; thick poles
+of beans and slender ones of peas.  The produce is used to feed the friars,
+nuns, and orphans; the remainder is sold by wandering vendors.  The exits are
+north, deeper into the garden, and south to the street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13070
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13140
+
+[[rooms]]
+vnum = 13070
+name = "A garden square"
+sector = "field"
+description = """
+This patch of garden has the low, bushy vegetables; poles of trailing
+summer and pattypan squash; long, twisted pumpkin vines; twisted tendrils
+ofcucumber; and bushes of green peppers.  There is another garden patch
+west, a path north to the main garden, and a south path to the taller
+gardens."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13072
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13069
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13071
+
+[[rooms]]
+vnum = 13071
+name = "Orchard section"
+sector = "field"
+description = """
+This area of garden has been set aside as a small orchard, complete with
+trees of plums and apples; rich, juicy peaches; bushes of raspberry,
+blueberry, boysenberry, and gooseberry; earthen pots of ruby
+strawberries; and a tree of elderberries.  The only exit is east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13070
+
+  [[rooms.mob_resets]]
+  vnum = 13021
+  max = 8
+
+[[rooms]]
+vnum = 13072
+name = "The main garden"
+sector = "field"
+description = """
+This section of garden is larger than the rest; here the "primary"
+plants were seeded and grown; mounds of potatoes, carrots, and leeks;
+several varieties of onions; stalks of celery and rhubarb; bushes of all
+sorts of peppers...green, jalapeno, Anaheim, golden, and vargas; tangled
+vines of summer squashes, zucchini, crookneck, and spaghetti; and heads
+of cabbages, lettuces, greens and kales.  The only exits are north, into
+a walled courtyard, and south to more garden."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13114
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13070
+
+  [[rooms.mob_resets]]
+  vnum = 13016
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 13017
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 13021
+  max = 8
+
+[[rooms]]
+vnum = 13073
+name = "Kestra's Exotic Pets"
+sector = "city"
+description = """
+A wave of exotic animal smells assaults you as you step in the door;
+sweat, excrement, ammonia, cedarwood, and castor oil.  The walls are
+lined with cages and pens for a wide variety of animals in every shape
+and color and breed imaginable.  A variety of creatures chirp, squeal,
+snort, grunt, bark, purr, trill and hoot in a bizarre cacophony.  Most
+of the pets are kept elsewhere; this is, after all, a special order
+shop for LARGE breeds as well as small.  There is a sign tacked to the
+wall above the counter.  Behind the counter is a curtained room; the
+only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13141
+
+  [[rooms.mob_resets]]
+  vnum = 13018
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 13021
+  max = 8
+
+[[rooms]]
+vnum = 13074
+name = "The Pet Shop Store"
+sector = "inside"
+description = """
+This is a small, dark room where Kestra's special-order pets are kept."""
+
+[[rooms]]
+vnum = 13075
+name = "The foyer"
+sector = "inside"
+description = """
+You are standing in a luxurious, immaculate foyer, entry to the famed
+"DragonCove Inn".  Bookshelves of leather-bound books line the north and
+east walls.  A dazzling white marble fireplace takes up part of the west
+wall.  Thick wool rugs cover the floor in bright colors; burgundy, royal,
+and gold.  In the center of the room is a rosewood-trimmed couch and
+matching coffee table.  Exits are north into a hallway, east to an
+office, and south to the street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13077
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13076
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13142
+
+[[rooms]]
+vnum = 13076
+name = "The office"
+sector = "inside"
+description = """
+A medium-sized, comfortable office.  Bookshelves line the east and south
+walls and reach floor to ceiling.  A large desk is situated diagonally
+in the southeast corner; in front of it are two padded chairs.  A globe
+sits in the northwest corner, surrounded by several plants.  Exits are
+north and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13078
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13075
+
+[[rooms]]
+vnum = 13077
+name = "A hallway"
+sector = "inside"
+description = """
+A fairly dark hallway.  A few richly-colored braided rugs are laid on
+the wooden floor.  Crystal and silver sconces line the walls and hold
+bright knots of scented wood for light.  A small rosewood table is on
+the south wall.  Exits are north, south, east, and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13080
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13078
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13075
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13165
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13078
+name = "The east hall"
+sector = "inside"
+description = """
+A fairly dark hallway.  A few richly-colored braided rugs are laid on
+the wooden floor.  Crystal and silver sconces line the walls and hold
+bright knots of scented wood for light.  Exits are north, south, and
+west; there is a staircase leading up."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13079
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13076
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13077
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13081
+
+[[rooms]]
+vnum = 13079
+name = "Suite 1"
+sector = "inside"
+description = """
+This spacious hotel suite is lavishly decorated in deep, bright colors;
+royal blue, burgundy, and gold.  A black marble fireplace stands against
+the west wall, over which is an enormous painting of an outdoor scene.
+There is a large bed in the northeast corner.  A small settee is placed
+diagonally in the southwest corner, with a low table next to it.  There
+is a dressing screen opposite it.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13078
+
+[[rooms]]
+vnum = 13080
+name = "Room 1"
+sector = "inside"
+description = """
+This small bedroom is simple, yet elegant.  Large windows line the west
+wall from floor to ceiling, and are covered in white lace drapes.  The
+French windows face the street.  There is a large rosewood bed in the
+southwest corner, and a matching dressing screen in the northeast corner.
+The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13077
+
+[[rooms]]
+vnum = 13081
+name = "The upstairs hall"
+sector = "inside"
+description = """
+This hall is elaborately carpeted in deep blues, reds, and golds.
+Expensive silver and crystal sconces are attached to the walls, and hold
+heavy, bright candles that cast a cheerful light.  The hall continues to
+the west; there is a staircase down; exits are north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13082
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13083
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13084
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13078
+
+[[rooms]]
+vnum = 13082
+name = "Room 2"
+sector = "inside"
+description = """
+This small bedroom is simple, yet elegant.  Large windows line the north
+wall from floor to ceiling, and are covered in white lace drapes.  The
+French windows overlook the tavern next door.  There is a large rosewood
+bed in the northwest corner, and a matching dressing screen in the
+southwest corner.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13077
+
+[[rooms]]
+vnum = 13083
+name = "Room 3"
+sector = "inside"
+description = """
+This small bedroom is simple, yet elegant.  Large windows line the south
+wall from floor to ceiling, and are covered in white lace drapes.  The
+French windows overlook the street.  There is a large rosewood bed in
+the northeast corner, and a matching dressing screen in the southwest
+corner.  The only exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13081
+
+[[rooms]]
+vnum = 13084
+name = "The upstairs hall west"
+sector = "inside"
+description = """
+This hall is elaborately carpeted in deep blues, reds, and golds.
+Expensive silver and crystal sconces are attached to the walls, and hold
+heavy, bright candles that cast a cheerful light.  The hall continues to
+the east; there are exits north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13086
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13081
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13085
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13085
+name = "Suite 2"
+sector = "inside"
+description = """
+This spacious hotel suite is lavishly decorated in deep, bright colors;
+forest green, royal reds, and gold.  A white marble fireplace stands
+against the east wall, over which is an enormous painting of an outdoor
+scene.  There is a large bed in the northwest corner.  A small settee
+is placed diagonally in the southeast corner, with a low table next to
+it.  There is a dressing screen opposite it.  The only exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13084
+
+[[rooms]]
+vnum = 13086
+name = "Suite 3"
+sector = "inside"
+description = """
+This spacious hotel suite is lavishly decorated in whites, blacks, and
+greys.  A grey marble fireplace stands against the west wall, over which
+is an enormous painting of an outdoor scene.  There is a large bed in
+the northeast corner.  A small settee is placed diagonally in the
+southwest corner, with a low table next to it.  There are tall French
+windows on the north wall, curtained in white and black drapes.  There
+is a dressing screen opposite the settee.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13084
+
+[[rooms]]
+vnum = 13087
+name = "The Unicorn's Horn"
+sector = "inside"
+description = """
+Smoke, music, and alcohol fumes smack you in the face as you enter this
+pub.  Small tables are scattered randomly about, surrounded by barrelback
+chairs occupied by townsfolk and 'streeters.  A long bar in the southeast
+corner is festooned with a wide array of drunks, card players, townsfolk,
+and knights.  The focal point of the room is a four-foot-long spiral ivory
+horn protruding from a wooden plaque above the bar.  There is a sign here.
+The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13164
+
+[[rooms]]
+vnum = 13088
+name = "Ste.  Catherine's Convent"
+sector = "inside"
+description = """
+This foyer is a small, unadorned waiting room for visitors to the
+convent.  A few wooden chars are arranged against the east wall.  A
+small statue of Ste.  Catherine graces the northwest corner.  There is a
+hallway to the east along the south wall, an exit west to the street,
+and a door to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13089
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13092
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13163
+
+[[rooms]]
+vnum = 13089
+name = "The convent office"
+sector = "inside"
+description = """
+This rather austere room is sparsely decorated; only a huge black desk,
+a few chairs, and a large statue of Ste.  Catherine adorn the room.  A
+large iron crucifix hangs on the west wall, behind the desk.  The exits
+are north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13106
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13088
+
+[[rooms]]
+vnum = 13090
+name = "The dining room"
+sector = "inside"
+description = """
+A large, rectangular oak table overpowers this clean, threadbare room.
+The floors are bare, with an occasional worn rag rug thrown down.  A
+large flagstone fireplace takes up a large part of the east wall.  High
+above the floor, near the ceiling, is a row of small windows, that allow
+the pale sunlight to filter through.  The exits are north to the kitchen,
+and south to the hallway."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13091
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13092
+
+[[rooms]]
+vnum = 13091
+name = "The kitchen"
+sector = "inside"
+description = """
+There is a large cookstove on the east wall; a few pots bubble and
+simmer on top of it.  There is a locked larder on the south wall.  A
+square butcher block is in the center of the room, a large cleaver sunk
+into the top.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13090
+
+[[rooms]]
+vnum = 13092
+name = "The hallway."
+sector = "inside"
+description = """
+The hallway leads further east, and west into the foyer; there is a door
+north, into the dining room."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13090
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13093
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13088
+
+[[rooms]]
+vnum = 13093
+name = "The hall"
+sector = "inside"
+description = "The hall continues east and west."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13094
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13092
+
+[[rooms]]
+vnum = 13094
+name = "A bend in the hallway."
+sector = "inside"
+description = """
+The hallway bends north and west here.  To the east is a door."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13096
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13095
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13093
+
+[[rooms]]
+vnum = 13095
+name = "A small chamber"
+sector = "inside"
+description = """
+This small, sparse chamber is dimly-lit.  There is a small, clean but
+threadbare bed against the south wall.  A small dresser is pushed against
+the north wall.  Dim light filtered through a colorful stained-glass
+window in the east wall.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13094
+
+[[rooms]]
+vnum = 13096
+name = "the hallway"
+sector = "inside"
+description = """
+The hallway connects to more of the same to the north and to the south.
+There is a door to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13098
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13097
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13094
+
+[[rooms]]
+vnum = 13097
+name = "A small chamber"
+sector = "inside"
+description = """
+This small, sparse chamber is dimly-lit.  There is a small, clean but
+threadbare bed against the south wall.  A small dresser is pushed against
+the north wall.  Dim light filtered through a colorful stained-glass
+window in the east wall.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13096
+
+[[rooms]]
+vnum = 13098
+name = "the hallway"
+sector = "inside"
+description = """
+The hallway connects to more of the same to the north and to the south.
+There is a door to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13100
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13099
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13096
+
+[[rooms]]
+vnum = 13099
+name = "A small chamber"
+sector = "inside"
+description = """
+This small, sparse chamber is dimly-lit.  There is a small, clean but
+threadbare bed against the south wall.  A small dresser is pushed against
+the north wall.  Dim light filtered through a colorful stained-glass
+window in the east wall.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13098
+
+[[rooms]]
+vnum = 13100
+name = "The hallway"
+sector = "inside"
+description = """
+The hallway connects to more of the same to the north and to the south.
+There is a door to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13102
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13101
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13098
+
+[[rooms]]
+vnum = 13101
+name = "A small chamber"
+sector = "inside"
+description = """
+This small, sparse chamber is dimly-lit.  There is a small, clean but
+threadbare bed against the south wall.  A small dresser is pushed against
+the north wall.  Dim light filtered through a colorful stained-glass
+window in the east wall.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13100
+
+[[rooms]]
+vnum = 13102
+name = "the hallway"
+sector = "inside"
+description = """
+The hallway connects to more of the same to the north and to the south.
+There is a door to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13104
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13103
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13100
+
+[[rooms]]
+vnum = 13103
+name = "A small chamber"
+sector = "inside"
+description = """
+This small, sparse chamber is dimly-lit.  There is a small, clean but
+threadbare bed against the south wall.  A small dresser is pushed against
+the north wall.  Dim light filtered through a colorful stained-glass
+window in the east wall.  The only exit is west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13102
+
+[[rooms]]
+vnum = 13104
+name = "A long hallway"
+sector = "inside"
+description = """
+This long hallway runs between the back of the chapel to the west, and
+the side of a large bedroom to the east.  The only exits are north and
+south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13109
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13102
+
+[[rooms]]
+vnum = 13105
+name = "The chapel"
+sector = "inside"
+description = """
+This bare-floored chapel serves the needs of the nearby convent,
+monastery, and orphanage.  Few items have been used to adorn the simple,
+pale, paneled walls.  Neatly-lined rows of wooden pews are set on each
+side of the central aisle running west-east toward the altar.  The altar,
+at the east end, is a simple wooden podium, decorated by a few green
+plants.  A life-size crucifix is located in the northwest corner.
+Exits include a door on the street end, which opens south, and an exit
+west to the street."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13089
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13162
+
+[[rooms]]
+vnum = 13106
+name = "The hallway"
+sector = "inside"
+description = """
+This long, darkly-carpeted hallway is the main travelway for the Little
+Annie Orphanage.  The hall continues east, the office door is north, or
+you can exit south to the street."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13107
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13109
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13161
+
+[[rooms]]
+vnum = 13107
+name = "Little Annie's Adoption Office"
+sector = "inside"
+description = """
+This office is cheerful, sunny, and comfortable.  Large west-facing
+windows are thrown open to let the sunshine and breeze through.  A thin
+carpet covers the floor in a bright splash of green.  There is a large
+maple desk on the north wall, in front of which are two padded wingback
+chairs.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13106
+
+[[rooms]]
+vnum = 13108
+name = "The adoption pool"
+sector = "inside"
+description = """
+This is the room where the orphanage keeps adoptable children."""
+
+[[rooms]]
+vnum = 13109
+name = "The T-shaped hallway"
+sector = "inside"
+description = """
+This hall continues to the east in the direction of the courtyard; it
+makes a bend south to the convent chambers, and west to the office.  The
+only other exit is north to a room."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13110
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13111
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13104
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13106
+
+[[rooms]]
+vnum = 13110
+name = "A medium-sized sitting room"
+sector = "inside"
+description = """
+Windows along the north wall face a dusty street.  There are several
+comfortable, upholstered chairs here, each with a small table nearby.
+Books are organized neatly in shelves across three walls.  There is a
+wooden box of toys against the south wall, and a rocking horse next to
+it.  The only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13109
+
+[[rooms]]
+vnum = 13111
+name = "The courtyard hall"
+sector = "inside"
+description = """
+This hall connects the courtyard to the orphanage and convent rooms.
+Exits are north, east, south, and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13113
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13114
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13112
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13109
+
+[[rooms]]
+vnum = 13112
+name = "A large bedroom"
+sector = "inside"
+description = """
+A large, arched window on the east wall overlooks the monastery gardens.
+There is a large bed in the southwest corner.  A comfortable-looking
+willow rocker is situated near the southeast corner, and there is a
+dresser against the west wall.  The only exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13111
+
+[[rooms]]
+vnum = 13113
+name = "A large bedroom"
+sector = "inside"
+description = """
+A large, arched window on the north wall overlooks the monastery
+gardens.  There is a large bed in the northwest corner.  A
+comfortable-looking willow rocker is situated near the northeast
+corner, and there is a dresser against the west wall.  The only exit
+is south."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13111
+
+[[rooms]]
+vnum = 13114
+name = "The courtyard"
+sector = "city"
+description = """
+This small courtyard is secluded by a twelve-foot stucco wall, which is
+nearly hidden by a tall, impenetrable privet hedge.  Large, comfortable
+oak trees spread long, heavy branches over the yard, allowing sunlight
+to filter in.  Grass grows in a continuous, thick carpet, though
+untended by human hands.  A few flowers are scattered here, growing
+haphazardly.  There is a single rope swing in the largest oak in the
+northwest corner.  Exits are east and west into respective halls, and
+there is an iron gate to the south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13115
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13072
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13111
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13115
+name = "The hall"
+sector = "inside"
+description = """
+This portion of hall connects the courtyard with the monastery rooms.
+There are exits north, east, and west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13116
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13117
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13114
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13116
+name = "A small room"
+sector = "inside"
+description = """
+This bedchamber is small, clean, and somber.  It is adorned only by a
+simple bed, a small dresser, and a small window in the north wall.  The
+only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13115
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13117
+name = "The hall"
+sector = "inside"
+description = """
+This is the continuation of hallway from the monastery bedchambers to
+the courtyard.  Exits here are north through a door, east, south to the
+dining room, and west to more hall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13118
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13119
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13128
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13115
+
+[[rooms]]
+vnum = 13118
+name = "A small room"
+sector = "inside"
+description = """
+This bedchamber is small, clean, and somber.  It is adorned only by a
+simple bed, a small dresser, and a small window in the north wall.  The
+only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13117
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13119
+name = "The hall"
+sector = "inside"
+description = """
+This is the continuation of hallway from the monastery bedchambers to
+the courtyard.  Exits here are north through a door, east, and west to
+more hall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13120
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13121
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13117
+
+[[rooms]]
+vnum = 13120
+name = "A small room"
+sector = "inside"
+description = """
+This bedchamber is small, clean, and somber.  It is adorned only by a
+simple bed, a small dresser, and a small window in the north wall.  The
+only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13117
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13121
+name = "The hallway"
+sector = "inside"
+description = """
+This is the continuation of hallway from the monastery bedchambers to
+the courtyard.  Exits here are north through a door, east, and west to
+more hall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13122
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13123
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13119
+
+[[rooms]]
+vnum = 13122
+name = "A small room"
+sector = "inside"
+description = """
+This bedchamber is small, clean, and somber.  It is adorned only by a
+simple bed, a small dresser, and a small window in the north wall.  The
+only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13121
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13123
+name = "This is the continuation of hallway from the monastery bedchambers to\n\nthe courtyard.  Exits here are north through a door, east, south to the\n\nfoyer, and west to more hall."
+sector = "city"
+description = """
+0 ADJ 0
+D0
+You see a small wooden doorsmall wooden door"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13125
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13127
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13121
+
+[[rooms]]
+vnum = 13124
+name = "A small room"
+sector = "inside"
+description = """
+This bedchamber is small, clean, and somber.  It is adorned only by a
+simple bed, a small dresser, and a small window in the north wall.  The
+only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13123
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13125
+name = "The hallway"
+sector = "inside"
+description = """
+This is the continuation of hallway from the monastery bedchambers to
+the courtyard.  Exits here are north through a door, and west to more
+hall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13126
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13123
+
+[[rooms]]
+vnum = 13126
+name = "A small room"
+sector = "inside"
+description = """
+This bedchamber is small, clean, and somber.  It is adorned only by a
+simple bed, a small dresser, and a small window in the north wall.  The
+only exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13125
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13127
+name = "The Monastery Foyer"
+sector = "inside"
+description = """
+This is a simple waiting area.  The bare floor creaks with every step;
+the boards are worn smooth by many feet.  The only adornment in this
+room is a large wooden statue of Ste.  Francis in the northwest corner.
+There are doors east, south, and west; there is a hallway north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13123
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13135
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13130
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13128
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13128
+name = "The dining room"
+sector = "inside"
+description = """
+Furnished in deep, dark walnut, this room is only dimly lit by soft
+tallow candles.  An immense walnut dining table sits in the middle of
+the room, surrounded by matching wooden benches.  There is a fruit bowl
+in the middle of the table.  Arched, diamond-paned windows adorn the
+room from the west wall, and add more light and a certain calming aura
+to the room.  There are exits north, east, and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13117
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13127
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13129
+
+[[rooms]]
+vnum = 13129
+name = "The kitchen"
+sector = "inside"
+description = """
+Two large but sparse cupboards line the south wall; one contains cracked
+earthenware dishes; the other a few stoneware bowls and iron skillets,
+pans, and Dutch ovens.  A large sink is against the west wall; a butcher
+block table is in the center of the room.  Overhead, a small iron butcher's
+rack is suspended from the rafters by a heavy iron chain.  Another cupboard
+on the east wall contains an array of spices, condiments, and staple goods.
+The exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13128
+
+[[rooms]]
+vnum = 13130
+name = "The monastery office"
+sector = "inside"
+description = """
+The floor here is polished to a high gloss.  A polished, smiling statue
+of Ste.  Francis graces the room from the southeast corner, next to the
+windows.  There is a large walnut desk in the south west corner, and
+booksheles lining the walls behind it on either side.  The only exit
+is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13127
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13131
+name = "The stables"
+sector = "inside"
+description = """
+A broad, double-wide door swings both ways on large hinges.  The stable
+itself is dark and cool, and smells of manure, sweet hay, and mice.
+Stalls line the north and south walls, and there is a long row of feed
+bins on the west wall next to the door.  Several horses snort and wicker
+as you enter the stable; others pull calmly at hay racks or stare at you,
+unafraid.  The exits are east and west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13136
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13132
+
+[[rooms]]
+vnum = 13132
+name = "The carriage house"
+sector = "inside"
+description = """
+This room smells of rich leather, sweat, and oil.  Halters, bridles,
+cruppers, and saddles hang from pegs and shelves, and are tossed on the
+floor here and there.  Several large carriages in varying states of
+repair are here.  A small window overlooks the monastery garden.  The
+exits are east and south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13131
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13068
+
+[[rooms]]
+vnum = 13133
+name = "The corral"
+sector = "inside"
+description = """
+Several horses are penned up here in this area between the blacksmith
+shop and the stable.  The third wall is formed by the outer wall of the
+carriage house.  A few rough-hewn logs form the front, where the gate is
+located.  A rack of hay is located near the wide-swinging gate to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13137
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13134
+name = "Willowby Bridge"
+sector = "field"
+description = """
+This is an arched, stone-and-wood bridge that spans the Cottonwood river
+and leads into StoneBow Dale.  The crystal, bubbling waters of the
+Cottonwood are ten feet below you.  You can see flashes of silver and
+rainbow colors as fish flip and swim.  There are stone keeps on either
+side of the bridge, and a guard peers out at you intently as you step on
+the bridge.  There is a large wooden sign on the right tower."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 3522
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13135
+
+  [[rooms.mob_resets]]
+  vnum = 13022
+  max = 4
+
+[[rooms]]
+vnum = 13135
+name = "A cobblestone road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobbled road.  There is a large sign above
+your head.  There is a tall building to your west, and the side of an
+enormous church on your east.  This road runs north-south.  There is a
+door to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13134
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13136
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13127
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 13011
+  max = 16
+
+[[rooms]]
+vnum = 13136
+name = "Dragoncove Road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobbled road.  A stable lies west; to the east
+is an enormous church.  There is a corral to the southwest.  The street
+continues north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13135
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13137
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13131
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 13019
+  max = 8
+
+[[rooms]]
+vnum = 13137
+name = "DragonCove Road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobbled road.  To the east is an enormous
+church.  There is a corral to the west.  The street continues north; to
+the south is Unity Square."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13136
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13138
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13133
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 13012
+  max = 16
+
+  [[rooms.mob_resets]]
+  vnum = 13024
+  max = 6
+
+[[rooms]]
+vnum = 13138
+name = "Unity Square"
+sector = "city"
+description = """
+A large white marble fountain stands in the center of this large, grassy
+square.  Water spouts from the top of the fountain from the hand of a
+statue of the goddess Eriana.  Beneath her feet, figurines of animals,
+flowers, and birds are carved, spiralling downward to the base.  Around
+the perimeter of the fountain is planted an array of fragrant, colorful
+flowers.  A huge church looms to the northeast.  There is a signpost
+here, pointing in every direction."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13137
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13143
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13146
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13139
+
+  [[rooms.mob_resets]]
+  vnum = 13011
+  max = 16
+
+  [[rooms.mob_resets]]
+  vnum = 13014
+  max = 4
+
+[[rooms]]
+vnum = 13139
+name = "Nightbane Avenue"
+sector = "city"
+description = """
+You are standing on the western portion of Nightbane Avenue, near Unity
+Square.  The street continues east and west.  The blacksmith shop is
+north; an alleyway lies south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13068
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13138
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13023
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13140
+
+[[rooms]]
+vnum = 13140
+name = "Nightbane Avenue west"
+sector = "city"
+description = """
+You are standing on the western portion of Nightbane Avenue, which
+continues east and west.  To the north is the monastery garden; south is
+the caterer."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13069
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13139
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13025
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13141
+
+[[rooms]]
+vnum = 13141
+name = "Nightbane Avenue west"
+sector = "city"
+description = """
+You are standing on the western portion of Nightbane Avenue, which
+continues east and west.  To the north is the pet shop; the potions shop
+is south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13073
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13140
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13026
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13142
+
+[[rooms]]
+vnum = 13142
+name = "Nightbane Avenue West"
+sector = "city"
+description = """
+You are standing on the western end of Nightbane Avenue, which stretches
+east toward Unity Square, and west toward the intersection with
+Castlerock Avenue.  To the north lies the Inn foyer; to the south is a
+linens shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13075
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13141
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13027
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13166
+
+  [[rooms.mob_resets]]
+  vnum = 13015
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 13024
+  max = 6
+
+[[rooms]]
+vnum = 13143
+name = "Nightbane Avenue east"
+sector = "city"
+description = """
+You are standing due east of Unity Square on Nightbane Avenue.  This
+street continues east to Briarwood and west to the square.  The church
+lies north of you.  South is an empty shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13030
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13144
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13018
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13138
+
+[[rooms]]
+vnum = 13144
+name = "Nightbane Avenue east"
+sector = "city"
+description = """
+You are standing on Nightbane Avenue due south of the church.  The
+street continues east to Briarwood, and west to the square.  South is a
+photography shop, and north is the church."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13031
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13145
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13016
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13143
+
+  [[rooms.mob_resets]]
+  vnum = 13015
+  max = 6
+
+[[rooms]]
+vnum = 13145
+name = "Nightbane Avenue east"
+sector = "city"
+description = """
+You are standing on Nightbane Avenue,due south of the church.  The
+street continues east to the intersection of Briarwood and Nightbane,
+and west to the square.  To the south lies an empty shop; north is the
+church entrance."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13032
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13188
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13015
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13144
+
+[[rooms]]
+vnum = 13146
+name = "DragonCove Road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobbled road.  North is Unity Square; east is
+the entrance to a shop; south the road continues, and west is an
+abandoned shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13138
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13018
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13147
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13022
+
+[[rooms]]
+vnum = 13147
+name = "A cobblestone street"
+sector = "city"
+description = """
+South DragonCove Road continues south.  To the east is a doorway to
+Higgins' Haberdashery; to the west is the door to a giftshop.  The road
+continues north to Unity Square, and south toward Crystal Square."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13146
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13019
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13148
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13021
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13148
+name = "DragonCove Road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobblestone road.  The road continues north
+and south toward Crystal Square; east is a dark alley; west is the
+door to the shoe shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13147
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13008
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13149
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13020
+
+  [[rooms.mob_resets]]
+  vnum = 13019
+  max = 8
+
+[[rooms]]
+vnum = 13149
+name = "DragonCove Road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobblestone street.  To the east is the door
+to Howell's Jewellers; to the north, the road continues; south is
+Crystal Square; and west is the corner of a shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13148
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13005
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13150
+
+[[rooms]]
+vnum = 13150
+name = "Crystal Square"
+sector = "city"
+description = """
+Located at the intersection of Redfern Road and DragonCove, this square
+is rather small in contrast to its northern counterpart.  Instead of a
+fountain, here is situated an obsidian pedestal, upon which is balanced
+a huge blue crystal.  It appears that nothing holds the crystal in place;
+yet it balances perfectly on one pointed tip.  Redfern Road runs east and
+west of here; DragonCove Road runs north and south.  There is a signpost
+here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13149
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13154
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13158
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13151
+
+  [[rooms.mob_resets]]
+  vnum = 13012
+  max = 16
+
+  [[rooms.mob_resets]]
+  vnum = 13013
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 13014
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 13024
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 13025
+  max = 6
+
+[[rooms]]
+vnum = 13151
+name = "Redfern Road"
+sector = "city"
+description = """
+You are standing just west of Crystal Square; the enormous, mystically-
+suspended blue crystal glitters from its place in the square.  West of
+you, Redfern continues toward Castlerock.  To the north is an old, empty
+shop; south is the wall of the winery."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13004
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13150
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13152
+
+[[rooms]]
+vnum = 13152
+name = "Redfern Road"
+sector = "city"
+description = """
+From this part of Redfern Road you can see Crystal Square to your east,
+and Castlerock Avenue to the west.  North of you is an abandoned,
+boarded-up shop.  Southward is the hedgerow entrance to the monastery
+vineyards."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13003
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13151
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13059
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13153
+
+[[rooms]]
+vnum = 13153
+name = "West Redfern Road"
+sector = "city"
+description = """
+You are standing at the far west end of Redfern, near its intersection
+with Castlerock Avenue to the west.  Redfern continues east toward
+Crystal Square.  To the north lies a florist & herbalist shop; south is
+a tall stone wall faced by a hedge, over the top of which you can see
+twisted grape vines clinging to poles."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13000
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13152
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13171
+
+[[rooms]]
+vnum = 13154
+name = "Redfern Road"
+sector = "city"
+description = """
+You are now due east of Crystal Square.  Redfern Road continues west
+beyond the square, and east toward Briarwood.  Howell's Jewellers lies
+due north; the Willowtree Inn is directly south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13005
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13155
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13150
+
+[[rooms]]
+vnum = 13155
+name = "Redfern Road"
+sector = "city"
+description = """
+You are now east of Crystal Square.  Redfern Road continues west, and to
+the east toward Briarwood.  An alley lies due north; the Willowtree Inn
+is directly south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13006
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13156
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13154
+
+  [[rooms.mob_resets]]
+  vnum = 13015
+  max = 6
+
+[[rooms]]
+vnum = 13156
+name = "Redfern Road"
+sector = "city"
+description = """
+Redfern Road continues westward from here, and east toward Briarwood.
+Magnum's Formalwear shop lies due north; the Willowtree Inn is
+directly south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13009
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13157
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13154
+
+[[rooms]]
+vnum = 13157
+name = "Redfern Road"
+sector = "city"
+description = """
+You are standing due west of Briarwood.  Redfern Road continues west to
+Crystal Square, and to the east toward its intersection with Briarwood.
+Sherri Bridals is directly north, on the corner; the Willowtree Inn is
+directly south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13013
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13183
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13156
+
+[[rooms]]
+vnum = 13158
+name = "DragonCove Road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobblestone street.  To the east is the
+northwestern corner of the Willowtree Inn; to the west is the back of
+the old winery, and a doorway to an abandoned shop.  DragonCove Road
+runs north and south from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13150
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13159
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13067
+
+  [[rooms.mob_resets]]
+  vnum = 13011
+  max = 16
+
+[[rooms]]
+vnum = 13159
+name = "DragonCove Road"
+sector = "city"
+description = """
+A broad, pleasantly-clean cobblestone street.  DragonCove Road runs
+north and south here; to the east is the entrance to the Willowtree Inn;
+to the west is an entrance to the metalsmith shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13158
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13047
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13160
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13066
+  flags = ["door"]
+
+[[rooms]]
+vnum = 13160
+name = "The Dead End"
+sector = "city"
+description = """
+Here the broad cobblestone street dead ends.  There is a short road,
+Willow Way, to the west; to the east is the edge of the Inn.  The only
+other exit is north, up DragonCove Road."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13159
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13179
+
+  [[rooms.mob_resets]]
+  vnum = 13022
+  max = 4
+
+[[rooms]]
+vnum = 13161
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+A smooth, cobbled road begins here at the river and stretches southward.
+To the west of you is a tall stone wall that surrounds the entire town.
+To the east is a large building; from somewhere nearby, you can hear
+children laughing; from the other side of the wall, you hear rushing
+water.  A bell begins to toll from the chapel tower to the south.  The
+exits are east, to the orphanage, and south down Castlerock; to the
+north and west is the city wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13106
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13162
+
+[[rooms]]
+vnum = 13162
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to the dead end, and south toward Nightbane
+Avenue.  The wall continues on the west side; to the east is the Convent
+Chapel."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13161
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13105
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13163
+
+[[rooms]]
+vnum = 13163
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to the dead end, and south toward Nightbane
+Avenue.  The wall continues on the west side; to the east is the Convent."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13162
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13088
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13164
+
+[[rooms]]
+vnum = 13164
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to the dead end, and south toward Nightbane
+Avenue.  The wall continues on the west side; to the east is the Unicorn
+Horn Tavern."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13163
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13087
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13165
+
+  [[rooms.mob_resets]]
+  vnum = 13012
+  max = 16
+
+[[rooms]]
+vnum = 13165
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to the dead end, and south toward Nightbane
+Avenue.  The wall continues on the west side; to the east is the
+DragonCove Inn."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13164
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13077
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13166
+
+[[rooms]]
+vnum = 13166
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to the river, and south toward Redfern Road.
+The wall continues on the west side; to the east is Nightbane Avenue."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13165
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13142
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13167
+
+[[rooms]]
+vnum = 13167
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to the river, and south toward Redfern Road.
+The wall continues on the west side; to the east is the linen shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13166
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13027
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13168
+
+  [[rooms.mob_resets]]
+  vnum = 13011
+  max = 16
+
+[[rooms]]
+vnum = 13168
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to Nightbane Avenue, and south toward Redfern
+Road.  The wall continues on the west side; to the east is an odd-looking
+shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13167
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13028
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13169
+
+  [[rooms.mob_resets]]
+  vnum = 13019
+  max = 8
+
+[[rooms]]
+vnum = 13169
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to the Nightbane Avenue, and south toward
+Redfern Road.  The wall continues on the west side; to the east is a
+library."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13168
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13029
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13170
+
+[[rooms]]
+vnum = 13170
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+The avenue continues north to Nightbane Avenue, and south toward Redfern
+Road.  The wall continues on the west side; to the east is the side of a
+shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13169
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13171
+
+  [[rooms.mob_resets]]
+  vnum = 13019
+  max = 8
+
+[[rooms]]
+vnum = 13171
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+This broad cobbled avenue continues north toward Nightbane Avenue, and
+south toward Willow Way.  To the east is Redfern Road; to the west is
+the city wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13170
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13153
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13172
+
+  [[rooms.mob_resets]]
+  vnum = 13012
+  max = 16
+
+  [[rooms.mob_resets]]
+  vnum = 13013
+  max = 8
+
+  [[rooms.mob_resets]]
+  vnum = 13020
+  max = 1
+
+[[rooms]]
+vnum = 13172
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+This broad cobbled avenue continues north toward Redfern Road, and south
+toward Willow Way.  To the east is a high wall and a thick privet hedge,
+over the top of which you can see the tops of fruit trees.  To the west
+is the city wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13171
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13173
+
+  [[rooms.mob_resets]]
+  vnum = 13015
+  max = 6
+
+[[rooms]]
+vnum = 13173
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+This broad cobbled avenue continues north toward Redfern Road, and south
+toward Willow Way.  To the east is a high wall and a thick privet hedge,
+over the top of which you can see the tops of fruit trees.  To the west
+is the city wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13172
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13174
+
+[[rooms]]
+vnum = 13174
+name = "Castlerock Avenue"
+sector = "city"
+description = """
+This broad cobbled avenue continues north toward Redfern Road, and south
+toward Willow Way.  To the east is an abandoned shop.  The city wall
+lies west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13173
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13063
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13175
+
+[[rooms]]
+vnum = 13175
+name = "The intersection of Castlerock Avenue & Willow Way"
+sector = "city"
+description = """
+Here the long avenue of Castlerock intersects in the couthwest corner of
+the city with Willow Way.  The only exits are north onto Castlerock,
+toward Redfern Road, and east onto Willow Way."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13174
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13176
+
+  [[rooms.mob_resets]]
+  vnum = 13012
+  max = 16
+
+[[rooms]]
+vnum = 13176
+name = "Willow Way"
+sector = "city"
+description = """
+This short street consists of a few small shops.  Due north is an
+abandoned shop.  West is the intersection of Willow Way and Castlerock;
+to the south is the southern city wall.  Willow Way continues east
+toward DragonCove."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13063
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13177
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13175
+
+[[rooms]]
+vnum = 13177
+name = "Willow Way"
+sector = "city"
+description = """
+This quiet backstreet continues east and west; east lies DragonCove;
+west is Castlerock Avenue.  Due north is Fonzerelli's Leathers; south is
+the southern city wall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13064
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13178
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13176
+
+  [[rooms.mob_resets]]
+  vnum = 13011
+  max = 16
+
+[[rooms]]
+vnum = 13178
+name = "Willow Way"
+sector = "city"
+description = """
+The little street continues east toward DragonCove, and west toward
+Castlerock.  An empty shop lies north; south is the south wall of the
+city."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13065
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13179
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13177
+
+[[rooms]]
+vnum = 13179
+name = "Willow Way"
+sector = "city"
+description = """
+Here the quiet little backstreet of Willow Way begins and ends
+(depending on the direction from which you arrived).  To the east is the
+intersection of this small street with the busy main thoroughfare,
+DragonCove Avenue.  To the west the little street continues toward
+Castlerock.  To the north is the metalsmith shop."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13066
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13160
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13178
+
+[[rooms]]
+vnum = 13180
+name = "Briarwood Road"
+sector = "city"
+description = """
+Briarwood Road ends in this alley.  The Inn lies due west; the city wall
+lies south and east; the street continues north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13181
+
+[[rooms]]
+vnum = 13181
+name = "Briarwood Road"
+sector = "city"
+description = """
+Briarwood Road continues here.  The Inn lies due west; the city wall
+lies east, and the street continues north and south to the dead end."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13182
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13180
+
+[[rooms]]
+vnum = 13182
+name = "Briarwood Road"
+sector = "city"
+description = """
+Briarwood Road intersects Redfern just north of here.  The Inn lies due
+west; the city wall lies east; and Briarwood continues north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13183
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13181
+
+  [[rooms.mob_resets]]
+  vnum = 13012
+  max = 16
+
+[[rooms]]
+vnum = 13183
+name = "The intersection of Redfern and Briarwood"
+sector = "city"
+description = """
+Here Briarwood intersects with Redfern.  Briarwood runs north toward
+Nightbane, and south to the southern wall terminus.  Redfern spans westward
+toward Crystal Square."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13184
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13182
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13157
+
+  [[rooms.mob_resets]]
+  vnum = 13011
+  max = 16
+
+  [[rooms.mob_resets]]
+  vnum = 13013
+  max = 8
+
+[[rooms]]
+vnum = 13184
+name = "Briarwood Road"
+sector = "city"
+description = """
+Briarwood continues north and south here; north toward Nightbane, and south
+toward Redfern.  The city wall is directly east of you, and there are shops
+to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13185
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13183
+
+[[rooms]]
+vnum = 13185
+name = "Briarwood Road"
+sector = "city"
+description = """
+Briarwood continues north and south here; north toward Nightbane, and south
+toward Redfern.  The city wall is directly east of you, and there are shops
+to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13186
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13184
+
+[[rooms]]
+vnum = 13186
+name = "Briarwood Road"
+sector = "city"
+description = """
+Briarwood continues north and south here; north toward Nightbane, and
+south toward Redfern.  The city wall is directly east of you, and there
+are shops to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13187
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13185
+
+  [[rooms.mob_resets]]
+  vnum = 13019
+  max = 8
+
+[[rooms]]
+vnum = 13187
+name = "Briarwood Road"
+sector = "city"
+description = """
+Briarwood continues north and south here; north toward Nightbane, and
+south toward Redfern.  The city wall is directly east of you, and there
+is a shop to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13188
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13186
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13015
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 13024
+  max = 6
+
+[[rooms]]
+vnum = 13188
+name = "Intersection of Briarwood & Nightbane"
+sector = "city"
+description = """
+The intersection of Briarwood and Nightbane Avenue.  Briarwood continues
+north to the city wall, and south toward Redfern Road.  The city wall
+lies east.  Nightbane stretches west toward Unity Square."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13189
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13187
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13145
+
+  [[rooms.mob_resets]]
+  vnum = 13012
+  max = 16
+
+  [[rooms.mob_resets]]
+  vnum = 13013
+  max = 8
+
+[[rooms]]
+vnum = 13189
+name = "Briarwood Road"
+sector = "city"
+description = """
+The road continues north and south here; north toward the city wall, and
+south toward Nightbane Avenue.  The church complex lies due west; the
+city wall parallels you on the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13190
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13188
+
+[[rooms]]
+vnum = 13190
+name = "Briarwood Road"
+sector = "city"
+description = """
+The road continues north and south here; north toward the city wall, and
+south toward Nightbane Avenue.  The church complex lies due west; the
+city wall parallels you on the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13191
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13189
+
+[[rooms]]
+vnum = 13191
+name = "The end of Briarwood Road"
+sector = "city"
+description = """
+Briarwood ends in this alley near the church.  To the north, beyond the
+city wall, you can hear the sound of rushing waters from the Cottonwood
+River.  Trees peer over the top of the stone walls to the east.  To the
+west is the massive church complex; southward, the road continues toward
+Nightbane Avenue."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13190
+

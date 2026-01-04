@@ -1,0 +1,29 @@
+[[rooms]]
+vnum = 1
+name = "The Void"
+sector = "city"
+description = "You are floating in nothing."
+
+[[rooms]]
+vnum = 2
+name = "Limbo"
+sector = "city"
+description = """
+You are floating in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light, which fades into the relative
+darkness around you without any trace of edges or shadow.
+   There is a "No Tipping" notice pinned to the darkness."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3001
+
+[[rooms]]
+vnum = 3
+name = "The Corner"
+sector = "city"
+description = """
+You are standing with your nose in the corner.  Every time you try to
+turn around, you get slapped upside the head and quickly resume your
+position."""
+

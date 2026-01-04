@@ -1,0 +1,8 @@
+id = "high_tower"
+name = "High Tower"
+credits = "{19 60} Skylar  High Tower of Sorcery"
+reset_interval = 120
+
+[vnum_range]
+min = 1300
+max = 1499

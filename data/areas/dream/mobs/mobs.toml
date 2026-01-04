@@ -1,0 +1,21 @@
+[[mobiles]]
+vnum = 8600
+keywords = ["oldstyle", "keeper"]
+short_desc = "the keeper"
+long_desc = "The keeper of the Morris equipment is here."
+description = "Her job is to set the level for this equipment."
+level = 15
+sex = "female"
+act_flags = ["npc"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+

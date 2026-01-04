@@ -1,0 +1,8 @@
+id = "arachnos"
+name = "Arachnos"
+credits = "{09 40} Mahatma Arachnos"
+reset_interval = 120
+
+[vnum_range]
+min = 6200
+max = 6399

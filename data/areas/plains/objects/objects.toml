@@ -1,0 +1,129 @@
+[[objects]]
+vnum = 300
+keywords = ["herbs", "herb", "timian"]
+short_desc = "a small dusk of timian herbs"
+long_desc = "Some herbs are lying here, small green leaves and tiny pink flowers."
+item_type = "food"
+level = 0
+weight = 10
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 301
+keywords = ["herbs", "herb", "gyvel"]
+short_desc = "a small dusk of black gyvel"
+long_desc = "Some black gyvel is lying here, dark green with black leaves and tinyblood red flowers."
+item_type = "food"
+level = 0
+weight = 10
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 302
+keywords = ["plant", "ivy"]
+short_desc = "a small dusk of poison ivy"
+long_desc = "Some poison ivy is growing here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 303
+keywords = ["blood", "jar"]
+short_desc = "a dark red jar"
+long_desc = "A small jar in a dark, red colour."
+item_type = "drink"
+level = 0
+weight = 20
+cost = 20
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 304
+keywords = ["wild", "flowers"]
+short_desc = "wild flowers"
+long_desc = "A bunch of pretty wild flowers is here."
+item_type = "trash"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "head", "hold"]
+extra_flags = ["anti_evil"]
+
+[[objects]]
+vnum = 307
+keywords = ["amulet"]
+short_desc = "a strange amulet"
+long_desc = "A strange looking amulet is lying here, half covered with dust."
+item_type = "jewelry"
+level = 0
+weight = 10
+cost = 1
+wear_flags = ["take", "neck"]
+extra_flags = ["magic", "nodrop"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = 5
+
+[[objects]]
+vnum = 308
+keywords = ["staff", "stick"]
+short_desc = "a druish staff"
+long_desc = "A staff with druidic marks have been left here."
+item_type = "trash"
+level = 0
+weight = 40
+cost = 10
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 309
+keywords = ["rabbit", "roast", "wabbit"]
+short_desc = "a rabbit roast"
+long_desc = "You see a deliciously looking rabbit roast."
+item_type = "food"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 310
+keywords = ["template", "scroll"]
+short_desc = "a strange template"
+long_desc = "A strange template made of an exotic green metal is placed here"
+item_type = "scroll"
+level = 25
+weight = 10
+cost = 1870
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 311
+keywords = ["potion", "clear"]
+short_desc = "a clear potion"
+long_desc = "A clear potion wrapped in leather is unnoticed placed here."
+item_type = "potion"
+level = 0
+weight = 20
+cost = 300
+wear_flags = ["take"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 312
+keywords = ["scroll", "jhyfrdow"]
+short_desc = "a scroll titled 'jhyfrdow'"
+long_desc = "An odd looking scroll is here."
+item_type = "scroll"
+level = 3
+weight = 10
+cost = 640
+wear_flags = ["take"]
+

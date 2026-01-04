@@ -1,0 +1,8 @@
+id = "drakyri_isle"
+name = "Drakyri Isle"
+credits = "{75 99} Ydri    Drakyri Isle"
+reset_interval = 120
+
+[vnum_range]
+min = 11700
+max = 11799

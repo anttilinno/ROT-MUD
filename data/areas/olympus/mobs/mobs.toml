@@ -1,0 +1,630 @@
+[[mobiles]]
+vnum = 901
+keywords = ["oldstyle", "zeus", "god"]
+short_desc = "Zeus"
+long_desc = "Zeus sits here on a throne."
+description = """
+You see before you the greatest of the Olympians.  It seems as if he could
+destroy you with a thought.  Every glance penetrates deep into your soul.
+You now know what true fear is."""
+level = 110
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "cleric"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9500
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 10
+  bonus = 28
+
+[[mobiles]]
+vnum = 902
+keywords = ["oldstyle", "prometheus"]
+short_desc = "Prometheus"
+long_desc = "Prometheus is here, playing with a match."
+description = """
+This mortal risked the wrath of Zeus to give the gift of fire to humans.  He
+looks up at you and smiles."""
+level = 101
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 5000
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 20
+
+[[mobiles]]
+vnum = 903
+keywords = ["oldstyle", "hermes"]
+short_desc = "Hermes"
+long_desc = "Hermes is busy, delivering a message."
+description = """
+This is the messenger of the Gods.  He wears a winged helm and boots, and
+darts from place to place.  He looks very busy, and it seems as if he doesn't
+even notice your presence."""
+level = 106
+sex = "male"
+act_flags = ["npc", "scavenger", "thief"]
+affected_by = ["detect_invis", "detect_hidden", "sneak", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 7000
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 4
+  bonus = 23
+
+[[mobiles]]
+vnum = 904
+keywords = ["oldstyle", "poseidon"]
+short_desc = "Poseidon"
+long_desc = "Poseidon is dining here."
+description = """
+He is the brother of Zeus himself, chosen to rule the seas.  He must be
+visiting Mount Olympus.  He nods at you and motions for you to enter and
+have a seat."""
+level = 109
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "mage"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 8500
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 4
+  bonus = 24
+
+[[mobiles]]
+vnum = 905
+keywords = ["oldstyle", "apollo"]
+short_desc = "Apollo"
+long_desc = "Apollo is here, playing a tune."
+description = """
+This jovial God is strumming on a lyre.  He smiles at you and asks you to
+join him.  You notice a dangerous looking bow by his side, however, and think
+that he knows more than music."""
+level = 108
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 8500
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 10
+  bonus = 25
+
+[[mobiles]]
+vnum = 906
+keywords = ["oldstyle", "ares"]
+short_desc = "Ares"
+long_desc = "Ares is here, kicking your ass."
+description = """
+The God of War is here, studying some maps.  He scowls at you as you enter
+and says 'I am very busy.  What do you want?'"""
+level = 109
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9000
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 6
+  bonus = 26
+
+[[mobiles]]
+vnum = 907
+keywords = ["oldstyle", "athena"]
+short_desc = "Athena"
+long_desc = "Athena is relaxing here."
+description = """
+Zeus' favorite daughter is sitting on a couch eating grapes.  She smiles at
+you and invites you to join her."""
+level = 106
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 7500
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 4
+  bonus = 24
+
+[[mobiles]]
+vnum = 908
+keywords = ["oldstyle", "hephaestus", "smith"]
+short_desc = "Hephaestus"
+long_desc = "Hephaestus the Smith is here, crafting a fine weapon."
+description = """
+This God is the only one who is not physically perfect.  He is lame and very
+ugly.  You get the impression that he is kind, however, and would go out of his
+way to help you.  He is attended by three golden maidens."""
+level = 105
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 7000
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 4
+  bonus = 23
+
+[[mobiles]]
+vnum = 909
+keywords = ["oldstyle", "handmaid", "golden"]
+short_desc = "A Golden Maiden"
+long_desc = "A Handmaid of gold is here, assisting the smith."
+description = """
+As you gaze upon this creation, you realize that she is made from solid
+gold.  She seems to be very lifelike as she assists the smith in his work."""
+level = 52
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 650
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 7
+  bonus = 7
+
+[[mobiles]]
+vnum = 910
+keywords = ["oldstyle", "soldier"]
+short_desc = "A Soldier"
+long_desc = "A soldier is here, assisting Ares."
+description = """
+This man is waiting on Ares.  Although he does not look very strong, you
+realize that Ares would not have any weaklings working for him."""
+level = 69
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 911
+keywords = ["oldstyle", "musician", "apprentice"]
+short_desc = "an apprentice musician"
+long_desc = "A musician is here, learning from Apollo."
+description = """
+This man has mastered his first profession, and is now studying music from the
+immortal Apollo."""
+level = 27
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 912
+keywords = ["oldstyle", "boy", "serving", "servant"]
+short_desc = "A serving boy"
+long_desc = "A servant is here, feeding Athena her grapes."
+description = "This boy is truly lucky to be able to serve Athena herself."
+level = 12
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 913
+keywords = ["oldstyle", "hound", "dog", "war"]
+short_desc = "A hound of war"
+long_desc = "A large hound snarls at you."
+description = """
+This great beast can barely be called a dog.  It has been bred to cause fear
+on the battle field, and you have no doubt that it does its job well."""
+level = 70
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 914
+keywords = ["oldstyle", "Odin"]
+short_desc = "Odin"
+long_desc = "Odin is resting here."
+description = """
+As you gaze at Odin, you realize how insignificant you truly are.  He towers
+over you, and is so intent on his activities that he barely recognizes your
+presence."""
+level = 110
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9500
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 6
+  bonus = 28
+
+[[mobiles]]
+vnum = 915
+keywords = ["oldstyle", "grocer", "greengrocer", "julius"]
+short_desc = "Julius the Green Grocer"
+long_desc = "Julius the Green Grocer stands here."
+description = """
+This jovial man has devoted his life to selling fruit and other foods to the
+inhabitants of this city.  Although he may seem like a wimp, it would be wise
+not to underestimate him.  He smiles warmly at you and shows you his selection
+of delicious looking foods."""
+level = 100
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4500
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 19
+
+[[mobiles]]
+vnum = 916
+keywords = ["oldstyle", "alchemist"]
+short_desc = "the Alchemist"
+long_desc = "The ancient, wizened Alchemist stands here."
+description = """
+Skilled in all manner of magic, as well as the ancient art of alchemy, he
+stands ready to supply the citizens here (but not you) with all manner of
+arcane supplies."""
+level = 100
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4500
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 19
+
+[[mobiles]]
+vnum = 917
+keywords = ["oldstyle", "clive"]
+short_desc = "Clive the Weapons Master"
+long_desc = "Clive the Weapons Master is practicing with his bow and axe."
+description = """
+Clive looks VERY big and VERY tough.  All those years in the army must have
+paid off."""
+level = 99
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4500
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 19
+
+[[mobiles]]
+vnum = 918
+keywords = ["oldstyle", "armourer", "samuel"]
+short_desc = "Samuel the Armourer"
+long_desc = "Samuel the Armourer glares at you."
+description = """
+Samuel looks just like Clive the Weapons Master: VERY big and VERY tough.
+He doesn't like what you've been doing in his city."""
+level = 68
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1200
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 10
+
+[[mobiles]]
+vnum = 919
+keywords = ["oldstyle", "ra", "sun", "god"]
+short_desc = "Ra the Sun God"
+long_desc = "Ra the Egyptian Sun God is resting here."
+description = """
+Ra is very bright!  It hurts your eyes to look at him, so you can tell little
+about his appearance.  What you can tell, however, suggests that he is no one
+to be trifled with."""
+level = 110
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9500
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 6
+  bonus = 28
+
+[[mobiles]]
+vnum = 920
+keywords = ["oldstyle", "chimera"]
+short_desc = "a chimera"
+long_desc = "A chimera prowls the cell."
+description = """
+This bizarre creature has three heads - one of a goat, one of a lion, and one
+of a dragon.  It growls at you as you enter the cell, then suddenly attacks!"""
+level = 67
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1200
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 10
+
+[[mobiles]]
+vnum = 921
+keywords = ["oldstyle", "hera"]
+short_desc = "Hera"
+long_desc = "Hera is here."
+description = """
+Hera, the wife of Zeus is here.  She smiles at you as you enter and invites you
+to rest and sit for a while."""
+level = 109
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "cleric"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9000
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 8
+  bonus = 26
+
+[[mobiles]]
+vnum = 922
+keywords = ["oldstyle", "roc"]
+short_desc = "a roc"
+long_desc = "A roc is here."
+description = """
+This is a giant bird.  It looks at you quizzically, then makes a noise and
+looks away."""
+level = 49
+sex = "none"
+act_flags = ["npc", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 923
+keywords = ["oldstyle", "citizen", "resident"]
+short_desc = "A citizen"
+long_desc = "A citizen of this town is strolling down the street here."
+description = """
+He looks happy and carefree.  He smiles and tips his hat to you."""
+level = 12
+sex = "male"
+act_flags = ["npc", "scavenger", "thief"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 924
+keywords = ["oldstyle", "pegasus", "horse"]
+short_desc = "a pegasus"
+long_desc = "A large horse with wings is here."
+description = """
+This horse is snow white with large wings.  Although it doesn't look very
+threatening, it seems as though it would be dangerous if provoked."""
+level = 28
+sex = "none"
+act_flags = ["npc", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 925
+keywords = ["oldstyle", "cook"]
+short_desc = "A Cook"
+long_desc = "A cook is here, hard at work."
+description = """
+This man looks as is he has been spending WAY too much time in the kitchen."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 926
+keywords = ["oldstyle", "jailer"]
+short_desc = "The Jailer"
+long_desc = "The jailer is here, watching for intruders."
+description = """
+He looks as though he has spent a lot of time underground, guarding the
+prisoners."""
+level = 43
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "mage"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+

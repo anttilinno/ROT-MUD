@@ -1,0 +1,8 @@
+id = "dark_continent"
+name = "Dark Continent"
+credits = "{05 35} Mort    Dark Continent"
+reset_interval = 120
+
+[vnum_range]
+min = 14500
+max = 14599

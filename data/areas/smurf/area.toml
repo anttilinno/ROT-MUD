@@ -1,0 +1,8 @@
+id = "smurfville"
+name = "Smurfville"
+credits = "{01 20} Generic Smurf Village"
+reset_interval = 120
+
+[vnum_range]
+min = 100
+max = 199

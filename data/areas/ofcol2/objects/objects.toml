@@ -1,0 +1,1210 @@
+[[objects]]
+vnum = 600
+keywords = ["axe", "hand"]
+short_desc = "a hand axe"
+long_desc = "A hand axe is on the floor here."
+item_type = "weapon"
+level = 7
+weight = 100
+cost = 420
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 8
+
+[[objects]]
+vnum = 601
+keywords = ["meat", "cleaver"]
+short_desc = "a meat cleaver"
+long_desc = "A sharp meat cleaver is just lying on the floor here!"
+item_type = "weapon"
+level = 15
+weight = 50
+cost = 530
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 602
+keywords = ["side", "meat", "beef"]
+short_desc = "a side of beef"
+long_desc = "A side of beef is here on the floor."
+item_type = "food"
+level = 0
+weight = 100
+cost = 50
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 603
+keywords = ["side", "meat", "pork"]
+short_desc = "a side of pork"
+long_desc = "A side of pork is here on the floor."
+item_type = "food"
+level = 0
+weight = 100
+cost = 42
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 604
+keywords = ["side", "meat", "horse"]
+short_desc = "a side of horse"
+long_desc = "A side of horse is here on the floor."
+item_type = "food"
+level = 0
+weight = 120
+cost = 21
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 605
+keywords = ["meat", "chicken"]
+short_desc = "a defeathered chicken"
+long_desc = "A defeathered chicken is here on the floor."
+item_type = "food"
+level = 0
+weight = 50
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 606
+keywords = ["emerald", "ring"]
+short_desc = "an emerald ring"
+long_desc = "An emerald ring is on the floor, gathering dust."
+item_type = "jewelry"
+level = 0
+weight = 10
+cost = 1000
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 607
+keywords = ["glass", "trinket"]
+short_desc = "a glass trinket"
+long_desc = "A glass trinket is on the floor, gathering dust."
+item_type = "gem"
+level = 0
+weight = 10
+cost = 150
+wear_flags = ["take", "hold"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 608
+keywords = ["golden", "necklace"]
+short_desc = "a golden necklace"
+long_desc = "A golden necklace is on the floor, gathering dust."
+item_type = "jewelry"
+level = 0
+weight = 20
+cost = 500
+wear_flags = ["take", "neck"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = -1
+
+[[objects]]
+vnum = 609
+keywords = ["cabbage"]
+short_desc = "a head of cabbage"
+long_desc = "Some fresh cabbage is here, get it while it lasts!"
+item_type = "food"
+level = 0
+weight = 20
+cost = 2
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 610
+keywords = ["lettuce"]
+short_desc = "a head of lettuce"
+long_desc = "Some fresh lettuce is here, get it while it lasts!"
+item_type = "food"
+level = 0
+weight = 20
+cost = 2
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 611
+keywords = ["milk", "bottle"]
+short_desc = "a bottle of milk"
+long_desc = "A glass bottle of milk is on a shelf here, fresh from the cow."
+item_type = "drink"
+level = 0
+weight = 50
+cost = 3
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 612
+keywords = ["apple"]
+short_desc = "an apple"
+long_desc = "An apple is on the ground."
+item_type = "food"
+level = 0
+weight = 10
+cost = 1
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 613
+keywords = ["corn"]
+short_desc = "an ear of corn"
+long_desc = "An ear of corn is on the ground."
+item_type = "food"
+level = 0
+weight = 10
+cost = 3
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 614
+keywords = ["hay", "pile"]
+short_desc = "a pile of hay"
+long_desc = "There is a big pile of hay here."
+item_type = "trash"
+level = 0
+weight = 200
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 615
+keywords = ["pitchfork", "fork"]
+short_desc = "a pitchfork"
+long_desc = "A pitchfork is on the floor."
+item_type = "weapon"
+level = 13
+weight = 100
+cost = 122
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 3
+
+[[objects]]
+vnum = 616
+keywords = ["vest"]
+short_desc = "a leather vest"
+long_desc = "A leather vest is on the floor."
+item_type = "armor"
+level = 0
+weight = 100
+cost = 270
+wear_flags = ["take", "body"]
+
+[[objects]]
+vnum = 617
+keywords = ["sleeves"]
+short_desc = "some leather sleeves"
+long_desc = "Some leather sleeves are on the floor."
+item_type = "armor"
+level = 0
+weight = 50
+cost = 136
+wear_flags = ["take", "arms"]
+
+[[objects]]
+vnum = 618
+keywords = ["leggings"]
+short_desc = "some leather leggings"
+long_desc = "Some leather leggings are on the floor."
+item_type = "armor"
+level = 0
+weight = 50
+cost = 136
+wear_flags = ["take", "legs"]
+
+[[objects]]
+vnum = 619
+keywords = ["boots"]
+short_desc = "some leather boots"
+long_desc = "Some leather boots are on the floor."
+item_type = "armor"
+level = 0
+weight = 50
+cost = 136
+wear_flags = ["take", "feet"]
+
+[[objects]]
+vnum = 620
+keywords = ["ofcol", "ring"]
+short_desc = "an Ofcol signet ring"
+long_desc = "A shiny ring of gold is in the dirt."
+item_type = "jewelry"
+level = 19
+weight = 10
+cost = 730
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 621
+keywords = ["plate", "brass"]
+short_desc = "brass plate"
+long_desc = "A pile of brass plates is against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 2400
+wear_flags = ["take", "body"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 622
+keywords = ["helm", "brass"]
+short_desc = "a brass helm"
+long_desc = "A brass helm is against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1280
+wear_flags = ["take", "head"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 623
+keywords = ["leggings", "brass"]
+short_desc = "brass leggings"
+long_desc = "A pile of brass plates is against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1280
+wear_flags = ["take", "legs"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 624
+keywords = ["boots", "brass"]
+short_desc = "brass boots"
+long_desc = "Some brass boots are against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1280
+wear_flags = ["take", "feet"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 625
+keywords = ["gauntlets", "brass"]
+short_desc = "brass gauntlets"
+long_desc = "Some brass gauntlets are against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1280
+wear_flags = ["take", "hands"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 626
+keywords = ["sleeves", "brass"]
+short_desc = "brass sleeves"
+long_desc = "A pile of brass plates is against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1280
+wear_flags = ["take", "arms"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 627
+keywords = ["shield", "brass"]
+short_desc = "a brass shield"
+long_desc = "A big plate of brass is against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1850
+wear_flags = ["take", "shield"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 628
+keywords = ["girth", "brass"]
+short_desc = "a brass girth"
+long_desc = "A brass girth is against the wall here."
+item_type = "armor"
+level = 31
+weight = 100
+cost = 1280
+wear_flags = ["take", "waist"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 629
+keywords = ["bracer", "brass"]
+short_desc = "a brass bracer"
+long_desc = "A brass bracer is against the wall here."
+item_type = "armor"
+level = 23
+weight = 100
+cost = 1040
+wear_flags = ["take", "wrist"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 630
+keywords = ["claymore", "sword"]
+short_desc = "a claymore"
+long_desc = "A VERY big sword is against the wall here."
+item_type = "weapon"
+level = 37
+weight = 160
+cost = 3100
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+[[objects]]
+vnum = 631
+keywords = ["plate", "silver"]
+short_desc = "silver plate"
+long_desc = "A pile of silver plating and chain is on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 5000
+wear_flags = ["take", "body"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 10
+
+[[objects]]
+vnum = 632
+keywords = ["helm", "silver"]
+short_desc = "a silver helm"
+long_desc = "A shiny helm is on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 2900
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+[[objects]]
+vnum = 633
+keywords = ["leggings", "silver"]
+short_desc = "silver leggings"
+long_desc = "Some shiny leggings are on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 2900
+wear_flags = ["take", "legs"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+[[objects]]
+vnum = 634
+keywords = ["boots", "silver"]
+short_desc = "silver boots"
+long_desc = "Some shiny boots are on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 2900
+wear_flags = ["take", "feet"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+[[objects]]
+vnum = 635
+keywords = ["gauntlets", "silver"]
+short_desc = "silver gauntlets"
+long_desc = "Some shiny gauntlets are on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 2900
+wear_flags = ["take", "hands"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+[[objects]]
+vnum = 636
+keywords = ["sleeves", "silver"]
+short_desc = "silver sleeves"
+long_desc = "Some shiny sleeves are on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 2400
+wear_flags = ["take", "arms"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+[[objects]]
+vnum = 637
+keywords = ["shield", "silver"]
+short_desc = "the silver shield"
+long_desc = "A shiny shield is on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 4200
+wear_flags = ["take", "shield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+[[objects]]
+vnum = 638
+keywords = ["girth", "silver"]
+short_desc = "the silver girth"
+long_desc = "A shiny girth is on the floor."
+item_type = "armor"
+level = 49
+weight = 200
+cost = 2400
+wear_flags = ["take", "waist"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+
+[[objects]]
+vnum = 639
+keywords = ["plate", "platinum"]
+short_desc = "platinum plate"
+long_desc = "A pile of silvery metal is on the floor."
+item_type = "armor"
+level = 59
+weight = 500
+cost = 9200
+wear_flags = ["take", "body"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 15
+
+[[objects]]
+vnum = 640
+keywords = ["helmet", "platinum"]
+short_desc = "the platinum helmet"
+long_desc = "A silvery helmet is on the floor."
+item_type = "armor"
+level = 59
+weight = 300
+cost = 6300
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 10
+
+[[objects]]
+vnum = 641
+keywords = ["leggings", "platinum"]
+short_desc = "platinum leggings"
+long_desc = "Some silvery leggings are on the floor."
+item_type = "armor"
+level = 59
+weight = 400
+cost = 6300
+wear_flags = ["take", "legs"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 642
+keywords = ["boots", "platinum"]
+short_desc = "platinum boots"
+long_desc = "Some silvery boots are on the floor."
+item_type = "armor"
+level = 63
+weight = 400
+cost = 4100
+wear_flags = ["take", "feet"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 25
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 643
+keywords = ["gauntlets", "platinum"]
+short_desc = "platinum gauntlets"
+long_desc = "A pair of silvery gauntlets are on the floor."
+item_type = "armor"
+level = 61
+weight = 400
+cost = 4300
+wear_flags = ["take", "hands"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 644
+keywords = ["sleeves", "platinum"]
+short_desc = "platinum sleeves"
+long_desc = "A pair of silvery sleeves are on the floor."
+item_type = "armor"
+level = 59
+weight = 400
+cost = 6300
+wear_flags = ["take", "arms"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 645
+keywords = ["shield", "spiked", "platinum"]
+short_desc = "the platinum spiked shield"
+long_desc = "A jagged, silvery shield is on the floor."
+item_type = "armor"
+level = 61
+weight = 400
+cost = 6000
+wear_flags = ["take", "shield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 646
+keywords = ["girth", "platinum"]
+short_desc = "the platinum girth"
+long_desc = "A silvery girth is on the floor."
+item_type = "armor"
+level = 61
+weight = 400
+cost = 4000
+wear_flags = ["take", "waist"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 647
+keywords = ["avenger", "holy", "sword"]
+short_desc = "holy Avenger"
+long_desc = "A glowing silvery sword is hovering here, ready to possess an owner."
+item_type = "weapon"
+level = 63
+weight = 250
+cost = 5700
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 648
+keywords = ["whiskey", "shot"]
+short_desc = "a shot of whiskey"
+long_desc = "A shot of whiskey is on the table."
+item_type = "drink"
+level = 0
+weight = 10
+cost = 12
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 649
+keywords = ["ale", "quart"]
+short_desc = "a quart of ale"
+long_desc = "A quart of ale is on the table."
+item_type = "drink"
+level = 0
+weight = 20
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 650
+keywords = ["port", "brew", "quart"]
+short_desc = "a quart of port brew"
+long_desc = "A quart of port brew is on the table."
+item_type = "drink"
+level = 0
+weight = 20
+cost = 18
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 651
+keywords = ["key", "citadel"]
+short_desc = "the citadel key"
+long_desc = "A key is on the floor."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 652
+keywords = ["symbol", "holy"]
+short_desc = "the Holy Symbol of Bahamut"
+long_desc = "A very shiny symbol is on the floor."
+item_type = "jewelry"
+level = 33
+weight = 50
+cost = 3700
+wear_flags = ["take", "neck"]
+extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 653
+keywords = ["ranseur", "polearm"]
+short_desc = "a ranseur"
+long_desc = "A heavy polearm is against the wall here, ready to inflict damage."
+item_type = "weapon"
+level = 47
+weight = 200
+cost = 1460
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 654
+keywords = ["torso", "dragonscale", "golden"]
+short_desc = "a golden dragonscale torso"
+long_desc = "A golden dragonscale torso is on the floor!"
+item_type = "armor"
+level = 47
+weight = 250
+cost = 6200
+wear_flags = ["take", "body"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -5
+
+[[objects]]
+vnum = 655
+keywords = ["dragonhelm", "golden"]
+short_desc = "a golden dragonhelm"
+long_desc = "A golden dragonhelm is on the floor!"
+item_type = "armor"
+level = 41
+weight = 100
+cost = 2800
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 656
+keywords = ["leggings", "golden"]
+short_desc = "golden dragonscale leggings"
+long_desc = "Some golden dragonscale leggings are on the floor!"
+item_type = "armor"
+level = 41
+weight = 100
+cost = 2800
+wear_flags = ["take", "legs"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 657
+keywords = ["boots", "golden"]
+short_desc = "golden dragonscale boots"
+long_desc = "Some golden dragonscale boots are on the floor!"
+item_type = "armor"
+level = 41
+weight = 100
+cost = 2800
+wear_flags = ["take", "feet"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 658
+keywords = ["gauntlets", "golden"]
+short_desc = "golden dragonscale gauntlets"
+long_desc = "Some golden dragonscale gauntlets are on the floor!"
+item_type = "armor"
+level = 41
+weight = 100
+cost = 2800
+wear_flags = ["take", "hands"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 659
+keywords = ["sleeves", "golden"]
+short_desc = "golden dragonscale sleeves"
+long_desc = "Some golden dragonscale sleeves are on the floor!"
+item_type = "armor"
+level = 41
+weight = 100
+cost = 2800
+wear_flags = ["take", "arms"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 660
+keywords = ["shield", "golden"]
+short_desc = "a golden dragonscale shield"
+long_desc = "A golden dragonscale shield is on the floor!"
+item_type = "armor"
+level = 41
+weight = 100
+cost = 3700
+wear_flags = ["take", "shield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 661
+keywords = ["girth", "golden"]
+short_desc = "a golden dragonscale girth"
+long_desc = "A golden dragonscale girth is on the floor!"
+item_type = "armor"
+level = 41
+weight = 100
+cost = 2800
+wear_flags = ["take", "waist"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 662
+keywords = ["claw", "golden"]
+short_desc = "the golden claw"
+long_desc = "A small golden claw is on the floor"
+item_type = "weapon"
+level = 41
+weight = 100
+cost = 2600
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 10
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 663
+keywords = ["orb", "dragonorb"]
+short_desc = "the Gold Dragon Orb"
+long_desc = "A very large pearl-like sphere is in the center of this room."
+item_type = "staff"
+level = 33
+weight = 300
+cost = 9000
+wear_flags = ["take", "hold"]
+extra_flags = ["magic", "anti_evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+[[objects]]
+vnum = 664
+keywords = ["robe", "golden"]
+short_desc = "a golden robe"
+long_desc = "A golden robe is on the floor."
+item_type = "armor"
+level = 33
+weight = 100
+cost = 3800
+wear_flags = ["take", "about"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+[[objects]]
+vnum = 665
+keywords = ["house", "key"]
+short_desc = "a house key"
+long_desc = "A house key is on the floor."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 666
+keywords = ["broom"]
+short_desc = "a broom"
+long_desc = "A broom is against the wall here."
+item_type = "weapon"
+level = 1
+weight = 80
+cost = 760
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = -3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 667
+keywords = ["chest"]
+short_desc = "a chest"
+long_desc = "A chest is on the floor here."
+item_type = "container"
+level = 0
+weight = 100
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 668
+keywords = ["claw", "golden"]
+short_desc = "the Golden Claw"
+long_desc = "A huge golden claw is on the floor"
+item_type = "weapon"
+level = 77
+weight = 200
+cost = 7200
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 6
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 669
+keywords = ["claw", "golden"]
+short_desc = "the golden claw"
+long_desc = "A large golden claw is on the floor"
+item_type = "weapon"
+level = 55
+weight = 150
+cost = 4100
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+

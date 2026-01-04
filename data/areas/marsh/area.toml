@@ -1,0 +1,8 @@
+id = "marsh"
+name = "Marsh"
+credits = "{29 50} Generic Old Marsh"
+reset_interval = 120
+
+[vnum_range]
+min = 8300
+max = 8399

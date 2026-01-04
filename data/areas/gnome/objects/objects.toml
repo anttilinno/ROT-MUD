@@ -1,0 +1,316 @@
+[[objects]]
+vnum = 1500
+keywords = ["key", "bloody"]
+short_desc = "a bloody key"
+long_desc = "A bloody key is stuck to the floor."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1501
+keywords = ["key", "dirty"]
+short_desc = "a dirty key"
+long_desc = "A dirty key lies here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1502
+keywords = ["toy", "boomerang"]
+short_desc = "a toy boomerang"
+long_desc = "A toy boomerang wants to be picked up."
+item_type = "weapon"
+level = 9
+weight = 50
+cost = 730
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 1503
+keywords = ["staff", "gnarled"]
+short_desc = "a gnarled staff"
+long_desc = "A gnarled staff is here."
+item_type = "weapon"
+level = 9
+weight = 150
+cost = 730
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 9
+
+[[objects]]
+vnum = 1504
+keywords = ["sword", "gnome"]
+short_desc = "a gnome sword"
+long_desc = "A gnome sword catches your eye."
+item_type = "weapon"
+level = 13
+weight = 150
+cost = 610
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 3
+
+[[objects]]
+vnum = 1505
+keywords = ["shield", "studded"]
+short_desc = "a studded shield"
+long_desc = "A studded wooden shield lies here."
+item_type = "armor"
+level = 9
+weight = 160
+cost = 750
+wear_flags = ["take", "shield"]
+
+[[objects]]
+vnum = 1506
+keywords = ["potion", "bloody"]
+short_desc = "a bloody potion"
+long_desc = "A bloody potion lies here."
+item_type = "potion"
+level = 13
+weight = 220
+cost = 480
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1507
+keywords = ["cloak", "bloody"]
+short_desc = "a bloody cloak"
+long_desc = "A bloody cloak lies in a corner."
+item_type = "armor"
+level = 9
+weight = 150
+cost = 480
+wear_flags = ["take", "neck"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 1508
+keywords = ["ring", "bat"]
+short_desc = "a bat ring"
+long_desc = "A ring in the shape of a bat lies here."
+item_type = "jewelry"
+level = 19
+weight = 20
+cost = 270
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 15
+
+[[objects]]
+vnum = 1509
+keywords = ["necklace", "bead"]
+short_desc = "a bead necklace"
+long_desc = "A string of beads is here."
+item_type = "jewelry"
+level = 9
+weight = 80
+cost = 220
+wear_flags = ["take", "neck"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 1510
+keywords = ["sword", "electrum"]
+short_desc = "an electrum sword"
+long_desc = "An electrum sword lies here."
+item_type = "weapon"
+level = 23
+weight = 200
+cost = 930
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 3
+
+[[objects]]
+vnum = 1511
+keywords = ["basket", "wicker"]
+short_desc = "a wicker basket"
+long_desc = "A wicker basket sits here."
+item_type = "container"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1512
+keywords = ["peanuts"]
+short_desc = "some peanuts"
+long_desc = "Peanuts lie here."
+item_type = "food"
+level = 0
+weight = 90
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1513
+keywords = ["grain"]
+short_desc = "some grain"
+long_desc = "There is some grain here."
+item_type = "food"
+level = 0
+weight = 80
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1514
+keywords = ["skiff"]
+short_desc = "a skiff"
+long_desc = "A small skiff is here."
+item_type = "boat"
+level = 0
+weight = 240
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1515
+keywords = ["boots", "gnome"]
+short_desc = "a pair of gnome boots"
+long_desc = "You notice a pair of Gnome Boots."
+item_type = "armor"
+level = 13
+weight = 120
+cost = 610
+wear_flags = ["take", "feet"]
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 10
+
+[[objects]]
+vnum = 1516
+keywords = ["coins"]
+short_desc = "a pile of coins"
+long_desc = "A pile of coins."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1517
+keywords = ["coins"]
+short_desc = "a pile of coins"
+long_desc = "A pile of coins."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1519
+keywords = ["shield", "stone"]
+short_desc = "a stone shield"
+long_desc = "A stone slab lies here."
+item_type = "armor"
+level = 31
+weight = 350
+cost = 3700
+wear_flags = ["take", "shield"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+[[objects]]
+vnum = 1520
+keywords = ["mail", "heavy", "banded"]
+short_desc = "heavy banded mail"
+long_desc = "A large suit of heavy banded mail is here"
+item_type = "armor"
+level = 29
+weight = 300
+cost = 2100
+wear_flags = ["take", "body"]
+
+[[objects]]
+vnum = 1521
+keywords = ["club", "large", "two-handed"]
+short_desc = "a large club"
+long_desc = "A large club sits here."
+item_type = "weapon"
+level = 11
+weight = 220
+cost = 460
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 12
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -1
+
+[[objects]]
+vnum = 1522
+keywords = ["banana"]
+short_desc = "a banana"
+long_desc = "There is a banana here."
+item_type = "food"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1523
+keywords = ["life", "potion"]
+short_desc = "a potion of life healing"
+long_desc = "A potion of life healing has left here."
+item_type = "potion"
+level = 11
+weight = 10
+cost = 630
+wear_flags = ["take"]
+extra_flags = ["nodrop"]
+
+[[objects]]
+vnum = 1524
+keywords = ["club", "wooden"]
+short_desc = "a wooden club"
+long_desc = "A wooden club sits here."
+item_type = "weapon"
+level = 5
+weight = 100
+cost = 220
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -1
+

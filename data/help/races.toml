@@ -1,0 +1,493 @@
+# Race help entries
+
+[[help]]
+keywords = ["races", "race"]
+description = """
+Rivers of Time features 18 playable races, each with unique attributes
+and abilities. Races affect your starting stats, maximum stats, size,
+and sometimes grant bonus skills.
+
+STANDARD RACES (0-5 creation points):
+  Human    - Balanced, no bonuses or penalties
+  Half-Elf - Slightly better than human
+  Elf      - High DEX/INT, low STR/CON, bonus sneak/hide
+  Halfling - High DEX, low STR, bonus sneak/hide
+  Gnome    - High INT, small size
+  Goblin   - Quick and sneaky, bonus sneak/hide
+
+STRONG RACES (6-8 creation points):
+  Dwarf    - High STR/CON, low DEX, bonus berserk
+  Giant    - Very high STR, low INT/DEX, bonus bash
+  Half-Orc - High STR/CON, low INT/WIS
+  Pixie    - Tiny, high INT/DEX, fragile
+  Avian    - Winged, high WIS
+  Gnoll    - Savage hunters
+  Satyr    - Forest dwellers
+
+POWERFUL RACES (9+ creation points):
+  Centaur  - Horse-bodied, bonus enhanced damage
+  Minotaur - Bull-headed, bonus enhanced damage
+  Draconian - Dragon-blooded, bonus fast healing
+  Titan    - Near-giant, bonus fast healing
+  Heucuva  - Undead, bonus second attack
+  Kenku    - Bird-folk, bonus meditation
+
+Use 'help <racename>' for details on each race.
+"""
+see_also = ["classes", "score"]
+
+[[help]]
+keywords = ["human"]
+description = """
+HUMAN - The Adaptable Race
+
+Humans are the most common and versatile race. They have no special
+bonuses or penalties, making them suitable for any class.
+
+Size: Medium
+Creation Points: 0
+
+Stats:    Base  Max
+  STR     13    18
+  INT     13    18
+  WIS     13    18
+  DEX     13    18
+  CON     13    18
+
+Bonus Skills: None
+
+Humans excel at any class equally, making them ideal for new players.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["elf"]
+description = """
+ELF - The Fair Folk
+
+Elves are graceful, long-lived beings with an affinity for magic and
+nature. They are agile and intelligent but physically frail.
+
+Size: Small
+Creation Points: 5
+
+Stats:    Base  Max
+  STR     12    16
+  INT     14    20
+  WIS     13    18
+  DEX     15    21
+  CON     11    15
+
+Bonus Skills: sneak, hide
+
+Elves make excellent mages, thieves, and rangers.
+"""
+see_also = ["races", "halfelf"]
+
+[[help]]
+keywords = ["dwarf"]
+description = """
+DWARF - Mountain Folk
+
+Dwarves are stout, tough, and stubborn. They are skilled craftsmen
+and fierce warriors, with a legendary resistance to magic.
+
+Size: Medium
+Creation Points: 8
+
+Stats:    Base  Max
+  STR     14    20
+  INT     12    16
+  WIS     13    19
+  DEX     11    15
+  CON     15    21
+
+Bonus Skills: berserk
+
+Dwarves make excellent warriors and clerics.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["giant"]
+description = """
+GIANT - The Towering Ones
+
+Giants are massive humanoids of tremendous strength. What they lack
+in intelligence they make up for in raw physical power.
+
+Size: Large
+Creation Points: 6
+
+Stats:    Base  Max
+  STR     16    22
+  INT     11    15
+  WIS     13    18
+  DEX     11    15
+  CON     14    20
+
+Bonus Skills: bash, fast healing
+
+Giants make excellent warriors but struggle with magic.
+"""
+see_also = ["races", "titan"]
+
+[[help]]
+keywords = ["pixie"]
+description = """
+PIXIE - Tiny Fey Creatures
+
+Pixies are minuscule winged beings with powerful magical abilities.
+Despite their small size, they wield impressive arcane power.
+
+Size: Tiny
+Creation Points: 6
+
+Stats:    Base  Max
+  STR     10    14
+  INT     15    21
+  WIS     15    21
+  DEX     15    20
+  CON     10    14
+
+Bonus Skills: None
+
+Pixies make excellent mages but are very fragile.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["halfling"]
+description = """
+HALFLING - The Little Folk
+
+Halflings are small, nimble folk known for their stealth and luck.
+They make excellent thieves and surprisingly good adventurers.
+
+Size: Small
+Creation Points: 5
+
+Stats:    Base  Max
+  STR     11    15
+  INT     14    20
+  WIS     12    16
+  DEX     15    21
+  CON     13    18
+
+Bonus Skills: sneak, hide
+
+Halflings excel as thieves and make decent rogues.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["halforc", "half-orc"]
+description = """
+HALF-ORC - Children of Two Worlds
+
+Half-orcs combine human adaptability with orcish strength and
+toughness. They are often fierce warriors.
+
+Size: Medium
+Creation Points: 6
+
+Stats:    Base  Max
+  STR     14    19
+  INT     11    15
+  WIS     11    15
+  DEX     14    20
+  CON     15    21
+
+Bonus Skills: fast healing
+
+Half-orcs make excellent warriors and decent thieves.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["goblin"]
+description = """
+GOBLIN - Cunning Survivors
+
+Goblins are small, crafty creatures who survive through stealth
+and cunning rather than strength.
+
+Size: Small
+Creation Points: 5
+
+Stats:    Base  Max
+  STR     11    16
+  INT     14    20
+  WIS     12    16
+  DEX     15    19
+  CON     14    20
+
+Bonus Skills: sneak, hide
+
+Goblins make good thieves.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["halfelf", "half-elf"]
+description = """
+HALF-ELF - Between Two Worlds
+
+Half-elves combine human adaptability with elven grace. They are
+well-rounded and adaptable, slightly better than humans.
+
+Size: Medium
+Creation Points: 2
+
+Stats:    Base  Max
+  STR     12    17
+  INT     13    18
+  WIS     14    19
+  DEX     13    18
+  CON     13    18
+
+Bonus Skills: None
+
+Half-elves are slightly better than humans at most things.
+"""
+see_also = ["races", "elf", "human"]
+
+[[help]]
+keywords = ["avian"]
+description = """
+AVIAN - The Winged Ones
+
+Avians are humanoids with large, feathered wings. They are wise
+and perceptive, with a natural ability to fly.
+
+Size: Large
+Creation Points: 5
+
+Stats:    Base  Max
+  STR     12    17
+  INT     14    19
+  WIS     15    20
+  DEX     11    16
+  CON     12    17
+
+Bonus Skills: None (natural flight)
+
+Avians make good clerics and druids.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["gnome"]
+description = """
+GNOME - Tinkerers and Illusionists
+
+Gnomes are small, clever folk with a natural affinity for magic,
+particularly illusions. They are curious and inventive.
+
+Size: Small
+Creation Points: 4
+
+Stats:    Base  Max
+  STR     11    16
+  INT     15    20
+  WIS     14    19
+  DEX     12    15
+  CON     12    15
+
+Bonus Skills: None
+
+Gnomes make excellent mages.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["draconian"]
+description = """
+DRACONIAN - Dragon-Blooded
+
+Draconians are humanoids with draconic heritage. They are large,
+powerful, and possess trace amounts of dragon magic.
+
+Size: Huge
+Creation Points: 11
+
+Stats:    Base  Max
+  STR     16    22
+  INT     13    18
+  WIS     12    16
+  DEX     11    15
+  CON     15    21
+
+Bonus Skills: fast healing
+
+Draconians make powerful warriors and can be decent casters.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["centaur"]
+description = """
+CENTAUR - Horse-Bodied Warriors
+
+Centaurs have the upper body of a human and the lower body of a
+horse. They are powerful warriors and swift runners.
+
+Size: Large
+Creation Points: 9
+
+Stats:    Base  Max
+  STR     15    20
+  INT     12    17
+  WIS     10    15
+  DEX     8     13
+  CON     16    21
+
+Bonus Skills: enhanced damage
+
+Centaurs make excellent warriors but poor thieves.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["gnoll"]
+description = """
+GNOLL - Savage Hunters
+
+Gnolls are hyena-headed humanoids known for their ferocity and
+pack hunting tactics.
+
+Size: Large
+Creation Points: 7
+
+Stats:    Base  Max
+  STR     15    20
+  INT     11    16
+  WIS     10    15
+  DEX     16    20
+  CON     15    19
+
+Bonus Skills: None
+
+Gnolls make decent warriors and rangers.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["heucuva"]
+description = """
+HEUCUVA - Undead Warriors
+
+Heucuvas are undead creatures, former priests who were cursed for
+their evil deeds. They retain combat abilities.
+
+Size: Medium
+Creation Points: 10
+
+Stats:    Base  Max
+  STR     20    25
+  INT     5     10
+  WIS     5     10
+  DEX     20    25
+  CON     20    25
+
+Bonus Skills: second attack
+
+Heucuvas are extremely specialized combat undead.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["kenku"]
+description = """
+KENKU - Bird-Folk
+
+Kenku are bird-like humanoids with a talent for mimicry and magic.
+They are intelligent and make good spellcasters.
+
+Size: Medium
+Creation Points: 5
+
+Stats:    Base  Max
+  STR     14    19
+  INT     14    19
+  WIS     16    21
+  DEX     15    20
+  CON     14    19
+
+Bonus Skills: meditation
+
+Kenku make excellent casters of any type.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["minotaur"]
+description = """
+MINOTAUR - Bull-Headed Warriors
+
+Minotaurs are massive bull-headed humanoids known for their
+strength and ferocity in battle.
+
+Size: Large
+Creation Points: 7
+
+Stats:    Base  Max
+  STR     18    23
+  INT     11    16
+  WIS     10    15
+  DEX     11    16
+  CON     17    22
+
+Bonus Skills: enhanced damage
+
+Minotaurs make excellent warriors.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["satyr"]
+description = """
+SATYR - Forest Dwellers
+
+Satyrs are goat-legged humanoids known for their love of wine,
+music, and revelry. They are connected to nature.
+
+Size: Large
+Creation Points: 6
+
+Stats:    Base  Max
+  STR     18    23
+  INT     14    19
+  WIS     5     10
+  DEX     9     14
+  CON     16    21
+
+Bonus Skills: None
+
+Satyrs can make decent warriors or bards.
+"""
+see_also = ["races"]
+
+[[help]]
+keywords = ["titan"]
+description = """
+TITAN - Near-Divine Giants
+
+Titans are the largest playable race, descended from ancient giants
+of incredible power. They tower over other races.
+
+Size: Giant
+Creation Points: 11
+
+Stats:    Base  Max
+  STR     20    25
+  INT     13    18
+  WIS     13    18
+  DEX     10    15
+  CON     20    25
+
+Bonus Skills: fast healing
+
+Titans are supreme warriors but poor at magic.
+"""
+see_also = ["races", "giant"]

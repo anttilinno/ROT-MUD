@@ -1,0 +1,253 @@
+[[mobiles]]
+vnum = 8900
+keywords = ["oldstyle", "hierophant"]
+short_desc = "The Hierophant"
+long_desc = "The old Hierophant of the holy grove is here, gathering hollies."
+description = """
+He is a very old man, dressed in an old robe; but from the glint in his
+clear blue eyes you can see that He is aware of the world, and wise to its
+traps and pitfalls."""
+level = 40
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 8901
+keywords = ["oldstyle", "hierophant"]
+short_desc = "The Hierophant"
+long_desc = "The old Hierophant of the holy grove is here, gathering ivy."
+description = """
+She is a very old woman, dressed in an old gown; but from the glint in her
+clear blue eyes you can see that She is aware of the world, and wise to its
+traps and pitfalls."""
+level = 40
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 8902
+keywords = ["oldstyle", "elder", "druid"]
+short_desc = "an elder druid"
+long_desc = "An elder druid stands here, watching the local flora and wildlife."
+description = """
+He looks ageless, as do all druids.  His grey beard contrasts strongly with
+his lack of wrinkles."""
+level = 26
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 8903
+keywords = ["oldstyle", "elder", "druidess"]
+short_desc = "an elder druidess"
+long_desc = "An elder druidess stands here, watching the local fauna and feeding rabbits."
+description = """
+She looks ageless, as do all druids.  She smiles a beautiful smile at you."""
+level = 25
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 8904
+keywords = ["oldstyle", "doe"]
+short_desc = "a doe"
+long_desc = "A doe is here, munching on grass."
+description = """
+This peaceful creature looks at you with big dark eyes.  Her nose twitches as
+she sniffs at you, but she goes back to chewing some grass."""
+level = 10
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 8905
+keywords = ["oldstyle", "deer"]
+short_desc = "a deer"
+long_desc = "A deer is here, staring back at you."
+description = """
+The deer looks angered at your intrusion.  He butts his head against you, 
+albeit ineffectively."""
+level = 12
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 8906
+keywords = ["oldstyle", "stag", "deer", "large"]
+short_desc = "a stag"
+long_desc = "A large deer stag is here, protecting his territory."
+description = """
+He eyes you with contained anger.  You'd better leave him alone!"""
+level = 15
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 8907
+keywords = ["oldstyle", "bunny", "rabbit"]
+short_desc = "a small bunny"
+long_desc = "A small bunny is here, poking from bush to bush."
+description = """
+This bunny looks so adorable, you wished you had one just like this!"""
+level = 3
+sex = "none"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 8908
+keywords = ["oldstyle", "snake"]
+short_desc = "a harmless snake"
+long_desc = "A small snake slithers between the grass."
+description = "Upon careful inspection, you are sure it is NOT a cobra!"
+level = 8
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 8909
+keywords = ["oldstyle", "druid"]
+short_desc = "a druid"
+long_desc = "A druid is here in meditation."
+description = """
+He doesn't like you bothering him, but is too polite to ask you to leave."""
+level = 20
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 8910
+keywords = ["oldstyle", "druidess"]
+short_desc = "a druidess"
+long_desc = "A druidess is here, peering at you."
+description = """
+She wonders why you are staring at her, and how you got in here."""
+level = 19
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+

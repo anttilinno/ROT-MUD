@@ -1,0 +1,396 @@
+# Class help entries
+
+[[help]]
+keywords = ["classes", "class"]
+description = """
+Rivers of Time features 14 character classes divided into two tiers:
+
+TIER 1 (Starting Classes):
+  Mage      - Master of arcane magic, low HP, high mana
+  Cleric    - Divine spellcaster, healing and protection
+  Thief     - Stealth and cunning, backstab specialist
+  Warrior   - Combat master, highest HP and attacks
+  Ranger    - Wilderness expert, nature magic
+  Druid     - Nature priest, shapeshifting and healing
+  Vampire   - Undead predator, feeds on blood
+
+TIER 2 (Remort Classes - requires reaching max level):
+  Wizard    - Enhanced mage with greater power
+  Priest    - Enhanced cleric with divine might
+  Mercenary - Enhanced thief, deadly assassin
+  Gladiator - Enhanced warrior, arena champion
+  Strider   - Enhanced ranger, master tracker
+  Sage      - Enhanced druid, ancient wisdom
+  Lich      - Enhanced vampire, undead sorcerer
+
+Use 'help <classname>' for details on each class.
+"""
+see_also = ["races", "score"]
+
+[[help]]
+keywords = ["mage"]
+description = """
+MAGE - Master of Arcane Magic
+
+Mages are the primary offensive spellcasters in Rivers of Time. They
+command devastating attack spells like fireball, lightning bolt, and
+chain lightning. Their physical combat abilities are limited, but
+their magical prowess is unmatched.
+
+Prime Attribute: Intelligence
+Hit Points: Low (6-6 per level)
+Mana: High (8 per level)
+
+Strengths:
+  - Most powerful offensive magic
+  - Wide variety of utility spells
+  - Identify and enchantment spells
+
+Weaknesses:
+  - Lowest hit points
+  - Poor combat skills
+  - Light armor only
+
+Key Skills: scrolls, staves, wands, meditation
+Key Spells: magic missile, fireball, lightning bolt, enchant weapon
+"""
+see_also = ["wizard", "classes"]
+
+[[help]]
+keywords = ["cleric"]
+description = """
+CLERIC - Divine Spellcaster
+
+Clerics serve the gods and channel divine power for healing, protection,
+and smiting the undead. They are the primary healers and supporters in
+any group, but can also fight effectively with maces and flails.
+
+Prime Attribute: Wisdom
+Hit Points: Medium (7-10 per level)
+Mana: Medium (2 per level)
+
+Strengths:
+  - Best healing spells
+  - Protection and blessing magic
+  - Can wear medium armor
+  - Effective against undead
+
+Weaknesses:
+  - Limited offensive magic
+  - Cannot use edged weapons (lore)
+  - Moderate combat abilities
+
+Key Skills: mace, flail, shield block, rescue
+Key Spells: cure light/serious/critical, heal, sanctuary, bless
+"""
+see_also = ["priest", "classes"]
+
+[[help]]
+keywords = ["thief"]
+description = """
+THIEF - Master of Stealth
+
+Thieves excel at stealth, deception, and striking from the shadows.
+The backstab ability allows them to deal massive damage to unsuspecting
+foes. They can also pick locks, steal items, and move unseen.
+
+Prime Attribute: Dexterity
+Hit Points: Medium (8-13 per level)
+Mana: None
+
+Strengths:
+  - Deadly backstab attack
+  - Stealth abilities (sneak, hide)
+  - Pick locks and steal
+  - High dodge capability
+
+Weaknesses:
+  - No magic ability
+  - Light armor only
+  - Poor sustained combat
+
+Key Skills: backstab, sneak, hide, steal, pick lock, dodge, circle
+"""
+see_also = ["mercenary", "classes"]
+
+[[help]]
+keywords = ["warrior"]
+description = """
+WARRIOR - Combat Master
+
+Warriors are the ultimate combat specialists. They gain the most attacks
+per round, the highest hit points, and can use any weapon and armor.
+While they lack magic, their combat prowess is unmatched.
+
+Prime Attribute: Strength
+Hit Points: Highest (13-18 per level)
+Mana: None
+
+Strengths:
+  - Most attacks per round (up to 5)
+  - Highest hit points
+  - All weapons and armor
+  - Bash and berserk abilities
+
+Weaknesses:
+  - No magic at all
+  - Limited utility skills
+
+Key Skills: second/third/fourth/fifth attack, bash, berserk, rescue,
+           enhanced damage, parry, shield block
+"""
+see_also = ["gladiator", "classes"]
+
+[[help]]
+keywords = ["ranger"]
+description = """
+RANGER - Wilderness Expert
+
+Rangers are warriors of the wild, combining combat skills with nature
+magic. They can track foes, befriend animals, and call upon natural
+forces to aid them in battle.
+
+Prime Attribute: Strength
+Hit Points: Medium-High (9-13 per level)
+Mana: Low
+
+Strengths:
+  - Dual wield capability
+  - Tracking ability
+  - Nature spells
+  - Good in outdoor environments
+
+Weaknesses:
+  - Jack of all trades, master of none
+  - Less magic than pure casters
+  - Less combat than warriors
+
+Key Skills: track, dual wield, enhanced damage
+Key Spells: call lightning, cure spells, pass door
+"""
+see_also = ["strider", "classes"]
+
+[[help]]
+keywords = ["druid"]
+description = """
+DRUID - Nature Priest
+
+Druids are priests of nature, wielding elemental magic and drawing
+power from the natural world. They combine healing abilities with
+offensive nature spells.
+
+Prime Attribute: Wisdom
+Hit Points: Medium (7-10 per level)
+Mana: Medium
+
+Strengths:
+  - Nature and elemental magic
+  - Healing abilities
+  - Control weather
+  - Good outdoor combat
+
+Weaknesses:
+  - Less powerful than clerics for healing
+  - Less powerful than mages for damage
+  - Restricted armor choices
+
+Key Skills: meditation
+Key Spells: earthquake, call lightning, cure spells, control weather
+"""
+see_also = ["sage", "classes"]
+
+[[help]]
+keywords = ["vampire"]
+description = """
+VAMPIRE - Undead Predator
+
+Vampires are undead creatures that sustain themselves by feeding on
+the blood of the living. They possess dark powers but must regularly
+feed to maintain their strength.
+
+Prime Attribute: Constitution
+Hit Points: Low-Medium (6-8 per level)
+Mana: Low
+
+Strengths:
+  - Feed ability restores health
+  - Dark magic powers
+  - Enhanced night vision
+  - Undead resistances
+
+Weaknesses:
+  - Must feed regularly
+  - Vulnerable to sunlight
+  - Holy damage vulnerability
+  - Cannot enter some areas
+
+Key Skills: feed
+Key Spells: animate, energy drain, harm
+"""
+see_also = ["lich", "classes"]
+
+[[help]]
+keywords = ["wizard", "tier 2", "remort"]
+description = """
+WIZARD - Archmage (Tier 2 Class)
+
+Wizards are mages who have transcended mortality through remort,
+gaining vastly enhanced magical powers. They are the most powerful
+offensive spellcasters in existence.
+
+Prime Attribute: Intelligence
+Requirement: Remort from level 101
+
+Enhanced from Mage:
+  - Greater spell damage
+  - Larger mana pool
+  - Access to advanced spells
+  - Better combat THAC0
+"""
+see_also = ["mage", "classes", "remort"]
+
+[[help]]
+keywords = ["priest", "tier 2"]
+description = """
+PRIEST - Divine Champion (Tier 2 Class)
+
+Priests are clerics who have been elevated by the gods themselves.
+Their divine powers far exceed those of ordinary clerics, and they
+can perform miracles.
+
+Prime Attribute: Wisdom
+Requirement: Remort from level 101
+
+Enhanced from Cleric:
+  - More powerful healing
+  - Stronger protection spells
+  - Access to holy word
+  - Better combat ability
+"""
+see_also = ["cleric", "classes", "remort"]
+
+[[help]]
+keywords = ["mercenary", "tier 2"]
+description = """
+MERCENARY - Deadly Assassin (Tier 2 Class)
+
+Mercenaries are master assassins who kill for profit. Their skills
+far exceed those of common thieves, and they are among the deadliest
+combatants alive.
+
+Prime Attribute: Dexterity
+Requirement: Remort from level 101
+
+Enhanced from Thief:
+  - More devastating backstab
+  - Better combat abilities
+  - Enhanced stealth
+  - Poison mastery
+"""
+see_also = ["thief", "classes", "remort"]
+
+[[help]]
+keywords = ["gladiator", "tier 2"]
+description = """
+GLADIATOR - Arena Champion (Tier 2 Class)
+
+Gladiators are elite warriors who have survived countless battles
+in the arena. Their combat skills are legendary, and they can defeat
+almost any foe in single combat.
+
+Prime Attribute: Strength
+Requirement: Remort from level 101
+
+Enhanced from Warrior:
+  - Even more attacks
+  - Higher hit points
+  - Improved THAC0
+  - Legendary combat abilities
+"""
+see_also = ["warrior", "classes", "remort"]
+
+[[help]]
+keywords = ["strider", "tier 2"]
+description = """
+STRIDER - Master Tracker (Tier 2 Class)
+
+Striders are rangers who have become one with the wilderness. Their
+tracking abilities are supernatural, and they command powerful
+nature magic.
+
+Prime Attribute: Intelligence
+Requirement: Remort from level 101
+
+Enhanced from Ranger:
+  - Perfect tracking
+  - Stronger nature magic
+  - Better combat skills
+  - Wilderness mastery
+"""
+see_also = ["ranger", "classes", "remort"]
+
+[[help]]
+keywords = ["sage", "tier 2"]
+description = """
+SAGE - Ancient Wisdom (Tier 2 Class)
+
+Sages are druids who have attained enlightenment through centuries
+of communion with nature. Their wisdom is boundless, and their
+powers are vast.
+
+Prime Attribute: Wisdom
+Requirement: Remort from level 101
+
+Enhanced from Druid:
+  - More powerful spells
+  - Greater healing
+  - Ancient knowledge
+  - Elemental mastery
+"""
+see_also = ["druid", "classes", "remort"]
+
+[[help]]
+keywords = ["lich", "tier 2"]
+description = """
+LICH - Undead Sorcerer (Tier 2 Class)
+
+Liches are vampires who have transcended undeath itself, becoming
+powerful undead sorcerers. They command dark magic of terrifying
+power.
+
+Prime Attribute: Constitution
+Requirement: Remort from level 101
+
+Enhanced from Vampire:
+  - Powerful dark magic
+  - Greater undead powers
+  - Necromancy mastery
+  - Near-immortality
+"""
+see_also = ["vampire", "classes", "remort"]
+
+[[help]]
+keywords = ["remort", "remorting"]
+description = """
+REMORT - Ascending to Tier 2
+
+When you reach level 101 (Hero level), you can choose to remort into
+a more powerful Tier 2 class. Remorting:
+
+- Resets your level to 1
+- Retains some of your power
+- Grants access to Tier 2 class abilities
+- Provides a permanent power boost
+
+Tier 1 -> Tier 2 progression:
+  Mage     -> Wizard
+  Cleric   -> Priest
+  Thief    -> Mercenary
+  Warrior  -> Gladiator
+  Ranger   -> Strider
+  Druid    -> Sage
+  Vampire  -> Lich
+
+To remort, seek out the Remort Master at the Temple.
+"""
+see_also = ["classes"]

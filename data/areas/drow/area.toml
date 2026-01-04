@@ -1,0 +1,8 @@
+id = "drow_city"
+name = "Drow City"
+credits = "{29 50} Drkside Drow City"
+reset_interval = 120
+
+[vnum_range]
+min = 5100
+max = 5199

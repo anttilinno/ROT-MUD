@@ -1,0 +1,8 @@
+id = "in_the_air"
+name = "In the Air"
+credits = "{09 20} Copper  In the Air"
+reset_interval = 120
+
+[vnum_range]
+min = 1000
+max = 1099

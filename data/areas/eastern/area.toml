@@ -1,0 +1,8 @@
+id = "sands_of_sorrow"
+name = "Sands of Sorrow"
+credits = "{19 40} Anon    Sands of Sorrow"
+reset_interval = 120
+
+[vnum_range]
+min = 5000
+max = 5099

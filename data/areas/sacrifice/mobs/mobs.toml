@@ -1,0 +1,47 @@
+[[mobiles]]
+vnum = 13500
+keywords = ["bert"]
+short_desc = "Bert"
+long_desc = "Bert stands here, selling boats."
+description = """
+Bert stands almost 7 feet tall, with a girth resembling that
+of a house.  The scars on his face and arms tell you that he's
+seen his fair share of combat."""
+level = 46
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior", "no_purge"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 999
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 32
+
+[[mobiles]]
+vnum = 13501
+keywords = ["sea", "serpent"]
+short_desc = "the sea serpent"
+long_desc = "A huge green sea serpent stares at you hungrily."
+description = """
+The sea serpent resembles a cross between a dragon and a snake."""
+level = 32
+sex = "either"
+act_flags = ["npc", "aggressive"]
+affected_by = ["detect_invis", "infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+

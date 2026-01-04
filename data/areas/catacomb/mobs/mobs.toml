@@ -1,0 +1,384 @@
+[[mobiles]]
+vnum = 2001
+keywords = ["oldstyle", "bat"]
+short_desc = "a bat"
+long_desc = "A bat flaps wildly at you!"
+description = "Your typical smelly, blind flying mammal."
+level = 10
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_hidden", "flying", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 2002
+keywords = ["oldstyle", "page", "templar"]
+short_desc = "a templar page"
+long_desc = "A templar page in training is here looking mildly confused."
+description = "He has lost his family and everything of his former life."
+level = 14
+sex = "male"
+act_flags = ["npc", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 2003
+keywords = ["oldstyle", "spelunker", "explorer"]
+short_desc = "a spelunker"
+long_desc = "A spelunker knows his way around these tunnels."
+description = """
+He recently discovered these catacombs and wants to see where they lead.
+He just hopes he doesn't get killed in the process.  He carries only
+essential exploration gear; if there IS anything down here, he
+probably won't last long."""
+level = 15
+sex = "male"
+act_flags = ["npc", "scavenger", "wimpy"]
+affected_by = ["detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 2004
+keywords = ["oldstyle", "gravedigger", "digger", "robber", "graverobber"]
+short_desc = "a graverobber"
+long_desc = "A graverobber uncovers dead bodies."
+description = """
+Working for an evil necromancer isn't the greatest thing in the world.
+They seem like little more than zombie servants themselves."""
+level = 18
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 2005
+keywords = ["oldstyle", "mist", "swirling"]
+short_desc = "some mist"
+long_desc = "Some mist swirls about you here ... it seems ALIVE!"
+description = "In fact it IS alive in a magical sort of sense."
+level = 19
+sex = "none"
+act_flags = ["npc"]
+affected_by = ["sneak", "pass_door"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 2006
+keywords = ["oldstyle"]
+short_desc = "It"
+long_desc = ""
+level = 19
+sex = "none"
+act_flags = ["npc", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 2007
+keywords = ["oldstyle", "skeleton", "skeletal", "soldier"]
+short_desc = "a skeleton"
+long_desc = "A skeletal soldier fights in the battle of the underworld."
+description = """
+Even though he has died in the physical sense of the word, the battle
+continues for him in his charmed state."""
+level = 21
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 2008
+keywords = ["oldstyle", "templar"]
+short_desc = "a templar"
+long_desc = "A templar shouts \"AKK! SLAY THE INFIDEL!\""
+description = """
+As you peer closely he peers back at you
+
+A templar peers closely at you.
+A templar tells you, "You are an evil force trying to spread your ways!".
+A templar tells you, "You must die for your sin!"."""
+level = 24
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 2009
+keywords = ["oldstyle", "wraith"]
+short_desc = "a mysterious wraith"
+long_desc = "A mysterious ghostly wraith forms before your eyes."
+description = """
+Hard to tell much about the mysterious form even upon further inspection."""
+level = 23
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive"]
+affected_by = ["detect_hidden", "pass_door"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 2010
+keywords = ["oldstyle", "officer", "templar"]
+short_desc = "the templar officer"
+long_desc = "A templar officer keeps an eye on things here."
+description = "A templar officer tells you \"Better move along evil one!\""
+level = 25
+sex = "male"
+act_flags = ["npc", "aggressive"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 2011
+keywords = ["oldstyle", "zombie", "mage"]
+short_desc = "zombie"
+long_desc = "A blank-faced zombie mage joins the battle."
+description = "He seems to lack real interest in what he is doing."
+level = 25
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "mage"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 2012
+keywords = ["oldstyle", "shadow", "shadows"]
+short_desc = "the shadow"
+long_desc = "Eerie shadows fill the room."
+description = "Looks vaguely you-shaped."
+level = 28
+sex = "none"
+act_flags = ["npc"]
+affected_by = ["detect_hidden", "sneak", "pass_door"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 2013
+keywords = ["oldstyle", "bat", "vampire"]
+short_desc = "The vampire"
+long_desc = "A bat flaps wildly at you!"
+description = "A rather LARGE \"bat\" ..."
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_hidden", "flying", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 2014
+keywords = ["oldstyle", "necromancer", "necro", "cleric"]
+short_desc = "the evil necromancer"
+long_desc = "The evil necromancer makes undead soldiers from corpses."
+description = """
+Though he seems absorbed in his work, you'd bet he'd take the time out
+to kill you to get a fresh corpse!"""
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 2015
+keywords = ["oldstyle", "grand", "templar", "leader"]
+short_desc = "the grand templar"
+long_desc = "The grand templar stands here quietly observing your actions"
+description = """
+A slight, tolerant smile comes briefly across his face.  In the blink
+of an eye he seems stern again."""
+level = 32
+sex = "male"
+act_flags = ["npc", "sentinel"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 2016
+keywords = ["oldstyle", "prism", "dragon", "prismdragon"]
+short_desc = "the prism dragon"
+long_desc = "The light shines off a beautiful but dangerous dragon lurking here."
+description = """
+The spray of colored light bouncing off his scales is almost blinding."""
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 2017
+keywords = ["oldstyle", "darken", "dark", "beast", "darkenbeast"]
+short_desc = "The DarkenBeast"
+long_desc = "You hear and smell the presence of the darkenbeast."
+description = "You see nothing more than the sense of darkness and evil."
+level = 47
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 6
+

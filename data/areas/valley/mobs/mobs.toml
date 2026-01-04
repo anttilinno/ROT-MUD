@@ -1,0 +1,353 @@
+[[mobiles]]
+vnum = 7800
+keywords = ["oldstyle", "dog", "cooshee"]
+short_desc = "a cooshee"
+long_desc = "A rather large dog is here, wandering the valley."
+description = """
+A beast is the size of the largest common dog.  It has a greenish coat with
+brown spots.  Its shape, along with its colors, make this cooshee almost
+undetectable as it moves."""
+level = 9
+sex = "none"
+act_flags = ["npc", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 7801
+keywords = ["oldstyle", "elf", "valley"]
+short_desc = "a valley elf"
+long_desc = "A valley elf wanders here, cautious of your intrusion."
+description = """
+This elf is almost as tall as you are, but much slimmer and agile.  You see
+hatred in his eyes, and you try to avoid his stare.  His tense body looks ready
+to spring upon you, like a mountain lion stalking its prey.  He sees you
+noticing him, and quietly disappears."""
+level = 16
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["infrared", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 7802
+keywords = ["oldstyle", "elf", "valley"]
+short_desc = "a valley elf"
+long_desc = "A female valley elf wanders here, skirting between the tall grasses."
+description = """
+This elf is almost as tall as you are, but much slimmer and more agile.
+She glares at you, then quickly disappears before you see more of her."""
+level = 16
+sex = "female"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["infrared", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 7803
+keywords = ["oldstyle", "elf", "sentry", "valley"]
+short_desc = "a valley elf sentry"
+long_desc = "A valley elf sentry stands here, then noticing you, attacks quickly!"
+description = """
+This elf is almost as tall as you are, but much slimmer and more agile.
+He glares at your intrusion and attacks with menace."""
+level = 14
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 7804
+keywords = ["oldstyle", "elf", "sentry", "valley"]
+short_desc = "a valley elf sentry"
+long_desc = "A valley elf sentry stands here, then noticing you, attacks quickly!"
+description = """
+This elf is almost as tall as you are, but much slimmer and more agile.
+She glares at your intrusion and attacks with menace."""
+level = 13
+sex = "female"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 7805
+keywords = ["oldstyle", "elf", "scout", "valley"]
+short_desc = "a valley elf scout"
+long_desc = "A valley elf scout wanders the valley, searching for intruders like you!"
+description = """
+The elf notices your intrusion and attacks with determination."""
+level = 11
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+affected_by = ["infrared", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 7806
+keywords = ["oldstyle", "elf", "valley"]
+short_desc = "a valley elf"
+long_desc = "A valley elf is here, doing her duties."
+description = """
+She is currently doing some menial chores, and ignores your intrusion except
+when you are in her way."""
+level = 11
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+affected_by = ["infrared", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 7807
+keywords = ["oldstyle", "elf", "elder", "valley"]
+short_desc = "a valley elf elder"
+long_desc = "A valley elf elder is here, studying.  He notices you.\nA valley elf elder shouts 'You have intruded wrongly.  Be prepared to die!'"
+description = """
+This elf looks quite old, probably twenty or more times your age.  He looks
+quite potent, though."""
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "cleric"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 7808
+keywords = ["oldstyle", "elf", "elder", "valley"]
+short_desc = "a valley elf elder"
+long_desc = "A valley elf elder is here, studying.  She notices you.\nA valley elf elder says 'Your arrogance will be your end, human.'"
+description = """
+This elf looks quite old, probably twenty or more times your age.  She looks
+quite potent, though."""
+level = 30
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "mage"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 7809
+keywords = ["oldstyle", "pyrohydra", "pyro", "hydra"]
+short_desc = "the pyrohydra"
+long_desc = "A big beast with many heads, each breathing fire, stares at you with malice."
+description = """
+This big beast looks like a small red dragon, but has many more heads than a
+regular dragon, too.  It doesn't look happy."""
+level = 39
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 7810
+keywords = ["oldstyle", "hermit", "man", "old"]
+short_desc = "an old hermit"
+long_desc = "An old hermit sits here, smoking a pipe."
+description = "He looks old and feeble."
+level = 5
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 7811
+keywords = ["oldstyle", "talemon", "wizard", "mage"]
+short_desc = "Talemon"
+long_desc = "An old mage busies himself with some chemicals."
+description = """
+Talemon looks harmless, but the fireballs he throws at you don't."""
+level = 50
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "mage"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 7812
+keywords = ["oldstyle", "guardian", "daemon"]
+short_desc = "the guardian daemon"
+long_desc = "A huge guardian daemon is here, watching the treasure."
+description = """
+This daemon is unhappy with its summoned job, and is willing to take out it's
+anger at you!"""
+level = 49
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 7813
+keywords = ["oldstyle", "wolf"]
+short_desc = "a wolf"
+long_desc = "A wolf is here, looking for small prey."
+description = """
+The wolf is covered with brown hair.  It looks at you with fright."""
+level = 7
+sex = "none"
+act_flags = ["npc", "aggressive", "wimpy"]
+affected_by = ["dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 7814
+keywords = ["oldstyle", "antelope"]
+short_desc = "an antelope"
+long_desc = "An antelope is here, peacefully munching on grass."
+description = """
+With horns and spots over coarse, brown hair, this beast is the spit and
+image of ... an antelope."""
+level = 11
+sex = "none"
+act_flags = ["npc", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+

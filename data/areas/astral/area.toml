@@ -1,0 +1,8 @@
+id = "astral_plane"
+name = "Astral Plane"
+credits = "{19 70} Anderse Astral/Githyanki"
+reset_interval = 120
+
+[vnum_range]
+min = 7700
+max = 7799

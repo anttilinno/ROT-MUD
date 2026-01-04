@@ -1,0 +1,8 @@
+id = "gangland"
+name = "Gangland"
+credits = "{09 30} Raff    Dangerous Neighborhood"
+reset_interval = 120
+
+[vnum_range]
+min = 2100
+max = 2199

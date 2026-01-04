@@ -1,0 +1,294 @@
+[[objects]]
+vnum = 1100
+keywords = ["rainbow", "staff"]
+short_desc = "the rainbow staff"
+long_desc = "The rainbow staff lies here."
+item_type = "light"
+level = 9
+weight = 80
+cost = 550
+wear_flags = ["take"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+[[objects]]
+vnum = 1101
+keywords = ["sting"]
+short_desc = "sting"
+long_desc = "Sting lies here."
+item_type = "weapon"
+level = 33
+weight = 10
+cost = 3500
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+[[objects]]
+vnum = 1102
+keywords = ["sign"]
+short_desc = "a sign"
+long_desc = "A sign demands your attention."
+item_type = "furniture"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 1103
+keywords = ["pipeweed", "bread"]
+short_desc = "a pipeweed bread"
+long_desc = "A loaf of pipeweed bread arouses your hunger."
+item_type = "food"
+level = 0
+weight = 10
+cost = 15
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1104
+keywords = ["silvery", "cloak"]
+short_desc = "a silvery cloak"
+long_desc = "A silvery cloak lies here."
+item_type = "armor"
+level = 29
+weight = 30
+cost = 1320
+wear_flags = ["take", "about"]
+extra_flags = ["magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 1105
+keywords = ["one", "ring"]
+short_desc = "the One Ring"
+long_desc = "The One Ring is here."
+item_type = "jewelry"
+level = 39
+weight = 30
+cost = 1660
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = -1
+
+[[objects]]
+vnum = 1106
+keywords = ["elven", "spear"]
+short_desc = "an elven spear"
+long_desc = "An elven spear lies here."
+item_type = "weapon"
+level = 31
+weight = 50
+cost = 500
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 1107
+keywords = ["mithril", "axe"]
+short_desc = "a mithril axe"
+long_desc = "A mithril axe lies here."
+item_type = "weapon"
+level = 33
+weight = 120
+cost = 1440
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "dark", "noremove", "nopurge"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 1108
+keywords = ["thain", "girth"]
+short_desc = "the thain girth"
+long_desc = "The girth of the thain lies here."
+item_type = "armor"
+level = 33
+weight = 40
+cost = 3600
+wear_flags = ["take", "waist"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+[[objects]]
+vnum = 1109
+keywords = ["tiny", "dagger"]
+short_desc = "a tiny dagger"
+long_desc = "A tiny dagger lies here."
+item_type = "weapon"
+level = 1
+weight = 30
+cost = 230
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 6
+
+[[objects]]
+vnum = 1110
+keywords = ["egg"]
+short_desc = "an egg"
+long_desc = "An egg lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 2
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1111
+keywords = ["bag"]
+short_desc = "a bag"
+long_desc = "A bag is on the floor."
+item_type = "container"
+level = 0
+weight = 10
+cost = 11
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1112
+keywords = ["lantern"]
+short_desc = "a lantern"
+long_desc = "A lantern is on the floor."
+item_type = "light"
+level = 0
+weight = 40
+cost = 60
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1113
+keywords = ["bardiche"]
+short_desc = "a bardiche"
+long_desc = "A long weapon with a sharp end is on the floor."
+item_type = "weapon"
+level = 41
+weight = 100
+cost = 1810
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 11
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+[[objects]]
+vnum = 1114
+keywords = ["flail"]
+short_desc = "a flail"
+long_desc = "A flail is on the floor."
+item_type = "weapon"
+level = 9
+weight = 80
+cost = 390
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 1115
+keywords = ["wooden", "bardiche"]
+short_desc = "a wooden bardiche"
+long_desc = "A long weapon with a wooden blade is on the floor."
+item_type = "weapon"
+level = 5
+weight = 100
+cost = 980
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+[[objects]]
+vnum = 1116
+keywords = ["dagger", "shiriff"]
+short_desc = "a shiriff's dagger"
+long_desc = "A tiny but very sharp dagger lies here."
+item_type = "weapon"
+level = 11
+weight = 10
+cost = 480
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 1117
+keywords = ["club", "heavy"]
+short_desc = "the Thain's club"
+long_desc = "You see see a heavy club. Looks just right for whomping heads."
+item_type = "weapon"
+level = 23
+weight = 30
+cost = 620
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 7
+
+[[objects]]
+vnum = 1118
+keywords = ["sign", "quest"]
+short_desc = "a floating sign"
+long_desc = "A sign is floating in the air."
+item_type = "furniture"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["nonmetal", "melt_drop"]
+

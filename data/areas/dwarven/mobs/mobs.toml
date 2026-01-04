@@ -1,0 +1,387 @@
+[[mobiles]]
+vnum = 6500
+keywords = ["oldstyle", "dwarf", "guard"]
+short_desc = "the dwarven guard"
+long_desc = "A dwarven guard is here."
+description = "The guard looks very tough and mean."
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 6501
+keywords = ["oldstyle", "dwarf", "worker", "miner"]
+short_desc = "the dwarven worker"
+long_desc = "A dwarven mining worker is here."
+description = "He is very dirty, and looks extremely over-worked."
+level = 24
+sex = "male"
+act_flags = ["npc", "stay_area", "undead"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 6502
+keywords = ["oldstyle", "wraith"]
+short_desc = "the wraith"
+long_desc = "A wraith is awaiting your first move here."
+description = "A black, almost transparent wraith."
+level = 57
+sex = "male"
+act_flags = ["npc", "sentinel"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 8
+
+[[mobiles]]
+vnum = 6503
+keywords = ["oldstyle", "storekeeper"]
+short_desc = "the storekeeper"
+long_desc = "There is the Hide & Tooth storekeeper standing here, waiting patiently."
+description = "The storekeeper is very rotund, but looks like a sharp guy."
+level = 69
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 6504
+keywords = ["oldstyle", "baker"]
+short_desc = "the baker"
+long_desc = "Granite Head, the baker, is waiting for a customer here."
+description = "Granite Head is covered with flour and grains."
+level = 69
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 6505
+keywords = ["oldstyle", "lizard"]
+short_desc = "the giant lizard"
+long_desc = "A giant lizard is here."
+description = """
+This scaly creature looks like it is well adapted to it's underground
+habitat.  He looks very powerful."""
+level = 36
+sex = "male"
+act_flags = ["npc", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 6506
+keywords = ["oldstyle", "giant"]
+short_desc = "the giant"
+long_desc = "A giant is here."
+description = """
+The giant is about 8 feet tall, with arms of steel, and looks very strong."""
+level = 32
+sex = "male"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 6507
+keywords = ["oldstyle", "dwarf", "miner"]
+short_desc = "the dwarven miner"
+long_desc = "A dwarven miner is here."
+description = """
+The mineworker is very tired, and very dirty, and he has bulging muscles."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 6508
+keywords = ["oldstyle", "dwarf", "leader"]
+short_desc = "the dwarven mine leader"
+long_desc = "A dwarven mine leader is here."
+description = "The mine leader is very big and very strong."
+level = 41
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 6509
+keywords = ["oldstyle", "dwarf", "doctor"]
+short_desc = "the dwarven doctor"
+long_desc = "The dwarven doctor is here."
+description = "He is a very skilled surgeon, with hands of steel."
+level = 17
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 6510
+keywords = ["oldstyle", "dwarf", "peon"]
+short_desc = "the dwarven peon"
+long_desc = "A dwarven peon is awaiting help here."
+level = 6
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 6511
+keywords = ["oldstyle", "dwarf"]
+short_desc = "the dwarf"
+long_desc = "A grinning dwarf is here."
+level = 17
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 6512
+keywords = ["oldstyle", "dwarf", "son"]
+short_desc = "the unwanted son"
+long_desc = "An unwanted son is here.  You feel sorry for the guy."
+level = 18
+sex = "male"
+act_flags = ["npc", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 6513
+keywords = ["oldstyle", "dwarf", "daughter"]
+short_desc = "the unwanted daughter"
+long_desc = "An unwanted daughter is here.  You feel sorry for her."
+level = 19
+sex = "female"
+act_flags = ["npc", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 6514
+keywords = ["oldstyle", "dwarf", "guard"]
+short_desc = "the barracks guard"
+long_desc = "A barrack guard is here."
+level = 31
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 6515
+keywords = ["oldstyle", "man"]
+short_desc = "the man in waiting"
+long_desc = "A man in waiting is here.  He looks nervous and unsure of himself."
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 6516
+keywords = ["oldstyle", "mazekeeper"]
+short_desc = "the mazekeeper"
+long_desc = "A mazekeeper is here."
+description = "He looks VERY tough."
+level = 57
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "undead"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 8
+
+[[mobiles]]
+vnum = 6517
+keywords = ["oldstyle", "snake"]
+short_desc = "the giant snake"
+long_desc = "There is a giant snake here."
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+

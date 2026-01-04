@@ -1,0 +1,413 @@
+[[rooms]]
+vnum = 6601
+name = "The Dwarven Drop Off"
+sector = "inside"
+description = """
+This is where the dwarven mommies and daddies come to drop off their
+annoying little brats.  You have the urge to leave.  There is a sign here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6500
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6602
+  flags = ["door"]
+
+[[rooms]]
+vnum = 6602
+name = "Day Care Center"
+sector = "inside"
+description = """
+You are in the north-east corner of the main part of the center.  Toys and
+toddlers are all over the room.  There is a kitchen to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6601
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6626
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6604
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6603
+
+  [[rooms.mob_resets]]
+  vnum = 6600
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 6601
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 6606
+  max = 2
+
+[[rooms]]
+vnum = 6603
+name = "Day Care Center"
+sector = "inside"
+description = """
+You are in the north-west corner of the main part of the center.  Toys and
+toddlers are all over the room.  There is a bathroom to the west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6602
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6605
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6606
+
+  [[rooms.mob_resets]]
+  vnum = 6600
+  max = 7
+
+[[rooms]]
+vnum = 6604
+name = "Day Care Center"
+sector = "inside"
+description = """
+You are in the south-east corner of the main part of the center.  Toys and
+toddlers are all over the room.  There is a playground to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6602
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6610
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6605
+
+  [[rooms.mob_resets]]
+  vnum = 6600
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 6602
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 6606
+  max = 2
+
+[[rooms]]
+vnum = 6605
+name = "Day Care Center"
+sector = "inside"
+description = """
+You are in the south-west corner of the main part of the center.  Toys and
+toddlers are all over the room.  There is a staircase to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6603
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6604
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6607
+
+  [[rooms.mob_resets]]
+  vnum = 6600
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 6602
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 6605
+  max = 3
+
+[[rooms]]
+vnum = 6606
+name = "The Messy Bathroom"
+sector = "inside"
+description = """
+You hold your nose as you realize you have made the worst mistake of your
+life.  The air is rancid and the walls are stained."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6603
+
+  [[rooms.mob_resets]]
+  vnum = 6605
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 6601
+  max = 2
+
+[[rooms]]
+vnum = 6607
+name = "The Staircase"
+sector = "inside"
+description = """
+You stand on top of a staircase leading down, and wonder what mystery could
+lie down under.  Beware!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6605
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 6612
+
+[[rooms]]
+vnum = 6608
+name = "The Playground"
+sector = "field"
+description = "You are in the north-west corner of the playground."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6609
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6610
+
+  [[rooms.mob_resets]]
+  vnum = 6600
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 6603
+  max = 4
+
+[[rooms]]
+vnum = 6609
+name = "The Playground"
+sector = "field"
+description = "You are in the north-east corner of the playground."
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6611
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6608
+
+  [[rooms.mob_resets]]
+  vnum = 6600
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 6604
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 6603
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 6603
+  max = 4
+
+[[rooms]]
+vnum = 6610
+name = "The Playground"
+sector = "field"
+description = "You are in the south-west corner of the playground."
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6608
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6611
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6604
+
+  [[rooms.mob_resets]]
+  vnum = 6600
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 6603
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 6605
+  max = 3
+
+[[rooms]]
+vnum = 6611
+name = "The Playground"
+sector = "field"
+description = "You are in the south-east corner of the playground."
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6609
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6610
+
+  [[rooms.mob_resets]]
+  vnum = 6604
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 6603
+  max = 4
+
+[[rooms]]
+vnum = 6612
+name = "Entrance to the Mini-Maze"
+sector = "field"
+description = """
+You stand in the entrance to a small, but confusing maze.  You really hope
+that you don't get lost."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6613
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 6607
+
+[[rooms]]
+vnum = 6613
+name = "Mini-Maze"
+sector = "field"
+description = """
+You are in a small passage that looks just like every other one."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6612
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6614
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6615
+
+[[rooms]]
+vnum = 6614
+name = "Mini-Maze"
+sector = "field"
+description = """
+You are in a small passage that looks just like every other one."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6613
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6616
+
+[[rooms]]
+vnum = 6615
+name = "Mini-Maze"
+sector = "field"
+description = """
+You are in a small passage that looks just like every other one."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 6616
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6613
+
+[[rooms]]
+vnum = 6616
+name = "Mini-Maze"
+sector = "field"
+description = """
+You are in a small passage that looks just like every other one."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6614
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6624
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6615
+
+[[rooms]]
+vnum = 6624
+name = "End of the Mini-Maze"
+sector = "field"
+description = """
+You stand at the end of your journey.  There is a big sign here and you had
+better read it!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6616
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6631
+
+  [[rooms.mob_resets]]
+  vnum = 6607
+  max = 1
+
+[[rooms]]
+vnum = 6626
+name = "Messy Kitchen"
+sector = "inside"
+description = """
+You stand in the kitchen and eating area of the day care center.  Pots and
+pans are everywhere, while the toddlers continue to create chaos."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 6602
+
+[[rooms]]
+vnum = 6631
+name = "The End?"
+sector = "field"
+description = """
+You have reached the final lair.  It is dominated by a huge five headed
+dragon (actually an overgrown brat with a Halloween mask)."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6624
+
+  [[rooms.mob_resets]]
+  vnum = 6608
+  max = 1
+

@@ -1,0 +1,11 @@
+# Healer speech response mobprog
+# Responds when players say certain keywords
+
+name = "healer_speech"
+trigger = "speech"
+trigger_arg = "help"
+commands = [
+  "say I can heal your wounds for a small donation.",
+  "say Type 'heal' to see my services.",
+  "emote gestures toward the altar."
+]

@@ -1,0 +1,8 @@
+id = "pirate_ship"
+name = "Pirate Ship"
+credits = "{35 60} Lance   Pirate Ship"
+reset_interval = 120
+
+[vnum_range]
+min = 16000
+max = 16199

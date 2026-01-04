@@ -1,0 +1,166 @@
+[[mobiles]]
+vnum = 9401
+keywords = ["oldstyle", "fido", "mutant", "dog"]
+short_desc = "The mutant beastly fido"
+long_desc = "The mutant beastly fido is here, his eyes glowing green!"
+description = """
+You see a mutant beastly fido, glaring at you with green eyes!  You wonder if
+this factory meets ASPCA guidlines...."""
+level = 12
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 9402
+keywords = ["oldstyle", "foreman", "floyd"]
+short_desc = "Foreman Floyd"
+long_desc = "Foreman Floyd is here, making plans for the factory's future."
+description = """
+You see Foreman Floyd of the Mob factory -- a sterling example of what comes
+of dedicated Mudding!  Rewarded for his years of dedication as a monster
+slayer, Floyd now creates the beasts for other adventurers to fight."""
+level = 24
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9403
+keywords = ["oldstyle", "cityguard", "guard", "head"]
+short_desc = "The Cityguard head"
+long_desc = "The Cityguard head floats around aimlessly."
+description = """
+You see a Cityguard head floating around without a care in the world.
+Obviously, this one got past quality control!  Careful, those teeth look
+sharp..."""
+level = 18
+sex = "none"
+act_flags = ["npc", "stay_area"]
+affected_by = ["flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 9404
+keywords = ["oldstyle", "revolving", "drunk"]
+short_desc = "The revolving drunk"
+long_desc = "The Revolving drunk is here, spinning in place."
+description = """
+You see and smell a drunk who looks much like other drunks...but he is spinning
+in place!  Someone should tell him that he is a REVOLTING drunk."""
+level = 3
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 9405
+keywords = ["oldstyle", "toxic", "slime"]
+short_desc = "The toxic slime"
+long_desc = "A pool of toxic slime lies on  the floor."
+description = """
+Yick.  Looks like someone had digestion problems!  Either that, or the 
+hydraulic fluid is leaking again."""
+level = 8
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 9406
+keywords = ["oldstyle", "worker"]
+short_desc = "The factory worker"
+long_desc = "A Mob Factory worker is standing here, looking bored."
+description = """
+The worker wears a bright orange pair of overalls, with the words "Mob
+Factory" written in a bright purple starburst.  Fashion plate, he's not."""
+level = 5
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 9407
+keywords = ["oldstyle", "worker"]
+short_desc = "The factory worker"
+long_desc = "A Mob Factory worker is here, asleep in a chair."
+description = """
+If Floyd walks in, you can bet there'll be trouble.  Guess she shouldn't have
+worked the late shift!"""
+level = 5
+sex = "female"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+

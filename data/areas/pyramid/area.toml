@@ -1,0 +1,8 @@
+id = "pyramid"
+name = "Pyramid"
+credits = "{10 99} Anderse The Great Pyramid"
+reset_interval = 120
+
+[vnum_range]
+min = 8700
+max = 8799

@@ -1,0 +1,48 @@
+[[objects]]
+vnum = 9000
+keywords = ["sword", "long", "the"]
+short_desc = "THE long sword"
+long_desc = "THE long sword of Primus is here."
+item_type = "weapon"
+level = 77
+weight = 400
+cost = 8800
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic", "anti_good", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+[[objects]]
+vnum = 9001
+keywords = ["moonstone", "moon", "stone", "white"]
+short_desc = "a luminescent moonstone"
+long_desc = "A softly glowing white stone rests on the floor."
+item_type = "warp_stone"
+level = 0
+weight = 0
+cost = 500
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "melt_drop"]
+
+[[objects]]
+vnum = 9002
+keywords = ["silver", "stone"]
+short_desc = "a luminescent silver stone"
+long_desc = "A softly glowing silver stone rests on the floor."
+item_type = "demon_stone"
+level = 0
+weight = 0
+cost = 500
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "evil", "melt_drop"]
+

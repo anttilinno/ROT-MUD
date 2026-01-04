@@ -1,0 +1,8 @@
+id = "shire"
+name = "Shire"
+credits = "{09 70} Poohb   The Shire"
+reset_interval = 120
+
+[vnum_range]
+min = 1100
+max = 1199
