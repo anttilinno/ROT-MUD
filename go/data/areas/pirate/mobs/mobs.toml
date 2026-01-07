@@ -1,0 +1,425 @@
+[[mobiles]]
+vnum = 16000
+keywords = ["Captain", "Amos", "Trask"]
+short_desc = "The Captain"
+long_desc = "Captain Amos Trask is here yelling orders to his crew."
+description = """
+The captain is a man in his fifties.  What's left of his hair is slicked
+and tied at the back of his head.  He has had much experience in
+commanding rowdy pirate crews.  He has a tough, weather-worn face and
+a stern complextion.  He must have been BAD to get into such a command
+so don't mess with him!"""
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 16001
+keywords = ["Navigator"]
+short_desc = "The Navigator"
+long_desc = "The ship's navigator is trying to figure out which sea route to take."
+description = """
+The navigator looks rather busy.  He has a pencil stuck on his ear.
+He is a rather young scholar with some minor experience in navigation.
+He looks like he has been missing some sleep because of working on all
+those maps.  Yet, he still seems ready to react to anything quickly
+and defend himself if necessary.  He tells you to leave his equipment
+alone!"""
+level = 50
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_evil", "detect_invis", "detect_magic", "infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 16002
+keywords = ["First", "Mate"]
+short_desc = "The First Mate"
+long_desc = "The First Mate is taking a break from the Captain's sharp tongue."
+description = """
+The first mate looks rather stressed.  He has been doing things for
+the captain all day and is now relieved to have his break.  He seems
+to have an air of command around him which must explain why he got
+his position on the ship as a First Mate."""
+level = 50
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 16003
+keywords = ["Cook", "chef"]
+short_desc = "The Ship's Cook"
+long_desc = "The ship's Cook is preparing Gak for the crew to eat."
+description = """
+The cook is rather sloppy.  His hands are as dirty as his clothing.  He
+is running around the room preparing one thing after the next.  He
+constantly keeps an eye on the big cauldron in the center of the room.
+It looks like he mixes whatever leftovers he has into the cauldron and
+calls it food.  For some strange reason, you loose your appetite."""
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 16004
+keywords = ["Hired", "Assassin", "Guard"]
+short_desc = "The Hired Assassin Guard"
+long_desc = "The hired assassin is standing here guarding the's pirates' plunder."
+description = """
+You barely notice him in the dim light.  He is very lithe and subtle in
+his movements.  He looks trained to kill in a single blow, so don't get
+on his bad side!"""
+level = 55
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "hide"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 703
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 16005
+keywords = ["sleeping", "pirate"]
+short_desc = "The sleepy pirate"
+long_desc = "A raggedy pirate is sleeping here."
+description = """
+The pirate looks quite at peace.  The harsh lines of trouble are gone
+from his face, taken away by the sandman.  I bet he would be VERY
+upset if you woke him up, so step lightly."""
+level = 38
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared", "sleep"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 16006
+keywords = ["Pirate"]
+short_desc = "The pirate"
+long_desc = "A pirate is standing here talking to his parrot."
+description = """
+The pirate looks quite frustrated.  He doesn't seem to be going anywhere
+in his argument with his parrot.  You wonder who has higher intellect ...
+the bird or the pirate?"""
+level = 45
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 16007
+keywords = ["angry", "pirate"]
+short_desc = "The angry pirate"
+long_desc = "An angry pirate is standing here cursing at you!"
+description = """
+His face is red and his ears almost seem to be blowing steam!  What did
+you do to make him so mad?"""
+level = 45
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 16008
+keywords = ["drunk", "pirate"]
+short_desc = "The drunk pirate"
+long_desc = "A very drunk pirate is swearing his troubles away!"
+description = """
+He sways left and right as he walks.  The pirate is constantly plugging
+his mouth with a bottle of beer.  As he swears, drool comes spitting
+out of his mouth. Yuk!"""
+level = 45
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 16009
+keywords = ["swash", "swashbuckler"]
+short_desc = "The swashbuckler"
+long_desc = "The swashbuckler looks very bored."
+description = """
+He has been standing out in the sun for hours doing nothing but getting
+a really bad tan.  He sure could use a friend to talk to."""
+level = 47
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 16010
+keywords = ["bucaneer"]
+short_desc = "The bucaneer"
+long_desc = "A bucaneer is standing here observing you."
+description = """
+He looks like the quiet type.  But don't let looks decieve you, he could
+be very deadly in combat."""
+level = 47
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 16011
+keywords = ["midshipman", "man"]
+short_desc = "The midshipman"
+long_desc = "A midshipman is kneeling here swabbing the deck."
+description = """
+He looks like a very hardworking man.  His energy seems inexhaustible.
+When you try to talk to him, he gruffly says,"Work! Work! Work! That's
+all we do everyday! WORK!""""
+level = 35
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 16012
+keywords = ["sailor"]
+short_desc = "The sailor"
+long_desc = "The sailor is standing here enjoying the sea breeze."
+description = """
+He looks like a happy-go-lucky man who takes things as they come."""
+level = 35
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 16013
+keywords = ["rat"]
+short_desc = "The seafaring rat"
+long_desc = "A seafaring rat is scurrying around scavenging for food."
+description = """
+This is the BIGGEST rat you've ever seen!  He has razor sharp teeth!"""
+level = 35
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
+affected_by = ["infrared", "plague"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 16014
+keywords = ["lookout"]
+short_desc = "The Lookout"
+long_desc = "A lookout has been posted here to search for signs of danger."
+description = """
+He peers intently in all directions and keeps an eye on the weather."""
+level = 50
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 16015
+keywords = ["she"]
+short_desc = "She"
+long_desc = "She sells seashells by the seashore."
+description = """
+She is a pretty young girl standing behind the counter watching the shop."""
+level = 60
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 1999
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 10
+  bonus = 25
+
+[[mobiles]]
+vnum = 16100
+keywords = ["Mr.", "Miyagi"]
+short_desc = "Mr. Miyagi"
+long_desc = "Mr. Miyagi is here tending to his bonsai."
+description = """
+He is wise old man.  His stumpy figure reveal surprising speed and
+agility.  He must keep fit by practicing his karate.  He loves to work
+with bonsai in the garden.  Mr. Myagi is a warm friendly person, so
+if you have any troubles, tell him and he will help you."""
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_cast_adept"
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 3999
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 10
+  bonus = 25
+

@@ -1,0 +1,401 @@
+[[mobiles]]
+vnum = 8301
+keywords = ["oldstyle", "troll"]
+short_desc = "a swamp troll"
+long_desc = "A swamp troll charges towards you."
+description = """
+This huge behemoth towers to a height of 15 feet.  He sneers at you 
+as he approaches and raises two black taloned claws to strike you."""
+level = 32
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
+affected_by = ["detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 8302
+keywords = ["oldstyle", "troll"]
+short_desc = "a green troll"
+long_desc = "A green troll attempts to get a hold on you."
+description = """
+This big troll towers several feet over you.  He has a large spear
+which he seems to ply with utmost prowess.  He jabs his spear at you
+and cackles with glee."""
+level = 27
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+affected_by = ["detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 8303
+keywords = ["oldstyle", "ogre"]
+short_desc = "an ogre"
+long_desc = "An ogre stands here getting ready to beat in your face."
+description = """
+This mean bastard looks like he could tear you limb from limb."""
+level = 40
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 8304
+keywords = ["oldstyle", "thing"]
+short_desc = "the Swamp Thing"
+long_desc = "The Swamp Thing shambles about here.  It seems hungry."
+description = """
+The Swamp Thing has huge fists, which look like they could pound you flat."""
+level = 48
+sex = "none"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 6
+
+[[mobiles]]
+vnum = 8305
+keywords = ["oldstyle", "gnoll"]
+short_desc = "a gnoll"
+long_desc = "There is a mean looking gnoll here."
+description = "The Gnoll seems annoyed at your presence."
+level = 60
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 8306
+keywords = ["oldstyle", "beast"]
+short_desc = "a huge hairy beast"
+long_desc = "A huge hairy beast shambles towards you with death in his eyes."
+description = """
+This huge beast stands about 20 feet in height and has huge green clawed
+appendages."""
+level = 42
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 8307
+keywords = ["oldstyle", "beast"]
+short_desc = "a rather small beast"
+long_desc = "A rather small beast cringes in terror as it notices you."
+description = """
+This rather small beast looks like you could take it out with a single
+sword blow."""
+level = 6
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 8308
+keywords = ["oldstyle", "will", "will-o-wisp"]
+short_desc = "the Will-O-Wisp"
+long_desc = "A Will-O-Wisp darts hear and there, making fun of you."
+description = """
+This strange little creature seems very hard to keep your eyes on.
+You stare as hard as you can at the glowing ball of floating light and
+are just able to notice a small pair of glowing eyes."""
+level = 19
+sex = "none"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 8309
+keywords = ["oldstyle", "snake", "anaconda"]
+short_desc = "the monstrous snake"
+long_desc = "A monstrous snake slithers towards you, thinking 'breakfast'."
+description = "This 10 meter anaconda looks rather hungry."
+level = 31
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak", "hide"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 8310
+keywords = ["oldstyle", "snake", "python"]
+short_desc = "a large snake"
+long_desc = "A rather large python rests in a coil here."
+description = "It's the largest Amazon python you have ever seen."
+level = 21
+sex = "female"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
+affected_by = ["sneak", "hide"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 8312
+keywords = ["oldstyle", "hag"]
+short_desc = "the Marsh Hag"
+long_desc = "A Marsh Hag is here."
+description = """
+Yech!  She manages to make even Smurfette look attractive.  That's ok,
+because she thinks you stink too, and she's about to do something about it."""
+level = 18
+sex = "female"
+act_flags = ["npc", "scavenger", "stay_area", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 8313
+keywords = ["oldstyle", "slaad"]
+short_desc = "a Death Slaad"
+long_desc = "A Death Slaad is standing here distraught.  He seems lost."
+description = """
+This dark apparition stands a meager 13 feet in height.  Even in the dim
+swamp light, the blade of his scythe gleams."""
+level = 39
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 8314
+keywords = ["oldstyle", "wolf"]
+short_desc = "a marsh wolf"
+long_desc = "A marsh wolf sniffs the ground has followed your scent."
+description = """
+This wolf looks plump.  She probably ate a friend or two of yours who came
+into the marsh."""
+level = 16
+sex = "female"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+affected_by = ["dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 8318
+keywords = ["oldstyle", "mound", "shambling"]
+short_desc = "a shambling mound"
+long_desc = "A heap of garbage shambles towards you."
+description = """
+This grotesque pile of plant matter fills you with utmost horror."""
+level = 25
+sex = "none"
+act_flags = ["npc", "scavenger", "stay_area"]
+affected_by = ["hide"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 8319
+keywords = ["oldstyle", "shaman", "orc"]
+short_desc = "the orc shaman"
+long_desc = "An orc shaman stands before you holding a staff and wearing robes."
+description = """
+This old orc has an array of bones stuck in his hair and strange symbols
+painted on his face and hands."""
+level = 23
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "key", "aggressive", "stay_area", "cleric"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 3
+
+[[mobiles]]
+vnum = 8320
+keywords = ["oldstyle", "giant"]
+short_desc = "a marsh giant"
+long_desc = "A marsh giant stomps towards you."
+description = """
+This huge monster of a man has green gnarly teeth and a BIG stick."""
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "key", "aggressive", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 8321
+keywords = ["oldstyle", "gargoyle"]
+short_desc = "a gargoyle"
+long_desc = "A large gargoyle lands next to you, baring his fangs at you."
+description = "This creepy fellow looks like he could use you as a meal."
+level = 23
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "key", "aggressive", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+

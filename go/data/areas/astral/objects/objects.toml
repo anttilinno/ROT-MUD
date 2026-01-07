@@ -1,0 +1,473 @@
+[[objects]]
+vnum = 7700
+keywords = ["hammer", "sledge", "grey"]
+short_desc = "a massive slate-grey sledgehammer"
+long_desc = "The ground cracks under the weight of a grey hammer lying here."
+item_type = "weapon"
+level = 75
+weight = 550
+cost = 5200
+wear_flags = ["take", "wield"]
+extra_flags = ["anti_good", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+[[objects]]
+vnum = 7701
+keywords = ["scroll", "violet"]
+short_desc = "a violet scroll"
+long_desc = "A rolled piece of violet parchment lies on the floor."
+item_type = "scroll"
+level = 21
+weight = 10
+cost = 1510
+wear_flags = ["take"]
+extra_flags = ["bless"]
+
+[[objects]]
+vnum = 7702
+keywords = ["tablet", "scroll", "black"]
+short_desc = "a black etched tablet"
+long_desc = "Lying on the ground is a jet black stone tablet."
+item_type = "scroll"
+level = 23
+weight = 50
+cost = 2100
+wear_flags = ["take"]
+extra_flags = ["evil"]
+
+[[objects]]
+vnum = 7703
+keywords = ["scroll", "githyanki"]
+short_desc = "a scroll with githyanki writings on it"
+long_desc = "You see a scroll written in an alien tongue."
+item_type = "scroll"
+level = 13
+weight = 10
+cost = 1240
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7704
+keywords = ["amulet", "demon"]
+short_desc = "a small demon's amulet"
+long_desc = "A small amulet lies here in the dirt."
+item_type = "wand"
+level = 21
+weight = 50
+cost = 2600
+wear_flags = ["take", "hold"]
+extra_flags = ["evil", "nodrop"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "int"
+  modifier = -1
+
+[[objects]]
+vnum = 7705
+keywords = ["talisman", "devilish"]
+short_desc = "a devilish talisman"
+long_desc = "On the ground is a small talisman which radiates a tangible evil."
+item_type = "staff"
+level = 27
+weight = 50
+cost = 5300
+wear_flags = ["take", "hold"]
+extra_flags = ["evil", "nodrop"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = -10
+
+[[objects]]
+vnum = 7706
+keywords = ["knife", "silvery"]
+short_desc = "a silvery knife"
+long_desc = "A flat-bladed silvery knife lies here."
+item_type = "weapon"
+level = 11
+weight = 30
+cost = 480
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 7707
+keywords = ["dagger", "silvery"]
+short_desc = "a silvery dagger"
+long_desc = "A sharp-looking silvery dagger lies here."
+item_type = "weapon"
+level = 25
+weight = 30
+cost = 980
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 7708
+keywords = ["sword", "thin"]
+short_desc = "an extremely sharp and thin sword"
+long_desc = "Light glints off the edge of a razor-sharp sword."
+item_type = "weapon"
+level = 31
+weight = 30
+cost = 2300
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+[[objects]]
+vnum = 7709
+keywords = ["sword", "thin", "two", "two-handed"]
+short_desc = "a thin two-handed sword"
+long_desc = "A heavy yet thinly bladed two-handed sword lies here."
+item_type = "weapon"
+level = 47
+weight = 160
+cost = 2600
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 12
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 7710
+keywords = ["sword", "silvery", "two-handed"]
+short_desc = "a silvery sword"
+long_desc = "A silvery sword gleams unnaturally with an alien light."
+item_type = "weapon"
+level = 37
+weight = 130
+cost = 4600
+wear_flags = ["take", "wield"]
+extra_flags = ["glow"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+[[objects]]
+vnum = 7711
+keywords = ["flail", "barbed", "iron"]
+short_desc = "an iron barbed flail"
+long_desc = "A rusty iron flail with wicked barbs on it tears at the ground."
+item_type = "weapon"
+level = 57
+weight = 140
+cost = 2800
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "evil"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 7712
+keywords = ["sword", "gith", "two-handed"]
+short_desc = "the unholy sword of the githyanki"
+long_desc = "You feel tendrils of evil emanating from a wicked blade."
+item_type = "weapon"
+level = 61
+weight = 250
+cost = 5100
+wear_flags = ["take", "wield"]
+extra_flags = ["evil", "nodrop", "noremove"]
+
+  [objects.weapon]
+  dice_number = 9
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "int"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 7713
+keywords = ["stone", "flame"]
+short_desc = "a brightly flaming stone"
+long_desc = "The room is lit by a hot blue flame coming from a small stone."
+item_type = "light"
+level = 39
+weight = 10
+cost = 1440
+wear_flags = ["take", "hold"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -2
+
+[[objects]]
+vnum = 7714
+keywords = ["powder", "astral"]
+short_desc = "some astral powder"
+long_desc = "Twinkling powder floats before your eyes."
+item_type = "treasure"
+level = 0
+weight = 10
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7715
+keywords = ["vest", "splint"]
+short_desc = "a splint mail vest"
+long_desc = "An intricately fashioned splint mail vest lies here."
+item_type = "armor"
+level = 29
+weight = 450
+cost = 2100
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 6
+  ac_bash = 6
+  ac_slash = 6
+  ac_exotic = 0
+
+[[objects]]
+vnum = 7716
+keywords = ["skirt", "splint"]
+short_desc = "a splint mail skirt"
+long_desc = "An intricately fashioned splint mail skirt lies here."
+item_type = "armor"
+level = 39
+weight = 200
+cost = 1450
+wear_flags = ["take", "legs"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 0
+
+[[objects]]
+vnum = 7717
+keywords = ["sleeves", "splint"]
+short_desc = "a pair of splint mail sleeves"
+long_desc = "A pair of intricately fashioned splint mail sleeves lie here."
+item_type = "armor"
+level = 39
+weight = 150
+cost = 1450
+wear_flags = ["take", "arms"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 0
+
+[[objects]]
+vnum = 7718
+keywords = ["gauntlets", "ornate"]
+short_desc = "a pair of ornately designed gauntlets"
+long_desc = "A pair of painstakingly designed ornate gauntlets lie here."
+item_type = "armor"
+level = 39
+weight = 50
+cost = 2700
+wear_flags = ["take", "hands"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 7719
+keywords = ["vest", "cracked", "leather"]
+short_desc = "a decaying vest made from cracked leather"
+long_desc = "A decaying hunk of cracked leather has been discarded here."
+item_type = "armor"
+level = 61
+weight = 50
+cost = 8500
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 9
+  ac_bash = 9
+  ac_slash = 9
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -6
+
+[[objects]]
+vnum = 7720
+keywords = ["potion", "violet"]
+short_desc = "a violet potion"
+long_desc = "A tall glass flask holds a translucent violet fluid."
+item_type = "potion"
+level = 3
+weight = 20
+cost = 320
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7721
+keywords = ["potion", "vial", "murky"]
+short_desc = "a vial of murky fluid"
+long_desc = "A small vial contains a murky, sludge-like substance."
+item_type = "potion"
+level = 19
+weight = 10
+cost = 760
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7722
+keywords = ["potion", "silvery"]
+short_desc = "a silvery-colored potion"
+long_desc = "An octagonal vial holds a silvery-colored fluid that reflects light."
+item_type = "potion"
+level = 1
+weight = 20
+cost = 320
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7723
+keywords = ["mint", "chocolate"]
+short_desc = "a tasty-looking chocolate mint"
+long_desc = "Someone has dropped a delicious-looking chocolate mint here."
+item_type = "pill"
+level = 21
+weight = 0
+cost = 990
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7724
+keywords = ["pentagram"]
+short_desc = "a black pentagram"
+long_desc = "A small black metal pentagram has been left here."
+item_type = "key"
+level = 0
+weight = 100
+cost = 0
+wear_flags = ["take", "hold"]
+extra_flags = ["invis"]
+
+[[objects]]
+vnum = 7725
+keywords = ["pouch", "rotting"]
+short_desc = "a rotting pouch"
+long_desc = "A small pouch rots away on the floor here."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+

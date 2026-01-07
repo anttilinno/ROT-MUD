@@ -1,0 +1,256 @@
+[[mobiles]]
+vnum = 2101
+keywords = ["troll", "gang", "member"]
+short_desc = "a troll gang member"
+long_desc = "A member of the Trolls wanders about here."
+description = "He's lived a life of violence ever since he was little."
+level = 9
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area"]
+alignment = 0
+special = "spec_troll_member"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 2102
+keywords = ["ogre", "gang", "member"]
+short_desc = "an ogre gang member"
+long_desc = "A member of the Ogres wanders about here."
+description = "He wants to rid the world of every last Troll gang member."
+level = 9
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area"]
+alignment = 0
+special = "spec_ogre_member"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 2103
+keywords = ["gang", "leader", "troll"]
+short_desc = "the Troll gang leader"
+long_desc = "The gang leader is not pleased you found his hideout!"
+description = """
+He's risen to be leader through brute force and cunning leadership, you'd
+guess mostly brute force from the size of his muscles."""
+level = 25
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
+alignment = 0
+special = "spec_troll_member"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 20
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 5
+
+[[mobiles]]
+vnum = 2104
+keywords = ["bruiser", "troll"]
+short_desc = "a bruiser"
+long_desc = "A big, mean bruiser is looking for limbs to break."
+description = """
+He's 6'6" 245 pounds and enough muscle to bash your head in. How like a Troll."""
+level = 21
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_troll_member"
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 2105
+keywords = ["gang", "doll"]
+short_desc = "a doll"
+long_desc = "A gang doll looks naughty and nice."
+description = """
+She's a beauty (ok in RELATIVE terms) but you better not touch!"""
+level = 13
+sex = "female"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "thief"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 2106
+keywords = ["patrolman", "patrol", "man"]
+short_desc = "a patrolman"
+long_desc = "A patrolman is trying to keep the peace."
+description = """
+He'd rather be at the local pub then out here with these nasty kids."""
+level = 16
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior"]
+alignment = 0
+special = "spec_patrolman"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 115
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 2107
+keywords = ["vandal", "ogre"]
+short_desc = "a vandal"
+long_desc = "A vandal is spray painting pro-gang slogans on the wall here."
+description = "He has a wary eye and a fine hand for art."
+level = 20
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["sneak"]
+alignment = 0
+special = "spec_ogre_member"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 2108
+keywords = ["dog", "pit", "bull", "pitbull"]
+short_desc = "a pitbull"
+long_desc = "A vicious pitbull is foaming at the mouth in rabid anticipation."
+description = """
+You get a nice close look at him while he's tearing at your throat.
+His fangs are blood-stained from hearty meals of ... steak?!"""
+level = 9
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
+affected_by = ["detect_invis", "hide"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 2109
+keywords = ["punk", "troll"]
+short_desc = "a punk"
+long_desc = "A punk is here, carving his initials into a wall."
+description = """
+He's a sterling example of rehabilitation at work.  Not nice."""
+level = 19
+sex = "male"
+act_flags = ["npc", "aggressive", "wimpy", "thief"]
+affected_by = ["sneak"]
+alignment = 0
+special = "spec_troll_member"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 2110
+keywords = ["gang", "leader", "ogre"]
+short_desc = "the Ogre gang leader"
+long_desc = "The Ogre gang leader snaps out his stiletto. \"Care to dance?\""
+description = """
+He's smaller, but undoubtably smarter, than the Troll's leader."""
+level = 26
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "thief"]
+alignment = 0
+special = "spec_ogre_member"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 160
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 2111
+keywords = ["thug"]
+short_desc = "a thug"
+long_desc = "An ugly, scarred thug is here, looking for dogs to kick."
+description = """
+The thug isn't quite as big as the Troll's bruisers, but you can tell he loves
+breaking heads for the Ogres."""
+level = 21
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_ogre_member"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+

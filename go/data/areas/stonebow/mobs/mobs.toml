@@ -1,0 +1,1399 @@
+[[mobiles]]
+vnum = 13000
+keywords = ["rhoda", "morgenstern", "bridal", "consultant", "seamstress"]
+short_desc = "Rhoda"
+long_desc = "Rhoda Morgenstern is the seamstress here."
+description = """
+A pretty, darkhaired woman bustles about.  She speaks in a broad New York
+accent."""
+level = 50
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 13001
+keywords = ["serge", "tailor"]
+short_desc = "Serge"
+long_desc = "Serge flutters about, clicking his tongue."
+description = """
+A pale, dark haired man flutters about, waving his hands and looking upset."""
+level = 10
+sex = "none"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "outdoors"]
+affected_by = ["faerie_fire"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 13002
+keywords = ["mary", "richards", "shoe", "saleswoman"]
+short_desc = "Mary Richards"
+long_desc = "Mary Richards, the shoe saleswoman, beams a big, toothy smile."
+description = """
+This young, dark haired woman is very organized, but very nervous and rather
+shy."""
+level = 50
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 32
+
+[[mobiles]]
+vnum = 13003
+keywords = ["Higgins", "haberdasher"]
+short_desc = "Higgins"
+long_desc = "The haberdasher raises his eyebrows at you and exclaims, \"Oh, my God!\""
+description = """
+A middle-aged, pudgy Englishman dressed in a khaki safari suit.  He is
+balding, has a squidgy little mustache, and apparently feels intellectually
+superior."""
+level = 100
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "no_purge"]
+affected_by = ["detect_evil", "detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4500
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 19
+
+[[mobiles]]
+vnum = 13004
+keywords = ["thomas", "magnum", "shirt", "salesman"]
+short_desc = "Magnum"
+long_desc = "Magnum beams at you, waggles his eyebrows, and says \"Hey, you can trust me!\""
+description = """
+A well-built, disarmingly handsome man with deep dimples, dark curly hair
+and mustache, and blue eyes.  Magnum is wearing a gaudy Hawaiian shirt,
+shorts, and sandals, and he has a pair of sunglasses hanging from a string
+around his neck."""
+level = 100
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "warrior", "no_purge", "outdoors"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4500
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 19
+
+[[mobiles]]
+vnum = 13005
+keywords = ["thurston", "howell", "jeweler"]
+short_desc = "Thurston Howell III"
+long_desc = "Thurston peers his eyes at you craftily through his jeweler's loop and rubs\nhis hands together."
+description = """
+A man of medium build.  He has greying hair, and wears a dark blue yachting
+suit and deck shoes."""
+level = 50
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "no_purge"]
+affected_by = ["faerie_fire"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 13006
+keywords = ["joel", "robinson", "florist"]
+short_desc = "Joel Robinson"
+long_desc = "Joel stares at you sleepily and offers you a bouquet."
+description = """
+A slender young man stands here.  He has a heavy-lidded, sleepy look and a
+slow, drowsy smile."""
+level = 70
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 13007
+keywords = ["crow", "t.", "robot", "florist", "assistant"]
+short_desc = "Crow T.  Robot"
+long_desc = "Crow looks at you and laughs."
+description = """
+A short golden robot with keen white bulbous eyes stands here."""
+level = 50
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 13008
+keywords = ["tom", "servo", "florist", "assistant"]
+short_desc = "Tom Servo"
+long_desc = "Tom Servo says, \"Can you give me a hand? My arms don't work.\""
+description = """
+A short robot with a gumball-machine head and short slinky arms is here,
+wheeling around and insulting Crow."""
+level = 50
+sex = "none"
+act_flags = ["npc", "scavenger", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 13009
+keywords = ["dr.", "clayton", "forrester", "photographer", "mad"]
+short_desc = "Dr. Clayton Forrester"
+long_desc = "The photogragrapher grimaces at you to \"smile like a BIG cheese!\""
+description = """
+Forrester is tall, wiry, and wild-eyed.  His greying hair sticks
+out in rakish spikes pointing in every direction.  He scowls at
+ you through hideous neon-green hornrimmed glasses.  He wears
+ a bright green labcoat and grimaces at you condescendingly."""
+level = 90
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "no_purge"]
+affected_by = ["detect_hidden", "detect_good", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 3000
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 4
+  bonus = 16
+
+[[mobiles]]
+vnum = 13010
+keywords = ["tv's", "frank", "assistant", "photographer", "mad"]
+short_desc = "TV's Frank"
+long_desc = "TV's Frank raises an eyebrow, chortles, and nods is head slowly."
+description = """
+A pudgy, stupid man stands here grinning and trying to be intelligent."""
+level = 86
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "no_purge"]
+affected_by = ["detect_hidden", "detect_good"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 2500
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 12
+  bonus = 15
+
+[[mobiles]]
+vnum = 13011
+keywords = ["infested", "rat"]
+short_desc = "an infested rat"
+long_desc = "A disgusting rat is spreading the plague here."
+description = """
+The disgusting rat is mud-caked and filthy, and is covered in blood and
+dripping with pus.  It has blazing red eyes and long, vicious yellow fangs."""
+level = 21
+sex = "either"
+act_flags = ["npc", "stay_area", "no_align"]
+affected_by = ["haste", "dark_vision"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 7
+  bonus = 118
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 13012
+keywords = ["grubby", "street", "urchin"]
+short_desc = "a grubby street urchin"
+long_desc = "A skinny urchin stands here with a hand outstretched, begging for money."
+description = """
+The urchin is bruised and bloodied; it is wearing tatters that cling in
+filthy layers to its emaciated body.  There is no telling how long it's
+been since this thing bathed."""
+level = 10
+sex = "either"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "no_purge"]
+affected_by = ["detect_hidden", "detect_good"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 13013
+keywords = ["pickpocket", "thief"]
+short_desc = "the pickpocket"
+long_desc = "A sly pickpocket stands here leering at you."
+description = """
+The pickpocket looks like a vagabond, only more confident; it leers
+at you lopsidedly.  The pickpocket is wearing nondescript clothes,
+and blends into the crowd rather well."""
+level = 26
+sex = "either"
+act_flags = ["npc", "stay_area", "wimpy", "warrior"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "haste", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 13014
+keywords = ["hooker", "prostitute", "streeter"]
+short_desc = "a hooker"
+long_desc = "A common hooker is here, hawking her wares."
+description = """
+Raising the hem of her skirt a bit, the hooker grins and swishes at you.
+She is dressed in dirty, tattered cloth and stockings that sport huge holes.
+Her bodice conveniently laces up the front and exposes a shockingly vast
+amount of her wares..."""
+level = 42
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+affected_by = ["haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 13015
+keywords = ["slut", "street"]
+short_desc = "a slut"
+long_desc = "A pathetic street slut is here leering toothlessly and offering herself."
+description = """
+This pathetic creature is wearing a shift that barely covers what she's
+offering for sale.  She smells pretty rancid, and you shudder involuntarily.
+Sliding up and groping you, the slut winks and leers."""
+level = 22
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+affected_by = ["haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 13016
+keywords = ["monk", "quiet"]
+short_desc = "a quiet monk"
+long_desc = "A monk is here, smiling piously."
+description = """
+Dressed in simple dark Church vestments, the monk in quite unobtrusive.
+Beaming and looking cheerful, he crosses you and bows."""
+level = 38
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "no_purge", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 13017
+keywords = ["church", "priest"]
+short_desc = "a church priest"
+long_desc = "A church priest is here , looking somber."
+description = """
+Dressed in black vestments, the priest fingers his beads and peers at you.
+He wears a large, heavy iron crucifix around his neck."""
+level = 78
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "no_purge", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 10
+  bonus = 1700
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 6
+  bonus = 13
+
+[[mobiles]]
+vnum = 13018
+keywords = ["humble", "friar"]
+short_desc = "a humble friar"
+long_desc = "A friar is here, looking pious."
+description = """
+The friar is wearing a dark brown, simple robe, cinched at the waist by a
+plain cord.  Softly muttering prayers, the friar wanders about, lost in
+thought."""
+level = 58
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "no_purge", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 8
+
+[[mobiles]]
+vnum = 13019
+keywords = ["streetwalker", "'streeter", "hooker", "prostitute"]
+short_desc = "the 'streeter"
+long_desc = "A streetwalker is here, offering her bodacious wares."
+description = """
+The 'streeter, being a higher-class of prostitute, is better attired.
+Her garments are clean, though well-worn, probably hand-me-downs.  She wears
+a simply lacing bodice and colorful though faded skirt.  She wears a
+loose-fitting shawl.  Brushing against you, the 'streeter winks suggestively."""
+level = 52
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+affected_by = ["haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 600
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 7
+  bonus = 7
+
+[[mobiles]]
+vnum = 13020
+keywords = ["madame"]
+short_desc = "a madame"
+long_desc = "A madame is here, looking after her girls."
+description = """
+The madame seldom offers herself for profit anymore, having enough girls
+to make her rich.  She is dressed in a bright crimson, tight-fitting dress
+with a low-cut neckline and many buttons.  Looking shrewd, the madame watches
+her girls and counts her money."""
+level = 98
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "no_purge", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4000
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 10
+  bonus = 18
+
+[[mobiles]]
+vnum = 13021
+keywords = ["nun"]
+short_desc = "a nun"
+long_desc = "A nun is here, humming and looking cheerful."
+description = """
+Dressed in simple black robes and wimple, the nun is rather nondescript.
+Humming and singing, she cheerfully smiles and offers to pray for you."""
+level = 58
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 12
+  bonus = 8
+
+[[mobiles]]
+vnum = 13022
+keywords = ["noble", "knight"]
+short_desc = "a noble knight"
+long_desc = "A noble, virtuous knight is here keeping the peace."
+description = """
+The knight is dressed in heavy studded plate armor and wears a massive
+shield.  He carries a heavy longsword, its hilt decorated with simple gems.
+He watches the crowd warily for troublemakers and pickpockets."""
+level = 105
+sex = "either"
+act_flags = ["npc", "stay_area", "warrior", "no_purge"]
+affected_by = ["detect_evil", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 7000
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 4
+  bonus = 23
+
+[[mobiles]]
+vnum = 13023
+keywords = ["squire"]
+short_desc = "the squire"
+long_desc = "A busy squire tends a knight loyally."
+description = """
+Dressed in light armor and tabard, the squire has more mobility than his
+knight.  He wears a slouch hat with a long, trailing feather and carries a
+small sword."""
+level = 90
+sex = "either"
+act_flags = ["npc", "stay_area", "warrior", "no_purge"]
+affected_by = ["detect_evil", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 3000
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 4
+  bonus = 16
+
+[[mobiles]]
+vnum = 13024
+keywords = ["flower", "girl"]
+short_desc = "a flower girl"
+long_desc = "A young girl is here, selling fresh flowers."
+description = """
+The young girl is dressed in tatters and bare feet.  A simple shawl is
+draped about her, and she wears one of her flowers in her hair.  The
+ poor but proud young girl offers you a fresh flower from her basket."""
+level = 30
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 13025
+keywords = ["sweets", "seller"]
+short_desc = "a seller of sweetmeats"
+long_desc = "The sweetmeat seller is here hawking fruits and candies."
+description = """
+The seller is dressed in colorful cotton and is wearing a big canvas apron.
+Pushing a small cart laden with fruit and candies, the seller smiles and
+offers you a sweet."""
+level = 46
+sex = "either"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 13026
+keywords = ["fleabitten", "shaggy", "dog"]
+short_desc = "a fleabitten dog"
+long_desc = "A mangy dog scratches its fleas and pants at you."
+description = """
+A large, nondescript, shaggy dog is here scratching its fleas."""
+level = 6
+sex = "either"
+act_flags = ["npc", "scavenger", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 13027
+keywords = ["large", "grey", "dog", "mastiff"]
+short_desc = "a mastiff"
+long_desc = "A large, muscular grey dog sits here, growling."
+description = """
+The large grey dog appears to have blood dripping from a piece of flesh in
+its mouth."""
+level = 24
+sex = "either"
+act_flags = ["npc", "scavenger", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 13028
+keywords = ["nobleman", "rich"]
+short_desc = "a nobleman"
+long_desc = "A rich nobleman is here, looking proud."
+description = """
+Dressed in rich silks, the nobleman is looking for a bargain."""
+level = 76
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1600
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 6
+  bonus = 12
+
+[[mobiles]]
+vnum = 13029
+keywords = ["merchant", "travelling"]
+short_desc = "a travelling merchant"
+long_desc = "A merchant is here, selling his goods."
+description = """
+Dressed in fine robes, the merchant is examining goods and counting his
+cash."""
+level = 50
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 13030
+keywords = ["monk"]
+short_desc = "a quiet monk"
+long_desc = "A pensive monk is here, smiling piously."
+description = """
+Dressed in a simple, shapeless brown wool robe cinched at the waist with a
+dark cord, the monk is the epitome of "simplistic".  He smiles at you and
+bows his head."""
+level = 38
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "no_purge", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 13031
+keywords = ["Church", "priest"]
+short_desc = "A church priest"
+long_desc = "A church priest is here looking somber."
+description = """
+Dressed in black vestments and starched white collar, the priest fingers his
+beads and peers at you questioningly."""
+level = 78
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "no_purge", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 10
+  bonus = 1700
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 6
+  bonus = 13
+
+[[mobiles]]
+vnum = 13032
+keywords = ["church", "bishop"]
+short_desc = "a church Bishop"
+long_desc = "A stern bishop of the Church is here, blessing his supplicants."
+description = """
+He is wearing long, flowing purple robes and a tall, pointed hat.
+He carries a long staff adorned with a large silver crucifix."""
+level = 104
+sex = "male"
+act_flags = ["npc", "stay_area", "cleric", "no_purge", "healer"]
+affected_by = ["detect_evil", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 6500
+
+  [mobiles.damage_dice]
+  number = 7
+  size = 6
+  bonus = 22
+
+[[mobiles]]
+vnum = 13033
+keywords = ["high", "priest"]
+short_desc = "the high priest of Thoth"
+long_desc = "A High Priest of Thoth is here, smiling beguilingly and inviting you to join him."
+description = """
+The High Priest is dressed in deep purple robes spangled with tiny silver
+stars.  There is an amulet in the shape of a crescent around his neck."""
+level = 107
+sex = "male"
+act_flags = ["npc", "stay_area", "cleric", "no_purge", "healer"]
+affected_by = ["detect_evil", "detect_magic", "detect_good", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 8000
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 8
+  bonus = 24
+
+[[mobiles]]
+vnum = 13034
+keywords = ["priestess"]
+short_desc = "high priestess of Thoth"
+long_desc = "A High Priestess of Thoth is here beguiling you and beckoning you to join her."
+description = """
+The High Priestess is wearing low-cut deep purple robes with tiny silver
+stars around the neckling, hem, and sleeves.  She is wearing a circlet with a
+crescent moon in the center of her forehead."""
+level = 107
+sex = "female"
+act_flags = ["npc", "stay_area", "cleric", "no_purge", "healer"]
+affected_by = ["detect_evil", "detect_magic", "detect_good", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 8000
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 8
+  bonus = 24
+
+[[mobiles]]
+vnum = 13035
+keywords = ["angry", "father"]
+short_desc = "an angry father"
+long_desc = "An angry father is here, clutching a shotgun and scowling at you."
+description = """
+The angry father is looking for a PARTICULAR man to marry his daughter!
+The father wears worn overalls and a flannel workshirt.  He is clutching a
+long, double-barrelled shotgun."""
+level = 66
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area", "warrior", "no_purge"]
+affected_by = ["detect_hidden", "infrared", "sneak", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1100
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 10
+
+[[mobiles]]
+vnum = 13036
+keywords = ["huge", "cockroach"]
+short_desc = "A HUGE cockroach"
+long_desc = "A huge, vile cockroach is here, fluttering its antennae and rasping its\nclaws against the cobbles."
+description = """
+This cockroach looks like it has lived a LONG time...considering it's the
+size of a large dog!! Oily, glistening, its mandibles clicking, it stares at
+you with fathomless, cold eyes."""
+level = 36
+sex = "either"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "no_align"]
+affected_by = ["infrared", "haste", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 13037
+keywords = ["honeymooning", "bride"]
+short_desc = "a honeymooning bride"
+long_desc = "A honeymooning bride is here, blissfully wandering about."
+description = """
+The honeymooning bride is dressed in a comfortable yet pretty dress and
+shoes.  She is carrying a large bag."""
+level = 46
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 13038
+keywords = ["honeymooning", "groom"]
+short_desc = "a honeymooning groom"
+long_desc = "A honeymooning groom is here, gazing happily at his bride."
+description = """
+The groom is dressed in comfortable tabard and tights.  He is carrying a
+large wallet."""
+level = 46
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 13039
+keywords = ["young", "noble"]
+short_desc = "a young noble"
+long_desc = "A young noble is here looking to spend a LOT of money."
+description = "A young noble is here looking to spend a LOT of money."
+level = 101
+sex = "male"
+act_flags = ["npc", "stay_area", "mage", "no_purge"]
+affected_by = ["detect_evil", "detect_hidden", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 5000
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 8
+  bonus = 20
+
+[[mobiles]]
+vnum = 13040
+keywords = ["common", "soldier"]
+short_desc = "a common soldier"
+long_desc = "A common soldier is here, warily eyeing you."
+description = """
+The soldier is wearing a navy blue tabard and striped tights.  He is
+holding a long, glittering sword.  He watches you suspiciously."""
+level = 36
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior", "no_purge"]
+affected_by = ["detect_evil", "detect_invis", "faerie_fire", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 13041
+keywords = ["choir", "boy"]
+short_desc = "a choir boy"
+long_desc = "A choir boy is here, practicing his scales."
+description = """
+The choir boy is dressed in his choir robes.  He holds a candle in one
+hand, and a songbook in the other."""
+level = 18
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 13042
+keywords = ["gardener"]
+short_desc = "a gardener"
+long_desc = "A gardener is here dutifully clipping the hedges and tending the flowers."
+description = """
+The gardener is dressed in simple grey flannel robes.  He is carrying a
+pruning knife."""
+level = 66
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "thief", "no_purge"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1100
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 10
+
+[[mobiles]]
+vnum = 13043
+keywords = ["guildsman"]
+short_desc = "a guildsman"
+long_desc = "A guildsman is here tending his goods."
+description = """
+The guildsman is dressed in brightly-colored robes.  He is carrying a pack
+of his wares."""
+level = 68
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "no_purge"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1200
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 10
+
+[[mobiles]]
+vnum = 13044
+keywords = ["gypsy", "dancer"]
+short_desc = "a gypsy dancer"
+long_desc = "A beautiful young gypsy woman is here, rattling a tambourine and twirling."
+description = """
+The dancer is dark-skinned and dark-eyed with exotic features.  She is
+wearing handcrafted scarves in many layers, adorned with colorful ribbons.
+She is carrying a tambourine."""
+level = 68
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "thief", "no_purge"]
+affected_by = ["detect_evil", "detect_magic", "haste"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1200
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 10
+
+[[mobiles]]
+vnum = 13045
+keywords = ["gypsy", "musician"]
+short_desc = "a gypsy musician"
+long_desc = "A gypsy musician is here, tapping a drum."
+description = """
+The musician is swarthy and wears dark reds and purples and blues; his
+vest is cropped short, and he wears baggy silk pants.  He is playing a drum."""
+level = 68
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief", "no_purge"]
+affected_by = ["detect_magic"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1200
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 10
+
+[[mobiles]]
+vnum = 13046
+keywords = ["gypsy", "leader"]
+short_desc = "the gypsy leader"
+long_desc = "The leader of the gypsies is here, watching the crowd."
+description = """
+The gypsy leader is dressed in bright colors and wears a bright red head
+scarf."""
+level = 105
+sex = "either"
+act_flags = ["npc", "stay_area", "thief", "warrior", "no_purge"]
+affected_by = ["detect_magic", "infrared", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 7000
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 4
+  bonus = 23
+
+[[mobiles]]
+vnum = 13047
+keywords = ["crying", "mother"]
+short_desc = "a crying mother"
+long_desc = "A bereft mother is here, sobbing piteously."
+description = """
+A crying mother is dressed in black and is sobbing into an expensive lace
+handkerchief."""
+level = 40
+sex = "female"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 13048
+keywords = ["townsman"]
+short_desc = "a townsman"
+long_desc = "A townsman is here, relaxing and watching the world go by."
+description = """
+The townsman is dressed in plain, earthy browns and greens.  He holds a
+mug in one hand, and grins lopsidedly as you approach."""
+level = 78
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 10
+  bonus = 1700
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 6
+  bonus = 13
+
+[[mobiles]]
+vnum = 13049
+keywords = ["townswoman"]
+short_desc = "a townswoman"
+long_desc = "A townswoman is here shopping."
+description = """
+The townswoman is dressed in plain colors and wears a shawl.  She carries a
+willow basket."""
+level = 78
+sex = "female"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "no_purge"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 10
+  bonus = 1700
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 6
+  bonus = 13
+
+[[mobiles]]
+vnum = 13050
+keywords = ["Arthur", "Fonzerelli", "Fonzie"]
+short_desc = "Fonzie"
+long_desc = "Fonzie is here combing his slicked-back hair and admiring himself in the mirror."
+description = """
+Fonzie is dressed in jeans and a leather jacket.  He has slicked back dark
+hair and admires himself in the mirror.  He is carrying a comb."""
+level = 109
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior", "no_purge", "outdoors"]
+affected_by = ["detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9000
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 6
+  bonus = 26
+
+[[mobiles]]
+vnum = 13051
+keywords = ["humble", "friar"]
+short_desc = "a humble friar"
+long_desc = "A humble friar is here quietly tending his plants."
+description = """
+The friar is wearing a long, simple brown robe and sandals.  He has a cord
+tied around his waist to adjust the fit of his garment.  He is carrying a
+bota of nectar."""
+level = 86
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "cleric", "mage", "no_purge", "healer"]
+affected_by = ["detect_evil", "detect_good"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 2500
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 12
+  bonus = 15
+
+[[mobiles]]
+vnum = 13052
+keywords = ["healer"]
+short_desc = "a holy healer"
+long_desc = "A Holy Healer of the goddess Eriana is here healing the wounded and meditating."
+description = """
+The healer is dressed in simply-cut blue silk robes and sandals.  He sits
+cross-legged on a zabuton pillow, quietly tending the ailing.  He appears to
+be very, VERY old...and very wise."""
+level = 109
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "train", "cleric", "mage", "no_purge", "healer"]
+affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9000
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 6
+  bonus = 26
+
+[[mobiles]]
+vnum = 13053
+keywords = ["Father", "Tom"]
+short_desc = "Father Tom"
+long_desc = "Father Tom is here, grumbling and making irreverent observations and scathing witticisms."
+description = """
+Father Tom is dressed in flowing black robes and is wearing a heavy Celtic
+cross.  He is wearing the Ring of the Grand Inquisitor and carries an incense
+burner."""
+level = 109
+sex = "male"
+act_flags = ["npc", "stay_area", "cleric", "mage", "no_purge"]
+affected_by = ["detect_evil", "detect_invis", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 9000
+
+  [mobiles.damage_dice]
+  number = 8
+  size = 6
+  bonus = 26
+
+[[mobiles]]
+vnum = 13054
+keywords = ["Innkeeper", "Yuri"]
+short_desc = "Yuri the Innkeeper"
+long_desc = "Yuri is here scowling at you."
+description = """
+Yuri appears much fiercer than he really is.  His hair and beard are wild,
+but he has kind grey eyes.  He is smoking an immaculate meerschaum pipe."""
+level = 98
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "warrior", "no_purge"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4000
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 10
+  bonus = 18
+
+[[mobiles]]
+vnum = 13055
+keywords = ["wife", "Bella"]
+short_desc = "Bella, the Innkeeper's wife"
+long_desc = "Bella is here smiling warmly and greeting you."
+description = """
+Bella is heavyset, motherly woman.  She wears a simple workdress and apron,
+and carries a dusting cloth."""
+level = 92
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "warrior", "no_purge"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 25
+  size = 10
+  bonus = 3250
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 6
+  bonus = 16
+
+[[mobiles]]
+vnum = 13056
+keywords = ["Mother", "Superior"]
+short_desc = "Mother Superior"
+long_desc = "Mother Superior is here watching you approvingly."
+description = """
+Mother Superior is an older woman with sharp features and gentle, wise blue
+eyes.  She is wearing dark nun's robes and a starched wimple.  There is a
+heavy silver crucifix around her neck."""
+level = 107
+sex = "female"
+act_flags = ["npc", "stay_area", "cleric", "no_purge", "healer"]
+affected_by = ["detect_evil"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 8000
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 8
+  bonus = 24
+
+[[mobiles]]
+vnum = 13057
+keywords = ["barmaid"]
+short_desc = "a barmaid"
+long_desc = "A pretty young barmaid is here ready to serve you."
+description = """
+The young barmaid is slender and buxom.  She has long dark curly hair and
+soft blue eyes.  She wears simple, colorful skirts and a plain bodice.
+She dimples at you prettily as you look at her."""
+level = 42
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+

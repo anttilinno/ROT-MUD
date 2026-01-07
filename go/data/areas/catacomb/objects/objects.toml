@@ -1,0 +1,305 @@
+[[objects]]
+vnum = 2001
+keywords = ["glowing", "key"]
+short_desc = "a glowing key"
+long_desc = "A circular, glowing key radiates a bright aura around it."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow", "hum", "magic"]
+
+[[objects]]
+vnum = 2002
+keywords = ["granite", "plate", "mail", "platemail"]
+short_desc = "a suit of granite platemail"
+long_desc = "A suit of platemail hewn from granite stands by itself in the corner."
+item_type = "armor"
+level = 45
+weight = 550
+cost = 3600
+wear_flags = ["take", "body"]
+extra_flags = ["hum", "anti_good"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+[[objects]]
+vnum = 2003
+keywords = ["onyx", "ring"]
+short_desc = "an onyx ring"
+long_desc = "A ring with a very dark onyx stone in it has been left in the dirt."
+item_type = "jewelry"
+level = 13
+weight = 10
+cost = 800
+wear_flags = ["take", "finger"]
+extra_flags = ["anti_good"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -1
+
+[[objects]]
+vnum = 2004
+keywords = ["neutralizer", "sword"]
+short_desc = "the neutralizer"
+long_desc = "A long thin sword with a wide blade makes you wonder."
+item_type = "weapon"
+level = 31
+weight = 90
+cost = 1280
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "anti_good", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 2005
+keywords = ["sword", "excalibur"]
+short_desc = "the sword Excalibur"
+long_desc = "A sword gleams by the light of its magical silvery blade."
+item_type = "weapon"
+level = 47
+weight = 150
+cost = 3400
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic", "anti_evil", "anti_neutral"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 2006
+keywords = ["crown"]
+short_desc = "a kingly crown"
+long_desc = "The crown of a long lost King lies forgotten here."
+item_type = "key"
+level = 47
+weight = 100
+cost = 1850
+wear_flags = ["take", "head"]
+extra_flags = ["bless"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -6
+
+[[objects]]
+vnum = 2007
+keywords = ["stone"]
+short_desc = "stone"
+long_desc = "The stone is surrounded by a bright glow, better look closer."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 2008
+keywords = ["holy", "water", "flask"]
+short_desc = "a flask of holy water"
+long_desc = "A flask of holy water is here."
+item_type = "potion"
+level = 21
+weight = 20
+cost = 880
+wear_flags = ["take", "hold"]
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 2009
+keywords = ["chainmail", "chain", "mail", "suit"]
+short_desc = "a suit of chainmail"
+long_desc = "A nice suit of chainmail has been left behind."
+item_type = "armor"
+level = 19
+weight = 200
+cost = 1450
+wear_flags = ["take", "body"]
+extra_flags = ["bless"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+[[objects]]
+vnum = 2010
+keywords = ["white", "cape"]
+short_desc = "a white cape"
+long_desc = "A blazing cape of white lies in a careful pile."
+item_type = "armor"
+level = 23
+weight = 30
+cost = 1000
+wear_flags = ["take", "neck"]
+extra_flags = ["glow"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 2011
+keywords = ["shield", "defense"]
+short_desc = "the shield of defense"
+long_desc = "A large shield lies protecting the ground."
+item_type = "armor"
+level = 25
+weight = 150
+cost = 1920
+wear_flags = ["take", "shield"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 6
+  ac_bash = 6
+  ac_slash = 6
+  ac_exotic = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -2
+
+[[objects]]
+vnum = 2012
+keywords = ["scale", "shield", "dragonscale"]
+short_desc = "a dragonscale shield"
+long_desc = "A shield from from the scales of a large dragon lies here."
+item_type = "armor"
+level = 43
+weight = 180
+cost = 3500
+wear_flags = ["take", "shield"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 4
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+[[objects]]
+vnum = 2013
+keywords = ["prism", "wand"]
+short_desc = "a prism wand"
+long_desc = "A wand made of a triangular prism twinkles in the dust."
+item_type = "wand"
+level = 23
+weight = 40
+cost = 2200
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+[[objects]]
+vnum = 2014
+keywords = ["shadow", "cloak"]
+short_desc = "a shadow cloak"
+long_desc = "The shadows in the corner of the room seems strange ..."
+item_type = "armor"
+level = 27
+weight = 10
+cost = 210
+wear_flags = ["take", "about"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "move"
+  modifier = -30
+
+[[objects]]
+vnum = 2015
+keywords = ["misty", "potion"]
+short_desc = "a misty potion"
+long_desc = "A potion of swirling mist-like substance is here."
+item_type = "potion"
+level = 23
+weight = 10
+cost = 920
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 2016
+keywords = ["templar", "templars", "sword", "wooden"]
+short_desc = "a templar's sword"
+long_desc = "A sword made of wood has been left here."
+item_type = "weapon"
+level = 19
+weight = 60
+cost = 830
+wear_flags = ["take", "wield"]
+extra_flags = ["bless"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+

@@ -1,0 +1,101 @@
+[[objects]]
+vnum = 7909
+keywords = ["treasure", "coins"]
+short_desc = "a huge treasure"
+long_desc = "A huge treasure is lying here, looking very valuable."
+item_type = "money"
+level = 0
+weight = 0
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7910
+keywords = ["chest"]
+short_desc = "a wooden chest"
+long_desc = "A wooden chest stands in the corner."
+item_type = "container"
+level = 0
+weight = 4000
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7911
+keywords = ["key"]
+short_desc = "a small brass key"
+long_desc = "A small brass key lies here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 7912
+keywords = ["sword", "godslayer"]
+short_desc = "a white-hilted sword called \"GodSlayer\""
+long_desc = "A white-hilted sword with engravings on the blade lies here."
+item_type = "weapon"
+level = 4
+weight = 70
+cost = 2
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "magic"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 1
+
+  [[objects.affects]]
+  location = "str"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+[[objects]]
+vnum = 7913
+keywords = ["plate", "breast", "silver", "glinting"]
+short_desc = "a glinting silver breast plate"
+long_desc = "There is a glinting silver breast plate on the floor."
+item_type = "armor"
+level = 4
+weight = 200
+cost = 200
+wear_flags = ["take", "body"]
+extra_flags = ["magic", "bless"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 7914
+keywords = ["helmet", "silver", "glinting"]
+short_desc = "a glinting silver helmet"
+long_desc = "A glinting silver helmet lies here."
+item_type = "armor"
+level = 4
+weight = 150
+cost = 200
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "bless"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 2
+  ac_slash = 1
+  ac_exotic = 1
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+

@@ -1,0 +1,99 @@
+[[objects]]
+vnum = 2800
+keywords = ["corpse", "cadaver"]
+short_desc = "the cadaver-toy"
+long_desc = "A half eaten corpse is laying here"
+item_type = "container"
+level = 0
+weight = 500
+cost = 1
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 2801
+keywords = ["pile", "rotting", "heap", "bed"]
+short_desc = "the heap of carnage"
+long_desc = "There is a bed made of carnage here."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 2802
+keywords = ["trollskin", "troll", "skin"]
+short_desc = "the troll skin"
+long_desc = "The filthy hide of a beast is laying here."
+item_type = "armor"
+level = 23
+weight = 200
+cost = 1380
+wear_flags = ["take", "about"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 2803
+keywords = ["ring", "opal"]
+short_desc = "an opal ring"
+long_desc = "A ring of black opal lies here gathering dust."
+item_type = "jewelry"
+level = 39
+weight = 10
+cost = 1150
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 2804
+keywords = ["leather", "belt"]
+short_desc = "a leather belt"
+long_desc = "An old leather belt is left on the floor."
+item_type = "armor"
+level = 29
+weight = 50
+cost = 1050
+wear_flags = ["take", "waist"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 6
+  ac_bash = 6
+  ac_slash = 6
+  ac_exotic = 0
+
+[[objects]]
+vnum = 2805
+keywords = ["bone", "cracked"]
+short_desc = "a cracked bone"
+long_desc = "A cracked piece of bone lies here."
+item_type = "weapon"
+level = 11
+weight = 30
+cost = 350
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = -1
+

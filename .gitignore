@@ -7,11 +7,15 @@ coverage.out
 # AI assistant
 CLAUDE.md
 
+# Extracted C source
+C/
+
 # Binaries
 rotmud
 areconv
-go_port/rotmud
-go_port/areconv
+areaconv
+go/rotmud
+go/areaconv
 
 # IDE
 .idea/

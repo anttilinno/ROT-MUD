@@ -1,0 +1,665 @@
+[[objects]]
+vnum = 5200
+keywords = ["mithril", "vest"]
+short_desc = "a mithril vest"
+long_desc = "A vest made of mithril plates lies heaped on the floor."
+item_type = "armor"
+level = 51
+weight = 300
+cost = 7600
+wear_flags = ["take", "body"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 5201
+keywords = ["helm", "mithril"]
+short_desc = "a mithril helm"
+long_desc = "Here lies a large mithril helm."
+item_type = "armor"
+level = 53
+weight = 100
+cost = 3400
+wear_flags = ["take", "head"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 5202
+keywords = ["gauntlets", "mithril"]
+short_desc = "a pair of mithril gauntlets"
+long_desc = "A pair of mithril gauntlets rests on the ground."
+item_type = "armor"
+level = 49
+weight = 100
+cost = 2700
+wear_flags = ["take", "hands"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 5203
+keywords = ["sleeves", "mithril"]
+short_desc = "some mithril sleeves"
+long_desc = "A set of mithril sleeves lies on the ground."
+item_type = "armor"
+level = 49
+weight = 100
+cost = 2700
+wear_flags = ["take", "arms"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 5204
+keywords = ["boots", "mithril"]
+short_desc = "a pair of mithril boots"
+long_desc = "A pair of mithril boots stands has been left here."
+item_type = "armor"
+level = 49
+weight = 60
+cost = 3100
+wear_flags = ["take", "feet"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 5205
+keywords = ["leggings", "mithril"]
+short_desc = "a set of mithril leggings"
+long_desc = "A set of mithril leggings lie here unattended."
+item_type = "armor"
+level = 49
+weight = 100
+cost = 3100
+wear_flags = ["take", "legs"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 5206
+keywords = ["girth", "mithril"]
+short_desc = "a mithril girth"
+long_desc = "A large iron girth lies at your feet."
+item_type = "armor"
+level = 51
+weight = 60
+cost = 5200
+wear_flags = ["take", "waist"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+[[objects]]
+vnum = 5207
+keywords = ["breast", "plate", "iron"]
+short_desc = "a battered iron breast plate"
+long_desc = "A battered iron breast plate lies here."
+item_type = "armor"
+level = 7
+weight = 450
+cost = 9100
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -6
+
+[[objects]]
+vnum = 5208
+keywords = ["shield", "iron"]
+short_desc = "a sturdy iron shield"
+long_desc = "A small, but sturdy, iron shield has been left here."
+item_type = "armor"
+level = 47
+weight = 50
+cost = 4400
+wear_flags = ["take", "shield"]
+extra_flags = ["magic", "anti_good"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 3
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+[[objects]]
+vnum = 5210
+keywords = ["potion", "black"]
+short_desc = "a black potion"
+long_desc = "A jet black potion sits upright waiting to be taken."
+item_type = "potion"
+level = 21
+weight = 50
+cost = 880
+wear_flags = ["take"]
+extra_flags = ["invis", "magic"]
+
+[[objects]]
+vnum = 5211
+keywords = ["potion", "orange"]
+short_desc = "an orange potion"
+long_desc = "A small orange potion lies here."
+item_type = "potion"
+level = 7
+weight = 100
+cost = 400
+wear_flags = ["take"]
+extra_flags = ["invis", "magic"]
+
+[[objects]]
+vnum = 5214
+keywords = ["ball", "quartz"]
+short_desc = "a smooth quartz ball"
+long_desc = "A smooth quartz ball lies here gleaming."
+item_type = "light"
+level = 0
+weight = 300
+cost = 50
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 5215
+keywords = ["scroll", "tattered"]
+short_desc = "a tattered scroll"
+long_desc = "A worn and tattered scroll has been left here."
+item_type = "scroll"
+level = 15
+weight = 150
+cost = 1280
+wear_flags = ["take"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 5216
+keywords = ["scroll", "bound"]
+short_desc = "a bound scroll"
+long_desc = "A bound scroll of detection lies at your feet."
+item_type = "scroll"
+level = 0
+weight = 150
+cost = 500
+wear_flags = ["take"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 5217
+keywords = ["flute", "silver"]
+short_desc = "a silver flute"
+long_desc = "A brilliant silver flute glimmers from beneath a rock."
+item_type = "staff"
+level = 17
+weight = 10
+cost = 3300
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -2
+
+[[objects]]
+vnum = 5218
+keywords = ["talisman", "demon"]
+short_desc = "a demon-faced talisman"
+long_desc = "A demon-faced talisman glares at you angrily."
+item_type = "jewelry"
+level = 0
+weight = 110
+cost = 0
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "magic"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -8
+
+  [[objects.affects]]
+  location = "str"
+  modifier = -10
+
+[[objects]]
+vnum = 5219
+keywords = ["venison", "chunk"]
+short_desc = "a chunk of venison"
+long_desc = "A large chunk of venison sits here ready to be eaten."
+item_type = "food"
+level = 0
+weight = 200
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 5220
+keywords = ["fountain", "water"]
+short_desc = "a large cracked fountain"
+long_desc = "Some stagnant water lies in the bottom of the fountain."
+item_type = "fountain"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 5221
+keywords = ["two-handed", "two", "sword"]
+short_desc = "a two-handed sword"
+long_desc = "A nice two-handed sword hangs on a hook in the wall."
+item_type = "weapon"
+level = 51
+weight = 240
+cost = 3300
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 12
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 5222
+keywords = ["robe", "black", "silk"]
+short_desc = "a black silk robe"
+long_desc = "A black silk robe lies heaped in one corner."
+item_type = "armor"
+level = 9
+weight = 60
+cost = 410
+wear_flags = ["take", "about"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 5
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 10
+
+[[objects]]
+vnum = 5223
+keywords = ["cloak", "green"]
+short_desc = "a dark green cloak"
+long_desc = "A beautiful dark green cloak has been dropped by someone."
+item_type = "armor"
+level = 39
+weight = 120
+cost = 1600
+wear_flags = ["take", "neck"]
+extra_flags = ["magic", "anti_good"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+[[objects]]
+vnum = 5224
+keywords = ["seal", "ebony"]
+short_desc = "an engraved ebony seal"
+long_desc = "A small, engraved ebony seal is here."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 5225
+keywords = ["desk", "curved"]
+short_desc = "the desk"
+long_desc = "A dirty, crumbling curved desk is here."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 5226
+keywords = ["seal", "ivory"]
+short_desc = "an engraved ivory seal"
+long_desc = "A small, engraved ivory seal lies here."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 5227
+keywords = ["cabinet", "glass"]
+short_desc = "the glass cabinet"
+long_desc = "A broken glass cabinet is here."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 5228
+keywords = ["arm", "rotted"]
+short_desc = "a rotten arm"
+long_desc = "A rotted arm floats lazily by your feet."
+item_type = "food"
+level = 0
+weight = 200
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 5230
+keywords = ["stone", "pale", "blue"]
+short_desc = "a pale blue stone"
+long_desc = "A pale blue stone sits here."
+item_type = "gem"
+level = 9
+weight = 10
+cost = 550
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 5231
+keywords = ["stone", "scarlet", "blue"]
+short_desc = "a scarlet and blue stone"
+long_desc = "A pretty scarlet and blue stone has been dropped here."
+item_type = "gem"
+level = 9
+weight = 10
+cost = 550
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+[[objects]]
+vnum = 5232
+keywords = ["stone", "blue", "incandescent"]
+short_desc = "an incandescent blue stone"
+long_desc = "A small incandescent blue stone lies here."
+item_type = "gem"
+level = 9
+weight = 10
+cost = 550
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+[[objects]]
+vnum = 5233
+keywords = ["stone", "red", "deep"]
+short_desc = "a deep red stone"
+long_desc = "Someone has left a deep red stone here."
+item_type = "gem"
+level = 9
+weight = 10
+cost = 550
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+[[objects]]
+vnum = 5234
+keywords = ["stone", "pink"]
+short_desc = "a pink stone"
+long_desc = "A tiny pink stone lies at your feet."
+item_type = "gem"
+level = 9
+weight = 10
+cost = 550
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 1
+
+[[objects]]
+vnum = 5235
+keywords = ["stone", "pearly", "white"]
+short_desc = "a pearly white stone"
+long_desc = "This pearly white stone would probably sell for a good price."
+item_type = "gem"
+level = 9
+weight = 10
+cost = 11
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 1
+
+[[objects]]
+vnum = 5237
+keywords = ["stone", "lavender", "green"]
+short_desc = "a lavender and green stone"
+long_desc = "A stunning lavender and green stone rests on the ground."
+item_type = "gem"
+level = 0
+weight = 10
+cost = 150
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 5239
+keywords = ["stone", "grey", "dull"]
+short_desc = "a dull grey stone"
+long_desc = "You can barely make out a dull grey stone on the ground."
+item_type = "gem"
+level = 0
+weight = 10
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 5241
+keywords = ["stone", "pink", "green"]
+short_desc = "a pink and green stone"
+long_desc = "A bright pink and green stone has been left here."
+item_type = "gem"
+level = 0
+weight = 10
+cost = 500
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -5
+
+[[objects]]
+vnum = 5243
+keywords = ["stone", "clear"]
+short_desc = "a clear stone"
+long_desc = "A odd clear stone lies at your feet."
+item_type = "gem"
+level = 0
+weight = 10
+cost = 100
+wear_flags = ["take", "float"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = 3
+
+[[objects]]
+vnum = 5250
+keywords = ["mandolin"]
+short_desc = "a mandolin"
+long_desc = "A mandolin lies against the wall."
+item_type = "staff"
+level = 17
+weight = 100
+cost = 2500
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 5251
+keywords = ["harp", "golden"]
+short_desc = "a golden harp"
+long_desc = "A battered golden harp has been tipped over."
+item_type = "staff"
+level = 13
+weight = 500
+cost = 2700
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -2
+
+[[objects]]
+vnum = 5252
+keywords = ["long", "dagger", "slim"]
+short_desc = "a long slim dagger"
+long_desc = "A long slim dagger has been left here."
+item_type = "weapon"
+level = 15
+weight = 10
+cost = 590
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+

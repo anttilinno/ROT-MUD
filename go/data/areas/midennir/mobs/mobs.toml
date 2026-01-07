@@ -1,0 +1,191 @@
+[[mobiles]]
+vnum = 3500
+keywords = ["wyvern"]
+short_desc = "the wyvern"
+long_desc = "A monstrous wyvern slowly circles just above your head."
+description = """
+This huge winged creature looks really menacing.  You are happy it doesn't
+APPEAR to be very hungry ... yet."""
+level = 15
+sex = "either"
+act_flags = ["npc", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden", "flying"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 8
+  size = 8
+  bonus = 80
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 3501
+keywords = ["goblin", "mountain"]
+short_desc = "the goblin"
+long_desc = "A mountain goblin is wandering about, mumbling to himself."
+description = """
+You see before you a small and twisted creature with knotted muscles."""
+level = 12
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 4
+  bonus = 65
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 1
+
+[[mobiles]]
+vnum = 3502
+keywords = ["boy", "small"]
+short_desc = "the small boy"
+long_desc = "A small boy sits here, licking his wounds."
+description = """
+The poor boy has numerous cuts and scratches, but appears to be all right.
+He is apparently the only survivor of the ambush."""
+level = 8
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 12
+  bonus = 47
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 3503
+keywords = ["innkeeper"]
+short_desc = "the Innkeeper"
+long_desc = "The Innkeeper stands here, cleaning glasses."
+description = """
+The Innkeeper now spends most of his days waiting for customers, while the
+nights are spent watching out for goblins.  His inn is no longer the happy
+place that is used to be in days past."""
+level = 19
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 12
+  bonus = 200
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 3504
+keywords = ["bard"]
+short_desc = "the bard"
+long_desc = "A sullen bard is here, drinking away his problems."
+description = """
+You can smell the alcohol on his breath from across the room.  This poor bard
+has been sitting here quite a while, drinking himself into oblivion."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "thief", "warrior"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 12
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 3505
+keywords = ["horseman", "dark"]
+short_desc = "the dark horseman"
+long_desc = "A dark horseman is here, mounted on his black steed."
+description = """
+The man is obviously an outlaw, and has no qualms about slashing you into
+little bits."""
+level = 16
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 12
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 2
+
+[[mobiles]]
+vnum = 3506
+keywords = ["goblin", "lieutenant"]
+short_desc = "the goblin lieutenant"
+long_desc = "A goblin lieutenant stands here, attempting to get his men in order."
+description = """
+The goblin lieutenant is rather angry, and looking for one of his men to
+beat up upon, but maybe you will do just fine ..."""
+level = 13
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 12
+  bonus = 100
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 1
+
+[[mobiles]]
+vnum = 3507
+keywords = ["goblin", "leader"]
+short_desc = "the goblin leader"
+long_desc = "The goblin leader surveys the room."
+description = """
+The leader doesn't look too happy that you have found him here.  He grabs
+for his shortsword and lunges for your neck."""
+level = 18
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 12
+  bonus = 120
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+

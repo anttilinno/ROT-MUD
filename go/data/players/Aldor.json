@@ -1,0 +1,849 @@
+{
+  "name": "Aldor",
+  "level": 60,
+  "class": 1,
+  "race": 15,
+  "sex": 1,
+  "alignment": 750,
+  "hp": 1722,
+  "max_hp": 1722,
+  "mana": 1476,
+  "max_mana": 1476,
+  "move": 1409,
+  "max_move": 1409,
+  "stats": [
+    18,
+    18,
+    18,
+    18,
+    18
+  ],
+  "gold": 107,
+  "silver": 0,
+  "platinum": 0,
+  "exp": 59326,
+  "trust": 0,
+  "played": 0,
+  "room_vnum": 5250,
+  "hitroll": 38,
+  "damroll": 32,
+  "skills": {
+    "armor": 75,
+    "bless": 75,
+    "calm": 1,
+    "cause critical": 75,
+    "cause light": 1,
+    "cause serious": 75,
+    "create water": 1,
+    "cure blindness": 75,
+    "cure critical": 75,
+    "cure disease": 75,
+    "cure light": 1,
+    "cure poison": 75,
+    "cure serious": 75,
+    "detect evil": 75,
+    "detect good": 1,
+    "detect hidden": 75,
+    "detect invis": 75,
+    "detect magic": 1,
+    "dodge": 75,
+    "enhanced damage": 75,
+    "fast healing": 75,
+    "flamestrike": 1,
+    "fly": 75,
+    "heal": 75,
+    "holy word": 75,
+    "identify": 75,
+    "kick": 75,
+    "mace": 75,
+    "mass healing": 75,
+    "meditation": 75,
+    "parry": 75,
+    "recall": 40,
+    "remove curse": 75,
+    "sanctuary": 75,
+    "scrolls": 1,
+    "second attack": 75,
+    "shield": 75,
+    "shield block": 75,
+    "staves": 1,
+    "summon": 75,
+    "wands": 1,
+    "word of recall": 1
+  },
+  "password": "eb984fcc79abdc61c65a67679572f54ac3c3f3af532b47eb51414e6103e5e7f1",
+  "title": " the kenku",
+  "prompt": "%h/%H %m/%M \u003c%x\u003e [%e]\u003e",
+  "conditions": [
+    0,
+    48,
+    48,
+    48
+  ],
+  "player_act": 14,
+  "train": 16,
+  "practice": 189,
+  "inventory": [
+    {
+      "vnum": 3011,
+      "name": "bread",
+      "short_desc": "a bread",
+      "long_desc": "A loaf of bread is here. It doesn't look too stale.",
+      "level": 1,
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 1,
+      "wear_loc": -1,
+      "item_type": 19,
+      "weight": 10,
+      "cost": 9,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "vnum": 3011,
+      "name": "bread",
+      "short_desc": "a bread",
+      "long_desc": "A loaf of bread is here. It doesn't look too stale.",
+      "level": 1,
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 1,
+      "wear_loc": -1,
+      "item_type": 19,
+      "weight": 10,
+      "cost": 9,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "vnum": 3002,
+      "name": "bottle ale",
+      "short_desc": "a bottle of ale",
+      "long_desc": "A dark bottle of ale has been left here.",
+      "level": 1,
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 1,
+      "wear_loc": -1,
+      "item_type": 17,
+      "weight": 20,
+      "cost": 6,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "vnum": 5226,
+      "name": "seal ivory",
+      "short_desc": "an engraved ivory seal",
+      "long_desc": "A small, engraved ivory seal lies here.",
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 1,
+      "wear_loc": -1,
+      "item_type": 18,
+      "weight": 20,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "vnum": 5233,
+      "name": "stone red deep",
+      "short_desc": "a deep red stone",
+      "long_desc": "Someone has left a deep red stone here.",
+      "level": 9,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 1,
+      "wear_loc": -1,
+      "item_type": 13,
+      "weight": 10,
+      "cost": 550,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 9,
+          "duration": -1,
+          "location": 2,
+          "modifier": 1,
+          "bitvector": 0
+        }
+      ]
+    },
+    {
+      "vnum": 5208,
+      "name": "shield iron",
+      "short_desc": "a sturdy iron shield",
+      "long_desc": "A small, but sturdy, iron shield has been left here.",
+      "level": 47,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 513,
+      "wear_loc": -1,
+      "item_type": 9,
+      "weight": 50,
+      "cost": 4400,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 47,
+          "duration": -1,
+          "location": 20,
+          "modifier": -2,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 47,
+          "duration": -1,
+          "location": 20,
+          "modifier": -2,
+          "bitvector": 0
+        }
+      ]
+    },
+    {
+      "vnum": 5223,
+      "name": "cloak green",
+      "short_desc": "a dark green cloak",
+      "long_desc": "A beautiful dark green cloak has been dropped by someone.",
+      "level": 39,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 5,
+      "wear_loc": -1,
+      "item_type": 9,
+      "weight": 120,
+      "cost": 1600,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 39,
+          "duration": -1,
+          "location": 13,
+          "modifier": 5,
+          "bitvector": 0
+        }
+      ]
+    },
+    {
+      "vnum": 5208,
+      "name": "shield iron",
+      "short_desc": "a sturdy iron shield",
+      "long_desc": "A small, but sturdy, iron shield has been left here.",
+      "level": 47,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 513,
+      "wear_loc": -1,
+      "item_type": 9,
+      "weight": 50,
+      "cost": 4400,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 47,
+          "duration": -1,
+          "location": 20,
+          "modifier": -2,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 47,
+          "duration": -1,
+          "location": 20,
+          "modifier": -2,
+          "bitvector": 0
+        }
+      ]
+    }
+  ],
+  "equipment": {
+    "about": {
+      "vnum": 3711,
+      "name": "cape sub merc",
+      "short_desc": "a sub issue cape",
+      "long_desc": "You see a sub issue cape here.",
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 1025,
+      "wear_loc": 12,
+      "item_type": 9,
+      "weight": 20,
+      "cost": 72,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "arms": {
+      "vnum": 5203,
+      "name": "sleeves mithril",
+      "short_desc": "some mithril sleeves",
+      "long_desc": "A set of mithril sleeves lies on the ground.",
+      "level": 49,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 257,
+      "wear_loc": 10,
+      "item_type": 9,
+      "weight": 100,
+      "cost": 2700,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 19,
+          "modifier": 1,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 18,
+          "modifier": 1,
+          "bitvector": 0
+        }
+      ]
+    },
+    "body": {
+      "vnum": 5200,
+      "name": "mithril vest",
+      "short_desc": "a mithril vest",
+      "long_desc": "A vest made of mithril plates lies heaped on the floor.",
+      "level": 51,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 9,
+      "wear_loc": 5,
+      "item_type": 9,
+      "weight": 300,
+      "cost": 7600,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 51,
+          "duration": -1,
+          "location": 1,
+          "modifier": 2,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 51,
+          "duration": -1,
+          "location": 19,
+          "modifier": 1,
+          "bitvector": 0
+        }
+      ]
+    },
+    "feet": {
+      "vnum": 5204,
+      "name": "boots mithril",
+      "short_desc": "a pair of mithril boots",
+      "long_desc": "A pair of mithril boots stands has been left here.",
+      "level": 49,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 65,
+      "wear_loc": 8,
+      "item_type": 9,
+      "weight": 60,
+      "cost": 3100,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 2,
+          "modifier": 1,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 18,
+          "modifier": 1,
+          "bitvector": 0
+        }
+      ]
+    },
+    "finger_l": {
+      "vnum": 3364,
+      "name": "ring",
+      "short_desc": "a city guard signet ring",
+      "long_desc": "You see a ring with a strange symbol on the floor.",
+      "level": 31,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 3,
+      "wear_loc": 1,
+      "item_type": 8,
+      "weight": 10,
+      "cost": 1280,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 31,
+          "duration": -1,
+          "location": 20,
+          "modifier": -1,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 31,
+          "duration": -1,
+          "location": 17,
+          "modifier": -4,
+          "bitvector": 0
+        }
+      ]
+    },
+    "hands": {
+      "vnum": 5202,
+      "name": "gauntlets mithril",
+      "short_desc": "a pair of mithril gauntlets",
+      "long_desc": "A pair of mithril gauntlets rests on the ground.",
+      "level": 49,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 129,
+      "wear_loc": 9,
+      "item_type": 9,
+      "weight": 100,
+      "cost": 2700,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 19,
+          "modifier": 1,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 18,
+          "modifier": 1,
+          "bitvector": 0
+        }
+      ]
+    },
+    "head": {
+      "vnum": 5201,
+      "name": "helm mithril",
+      "short_desc": "a mithril helm",
+      "long_desc": "Here lies a large mithril helm.",
+      "level": 53,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 17,
+      "wear_loc": 6,
+      "item_type": 9,
+      "weight": 100,
+      "cost": 3400,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 53,
+          "duration": -1,
+          "location": 18,
+          "modifier": 2,
+          "bitvector": 0
+        }
+      ]
+    },
+    "hold": {
+      "vnum": 3715,
+      "name": "diploma",
+      "short_desc": "a mud school diploma",
+      "long_desc": "You see a mud school diploma here.",
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 16385,
+      "wear_loc": 17,
+      "item_type": 8,
+      "weight": 10,
+      "cost": 1140,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 0,
+          "duration": -1,
+          "location": 4,
+          "modifier": 1,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 0,
+          "duration": -1,
+          "location": 5,
+          "modifier": 1,
+          "bitvector": 0
+        }
+      ]
+    },
+    "legs": {
+      "vnum": 5205,
+      "name": "leggings mithril",
+      "short_desc": "a set of mithril leggings",
+      "long_desc": "A set of mithril leggings lie here unattended.",
+      "level": 49,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 33,
+      "wear_loc": 7,
+      "item_type": 9,
+      "weight": 100,
+      "cost": 3100,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 2,
+          "modifier": 1,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 49,
+          "duration": -1,
+          "location": 18,
+          "modifier": 1,
+          "bitvector": 0
+        }
+      ]
+    },
+    "light": {
+      "vnum": 3365,
+      "name": "banner war merc",
+      "short_desc": "a war banner",
+      "long_desc": "A war banner is on the floor here.",
+      "level": 15,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 65,
+      "wear_flags": 1,
+      "item_type": 1,
+      "weight": 10,
+      "cost": 640,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 15,
+          "duration": -1,
+          "location": 17,
+          "modifier": -2,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 15,
+          "duration": -1,
+          "location": 20,
+          "modifier": -1,
+          "bitvector": 0
+        }
+      ]
+    },
+    "neck_1": {
+      "vnum": 5223,
+      "name": "cloak green",
+      "short_desc": "a dark green cloak",
+      "long_desc": "A beautiful dark green cloak has been dropped by someone.",
+      "level": 39,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 5,
+      "wear_loc": 3,
+      "item_type": 9,
+      "weight": 120,
+      "cost": 1600,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 39,
+          "duration": -1,
+          "location": 13,
+          "modifier": 5,
+          "bitvector": 0
+        }
+      ]
+    },
+    "neck_2": {
+      "vnum": 3705,
+      "name": "cloak sub merc",
+      "short_desc": "a sub issue cloak",
+      "long_desc": "You see a sub issue cloak here.",
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 5,
+      "wear_loc": 4,
+      "item_type": 9,
+      "weight": 40,
+      "cost": 72,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "shield": {
+      "vnum": 3704,
+      "name": "shield sub merc",
+      "short_desc": "a sub issue shield",
+      "long_desc": "You see a sub issue shield here.",
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 513,
+      "wear_loc": 11,
+      "item_type": 9,
+      "weight": 30,
+      "cost": 108,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "waist": {
+      "vnum": 5206,
+      "name": "girth mithril",
+      "short_desc": "a mithril girth",
+      "long_desc": "A large iron girth lies at your feet.",
+      "level": 51,
+      "condition": 100,
+      "timer": -1,
+      "extra_flags": 64,
+      "wear_flags": 2049,
+      "wear_loc": 13,
+      "item_type": 9,
+      "weight": 60,
+      "cost": 5200,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 51,
+          "duration": -1,
+          "location": 5,
+          "modifier": 2,
+          "bitvector": 0
+        }
+      ]
+    },
+    "wield": {
+      "vnum": 3700,
+      "name": "mace sub merc",
+      "short_desc": "a sub issue mace",
+      "long_desc": "You see a sub issue mace here.",
+      "level": 1,
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 8193,
+      "wear_loc": 16,
+      "item_type": 5,
+      "weight": 60,
+      "cost": 250,
+      "values": [
+        4,
+        2,
+        4,
+        0,
+        0
+      ],
+      "affects": [
+        {
+          "type": "equipment",
+          "level": 1,
+          "duration": -1,
+          "location": 18,
+          "modifier": 2,
+          "bitvector": 0
+        },
+        {
+          "type": "equipment",
+          "level": 1,
+          "duration": -1,
+          "location": 19,
+          "modifier": 2,
+          "bitvector": 0
+        }
+      ]
+    },
+    "wrist_l": {
+      "vnum": 3713,
+      "name": "bracer sub merc",
+      "short_desc": "a sub issue bracer",
+      "long_desc": "You see a sub issue bracer here.",
+      "condition": 100,
+      "timer": -1,
+      "wear_flags": 4097,
+      "wear_loc": 14,
+      "item_type": 9,
+      "weight": 10,
+      "cost": 48,
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}

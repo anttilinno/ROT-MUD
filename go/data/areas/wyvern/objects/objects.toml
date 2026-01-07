@@ -1,0 +1,384 @@
+[[objects]]
+vnum = 1601
+keywords = ["rusty", "cleaver"]
+short_desc = "a rusty cleaver"
+long_desc = "A rusty cleaver lies on a counter top."
+item_type = "weapon"
+level = 1
+weight = 20
+cost = 230
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 6
+
+[[objects]]
+vnum = 1602
+keywords = ["fine", "mace"]
+short_desc = "the fine mace"
+long_desc = "There is a large mace of fine quality here."
+item_type = "weapon"
+level = 19
+weight = 110
+cost = 570
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 1603
+keywords = ["elven", "dagger"]
+short_desc = "a long elven dagger"
+long_desc = "A long elven dagger made of adamantite is here."
+item_type = "weapon"
+level = 15
+weight = 20
+cost = 700
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 1604
+keywords = ["steel", "broad", "sword"]
+short_desc = "a steel broad sword"
+long_desc = "A fine steel broad sword is lying on the ground."
+item_type = "weapon"
+level = 21
+weight = 120
+cost = 910
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 1605
+keywords = ["steel", "broad", "sword"]
+short_desc = "a steel broad sword"
+long_desc = "A very fine steel broad sword is lying on the ground."
+item_type = "weapon"
+level = 29
+weight = 120
+cost = 1510
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 1606
+keywords = ["rod", "might"]
+short_desc = "the rod of might"
+long_desc = "A Rod of Might is lying here."
+item_type = "weapon"
+level = 27
+weight = 130
+cost = 1550
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 1612
+keywords = ["black", "kite", "shield"]
+short_desc = "a black kite shield"
+long_desc = "There is a large black kite shield lying here."
+item_type = "armor"
+level = 25
+weight = 60
+cost = 1530
+wear_flags = ["take", "shield"]
+extra_flags = ["glow", "magic"]
+
+  [objects.armor]
+  ac_pierce = 6
+  ac_bash = 6
+  ac_slash = 6
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = 1
+
+[[objects]]
+vnum = 1614
+keywords = ["helm"]
+short_desc = "a commander's helm"
+long_desc = "A commander's helm rests on a table here."
+item_type = "armor"
+level = 39
+weight = 40
+cost = 2300
+wear_flags = ["take", "head"]
+extra_flags = ["glow", "magic"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+[[objects]]
+vnum = 1615
+keywords = ["bracer"]
+short_desc = "a mithril bracer"
+long_desc = "A magical bracer made from mithril lies on the ground!"
+item_type = "armor"
+level = 23
+weight = 20
+cost = 1540
+wear_flags = ["take", "wrist"]
+extra_flags = ["hum", "magic"]
+
+  [objects.armor]
+  ac_pierce = 4
+  ac_bash = 6
+  ac_slash = 6
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 1616
+keywords = ["dark", "blue", "cloak"]
+short_desc = "a dark blue cloak"
+long_desc = "A valuable cloak of dark blue cloth lies on the floor."
+item_type = "clothing"
+level = 0
+weight = 20
+cost = 100
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "magic"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = 6
+
+[[objects]]
+vnum = 1621
+keywords = ["dark", "red", "potion"]
+short_desc = "a dark red potion"
+long_desc = "A dark red potion rests on the ground."
+item_type = "potion"
+level = 9
+weight = 10
+cost = 320
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+[[objects]]
+vnum = 1651
+keywords = ["bronze", "chest"]
+short_desc = "a bronze chest"
+long_desc = "There is a sturdy bronze chest in the corner."
+item_type = "container"
+level = 0
+weight = 100
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1652
+keywords = ["ale", "barrel"]
+short_desc = "a barrel of ale"
+long_desc = "There is a small barrel in one corner."
+item_type = "drink"
+level = 0
+weight = 80
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1691
+keywords = ["key", "twin", "towers"]
+short_desc = "the twin towers key"
+long_desc = "There is a shiny skeleton key on the ground here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 1692
+keywords = ["strange", "key"]
+short_desc = "a strange key"
+long_desc = "There is a very strange-looking key on the ground here."
+item_type = "key"
+level = 23
+weight = 10
+cost = 750
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 1701
+keywords = ["short", "bow"]
+short_desc = "a short bow"
+long_desc = "A short bow has been carelessly left here."
+item_type = "weapon"
+level = 9
+weight = 50
+cost = 730
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 1702
+keywords = ["long", "bow"]
+short_desc = "a long bow"
+long_desc = "A long bow has been foolishly abandoned here."
+item_type = "weapon"
+level = 23
+weight = 70
+cost = 220
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+[[objects]]
+vnum = 1704
+keywords = ["ancient", "sword"]
+short_desc = "an ancient long sword"
+long_desc = "An ancient long sword has been left here."
+item_type = "weapon"
+level = 37
+weight = 100
+cost = 2500
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 1711
+keywords = ["fur", "cap"]
+short_desc = "a fur cap"
+long_desc = "A fur cap lies here on the ground."
+item_type = "armor"
+level = 0
+weight = 10
+cost = 168
+wear_flags = ["take", "head"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+[[objects]]
+vnum = 1712
+keywords = ["travelling", "boots"]
+short_desc = "a pair of travelling boots"
+long_desc = "A sturdy pair of travelling boots lies here."
+item_type = "armor"
+level = 23
+weight = 20
+cost = 880
+wear_flags = ["take", "feet"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 10
+
+[[objects]]
+vnum = 1713
+keywords = ["bronze", "ring"]
+short_desc = "a bronze ring"
+long_desc = "A ring of etched bronze gleams dimly on the ground."
+item_type = "jewelry"
+level = 9
+weight = 10
+cost = 55
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 5
+

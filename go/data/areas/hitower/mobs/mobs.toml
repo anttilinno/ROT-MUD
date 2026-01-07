@@ -1,0 +1,1539 @@
+[[mobiles]]
+vnum = 1300
+keywords = ["oldstyle", "shadow", "guardian"]
+short_desc = "a shadow guardian"
+long_desc = "A shadow guardian screams a challenge and attacks."
+description = "It seems to be made of nothing more than darkness ..."
+level = 17
+sex = "none"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+affected_by = ["detect_invis", "infrared", "sneak"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 1301
+keywords = ["oldstyle", "adventurer"]
+short_desc = "a lost adventurer"
+long_desc = "An emaciated adventurer is here looking lost and hopeless."
+description = """
+He looks haggard and sickly; no doubt he's been lost here for quite some time."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "wimpy", "cleric"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 1302
+keywords = ["oldstyle", "edgar"]
+short_desc = "Edgar"
+long_desc = "Edgar the Human Swordpupil"
+description = """
+Edgar says 'pardon me, can you tell me where to buy cups?'
+
+You see before you, one of Midgaard's finest fighting elite, the mighty
+bunny slayer himself, Edgar the Horrible!"""
+level = 1
+sex = "male"
+act_flags = ["npc", "scavenger", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 1303
+keywords = ["oldstyle", "diamond", "golem"]
+short_desc = "the golem"
+long_desc = "A huge diamond golem is standing guard here."
+description = "It looks quite strong."
+level = 46
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 1304
+keywords = ["oldstyle", "mage", "young"]
+short_desc = "a mage"
+long_desc = "A young mage wanders about, oblivious to all."
+description = """
+He seems to be contemplating life, love and the mysteries of the universe.
+Then again, he may just have a headache."""
+level = 20
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 1305
+keywords = ["oldstyle", "strick", "bartender"]
+short_desc = "Strick the bartender"
+long_desc = "Strick is here levitating drinks to his customers."
+description = """
+He looks rather harmless, but then again so does a sleeping dragon."""
+level = 49
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 1306
+keywords = ["oldstyle", "tatorious", "wizard"]
+short_desc = "Tatorious"
+long_desc = "Tatorious the wizard is here counting his earnings."
+description = "Tatorious winks at you mischievously."
+level = 49
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 1307
+keywords = ["oldstyle", "ezmerelda", "cook"]
+short_desc = "Ezmerelda"
+long_desc = "Ezmerelda the cook is here stirring a large pot of something."
+level = 39
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 1308
+keywords = ["oldstyle", "assistant", "mage"]
+short_desc = "The cook's assistant"
+long_desc = "The cook's assistant is here assisting the cook."
+level = 22
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 1309
+keywords = ["oldstyle", "prisoner"]
+short_desc = "The prisoner"
+long_desc = "A prisoner is chained to the wall here."
+description = """
+Though his clothes are all in rags, you can see that at one time they must
+have been fine garments. A metal muzzle has been fitted over the poor
+wretch's mouth, whether to keep him from screaming, or to silence his spell
+casting you cannot tell.
+
+He looks quite mad, no doubt he's been mistreated horribly."""
+level = 31
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 1310
+keywords = ["oldstyle", "jailor", "mage"]
+short_desc = "the Jailor"
+long_desc = "The Jailor is here enjoying a comfortable nap."
+description = "He looks rather dirty."
+level = 34
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 1311
+keywords = ["oldstyle", "broom"]
+short_desc = "a broom"
+long_desc = "A straw broom is here leaning against the wall."
+description = "The broom screams 'Take that you lout!'"
+level = 14
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 1312
+keywords = ["oldstyle", "lesser", "guardian", "hands"]
+short_desc = "a pair of disembodied hands"
+long_desc = "A pair of disembodied hands floats in the air here."
+description = "The hands twitch with anticipation of strangling someone."
+level = 17
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 1313
+keywords = ["oldstyle", "guardian", "greater", "eyes"]
+short_desc = "a pair of disembodied eyes"
+long_desc = "A pair of disembodied eyes floats here glaring at you."
+description = "The eyes smolder with hatred."
+level = 29
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 1314
+keywords = ["oldstyle", "mage", "visitor"]
+short_desc = "the mage"
+long_desc = "A visiting mage is here snoring away in peaceful slumber."
+description = "He looks quite sleepy."
+level = 24
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 1315
+keywords = ["oldstyle", "apprentice", "young"]
+short_desc = "a young apprentice magic user"
+long_desc = "A young apprentice magic user is here doing magical studies."
+description = "She looks quite intent on her studies."
+level = 13
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 1316
+keywords = ["oldstyle", "apprentice", "young"]
+short_desc = "a young apprentice"
+long_desc = "A young apprentice is here mumbling words of magic to himself."
+description = """
+He looks to be oblivious to all but the spell he is memorizing."""
+level = 14
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 1317
+keywords = ["oldstyle", "apprentice", "young"]
+short_desc = "a young apprentice"
+long_desc = "A young apprentice is sleeping here."
+description = "He seems to be dreaming."
+level = 14
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 1318
+keywords = ["oldstyle", "apprentice", "young"]
+short_desc = "A young apprentice"
+long_desc = "A young apprentice is here teasing a cornered kitten."
+description = "He looks like a mischievous youth."
+level = 14
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 1319
+keywords = ["oldstyle", "kitten"]
+short_desc = "a small kitten"
+long_desc = "A small kitten is here meowing in terror."
+description = """
+The little ball of fur looks very unhappy.  Singed fur and a few minor burns
+mark its mottled coat."""
+level = 1
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 1320
+keywords = ["oldstyle", "student"]
+short_desc = "a student"
+long_desc = "A student of spells is here looking quite bored"
+description = "The student yawns."
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 1321
+keywords = ["oldstyle", "instructor", "teacher", "mage"]
+short_desc = "an instructor of magic"
+long_desc = "The instructor screams at your interruption and attacks you."
+description = "He looks quite angry at your interruption."
+level = 28
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 1322
+keywords = ["oldstyle", "student"]
+short_desc = "a student of spells"
+long_desc = "A student of spells is here trying to master invisibility."
+description = """
+He blinks in and out of existence, trying to master the spell."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 1323
+keywords = ["oldstyle", "teacher", "mage"]
+short_desc = "a spell teacher"
+long_desc = "A spell teacher screams at your interruption and attacks."
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 1324
+keywords = ["oldstyle", "student"]
+short_desc = "a student of spells"
+long_desc = "A student of spells has fallen asleep at her desk here."
+description = "She looks to have collapsed from sheer boredom."
+level = 18
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 1325
+keywords = ["oldstyle", "wizard", "speaker", "mage"]
+short_desc = "a wizard"
+long_desc = "An old wizard is here making a speech"
+level = 35
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 258
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 1326
+keywords = ["oldstyle", "mage", "young"]
+short_desc = "a young mage"
+long_desc = "A young mage is here learning hand to hand combat."
+level = 18
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 1327
+keywords = ["oldstyle", "mistress", "battle"]
+short_desc = "the battle mistress"
+long_desc = "The battle mistress is here teaching the fine uses of a dagger."
+description = """
+She looks quite rugged. In fact, she more resembles a warrior than a magic
+user."""
+level = 34
+sex = "female"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 1328
+keywords = ["oldstyle", "mage", "teacher"]
+short_desc = "a spell teacher"
+long_desc = "A spell teacher is here relaxing."
+level = 30
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 1329
+keywords = ["oldstyle", "wizard"]
+short_desc = "an aged wizard"
+long_desc = "An aged wizard is sleeping here."
+level = 40
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 1330
+keywords = ["oldstyle", "scribe", "mage"]
+short_desc = "a scribe"
+long_desc = "A scribe is here working on some manuscripts."
+level = 28
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 1331
+keywords = ["oldstyle", "scribe", "mage"]
+short_desc = "a scribe"
+long_desc = "A scribe is here working diligently on some translations."
+description = """
+She's quite cute.  Too bad her only interest seems to be the words of
+lore she is translating."""
+level = 29
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 1332
+keywords = ["oldstyle", "master", "scribe"]
+short_desc = "the master scribe"
+long_desc = "The master scribe is here looking a little upset"
+description = """
+He seems to be so old, his skin has become nothing but a giant wrinkle.
+The master scribe screams 'How dare you interrupt my important work???'"""
+level = 43
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 1333
+keywords = ["oldstyle", "assistant", "scribe"]
+short_desc = "the scribe's assistant"
+long_desc = "The scribe's assistant is here folding parchments."
+level = 32
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 1334
+keywords = ["oldstyle", "master", "enchanter", "mage"]
+short_desc = "the Enchanter"
+long_desc = "The Enchanter is here placing a dweomer upon well made sword."
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 400
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 1335
+keywords = ["oldstyle", "sword", "dancing"]
+short_desc = "a dancing sword"
+long_desc = "A well crafted sword lies on the work table here."
+description = "It looks quite sharp."
+level = 19
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 1336
+keywords = ["oldstyle", "alchemist"]
+short_desc = "the Mad Alchemist"
+long_desc = "The Mad Alchemist babbles something incomprehensible and attacks."
+description = """
+He looks like he's been quaffing too many potions. His eyes dart around
+wildly, and he starts to drool.
+
+The Mad Alchemist throws back his head and cackles with insane glee!"""
+level = 48
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 1337
+keywords = ["oldstyle", "master", "summoner"]
+short_desc = "the master summoner"
+long_desc = "The master summoner is here holding gateways open to other planes."
+level = 44
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 360
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 1338
+keywords = ["oldstyle", "master", "charmer"]
+short_desc = "the master charmer"
+long_desc = "The master charmer utters the words, 'uuuzzldctz'."
+description = """
+The master charmer sizes you up, always looking for a new pet."""
+level = 45
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 400
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 1339
+keywords = ["oldstyle", "golem", "wooden"]
+short_desc = "a wooden golem"
+long_desc = "A wooden golem stands a silent vigil here, guarding the stairs."
+description = "He looks flammable."
+level = 31
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 1340
+keywords = ["oldstyle", "master", "binder"]
+short_desc = "the master spell binder"
+long_desc = "The master spell binder is here re-charging a blackened wand."
+description = "The master spell binder snarls at you and attacks."
+level = 46
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 400
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 1341
+keywords = ["oldstyle", "master", "maker"]
+short_desc = "the golem maker"
+long_desc = "The golem maker is here chiseling some stone."
+level = 42
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 1342
+keywords = ["oldstyle", "golem", "granite"]
+short_desc = "a granite golem"
+long_desc = "A granite golem stands here waiting to do its master's bidding."
+description = """
+It looks like a statue, until you see it shamble towards you."""
+level = 39
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 1343
+keywords = ["oldstyle", "golem", "bronze"]
+short_desc = "a bronze golem"
+long_desc = "A bronze golem stands here shining in the light."
+description = "He looks rather dim witted."
+level = 35
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 1344
+keywords = ["oldstyle", "golem", "flesh"]
+short_desc = "a flesh golem"
+long_desc = "A flesh golem stands guard here"
+description = """
+It looks to be made of a potpourri of different body parts; some don't even
+resemble anything human."""
+level = 23
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 1345
+keywords = ["oldstyle", "golem", "cloth"]
+short_desc = "a cloth golem"
+long_desc = "A cloth golem wanders around here."
+description = """
+It looks like a bunch of old rags, quite surprising it can actually walk."""
+level = 15
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 1346
+keywords = ["oldstyle", "golem", "adamantite"]
+short_desc = "an adamantite golem"
+long_desc = "An adamantite golem stands here looking very dangerous."
+description = """
+It seems to be forged of dark metal.  It looks strong and durable,
+but somewhat un-intelligent."""
+level = 49
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 1347
+keywords = ["oldstyle", "golem", "clay"]
+short_desc = "a clay golem"
+long_desc = "A clay golem stands guard here."
+level = 29
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 1348
+keywords = ["oldstyle", "master", "illusionist", "mage"]
+short_desc = "the master of illusions"
+long_desc = "An enormous multi-colored three-headed dragon growls at you."
+description = """
+The image of an ugly dragon flickers slightly, and where the dragon was
+now stands a small harmless looking old man."""
+level = 41
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 1349
+keywords = ["oldstyle", "necromancer", "master"]
+short_desc = "the Necromancer"
+long_desc = "The Necromancer is here raising undead servants"
+description = """
+Attired all in black, the Necromancer is tall and gangly, but still quite
+an imposing figure.  A dark cowl shrouds most of his face, but two blazing
+embers which serve as eyes can be seen through the shadow.
+The Necromancer shrieks some obscenities and orders his minions to attack."""
+level = 49
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 1350
+keywords = ["oldstyle", "skeleton", "undead"]
+short_desc = "an animated skeleton"
+long_desc = "An animated skeleton screams silently and attacks."
+description = "It feels no pain, and hacks at you ruthlessly."
+level = 30
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 1351
+keywords = ["oldstyle", "undead", "giant"]
+short_desc = "an undead giant"
+long_desc = "An undead giant lumbers towards you."
+level = 35
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 1352
+keywords = ["oldstyle", "witch", "hag"]
+short_desc = "an ugly witch"
+long_desc = "An ugly witch is here scrying out secrets."
+description = """
+She has no face at all, just blank skin, rather disturbing.  From about where
+her mouth should be, comes a disgusting giggling sound that makes your skin
+crawl with revulsion."""
+level = 39
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 1353
+keywords = ["oldstyle", "librarian", "mage"]
+short_desc = "the Librarian"
+long_desc = "The Librarian has fallen asleep at his desk here."
+description = "He looks like a rather peaceful old man."
+level = 46
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 400
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 1354
+keywords = ["oldstyle", "apprentice"]
+short_desc = "the master's apprentice"
+long_desc = "The master's apprentice leaps to halt your passage."
+description = """
+A powerful wizard in his own right, the apprentice of the master of balance
+has given up his station in the mage guild hierarchy in order to serve the
+great master in hopes of gleaning secrets one could never hope to uncover
+alone."""
+level = 47
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 1355
+keywords = ["oldstyle", "cat", "grey", "familiar"]
+short_desc = "a grey cat"
+long_desc = "A grey cat is lounging lazily here."
+description = """
+The grey cat cocks an ear towards you, sensing your scrutiny, then purrs
+contentedly.  It looks rather harmless, until you notice its very large claws."""
+level = 30
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["sneak", "dark_vision"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 1356
+keywords = ["oldstyle", "master", "guildmaster", "grey"]
+short_desc = "the master of Neutrality"
+long_desc = "The master of Neutrality stands here contemplating the balance of the universe."
+description = "He looks quite peaceful."
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 1357
+keywords = ["oldstyle", "apprentice", "black"]
+short_desc = "a black robed apprentice"
+long_desc = "A black robed apprentice jumps from the shadows and attacks."
+description = """
+She bears a wicked looking scar down the side of her face, though once she
+must have been beautiful, now the scar combined with what seems to be a
+permanent scowl make her looks quite fearsome."""
+level = 39
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis", "sneak"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 1358
+keywords = ["oldstyle", "cat", "black", "familiar"]
+short_desc = "a black cat"
+long_desc = "A black cat with its fur up hisses at you."
+description = """
+It looks both mean and dangerous.  Petting seems to be completely out of
+the question."""
+level = 31
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis", "sneak", "dark_vision"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 1359
+keywords = ["oldstyle", "master", "guildmaster", "black"]
+short_desc = "the master of the black robes"
+long_desc = "The master of the black robes is here plotting vile deeds."
+description = "The master glares at you."
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 1360
+keywords = ["oldstyle", "apprentice", "white"]
+short_desc = "a white robed apprentice"
+long_desc = "A white robed apprentice screams at your desecration of goodness."
+description = """
+He looks like a fanatic.
+The apprentice screams 'Thou art unworthy of this honor!'"""
+level = 39
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 1361
+keywords = ["oldstyle", "cat", "white", "familiar"]
+short_desc = "a white cat"
+long_desc = "A white cat is here preening its fur."
+description = """
+It seems to be nothing more than a large ball of fluff with claws."""
+level = 30
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis", "sneak", "dark_vision"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 1362
+keywords = ["oldstyle", "master", "guildmaster", "white"]
+short_desc = "The master of goodness"
+long_desc = "The master of goodness is here frowning at your intrusion."
+description = "He looks like a self-righteous bastard."
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 1363
+keywords = ["oldstyle", "cat", "calico", "familiar"]
+short_desc = "A calico cat"
+long_desc = "A large calico cat is here"
+description = """
+It looks incredibly large for a cat, no doubt a giant of its species.
+A beautiful jewel encrusted collar about its neck is its only adornment."""
+level = 50
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis", "sneak", "dark_vision"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 1364
+keywords = ["oldstyle", "guildmaster", "grand", "mistress"]
+short_desc = "The Grand Mistress"
+long_desc = "The Grand Mistress of Magic is sitting here."
+description = """
+She looks quite comfortable on her emerald throne. Amazingly young and
+pretty for one of such stature in the guild, no doubt she has kept her
+youthful appearance through the use of strong magics.
+The Grand Master pets her familiar and smiles at you in confidence."""
+level = 99
+sex = "female"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 50
+  size = 10
+  bonus = 4000
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 6
+  bonus = 17
+
+[[mobiles]]
+vnum = 1365
+keywords = ["oldstyle", "wizard"]
+short_desc = "a wizard"
+long_desc = "A wandering wizard is here mumbling to himself."
+level = 33
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "mage"]
+affected_by = ["detect_invis", "sneak"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+

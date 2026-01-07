@@ -1,0 +1,1379 @@
+[[objects]]
+vnum = 9500
+keywords = ["palace", "key"]
+short_desc = "the palace key of New Thalos"
+long_desc = "A large key bearing the crest of New Thalos lies here."
+item_type = "key"
+level = 0
+weight = 30
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9501
+keywords = ["city", "key"]
+short_desc = "the Key to the City of New Thalos"
+long_desc = "The heavy city key lies here in the dust"
+item_type = "key"
+level = 0
+weight = 30
+cost = 0
+wear_flags = ["take", "neck", "hold"]
+
+[[objects]]
+vnum = 9503
+keywords = ["morning", "star", "morningstar"]
+short_desc = "a morningstar"
+long_desc = "A small spiked metal ball connected to a rod by links of chain lies here."
+item_type = "weapon"
+level = 19
+weight = 50
+cost = 620
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+[[objects]]
+vnum = 9504
+keywords = ["awl", "pike", "awl-pike"]
+short_desc = "an awl-pike"
+long_desc = "An awl pike lies here."
+item_type = "weapon"
+level = 11
+weight = 30
+cost = 108
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 10
+
+[[objects]]
+vnum = 9505
+keywords = ["bardiche"]
+short_desc = "a bardiche"
+long_desc = "A bardiche lies here."
+item_type = "weapon"
+level = 15
+weight = 40
+cost = 270
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+[[objects]]
+vnum = 9506
+keywords = ["bec", "corbin"]
+short_desc = "a bec de corbine"
+long_desc = "A bec de corbine lies here."
+item_type = "weapon"
+level = 3
+weight = 30
+cost = 148
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 8
+
+[[objects]]
+vnum = 9507
+keywords = ["bill", "guisarme"]
+short_desc = "a bill-guisarme"
+long_desc = "A bill-guisarme lies here."
+item_type = "weapon"
+level = 3
+weight = 30
+cost = 148
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 8
+
+[[objects]]
+vnum = 9508
+keywords = ["fauchard"]
+short_desc = "a fauchard"
+long_desc = "A fauchard lies here."
+item_type = "weapon"
+level = 3
+weight = 30
+cost = 148
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 8
+
+[[objects]]
+vnum = 9509
+keywords = ["glaive"]
+short_desc = "a glaive"
+long_desc = "A glaive lies here."
+item_type = "weapon"
+level = 7
+weight = 30
+cost = 192
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 10
+
+[[objects]]
+vnum = 9510
+keywords = ["guisarme"]
+short_desc = "a guisarme"
+long_desc = "A guisarme lies here."
+item_type = "weapon"
+level = 5
+weight = 40
+cost = 169
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 9511
+keywords = ["sickle"]
+short_desc = "a sickle"
+long_desc = "A sickle lies here."
+item_type = "weapon"
+level = 0
+weight = 10
+cost = 210
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 4
+
+[[objects]]
+vnum = 9512
+keywords = ["bastard", "two", "sword"]
+short_desc = "a two-handed bastard sword"
+long_desc = "A two handed bastard sword lies here."
+item_type = "weapon"
+level = 25
+weight = 160
+cost = 1190
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+[[objects]]
+vnum = 9513
+keywords = ["scimitar"]
+short_desc = "a scimitar"
+long_desc = "A scimitar lies here."
+item_type = "weapon"
+level = 9
+weight = 100
+cost = 490
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 9
+
+[[objects]]
+vnum = 9514
+keywords = ["rapier"]
+short_desc = "a rapier"
+long_desc = "A rapier lies here."
+item_type = "weapon"
+level = 21
+weight = 100
+cost = 850
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 4
+
+[[objects]]
+vnum = 9515
+keywords = ["banded", "mail", "suit"]
+short_desc = "a suit of banded mail"
+long_desc = "A suit of banded mail lies here."
+item_type = "armor"
+level = 39
+weight = 250
+cost = 2900
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9516
+keywords = ["brigandine", "suit"]
+short_desc = "a suit of brigandine"
+long_desc = "A suit of brigandine lies here."
+item_type = "armor"
+level = 39
+weight = 200
+cost = 2900
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9517
+keywords = ["field", "plate", "suit"]
+short_desc = "a suit of field plate"
+long_desc = "A suit of field plate lies here."
+item_type = "armor"
+level = 49
+weight = 280
+cost = 3900
+wear_flags = ["take", "body"]
+extra_flags = ["invis", "magic", "bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9518
+keywords = ["ringmail", "ring", "mail", "suit"]
+short_desc = "a suit of ringmail"
+long_desc = "A suit of ringmail lies here."
+item_type = "armor"
+level = 0
+weight = 360
+cost = 176
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = -20
+
+[[objects]]
+vnum = 9519
+keywords = ["splintmail", "splint", "mail", "suit"]
+short_desc = "a suit of splintmail"
+long_desc = "A suit of splintmail armor lies here."
+item_type = "armor"
+level = 15
+weight = 450
+cost = 1280
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = -10
+
+[[objects]]
+vnum = 9520
+keywords = ["wooden", "shield"]
+short_desc = "a wooden shield"
+long_desc = "A wooden shield lies here"
+item_type = "armor"
+level = 0
+weight = 10
+cost = 250
+wear_flags = ["take", "shield"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9521
+keywords = ["splinted", "shield"]
+short_desc = "a splinted shield"
+long_desc = "A splinted shield lies here."
+item_type = "armor"
+level = 9
+weight = 80
+cost = 710
+wear_flags = ["take", "shield"]
+
+  [objects.armor]
+  ac_pierce = 4
+  ac_bash = 4
+  ac_slash = 4
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9522
+keywords = ["buckler", "shield"]
+short_desc = "a buckler"
+long_desc = "A buckler lies here."
+item_type = "armor"
+level = 0
+weight = 60
+cost = 108
+wear_flags = ["take", "shield"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9523
+keywords = ["jacket", "leather"]
+short_desc = "a leather jacket"
+long_desc = "A leather jacket lies here."
+item_type = "armor"
+level = 0
+weight = 60
+cost = 144
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9524
+keywords = ["sleeves", "leather"]
+short_desc = "a pair of leather sleeves"
+long_desc = "A pair of leather sleeves lies here."
+item_type = "armor"
+level = 0
+weight = 20
+cost = 72
+wear_flags = ["take", "arms"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9525
+keywords = ["cap", "leather"]
+short_desc = "a leather cap"
+long_desc = "A leather cap lies here"
+item_type = "armor"
+level = 0
+weight = 20
+cost = 72
+wear_flags = ["take", "head"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9526
+keywords = ["leather", "pants"]
+short_desc = "a pair of leather pants"
+long_desc = "A pair of leather pants lies here."
+item_type = "armor"
+level = 0
+weight = 20
+cost = 72
+wear_flags = ["take", "legs"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9527
+keywords = ["leather", "gloves"]
+short_desc = "a pair of leather gloves"
+long_desc = "A pair of leather gloves lies here."
+item_type = "armor"
+level = 0
+weight = 20
+cost = 72
+wear_flags = ["take", "hands"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9528
+keywords = ["padded", "leather", "boots"]
+short_desc = "a pair of padded leather boots"
+long_desc = "A pair of padded leather boots lies here."
+item_type = "armor"
+level = 0
+weight = 20
+cost = 72
+wear_flags = ["take", "feet"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9529
+keywords = ["studded", "leather", "jacket"]
+short_desc = "a studded leather jacket"
+long_desc = "A studded leather jacket lies here."
+item_type = "armor"
+level = 0
+weight = 100
+cost = 340
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9530
+keywords = ["studded", "leather", "sleeves"]
+short_desc = "a pair of studded leather sleeves"
+long_desc = "A pair of studded leather sleeves lies here."
+item_type = "armor"
+level = 0
+weight = 30
+cost = 168
+wear_flags = ["take", "arms"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9531
+keywords = ["studded", "leather", "pants"]
+short_desc = "a pair of studded leather pants"
+long_desc = "A pair of studded leather pants lies here."
+item_type = "armor"
+level = 0
+weight = 30
+cost = 168
+wear_flags = ["take", "legs"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9532
+keywords = ["studded", "leather", "gloves"]
+short_desc = "a pair of studded leather gloves"
+long_desc = "A pair of studded leather gloves lies here."
+item_type = "armor"
+level = 0
+weight = 30
+cost = 168
+wear_flags = ["take", "hands"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9533
+keywords = ["leather", "shield"]
+short_desc = "a leather shield"
+long_desc = "A leather shield lies here."
+item_type = "armor"
+level = 0
+weight = 30
+cost = 250
+wear_flags = ["take", "shield"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9534
+keywords = ["sack"]
+short_desc = "a sack"
+long_desc = "A sack lies here"
+item_type = "container"
+level = 0
+weight = 10
+cost = 12
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 9535
+keywords = ["oil", "lamp", "oillamp"]
+short_desc = "an oil lamp"
+long_desc = "An oil lamp lies here"
+item_type = "light"
+level = 0
+weight = 10
+cost = 50
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9536
+keywords = ["backpack", "back", "pack"]
+short_desc = "a backpack"
+long_desc = "A backpack lies here"
+item_type = "container"
+level = 0
+weight = 40
+cost = 50
+wear_flags = ["take", "about"]
+
+[[objects]]
+vnum = 9537
+keywords = ["basket"]
+short_desc = "a basket"
+long_desc = "A basket lies here."
+item_type = "container"
+level = 0
+weight = 40
+cost = 8
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9538
+keywords = ["belt", "pouch"]
+short_desc = "a belt pouch"
+long_desc = "A belt pouch lies here"
+item_type = "container"
+level = 0
+weight = 10
+cost = 27
+wear_flags = ["take", "waist"]
+
+[[objects]]
+vnum = 9539
+keywords = ["candle"]
+short_desc = "a candle"
+long_desc = "A candle lies here"
+item_type = "light"
+level = 0
+weight = 10
+cost = 4
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 9540
+keywords = ["cheese"]
+short_desc = "a hunk of cheese"
+long_desc = "A hunk of cheese lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 4
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9541
+keywords = ["bread"]
+short_desc = "a bread"
+long_desc = "A bread lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 6
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9542
+keywords = ["dry", "rations"]
+short_desc = "some dry rations"
+long_desc = "Some dry rations lie here."
+item_type = "food"
+level = 0
+weight = 20
+cost = 24
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9543
+keywords = ["iron", "rations"]
+short_desc = "some iron rations"
+long_desc = "A tin of iron rations lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 50
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9545
+keywords = ["nuts"]
+short_desc = "some nuts"
+long_desc = "Some nuts lies scattered on the ground."
+item_type = "food"
+level = 0
+weight = 10
+cost = 3
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9546
+keywords = ["belt"]
+short_desc = "a belt"
+long_desc = "A nicely made belt lies here."
+item_type = "clothing"
+level = 0
+weight = 20
+cost = 8
+wear_flags = ["take", "wrist"]
+
+[[objects]]
+vnum = 9547
+keywords = ["hiking", "boots"]
+short_desc = "a pair of hiking boots"
+long_desc = "A nicely made pair of boots lies here."
+item_type = "clothing"
+level = 0
+weight = 30
+cost = 12
+wear_flags = ["take", "feet"]
+
+[[objects]]
+vnum = 9548
+keywords = ["fur", "cloak"]
+short_desc = "a fur cloak"
+long_desc = "A nicely made fur cloak lies here."
+item_type = "clothing"
+level = 0
+weight = 20
+cost = 200
+wear_flags = ["take", "about"]
+
+[[objects]]
+vnum = 9549
+keywords = ["girdle"]
+short_desc = "a girdle"
+long_desc = "A nicely made girdle lies here."
+item_type = "clothing"
+level = 0
+weight = 10
+cost = 12
+wear_flags = ["take", "waist"]
+
+[[objects]]
+vnum = 9550
+keywords = ["hose"]
+short_desc = "a pair of hose"
+long_desc = "A nicely made pair of hose lie here."
+item_type = "clothing"
+level = 0
+weight = 10
+cost = 8
+wear_flags = ["take", "legs"]
+
+[[objects]]
+vnum = 9551
+keywords = ["common", "robe"]
+short_desc = "a common robe"
+long_desc = "A nicely made robe of common cloth lies here."
+item_type = "clothing"
+level = 0
+weight = 20
+cost = 36
+wear_flags = ["take", "body"]
+
+[[objects]]
+vnum = 9552
+keywords = ["embroidered", "robe"]
+short_desc = "an embroidered robe"
+long_desc = "A nicely made robe of embroidered cloth lies here."
+item_type = "clothing"
+level = 0
+weight = 20
+cost = 200
+wear_flags = ["take", "body", "about"]
+
+[[objects]]
+vnum = 9553
+keywords = ["sandles"]
+short_desc = "a pair of sandles"
+long_desc = "A nicely made pair of sandles lies here."
+item_type = "clothing"
+level = 0
+weight = 10
+cost = 20
+wear_flags = ["take", "feet"]
+
+[[objects]]
+vnum = 9554
+keywords = ["sash"]
+short_desc = "a sash"
+long_desc = "A nicely made sash lies here."
+item_type = "clothing"
+level = 0
+weight = 10
+cost = 8
+wear_flags = ["take", "waist"]
+
+[[objects]]
+vnum = 9555
+keywords = ["silk", "jacket"]
+short_desc = "a silk jacket"
+long_desc = "A nicely made silk jacket lies here."
+item_type = "clothing"
+level = 0
+weight = 10
+cost = 320
+wear_flags = ["take", "about"]
+
+[[objects]]
+vnum = 9556
+keywords = ["egg"]
+short_desc = "an egg"
+long_desc = "An egg lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 4
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9557
+keywords = ["carrot"]
+short_desc = "a carrot"
+long_desc = "A carrot lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 6
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9558
+keywords = ["tomato"]
+short_desc = "a tomato"
+long_desc = "A tomato lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 12
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9559
+keywords = ["fig"]
+short_desc = "a fig"
+long_desc = "A fig lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 3
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9560
+keywords = ["dates"]
+short_desc = "some dates"
+long_desc = "A bunch of dates lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 6
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9561
+keywords = ["leg", "lamb"]
+short_desc = "a leg of lamb"
+long_desc = "A leg of lamb lies here."
+item_type = "food"
+level = 0
+weight = 20
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9562
+keywords = ["side", "beef"]
+short_desc = "a side of beef"
+long_desc = "A side of beef lies here."
+item_type = "food"
+level = 0
+weight = 50
+cost = 20
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9563
+keywords = ["whole", "chicken"]
+short_desc = "a whole chicken"
+long_desc = "A whole skinned chicken lies here."
+item_type = "food"
+level = 0
+weight = 30
+cost = 12
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9564
+keywords = ["herring", "salted"]
+short_desc = "a salted herring"
+long_desc = "A salted herring lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 8
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9565
+keywords = ["mussel"]
+short_desc = "a mussel"
+long_desc = "A mussel lies here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 4
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9567
+keywords = ["liquor", "glass", "blue", "oasis"]
+short_desc = "a glass of blue oasis"
+long_desc = "A glass of blue alcohol rests here."
+item_type = "drink"
+level = 0
+weight = 10
+cost = 10
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9568
+keywords = ["wine", "glass"]
+short_desc = "a glass of wine"
+long_desc = "A glass rests here."
+item_type = "drink"
+level = 0
+weight = 10
+cost = 13
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9569
+keywords = ["bottle", "grog"]
+short_desc = "a bottle of grog"
+long_desc = "A bottle lies here."
+item_type = "drink"
+level = 0
+weight = 10
+cost = 8
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9570
+keywords = ["glowing", "vial", "blue"]
+short_desc = "a glowing blue vial"
+long_desc = "A glowing blue vial lies here."
+item_type = "potion"
+level = 1
+weight = 10
+cost = 270
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+[[objects]]
+vnum = 9571
+keywords = ["potion", "green"]
+short_desc = "a deep-green potion"
+long_desc = "A deep-green potion lies here."
+item_type = "potion"
+level = 23
+weight = 10
+cost = 950
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9572
+keywords = ["potion", "crystal", "clear"]
+short_desc = "a crystal clear potion"
+long_desc = "A crystal clear potion lies here."
+item_type = "potion"
+level = 0
+weight = 10
+cost = 200
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9573
+keywords = ["white", "potion"]
+short_desc = "an off white potion"
+long_desc = "An off white potion lies here."
+item_type = "potion"
+level = 21
+weight = 10
+cost = 820
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9574
+keywords = ["potion", "dark", "blue"]
+short_desc = "a dark blue potion"
+long_desc = "A dark blue potion lies here."
+item_type = "potion"
+level = 0
+weight = 10
+cost = 200
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9575
+keywords = ["beer", "bottle", "scorpion", "flaming"]
+short_desc = "a flaming scorpion"
+long_desc = "A bottle of strong beer lies here."
+item_type = "drink"
+level = 0
+weight = 10
+cost = 6
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9576
+keywords = ["barrel", "beer"]
+short_desc = "a barrel of beer"
+long_desc = "A barrel of beer lies here."
+item_type = "drink"
+level = 0
+weight = 80
+cost = 120
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9577
+keywords = ["whisky", "shot"]
+short_desc = "a shot"
+long_desc = "A shot of strong liquor lies here."
+item_type = "drink"
+level = 0
+weight = 10
+cost = 12
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9578
+keywords = ["scroll", "recall"]
+short_desc = "a scroll of recall"
+long_desc = "A scroll of recall lies here."
+item_type = "scroll"
+level = 33
+weight = 40
+cost = 2700
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9579
+keywords = ["wand", "call", "lightning"]
+short_desc = "a grey-silver wand"
+long_desc = "A grey-silver wand lies here."
+item_type = "wand"
+level = 25
+weight = 10
+cost = 2800
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+[[objects]]
+vnum = 9580
+keywords = ["wand", "detect", "invis"]
+short_desc = "a wand of glinting yellow"
+long_desc = "A wand of glinting yellow lies here."
+item_type = "wand"
+level = 9
+weight = 10
+cost = 580
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9581
+keywords = ["wand", "armor"]
+short_desc = "a wand of oak"
+long_desc = "A wand of oak lies here."
+item_type = "wand"
+level = 5
+weight = 10
+cost = 410
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9582
+keywords = ["wand", "faerie", "fire"]
+short_desc = "a pink wand"
+long_desc = "A pink wand lies here"
+item_type = "wand"
+level = 3
+weight = 10
+cost = 250
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9583
+keywords = ["sewing", "shears"]
+short_desc = "a pair of sewing shears"
+long_desc = "A pair of sewing shears lies here."
+item_type = "weapon"
+level = 9
+weight = 20
+cost = 360
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 9584
+keywords = ["meat", "cleaver"]
+short_desc = "a meat cleaver"
+long_desc = "A meat cleaver lies here"
+item_type = "weapon"
+level = 0
+weight = 50
+cost = 190
+wear_flags = ["take", "wield"]
+extra_flags = ["anti_evil", "anti_neutral"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 5
+
+[[objects]]
+vnum = 9585
+keywords = ["fountain", "pen"]
+short_desc = "a fountain pen"
+long_desc = "A fountain pen lies here."
+item_type = "weapon"
+level = 21
+weight = 10
+cost = 640
+wear_flags = ["take", "wield"]
+extra_flags = ["hum"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 4
+
+[[objects]]
+vnum = 9586
+keywords = ["sledge", "hammer"]
+short_desc = "a sledge hammer"
+long_desc = "A sledge hammer lies here."
+item_type = "weapon"
+level = 19
+weight = 240
+cost = 660
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 7
+
+[[objects]]
+vnum = 9587
+keywords = ["horse", "shoe"]
+short_desc = "a horse shoe"
+long_desc = "A horse shoe lies here."
+item_type = "armor"
+level = 9
+weight = 20
+cost = 300
+wear_flags = ["take", "neck", "hold"]
+extra_flags = ["hum", "magic"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 9588
+keywords = ["saddle"]
+short_desc = "a saddle"
+long_desc = "A saddle lies here."
+item_type = "furniture"
+level = 0
+weight = 40
+cost = 600
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 9589
+keywords = ["crop", "riding"]
+short_desc = "a riding crop"
+long_desc = "A riding crop lies here."
+item_type = "weapon"
+level = 0
+weight = 10
+cost = 105
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 4
+
+[[objects]]
+vnum = 9590
+keywords = ["chessboard"]
+short_desc = "a chessboard"
+long_desc = "A heavy marble chessboard lies here."
+item_type = "weapon"
+level = 0
+weight = 100
+cost = 380
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 5
+
+[[objects]]
+vnum = 9591
+keywords = ["sesame", "seed"]
+short_desc = "a sesame seed"
+long_desc = "A sesame seed lies here."
+item_type = "key"
+level = 0
+weight = 30
+cost = 1
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 9592
+keywords = ["something"]
+short_desc = "something"
+long_desc = "Something lies here."
+item_type = "weapon"
+level = 13
+weight = 0
+cost = 920
+wear_flags = ["wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+[[objects]]
+vnum = 9593
+keywords = ["key"]
+short_desc = "the jail key"
+long_desc = "The key to the jail lies here."
+item_type = "key"
+level = 0
+weight = 30
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 9594
+keywords = ["key"]
+short_desc = "the dungeon key"
+long_desc = "The dungeon key lies here."
+item_type = "key"
+level = 0
+weight = 30
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 9595
+keywords = ["shirt", "tie", "dye"]
+short_desc = "a tie-dye shirt"
+long_desc = "A multi-colored shirt lies here."
+item_type = "armor"
+level = 39
+weight = 10
+cost = 2900
+wear_flags = ["take", "body"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9596
+keywords = ["bugle", "boy", "jeans"]
+short_desc = "a pair of Bugle Boy jeans"
+long_desc = "A pair of jeans lie here."
+item_type = "armor"
+level = 19
+weight = 10
+cost = 730
+wear_flags = ["take", "legs"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+[[objects]]
+vnum = 9597
+keywords = ["sneakers", "reeboks", "reebok", "pumps"]
+short_desc = "a pair of Reebok Pumps"
+long_desc = "A pair of nifty sneakers lie here."
+item_type = "armor"
+level = 13
+weight = 10
+cost = 770
+wear_flags = ["take", "feet"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 10
+
+[[objects]]
+vnum = 9598
+keywords = ["daemon", "claw"]
+short_desc = "the Daemon Claw"
+long_desc = "A glove with blades mounted on it lies here"
+item_type = "weapon"
+level = 27
+weight = 200
+cost = 1520
+wear_flags = ["take", "wield"]
+extra_flags = ["hum"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+[[objects]]
+vnum = 9599
+keywords = ["wolverine", "claw"]
+short_desc = "the wolverine claw"
+long_desc = "A claw from some animal lies here."
+item_type = "weapon"
+level = 29
+weight = 200
+cost = 1680
+wear_flags = ["take", "wield"]
+extra_flags = ["hum"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 5
+
+[[objects]]
+vnum = 9600
+keywords = ["halberd"]
+short_desc = "the halberd"
+long_desc = "A mighty halberd lies against the wall."
+item_type = "weapon"
+level = 43
+weight = 160
+cost = 1240
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "bless"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 9601
+keywords = ["fountain", "water"]
+short_desc = "a fountain"
+long_desc = "A large fountain is here gurgling out an endless stream of water."
+item_type = "fountain"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 9602
+keywords = ["pearl"]
+short_desc = "a beautiful white pearl"
+long_desc = "A well-formed pearl sits upon the ground, looking for an oyster."
+item_type = "warp_stone"
+level = 0
+weight = 10
+cost = 1000
+wear_flags = ["take", "hold"]
+extra_flags = ["melt_drop"]
+

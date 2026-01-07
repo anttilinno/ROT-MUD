@@ -1,0 +1,1551 @@
+# Spell help entries
+
+# === Damage Spells ===
+
+[[help]]
+keywords = ["magic missile"]
+syntax = "cast 'magic missile' <target>"
+description = """
+The simplest offensive spell, magic missile creates a bolt of magical
+energy that unerringly strikes the target.
+
+Damage: 1d4 + level
+This spell never misses and cannot be resisted.
+
+Class availability:
+  Mage: Level 1
+"""
+see_also = ["fireball", "lightning bolt", "cast"]
+
+[[help]]
+keywords = ["fireball"]
+syntax = "cast 'fireball' <target>"
+description = """
+A powerful fire spell that creates an explosion of flames around
+the target, dealing significant fire damage.
+
+Damage: 3d6 + level*2
+Damage type: Fire (can be resisted)
+
+Class availability:
+  Mage: Level 22
+"""
+see_also = ["magic missile", "lightning bolt", "cast"]
+
+[[help]]
+keywords = ["lightning bolt"]
+syntax = "cast 'lightning bolt' <target>"
+description = """
+Calls down a bolt of lightning to strike your enemy.
+
+Damage: 2d6 + level
+Damage type: Lightning (can be resisted)
+
+Class availability:
+  Mage: Level 13
+  Cleric: Level 23
+"""
+see_also = ["magic missile", "fireball", "cast"]
+
+# === Healing Spells ===
+
+[[help]]
+keywords = ["cure light"]
+syntax = "cast 'cure light' [target]"
+description = """
+A minor healing spell that restores a small amount of health.
+
+Healing: 1d8 + level/3
+
+Class availability:
+  Cleric: Level 1
+"""
+see_also = ["cure serious", "cure critical", "heal", "cast"]
+
+[[help]]
+keywords = ["cure serious"]
+syntax = "cast 'cure serious' [target]"
+description = """
+A moderate healing spell that restores health.
+
+Healing: 2d8 + level/2
+
+Class availability:
+  Cleric: Level 7
+"""
+see_also = ["cure light", "cure critical", "heal", "cast"]
+
+[[help]]
+keywords = ["cure critical"]
+syntax = "cast 'cure critical' [target]"
+description = """
+A powerful healing spell that restores significant health.
+
+Healing: 3d8 + level
+
+Class availability:
+  Cleric: Level 13
+"""
+see_also = ["cure light", "cure serious", "heal", "cast"]
+
+[[help]]
+keywords = ["heal"]
+syntax = "cast 'heal' [target]"
+description = """
+The most powerful healing spell, restoring a large amount of health.
+
+Healing: 100 + level
+
+Class availability:
+  Cleric: Level 21
+"""
+see_also = ["cure light", "cure serious", "cure critical", "cast"]
+
+[[help]]
+keywords = ["refresh"]
+syntax = "cast 'refresh' [target]"
+description = """
+Restores movement points, allowing continued travel.
+
+Movement restored: level
+
+Class availability:
+  Mage: Level 8
+  Cleric: Level 5
+"""
+see_also = ["heal", "cast"]
+
+# === Buff Spells ===
+
+[[help]]
+keywords = ["armor"]
+syntax = "cast 'armor' [target]"
+description = """
+Creates a magical field around the target, improving their armor class.
+
+Effect: -20 AC
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 7
+  Cleric: Level 1
+"""
+see_also = ["sanctuary", "bless", "cast"]
+
+[[help]]
+keywords = ["bless"]
+syntax = "cast 'bless' [target]"
+description = """
+Calls upon divine favor to improve the target's combat abilities.
+
+Effects:
+  +1 to +4 hitroll (based on level)
+  Improved saving throws
+
+Duration: level/2 + 6 ticks
+
+Class availability:
+  Cleric: Level 5
+"""
+see_also = ["armor", "sanctuary", "cast"]
+
+[[help]]
+keywords = ["sanctuary"]
+syntax = "cast 'sanctuary' [target]"
+description = """
+Surrounds the target with a white aura that halves all damage received.
+
+Effect: 50% damage reduction
+Duration: level/6 + 10 ticks
+
+Class availability:
+  Cleric: Level 15
+"""
+see_also = ["armor", "bless", "cast"]
+
+[[help]]
+keywords = ["haste"]
+syntax = "cast 'haste' [target]"
+description = """
+Speeds up the target, granting additional attacks and improved dexterity.
+
+Effects:
+  Haste flag (extra attack)
+  +1 to +3 DEX (based on level)
+
+Duration: level/2 + 8 ticks
+
+Cannot be cast on someone who is slowed.
+
+Class availability:
+  Mage: Level 21
+"""
+see_also = ["slow", "giant strength", "cast"]
+
+[[help]]
+keywords = ["giant strength"]
+syntax = "cast 'giant strength' [target]"
+description = """
+Imbues the target with supernatural strength.
+
+Effect: +1 to +3 STR (based on level)
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 11
+"""
+see_also = ["haste", "bless", "cast"]
+
+[[help]]
+keywords = ["detect invis", "detect invisible"]
+syntax = "cast 'detect invis'"
+description = """
+Allows the caster to see invisible creatures and objects.
+
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 3
+  Cleric: Level 8
+"""
+see_also = ["invisibility", "cast"]
+
+[[help]]
+keywords = ["invisibility", "invis"]
+syntax = "cast 'invisibility' [target]"
+description = """
+Renders the target invisible to normal sight.
+
+Duration: level + 12 ticks
+
+Cannot be cast while fighting - combat disrupts the spell.
+The effect ends when the target attacks or casts an offensive spell.
+
+Class availability:
+  Mage: Level 5
+"""
+see_also = ["detect invis", "cast"]
+
+# === Debuff Spells ===
+
+[[help]]
+keywords = ["blindness", "blind"]
+syntax = "cast 'blindness' <target>"
+description = """
+Strikes the target blind, severely hampering their combat ability.
+
+Effects:
+  Blind flag (cannot see)
+  -4 hitroll
+
+Duration: 1 + level/8 ticks
+Save: Reduces chance of success
+
+Class availability:
+  Mage: Level 12
+  Cleric: Level 8
+"""
+see_also = ["curse", "poison", "cast"]
+
+[[help]]
+keywords = ["curse"]
+syntax = "cast 'curse' <target>"
+description = """
+Places a dark curse on the target, weakening their abilities.
+
+Effects:
+  Curse flag
+  Reduced hitroll
+  Worse saving throws
+
+Duration: 2 + level/8 ticks
+Save: Reduces chance of success
+
+Class availability:
+  Mage: Level 18
+  Cleric: Level 18
+"""
+see_also = ["blindness", "poison", "cast"]
+
+[[help]]
+keywords = ["poison"]
+syntax = "cast 'poison' <target>"
+description = """
+Poisons the target, dealing damage over time and reducing strength.
+
+Effects:
+  Poison flag (periodic damage)
+  -2 STR
+
+Duration: level/2 ticks
+Save: Reduces chance of success
+
+Class availability:
+  Mage: Level 17
+  Cleric: Level 12
+"""
+see_also = ["blindness", "curse", "cast"]
+
+[[help]]
+keywords = ["slow"]
+syntax = "cast 'slow' <target>"
+description = """
+Slows the target, reducing their attack speed and dexterity.
+
+Effects:
+  Slow flag (fewer attacks)
+  -1 to -3 DEX (based on level)
+
+Duration: level/2 + 8 ticks
+Save: Reduces chance of success
+
+Cannot be cast on someone who is hasted.
+
+Class availability:
+  Mage: Level 23
+  Cleric: Level 30
+"""
+see_also = ["haste", "curse", "cast"]
+
+[[help]]
+keywords = ["sleep"]
+syntax = "cast 'sleep' <target>"
+description = """
+Puts the target into a magical slumber.
+
+Effect: Target falls asleep and cannot act
+Duration: 4 + level/10 ticks
+Save: Reduces chance of success
+
+Higher level creatures are harder to put to sleep.
+The spell fails against targets more than 4 levels above the caster.
+
+Class availability:
+  Mage: Level 10
+"""
+see_also = ["blindness", "slow", "cast"]
+
+# === Cure Spells ===
+
+[[help]]
+keywords = ["cure blindness"]
+syntax = "cast 'cure blindness' [target]"
+description = """
+Removes magical blindness from the target.
+
+This spell cures blindness caused by the 'blindness' spell
+or other magical effects.
+
+Class availability:
+  Cleric: Level 6
+"""
+see_also = ["blindness", "cure poison", "remove curse"]
+
+[[help]]
+keywords = ["cure poison"]
+syntax = "cast 'cure poison' [target]"
+description = """
+Removes poison from the target.
+
+Cures the poison affliction, stopping the damage over time
+and restoring lost strength.
+
+Class availability:
+  Cleric: Level 14
+"""
+see_also = ["poison", "cure blindness", "remove curse"]
+
+[[help]]
+keywords = ["remove curse"]
+syntax = "cast 'remove curse' [target]"
+description = """
+Removes a curse from the target.
+
+Lifts the curse affliction and its negative effects on
+combat and saving throws.
+
+Class availability:
+  Cleric: Level 18
+"""
+see_also = ["curse", "cure blindness", "cure poison"]
+
+# === Detection Spells ===
+
+[[help]]
+keywords = ["identify"]
+syntax = "cast 'identify' <object>"
+description = """
+Reveals the magical properties and statistics of an item.
+
+This spell shows:
+  - Item type and level
+  - Weapon damage or armor class
+  - Magical affects and bonuses
+  - Weight and value
+
+This is the caster's alternative to the 'lore' skill.
+
+Mana cost: 12
+
+Class availability:
+  Mage: Level 15
+  Cleric: Level 15
+  Ranger: Level 30
+  Druid: Level 30
+"""
+see_also = ["lore", "detect magic"]
+
+[[help]]
+keywords = ["detect evil"]
+syntax = "cast 'detect evil'"
+description = """
+Allows the caster to see evil creatures with a red aura.
+
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 11
+  Cleric: Level 4
+"""
+see_also = ["detect good", "detect magic", "detect hidden"]
+
+[[help]]
+keywords = ["detect good"]
+syntax = "cast 'detect good'"
+description = """
+Allows the caster to see good creatures with a golden aura.
+
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 11
+  Cleric: Level 4
+"""
+see_also = ["detect evil", "detect magic", "detect hidden"]
+
+[[help]]
+keywords = ["detect hidden"]
+syntax = "cast 'detect hidden'"
+description = """
+Allows the caster to see hidden creatures and objects.
+
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 15
+  Cleric: Level 11
+"""
+see_also = ["detect invis", "detect evil", "detect magic"]
+
+[[help]]
+keywords = ["detect magic"]
+syntax = "cast 'detect magic'"
+description = """
+Allows the caster to see magical auras on items and creatures.
+
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 2
+  Cleric: Level 6
+"""
+see_also = ["detect evil", "detect good", "detect hidden"]
+
+[[help]]
+keywords = ["infravision"]
+syntax = "cast 'infravision' [target]"
+description = """
+Grants the ability to see in the dark using heat vision.
+
+Duration: 2*level + 12 ticks
+
+Class availability:
+  Mage: Level 9
+  Cleric: Level 13
+"""
+see_also = ["detect hidden", "detect invis"]
+
+# === Movement/Utility Spells ===
+
+[[help]]
+keywords = ["fly"]
+syntax = "cast 'fly' [target]"
+description = """
+Allows the target to fly, avoiding ground-based hazards
+and allowing travel over water or impassable terrain.
+
+Duration: level + 12 ticks
+
+Flying creatures cannot be tripped.
+
+Class availability:
+  Mage: Level 10
+  Cleric: Level 18
+"""
+see_also = ["pass door"]
+
+[[help]]
+keywords = ["pass door"]
+syntax = "cast 'pass door'"
+description = """
+Allows the caster to pass through closed doors.
+
+Duration: level/4 + 8 ticks
+
+Class availability:
+  Mage: Level 24
+  Cleric: Level 32
+"""
+see_also = ["fly"]
+
+[[help]]
+keywords = ["word of recall"]
+syntax = "cast 'word of recall'"
+description = """
+Instantly teleports the caster back to the temple.
+
+Unlike the 'recall' command, this uses mana instead of
+movement points.
+
+Class availability:
+  Mage: Level 32
+  Cleric: Level 28
+"""
+see_also = ["recall"]
+
+# === Defensive Buff Spells ===
+
+[[help]]
+keywords = ["stone skin"]
+syntax = "cast 'stone skin'"
+description = """
+Hardens the caster's skin to the consistency of stone,
+greatly improving armor class.
+
+Effect: -40 AC
+Duration: level + 12 ticks
+
+Class availability:
+  Mage: Level 25
+"""
+see_also = ["armor", "shield", "sanctuary"]
+
+[[help]]
+keywords = ["shield"]
+syntax = "cast 'shield'"
+description = """
+Creates a magical force shield around the caster.
+
+Effect: -20 AC
+Duration: level/2 + 8 ticks
+
+Class availability:
+  Mage: Level 20
+  Cleric: Level 35
+"""
+see_also = ["armor", "stone skin", "sanctuary"]
+
+[[help]]
+keywords = ["protection evil", "protection from evil"]
+syntax = "cast 'protection evil'"
+description = """
+Protects the caster from evil creatures.
+
+Effects:
+  Protection flag vs evil
+  Improved saving throws
+
+Duration: level + 12 ticks
+
+Cannot be combined with protection from good.
+
+Class availability:
+  Cleric: Level 9
+"""
+see_also = ["protection good", "sanctuary"]
+
+[[help]]
+keywords = ["protection good", "protection from good"]
+syntax = "cast 'protection good'"
+description = """
+Protects the caster from good creatures.
+
+Effects:
+  Protection flag vs good
+  Improved saving throws
+
+Duration: level + 12 ticks
+
+Cannot be combined with protection from evil.
+
+Class availability:
+  Cleric: Level 9
+"""
+see_also = ["protection evil", "sanctuary"]
+
+# === Other Debuff Spells ===
+
+[[help]]
+keywords = ["faerie fire"]
+syntax = "cast 'faerie fire' <target>"
+description = """
+Surrounds the target with a pink glow, making them easier to hit.
+
+Effect: Worse AC (2*level penalty)
+Duration: level + 12 ticks
+
+The glow makes the target visible even if invisible.
+
+Class availability:
+  Mage: Level 4
+  Cleric: Level 3
+"""
+see_also = ["blindness", "curse"]
+
+# === Utility Spells ===
+
+[[help]]
+keywords = ["dispel magic"]
+syntax = "cast 'dispel magic' <target>"
+description = """
+Attempts to remove magical effects from the target.
+
+Each active spell on the target has a chance to be dispelled.
+Success depends on the caster's level vs the spell's level.
+
+Class availability:
+  Mage: Level 16
+  Cleric: Level 24
+"""
+see_also = ["remove curse", "cure blindness"]
+
+[[help]]
+keywords = ["calm"]
+syntax = "cast 'calm' <target>"
+description = """
+Calms the target, ending combat and reducing their aggression.
+
+Effects:
+  Stops fighting
+  -5 hitroll and damroll
+  Calm flag (will not auto-attack)
+
+Duration: level/4 + 4 ticks
+
+Class availability:
+  Cleric: Level 16
+"""
+see_also = ["sleep"]
+
+[[help]]
+keywords = ["frenzy"]
+syntax = "cast 'frenzy' [target]"
+description = """
+Drives the target into a battle frenzy, boosting combat abilities.
+
+Effects:
+  +level/6 hitroll
+  +level/6 damroll
+  Worse AC (+level penalty)
+
+Duration: level/3 + 12 ticks
+
+Cannot be combined with berserk.
+
+Class availability:
+  Cleric: Level 24
+"""
+see_also = ["haste", "giant strength", "bless"]
+
+[[help]]
+keywords = ["holy word"]
+syntax = "cast 'holy word'"
+description = """
+The ultimate prayer of the righteous, holy word calls upon divine
+power to smite all evil creatures in the room.
+
+Effects on evil creatures:
+  Massive holy damage
+  Curse and blindness effects
+  May instantly slay weak evil creatures
+
+Good-aligned casters receive bonus damage.
+Has no effect on good-aligned creatures.
+
+Mana cost: 200
+
+Class availability:
+  Cleric: Level 36
+"""
+see_also = ["flamestrike", "bless", "sanctuary"]
+
+[[help]]
+keywords = ["unholy word"]
+syntax = "cast 'unholy word'"
+description = """
+The dark counterpart to holy word, unholy word calls upon
+infernal power to smite all good creatures in the room.
+
+Effects on good creatures:
+  Massive unholy damage
+  Curse and blindness effects
+  May instantly slay weak good creatures
+
+Evil-aligned casters receive bonus damage.
+Has no effect on evil-aligned creatures.
+
+Mana cost: 200
+
+Class availability:
+  Cleric: Level 36
+"""
+see_also = ["holy word", "curse"]
+
+[[help]]
+keywords = ["flamestrike"]
+syntax = "cast 'flamestrike' <target>"
+description = """
+Calls down a pillar of holy fire to strike your enemy.
+
+Damage: 6d8 + level
+Damage type: Fire/Holy (partially resisted by fire resistance)
+
+Class availability:
+  Cleric: Level 20
+"""
+see_also = ["holy word", "cause critical", "cast"]
+
+[[help]]
+keywords = ["cause light", "cause light wounds"]
+syntax = "cast 'cause light' <target>"
+description = """
+Inflicts minor wounds on the target through divine power.
+
+Damage: 1d8 + level/3
+
+Class availability:
+  Cleric: Level 1
+"""
+see_also = ["cause serious", "cause critical", "cure light"]
+
+[[help]]
+keywords = ["cause serious", "cause serious wounds"]
+syntax = "cast 'cause serious' <target>"
+description = """
+Inflicts moderate wounds on the target through divine power.
+
+Damage: 2d8 + level/2
+
+Class availability:
+  Cleric: Level 7
+"""
+see_also = ["cause light", "cause critical", "cure serious"]
+
+[[help]]
+keywords = ["cause critical", "cause critical wounds"]
+syntax = "cast 'cause critical' <target>"
+description = """
+Inflicts severe wounds on the target through divine power.
+
+Damage: 3d8 + level
+
+Class availability:
+  Cleric: Level 13
+"""
+see_also = ["cause light", "cause serious", "flamestrike", "cure critical"]
+
+# === Additional Damage Spells ===
+
+[[help]]
+keywords = ["acid blast"]
+syntax = "cast 'acid blast' <target>"
+description = """
+Hurls a stream of corrosive acid at the target.
+
+Damage: High
+Damage type: Acid
+
+Class availability:
+  Mage: Level 55
+  Druid: Level 45
+"""
+see_also = ["fireball", "lightning bolt"]
+
+[[help]]
+keywords = ["burning hands"]
+syntax = "cast 'burning hands' <target>"
+description = """
+Jets of flame shoot from your fingertips to burn your enemy.
+
+Damage: Low-Medium
+Damage type: Fire
+
+Class availability:
+  Mage: Level 13
+  Druid: Level 23
+"""
+see_also = ["fireball", "chill touch"]
+
+[[help]]
+keywords = ["call lightning"]
+syntax = "cast 'call lightning' <target>"
+description = """
+Calls down a bolt of lightning from the sky to strike your foe.
+
+Can only be cast outdoors. More powerful during storms.
+
+Damage: Medium-High
+Damage type: Lightning
+
+Class availability:
+  Cleric: Level 36
+  Ranger: Level 30
+  Druid: Level 48
+"""
+see_also = ["lightning bolt", "control weather"]
+
+[[help]]
+keywords = ["chain lightning"]
+syntax = "cast 'chain lightning' <target>"
+description = """
+A powerful lightning bolt that can arc to nearby enemies.
+
+Damage: High (decreases with each jump)
+Damage type: Lightning
+
+Class availability:
+  Mage: Level 66
+"""
+see_also = ["lightning bolt", "fireball"]
+
+[[help]]
+keywords = ["chill touch"]
+syntax = "cast 'chill touch' <target>"
+description = """
+Your icy touch drains warmth and strength from the target.
+
+Damage: Low-Medium
+Damage type: Cold
+Also reduces target's strength temporarily.
+
+Class availability:
+  Mage: Level 12
+  Druid: Level 22
+  Vampire: Level 40
+"""
+see_also = ["burning hands", "shocking grasp"]
+
+[[help]]
+keywords = ["colour spray", "color spray"]
+syntax = "cast 'colour spray' <target>"
+description = """
+A dazzling spray of colors blinds and damages the target.
+
+Damage: Medium
+May cause blindness.
+
+Class availability:
+  Mage: Level 32
+  Druid: Level 20
+"""
+see_also = ["blindness", "burning hands"]
+
+[[help]]
+keywords = ["demonfire"]
+syntax = "cast 'demonfire' <target>"
+description = """
+Calls upon dark powers to torment your enemy with hellfire.
+
+Damage: High
+Damage type: Negative/Fire
+Only usable by evil-aligned casters.
+
+Class availability:
+  Cleric: Level 60
+  Vampire: Level 40
+"""
+see_also = ["flamestrike", "holy word"]
+
+[[help]]
+keywords = ["dispel evil"]
+syntax = "cast 'dispel evil' <target>"
+description = """
+Channels holy power to smite evil creatures.
+
+Only affects evil-aligned targets. Damage scales with
+how evil the target is.
+
+Class availability:
+  Cleric: Level 25
+  Ranger: Level 35
+"""
+see_also = ["dispel good", "holy word"]
+
+[[help]]
+keywords = ["dispel good"]
+syntax = "cast 'dispel good' <target>"
+description = """
+Channels dark power to smite good creatures.
+
+Only affects good-aligned targets. Damage scales with
+how good the target is.
+
+Class availability:
+  Cleric: Level 25
+  Ranger: Level 35
+"""
+see_also = ["dispel evil", "demonfire"]
+
+[[help]]
+keywords = ["earthquake"]
+syntax = "cast 'earthquake'"
+description = """
+Causes the ground to shake violently, damaging all enemies in the room.
+
+Damage: Medium (area effect)
+Flying creatures take reduced damage.
+
+Class availability:
+  Cleric: Level 20
+  Ranger: Level 20
+  Druid: Level 10
+"""
+see_also = ["call lightning", "flamestrike"]
+
+[[help]]
+keywords = ["energy drain"]
+syntax = "cast 'energy drain' <target>"
+description = """
+Drains life force from the target, healing the caster.
+
+Damage: High
+Heals caster for portion of damage dealt.
+
+Class availability:
+  Mage: Level 39
+  Cleric: Level 45
+  Vampire: Level 19
+"""
+see_also = ["harm", "heal"]
+
+[[help]]
+keywords = ["harm"]
+syntax = "cast 'harm' <target>"
+description = """
+Inflicts grievous wounds upon the target.
+
+Damage: Very High (100 damage)
+One of the most damaging single-target cleric spells.
+
+Class availability:
+  Cleric: Level 50
+  Vampire: Level 45
+"""
+see_also = ["heal", "cause critical"]
+
+[[help]]
+keywords = ["heat metal"]
+syntax = "cast 'heat metal' <target>"
+description = """
+Causes metal equipment worn by the target to become red hot.
+
+Damage based on how much metal armor/weapons target wears.
+May cause target to drop heated weapons.
+
+Class availability:
+  Cleric: Level 32
+  Druid: Level 27
+"""
+see_also = ["burning hands", "fireball"]
+
+[[help]]
+keywords = ["ray of truth"]
+syntax = "cast 'ray of truth' <target>"
+description = """
+A beam of pure holy light strikes the target.
+
+Damage: High
+Extra damage vs evil and undead creatures.
+Good-aligned casters deal bonus damage.
+
+Class availability:
+  Cleric: Level 55
+"""
+see_also = ["holy word", "dispel evil"]
+
+[[help]]
+keywords = ["shocking grasp"]
+syntax = "cast 'shocking grasp' <target>"
+description = """
+Your touch delivers a powerful electrical shock.
+
+Damage: Low-Medium
+Damage type: Lightning
+
+Class availability:
+  Mage: Level 20
+  Druid: Level 30
+"""
+see_also = ["lightning bolt", "burning hands"]
+
+# === Additional Healing/Curative Spells ===
+
+[[help]]
+keywords = ["cure disease"]
+syntax = "cast 'cure disease' [target]"
+description = """
+Cures disease afflictions from the target.
+
+Removes the plague and other disease effects.
+
+Class availability:
+  Cleric: Level 23
+  Ranger: Level 30
+"""
+see_also = ["cure poison", "cure blindness", "plague"]
+
+[[help]]
+keywords = ["mass healing"]
+syntax = "cast 'mass healing'"
+description = """
+Heals all group members in the room simultaneously.
+
+Healing: Significant amount to all allies
+Mana cost: 100
+
+Class availability:
+  Cleric: Level 75
+"""
+see_also = ["heal", "cure critical", "group"]
+
+# === Additional Detection Spells ===
+
+[[help]]
+keywords = ["detect poison"]
+syntax = "cast 'detect poison' <object or target>"
+description = """
+Determines if food, drink, or a creature is poisoned.
+
+Can be cast on items in inventory or on creatures.
+
+Class availability:
+  Mage: Level 25
+  Cleric: Level 13
+  Ranger: Level 10
+  Druid: Level 10
+"""
+see_also = ["detect magic", "cure poison"]
+
+# === Additional Buff Spells ===
+
+[[help]]
+keywords = ["faerie fog"]
+syntax = "cast 'faerie fog'"
+description = """
+Conjures a cloud of glowing particles that reveals hidden creatures.
+
+All hidden and invisible creatures in the room become visible.
+Area effect - affects everyone in the room.
+
+Class availability:
+  Mage: Level 28
+  Cleric: Level 34
+  Ranger: Level 21
+  Druid: Level 25
+"""
+see_also = ["faerie fire", "detect hidden", "detect invis"]
+
+[[help]]
+keywords = ["fireproof"]
+syntax = "cast 'fireproof' <object>"
+description = """
+Protects an item from fire damage.
+
+The item becomes immune to fire-based destruction.
+Duration: Long
+
+Class availability:
+  Mage: Level 23
+  Cleric: Level 16
+  Druid: Level 12
+"""
+see_also = ["enchant armor", "enchant weapon"]
+
+[[help]]
+keywords = ["fireshield"]
+syntax = "cast 'fireshield'"
+description = """
+Surrounds you with a shield of flames.
+
+Attackers take fire damage when they hit you in melee.
+Duration: Medium
+
+Mana cost: 100
+
+Class availability:
+  Mage: Level 70
+  Druid: Level 68
+"""
+see_also = ["iceshield", "shockshield", "sanctuary"]
+
+[[help]]
+keywords = ["iceshield"]
+syntax = "cast 'iceshield'"
+description = """
+Surrounds you with a shield of frost.
+
+Attackers take cold damage when they hit you in melee.
+Duration: Medium
+
+Mana cost: 100
+
+Class availability:
+  Mage: Level 70
+  Druid: Level 68
+"""
+see_also = ["fireshield", "shockshield", "sanctuary"]
+
+[[help]]
+keywords = ["shockshield"]
+syntax = "cast 'shockshield'"
+description = """
+Surrounds you with a crackling electrical field.
+
+Attackers take lightning damage when they hit you in melee.
+Duration: Medium
+
+Mana cost: 100
+
+Class availability:
+  Mage: Level 70
+  Druid: Level 68
+"""
+see_also = ["fireshield", "iceshield", "sanctuary"]
+
+[[help]]
+keywords = ["know alignment"]
+syntax = "cast 'know alignment' <target>"
+description = """
+Reveals the moral alignment of a creature.
+
+Shows whether the target is good, neutral, or evil,
+and approximately how strongly aligned they are.
+
+Class availability:
+  Mage: Level 22
+  Cleric: Level 14
+  Ranger: Level 20
+  Druid: Level 16
+"""
+see_also = ["detect evil", "detect good"]
+
+[[help]]
+keywords = ["mass invis", "mass invisibility"]
+syntax = "cast 'mass invis'"
+description = """
+Makes your entire group invisible.
+
+All group members in the room become invisible.
+Effect ends individually when each person attacks.
+
+Class availability:
+  Mage: Level 45
+  Vampire: Level 30
+"""
+see_also = ["invisibility", "group"]
+
+[[help]]
+keywords = ["weaken"]
+syntax = "cast 'weaken' <target>"
+description = """
+Saps the physical strength from the target.
+
+Effect: Reduces target's strength
+Duration: Medium
+Save: Reduces effect
+
+Class availability:
+  Mage: Level 21
+  Druid: Level 35
+  Vampire: Level 31
+"""
+see_also = ["giant strength", "curse"]
+
+# === Additional Debuff Spells ===
+
+[[help]]
+keywords = ["charm person", "charm"]
+syntax = "cast 'charm person' <target>"
+description = """
+Attempts to charm a humanoid creature to follow you.
+
+Charmed creatures will follow you and assist in combat.
+Cannot charm creatures much higher level than yourself.
+Only works on humanoid creatures.
+
+Save: Negates effect
+
+Class availability:
+  Mage: Level 40
+  Cleric: Level 30
+  Thief: Level 50
+  Ranger: Level 50
+  Vampire: Level 43
+"""
+see_also = ["sleep", "calm"]
+
+[[help]]
+keywords = ["plague"]
+syntax = "cast 'plague' <target>"
+description = """
+Infects the target with a wasting disease.
+
+Effects:
+  - Periodic damage over time
+  - Reduced strength
+  - Can spread to others nearby
+
+Duration: Long
+Save: Reduces duration
+
+Class availability:
+  Mage: Level 43
+  Cleric: Level 34
+  Druid: Level 43
+  Vampire: Level 36
+"""
+see_also = ["poison", "cure disease"]
+
+# === Utility Spells ===
+
+[[help]]
+keywords = ["animate", "animate dead"]
+syntax = "cast 'animate' <corpse>"
+description = """
+Raises a corpse to serve as an undead minion.
+
+The animated creature will follow and protect you.
+Strength depends on the original creature.
+
+Class availability:
+  Vampire: Level 45
+"""
+see_also = ["charm person", "conjure"]
+
+[[help]]
+keywords = ["cancellation"]
+syntax = "cast 'cancellation' <target>"
+description = """
+Attempts to remove all magical effects from the target.
+
+More effective than dispel magic but can only be cast
+on yourself or willing targets.
+
+Class availability:
+  Mage: Level 51
+  Cleric: Level 51
+  Druid: Level 46
+"""
+see_also = ["dispel magic", "remove curse"]
+
+[[help]]
+keywords = ["conjure"]
+syntax = "cast 'conjure'"
+description = """
+Summons an elemental creature to serve you.
+
+The conjured elemental will follow and fight for you.
+Type and strength depends on caster level.
+
+Mana cost: 100
+
+Class availability:
+  Mage: Level 85
+  Druid: Level 95
+"""
+see_also = ["animate", "summon"]
+
+[[help]]
+keywords = ["continual light"]
+syntax = "cast 'continual light'"
+description = """
+Creates a ball of light that illuminates the area.
+
+The light object can be picked up and carried.
+Lasts indefinitely.
+
+Class availability:
+  Mage: Level 11
+  Cleric: Level 8
+  Ranger: Level 7
+  Druid: Level 5
+"""
+see_also = ["infravision"]
+
+[[help]]
+keywords = ["control weather"]
+syntax = "cast 'control weather' <better/worse>"
+description = """
+Manipulates the weather in the area.
+
+'better' - Improves weather (clearer, calmer)
+'worse' - Worsens weather (storms, rain)
+
+Affects call lightning effectiveness.
+
+Class availability:
+  Cleric: Level 48
+  Ranger: Level 32
+  Druid: Level 20
+"""
+see_also = ["call lightning", "weather"]
+
+[[help]]
+keywords = ["create food"]
+syntax = "cast 'create food'"
+description = """
+Conjures a mushroom or other food item from nothing.
+
+The food is nourishing and safe to eat.
+
+Class availability:
+  Mage: Level 19
+  Cleric: Level 10
+  Ranger: Level 6
+  Druid: Level 7
+"""
+see_also = ["create water", "create spring"]
+
+[[help]]
+keywords = ["create rose"]
+syntax = "cast 'create rose'"
+description = """
+Conjures a beautiful magical rose.
+
+A romantic gesture, or can be given as a gift.
+
+Class availability:
+  Mage: Level 32
+  Cleric: Level 21
+  Ranger: Level 16
+  Druid: Level 11
+"""
+see_also = ["create food", "continual light"]
+
+[[help]]
+keywords = ["create spring"]
+syntax = "cast 'create spring'"
+description = """
+Creates a magical spring of fresh water.
+
+The spring provides unlimited water for drinking.
+Lasts for a moderate duration.
+
+Class availability:
+  Mage: Level 28
+  Cleric: Level 34
+  Ranger: Level 26
+  Druid: Level 24
+"""
+see_also = ["create water", "create food"]
+
+[[help]]
+keywords = ["create water"]
+syntax = "cast 'create water' <container>"
+description = """
+Fills a container with fresh water.
+
+Target must be a drink container.
+
+Class availability:
+  Mage: Level 15
+  Cleric: Level 6
+  Ranger: Level 5
+  Druid: Level 3
+"""
+see_also = ["create food", "create spring"]
+
+[[help]]
+keywords = ["enchant armor"]
+syntax = "cast 'enchant armor' <armor>"
+description = """
+Permanently enhances a piece of armor.
+
+Effect: Improves armor class
+May add magical properties.
+High failure chance - may damage the item.
+
+Mana cost: 100
+
+Class availability:
+  Mage: Level 32
+"""
+see_also = ["enchant weapon", "fireproof"]
+
+[[help]]
+keywords = ["enchant weapon"]
+syntax = "cast 'enchant weapon' <weapon>"
+description = """
+Permanently enhances a weapon.
+
+Effect: Improves hit and damage rolls
+May add magical properties.
+High failure chance - may damage the item.
+
+Mana cost: 100
+
+Class availability:
+  Mage: Level 34
+"""
+see_also = ["enchant armor", "fireproof"]
+
+[[help]]
+keywords = ["floating disc"]
+syntax = "cast 'floating disc'"
+description = """
+Creates a magical floating disc to carry items.
+
+The disc follows you and can hold equipment.
+Useful for carrying loot from dungeons.
+
+Class availability:
+  Mage: Level 8
+  Cleric: Level 20
+  Ranger: Level 10
+  Druid: Level 14
+"""
+see_also = ["fly"]
+
+[[help]]
+keywords = ["gate"]
+syntax = "cast 'gate' <target>"
+description = """
+Opens a portal to a distant creature.
+
+You and your group can step through to reach the target.
+Cannot gate to certain protected areas.
+
+Mana cost: 80
+
+Class availability:
+  Mage: Level 46
+  Cleric: Level 59
+  Druid: Level 55
+"""
+see_also = ["summon", "teleport", "portal"]
+
+[[help]]
+keywords = ["locate object"]
+syntax = "cast 'locate object' <object name>"
+description = """
+Reveals the location of a specific type of object.
+
+Shows the direction and distance to nearby matching items.
+Cannot locate items in certain protected areas.
+
+Class availability:
+  Mage: Level 14
+  Cleric: Level 30
+  Druid: Level 20
+"""
+see_also = ["identify", "detect magic"]
+
+[[help]]
+keywords = ["nexus"]
+syntax = "cast 'nexus' <target>"
+description = """
+Creates a two-way portal to a distant creature.
+
+Similar to gate, but creates a stable portal that others
+can use to travel in both directions.
+
+Mana cost: 150
+
+Class availability:
+  Mage: Level 75
+  Cleric: Level 85
+"""
+see_also = ["gate", "portal", "teleport"]
+
+[[help]]
+keywords = ["portal"]
+syntax = "cast 'portal' <target>"
+description = """
+Creates a one-way portal to a distant creature.
+
+Anyone can step through the portal to reach the target.
+More stable than gate but one-way only.
+
+Mana cost: 100
+
+Class availability:
+  Mage: Level 55
+  Cleric: Level 65
+"""
+see_also = ["gate", "nexus", "teleport"]
+
+[[help]]
+keywords = ["recharge"]
+syntax = "cast 'recharge' <wand or staff>"
+description = """
+Attempts to restore charges to a magical item.
+
+May restore some charges to a depleted wand or staff.
+Has a chance to fail and destroy the item.
+
+Class availability:
+  Mage: Level 14
+"""
+see_also = ["scrolls", "staves", "wands"]
+
+[[help]]
+keywords = ["summon"]
+syntax = "cast 'summon' <target>"
+description = """
+Magically transports a creature to your location.
+
+Target must be a player or mobile.
+Cannot summon from certain protected areas.
+Target may resist the summon.
+
+Class availability:
+  Mage: Level 44
+  Cleric: Level 34
+  Ranger: Level 50
+  Druid: Level 45
+"""
+see_also = ["gate", "teleport"]
+
+[[help]]
+keywords = ["teleport"]
+syntax = "cast 'teleport'"
+description = """
+Instantly transports you to a random location.
+
+The destination is random and potentially dangerous!
+Use with caution.
+
+Class availability:
+  Mage: Level 23
+  Cleric: Level 37
+  Ranger: Level 35
+  Druid: Level 25
+"""
+see_also = ["gate", "word of recall"]
+
+[[help]]
+keywords = ["ventriloquate"]
+syntax = "cast 'ventriloquate' <target> <message>"
+description = """
+Makes it appear that someone else is speaking.
+
+The target appears to say the specified message.
+Observers may realize it's fake with a save.
+
+Class availability:
+  Mage: Level 3
+  Thief: Level 15
+  Ranger: Level 6
+  Druid: Level 4
+"""
+see_also = ["invisibility"]

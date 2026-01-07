@@ -1,0 +1,781 @@
+[[mobiles]]
+vnum = 4000
+keywords = ["python", "snake"]
+short_desc = "the huge python"
+long_desc = "The huge python rears its head and hisses at you."
+description = """
+It sways back and forth contemplating whether or not to eat you."""
+level = 22
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 11
+  size = 9
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 4001
+keywords = ["garter", "snake"]
+short_desc = "the garter snake"
+long_desc = "A small green garter snake slithers along the floor."
+description = "It looks harmless enough.  Or is it?"
+level = 13
+sex = "either"
+act_flags = ["npc", "sentinel", "no_align"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 7
+  size = 7
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 1
+
+[[mobiles]]
+vnum = 4002
+keywords = ["centipede"]
+short_desc = "the centipede"
+long_desc = "A small centipede here is looking for vegetation."
+description = "It looks completely harmless but who knows for sure?"
+level = 5
+sex = "none"
+act_flags = ["npc", "sentinel", "no_align"]
+affected_by = ["dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 3
+  bonus = 30
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 4003
+keywords = ["kobold"]
+short_desc = "the kobold"
+long_desc = "An ugly kobold mumbles something under its breath."
+description = "It looks ugly enough to scare its own mother."
+level = 7
+sex = "either"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 4
+  bonus = 40
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 1
+
+[[mobiles]]
+vnum = 4004
+keywords = ["orc"]
+short_desc = "the orc"
+long_desc = "This orc is frothing around the mouth.  Better stay away."
+description = "You notice a slight tinge of madness in his eyes."
+level = 10
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 5
+  bonus = 50
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 4005
+keywords = ["orc"]
+short_desc = "the large orc"
+long_desc = "This large orc is looking for someone small to pick on."
+description = "The orc says, \"Whatcha look'n at?\""
+level = 13
+sex = "either"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 7
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 4050
+keywords = ["warrior"]
+short_desc = "the warrior"
+long_desc = "This tall warrior has more scars than even you!"
+description = "He's surely a strong, brainless fighter.  Like you."
+level = 24
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 12
+  bonus = 120
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 4
+
+[[mobiles]]
+vnum = 4051
+keywords = ["warrior"]
+short_desc = "the warrior"
+long_desc = "This veteran warrior is old enough to be your father."
+description = """
+He seems to know his way with weapons.  And he wants
+to show you what he can do!"""
+level = 14
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 8
+  size = 7
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 4052
+keywords = ["hobgoblin"]
+short_desc = "the hobgoblin"
+long_desc = "A small beat-up hobgoblin cringes in the corner."
+description = """
+Looking into the eyes of this poor soul makes you feel
+sad as you see the terror and fear in its eyes.  Why
+don't you put it out of its misery?"""
+level = 11
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 6
+  bonus = 40
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 4053
+keywords = ["snake"]
+short_desc = "the snake"
+long_desc = "A sickly brown snake watches you with caution."
+description = """
+A closer look reveals a hungry demeanor.  Don't get too close!"""
+level = 19
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive", "no_align"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 100
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 4054
+keywords = ["centipede"]
+short_desc = "the centipede"
+long_desc = "A white centipede crawls along the cave floors randomly."
+description = "The centipede doesn't really seem to notice you."
+level = 9
+sex = "none"
+act_flags = ["npc", "sentinel", "no_align"]
+affected_by = ["dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 5
+  bonus = 50
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 0
+
+[[mobiles]]
+vnum = 4055
+keywords = ["hobgoblin"]
+short_desc = "the large hobgoblin"
+long_desc = "A large hobgoblin is here wondering if he should tear you apart."
+description = """
+Red, bloodshot eyes and drool dripping from its mouth makes you
+wonder just how far away you should be."""
+level = 20
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 120
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 3
+
+[[mobiles]]
+vnum = 4056
+keywords = ["orc"]
+short_desc = "the orc"
+long_desc = "An orc is here, looking for something (or perhaps someone) to eat."
+description = """
+As you already know, orcs have quite a ravenous appetite.  
+Care to be dinner?"""
+level = 15
+sex = "either"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 90
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 4057
+keywords = ["lion", "mountain"]
+short_desc = "the mountain lion"
+long_desc = "A mountain lion bears its teeth at the sight of more food."
+description = """
+Huge claws and big teeth make quite a fearsome opponent for
+the weary.  Are you next?"""
+level = 18
+sex = "either"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 100
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 4058
+keywords = ["giant", "hill"]
+short_desc = "the hill giant"
+long_desc = "A hill giant is here tossing rocks around.  Marbles perhaps?"
+description = """
+The hill giant looks like he's about 9 feet tall. By his actions you
+come to the conclusion that he's not very intelligent.  A perfect
+playmate for you."""
+level = 25
+sex = "male"
+act_flags = ["npc", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 4100
+keywords = ["mage"]
+short_desc = "the Mage"
+long_desc = "A small intelligent looking mage is standing here. It looks like he\nknows his way with magic."
+description = """
+This guy can ace the SAT with his frontal lobe tied behind his back."""
+level = 26
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "mage"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 7
+  size = 5
+  bonus = 130
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 2
+
+[[mobiles]]
+vnum = 4101
+keywords = ["troll"]
+short_desc = "the troll"
+long_desc = "This large mean-looking troll wants to take a closer look at you."
+description = """
+Whilst you look at this troll, you realize he is trying to
+figure just how tender you are."""
+level = 23
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
+affected_by = ["detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 7
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 3
+
+[[mobiles]]
+vnum = 4102
+keywords = ["guardian", "snake"]
+short_desc = "the guardian snake"
+long_desc = "A large green snake is guardian for something."
+description = """
+You take a closer look at this large snake while it tries to
+bite your head off!"""
+level = 19
+sex = "either"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 100
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 4103
+keywords = ["thief"]
+short_desc = "the thief"
+long_desc = "A thief, all dressed in black."
+description = "Well COUNT your money!"
+level = 15
+sex = "either"
+act_flags = ["npc", "scavenger", "wimpy", "thief"]
+affected_by = ["sneak", "hide"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 8
+  bonus = 80
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 4104
+keywords = ["orc"]
+short_desc = "the orc"
+long_desc = "An ugly orc is standing here waiting for someone to practice on."
+description = "Yrkk..  He belches in your face!"
+level = 13
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 7
+  size = 7
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 3
+
+[[mobiles]]
+vnum = 4105
+keywords = ["centipede"]
+short_desc = "a centipede"
+long_desc = "A small harmless centipede is here looking for some vegetation to eat."
+description = """
+It doesn't seem to pay any attention towards you.  You are probably
+not important."""
+level = 12
+sex = "none"
+act_flags = ["npc", "sentinel", "no_align"]
+affected_by = ["dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 8
+  size = 5
+  bonus = 50
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 1
+
+[[mobiles]]
+vnum = 4106
+keywords = ["warrior"]
+short_desc = "the Warrior"
+long_desc = "A human warrior grins an evil grin in your face."
+description = "He doesn't look friendly at all...  He is no Mr. Rogers!"
+level = 18
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 130
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 3
+
+[[mobiles]]
+vnum = 4107
+keywords = ["kobold"]
+short_desc = "the green kobold"
+long_desc = "A green kobold hobbles along the cave walls puking periodically."
+description = "It looks a little sick.  Something he ate maybe?"
+level = 14
+sex = "either"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 8
+  size = 4
+  bonus = 50
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 1
+
+[[mobiles]]
+vnum = 4150
+keywords = ["bat", "blue"]
+short_desc = "the blue bat"
+long_desc = "A blue bat flies in circles while electrical charges arc here and there."
+description = "Bzzzt.  Zap.  Crackle.  Speak about static electricity!"
+level = 13
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["flying", "dark_vision"]
+alignment = 0
+special = "spec_breath_lightning"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 9
+  bonus = 1
+
+[[mobiles]]
+vnum = 4151
+keywords = ["bat", "red"]
+short_desc = "the red bat"
+long_desc = "A red bat hangs upside down from the ceiling, glowing."
+description = """
+You can definitely feel some heat from this thing.  A fever perhaps?"""
+level = 14
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["flying", "dark_vision"]
+alignment = 0
+special = "spec_breath_fire"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 9
+  bonus = 1
+
+[[mobiles]]
+vnum = 4152
+keywords = ["bat", "green"]
+short_desc = "the green bat"
+long_desc = "A green bat flies from wall to wall leaving an awful smell."
+description = "Whew!  What a stinker!"
+level = 14
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["flying", "dark_vision"]
+alignment = 0
+special = "spec_breath_gas"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 9
+  bonus = 1
+
+[[mobiles]]
+vnum = 4153
+keywords = ["bat", "white"]
+short_desc = "the white bat"
+long_desc = "A white bat rests on the ceiling.  You wonder where the cold is coming from."
+description = """
+Brrr!  You almost can't distinguish this bat from an ice cube."""
+level = 13
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["flying", "dark_vision"]
+alignment = 0
+special = "spec_breath_frost"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 9
+  bonus = 1
+
+[[mobiles]]
+vnum = 4154
+keywords = ["bat", "black"]
+short_desc = "the black bat"
+long_desc = "A black bat flies from wall to wall leaving something hissing behind."
+description = "Amazing!  This bat is grooming itself with acid!"
+level = 13
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["flying", "dark_vision"]
+alignment = 0
+special = "spec_breath_acid"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 70
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 9
+  bonus = 1
+
+[[mobiles]]
+vnum = 4155
+keywords = ["thief"]
+short_desc = "the thief"
+long_desc = "A sneaky thief appears and disappears within the shadows."
+description = "He definitely knows what he's doing.  Trust him."
+level = 23
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "thief"]
+affected_by = ["hide"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 20
+  bonus = 130
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 3
+
+[[mobiles]]
+vnum = 4156
+keywords = ["troll"]
+short_desc = "the troll"
+long_desc = "A large ugly troll is here mumbling something."
+description = "He looks quite mean.  Don't mess with him."
+level = 27
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
+affected_by = ["detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 8
+  size = 20
+  bonus = 140
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 4157
+keywords = ["mage"]
+short_desc = "the Mage"
+long_desc = "A small man is here researching magical incantations."
+description = """
+His little head is buried into his magic books.  He'd be very
+angry should you bother his studies."""
+level = 21
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 4
+  size = 10
+  bonus = 100
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 4158
+keywords = ["snake"]
+short_desc = "the snake"
+long_desc = "A brown snake hisses at you."
+description = """
+Sickly brown as it is, you know what it really wants is you
+for dinner."""
+level = 17
+sex = "either"
+act_flags = ["npc", "sentinel", "aggressive", "no_align"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 100
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 1
+
+[[mobiles]]
+vnum = 4159
+keywords = ["troll"]
+short_desc = "the small troll"
+long_desc = "A 'small' troll is here happily dancing.  Trala-la-la.  La-la."
+description = "He is so happy, you are disgusted.  Kill him now!"
+level = 15
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 80
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 2
+
+[[mobiles]]
+vnum = 4160
+keywords = ["orc"]
+short_desc = "the orc"
+long_desc = "A large orc growls in your face."
+description = "He is just looking for a fight isn't he?"
+level = 17
+sex = "either"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 10
+  bonus = 100
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+

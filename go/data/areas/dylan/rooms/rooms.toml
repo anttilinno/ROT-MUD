@@ -1,0 +1,1779 @@
+[[rooms]]
+vnum = 9101
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face.
+
+A floating sign says:
+
+"Scubdu's Area--Tread carefully! Only high levels should attempt
+this place. Leave messages on the board if you have problems.""""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 7900
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9102
+
+[[rooms]]
+vnum = 9102
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9103
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9101
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9103
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9128
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9104
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9102
+
+[[rooms]]
+vnum = 9104
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9103
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9105
+
+[[rooms]]
+vnum = 9105
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9106
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9104
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9106
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9107
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9105
+
+[[rooms]]
+vnum = 9107
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9108
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9106
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9126
+
+[[rooms]]
+vnum = 9108
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9109
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9107
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9109
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9108
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9110
+
+  [[rooms.mob_resets]]
+  vnum = 9103
+  max = 5
+
+[[rooms]]
+vnum = 9110
+name = "An ominous storm cloud."
+sector = "inside"
+description = """
+You find yourself in a storm.  Lightning flashes and thunder
+crashes, making you wish you were dry and warm."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9111
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9125
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9109
+
+[[rooms]]
+vnum = 9111
+name = "High and perilous cliff"
+sector = "mountain"
+description = """
+You are on a high and rocky cliff.  To the west you see a huge
+ominous storm cloud moving this way.  You might want to take cover
+before the storm hits.  You think that there is a narrow trail
+leading to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9112
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9110
+
+[[rooms]]
+vnum = 9112
+name = "Narrow rocky trail."
+sector = "mountain"
+description = """
+A narrow trail leads down towards the mountain and north toward the
+cliff.  It seems to fade in and out as it winds up the hill.
+Obviously, it has not been maintained in years."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9111
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9113
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9113
+name = "Small valley."
+sector = "mountain"
+description = """
+You are in a lush valley full of trees and other vegetation and the
+odd carcass or two.  The trail leads south and it leads up."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9114
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9112
+
+[[rooms]]
+vnum = 9114
+name = "Small valley."
+sector = "mountain"
+description = """
+You are in a lush valley full of trees and other vegetation and the
+odd carcass or three.  The trail leads north and it leads down into
+a crevasse."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9113
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9115
+
+[[rooms]]
+vnum = 9115
+name = "Deep, slippery crevice."
+sector = "mountain"
+description = """
+The crevice is deep and a little dim and it is hard to make your
+way around.  A mist makes everything a little damp and slippery.
+Better take your time climbing through here."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9117
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9116
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9114
+
+[[rooms]]
+vnum = 9116
+name = "Incredibly slippery crevice."
+sector = "mountain"
+description = """
+The crevice is getting more and more slippery.  You are getting
+incredibly nervous and want to turn back.  To the east is the
+crevice and trail you were following.  Below, you can just see the
+edge of a cliff through the mist.  There is no trail leading there,
+just a smooth, flat, dew-covered rock that almost resembles a
+slide ..."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9115
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9199
+
+[[rooms]]
+vnum = 9117
+name = "Steep mountainside."
+sector = "mountain"
+description = """
+From here, you can see forever.  Clouds, birds, the forest.
+Midgaard is far, far to the west.  What a postcard perfect view!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9115
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9118
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9118
+name = "Steep mountainside."
+sector = "mountain"
+description = """
+From here, you can see forever.  Clouds, birds, the forest.
+Midgaard is far, far to the west.  What a postcard perfect view!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9119
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9117
+
+[[rooms]]
+vnum = 9119
+name = "Treacherous Cliff."
+sector = "mountain"
+description = """
+The cliff is rocky and difficult to negotiate.  One wrong slip and
+you could fall and break a leg or impale yourself or something else
+nasty."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9118
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9120
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9120
+name = "Cliff Face."
+sector = "mountain"
+description = """
+You are more than a little nervous climbing on this almost vertical
+cliff face.  You miraculously find places to grab onto and little
+ledges to rest on.  You see a small cave here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9121
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9122
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9119
+
+[[rooms]]
+vnum = 9121
+name = "Dank, dark, smelly hole."
+sector = "mountain"
+description = """
+This hole must have been used as a lair or nest.  There are
+feathers and bones everywhere and the floor is covered with
+something disgusting."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9120
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9122
+name = "Large, sturdy ledge."
+sector = "mountain"
+description = """
+You are on a ledge above a steep cliff face.  You can climb down
+if you want, but be careful!  After viewing the scenery, you notice
+two small caves here, one north and one west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9124
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9123
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9120
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9123
+name = "Absolutely disgusting lair."
+sector = "mountain"
+description = """
+The stench in here is quite foul.  There are feathers, bones and
+rotting carcasses everywhere.  This place is absolutely gross and
+you have to strain yourself not to lose your lunch."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9122
+
+  [[rooms.mob_resets]]
+  vnum = 9102
+  max = 2
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9104
+    inv_only = true
+
+[[rooms]]
+vnum = 9124
+name = "Absolutely disgusting lair."
+sector = "mountain"
+description = """
+The stench in here is quite foul.  There are feathers, bones and
+rotting carcasses everywhere.  This place is absolutely gross and
+you have to strain yourself not to lose your lunch."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9122
+
+  [[rooms.mob_resets]]
+  vnum = 9102
+  max = 2
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9105
+    inv_only = true
+
+[[rooms]]
+vnum = 9125
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9110
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9126
+
+[[rooms]]
+vnum = 9126
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9131
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9127
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9107
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9125
+
+[[rooms]]
+vnum = 9127
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9130
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9126
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9128
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9128
+name = "A fluffy white cloud."
+sector = "inside"
+description = """
+You find yourself standing on a small cloud.  The cloud feels kind
+of spongy beneath your feet.  You find it hard to see anything in
+the distance as wisps of cloud blow over your face."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9103
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9127
+
+[[rooms]]
+vnum = 9129
+name = "Sleepy little cloud."
+sector = "inside"
+description = """
+This cloud is peacefully snoozing away, enjoying himself.  There
+is grumpy cloud to the east and a rather shy cloud north of here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9132
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9130
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9130
+name = "Grumpy little cloud."
+sector = "inside"
+description = """
+This cloud mutters and grumbles at you.  You have to jump quickly
+to avoid a lightning bolt that passes by your toe.  Your aren't
+sure but you think you hear the cloud snicker."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9131
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9127
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9129
+
+[[rooms]]
+vnum = 9131
+name = "Happy little cloud."
+sector = "inside"
+description = """
+You hear the cloud humming a little song to itself, but you can't
+figure out the song."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9136
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9126
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9130
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9132
+name = "Bashful little cloud."
+sector = "inside"
+description = """
+This cloud blushes and tries to avoid your glance as you look at
+your surroundings.  You decide that overall it is a peaceful little
+cloud."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9133
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9129
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9142
+
+[[rooms]]
+vnum = 9133
+name = "Sneezing little cloud."
+sector = "inside"
+description = """
+The cloud is wracked with sneezes.  At first you thought you were
+in an earthquake before you realize where you are!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9145
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9134
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9132
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9143
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9134
+name = "Dopey little cloud."
+sector = "inside"
+description = """
+This cloud is too busy daydreaming to watch where its going.  It
+doesn't even notice you landing on it.  It looks like it couldn't
+figure its way out of an open box."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9135
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9133
+
+[[rooms]]
+vnum = 9135
+name = "Doc-like little cloud."
+sector = "inside"
+description = """
+The cloud looks at you through its Lennon like specs and examines
+you quite scientifically."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9136
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9134
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9136
+name = "Snowy, white cloud."
+sector = "inside"
+description = """
+You shiver as you stand here.  This beautiful, fluffy, pure white
+cloud is snowing.  The snow is pure and sweet as it melts in your
+mouth.  What a nifty cloud to be on."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9135
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9131
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9137
+
+[[rooms]]
+vnum = 9137
+name = "Cold, damp cloud."
+sector = "inside"
+description = """
+Your mood grows grumpy as you find yourself cold and wet from this
+dismal cloud.  You notice a rock outcropping above you."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9136
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9138
+
+  [[rooms.mob_resets]]
+  vnum = 9103
+  max = 5
+
+[[rooms]]
+vnum = 9138
+name = "Mysterious rock outcropping."
+sector = "inside"
+description = """
+This rock outcropping just seems to hang in midair.  To the north
+you see a house and if you ease yourself down, you can land on a
+rather damp, dismal cloud.  The door to the house is closed."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9139
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9137
+
+[[rooms]]
+vnum = 9139
+name = "Foyer."
+sector = "inside"
+description = """
+Shadows play tricks on your eyes.  Everytime you think you see
+something in a corner and turn to get a better look, nothing is
+there.  The place is very dark.  Even with a torch, you have
+trouble making out the room to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9140
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9138
+
+[[rooms]]
+vnum = 9140
+name = "Tower."
+sector = "inside"
+description = """
+You are in a musty old tower.  The smell of mold and mildew is
+almost overpowering.  You hear strange creaks and groans ... is it
+the wind or did someone (something?) make that noise.  To the west
+is the house and there is a stairway leading up into the tower."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9139
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9141
+
+[[rooms]]
+vnum = 9141
+name = "Witches Tower"
+sector = "inside"
+description = """
+Here you see strange things of arcane value.  There is a cauldron in the
+corner bubbling madly, belching a foul brew that must have come from hell.
+On shelves lie jars of strange creatures you have never seen before, or
+hope to again.  A picture of a familiar temple hangs on the east wall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 3001
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9140
+
+  [[rooms.mob_resets]]
+  vnum = 9107
+  max = 1
+
+[[rooms]]
+vnum = 9142
+name = "Suspicious little raincloud."
+sector = "inside"
+description = """
+On second glance, this cloud doesn't seem much like a raincloud.
+A balloon sticks out of the top and you think you hear it humming
+something like, 'Tut, tut!  It looks like rain!'"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9143
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9132
+
+[[rooms]]
+vnum = 9143
+name = "Cirrus maximus cloud."
+sector = "inside"
+description = """
+This cloud looks like it is of the cirrus maximus genre of clouds."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9133
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9142
+
+[[rooms]]
+vnum = 9144
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9148
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9146
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9145
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9133
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9150
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9148
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9146
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9147
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9144
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9147
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9148
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9146
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9148
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9144
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9147
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9145
+
+  [[rooms.mob_resets]]
+  vnum = 9103
+  max = 5
+
+[[rooms]]
+vnum = 9149
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9152
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9150
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9157
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9150
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9151
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9145
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9149
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9151
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9150
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9152
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9152
+name = "Raging hurricane."
+sector = "mountain"
+description = """
+You are buffeted and knocked about by the almost godlike strength
+of the raging hurricane.  It is hard to see and hear anything.
+Your only thought is to seek refuge from the storm."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9151
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9149
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9153
+name = "Calm cloud."
+sector = "inside"
+description = """
+This cloud is just outside the hurricane.  It looks like it might
+get sucked in, but you feel safe for the moment."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9154
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9152
+
+  [[rooms.mob_resets]]
+  vnum = 9106
+  max = 1
+
+[[rooms]]
+vnum = 9154
+name = "Mountainside."
+sector = "mountain"
+description = """
+You find yourself on the side of a huge granite mountain.  The air
+is quite thin so you know you are at a very high altitude.  There
+is no plant life beyond moss and lichen in this lonely, barren
+place."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9153
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9155
+
+[[rooms]]
+vnum = 9155
+name = "Mountainside."
+sector = "mountain"
+description = """
+You find yourself on the side of a huge granite mountain.  The air
+is quite thin so you know you are at a very high altitude.  There
+is no plant life beyond moss and lichen in this lonely, barren
+place."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9154
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9156
+
+[[rooms]]
+vnum = 9156
+name = "Roc's Nest."
+sector = "mountain"
+description = """
+You are standing in a nest.  It is huge, at least two spear-lengths
+wide.  You see three eggs in the center.  They are knee high, brown
+and look almost leathery.  Better hope mom isn't around!"""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9155
+
+  [[rooms.mob_resets]]
+  vnum = 9105
+  max = 1
+
+[[rooms]]
+vnum = 9157
+name = "Cumulative nimbus cloud."
+sector = "inside"
+description = """
+This cloud looks like it belongs to the phylum of cumulative nimbus clouds."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9159
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9158
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9149
+
+[[rooms]]
+vnum = 9158
+name = "Dark hidden cloud."
+sector = "inside"
+description = "This cloud looks like the perfect place to hide."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9157
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9159
+name = "Yet another cloud"
+sector = "inside"
+description = """
+You find yourself in yet another cloud.  Will the madness never
+end?  There is a rope ladder leading up."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9157
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9160
+
+[[rooms]]
+vnum = 9160
+name = "Front gate"
+sector = "field"
+description = """
+There is a gate here.  It is huge, towering over you.  It creaks
+as it sways in the breeze.  To the south you see a huge lawn.
+There is a rope ladder leading down."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9161
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9159
+
+[[rooms]]
+vnum = 9161
+name = "Lawn"
+sector = "field"
+description = """
+The lawn seems to stretch and stretch to the south and to the west.
+North of you is a gate.  The grass is emerald green and luscious,
+obviously well cared for."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9160
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9163
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9162
+
+[[rooms]]
+vnum = 9162
+name = "Croquet game"
+sector = "field"
+description = """
+A croquet game has been set up and carelessly left out.  Who ever
+was playing blue was in the lead before they quit.  Benches have
+been set up for spectators and players to enjoy themselves."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9161
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9164
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+  [[rooms.mob_resets]]
+  vnum = 9101
+  max = 35
+
+[[rooms]]
+vnum = 9163
+name = "Huge, gorgeous fountain."
+sector = "field"
+description = """
+An enormous golden fountain is here.  You see swans, angels,
+gryphons and a host of other creatures in the fountain.  The
+fountain empties into a huge pool that looks quite inviting."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9161
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9164
+
+  [[rooms.mob_resets]]
+  vnum = 9103
+  max = 5
+
+[[rooms]]
+vnum = 9164
+name = "Patio."
+sector = "field"
+description = """
+A huge patio overlooks the lawn area.  There are enough tables and
+chairs for a party of 100.  The tables and chairs are ornate and
+expensive, tasteful and elegant.  Stairs lead up to the main
+house."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9162
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9163
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9165
+
+[[rooms]]
+vnum = 9165
+name = "Long stairway."
+sector = "city"
+description = """
+This stairway is suspended on clouds.  It leads from the house to
+the front lawn.  The banisters are made of ornate gold and silver
+inlays."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9166
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9164
+
+[[rooms]]
+vnum = 9166
+name = "Front door"
+sector = "city"
+description = """
+You stand at the front door of an immense, sprawling mansion made
+of granite and marble.  The door is at least 10 feet high and is
+made of oak."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9173
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9177
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9167
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9165
+
+[[rooms]]
+vnum = 9167
+name = "Lawn northwest of house."
+sector = "city"
+description = """
+You stand just outside the northwest corner of the house.  You try
+to peek in a window, but it is a little too high to see anything."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9166
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9168
+
+[[rooms]]
+vnum = 9168
+name = "Lawn west of house."
+sector = "city"
+description = """
+You stand just outside the west corner of the house.  You try to
+peek in a window, but it is a little too high to see anything."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9167
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9169
+
+[[rooms]]
+vnum = 9169
+name = "Lawn southwest of house."
+sector = "city"
+description = """
+You stand just outside the southwest corner of the house.  You try
+to peek in a window, but it is a little too high to see anything."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9168
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9170
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9174
+
+[[rooms]]
+vnum = 9170
+name = "Lawn south of house."
+sector = "city"
+description = """
+You stand just outside the south corner of the house.  You try to
+peek in a window, but it is a little too high to see anything."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9171
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9169
+
+[[rooms]]
+vnum = 9171
+name = "Lawn southeast of house."
+sector = "city"
+description = """
+You stand just outside the southeast corner of the house.  You try
+to peek in a window, but it is a little too high to see anything."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9172
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9170
+
+[[rooms]]
+vnum = 9172
+name = "Lawn east of house."
+sector = "city"
+description = """
+You stand just outside the east corner of the house.  You try to
+peek in a window, but it is a little too high to see anything."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9173
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9171
+
+[[rooms]]
+vnum = 9173
+name = "Lawn northeast of house."
+sector = "city"
+description = """
+You stand just outside the northeast corner of the house.  You try
+to peek in a window, but it is a little too high to see anything."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9172
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9166
+
+[[rooms]]
+vnum = 9174
+name = "Dirty, dusty tunnel."
+sector = "mountain"
+description = "This dirty dusty tunnel must lead somewhere."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9175
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9169
+
+[[rooms]]
+vnum = 9175
+name = "Basement."
+sector = "mountain"
+description = """
+This seems like your average basement.  Old Christmas decorations,
+suitcases, bicycles litter your way.  You hear the squeaking of
+rats in the corners."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9176
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9174
+
+[[rooms]]
+vnum = 9176
+name = "Bottom of the stairs."
+sector = "inside"
+description = """
+You stand at the bottom of a long staircase leading up to the main
+house.  To the south you can barely make out the accumulated
+clutter gathered throughout the years."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9175
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9177
+
+[[rooms]]
+vnum = 9177
+name = "Foyer."
+sector = "inside"
+description = """
+"Magnificent" does not even begin to describe the foyer.  Lavishly
+decorated, yet elegant, it gives an impression of indescribable
+wealth.  Paintings and tapestries line the walls depicting scenes
+from throughout history.  Antiques furnitures and oriental rugs are
+tastefully placed in ideal spots.  The door is at least 10 feet
+high and is made of oak."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9166
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9183
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9178
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9176
+
+  [[rooms.mob_resets]]
+  vnum = 9103
+  max = 5
+
+[[rooms]]
+vnum = 9178
+name = "Elegant hallway."
+sector = "inside"
+description = """
+You are in a long, sprawling hallway connecting the eastern and
+western wings of the house.  There are several chairs and sofas in
+the hallway and some gorgeous, handwoven drapes."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9177
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9179
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9180
+
+[[rooms]]
+vnum = 9179
+name = "Library"
+sector = "inside"
+description = """
+You are overwhelmed by the sheer volumes of books here.  The
+shelves stretch all the way to the ceiling and are on every wall,
+even above the doorway.  There are chairs for sitting and reading
+and a desk for more intense studies."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9178
+
+[[rooms]]
+vnum = 9180
+name = "Arboretum."
+sector = "inside"
+description = """
+A small indoor garden so that the residents don't have to go
+outside to enjoy plants and commune with nature.  There are several
+trees, a small pond and flowers of every kind."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9178
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9181
+
+[[rooms]]
+vnum = 9181
+name = "Western tower."
+sector = "city"
+description = """
+You are in the bottom part of a tower.  A draft brings a chill to
+your spine and causes creaks and groans.  Curtains flutter in the
+wind, causing quite a distraction.  When you go to shut the window,
+you see that the window is closed.  An old, wooden staircase leads
+up into darkness."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9180
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9182
+
+[[rooms]]
+vnum = 9182
+name = "Western tower."
+sector = "city"
+description = """
+The tower creaks and groans, almost as if it were muttering to
+itself.  There are windows displaying a full moon, reigning over
+the night sky.  The room is dark and there is almost a musty odor
+to it.  You are surprised that you can't detect any dust or dirt,
+although there are a couple of cobwebs in the corner."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9181
+
+  [[rooms.mob_resets]]
+  vnum = 9104
+  max = 2
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9102
+    inv_only = true
+
+[[rooms]]
+vnum = 9183
+name = "Elegant hallway."
+sector = "inside"
+description = """
+You are in a long, sprawling hallway connecting the eastern and
+western wings of the house.  There are several chairs and sofas in
+the hallway and some gorgeous, handwoven drapes."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9185
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9184
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9177
+
+[[rooms]]
+vnum = 9184
+name = "Conservatory"
+sector = "inside"
+description = """
+Here was the rehearsal and recital room for the residents of the
+estate.  There is a Steinway piano in the corner and various gilded
+instruments are on display in a glass cabinet."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9183
+
+[[rooms]]
+vnum = 9185
+name = "Office"
+sector = "inside"
+description = """
+You find yourself in a lavish office.  The desk is absolutely huge,
+at least ten feet by five feet and made of ebony and inlaid with
+mother of pearl.  A grandfather clock towers over the room,
+mechanically ticking and tocking the hours away."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9186
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9183
+
+[[rooms]]
+vnum = 9186
+name = "Eastern tower."
+sector = "city"
+description = """
+You are in the bottom part of a tower.  A draft brings a chill to
+your spine and causes creaks and groans.  Curtains flutter in the
+wind, causing quite a distraction.  When you go to shut the window,
+you see that the window is closed.  An old, wooden staircase leads
+up into darkness."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9185
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9187
+
+[[rooms]]
+vnum = 9187
+name = "Eastern tower."
+sector = "city"
+description = """
+The tower creaks and groans, almost as if it were muttering to
+itself.  There are windows displaying a full moon, reigning over
+the night sky.  The room is dark and there is almost a musty odor
+to it.  You are surprised that you can't detect any dust or dirt,
+although there are a couple of cobwebs in the corner."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9186
+
+  [[rooms.mob_resets]]
+  vnum = 9104
+  max = 2
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9103
+    inv_only = true
+
+[[rooms]]
+vnum = 9199
+name = "Mid-Air."
+sector = "field"
+description = """
+You slide down the moisture covered rock, gaining speed as you
+approach the cliff.  Realizing your foolish error, you madly claw
+at the rock, vainly trying to get a precious hold and save your
+worthless hide.  Next time, heed your conscience.
+
+You've fallen, and you can't get up!!!"""
+

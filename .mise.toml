@@ -3,25 +3,31 @@ go = "1.23"
 
 [tasks.build]
 description = "Build the ROT MUD server"
+dir = "go"
 run = "go build -o rotmud ./cmd/rotmud"
 
 [tasks.dev]
 description = "Build and run the ROT MUD server"
+dir = "go"
 run = "go build -o rotmud ./cmd/rotmud && ./rotmud"
 
 [tasks.test]
 description = "Run all tests"
+dir = "go"
 run = "go test ./..."
 
 [tasks.clean]
 description = "Clean build artifacts"
+dir = "go"
 run = "rm -f rotmud && go clean"
 
 [tasks.areconv]
 description = "Build the area converter tool"
-run = "go build -o areconv ./cmd/areconv"
+dir = "go"
+run = "go build -o areaconv ./cmd/areconv"
 
 [tasks.convert-areas]
 description = "Convert all ROM areas to TOML format"
 depends = ["areconv"]
-run = "./areconv --all ../area ./data/areas"
+dir = "go"
+run = "./areaconv --all ../C/rot/area ./data/areas"

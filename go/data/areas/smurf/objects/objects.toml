@@ -1,0 +1,145 @@
+[[objects]]
+vnum = 100
+keywords = ["bunch", "berries", "smurfberries"]
+short_desc = "a bunch of smurfberries"
+long_desc = "A bunch of delicious looking smurfberries lie here."
+item_type = "pill"
+level = 0
+weight = 20
+cost = 180
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 101
+keywords = ["glasses"]
+short_desc = "a pair of glasses"
+long_desc = "An odd pair of glasses has been left here."
+item_type = "clothing"
+level = 5
+weight = 20
+cost = 270
+wear_flags = ["take", "face"]
+extra_flags = ["glow"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+[[objects]]
+vnum = 102
+keywords = ["smurf", "hat"]
+short_desc = "a smurf hat"
+long_desc = "A smurf hat has been left here."
+item_type = "armor"
+level = 5
+weight = 20
+cost = 310
+wear_flags = ["take", "head"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 0
+
+[[objects]]
+vnum = 103
+keywords = ["axe", "small"]
+short_desc = "a small axe"
+long_desc = "A small axe has been dropped here."
+item_type = "weapon"
+level = 5
+weight = 20
+cost = 370
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 7
+
+[[objects]]
+vnum = 104
+keywords = ["necklace"]
+short_desc = "a small necklace"
+long_desc = "A small necklace is lying on the ground."
+item_type = "jewelry"
+level = 9
+weight = 20
+cost = 550
+wear_flags = ["take", "neck"]
+extra_flags = ["glow"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+[[objects]]
+vnum = 105
+keywords = ["pink", "potion"]
+short_desc = "a pink potion"
+long_desc = "A pink potion is barely visible on the ground."
+item_type = "potion"
+level = 0
+weight = 20
+cost = 160
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 106
+keywords = ["wand"]
+short_desc = "a small wand"
+long_desc = "A small wand lies on the ground."
+item_type = "wand"
+level = 5
+weight = 20
+cost = 540
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 107
+keywords = ["key"]
+short_desc = "a tiny key"
+long_desc = "A tiny key is lying on the ground."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 108
+keywords = ["well"]
+short_desc = "a smurf well"
+long_desc = "A small smurfy well is here."
+item_type = "fountain"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 109
+keywords = ["key"]
+short_desc = "a small key"
+long_desc = "A key to Gargamel's door lies here."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 110
+keywords = ["smurfy", "blue", "stone"]
+short_desc = "a {Bsmurfy{x blue stone"
+long_desc = "A {Bsmurfy{x blue stone sits here."
+item_type = "demon_stone"
+level = 0
+weight = 1
+cost = 10
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "melt_drop"]
+

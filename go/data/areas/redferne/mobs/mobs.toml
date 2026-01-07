@@ -1,0 +1,47 @@
+[[mobiles]]
+vnum = 7900
+keywords = ["oldstyle", "grand", "knight", "paladin"]
+short_desc = "the Grand Knight of paladins"
+long_desc = "The Grand Knight is standing here, waiting for someone to help."
+description = """
+The Knight is standing here, smiling at you. He is dressed all in
+white, blue and silver. He looks VERY strong, as he stands here, ready to
+help the innocent."""
+level = 57
+sex = "male"
+act_flags = ["npc", "stay_area", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 8
+
+[[mobiles]]
+vnum = 7902
+keywords = ["john", "god"]
+short_desc = "the Greater God John"
+long_desc = "The Greater God John is on the phone lambasting a real estate agent for mispelling his name."
+description = "Boy, is he upset!"
+level = 1
+sex = "male"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 0
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = -1
+

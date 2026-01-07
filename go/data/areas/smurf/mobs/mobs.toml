@@ -1,0 +1,296 @@
+[[mobiles]]
+vnum = 101
+keywords = ["oldstyle", "smurf"]
+short_desc = "a smurf"
+long_desc = "A smurf is singing and walking along."
+description = """
+A cute little blue smurf with a white hat and white boots.  You have a sudden
+urge to crush him."""
+level = 1
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 2
+  bonus = 0
+
+[[mobiles]]
+vnum = 102
+keywords = ["oldstyle", "smurf"]
+short_desc = "a smurf"
+long_desc = "A smurf is here, picking berries."
+description = """
+A small smurf is quietly picking berries.  He seems to hardly notice you."""
+level = 2
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 2
+  bonus = 0
+
+[[mobiles]]
+vnum = 103
+keywords = ["oldstyle", "brainy", "smurf"]
+short_desc = "Brainy Smurf"
+long_desc = "Brainy Smurf is here, mumbling something to himself."
+description = """
+Brainy Smurf has on his usual glasses.  Brainy Smurf isn't liked much by the
+other smurfs.  They fear his knowledge.  Knowledge is power!"""
+level = 6
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 104
+keywords = ["oldstyle", "handy", "smurf"]
+short_desc = "Handy Smurf"
+long_desc = "Handy Smurf is building something here."
+description = """
+Handy is always building something.  He never takes a break.  Why don't you
+give him a break, like all of his bones."""
+level = 6
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 105
+keywords = ["oldstyle", "sleepy", "smurf"]
+short_desc = "Sleepy Smurf"
+long_desc = "Sleepy Smurf is sleep walking here."
+description = """
+Sleepy never gets enough sleep.  You would think he goes to college.  I wonder
+if he has ever stayed up a whole night without sleeping."""
+level = 5
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 106
+keywords = ["oldstyle", "hefty", "smurf"]
+short_desc = "Hefty Smurf"
+long_desc = "Hefty Smurf is lifting weights here."
+description = """
+Hefty is a total health nut.  He lifts weights, eats right, and exercises all
+the time.  Won't do him much good when he's DEAD."""
+level = 5
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 107
+keywords = ["oldstyle", "grumpy", "smurf"]
+short_desc = "Grumpy Smurf"
+long_desc = "Grumpy Smurf is here, swearing."
+description = """
+Grumpy has never been happy in his whole life.  So why don't you just end it?"""
+level = 5
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 108
+keywords = ["oldstyle", "jokey", "smurf"]
+short_desc = "Jokey Smurf"
+long_desc = "Jokey Smurf is here, holding a present."
+description = """
+Jokey loves to give people presents.  Too bad the present explodes when opened.
+Oh well, to each his own."""
+level = 6
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 109
+keywords = ["oldstyle", "smurfette"]
+short_desc = "Smurfette"
+long_desc = "Smurfette is here, looking beautiful."
+description = """
+Smurfette is the cutest little smurf you've ever seen.  If only she were your
+size.  I wonder how much she charges the other smurfs."""
+level = 6
+sex = "female"
+act_flags = ["npc", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 21
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 110
+keywords = ["oldstyle", "papa", "smurf"]
+short_desc = "Papa Smurf"
+long_desc = "Papa Smurf is practicing magic here."
+description = """
+Yep, its Papa Smurf all right.  Red hat and boots and the funny little white
+beard.  Papa Smurf treats his fellow smurfs with dignity and respect.  That
+is why Papa Smurf is so popular among the ladies."""
+level = 19
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 111
+keywords = ["oldstyle", "gargamel"]
+short_desc = "Gargamel"
+long_desc = "Gargamel is here, cursing out the smurfs."
+description = """
+Gargamel has never done anything right in his life.  He has caught smurfs
+before but always lets them escape.  He brings true meaning to the word moron."""
+level = 19
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy", "cleric"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 112
+keywords = ["oldstyle", "azreal", "cat"]
+short_desc = "Azreal"
+long_desc = "Azreal is here, licking himself."
+description = """
+Gargamel's worthless cat.  He is just about as dumb as Gargamel.  He should
+just grab a smurf in his teeth and chew away."""
+level = 16
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+

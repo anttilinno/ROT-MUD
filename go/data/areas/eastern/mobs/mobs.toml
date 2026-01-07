@@ -1,0 +1,382 @@
+[[mobiles]]
+vnum = 5000
+keywords = ["oldstyle", "dervish", "raggity"]
+short_desc = "The dervish"
+long_desc = "The raggity dervish walks on aimlessly."
+description = """
+Dressed in loose fitting rags, this man looks like he could use
+some rest."""
+level = 10
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 5001
+keywords = ["oldstyle", "dervish", "large"]
+short_desc = "The dervish"
+long_desc = "The large dervish watches for signs of trouble."
+description = """
+Dressed in loose fitting rags, this man looks like he could use
+LOTS of rest."""
+level = 16
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5002
+keywords = ["oldstyle", "snake", "coral"]
+short_desc = "The coral snake"
+long_desc = "A brightly colored snake slithers along the sands."
+description = """
+This relatively harmless snake has bright alternating bands of red, yellow
+and black."""
+level = 7
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 5003
+keywords = ["oldstyle", "scorpion", "small"]
+short_desc = "The small scorpion"
+long_desc = "A small, red scorpion scuttles away at your approach."
+description = """
+The little tail is mighty dangerous for such a small creature."""
+level = 5
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 5004
+keywords = ["oldstyle", "worm", "giant", "purple"]
+short_desc = "The giant, purple sand worm"
+long_desc = "A giant, purple sand worm thrusts up out of the sand and attacks!"
+description = "He's big, mean, and purple. Watch out!"
+level = 36
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 5005
+keywords = ["oldstyle", "dragon", "brass"]
+short_desc = "the brass dragon"
+long_desc = "The brass dragon steps out of the darkness and says 'Hello'.\nThen adds to it, 'Prepare to die, have a nice day!'"
+level = 60
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "infrared", "flying"]
+alignment = 0
+special = "spec_breath_any"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5006
+keywords = ["oldstyle", "nomad", "leader"]
+short_desc = "The nomad leader"
+long_desc = "The nomad leader sits silently in prayer."
+description = """
+He is clad in silk robes lined with gold thread. At his side
+is a large, engraved cutlass. He has an especially haughty air
+about him."""
+level = 27
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy", "undead"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 5007
+keywords = ["oldstyle", "nomad", "commander"]
+short_desc = "The nomad commander"
+long_desc = "The nomad commander stands here staring suspiciously at you."
+description = """
+This is the nomad leader's second in command. His clothes are richly
+woven of silk and gold thread. A nasty cutlass hangs at his side."""
+level = 23
+sex = "male"
+act_flags = ["npc", "sentinel", "undead"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 5008
+keywords = ["oldstyle", "nomad", "warrior"]
+short_desc = "The nomad warrior"
+long_desc = "A proud nomad warrior stands here."
+level = 20
+sex = "male"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 5009
+keywords = ["oldstyle", "slave", "young"]
+short_desc = "The slave"
+long_desc = "A young slave sits here staring at you with pleading eyes."
+level = 5
+sex = "female"
+act_flags = ["npc", "sentinel", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 5010
+keywords = ["oldstyle", "dracolich", "lich"]
+short_desc = "The dracolich"
+long_desc = "A pile of bones rises up to form a skeletal dracolich."
+description = """
+The dracolich is now only bone with pieces of flesh hanging from it.
+Obviously it no longer fears death."""
+level = 60
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive", "undead"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_breath_fire"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 5011
+keywords = ["oldstyle", "drider", "drow"]
+short_desc = "The drider"
+long_desc = "The drider looks at you viciously while it draws its sword."
+description = """
+This half-spider, half-drow creature is a formidable opponent."""
+level = 15
+sex = "female"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5012
+keywords = ["oldstyle", "duergar", "dwarf"]
+short_desc = "The dark dwarf"
+long_desc = "A duergar is here mining precious stones with his pick."
+description = """
+The duergar could crush your head as easily as it does those rocks."""
+level = 10
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 5013
+keywords = ["oldstyle", "myconoid"]
+short_desc = "the myconoid"
+long_desc = "A myconoid lumbers along peacefully."
+description = """
+The myconoid looks something like a giant mushroom (and probably
+has the same effect)."""
+level = 12
+sex = "male"
+act_flags = ["npc", "stay_area", "wimpy"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 5014
+keywords = ["oldstyle", "myconoid", "shaman"]
+short_desc = "The myconoid shaman"
+long_desc = "A rather large myconoid stands here chanting in a strange tongue."
+description = "The shaman shoots spores into the air."
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "wimpy", "cleric"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 5015
+keywords = ["oldstyle", "dustdigger"]
+short_desc = "The dustdigger"
+long_desc = "A small oasis invites you to dive in."
+level = 13
+sex = "none"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 5017
+keywords = ["oldstyle", "camel"]
+short_desc = "The rabid camel"
+long_desc = "A very dangerous rabid camel snorts at you."
+description = "Don't mess with this animal."
+level = 10
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+

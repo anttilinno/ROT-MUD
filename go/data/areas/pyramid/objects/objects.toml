@@ -1,0 +1,499 @@
+[[objects]]
+vnum = 8700
+keywords = ["egyptian", "mace"]
+short_desc = "an egyptian mace"
+long_desc = "A hierogylph-engraved mace has been left here."
+item_type = "weapon"
+level = 11
+weight = 100
+cost = 370
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 10
+
+[[objects]]
+vnum = 8701
+keywords = ["sand", "robes"]
+short_desc = "sand-colored robes"
+long_desc = "Sand-colored robes lie here."
+item_type = "armor"
+level = 9
+weight = 50
+cost = 480
+wear_flags = ["take", "about"]
+
+  [objects.armor]
+  ac_pierce = 4
+  ac_bash = 4
+  ac_slash = 4
+  ac_exotic = 0
+
+[[objects]]
+vnum = 8702
+keywords = ["obsidian", "dirk"]
+short_desc = "an obsidian dirk"
+long_desc = "A flat dirk made of chipped obsidian lies here."
+item_type = "weapon"
+level = 29
+weight = 10
+cost = 910
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 8
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 8703
+keywords = ["cloth", "turban"]
+short_desc = "a dirty cloth turban"
+long_desc = "A dirty cloth turban has been forgotten here."
+item_type = "armor"
+level = 25
+weight = 100
+cost = 1470
+wear_flags = ["take", "head"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+[[objects]]
+vnum = 8704
+keywords = ["cloth", "wrappings"]
+short_desc = "some cloth wrappings"
+long_desc = "Long cloth wrappings lie on the ground in a pile."
+item_type = "armor"
+level = 19
+weight = 150
+cost = 1450
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 5
+  ac_slash = 5
+  ac_exotic = 0
+
+[[objects]]
+vnum = 8705
+keywords = ["bottle", "fluid"]
+short_desc = "a bottle of embalming fluid"
+long_desc = "A dusty bottle lies here on the ground."
+item_type = "potion"
+level = 5
+weight = 50
+cost = 270
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8706
+keywords = ["jar", "formaldehyde"]
+short_desc = "a jar of formaldehyde"
+long_desc = "A small jar lies here on the ground."
+item_type = "potion"
+level = 0
+weight = 60
+cost = 200
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8707
+keywords = ["ball", "fire"]
+short_desc = "a small hot ball of fire"
+long_desc = "A little ball of fire hovers in the air before your eyes."
+item_type = "light"
+level = 39
+weight = 100
+cost = 720
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 20
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+[[objects]]
+vnum = 8708
+keywords = ["stone", "scimitar"]
+short_desc = "a stone scimitar"
+long_desc = "A curved scimitar made of stone rests on the ground."
+item_type = "weapon"
+level = 39
+weight = 180
+cost = 1820
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "magic"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 8709
+keywords = ["stone", "key"]
+short_desc = "a stone key"
+long_desc = "A stone key has been dropped here."
+item_type = "key"
+level = 0
+weight = 150
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8710
+keywords = ["stone", "sarcophagus"]
+short_desc = "a mighty stone sarcophagus"
+long_desc = "A mighty stone sarcophagus lies in the center of the tomb."
+item_type = "container"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 8711
+keywords = ["dust"]
+short_desc = "some ancient dust"
+long_desc = "A small pile of dust is being scattered by the breeze."
+item_type = "trash"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8712
+keywords = ["scarab"]
+short_desc = "a small emerald scarab"
+long_desc = "A small emerald scarab lies here on the ground."
+item_type = "jewelry"
+level = 0
+weight = 50
+cost = 3000
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8713
+keywords = ["lamp"]
+short_desc = "the lamp"
+long_desc = "A small, tarnished, battered lamp has been dropped here."
+item_type = "staff"
+level = 39
+weight = 100
+cost = 4700
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "hum", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -5
+
+[[objects]]
+vnum = 8714
+keywords = ["ankh"]
+short_desc = "an ankh"
+long_desc = "A small brass ankh has been left here."
+item_type = "jewelry"
+level = 27
+weight = 90
+cost = 2100
+wear_flags = ["take", "hold"]
+extra_flags = ["bless", "anti_evil"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 8715
+keywords = ["book", "riddles"]
+short_desc = "a book of riddles"
+long_desc = "A medium-sized parchment book with well-worn pages lies here."
+item_type = "scroll"
+level = 19
+weight = 150
+cost = 1540
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8716
+keywords = ["lion", "paw"]
+short_desc = "a lion's paw"
+long_desc = "The mighty paw of a lion-like creature has been dropped here."
+item_type = "weapon"
+level = 51
+weight = 200
+cost = 4400
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 1
+
+[[objects]]
+vnum = 8717
+keywords = ["answer"]
+short_desc = "the answer"
+long_desc = "A small piece of parchment covered in hieroglyphics lies here."
+item_type = "key"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 8718
+keywords = ["treasure"]
+short_desc = "the treasure of the sphinx"
+long_desc = "The massive treasure of the sphinx lies here in a big pile."
+item_type = "money"
+level = 0
+weight = 200
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8719
+keywords = ["pile", "sand"]
+short_desc = "a pile of sand"
+long_desc = "You see a small pile of sand."
+item_type = "money"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8720
+keywords = ["curse", "mummy"]
+short_desc = "the curse of the mummy"
+long_desc = "Some fortunate soul has escaped the mummy's curse, for now."
+item_type = "trash"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "hold"]
+extra_flags = ["evil", "magic", "nodrop", "noremove"]
+
+  [[objects.affects]]
+  location = "move"
+  modifier = -100
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = -50
+
+  [[objects.affects]]
+  location = "con"
+  modifier = -3
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -3
+
+  [[objects.affects]]
+  location = "str"
+  modifier = -3
+
+[[objects]]
+vnum = 8721
+keywords = ["small", "elixir"]
+short_desc = "a small elixir"
+long_desc = "A small glass elixir lies under your feet."
+item_type = "potion"
+level = 31
+weight = 20
+cost = 1820
+wear_flags = ["take"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 8722
+keywords = ["golden", "mask"]
+short_desc = "a golden mask"
+long_desc = "A beautiful, intricately detailed mask has been forgotten here."
+item_type = "armor"
+level = 65
+weight = 100
+cost = 5500
+wear_flags = ["take", "face"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 3
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 30
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 25
+
+[[objects]]
+vnum = 8723
+keywords = ["diamond"]
+short_desc = "the diamond"
+long_desc = ""
+item_type = "trash"
+level = 0
+weight = 50
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 8724
+keywords = ["sun", "wand"]
+short_desc = "a blazing sun wand"
+long_desc = "A small length of brass shines here with its own light."
+item_type = "wand"
+level = 47
+weight = 100
+cost = 29800
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic"]
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -2
+
+[[objects]]
+vnum = 8725
+keywords = ["sandy", "ring"]
+short_desc = "a sandy-colored ring"
+long_desc = "A small sandy-colored ring has been carelessly dropped here."
+item_type = "jewelry"
+level = 39
+weight = 50
+cost = 1300
+wear_flags = ["take", "finger"]
+extra_flags = ["hum", "magic"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 20
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+[[objects]]
+vnum = 8726
+keywords = ["golden", "sphinx"]
+short_desc = "a small golden sphinx"
+long_desc = "A small golden sphinx glints in the light."
+item_type = "treasure"
+level = 9
+weight = 50
+cost = 550
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+[[objects]]
+vnum = 8727
+keywords = ["sphinxian", "leggings"]
+short_desc = "a pair of sphinxian leggings"
+long_desc = "Massive leggings formed from the body of a sphinx stand here."
+item_type = "armor"
+level = 63
+weight = 200
+cost = 7800
+wear_flags = ["take", "legs"]
+extra_flags = ["magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 9
+  ac_bash = 9
+  ac_slash = 9
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 30
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+[[objects]]
+vnum = 8728
+keywords = ["rune", "stone"]
+short_desc = "a rune covered stone"
+long_desc = "A rune covered stone sits here."
+item_type = "demon_stone"
+level = 0
+weight = 1
+cost = 100
+wear_flags = ["take", "hold"]
+extra_flags = ["evil", "melt_drop"]
+

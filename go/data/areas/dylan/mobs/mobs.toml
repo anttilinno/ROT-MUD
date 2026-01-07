@@ -1,0 +1,170 @@
+[[mobiles]]
+vnum = 9101
+keywords = ["oldstyle", "harpy"]
+short_desc = "the screaming, filthy harpy"
+long_desc = "The screaming, filthy harpy claws madly at your face!"
+description = """
+The harpy looks at you with blood in her eyes.  Her entire body is
+caked in filth and grime and she stinks to high heaven.  Her razor-
+sharp talons flex as she considers you for her dinner."""
+level = 40
+sex = "female"
+act_flags = ["npc", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9102
+keywords = ["oldstyle", "harpy", "leader"]
+short_desc = "the screaming harpy leader"
+long_desc = "The screaming harpy leader tries to scratch your eyes out!"
+description = """
+The harpy leader looks at you and grins menacingly.  She stretches
+her wings and you see insects crawling around them.  Her hair is
+matted and greasy and you are sickened by the stench that pervades
+her presence."""
+level = 46
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9103
+keywords = ["oldstyle", "air", "elemental"]
+short_desc = "the ghostly air elemental"
+long_desc = "The ghostly air elemental."
+description = """
+The air elemental is hard to see.  You know that it is there
+because objects behind it seem to waver and are slightly blurred."""
+level = 49
+sex = "none"
+act_flags = ["npc", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "sneak", "hide"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 9104
+keywords = ["oldstyle", "mysterious", "efreeti"]
+short_desc = "the mysterious efreeti"
+long_desc = "The mysterious efreeti grins in delight at its new prey."
+description = """
+The efreeti towers menacingly over you.  It is dressed in the
+finest ghostly silks and a headdress with an elaborate brooch."""
+level = 53
+sex = "none"
+act_flags = ["npc", "scavenger"]
+affected_by = ["detect_invis", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 650
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 9105
+keywords = ["oldstyle", "roc"]
+short_desc = "the gigantic roc"
+long_desc = "The gigantic roc."
+description = """
+This bird has a wingspan that stretches several spear-lengths.  Itmoves surprisingly fast for something of its size."""
+level = 48
+sex = "female"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 6
+
+[[mobiles]]
+vnum = 9106
+keywords = ["oldstyle", "roc"]
+short_desc = "the gigantic roc"
+long_desc = "The gigantic roc stares menacingly at you."
+description = """
+This bird has a wingspan that stretches several spear-lengths.  It
+moves surprisingly fast for something of its size."""
+level = 55
+sex = "male"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 703
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 8
+
+[[mobiles]]
+vnum = 9107
+keywords = ["oldstyle", "wicked", "witch"]
+short_desc = "the ugly, wicked witch"
+long_desc = "The ugly, wicked witch cackles maniacally."
+description = """
+The witch has jet black hair and sickly green skin.  She is covered
+with warts and boils.  Her nails are long and sharp and look like
+they would be quite painful.  Her eyes pierce your very soul."""
+level = 61
+sex = "female"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 928
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 9
+

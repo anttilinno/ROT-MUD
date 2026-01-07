@@ -1,0 +1,2668 @@
+[[rooms]]
+vnum = 19900
+name = "Path to the Fanatics' Tower"
+sector = "city"
+description = """
+You hear a strange droning sound from somewhere nearby.  A huge tower bustling
+with activity lies to the north.
+   Off to the left, a big sign is stuck in the ground."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19901
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3503
+
+[[rooms]]
+vnum = 19901
+name = "Entrance to the Fanatics' Tower"
+sector = "city"
+description = """
+You are standing in front of the Fanatics' Tower.  The droning noise is coming
+from some robed fanatics walking in a circle in front of the door to the tower.
+Some guys are sitting off to the left whispering."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19902
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19900
+
+[[rooms]]
+vnum = 19902
+name = "A safe room with stairs leading up"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up to the next level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19901
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19903
+
+[[rooms]]
+vnum = 19903
+name = "A safe room with stairs leading down."
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19904
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19902
+
+[[rooms]]
+vnum = 19904
+name = "First story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the first story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 20 foot fall.
+It is slightly drafty up here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19903
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19905
+
+  [[rooms.mob_resets]]
+  vnum = 19914
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 19902
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 19931
+  max = 3
+
+[[rooms]]
+vnum = 19905
+name = "Fanatics' Tower:  Floor 1"
+sector = "city"
+description = """
+You are on the first story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 20 foot fall.
+It is slightly drafty up here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19906
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19904
+
+  [[rooms.mob_resets]]
+  vnum = 19914
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 19931
+  max = 2
+
+[[rooms]]
+vnum = 19906
+name = "Fanatics' Tower:  Floor 1"
+sector = "city"
+description = """
+You are on the first story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 20 foot fall.
+It is slightly drafty up here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19908
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19907
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19905
+
+  [[rooms.mob_resets]]
+  vnum = 19902
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 19914
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 19931
+  max = 3
+
+[[rooms]]
+vnum = 19907
+name = "Chamber of the 11th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by Artema in 1996.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19906
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19927
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19906
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19910
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19950
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19908
+name = "A safe room with stairs leading up"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up to the next level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19906
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19909
+
+[[rooms]]
+vnum = 19909
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19910
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19908
+
+[[rooms]]
+vnum = 19910
+name = "Second story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the second story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 20 foot fall.
+It is slightly drafty up here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19909
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19911
+
+  [[rooms.mob_resets]]
+  vnum = 19903
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19915
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19932
+  max = 5
+
+[[rooms]]
+vnum = 19911
+name = "Fanatics' Tower:  Floor 2"
+sector = "city"
+description = """
+You are on the second story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 40 foot fall.
+The wind is picking up."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19910
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19912
+
+  [[rooms.mob_resets]]
+  vnum = 19903
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19915
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19932
+  max = 5
+
+[[rooms]]
+vnum = 19912
+name = "Fanatics' Tower:  Floor 2"
+sector = "city"
+description = """
+You are on the second story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 40 foot fall.
+The wind is picking up."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19911
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19913
+
+  [[rooms.mob_resets]]
+  vnum = 19903
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19915
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19932
+  max = 5
+
+[[rooms]]
+vnum = 19913
+name = "Fanatics' Tower:  Floor 2"
+sector = "city"
+description = """
+You are on the second story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 40 foot fall.
+The wind is picking up."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19912
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19914
+
+  [[rooms.mob_resets]]
+  vnum = 19903
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19915
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19932
+  max = 5
+
+[[rooms]]
+vnum = 19914
+name = "Fanatics' Tower:  Floor 2"
+sector = "city"
+description = """
+You are on the second story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 40 foot fall.
+The wind is picking up."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19916
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19913
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19915
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19903
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19915
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19932
+  max = 5
+
+[[rooms]]
+vnum = 19915
+name = "Chamber of the 10th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 11th in 1896.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19914
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19928
+  max = 2
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19906
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19910
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19950
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19916
+name = "A safe room with stairs leading up"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19914
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19917
+
+[[rooms]]
+vnum = 19917
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19918
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19916
+
+[[rooms]]
+vnum = 19918
+name = "Third story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the third story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 60 foot fall.
+A draft chills you to the bones.
+Edgar's corpse is rotting in the corner."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19917
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19919
+
+  [[rooms.mob_resets]]
+  vnum = 19904
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19916
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19933
+  max = 5
+
+[[rooms]]
+vnum = 19919
+name = "Fanatics' Tower:  Floor 3"
+sector = "city"
+description = """
+You are on the third story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 60 foot fall.
+A draft chills you to the bones."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19920
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19918
+
+  [[rooms.mob_resets]]
+  vnum = 19904
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19916
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19933
+  max = 5
+
+[[rooms]]
+vnum = 19920
+name = "Fanatics' Tower:  Floor 3"
+sector = "city"
+description = """
+You are on the third story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 60 foot fall.
+A draft chills you to the bones."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19921
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19919
+
+  [[rooms.mob_resets]]
+  vnum = 19904
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19916
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19933
+  max = 5
+
+[[rooms]]
+vnum = 19921
+name = "Fanatics' Tower:  Floor 3"
+sector = "city"
+description = """
+You are on the third story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 60 foot fall.
+A draft chills you to the bones."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19922
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19920
+
+  [[rooms.mob_resets]]
+  vnum = 19904
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19916
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19933
+  max = 5
+
+[[rooms]]
+vnum = 19922
+name = "Fanatics' Tower:  Floor 3"
+sector = "city"
+description = """
+You are on the third story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 60 foot fall.
+A draft chills you to the bones."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19924
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19923
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19921
+
+  [[rooms.mob_resets]]
+  vnum = 19904
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19916
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19933
+  max = 5
+
+[[rooms]]
+vnum = 19923
+name = "Chamber of the 9th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 10th in 1796.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19922
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19928
+  max = 2
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19906
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19910
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19950
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19924
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19922
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19925
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19909
+
+[[rooms]]
+vnum = 19925
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to a previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19926
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19924
+
+[[rooms]]
+vnum = 19926
+name = "Fourth story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the fourth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 80 foot fall.
+Chilling gusts of wind slow your progress."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19925
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19927
+
+  [[rooms.mob_resets]]
+  vnum = 19905
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19917
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19934
+  max = 5
+
+[[rooms]]
+vnum = 19927
+name = "Fanatics' Tower:  Floor 4"
+sector = "city"
+description = """
+You are on the fourth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 80 foot fall.
+Chilling gusts of wind slow your progress."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19926
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19928
+
+  [[rooms.mob_resets]]
+  vnum = 19905
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19917
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19934
+  max = 5
+
+[[rooms]]
+vnum = 19928
+name = "Fanatics' Tower:  Floor 4"
+sector = "city"
+description = """
+You are on the fourth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 80 foot fall.
+Chilling gusts of wind slow your progress."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19927
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19929
+
+  [[rooms.mob_resets]]
+  vnum = 19905
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19917
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19934
+  max = 5
+
+[[rooms]]
+vnum = 19929
+name = "Fanatics' Tower:  Floor 4"
+sector = "city"
+description = """
+You are on the fourth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 80 foot fall.
+Chilling gusts of wind slow your progress.
+The corpse of Realm is here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19928
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19930
+
+  [[rooms.mob_resets]]
+  vnum = 19905
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19917
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19934
+  max = 5
+
+[[rooms]]
+vnum = 19930
+name = "Fanatics' Tower:  Floor 4"
+sector = "city"
+description = """
+You are on the fourth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 80 foot fall.
+Chilling gusts of wind slow your progress."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19932
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19929
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19931
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19905
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19917
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19934
+  max = 5
+
+[[rooms]]
+vnum = 19931
+name = "Chamber of the 8th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 9th in 1696.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19930
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19929
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19907
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19911
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19951
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19932
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19930
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19933
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19917
+
+[[rooms]]
+vnum = 19933
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to a previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19934
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19932
+
+[[rooms]]
+vnum = 19934
+name = "Fifth story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the fifth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 100 foot fall.
+You're being sprayed by a thick fog, it feels so good!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19933
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19935
+
+  [[rooms.mob_resets]]
+  vnum = 19906
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19918
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19935
+  max = 5
+
+[[rooms]]
+vnum = 19935
+name = "Fanatics' Tower:  Floor 5"
+sector = "city"
+description = """
+You are on the fifth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 100 foot fall.
+You're being sprayed by a thick fog, it feels so good!
+Gau's corpse is here, being weeped over by all small animals."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19936
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19934
+
+  [[rooms.mob_resets]]
+  vnum = 19906
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19918
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19935
+  max = 5
+
+[[rooms]]
+vnum = 19936
+name = "Fanatics' Tower:  Floor 5"
+sector = "city"
+description = """
+You are on the fifth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 100 foot fall.
+You're being sprayed by a thick fog, it feels so good!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19937
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19935
+
+  [[rooms.mob_resets]]
+  vnum = 19906
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19918
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19935
+  max = 5
+
+[[rooms]]
+vnum = 19937
+name = "Fanatics' Tower:  Floor 5"
+sector = "city"
+description = """
+You are on the fifth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 100 foot fall.
+You're being sprayed by a thick fog, it feels so good!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19938
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19936
+
+  [[rooms.mob_resets]]
+  vnum = 19906
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19918
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19935
+  max = 5
+
+[[rooms]]
+vnum = 19938
+name = "Fanatics' Tower:  Floor 5"
+sector = "city"
+description = """
+You are on the fifth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 100 foot fall.
+You're being sprayed by a thick fog, it feels so good!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19940
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19939
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19937
+
+  [[rooms.mob_resets]]
+  vnum = 19906
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19918
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19935
+  max = 5
+
+[[rooms]]
+vnum = 19939
+name = "Chamber of the 7th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 8th in 1596.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19938
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19929
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19907
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19911
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19951
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19940
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19938
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19941
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19925
+
+[[rooms]]
+vnum = 19941
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to a previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19942
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19940
+
+[[rooms]]
+vnum = 19942
+name = "Sixth story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the sixth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 120 foot fall.
+You're up pretty high, but except the occasional refreshing mist, the
+wind is quite calm."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19941
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19943
+
+  [[rooms.mob_resets]]
+  vnum = 19907
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19919
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19936
+  max = 5
+
+[[rooms]]
+vnum = 19943
+name = "Fanatics' Tower:  Floor 6"
+sector = "city"
+description = """
+You are on the sixth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 120 foot fall.
+You're up pretty high, but except the occasional refreshing mist, the
+wind is quite calm."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19942
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19944
+
+  [[rooms.mob_resets]]
+  vnum = 19907
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19919
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19936
+  max = 5
+
+[[rooms]]
+vnum = 19944
+name = "Fanatics' Tower:  Floor 6"
+sector = "city"
+description = """
+You are on the sixth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 120 foot fall.
+You're up pretty high, but except the occasional refreshing mist, the
+wind is quite calm."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19943
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19945
+
+  [[rooms.mob_resets]]
+  vnum = 19907
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19919
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19936
+  max = 5
+
+[[rooms]]
+vnum = 19945
+name = "Fanatics' Tower:  Floor 6"
+sector = "city"
+description = """
+You are on the sixth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 120 foot fall.
+You're up pretty high, but except the occasional refreshing mist, the
+wind is quite calm."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19944
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19946
+
+  [[rooms.mob_resets]]
+  vnum = 19907
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19919
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19936
+  max = 5
+
+[[rooms]]
+vnum = 19946
+name = "Fanatics' Tower:  Floor 6"
+sector = "city"
+description = """
+You are on the sixth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 120 foot fall.
+You're up pretty high, but except the occasional refreshing mist, the
+wind is quite calm.
+Setzer's corpse is here, slowly rotting."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19948
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19945
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19947
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19907
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19919
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19936
+  max = 5
+
+[[rooms]]
+vnum = 19947
+name = "Chamber of the 6th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 7th in 1496.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19946
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19929
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19908
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19912
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19952
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19948
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19946
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19949
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19933
+
+[[rooms]]
+vnum = 19949
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19950
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19948
+
+[[rooms]]
+vnum = 19950
+name = "Seventh story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the seventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 140 foot fall.
+The wind at this hight is deafening... Hell you're 140 feet up!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19949
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19951
+
+  [[rooms.mob_resets]]
+  vnum = 19908
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19937
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19920
+  max = 5
+
+  [[rooms.obj_resets]]
+  vnum = 19915
+  max = 1
+
+[[rooms]]
+vnum = 19951
+name = "Fanatics' Tower:  Floor 7"
+sector = "city"
+description = """
+You are on the seventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 140 foot fall.
+The wind at this hight is deafening... Hell you're 140 feet up!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19952
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19950
+
+  [[rooms.mob_resets]]
+  vnum = 19908
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19920
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19937
+  max = 5
+
+[[rooms]]
+vnum = 19952
+name = "Fanatics' Tower:  Floor 7"
+sector = "city"
+description = """
+You are on the seventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 140 foot fall.
+The wind at this hight is deafening... Hell you're 140 feet up!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19953
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19951
+
+  [[rooms.mob_resets]]
+  vnum = 19908
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19920
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19937
+  max = 5
+
+[[rooms]]
+vnum = 19953
+name = "Fanatics' Tower:  Floor 7"
+sector = "city"
+description = """
+You are on the seventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 140 foot fall.
+The wind at this hight is deafening... Hell you're 140 feet up!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19954
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19952
+
+  [[rooms.mob_resets]]
+  vnum = 19908
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19920
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19937
+  max = 5
+
+[[rooms]]
+vnum = 19954
+name = "Fanatics' Tower:  Floor 7"
+sector = "city"
+description = """
+You are on the seventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 140 foot fall.
+The wind at this hight is deafening... Hell you're 140 feet up!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19956
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19955
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19953
+
+  [[rooms.mob_resets]]
+  vnum = 19908
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19920
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19937
+  max = 5
+
+[[rooms]]
+vnum = 19955
+name = "Chamber of the 5th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 6th in 1396.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19954
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19929
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19908
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19912
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19952
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19956
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19954
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19957
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19941
+
+[[rooms]]
+vnum = 19957
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19958
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19956
+
+[[rooms]]
+vnum = 19958
+name = "Eighth story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the eighth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 160 foot fall.
+You're being soaked with rain!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19957
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19959
+
+  [[rooms.mob_resets]]
+  vnum = 19909
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19921
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19938
+  max = 5
+
+[[rooms]]
+vnum = 19959
+name = "Fanatics' Tower:  Floor 8"
+sector = "city"
+description = """
+You are on the eighth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 160 foot fall.
+You're being soaked with rain!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19958
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19960
+
+  [[rooms.mob_resets]]
+  vnum = 19909
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19921
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19938
+  max = 5
+
+[[rooms]]
+vnum = 19960
+name = "Fanatics' Tower:  Floor 8"
+sector = "city"
+description = """
+You are on the eighth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 160 foot fall.
+You're being soaked with rain!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19959
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19961
+
+  [[rooms.mob_resets]]
+  vnum = 19909
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19921
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19938
+  max = 5
+
+[[rooms]]
+vnum = 19961
+name = "Fanatics' Tower:  Floor 8"
+sector = "city"
+description = """
+You are on the eighth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 160 foot fall.
+You're being soaked with rain!
+Mog's frail little corpse is here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19960
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19962
+
+  [[rooms.mob_resets]]
+  vnum = 19909
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19921
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19938
+  max = 5
+
+[[rooms]]
+vnum = 19962
+name = "Fanatics' Tower:  Floor 8"
+sector = "city"
+description = """
+You are on the eighth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 160 foot fall.
+You're being soaked with rain!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19964
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19961
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19963
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19909
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19921
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19938
+  max = 5
+
+[[rooms]]
+vnum = 19963
+name = "Chamber of the 4th {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 5th in 1296.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a manacing manner."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19962
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19930
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19908
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19912
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19952
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19964
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19962
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19965
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19949
+
+[[rooms]]
+vnum = 19965
+name = "A safe room with stairs."
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19966
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19964
+
+[[rooms]]
+vnum = 19966
+name = "Ninth story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the ninth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 180 foot fall.
+The wind is mauling you with raindrops going at 200 Kph!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19965
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19967
+
+  [[rooms.mob_resets]]
+  vnum = 19910
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19922
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19939
+  max = 5
+
+[[rooms]]
+vnum = 19967
+name = "Fanatics' Tower:  Floor 9"
+sector = "city"
+description = """
+You are on the ninth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 180 foot fall.
+The wind is mauling you with raindrops going at 200 Kph!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19968
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19966
+
+  [[rooms.mob_resets]]
+  vnum = 19910
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19922
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19939
+  max = 5
+
+[[rooms]]
+vnum = 19968
+name = "Fanatics' Tower:  Floor 9"
+sector = "city"
+description = """
+You are on the ninth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 180 foot fall.
+The wind is mauling you with raindrops going at 200 Kph!
+A corpse used to be here, but has been worn down by the wind."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19969
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19967
+
+  [[rooms.mob_resets]]
+  vnum = 19910
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19922
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19939
+  max = 5
+
+[[rooms]]
+vnum = 19969
+name = "Fanatics' Tower:  Floor 9"
+sector = "city"
+description = """
+You are on the ninth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 180 foot fall.
+The wind is mauling you with raindrops going at 200 Kph!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19970
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19968
+
+  [[rooms.mob_resets]]
+  vnum = 19910
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19922
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19939
+  max = 5
+
+[[rooms]]
+vnum = 19970
+name = "Fanatics' Tower:  Floor 9"
+sector = "city"
+description = """
+You are on the ninth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 180 foot fall.
+The wind is mauling you with raindrops going at 200 Kph!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19972
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19971
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19969
+
+  [[rooms.mob_resets]]
+  vnum = 19910
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19922
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19939
+  max = 5
+
+[[rooms]]
+vnum = 19971
+name = "Chamber of the 3rd {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 4th in 1196.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19970
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19930
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19909
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19913
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19953
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19972
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19970
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19973
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19957
+
+[[rooms]]
+vnum = 19973
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19974
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19972
+
+[[rooms]]
+vnum = 19974
+name = "Tenth story of the Fanatics' Tower"
+sector = "city"
+description = """
+You are on the tenth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 200 foot fall.
+At 200 feet up your nose & ears start to bleed, and the air is getting thin."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19973
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19975
+
+  [[rooms.mob_resets]]
+  vnum = 19911
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19923
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19940
+  max = 5
+
+[[rooms]]
+vnum = 19975
+name = "Fanatics' Tower:  Floor 10"
+sector = "city"
+description = """
+You are on the tenth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 200 foot fall.
+At 200 feet up your nose & ears start to bleed, and the air is getting thin."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19974
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19976
+
+  [[rooms.mob_resets]]
+  vnum = 19911
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19923
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19940
+  max = 5
+
+[[rooms]]
+vnum = 19976
+name = "Fanatics' Tower:  Floor 10"
+sector = "city"
+description = """
+You are on the tenth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 200 foot fall.
+At 200 feet up your nose & ears start to bleed, and the air is getting thin."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19975
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19977
+
+  [[rooms.mob_resets]]
+  vnum = 19911
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19923
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19940
+  max = 5
+
+[[rooms]]
+vnum = 19977
+name = "Fanatics' Tower:  Floor 10"
+sector = "city"
+description = """
+You are on the tenth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 200 foot fall.
+At 200 feet up your nose & ears start to bleed, and the air is getting thin."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19976
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19978
+
+  [[rooms.mob_resets]]
+  vnum = 19911
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19923
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19940
+  max = 5
+
+[[rooms]]
+vnum = 19978
+name = "Fanatics' Tower:  Floor 10"
+sector = "city"
+description = """
+You are on the tenth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 200 foot fall.
+At 200 feet up your nose & ears start to bleed, and the air is getting thin."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19980
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19977
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19979
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19911
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19923
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19940
+  max = 5
+
+[[rooms]]
+vnum = 19979
+name = "Chamber of the 2nd {8Draconian {4ArchMage{0"
+sector = "inside"
+description = """
+This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
+by the 3rd in 1096.  But now, he is nothing more than an avatar of the real
+thing.  Still very powerful, he towers over you in a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19978
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19930
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19909
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19913
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19953
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 19980
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19978
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19981
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19965
+
+[[rooms]]
+vnum = 19981
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19982
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19980
+
+[[rooms]]
+vnum = 19982
+name = "Eleventh story of the Fanatics' Tower"
+sector = "desert"
+description = """
+You are on the eleventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 220 foot fall.
+The wind is tearing at your clothing and pulling you toward the railing!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19981
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19983
+
+  [[rooms.mob_resets]]
+  vnum = 19912
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19924
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19941
+  max = 5
+
+[[rooms]]
+vnum = 19983
+name = "Fanatics' Tower:  Floor 11"
+sector = "desert"
+description = """
+You are on the eleventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 220 foot fall.
+The wind is tearing at your clothing and pulling you toward the railing!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19984
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19982
+
+  [[rooms.mob_resets]]
+  vnum = 19912
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19924
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19941
+  max = 5
+
+[[rooms]]
+vnum = 19984
+name = "Fanatics' Tower:  Floor 11"
+sector = "desert"
+description = """
+You are on the eleventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 220 foot fall.
+The wind is tearing at your clothing and pulling you toward the railing!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19985
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19983
+
+  [[rooms.mob_resets]]
+  vnum = 19912
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19924
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19941
+  max = 5
+
+[[rooms]]
+vnum = 19985
+name = "Fanatics' Tower:  Floor 11"
+sector = "desert"
+description = """
+You are on the eleventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 220 foot fall.
+The wind is tearing at your clothing and pulling you toward the railing!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19986
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19984
+
+  [[rooms.mob_resets]]
+  vnum = 19912
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19924
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19941
+  max = 5
+
+[[rooms]]
+vnum = 19986
+name = "Fanatics' Tower:  Floor 11"
+sector = "desert"
+description = """
+You are on the eleventh story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 220 foot fall.
+The wind is tearing at your clothing and pulling you toward the railing!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19987
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19985
+
+  [[rooms.mob_resets]]
+  vnum = 19912
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19924
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 19941
+  max = 5
+
+[[rooms]]
+vnum = 19987
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19986
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19988
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19973
+
+[[rooms]]
+vnum = 19988
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the previous level of the tower."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19989
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19987
+
+[[rooms]]
+vnum = 19989
+name = "Twelfth story of the Fanatics' Tower"
+sector = "desert"
+description = """
+You are on the twelfth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 240 foot fall.
+The wind is ROARING and pulling you toward the edge of the railing!  Fire
+and ice are bolting through the clouds where lighting normally should be..."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19988
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19990
+
+  [[rooms.mob_resets]]
+  vnum = 19913
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19925
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19942
+  max = 5
+
+[[rooms]]
+vnum = 19990
+name = "Fanatics' Tower:  Floor 12"
+sector = "desert"
+description = """
+You are on the twelfth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 240 foot fall.
+The wind is ROARING and pulling you toward the edge of the railing!  Fire
+and ice are bolting through the clouds where lighting normally should be..."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19989
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19991
+
+  [[rooms.mob_resets]]
+  vnum = 19913
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19925
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19942
+  max = 5
+
+[[rooms]]
+vnum = 19991
+name = "Fanatics' Tower:  Floor 12"
+sector = "desert"
+description = """
+You are on the twelfth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 240 foot fall.
+The wind is ROARING and pulling you toward the edge of the railing!  Fire
+and ice are bolting through the clouds where lighting normally should be..."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19990
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19992
+
+  [[rooms.mob_resets]]
+  vnum = 19913
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19925
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19942
+  max = 5
+
+[[rooms]]
+vnum = 19992
+name = "Fanatics' Tower:  Floor 12"
+sector = "desert"
+description = """
+You are on the twelfth story of the Fanatics' Tower.  The south wall is non-
+exsistant, only a railing is between you and a 240 foot fall.
+The wind is ROARING and pulling you toward the edge of the railing!  Fire
+and ice are bolting through the clouds where lighting normally should be..."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19994
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19991
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19993
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19913
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19925
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 19942
+  max = 5
+
+[[rooms]]
+vnum = 19993
+name = "Healing room."
+sector = "inside"
+description = """
+This room is for all the weary travelers about to journey up to the first
+{8Draconian {4ArchMage{0.  An Adept of Eriana is here telling people that
+asking for restores is the way {1*not*{0 to get one!  }:>"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19992
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 19926
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19914
+    wear_loc = "hands"
+
+[[rooms]]
+vnum = 19994
+name = "A safe room with stairs leading down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 19995
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19992
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19981
+
+[[rooms]]
+vnum = 19995
+name = "A safe room with stairs leading up and down"
+sector = "inside"
+description = """
+You are in a room, safe from all the scary mobs outside.  A staircase is in
+the back of the room leading up and down to the other levels of the tower."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 19994
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19996
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19903
+
+[[rooms]]
+vnum = 19996
+name = "The top of the Fanatics' Tower"
+sector = "city"
+description = """
+You have entered the chamber of the avatar of the very 1st {8Draconian
+{4ArchMage{0 beaten by the 2nd in 996.  But now, he is nothing more than
+an avatar of the real thing.  Still very powerful, he towers over you in
+a menacing manner."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 19997
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19995
+
+  [[rooms.mob_resets]]
+  vnum = 19901
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19904
+    wear_loc = "neck1"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19904
+    wear_loc = "neck2"
+
+[[rooms]]
+vnum = 19997
+name = "Balcony over the Fanatics' Tower"
+sector = "city"
+description = """
+From 275 feet up, too the east, west, and south you can see almost all
+of Thoth's Realm!  To the north is the chamber of the first {8Draconian
+{4ArchMage{0, long deafeated he is back as his undead Avatar."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19996
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19901
+
+[[rooms]]
+vnum = 19998
+name = "The top of Thoth's Great Mountain."
+sector = "mountain"
+description = """
+A Mystical Waterfall of IceWine bubbles from the ground here and spills over
+the side of the mountain.  You would think the view here would be better, but
+you're over the 5th layer of clouds and all you see is white.  Far below is a
+ledge... Dare you risk the jump?"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 19997
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 19999
+
+[[rooms]]
+vnum = 19999
+name = "Cliff looking over all of Lestat's Realm"
+sector = "mountain"
+description = """
+You are the side of a mountain that reaches up past what even
+an Avian could see.  The view here is spectacular; you are right under
+the second line of clouds, allowing you to see most all of the Realms
+of {DDarkness{x!  This is the perch used by all the Dragon ArchMages in
+the past. The wind is chilling You to the bones, but for some strange
+reason.. You don't care!  You feel totally at peace; all your senses
+seem to expand infinitely, and you feel is if you're on
+a ({3Magical{0) high."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 19998
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3014
+
+  [[rooms.mob_resets]]
+  vnum = 19900
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19903
+    wear_loc = "about"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19901
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19904
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19904
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19905
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19902
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19917
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 19918
+    inv_only = true
+
+  [[rooms.obj_resets]]
+  vnum = 19900
+  max = 1
+

@@ -1,0 +1,2037 @@
+[[rooms]]
+vnum = 13500
+name = "Waterfall Pool"
+sector = "water_noswim"
+description = """
+You are floating on the calm waters of a large pool just below
+a large waterfall.  A river runs off to the east, while the plains
+are to the south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13501
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13619
+
+[[rooms]]
+vnum = 13501
+name = "On the River"
+sector = "water_noswim"
+description = """
+You are floating along a river.  The current here is weak but is slowly
+carrying you eastward.  The banks to the north and south are choked with
+a thick growth of trees, and do not seem to provide anyplace to land.
+The river flows off to the east as far as the eye can see, and to the
+west to a large waterfall."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13502
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13500
+
+[[rooms]]
+vnum = 13502
+name = "On the River"
+sector = "water_noswim"
+description = """
+You are floating along a river.  The current here is weak but is slowly
+carrying you eastward.  The south bank is choked with a thick growth
+of trees, and does not seem to provide anyplace to land.  On the north
+bank, you can make out a small trail leading up the side of a mountain,
+but a sign reading "{RClosed For Construction{x" blocks your way.
+The river flows off to the west as far as the eye can see, and to the
+east the river takes a sharp turn north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13513
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13503
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13501
+
+[[rooms]]
+vnum = 13503
+name = "A bend in the River"
+sector = "water_noswim"
+description = """
+You are floating along a river.  The current here is weak but is slowly
+carrying you northward.  The banks to the east and south are choked with
+a thick growth of trees, and do not seem to provide anyplace to land.
+The river flows off to the north and west as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13504
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13502
+
+[[rooms]]
+vnum = 13504
+name = "On the River"
+sector = "water_noswim"
+description = """
+You are floating along a river.  The current here is weak but is slowly
+carrying you northward.  The east bank is choked with a thick growth
+of trees, and does not seem to provide anyplace to land.  The west bank
+is a sheer cliff of the mountainside rising thousands of feet straight
+up. To the north and south, the river takes sharp turns to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13505
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13503
+
+[[rooms]]
+vnum = 13505
+name = "A bend in the River"
+sector = "water_noswim"
+description = """
+You are floating along a river.  The current here is weak but is slowly
+carrying you westward.  The banks to the east and north are choked with
+a thick growth of trees, and do not seem to provide anyplace to land.
+The river flows off to the south as far as the eye can see.  To the west
+you see yet another bend in the river."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13504
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13506
+
+[[rooms]]
+vnum = 13506
+name = "A bend in the River"
+sector = "water_noswim"
+description = """
+You are floating along a river.  The current here is weak but is slowly
+carrying you northward.  The west bank is choked with a thick growth
+of trees, and does not seem to provide anyplace to land.  On the south
+bank, you can make out a small trail leading up the side of a mountain,
+but a sign reading "{RClosed For Construction{x" blocks your way.
+The river flows north into a small bay, and to the east the river takes
+a sharp turn south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13507
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13505
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13508
+
+[[rooms]]
+vnum = 13507
+name = "A small Bay"
+sector = "water_noswim"
+description = """
+You are floating in a small bay.  The edges of the bay to the east and
+west are formed by a thick tangle of trees and brush.  To the south
+is the mouth of a large river.  To the north is the endless expanse
+of the northern sea.  Many adventurers have braved the northern sea,
+most of them never to be heard from again."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13596
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13506
+
+[[rooms]]
+vnum = 13508
+name = "A small Path"
+sector = "field"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13506
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13509
+
+[[rooms]]
+vnum = 13509
+name = "End of the Path"
+sector = "field"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13508
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13510
+
+[[rooms]]
+vnum = 13510
+name = "Side of the Volcano"
+sector = "mountain"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13511
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13509
+
+[[rooms]]
+vnum = 13511
+name = "Side of the Volcano"
+sector = "mountain"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13512
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13510
+
+[[rooms]]
+vnum = 13512
+name = "Top of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13524
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13511
+
+[[rooms]]
+vnum = 13513
+name = "A small Path"
+sector = "field"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13514
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13502
+
+[[rooms]]
+vnum = 13514
+name = "End of a small Path"
+sector = "field"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13513
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13515
+
+[[rooms]]
+vnum = 13515
+name = "Side of the Volcano"
+sector = "mountain"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13516
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13518
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13514
+
+[[rooms]]
+vnum = 13516
+name = "A small Cave"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13515
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13517
+
+[[rooms]]
+vnum = 13517
+name = "A Lair"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13516
+
+[[rooms]]
+vnum = 13518
+name = "Side of the Volcano"
+sector = "mountain"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13519
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13515
+
+[[rooms]]
+vnum = 13519
+name = "Top of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13520
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13518
+
+[[rooms]]
+vnum = 13520
+name = "South rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13530
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13527
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13519
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13521
+
+[[rooms]]
+vnum = 13521
+name = "Southwest rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13522
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13520
+
+[[rooms]]
+vnum = 13522
+name = "West rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13523
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13530
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13521
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13528
+
+[[rooms]]
+vnum = 13523
+name = "Northwest rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13524
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13522
+
+[[rooms]]
+vnum = 13524
+name = "North rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13512
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13525
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13530
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13523
+
+[[rooms]]
+vnum = 13525
+name = "Northeast rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13526
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13524
+
+[[rooms]]
+vnum = 13526
+name = "East rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13526
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13527
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13530
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13529
+
+[[rooms]]
+vnum = 13527
+name = "Southeast rim of the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13526
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13520
+
+[[rooms]]
+vnum = 13528
+name = "A small ledge in the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13530
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13611
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13522
+
+[[rooms]]
+vnum = 13529
+name = "A small ledge in the Volcano"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13531
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13530
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13526
+
+[[rooms]]
+vnum = 13530
+name = "A small Island"
+sector = "desert"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13566
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13565
+
+[[rooms]]
+vnum = 13531
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13532
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13529
+
+[[rooms]]
+vnum = 13532
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13572
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13533
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13531
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13536
+
+[[rooms]]
+vnum = 13533
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13532
+
+[[rooms]]
+vnum = 13534
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13535
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13614
+
+[[rooms]]
+vnum = 13535
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13536
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13534
+
+[[rooms]]
+vnum = 13536
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13541
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13537
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13535
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13532
+
+[[rooms]]
+vnum = 13537
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13536
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13538
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13539
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13540
+
+[[rooms]]
+vnum = 13538
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13537
+
+[[rooms]]
+vnum = 13539
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13537
+
+[[rooms]]
+vnum = 13540
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13537
+
+[[rooms]]
+vnum = 13541
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13542
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13543
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13536
+
+[[rooms]]
+vnum = 13542
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13544
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13541
+
+[[rooms]]
+vnum = 13543
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13541
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13544
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13545
+
+[[rooms]]
+vnum = 13544
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13542
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13546
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13543
+
+[[rooms]]
+vnum = 13545
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13543
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13546
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13547
+
+[[rooms]]
+vnum = 13546
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13544
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13545
+
+[[rooms]]
+vnum = 13547
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13548
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13545
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13549
+
+[[rooms]]
+vnum = 13548
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13547
+
+[[rooms]]
+vnum = 13549
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13558
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13552
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13550
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13547
+
+[[rooms]]
+vnum = 13550
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13549
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13551
+
+[[rooms]]
+vnum = 13551
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13552
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13550
+
+[[rooms]]
+vnum = 13552
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13553
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13551
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13549
+
+[[rooms]]
+vnum = 13553
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13554
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13552
+
+[[rooms]]
+vnum = 13554
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13553
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13555
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13557
+
+[[rooms]]
+vnum = 13555
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13556
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13554
+
+[[rooms]]
+vnum = 13556
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13555
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13557
+
+[[rooms]]
+vnum = 13557
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13554
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13556
+
+[[rooms]]
+vnum = 13558
+name = "Bank of a Lava River"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13549
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13559
+
+[[rooms]]
+vnum = 13559
+name = "On a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13562
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13558
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13560
+
+[[rooms]]
+vnum = 13560
+name = "On a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13559
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13561
+
+[[rooms]]
+vnum = 13561
+name = "On a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13560
+
+[[rooms]]
+vnum = 13562
+name = "Bend in a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13559
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13563
+
+[[rooms]]
+vnum = 13563
+name = "Bend in a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13564
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13562
+
+[[rooms]]
+vnum = 13564
+name = "On a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13565
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13563
+
+[[rooms]]
+vnum = 13565
+name = "Inside the Volcano"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13566
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13564
+
+[[rooms]]
+vnum = 13566
+name = "Inside the Volcano"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13567
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13565
+
+[[rooms]]
+vnum = 13567
+name = "On a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13568
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13566
+
+[[rooms]]
+vnum = 13568
+name = "Bend in the Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13569
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13567
+
+[[rooms]]
+vnum = 13569
+name = "On a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13570
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13568
+
+[[rooms]]
+vnum = 13570
+name = "Bend in the Lava River"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13571
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13582
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13569
+
+[[rooms]]
+vnum = 13571
+name = "On a Lava River"
+sector = "air"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13570
+
+[[rooms]]
+vnum = 13572
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13532
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13573
+
+[[rooms]]
+vnum = 13573
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13581
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13572
+
+[[rooms]]
+vnum = 13574
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13611
+
+[[rooms]]
+vnum = 13575
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13576
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13612
+
+[[rooms]]
+vnum = 13576
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13577
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13579
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13575
+
+[[rooms]]
+vnum = 13577
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13578
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13576
+
+[[rooms]]
+vnum = 13578
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13580
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13579
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13577
+
+[[rooms]]
+vnum = 13579
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13578
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13576
+
+[[rooms]]
+vnum = 13580
+name = "On a Ledge"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13581
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13578
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13568
+
+[[rooms]]
+vnum = 13581
+name = "On a Ledge"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13580
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13573
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13567
+
+[[rooms]]
+vnum = 13582
+name = "Southern end of hallway"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13583
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13570
+
+[[rooms]]
+vnum = 13583
+name = "Northern end of hallway"
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13584
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13582
+
+[[rooms]]
+vnum = 13584
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13593
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13592
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13583
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13585
+
+[[rooms]]
+vnum = 13585
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13586
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13584
+
+[[rooms]]
+vnum = 13586
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13587
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13593
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13585
+
+[[rooms]]
+vnum = 13587
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13588
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13589
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13586
+
+[[rooms]]
+vnum = 13588
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13587
+
+[[rooms]]
+vnum = 13589
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13590
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13593
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13587
+
+[[rooms]]
+vnum = 13590
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13591
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13589
+
+[[rooms]]
+vnum = 13591
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13590
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13592
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13593
+
+[[rooms]]
+vnum = 13592
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13591
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13584
+
+[[rooms]]
+vnum = 13593
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13589
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13591
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13584
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13586
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 13594
+
+[[rooms]]
+vnum = 13594
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13595
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 13593
+
+[[rooms]]
+vnum = 13595
+name = "A small crevice in the rock."
+sector = "desert"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13510
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13594
+
+[[rooms]]
+vnum = 13596
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see.
+You seem to have gotten turned around, and wish you had a compass about
+now."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13606
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13599
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13609
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13598
+
+[[rooms]]
+vnum = 13597
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13605
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13600
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13605
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13609
+
+[[rooms]]
+vnum = 13598
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13604
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13596
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13608
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13606
+
+[[rooms]]
+vnum = 13599
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13600
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13596
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13599
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13599
+
+[[rooms]]
+vnum = 13600
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13599
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13597
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13606
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13605
+
+  [[rooms.mob_resets]]
+  vnum = 13501
+  max = 2
+
+[[rooms]]
+vnum = 13601
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13610
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13602
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13607
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13609
+
+[[rooms]]
+vnum = 13602
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13601
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13606
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13604
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13608
+
+[[rooms]]
+vnum = 13603
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see.
+Wait...Is that land to the south?"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13604
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13608
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13507
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13604
+
+[[rooms]]
+vnum = 13604
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13602
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13598
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13603
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13603
+
+[[rooms]]
+vnum = 13605
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13597
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13607
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13597
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13600
+
+[[rooms]]
+vnum = 13606
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13600
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13596
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13602
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13598
+
+[[rooms]]
+vnum = 13607
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13605
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13601
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13610
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13609
+
+  [[rooms.mob_resets]]
+  vnum = 13501
+  max = 2
+
+[[rooms]]
+vnum = 13608
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13598
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13610
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13602
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13603
+
+[[rooms]]
+vnum = 13609
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13597
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13607
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13596
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13601
+
+[[rooms]]
+vnum = 13610
+name = "Lost at Sea"
+sector = "water_noswim"
+description = """
+Looking around, you see nothing but water as far as the eye can see.
+Wait...Is that an island to the south?"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13601
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13607
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 11700
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13608
+
+[[rooms]]
+vnum = 13611
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13574
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13528
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13612
+
+[[rooms]]
+vnum = 13612
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13575
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13611
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13613
+
+[[rooms]]
+vnum = 13613
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13612
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13614
+
+[[rooms]]
+vnum = 13614
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13534
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13615
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13616
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13613
+
+[[rooms]]
+vnum = 13615
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13617
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13614
+
+[[rooms]]
+vnum = 13616
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13614
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 13617
+
+[[rooms]]
+vnum = 13617
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13615
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 13618
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 13616
+
+[[rooms]]
+vnum = 13618
+name = ""
+sector = "inside"
+description = "Description"
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13617
+
+[[rooms]]
+vnum = 13619
+name = "A small Dock"
+sector = "inside"
+description = """
+You are standing on a small dock extending out into a large pool of water.
+A huge waterfall to your west sprays you with a cool mist.  A small shack
+is here with a sign that reads "{BBert's Boats{x".
+         A sign is nailed to a post at the edge of the dock.
+         Below the sign, a brass plaque glints in the light."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 13500
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 326
+
+  [[rooms.mob_resets]]
+  vnum = 13500
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 13500
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 13501
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 13502
+    inv_only = true
+

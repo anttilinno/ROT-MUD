@@ -1,0 +1,518 @@
+[[mobiles]]
+vnum = 7700
+keywords = ["oldstyle", "astral", "guardian"]
+short_desc = "The Astral Guardian"
+long_desc = "A grey figure guards the entrance to the astral plane."
+description = """
+You see a slate grey vaguely humanoid shape, devoid of any true features.
+It stands before you with arms folded, seemingly uninterested in you."""
+level = 73
+sex = "none"
+act_flags = ["npc", "sentinel", "warrior"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1500
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 10
+  bonus = 12
+
+[[mobiles]]
+vnum = 7701
+keywords = ["oldstyle", "nightmare"]
+short_desc = "A pitch-black nightmare"
+long_desc = "A nightmare is here, kicking at you with its flaming hooves."
+description = """
+The nightmare is a wholly evil being, sent out by the rulers of the lower 
+planes to torment mortals.  It vaguely resembles a horse, with a hide blacker
+than the darkest night, and hooves that burn with unholy fires."""
+level = 35
+sex = "none"
+act_flags = ["npc", "key"]
+affected_by = ["detect_invis", "infrared", "flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 4
+
+[[mobiles]]
+vnum = 7702
+keywords = ["oldstyle", "night", "hag"]
+short_desc = "An evil night hag"
+long_desc = "A night hag reaches out to steal your soul."
+description = """
+You see a shadowy creature with long talons and an evil grin, whose sole 
+purpose is to hunt down and slay mortals in order to obtain souls for her foul
+master to torment."""
+level = 48
+sex = "female"
+act_flags = ["npc", "key", "aggressive", "mage"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 5
+
+[[mobiles]]
+vnum = 7703
+keywords = ["oldstyle", "stalker", "invisible"]
+short_desc = "An invisible stalker"
+long_desc = "You see a wavy distortion in the air."
+description = """
+You see only a wavy distortion in the air.  You reach out to touch it, and
+feel nothing, not even the slightest of motions."""
+level = 33
+sex = "none"
+act_flags = ["npc", "key"]
+affected_by = ["flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 258
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 7704
+keywords = ["oldstyle", "soulless", "one"]
+short_desc = "A poor soulless being"
+long_desc = "The soulless one wanders mindlessly."
+description = """
+This unfortunate being has had its very soul torn from its body.  It now roams
+mindlessly, unaware of its surroundings."""
+level = 20
+sex = "none"
+act_flags = ["npc"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 7705
+keywords = ["oldstyle", "githyanki", "hunter"]
+short_desc = "A githyanki hunter"
+long_desc = "A githyanki hunter searches for signs of the githzerai."
+description = """
+You see a leathery-skinned humanoid creature that stands almost as tall as a
+normal man.  Like all githyanki, his teeth are fanged and his eyes hollow
+and sunken."""
+level = 22
+sex = "male"
+act_flags = ["npc", "scavenger", "thief"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 7706
+keywords = ["oldstyle", "githyanki", "warrior"]
+short_desc = "A githyanki warrior"
+long_desc = "You see a humanoid figure clad in splinted armor."
+description = """
+You see a leathery-skinned humanoid creature that stands as tall as a normal
+man.  Like all githyanki, his teeth are fanged and his eyes hollow and sunken.
+He is clad in ornately designed splinted armor, and wields a sword that
+whistles through the air as it slices towards your neck."""
+level = 29
+sex = "male"
+act_flags = ["npc"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 7707
+keywords = ["oldstyle", "githyanki", "guardian"]
+short_desc = "A githyanki guardian"
+long_desc = "A humanoid figure clad in splinted armor blocks your way."
+description = """
+You see a leathery-skinned humanoid creature that stands as tall as a normal
+man.  Like all githyanki, his teeth are fanged and his eyes hollow and sunken.
+He is clad in ornately designed splinted armor, and wields a sword that
+whistles through the air as it slices towards your neck."""
+level = 29
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 7708
+keywords = ["oldstyle", "githyanki", "knight"]
+short_desc = "A githyanki knight"
+long_desc = "A tall figure armored in black observes you quietly."
+description = """
+You see a leathery-skinned humanoid creature that stands a full foot taller
+than a normal man.  His features are obscured by a suit of ornately designed
+splinted armor -- you only hear the hissing of his breath and the scraping
+of his sword against its scabbard as it is unsheathed."""
+level = 50
+sex = "male"
+act_flags = ["npc"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 7709
+keywords = ["oldstyle", "githyanki", "protector"]
+short_desc = "A githyanki protector"
+long_desc = "A black knight of the githyanki protects his queen."
+description = """
+You see a leathery-skinned humanoid creature that stands a full foot taller
+than a normal man.  His features are obscured by a suit of ornately designed
+splinted armor -- you only hear the hissing of his breath and the scraping
+of his sword against its scabbard as it is unsheathed."""
+level = 49
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 7710
+keywords = ["oldstyle", "githyanki", "gish"]
+short_desc = "An evil gish"
+long_desc = "A small githyanki laughs at you through fanged teeth."
+description = """
+You see a leathery-skinned humanoid creature that stands nearly as tall as a
+normal man.  Like all githyanki, his teeth are fanged and his eyes hollow and
+sunken.  The gish are well-versed in the arcane arts, unlike the normal gith
+people.  You notice this from the blast of lightning headed towards you."""
+level = 21
+sex = "male"
+act_flags = ["npc", "mage"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 7711
+keywords = ["oldstyle", "githyanki", "gish"]
+short_desc = "An evil gish"
+long_desc = "A gish laughs as flame leaps from his hands towards your face."
+description = """
+You see a leathery-skinned humanoid creature that stands nearly as tall as a
+normal man.  Like all githyanki, his teeth are fanged and his eyes hollow and
+sunken.  The gish are well-versed in the arcane arts, unlike the normal gith
+people.  You notice this from the blast of lightning headed towards you."""
+level = 22
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive", "mage"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 7712
+keywords = ["oldstyle", "githyanki", "warlock"]
+short_desc = "A warlock of the Gith"
+long_desc = "A humanoid figure stands here, holding a silvery sword."
+description = """
+You see a leathery-skinned creature, clad all in black and bearing a silvery-
+colored sword.  Like all githyanki, his teeth are fanged and his eyes hollow
+and sunken.  As you turn to flee, you feel the impact of a fireball against
+your back."""
+level = 39
+sex = "male"
+act_flags = ["npc", "aggressive", "mage"]
+affected_by = ["detect_invis", "detect_magic", "infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 7713
+keywords = ["oldstyle", "githyanki", "lich", "queen"]
+short_desc = "The lich-queen"
+long_desc = "The evil lich-queen of the Gith reaches out to destroy you."
+description = """
+The lich-queen of the githyanki was once human, but no longer.  Her skin has
+completely shrunken around her skull, held together solely by the force of
+unholy magic and the powers of this plane of existence.  The cold glare of her
+hollow eyes sends you into paroxysms of fright."""
+level = 59
+sex = "female"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 7714
+keywords = ["oldstyle", "lord", "gith"]
+short_desc = "Lord Gith"
+long_desc = "Lord Gith suddenly forms from a cloud of blackness.\nHe stares right through you with deadly, cold eyes."
+description = """
+Lord Gith is the dead savior of the githyanki people, the warrior who led them
+to freedom from their former enslavers, the mind flayers.  He has been dead
+for centuries and stands before you now due to an unholy alliance with powers
+beyond mortal ken.
+
+He gestures towards you.  You feel your heart tremble and your throat begin
+to tighten.  You are about to die."""
+level = 69
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 7715
+keywords = ["oldstyle", "ghost"]
+short_desc = "An insubstantial ghost"
+long_desc = "A ghost wanders here, intent on destroying all life."
+description = """
+The ghost makes no sound.  It is a shadowy shell of its former self, cursed
+now to roam forever without rest.  The mind of this creature has been twisted
+and destroyed in this torment, and it now envys and intends to destroy all the
+true living beings it encounters, including you."""
+level = 32
+sex = "none"
+act_flags = ["npc"]
+affected_by = ["infrared", "flying", "pass_door"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 7716
+keywords = ["oldstyle", "githzerai", "prisoner"]
+short_desc = "An imprisoned githzerai"
+long_desc = "A githzerai plots his escape plan."
+description = """
+You see a conniving humanoid, a descendant of a race of humans once enslaved
+by the mindflayers and related to the githyanki.  Unfortunately, the two races
+are bitter enemies, and this one happened to get caught.  He intends to escape."""
+level = 19
+sex = "male"
+act_flags = ["npc"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 7717
+keywords = ["oldstyle", "mindflayer", "prisoner"]
+short_desc = "A tortured mindflayer prisoner"
+long_desc = "A mindflayer lies here, scarred from the torture inflicted by the Gith."
+description = """
+You see a formerly tall humanoid creature, with four tentacles hanging from the
+middle of its head.  It is hunched over, bent and scarred from torture inflicted
+by the githyanki.  It cringes as you approach."""
+level = 15
+sex = "none"
+act_flags = ["npc", "sentinel", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 7718
+keywords = ["oldstyle", "dragon", "red", "slave"]
+short_desc = "The enslaved red dragon"
+long_desc = "A giant red dragon is chained here, his breath heating the furnace."
+description = """
+The mighty scaled beast has been magically bound and subdued by the residents
+of the keep.  Nevertheless, he is still an impressive sight, some twenty feet
+in length with an even more massive wingspan.  He watches you, smoke drifting
+from his open mouth."""
+level = 55
+sex = "male"
+act_flags = ["npc", "sentinel", "mage"]
+affected_by = ["detect_invis", "infrared", "flying"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 650
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 7719
+keywords = ["oldstyle", "fire", "furnace", "flame"]
+short_desc = "A massive blast of fire"
+long_desc = "The fires of the furnace burn away at your skin!"
+description = """
+The fire feeds on your skin like a living being, licking out at your hair."""
+level = 26
+sex = "none"
+act_flags = ["npc", "sentinel", "key", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_breath_fire"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+

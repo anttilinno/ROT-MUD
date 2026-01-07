@@ -1,0 +1,462 @@
+[[mobiles]]
+vnum = 14501
+keywords = ["monkey", "big"]
+short_desc = "the BIG monkey"
+long_desc = "A BIG monkey looks at you with interest."
+description = """
+This BIG monkey must weigh at least 200 pounds. It is covered with black
+fur and has the ugliest teeth you have ever seen."""
+level = 10
+sex = "female"
+act_flags = ["npc", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 14502
+keywords = ["merchant", "elf", "elven"]
+short_desc = "the Elven Merchant"
+long_desc = "An Elven merchant checks his wares."
+description = """
+This Elf does not appear to be very prosperous. His violet eyes look you
+over as he tries to decide if you are a client or a salesman."""
+level = 12
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 14503
+keywords = ["merchant", "dwarven"]
+short_desc = "the Dwarven Merchant"
+long_desc = "The Dwarven Merchant greets you, \"Welcome!\""
+description = """
+This merchant has the Eye of the Tiger. "Welcome my friend," he says."""
+level = 12
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 14504
+keywords = ["merchant", "halfdwarf"]
+short_desc = "the Halfdwarf Merchant"
+long_desc = "The Halfdwarf Merchant looks at you."
+description = """
+This man is only four feet tall but has a powerful body.  His arms reach
+almost to his calves."""
+level = 12
+sex = "either"
+act_flags = ["npc", "stay_area", "wimpy"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 14505
+keywords = ["merchant", "human"]
+short_desc = "the Human Merchant"
+long_desc = "A large Human Merchant stands ready to sell you."
+description = """
+Many of the merchants you have seen throughout your life resemble this man."""
+level = 5
+sex = "male"
+act_flags = ["npc", "scavenger", "thief"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 14506
+keywords = ["adventurer", "madboy"]
+short_desc = "Madboy the Adventurer"
+long_desc = "Madboy the Adventurer sneers at you."
+description = """
+This adventurer is a largish, oafish, boy with the largest ego you've ever
+seen.  His ego is writing checks his character will never be able to cash."""
+level = 7
+sex = "male"
+act_flags = ["npc", "scavenger", "wimpy", "thief"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 14507
+keywords = ["soldier", "bearded"]
+short_desc = "the Bearded Soldier"
+long_desc = "The Bearded Soldier stand alert."
+description = """
+This soldier has an alert look about him.  With his pointed beard and
+sharp sword the security he provides comes mostly from his presence."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 15
+  bonus = 160
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 14508
+keywords = ["soldier", "alert"]
+short_desc = "the Alert Soldier"
+long_desc = "The Alert Soldier glares at you suspiciously."
+description = """
+This soldier greets you with a bared blade. I don't think you'll be
+sneaking up on him."""
+level = 15
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 15
+  size = 15
+  bonus = 160
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 14509
+keywords = ["soldier", "sleepy"]
+short_desc = "the Sleepy Soldier"
+long_desc = "This Sleepy Soldier doesn't see you."
+description = """
+Without looking in his eye you have no idea how tough he would be."""
+level = 17
+sex = "male"
+act_flags = ["npc", "sentinel", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 258
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 14510
+keywords = ["Watcher"]
+short_desc = "the Watcher"
+long_desc = "The Watcher is looking for evil."
+description = """
+This female Watcher is one of those cultist who protect the rest of the
+world from those they determine are evil."""
+level = 20
+sex = "female"
+act_flags = ["npc", "sentinel", "warrior"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 20
+  size = 20
+  bonus = 200
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 7
+
+[[mobiles]]
+vnum = 14511
+keywords = ["pig", "fat"]
+short_desc = "the fat pig"
+long_desc = "A fat pig is rooting around for food."
+description = "This fat pig is very hungry. He eats just about ANYTHING."
+level = 5
+sex = "either"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+affected_by = ["detect_good"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 14512
+keywords = ["dog"]
+short_desc = "the dog"
+long_desc = "A dog sits here wagging it's tail."
+description = """
+The dog looks back at you.  After a few moments it sits up..
+puts a cigar in it's mouth, lights it, and asks, "So..what's up bub?""""
+level = 7
+sex = "either"
+act_flags = ["npc", "sentinel", "no_align"]
+affected_by = ["detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 10
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 1
+
+[[mobiles]]
+vnum = 14513
+keywords = ["chicken"]
+short_desc = "the chicken"
+long_desc = "A scrawny chicken is scratching for something."
+description = """
+This chicken is so skinny it WOULDN'T provide enough meat for a soup.
+        ************ IT ESCAPE FROM KFC BAR !!! *************"""
+level = 35
+sex = "female"
+act_flags = ["npc", "scavenger", "stay_area", "practice", "cleric", "mage", "warrior"]
+affected_by = ["flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1300
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 7
+  bonus = 11
+
+[[mobiles]]
+vnum = 14514
+keywords = ["human", "man"]
+short_desc = "the Human Man"
+long_desc = "A Human Man goes about his business."
+description = """
+This guy looks like an advertisement for a wilderness clothing company.
+>From his buckskins to his fur cap he fits the part."""
+level = 5
+sex = "male"
+act_flags = ["npc", "scavenger", "thief"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 14515
+keywords = ["woman", "human"]
+short_desc = "the Human Woman"
+long_desc = "A Human Woman walks by."
+description = """
+She appears to be distracted by some inner thought. Although she seems
+to be in good health, her eyes are puffy and red."""
+level = 8
+sex = "female"
+act_flags = ["npc", "scavenger", "thief"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 14516
+keywords = ["man", "elven"]
+short_desc = "the Elven Man"
+long_desc = "An Elven Man is here, looking for something."
+description = """
+The Elven Man looks at you intently before continuing on his way."""
+level = 13
+sex = "male"
+act_flags = ["npc", "sentinel", "practice", "mage"]
+affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 14517
+keywords = ["woman", "elven"]
+short_desc = "the Elven Woman"
+long_desc = "A beautiful Elven Woman paces back and forth before you."
+description = "Looking into her eyes causes you great fear."
+level = 16
+sex = "female"
+act_flags = ["npc", "sentinel", "practice", "mage"]
+affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 14518
+keywords = ["woman", "dwarven"]
+short_desc = "the Dwarven Woman"
+long_desc = "The Dwarven Woman is smacking her fist in her hand."
+description = "Stand back!  She's about to blow!!!"
+level = 16
+sex = "female"
+act_flags = ["npc", "sentinel", "practice", "warrior"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 14519
+keywords = ["man", "dwarven"]
+short_desc = "the Dwarven Man"
+long_desc = "A large Dwarven Man walks by you."
+description = "He looks back at you, then dismisses you as unimportant."
+level = 19
+sex = "male"
+act_flags = ["npc", "sentinel", "practice", "warrior"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 14520
+keywords = ["warrior", "goblin"]
+short_desc = "the Goblin Warrior"
+long_desc = "The Goblin Warrior raises his hand to strike you."
+description = """
+This goblin must be a shock troop.  He is HUGE. Standing 6' tall and weighing
+about 250 pounds his bite will be worse than you would think. He is lightly
+armed and armored, doesn't wear boots, and has claws and talons with which
+to fight."""
+level = 12
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+

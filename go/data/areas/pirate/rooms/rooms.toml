@@ -1,0 +1,2956 @@
+[[rooms]]
+vnum = 16000
+name = "Beginning of the Pier"
+sector = "city"
+description = """
+You stand at the beginning of a pier where ships come in and out.  The smells
+of fish being loaded on and off the ships here are overwhelming.  There is a
+large ship docked to the east.  The pier continues north and south to the
+dock."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16001
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9780
+
+[[rooms]]
+vnum = 16001
+name = "Along the Pier"
+sector = "city"
+description = """
+You are walking along the pier leading to the plank of the Royal Eagle.  The
+pier runs north and south from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16002
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16000
+
+  [[rooms.mob_resets]]
+  vnum = 16012
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16012
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16002
+name = "Along the Pier"
+sector = "city"
+description = """
+You are walking along the pier leading to the plank of the Royal Eagle.  The
+pier runs north and south from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16003
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16001
+
+[[rooms]]
+vnum = 16003
+name = "Along the Pier"
+sector = "city"
+description = """
+You are walking along the pier leading to the plank of the Royal Eagle.  The
+pier runs north and south from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16004
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16002
+
+  [[rooms.mob_resets]]
+  vnum = 16012
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16012
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16004
+name = "A Turn at the Pier"
+sector = "city"
+description = """
+You are walking along the pier.  There is a turn to the east here.  You may
+go east onto the plank or south to leave."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16005
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16003
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16084
+
+  [[rooms.mob_resets]]
+  vnum = 16008
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16027
+    wear_loc = "hold"
+
+  [[rooms.mob_resets]]
+  vnum = 16012
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16012
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16005
+name = "Plankway to the Royal Eagle"
+sector = "city"
+description = """
+You are on the walkway to the Royal Eagle.  Men are bustling about running
+errands for the Admiral Amos and his Highness.  These men looked like
+they have been out to sea many times judging from their skin.  You may
+board the Royal Eagle or leave to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16004
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16021
+
+  [[rooms.mob_resets]]
+  vnum = 16010
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16036
+    inv_only = true
+
+[[rooms]]
+vnum = 16006
+name = "Southwest Corner of Aft Deck"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  From here, you could see
+all the people ashore selling their fresh catch.  The ship rocks slowly
+back and forth due to the waves that come in to shore.  You begin to
+feel seasick."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16011
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16007
+
+  [[rooms.mob_resets]]
+  vnum = 16007
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16013
+    wear_loc = "legs"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16022
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 16007
+name = "Aft Deck South"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  From here, you could see
+all the people ashore selling their fresh catch.  The ship rocks slowly
+back and forth due to the waves that come in to shore.  You begin to
+feel seasick."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16012
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16008
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16006
+
+[[rooms]]
+vnum = 16008
+name = "Aft Deck South"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  From here, you could see
+all the people ashore selling their fresh catch.  The ship rocks slowly
+back and forth due to the waves that come in to shore.  You begin to
+feel seasick."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16013
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16009
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16007
+
+[[rooms]]
+vnum = 16009
+name = "Aft Deck South"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  From here, you could see
+all the people ashore selling their fresh catch.  The ship rocks slowly
+back and forth due to the waves that come in to shore.  You begin to
+feel seasick."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16014
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16010
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16008
+
+  [[rooms.mob_resets]]
+  vnum = 16007
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16007
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16013
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 16010
+name = "Southeast Corner of Aft Deck"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  From here, you could see
+all the people ashore selling their fresh catch.  The ship rocks slowly
+back and forth due to the waves that come in to shore.  You begin to
+feel seasick."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16015
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16009
+
+  [[rooms.mob_resets]]
+  vnum = 16007
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16013
+    wear_loc = "legs"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16022
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 16011
+name = "Aft Deck - Port Side"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  The ship sways back and
+forth slowly, causing you to feel seasick.  Pirates walk around up here
+looking for stowaways.  Watch out!  They may mistake you for one!
+You can escape down to the main deck or go talk to the captain just
+east of here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16012
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16006
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16016
+
+[[rooms]]
+vnum = 16012
+name = "Aft Deck"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  The ship sways back and
+forth slowly, causing you to feel seasick.  Pirates walk around up here
+looking for stowaways.  Watch out!  They may mistake you for one!
+You can escape west and down to the main deck or go talk to the captain
+just east of here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16013
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16007
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16011
+
+  [[rooms.mob_resets]]
+  vnum = 16007
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16007
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16013
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 16013
+name = "Center Aft Deck"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  This happens to be the
+place from which the captain shouts orders to his crew to get the ship
+ready for sail.  You stomach wrenches as the ship moves over a large
+swell in the sea."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16014
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16008
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16012
+
+  [[rooms.mob_resets]]
+  vnum = 16000
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16003
+    wear_loc = "hold"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16005
+    wear_loc = "head"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16007
+    wear_loc = "finger_r"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16016
+    wear_loc = "feet"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16018
+    wear_loc = "hands"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16053
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16024
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 16010
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16024
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16036
+    inv_only = true
+
+[[rooms]]
+vnum = 16014
+name = "Aft Deck"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  The ship sways back and
+forth slowly, causing you to feel seasick.  Pirates walk around up here
+looking for stowaways.  Watch out!  They may mistake you for one!
+You can escape east and down to the main deck or go talk to the captain
+just west of here."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16015
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16009
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16013
+
+[[rooms]]
+vnum = 16015
+name = "Aft Deck - Starboard Side"
+sector = "city"
+description = """
+You are standing on the aft deck of the ship.  The ship sways back and
+forth slowly, causing you to feel seasick.  Pirates walk around up here
+looking for stowaways.  Watch out!  They may mistake you for one!
+You can escape down to the main deck or go talk to the captain just
+west of here."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16010
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16014
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16020
+
+  [[rooms.mob_resets]]
+  vnum = 16007
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16013
+    wear_loc = "legs"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16022
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 16016
+name = "Main Deck of the Royal Eagle - Port"
+sector = "city"
+description = """
+You are aboard the Royal Eagle - the flagship of the Krondorian fleet.  She
+has been out to sea many times on many voyages, some of which are not
+completely lawful.  She has been disquised so that she could raid merchant
+ships travelling the Blood Sea in order to "improve" the trade."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16021
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16017
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16011
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+  [[rooms.mob_resets]]
+  vnum = 16012
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16012
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16017
+name = "Main Deck of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle - the flag ship of the Krondorian fleet.  She
+seems to have been out to sea many times on many voyages.  Crewmen are
+working hard cleaning the deck and tidying up the ship in preparation to
+set sail.  There seems to be a slight crevice in the south wall, the
+weather must have really worn this ship out."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16022
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16018
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16074
+  key = 16000
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16016
+
+[[rooms]]
+vnum = 16018
+name = "Main Deck of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle - the flag ship of the Krondorian fleet.  She
+seems to have been out to sea many times on many voyages.  Crewmen are
+working hard cleaning the deck and tidying up the ship in preparation to
+set sail.  The floorboard here seems to creak as you walk across it.  You
+think to yourself, "Geez, this ship sure needs some repairs!""""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16023
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16019
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16017
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16069
+  key = 16001
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 16009
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16038
+    wear_loc = "hold"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16040
+    inv_only = true
+
+[[rooms]]
+vnum = 16019
+name = "Main Deck of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle - the flag ship of the Krondorian fleet.  She
+seems to have been out to sea many times on many voyages.  Crewmen are
+working hard cleaning the deck and tidying up the ship in preparation to
+set sail."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16024
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16020
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16018
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16020
+name = "Main Deck of the Royal Eagle - Starboard"
+sector = "city"
+description = """
+You are aboard the Royal Eagle - the flagship of the Krondorian fleet.  She
+has been out to sea many times on many voyages, some of which are not
+completely lawful.  She has been disquised so that she could raid merchant
+ships travelling the Blood Sea in order to "improve" the trade."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16025
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16019
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16015
+
+[[rooms]]
+vnum = 16021
+name = "Entrance to the Royal Eagle - Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle - the flagship of the Krondorian fleet.  She
+has been out to sea many times on many voyages, some of which are not
+completely lawful.  She has been disquised so that she could raid merchant
+ships travelling the Blood Sea in order to "improve" the trade.  You may
+leave the ship by going down the plank."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16026
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16022
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16016
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16005
+
+  [[rooms.mob_resets]]
+  vnum = 16009
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16019
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16040
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16022
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16027
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16023
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16017
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16021
+
+  [[rooms.mob_resets]]
+  vnum = 16012
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16012
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16023
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16028
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16024
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16018
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16022
+
+  [[rooms.mob_resets]]
+  vnum = 16008
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16027
+    wear_loc = "hold"
+
+[[rooms]]
+vnum = 16024
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16029
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16025
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16019
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16023
+
+[[rooms]]
+vnum = 16025
+name = "Main Deck - Starboard"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16030
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16020
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16024
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+  [[rooms.obj_resets]]
+  vnum = 16020
+  max = 1
+
+[[rooms]]
+vnum = 16026
+name = "Main Deck - Port"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16031
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16027
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16021
+
+[[rooms]]
+vnum = 16027
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16032
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16028
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16022
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16026
+
+[[rooms]]
+vnum = 16028
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16033
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16029
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16023
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16027
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16029
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16034
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16030
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16024
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16028
+
+[[rooms]]
+vnum = 16030
+name = "Main Deck - Starboard"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16035
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16025
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16029
+
+[[rooms]]
+vnum = 16031
+name = "Main Deck - Port"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16036
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16032
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16026
+
+[[rooms]]
+vnum = 16032
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16037
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16033
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16027
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16031
+
+[[rooms]]
+vnum = 16033
+name = "Base of the Mast"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast.  There is a mast here which you could climb
+up, but be careful not to fall!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16038
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16034
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16028
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16032
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16078
+
+  [[rooms.mob_resets]]
+  vnum = 16009
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16019
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16038
+    wear_loc = "hold"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16040
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+  [[rooms.obj_resets]]
+  vnum = 16038
+  max = 1
+
+[[rooms]]
+vnum = 16034
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16039
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16035
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16029
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16033
+
+  [[rooms.mob_resets]]
+  vnum = 16008
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16027
+    wear_loc = "hold"
+
+[[rooms]]
+vnum = 16035
+name = "Main Deck - Starboard"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16040
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16030
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16034
+
+[[rooms]]
+vnum = 16036
+name = "Main Deck - Port"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16041
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16037
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16031
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16037
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16042
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16038
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16032
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16036
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+  [[rooms.mob_resets]]
+  vnum = 16008
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16027
+    wear_loc = "hold"
+
+[[rooms]]
+vnum = 16038
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16043
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16039
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16033
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16037
+
+[[rooms]]
+vnum = 16039
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16044
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16040
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16034
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16038
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16040
+name = "Main Deck - Starboard"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16045
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16035
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16039
+
+[[rooms]]
+vnum = 16041
+name = "Main Deck - Port"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16042
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16036
+
+[[rooms]]
+vnum = 16042
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16046
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16043
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16037
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16041
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16043
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16047
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16044
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16038
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16042
+
+[[rooms]]
+vnum = 16044
+name = "Main Deck"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16048
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16045
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16039
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16043
+
+[[rooms]]
+vnum = 16045
+name = "Main Deck - Starboard"
+sector = "city"
+description = """
+You are aboard the Royal Eagle.  She is preparing to take off on the next
+high tide.  The crew is busy disguising her for a pirate's raid planned on
+a ship spotted off the coast."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16040
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16044
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16046
+name = "Bow of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle, the flagship of the Krondorian fleet.  She
+is preparing to set sale at next high tide.  The crew is swabbing the deck
+and trimming the sails in preparation for departure."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16049
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16047
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16042
+
+[[rooms]]
+vnum = 16047
+name = "Bow of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle, the flagship of the Krondorian fleet.  She
+is preparing to set sale at next high tide.  The crew is swabbing the deck
+and trimming the sails in preparation for departure.  There is a hatch on
+the floor here.  Sailors go up and down the hatch, it must lead to their
+sleeping quarters."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16050
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16048
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16043
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16046
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16053
+  key = 16002
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+[[rooms]]
+vnum = 16048
+name = "Bow of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle, the flagship of the Krondorian fleet.  She
+is preparing to set sale at next high tide.  The crew is swabbing the deck
+and trimming the sails in preparation for departure."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16051
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16044
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16047
+
+  [[rooms.mob_resets]]
+  vnum = 16008
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16027
+    wear_loc = "hold"
+
+[[rooms]]
+vnum = 16049
+name = "Bow of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle, the flagship of the Krondorian fleet.  She
+is preparing to set sale at next high tide.  The crew is swabbing the deck
+and trimming the sails in preparation for departure."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16050
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16046
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16050
+name = "Bow of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle, the flagship of the Krondorian fleet.  She
+is preparing to set sale at next high tide.  The crew is swabbing the deck
+and trimming the sails in preparation for departure."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16052
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16051
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16047
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16049
+
+  [[rooms.mob_resets]]
+  vnum = 16009
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16019
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16040
+    inv_only = true
+
+[[rooms]]
+vnum = 16051
+name = "Bow of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle, the flagship of the Krondorian fleet.  She
+is preparing to set sale at next high tide.  The crew is swabbing the deck
+and trimming the sails in preparation for departure."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16048
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16050
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16052
+name = "Tip of the Royal Eagle"
+sector = "city"
+description = """
+You are aboard the Royal Eagle which is ready to set sail soon.  You are
+standing at the tip of the ship.  From here you could look forward and
+see the vast Blood Sea.  As you look back, you see all the crew of the ship
+busy at work.  The only exit is south of course."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16050
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16002
+    wear_loc = "hold"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+  [[rooms.mob_resets]]
+  vnum = 16006
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16006
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16011
+    wear_loc = "head"
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 16011
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16044
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16053
+name = "Stairs to the Main Deck"
+sector = "inside"
+description = """
+You are below deck of the Royal Eagle.  It is poorly lighted down here.
+There is a hallway to the south and you also smell an odor from the south.
+you could exit to the main deck through the hatch from here."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16054
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16047
+  key = 16002
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 16010
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16024
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16036
+    inv_only = true
+
+[[rooms]]
+vnum = 16054
+name = "Below Deck"
+sector = "inside"
+description = """
+You are in a hallway below the deck of the ship.  The hallway goes
+north and south and is very poorly lighted.  There is a faint smell
+coming from the stern of the ship."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16053
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16057
+
+  [[rooms.mob_resets]]
+  vnum = 16010
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16024
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16036
+    inv_only = true
+
+[[rooms]]
+vnum = 16056
+name = "Sleeping Quarters"
+sector = "inside"
+description = """
+You see bunkbeds lined againts the wall.  there are various items scattered
+around the room.  The room is very dark.  Sailors come down here to rest
+and get their sleep.  They are very grumpy if they miss their naps so be
+very quiet in order not to wake them.  You can exit through the east door
+or continue on south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16057
+  key = 16002
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16059
+
+[[rooms]]
+vnum = 16057
+name = "An Intersection Below Deck"
+sector = "inside"
+description = """
+You are in a hallway below deck of the ship.  There are doors leading
+east and west from here.  The hallway continues north and south.  A
+faint odor drifts to you from the southern part of the hallway."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16054
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16058
+  key = 16002
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16060
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16056
+  key = 16002
+  flags = ["door"]
+
+[[rooms]]
+vnum = 16058
+name = "Sleeping Quarters"
+sector = "inside"
+description = """
+You see bunkbeds lined againts the wall.  there are various items scattered
+around the room.  The room is very dark.  Sailors come down here to rest
+and get their sleep.  They are very grumpy if they miss their naps so be
+very quiet in order not to wake them.  You can exit through the west door
+or continue on south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16061
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16057
+  key = 16002
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 16005
+  max = 7
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 16059
+name = "Sleeping Quarters"
+sector = "inside"
+description = """
+You see bunkbeds lined againts the wall.  there are various items scattered
+around the room.  The room is very dark.  Sailors come down here to rest
+and get their sleep.  They are very grumpy if they miss their naps so be
+very quiet in order not to wake them."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16056
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16062
+
+  [[rooms.mob_resets]]
+  vnum = 16005
+  max = 7
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 16060
+name = "Below Deck"
+sector = "inside"
+description = """
+You are in a hallway below the deck of the ship.  The hallway goes
+north and south and is very poorly lighted.  There is a strong smell
+coming from the stern of the ship."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16057
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16063
+
+  [[rooms.mob_resets]]
+  vnum = 16010
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16036
+    inv_only = true
+
+[[rooms]]
+vnum = 16061
+name = "Sleeping Quarters"
+sector = "inside"
+description = """
+You see bunkbeds lined againts the wall.  there are various items scattered
+around the room.  The room is very dark.  Sailors come down here to rest
+and get their sleep.  They are very grumpy if they miss their naps so be
+very quiet in order not to wake them."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16058
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16064
+
+  [[rooms.mob_resets]]
+  vnum = 16005
+  max = 7
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+  [[rooms.mob_resets]]
+  vnum = 16005
+  max = 7
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 16062
+name = "Sleeping Quarters"
+sector = "inside"
+description = """
+You see bunkbeds lined againts the wall.  there are various items scattered
+around the room.  The room is very dark.  Sailors come down here to rest
+and get their sleep.  They are very grumpy if they miss their naps so be
+very quiet in order not to wake them.  The store rooms are south of here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16059
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16065
+
+  [[rooms.mob_resets]]
+  vnum = 16005
+  max = 7
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 16063
+name = "The Kitchen"
+sector = "inside"
+description = """
+Wheww!  This was where that odor was coming from.  The rooms stinks of
+garlick, old meat and other foods which would make a beggar's face green!
+You feel like throwing up due to the sway of the sea and the rotten food
+here.  You can exit north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16060
+
+  [[rooms.mob_resets]]
+  vnum = 16003
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16001
+    wear_loc = "hold"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16015
+    wear_loc = "feet"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16019
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16020
+    wear_loc = "about"
+
+  [[rooms.mob_resets]]
+  vnum = 16013
+  max = 5
+
+[[rooms]]
+vnum = 16064
+name = "Sleeping Quarters"
+sector = "inside"
+description = """
+You see bunkbeds lined againts the wall.  there are various items scattered
+around the room.  The room is very dark.  Sailors come down here to rest
+and get their sleep.  They are very grumpy if they miss their naps so be
+very quiet in order not to wake them."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16061
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16067
+
+[[rooms]]
+vnum = 16065
+name = "Storeroom"
+sector = "inside"
+description = """
+This room is used for storing the various supplies needed for a long
+voyage.  There are barrels and crates of food and weapons piled up
+in the room.  You can go east or south from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16062
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16066
+
+  [[rooms.mob_resets]]
+  vnum = 16013
+  max = 5
+
+  [[rooms.obj_resets]]
+  vnum = 16042
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 16027
+  max = 1
+
+[[rooms]]
+vnum = 16066
+name = "Storeroom"
+sector = "inside"
+description = """
+This room is used for storing the various supplies needed for a long
+voyage.  There are barrels and crates of food and weapons piled up
+in the room.  There are no exits except east."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16065
+
+  [[rooms.mob_resets]]
+  vnum = 16013
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 16013
+  max = 5
+
+  [[rooms.obj_resets]]
+  vnum = 16042
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 16039
+  max = 1
+
+[[rooms]]
+vnum = 16067
+name = "Sleeping Quarters"
+sector = "inside"
+description = """
+You see bunkbeds lined againts the wall.  there are various items scattered
+around the room.  The room is very dark.  Sailors come down here to rest
+and get their sleep.  They are very grumpy if they miss their naps so be
+very quiet in order not to wake them.  You can only exit north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16064
+
+  [[rooms.mob_resets]]
+  vnum = 16005
+  max = 7
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+  [[rooms.mob_resets]]
+  vnum = 16005
+  max = 7
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16009
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16014
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 16068
+name = "Below Deck - Port"
+sector = "inside"
+description = """
+You are in a corridor below deck of the ship.  The hall is very poorly
+lighted.  The exits are east and there is a door to the south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16069
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16071
+  key = 16003
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 16013
+  max = 5
+
+[[rooms]]
+vnum = 16069
+name = "Below Deck"
+sector = "inside"
+description = """
+You are in a corridor below deck of the ship.  The hallway goes east and
+west and is very poorly lighted.  There is a door to the south."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16070
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16072
+  key = 16003
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16068
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16018
+  key = 16001
+  flags = ["door"]
+
+[[rooms]]
+vnum = 16070
+name = "Below Deck - Starboard"
+sector = "inside"
+description = """
+You are in a corridor below deck of the ship.  The hall is very poorly
+lighted.  The exits are west and there is a door to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16073
+  key = 16003
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16069
+
+[[rooms]]
+vnum = 16071
+name = "First Mate's Quarters"
+sector = "inside"
+description = """
+This room is very messy.  There is a small table against the wall with a
+little lamp on it.  Clothing is scattered all over the floor and you see
+empty bottles of beer here and there.  Sheets on the bed are crumpled
+up as if they haven't been washed in decades."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16068
+  key = 16003
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 16002
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16008
+    wear_loc = "neck1"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16017
+    wear_loc = "hands"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16023
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 16072
+name = "Captain's Quarters"
+sector = "inside"
+description = """
+This is the Captain's room.  He seems to be very tidy for a pirate.  There
+are various articles of note in this room, most of which are keepsakes from
+his other expeditions by the looks of it.  In the center of the room is a
+small table, and you see his log on top of it.  The Captain is rarely here.
+He must be outside commanding the crew, but if he sees you in here,
+he will be VERY upset, so get out quick!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16069
+  key = 16003
+  flags = ["closed"]
+
+  [[rooms.obj_resets]]
+  vnum = 16004
+  max = 1
+
+[[rooms]]
+vnum = 16073
+name = "Navigator's Quarters"
+sector = "inside"
+description = """
+This room is filled with maps from wall to wall.  There is a huge table in
+center with a map showing the ocean currents and winds.  Navigation
+instruments have been laid all over the table."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16070
+  key = 16003
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 16001
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16008
+    wear_loc = "neck1"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16024
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16010
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 16074
+name = "Hidden Room"
+sector = "inside"
+description = """
+You are in a small secret room covered with cobwebs.  It seems that no one
+has been here in a LONG time.  The room is very cold and dark.  It goes
+east of here and there is a door to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16017
+  key = 16000
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16075
+
+[[rooms]]
+vnum = 16075
+name = "Hidden Room"
+sector = "inside"
+description = """
+You are in a small secret room covered with cobwebs.  It seems that no one
+has been here in a LONG time.  The room is very cold and dark.  It goes
+east and west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16076
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16074
+
+[[rooms]]
+vnum = 16076
+name = "Treasure Room"
+sector = "inside"
+description = """
+WOW!  Look at all the gold and jewelry chests here.  You could buy a
+kingdom with all these riches!  This must be the room where the Captain
+hides the pirate's plunder he has been accumulating over the years.
+You couldn't possibly carry out all this gold.  Too bad."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16075
+
+  [[rooms.mob_resets]]
+  vnum = 16004
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16026
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16030
+    wear_loc = "neck1"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16031
+    wear_loc = "about"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16051
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16032
+    wear_loc = "feet"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16033
+    wear_loc = "finger_l"
+
+  [[rooms.obj_resets]]
+  vnum = 16034
+  max = 1
+
+[[rooms]]
+vnum = 16077
+name = "Out on the Mast"
+sector = "mountain"
+description = """
+You are hanging out on the mast of the Royal Eagle.  Literally!  The
+only way to climb around the mast is by using all the ropes dangling
+around from the top.  You feel like Peter Pan for some strange reason."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16078
+
+[[rooms]]
+vnum = 16078
+name = "The Mast"
+sector = "mountain"
+description = """
+You are climbing the mast of the Royal Eagle.  It is very windy up
+here so hang on tight!  You see all the little men scrambling around
+on the ship below.  You can go east or west, up or down."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16079
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16077
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16081
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16033
+
+[[rooms]]
+vnum = 16079
+name = "Out on the Mast"
+sector = "mountain"
+description = """
+You are hanging out on the mast of the Royal Eagle.  Litterally!  The
+only way to climb around the mast is by using all the ropes dangling
+around from the top.  You feel like Peter Pan for some strange reason."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16078
+
+  [[rooms.mob_resets]]
+  vnum = 16009
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16019
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16040
+    inv_only = true
+
+[[rooms]]
+vnum = 16080
+name = "Out on the Mast"
+sector = "mountain"
+description = """
+You are hanging out on the mast of the Royal Eagle.  Litterally!  The
+only way to climb around the mast is by using all the ropes dangling
+around from the top.  It is very high and windy up here, so don't
+look down if you have acrophobia."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16081
+
+  [[rooms.mob_resets]]
+  vnum = 16009
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16019
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16038
+    wear_loc = "hold"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16040
+    inv_only = true
+
+[[rooms]]
+vnum = 16081
+name = "The Mast"
+sector = "mountain"
+description = """
+You are climbing the mast of the Royal Eagle.  It is very windy up
+here so hang on tight!  You see all the little men scrambling around
+on the ship below.  As you look down, you loose your lunch, breakfast,
+and anything else that you ate.  It lands on a pirate below who must
+be furious now!  Ewwe!  You can go east or west, up or down."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16082
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16080
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16083
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16078
+
+  [[rooms.mob_resets]]
+  vnum = 16010
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16024
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16021
+    wear_loc = "wrist_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16036
+    inv_only = true
+
+[[rooms]]
+vnum = 16082
+name = "Out on the Mast"
+sector = "mountain"
+description = """
+You are hanging out on the mast of the Royal Eagle.  Litterally!  The
+only way to climb around the mast is by using all the ropes dangling
+around from the top.  It is very high and windy up here, so don't
+look down if you have acrophobia."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16081
+
+[[rooms]]
+vnum = 16083
+name = "Crow's Nest"
+sector = "mountain"
+description = """
+You are at the highest point on the ship.  From here you can almost see
+Castle Square.  You see all the little dots scrambling around below you.
+This is where the lookout is posted.  Suddenly, the swaying of the ship
+and the height gets to you and you let loose your dinner.  Ewwe!"""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16081
+
+  [[rooms.mob_resets]]
+  vnum = 16014
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16029
+    wear_loc = "head"
+
+  [[rooms.obj_resets]]
+  vnum = 16028
+  max = 1
+
+[[rooms]]
+vnum = 16084
+name = "Seashells Galore"
+sector = "inside"
+description = """
+This remote shop located by the seashore sells trinkets made from everything
+immaginable.  The walls are stacked with shelves and shelves of multi-colored
+potions and wands.  A traveller can find all the things he needs for any
+journeys he may plan.  Try out the delicious seafood they serve here!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16004
+
+  [[rooms.mob_resets]]
+  vnum = 16015
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16040
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16043
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16045
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16046
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16047
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16048
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16049
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16050
+    inv_only = true
+
+[[rooms]]
+vnum = 16100
+name = "Entrance Foyer in Lance's House"
+sector = "inside"
+description = """
+As you enter this house, you feel slightly disorriented as if stepping
+into a different time and space.  His house is modeled in an alien
+Tsuranni fashion.  It is sort of a mixture between 9th century Japan and
+Korea.  The floor is made of beautifully carved red marble with thin
+polished wood for borders.  Shoji screens and walls are seen all over.
+His living room is to the north, there is a bathroom west from here and
+a stairway leads up."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16101
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16106
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 16107
+  key = 16110
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 16101
+name = "Lance's Living Room"
+sector = "inside"
+description = """
+You step into Lance's living room.  This is the place where Lance invites
+guests over for chats.  There are shoji screens placed at advantageous
+points throughout the room to get the best lighting.  A small tea table
+is situated in the center of the room with little mats surrounding it.
+As you look around the room, you notice that the northern wall has a
+television screen set into it and that there are speakers in all four
+corners of the room.  The foyer lies south and the dining room is west."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16100
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16102
+
+[[rooms]]
+vnum = 16102
+name = "Lance's Dining Room"
+sector = "inside"
+description = """
+You are in Lance's dining room.  He invites his guests here for lunch or
+dinner.  There is a beautiful marble table with polished wood for borders
+in the center of the room.  The marble floor is a polished red with many
+beautiful paterns.  You feel like removing your crude shoes.  From here,
+you could see the swiming pool to the west.  The kitchen lies north and
+the living room is to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16103
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16101
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16104
+  key = 16110
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 16103
+name = "Lance's Kitchen"
+sector = "inside"
+description = """
+You have entered into Lance's kitchen.  There are mysterious meats boiling
+in various pots on the stove and you wonder if they are edible.  The shelf
+is lined with many spices which makes your nose tingle.  There are some
+leftovers on the table which he has forgotten to clean up.  The only
+exit is south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16102
+
+  [[rooms.obj_resets]]
+  vnum = 16103
+  max = 1
+
+[[rooms]]
+vnum = 16104
+name = "Lance's Backyard Swiming Pool"
+sector = "water_swim"
+description = """
+As you enter the pool, all your muscles relax and all the problems of
+the day dissapear into the back of your head.  All you want to do is
+float here endlessly.  The water seems to heal your body and soul.
+It is very peaceful and quiet here.  You could swim to a bonsai garden
+to the south or a patio door to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16102
+  key = 16110
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16105
+
+  [[rooms.obj_resets]]
+  vnum = 16104
+  max = 1
+
+[[rooms]]
+vnum = 16105
+name = "Lance's Bonsai Garden"
+sector = "mountain"
+description = """
+You step into a miniature world as you enter the garden.  There are many
+bonsai in the area, each and everyone in healthy condition.  You feel
+clumsy walking around in such perfection.  A small brook runs here which
+waters all these trees.  You may enter the swimming pool to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16104
+
+  [[rooms.mob_resets]]
+  vnum = 16100
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16102
+    wear_loc = "head"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 16100
+    wear_loc = "waist"
+
+[[rooms]]
+vnum = 16106
+name = "Lance's Downstairs Bathroom"
+sector = "inside"
+description = """
+You enter a bathroom which is very well lit.  There is a shower room, a
+sink, and other things that go into a bathroom.  The floor is made of
+beautifully designed red marble.  As you think it over carefully, you
+wonder why immortals need bathrooms.  You could ask Lance but he
+probably wouldn't know either!  The entrance foyer is to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16100
+
+[[rooms]]
+vnum = 16107
+name = "Lance's Upstairs Foyer"
+sector = "inside"
+description = """
+This is the second level of Lance's house where his private quarters are.
+His house is modeled in an alien Tsuranni fashion.  It is sort of a
+mixture between 9th century Japan and Korea.  The floor is made of
+beautifully carved red marble with thin polished wood for borders.
+Shoji screens and walls are placed all over making it seem plain and
+yet still very appealing.  The staircase leads down to the entrance
+foyer and there is a private library to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16108
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 16100
+  key = 16110
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 16108
+name = "Lance's Bedroom"
+sector = "inside"
+description = """
+You enter a cozy looking room.  There is a large bed in the center of
+room with a matress and pillows as soft as the clouds.  There are many
+stuffed animals lying on the bed and a small stuffed figure of Furr is
+among them.  A lampstand stands next to the bed with a pictures on it.
+The upstairs foyer is to the south and the library is to the west."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16107
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16109
+
+[[rooms]]
+vnum = 16109
+name = "Lance's Private Library"
+sector = "inside"
+description = """
+You are astounded by the number of valuable books in this room.  Lance's
+collection includes some original volumes on the history oh Medievia.
+There is a shelf full of Shakespear's most popular works.  There is a
+special shelf in which is encased Raymond E. Feist's books : Magician.
+You may walk in all four directions from here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16110
+  key = 16110
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16108
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16112
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 16111
+  key = 16110
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 16110
+name = "Lance's Private Study"
+sector = "inside"
+description = """
+This is the room in which Lance does his work.  He talks to people about
+improving the game and making adjustments here.  If you needed to talk
+to him in private, he would bring you here.  There is a computer desk
+against the wall where Lance writes up new ideas for the game.  Papers
+are scattered all over the table.  There are various notes and reminders
+written on Post-It paper stuck on the computer's side.  There is a small
+magic portal in the east wall of the room."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16113
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 16109
+  key = 16110
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 16111
+name = "Lance's Balcony"
+sector = "mountain"
+description = """
+You stand ouside in Lance's Balcony.  From here, you could see amost all
+of Medievia.  There are some majestic moutains towering in your sight.
+A slight wind blows through here keeping the air fresh and clean.  This
+is a great place from which to gaze at stars on cloudless nights.  There
+is a window to the east leading inside."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16109
+  key = 16110
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 16112
+name = "Lance's Workout Room"
+sector = "inside"
+description = """
+Lance comes here to excercise and improve his skills.  There are a number
+of excercise equipment around the room.  There is a mat in the center from
+which Lance practices his martial arts.  He also comes here to meditate.
+The only exit is north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 16109
+
+[[rooms]]
+vnum = 16113
+name = "You step into the room and..."
+sector = "inside"
+description = """
+all of a sudden you loose all sense of direction...
+*GASP*
+   You
+                    You
+     feel               have
+                            no
+       like                     idea
+    *              is   which                      gain!
+    A    you                   which              a
+    R                     way               RISE
+    G     are                           you
+    H                                                !
+    H       F       YIKES!          den            A
+    !        A                  sud             A
+    !         L                              A
+    *          L             a             O
+                I                        H
+                 N         of           W
+                  G
+                   !          all
+                    !      But"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 6002
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 16084
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 3500
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 3001
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 3365
+

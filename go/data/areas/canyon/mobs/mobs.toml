@@ -1,0 +1,833 @@
+[[mobiles]]
+vnum = 9201
+keywords = ["mountain", "climber", "mountainclimber"]
+short_desc = "the mountain climber"
+long_desc = "A mountain climber is making the same trek that you are."
+description = """
+He wants to see what's on the other side of the mountain too."""
+level = 6
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "warrior"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 5
+  bonus = 15
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 1
+
+[[mobiles]]
+vnum = 9202
+keywords = ["cyclops"]
+short_desc = "the cyclops"
+long_desc = "A hungry cyclops snarls at you!"
+description = "He looks like he's about to have dinner (maybe it's you?)."
+level = 44
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive", "cleric", "warrior"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 600
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 10
+
+[[mobiles]]
+vnum = 9203
+keywords = ["oldstyle", "tiny", "elemental"]
+short_desc = "a tiny elemental"
+long_desc = "A tiny elemental form wanders about."
+description = "Rather small for an elemental form, looks like a reject."
+level = 1
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 9204
+keywords = ["oldstyle", "elemental", "guardian"]
+short_desc = "the elemental guardian"
+long_desc = "The elemental guardian of the canyon."
+description = """
+You can't tell which kind of elemental it is, maybe it's a bit o' all of them?"""
+level = 40
+sex = "none"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+special = "spec_breath_any"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9205
+keywords = ["oldstyle", "small", "elemental"]
+short_desc = "a small elemental"
+long_desc = "A small, rather non-descript elemental."
+description = "A small elemental, a resident of the canyon."
+level = 10
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9206
+keywords = ["oldstyle", "medium", "elemental"]
+short_desc = "a medium elemental"
+long_desc = "A medium-sized elemental."
+description = "A medium elemental, a resident of the canyon."
+level = 20
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 9207
+keywords = ["oldstyle", "large", "elemental"]
+short_desc = "a large elemental"
+long_desc = "A large elemental."
+description = "A large elemental, a resident of the canyon."
+level = 30
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+special = "spec_breath_any"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 208
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 3
+
+[[mobiles]]
+vnum = 9208
+keywords = ["oldstyle", "earth", "elemental", "ruler"]
+short_desc = "the Earth Ruler"
+long_desc = "The Ruler of the earth elementals."
+description = """
+He looks as old as the earth itself.  He seems to know all the 
+secrets and knowledge of the Earth.  You can't really tell where 
+he begins and the rock wall ends."""
+level = 60
+sex = "none"
+act_flags = ["npc", "sentinel", "cleric"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 8
+
+[[mobiles]]
+vnum = 9209
+keywords = ["oldstyle", "fire", "elemental", "ruler"]
+short_desc = "the Fire Ruler"
+long_desc = "The Ruler of the fire elementals."
+description = """
+As you look at him he seems to blend in with the fire in his throne."""
+level = 59
+sex = "none"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+special = "spec_breath_fire"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9210
+keywords = ["oldstyle", "air", "elemental", "ruler"]
+short_desc = "The Air Ruler"
+long_desc = "The Ruler of the air elementals."
+description = "As you peer at him you seem to be looking at the sky itself."
+level = 59
+sex = "none"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+special = "spec_breath_gas"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9211
+keywords = ["oldstyle", "lightning", "elemental", "ruler"]
+short_desc = "The Lightning Ruler"
+long_desc = "The Ruler of the lightning elementals."
+description = """
+As you examine him there is a blinding flash of light and a deafening boom!
+You rub your eyes and look and the ruler is there grinning at you."""
+level = 60
+sex = "none"
+act_flags = ["npc", "sentinel"]
+alignment = 0
+special = "spec_breath_lightning"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9212
+keywords = ["oldstyle", "water", "elemental", "ruler"]
+short_desc = "The Water Ruler"
+long_desc = "The Ruler of the water elementals."
+description = """
+As you look at him he changes to mist, which swirls around you.  Just
+as you get scared, it reforms in elemental form."""
+level = 60
+sex = "none"
+act_flags = ["npc", "sentinel"]
+affected_by = ["flying"]
+alignment = 0
+special = "spec_breath_acid"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 9214
+keywords = ["oldstyle", "water", "puddle", "elemental"]
+short_desc = "a puddle"
+long_desc = "A small puddle of water elemental."
+description = "It trickles along the ground and gets your feet wet."
+level = 16
+sex = "none"
+act_flags = ["npc", "stay_area"]
+affected_by = ["flying"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 9215
+keywords = ["oldstyle", "fire", "flame", "elemental"]
+short_desc = "a flame"
+long_desc = "A small flickering flame elemental."
+description = "It smolders along the grass aimlessly."
+level = 7
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 9216
+keywords = ["oldstyle", "snowflake", "snow", "flake", "ice", "elemental"]
+short_desc = "a small snowflake"
+long_desc = "A frozen snowflake water elemental."
+description = "It looks a little blue."
+level = 5
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 9217
+keywords = ["oldstyle", "pebble", "rock", "earth", "stone", "elemental"]
+short_desc = "a small rock"
+long_desc = "A small rock."
+description = "It seems to be a small living pebble!"
+level = 6
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 9218
+keywords = ["oldstyle", "spark", "lightning", "energy", "elemental"]
+short_desc = "a small spark"
+long_desc = "A small spark of electricity fizzles here."
+description = """
+Zipping from place to place at the speed of light is tough work."""
+level = 8
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 9219
+keywords = ["oldstyle", "acid", "blob", "elemental"]
+short_desc = "a small blob of acid"
+long_desc = "A small blob of acid aimlessly eats away at the stone."
+description = """
+The magical blob of acid is a cross between lightning and water."""
+level = 17
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+special = "spec_breath_acid"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 9220
+keywords = ["oldstyle", "lava", "elemental"]
+short_desc = "a lava beast"
+long_desc = "A lava beast spews from place to place."
+description = "The magical lava beast is a cross between fire and earth."
+level = 15
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 9221
+keywords = ["oldstyle", "mud", "elemental"]
+short_desc = "a mud monster"
+long_desc = "A mud monster slops around."
+description = "The magical mud monster is a cross between water and earth."
+level = 14
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 1
+
+[[mobiles]]
+vnum = 9222
+keywords = ["oldstyle", "mist", "elemental"]
+short_desc = "an elemental mist"
+long_desc = "The air is magically misty here."
+description = "The magical mist is a cross between water and air."
+level = 12
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 9223
+keywords = ["oldstyle", "particle", "elemental"]
+short_desc = "a particle"
+long_desc = "A sub-atomic particle is too small for you to see."
+description = "The magical manifestation of energy."
+level = 9
+sex = "none"
+act_flags = ["npc", "stay_area"]
+alignment = 0
+special = "spec_breath_lightning"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9224
+keywords = ["oldstyle", "dust", "elemental"]
+short_desc = "a dust cloud"
+long_desc = "A dust cloud blowing by makes you sneeze."
+description = "The magical dust cloud is a cross between air and earth."
+level = 11
+sex = "none"
+act_flags = ["npc", "stay_area", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9225
+keywords = ["oldstyle", "eddie", "elemental"]
+short_desc = "an eddie"
+long_desc = "A small eddie current swirls junk around here."
+description = """
+The magical eddie current is a manifestation of an air elemental."""
+level = 3
+sex = "none"
+act_flags = ["npc", "stay_area", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 9226
+keywords = ["oldstyle", "blue", "flame"]
+short_desc = "the Blue Flame"
+long_desc = "The Blue Flame burns mysteriously here."
+description = """
+As you look you see what seems to be a face and almost a 
+humanoid figure somehow trapped in the fire."""
+level = 52
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+special = "spec_breath_fire"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 600
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 7
+  bonus = 7
+
+[[mobiles]]
+vnum = 9227
+keywords = ["oldstyle", "magneto"]
+short_desc = "the Magneto"
+long_desc = "The Magneto considers zapping you for the heck of it."
+description = """
+A humanoid figure seems to be trapped in the field of the Magneto."""
+level = 44
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+special = "spec_breath_lightning"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 400
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 9228
+keywords = ["oldstyle", "ice", "bandit"]
+short_desc = "the Ice Bandit"
+long_desc = "The Ice Bandit strikes cold fear in your heart."
+description = "A humanoid figure encased in ice but still apparently alive."
+level = 48
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area", "wimpy"]
+affected_by = ["sneak"]
+alignment = 0
+special = "spec_breath_frost"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 500
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 6
+
+[[mobiles]]
+vnum = 9229
+keywords = ["oldstyle", "rock", "monster"]
+short_desc = "the Rock Monster"
+long_desc = "The Rock Monster considers you in stoney silence."
+description = "A humanoid figure trapped in stone seems alive."
+level = 45
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 450
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 6
+  bonus = 6
+
+[[mobiles]]
+vnum = 9230
+keywords = ["oldstyle", "hurricane"]
+short_desc = "the Hurricane"
+long_desc = "A Hurricane rages across the sky."
+description = "A humanoid figure is trapped in the rushing wind."
+level = 55
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["sneak"]
+alignment = 0
+special = "spec_breath_gas"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 703
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 8
+
+[[mobiles]]
+vnum = 9231
+keywords = ["oldstyle", "magician"]
+short_desc = "an elemental magician"
+long_desc = "An elemental magician seeks magical stones for a spell."
+description = """
+The elemental magician has come here in search of the fabled
+Stone of Surrender which can be used to render opponents senseless."""
+level = 33
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 9232
+keywords = ["oldstyle", "rainbow", "warrior"]
+short_desc = "a rainbow warrior"
+long_desc = "A warrior of the Rainbow Cult swears his loyalty."
+description = """
+The Rainbow Cult has received special powers for their service to 
+the elemental forces."""
+level = 35
+sex = "none"
+act_flags = ["npc", "stay_area", "cleric"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 283
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 9233
+keywords = ["oldstyle", "illusionist"]
+short_desc = "an illusionist"
+long_desc = "The illusionist seeks the aid of the elemental forces."
+description = """
+He seeks their aid for a powerful new spell of deception.
+
+<wielded>            The Sword of Illusions"""
+level = 24
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 9234
+keywords = ["oldstyle", "alchemist"]
+short_desc = "an alchemist"
+long_desc = "An alchemist wanders by in search of magical herbs."
+description = "Rare herbs are rumored to grow only in the canyon."
+level = 26
+sex = "none"
+act_flags = ["npc", "stay_area", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 9235
+keywords = ["oldstyle", "baby", "rainbow", "dragon"]
+short_desc = "a baby rainbow dragon"
+long_desc = "A baby rainbow dragon plays among the elements here."
+description = "It's only a baby by dragon standards."
+level = 32
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_breath_any"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 9236
+keywords = ["oldstyle", "imp"]
+short_desc = "a little imp"
+long_desc = "A little imp runs along being annoying."
+description = "The little bugger steals stuff and is generally obnoxious."
+level = 10
+sex = "none"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
+affected_by = ["sneak", "hide"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 9237
+keywords = ["oldstyle", "HUGE", "elemental"]
+short_desc = "a HUGE elemental"
+long_desc = "A HUGE elemental form stands here."
+description = "HUGE, need i say more?"
+level = 40
+sex = "none"
+act_flags = ["npc", "sentinel", "stay_area"]
+alignment = 0
+special = "spec_breath_any"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 9238
+keywords = ["oldstyle", "vendor"]
+short_desc = "the elixir vendor"
+long_desc = "A vendor is willing to sell you elixirs."
+description = "I WOULD NOT suggest you attack me ...!"
+level = 60
+sex = "male"
+act_flags = ["npc", "sentinel", "stay_area", "mage"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 778
+
+  [mobiles.damage_dice]
+  number = 5
+  size = 4
+  bonus = 7
+

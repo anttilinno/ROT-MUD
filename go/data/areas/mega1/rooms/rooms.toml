@@ -1,0 +1,721 @@
+[[rooms]]
+vnum = 8001
+name = "Entrance to Mega-City One"
+sector = "city"
+description = """
+A road begins here in the glowing sands.  You follow it through a gate
+in a Plasteen wall onto the Megway of Mega-City One."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 5062
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8002
+
+[[rooms]]
+vnum = 8002
+name = "Mahmount Allesh Megway"
+sector = "city"
+description = """
+You are on one mile of over 13 and a half billion kilometers of
+roadway in Mega-City One.  The Megway continues north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8001
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8003
+
+[[rooms]]
+vnum = 8003
+name = "Intersection of Junket Way and Megway"
+sector = "city"
+description = """
+The Megway intersects with Junket Way here.  Junket Way is to the east,
+the Megway continues north and south, and the Pustule Palace Cafe is
+to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8002
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8010
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8004
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8021
+
+  [[rooms.mob_resets]]
+  vnum = 8004
+  max = 3
+
+[[rooms]]
+vnum = 8004
+name = "Mahmount Allesh Megway"
+sector = "city"
+description = """
+The traffic here is really congested due in part to the over 11 million
+people driving Mo-Pads, the mobile homes which are constantly on the
+move until their owners can find an apartment in one of the City-blocks.
+The Megway continues north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8003
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8005
+
+  [[rooms.mob_resets]]
+  vnum = 8000
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8009
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 8000
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8009
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8005
+name = "Mahmount Allesh Megway"
+sector = "city"
+description = """
+The Megway continues north and south.  On the off-ramps here you see
+many of the citizens of Mega-City One doing nothing.  You see of
+every hundred citizens, it can be guaranteed that 87 of them will
+be totally unemployed, and that a further five will not work more
+than ten hours a week.  To the east there is a dark alley and to the
+west is Rietzik's Shuggy Hall."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8004
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8011
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8006
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8022
+
+  [[rooms.mob_resets]]
+  vnum = 8004
+  max = 3
+
+[[rooms]]
+vnum = 8006
+name = "Central Plaza"
+sector = "city"
+description = """
+You are at the Central Plaza of the downtown district.  There are a couple
+of juves Boingging (tm) in the air above you.  Max Jaffa Boulevard goes
+east, the Megway continues north and south, and Bazza's Home for the
+Terminally Sarky is to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8005
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8012
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8007
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8023
+
+  [[rooms.mob_resets]]
+  vnum = 8000
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8009
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 8001
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8009
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 8004
+  max = 3
+
+[[rooms]]
+vnum = 8007
+name = "Corner of Ed Hilldreth Memorial Parkway and Megway"
+sector = "city"
+description = """
+Another major intersection which is being negotiated by vehicles that
+are bound to minimum speed limits.  Many Slow Driving offenses are being
+handed out by the Judges.  The Megway goes north and south, a Parkway
+goes east, and Nu Phisog Parlour is west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8006
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8013
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8008
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8024
+
+  [[rooms.mob_resets]]
+  vnum = 8010
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8014
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8003
+    inv_only = true
+
+[[rooms]]
+vnum = 8008
+name = "Mahmount Allesh Megway"
+sector = "city"
+description = """
+As you travel the Megway you notice many citizens participating in their
+favorite hobbies such as spot welding and metalwork, scratch building
+fashion Kneepads, giving blood, or just looking out the window.  The
+Megway continues north and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8007
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8009
+
+[[rooms]]
+vnum = 8009
+name = "Mahmount Allesh Megway"
+sector = "city"
+description = """
+The Megway ends here.  To the west is Ziggi Piggi's Home for the
+Semi-Stiff, to the east and south are construction areas, and the
+Megway goes north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8008
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8014
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8020
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8025
+
+  [[rooms.mob_resets]]
+  vnum = 8001
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8009
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8001
+    wear_loc = "legs"
+
+  [[rooms.mob_resets]]
+  vnum = 8011
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8014
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8003
+    inv_only = true
+
+[[rooms]]
+vnum = 8010
+name = "Junket Way"
+sector = "city"
+description = "Junket Way a small Skedway continues east and west."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8015
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8003
+
+  [[rooms.mob_resets]]
+  vnum = 8005
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8006
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8011
+name = "Davies Alley"
+sector = "city"
+description = """
+You are in a very dark and seedy alley.  This is just the right place for
+a bite fight.  Bite fighting is an illegal activity where both combatants
+can only use their sharpened teeth as weapons."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8017
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8005
+
+  [[rooms.mob_resets]]
+  vnum = 8001
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8009
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 8012
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 8012
+  max = 2
+
+[[rooms]]
+vnum = 8012
+name = "Max Jaffa Boulevard"
+sector = "city"
+description = "Max Jaffa Boulevard continues east and west."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8018
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8006
+
+  [[rooms.mob_resets]]
+  vnum = 8006
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8011
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8013
+name = "Ed Hilldreth Memorial Parkway"
+sector = "city"
+description = "The Parkway goes east and west."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8019
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8007
+
+  [[rooms.mob_resets]]
+  vnum = 8003
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8001
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 8014
+name = "Construction site of the Harold Finkelbaum Block."
+sector = "city"
+description = """
+A Mega-City One City Block is being constructed at this site.  A
+typical block is from 100 to 1000 stories high with hundreds of
+thousands inhabitants."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8009
+
+  [[rooms.mob_resets]]
+  vnum = 8003
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8000
+    inv_only = true
+
+[[rooms]]
+vnum = 8015
+name = "Corner of Junket Way and Threep Lane"
+sector = "city"
+description = """
+There is a second-hand kneepad stall is doing a brisk business with a
+group of juves on their way to school.  Junket Way goes west and Threep
+Lane travels south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8016
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8010
+
+  [[rooms.mob_resets]]
+  vnum = 8000
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8009
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8001
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 8016
+name = "Threep Lane"
+sector = "city"
+description = """
+Threep Lane continues north and south.  There is a building to the east
+with a sign next to the door."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8015
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8026
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8017
+
+[[rooms]]
+vnum = 8017
+name = "Threep Lane"
+sector = "city"
+description = """
+Threep Lane continues north and south.  There is a dark alley to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8016
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8018
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8011
+
+  [[rooms.mob_resets]]
+  vnum = 8005
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8015
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8018
+name = "Corner of Max Jaffa Blvd and Threep Way"
+sector = "city"
+description = """
+A proprietor of Uncle Sumpty's Ugly Emporium meanders by.  Threep Lane
+continues north and south while Max Jaffa Boulevard goes west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8017
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8019
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8012
+
+  [[rooms.mob_resets]]
+  vnum = 8006
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8011
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8019
+name = "Corner of Ed Hilldreth Mem. Prkwy and Threep Lane"
+sector = "city"
+description = """
+Threep Lane goes north from here while Ed Hilldreth Memorial Parkway goes
+west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8018
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8013
+
+  [[rooms.mob_resets]]
+  vnum = 8005
+  max = 3
+
+[[rooms]]
+vnum = 8020
+name = "Construction Site for the Brit-Cit One tunnel."
+sector = "city"
+description = """
+Construction is under way for the Black Atlantic Tunnel to connect
+Mega-City One and Brit-Cit One."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8009
+
+[[rooms]]
+vnum = 8021
+name = "Pustule Palace Cafe"
+sector = "inside"
+description = """
+A scabrous hole.  Run by Ernie Ramirez, an ex-perp, it is a meeting place
+for the low-life in the area."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8003
+
+  [[rooms.mob_resets]]
+  vnum = 8009
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8006
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8002
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8013
+    inv_only = true
+
+[[rooms]]
+vnum = 8022
+name = "Rietzik's Shuggy Hall"
+sector = "inside"
+description = """
+A sleazy dive and the meeting place of a lot of perps.  Shuggy is a
+twenty-second Century version of pool, played on a hilly table, usually
+with large side bets."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8005
+
+[[rooms]]
+vnum = 8023
+name = "Bazza's Home for the Terminally Sarky"
+sector = "inside"
+description = """
+This is an experimental psychiatric home.  Named after a 20th Century
+vid-critic, the home attempts, by various methods, to readjust the
+socially unacceptable attitudes of the inmates."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8006
+
+  [[rooms.mob_resets]]
+  vnum = 8002
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8008
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8024
+name = "Nu Phisog Parlour"
+sector = "inside"
+description = """
+Opened as a direct rival to the New You Face Parlour chain to offer quick
+and cheap face-changing facilities to the general public.  However,
+since the closure of Sump's Ugly clinics, the craze for face-changing has
+died down."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8007
+
+  [[rooms.mob_resets]]
+  vnum = 8002
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8010
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8025
+name = "Ziggi Piggi's Home for the Semi-Stiff"
+sector = "inside"
+description = """
+The only suspended animation parlour in the area.  It has a high turnover
+rate.  It is rumored that the patrons are being used in body sharking and
+organ legging activities."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 8009
+
+  [[rooms.mob_resets]]
+  vnum = 8006
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8011
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 8026
+name = "Throt & Gleep's Megger Store"
+sector = "inside"
+description = """
+This place promises to provide everything that the citizens don't need,
+with the utmost discourtesy.  Of course, something as crazy as this was
+bound to succeed.  There is a door to the north with a slot next to it.
+There is also a sign next to the slot."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8027
+  key = 8013
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 8016
+  flags = ["door"]
+
+[[rooms]]
+vnum = 8027
+name = "Stockroom of Throt & Gleep's Megger Store"
+sector = "inside"
+description = """
+Many useless items stock the shelves of this stockroom.  A door leads
+south and large vault door is to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 8028
+  key = 8012
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8026
+  key = 8013
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 8007
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8016
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8012
+    inv_only = true
+
+[[rooms]]
+vnum = 8028
+name = "Throt & Gleep's Vault"
+sector = "inside"
+description = "The vault is musty with a slight smell of ozone in the air."
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 8027
+  key = 8012
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 8008
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8016
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 8005
+    inv_only = true
+
+  [[rooms.obj_resets]]
+  vnum = 8004
+  max = 1
+

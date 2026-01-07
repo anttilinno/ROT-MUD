@@ -1,0 +1,316 @@
+[[mobiles]]
+vnum = 8000
+keywords = ["oldstyle", "juve"]
+short_desc = "a juve"
+long_desc = "A juve is standing here plotting mischief."
+description = """
+He is a tall, thin boy.  He is looking for his gang mates.  He and his
+mates have cost city authorities many millions of creds a week in
+vandalism repairs."""
+level = 9
+sex = "male"
+act_flags = ["npc", "scavenger"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 8001
+keywords = ["oldstyle", "punk"]
+short_desc = "a punk"
+long_desc = "A punk is here plotting a crime wave."
+description = """
+This punk is from one of the rowdiest, scruffiest, and definitely most
+fashionable of all gangs -- the Grunge Mongers."""
+level = 19
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 8002
+keywords = ["oldstyle", "Futsie"]
+short_desc = "a Futsie"
+long_desc = "A Futsie is here reciting Monty Python sketches."
+description = """
+A sad victim of Future Shock, this man is immensely dangerous and will
+not be stopped by anyone who tries to deter him from revenge upon the
+Justice Department."""
+level = 34
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_invis"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 258
+
+  [mobiles.damage_dice]
+  number = 3
+  size = 4
+  bonus = 4
+
+[[mobiles]]
+vnum = 8003
+keywords = ["oldstyle", "Citi-Def", "Militiaman"]
+short_desc = "a Citi-Def Militiaman"
+long_desc = "A Citi-Def Militiaman is here contemplating a Block War."
+description = """
+A member of a local Block's Citi-Def militia, this man is well-armed
+and undersupervised."""
+level = 32
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_cast_judge"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 233
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 6
+  bonus = 4
+
+[[mobiles]]
+vnum = 8004
+keywords = ["oldstyle", "dunk"]
+short_desc = "a dunk"
+long_desc = "A dunk is here blending into the crowd."
+description = """
+He blends into the crowd as his hand travels into another citizen's pocket."""
+level = 19
+sex = "male"
+act_flags = ["npc", "scavenger", "stay_area", "wimpy", "thief"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_thief"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 110
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 8
+  bonus = 2
+
+[[mobiles]]
+vnum = 8005
+keywords = ["oldstyle", "tap"]
+short_desc = "a tap"
+long_desc = "A tap is here eyeing your belongings."
+description = """
+A practitioner in Mega-City One's largest growth industry, mugging, is
+looking you over for a possible business transaction."""
+level = 28
+sex = "female"
+act_flags = ["npc", "scavenger", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 8006
+keywords = ["oldstyle", "rookie", "judge"]
+short_desc = "a rookie judge"
+long_desc = "A Rookie judge is on his first beat here."
+description = """
+A member of Mega-City One's Justice Department is here considering what
+crimes you have committed.  Being a rookie he will probably be easier on
+you though."""
+level = 39
+sex = "male"
+act_flags = ["npc", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_cast_judge"
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+
+[[mobiles]]
+vnum = 8007
+keywords = ["oldstyle", "Wallaby", "Gleep"]
+short_desc = "Wallaby Gleep"
+long_desc = "Mr. Gleep is here wanting to know what you want."
+description = """
+Wallaby Gleep is a heavy-set man who gives you the impression that he is
+unintelligent and unimaginative, but looks can be deceiving."""
+level = 44
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+affected_by = ["detect_invis", "detect_hidden", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 400
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 4
+  bonus = 6
+
+[[mobiles]]
+vnum = 8008
+keywords = ["oldstyle", "Pinkerton", "Throt"]
+short_desc = "Pinkerton Throt"
+long_desc = "Pinky Throt is here Wringing his hands."
+description = """
+He is a thin angular crook, pretty close to everyone's idea of Ebeneezer
+Scrooge.  Indeed, the only thing guaranteed to bring a spark to his dead
+eyes is the mention of money."""
+level = 50
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 8009
+keywords = ["oldstyle", "Ernie", "Ramirez"]
+short_desc = "Ernie Ramirez"
+long_desc = "Ernie Ramirez is here collecting for the mob."
+description = """
+Ramirez is a dour man who knows that he's never going to get a better
+deal out of life.  He is content to run the bite fights for Throt and
+Gleep."""
+level = 37
+sex = "male"
+act_flags = ["npc", "sentinel", "scavenger"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 308
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 7
+  bonus = 5
+
+[[mobiles]]
+vnum = 8010
+keywords = ["oldstyle", "Judge", "Eckersely"]
+short_desc = "Judge Eckersely"
+long_desc = "Judge Eckersely is here shaking down a Perp."
+description = """
+He is a dedicated, if somewhat pessimistic Judge.  He is the Senior Judge
+of the Downtown Quadrant."""
+level = 59
+sex = "male"
+act_flags = ["npc", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_cast_judge"
+
+  [mobiles.hit_dice]
+  number = 6
+  size = 12
+  bonus = 853
+
+  [mobiles.damage_dice]
+  number = 4
+  size = 6
+  bonus = 8
+
+[[mobiles]]
+vnum = 8011
+keywords = ["oldstyle", "Judge", "Beddows"]
+short_desc = "Judge Beddows"
+long_desc = "Judge Beddows is here calling Resyk."
+description = """
+Beddows is a clone from the same stock as the ex-Chief Judge McGruder.
+She is fanatically dedicated to her job and has no ambitions other than
+to enforce the LAW."""
+level = 49
+sex = "female"
+act_flags = ["npc", "stay_area"]
+affected_by = ["detect_invis", "detect_hidden"]
+alignment = 0
+special = "spec_cast_judge"
+
+  [mobiles.hit_dice]
+  number = 5
+  size = 10
+  bonus = 550
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 10
+  bonus = 7
+
+[[mobiles]]
+vnum = 8012
+keywords = ["oldstyle", "bite", "fighter"]
+short_desc = "a bite fighter"
+long_desc = "A bite fighter is here sharpening his teeth."
+description = """
+A bite fighter is here with sharpened teeth and a bad attitude."""
+level = 40
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 3
+  size = 9
+  bonus = 333
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 8
+  bonus = 5
+

@@ -1,0 +1,1459 @@
+[[rooms]]
+vnum = 9301
+name = "Inside a Tavern"
+sector = "inside"
+description = """
+You are inside a dimly-lit room.  The atmosphere makes you feel uncomfortable.
+In front of you stands a mysterious gypsy.  She whispers 'Your fate and
+destiny lie beyond this world.'  You are still wondering what she means when
+you suddenly notice the crystal ball ... it glows fiercely and displays the
+Universe!"""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1306
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9302
+
+[[rooms]]
+vnum = 9302
+name = "Inside the Crystal Ball"
+sector = "field"
+description = """
+You have touched the crystal ball and find that you have gone inside it:
+a world of stars and wonders!  As you look back you figure out there is no
+choice but to go forward."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9303
+
+[[rooms]]
+vnum = 9303
+name = "Inside the Galaxy"
+sector = "city"
+description = """
+You are now inside the galaxy, around you you see stars and nebulae smiling
+at your presence, and comets and meteors wandering around you.  You realize
+that this world may not be the true galaxy after all, but just another
+fantasy zone.  Exits lie virtually in all directions."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9304
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9308
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9302
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9321
+
+[[rooms]]
+vnum = 9304
+name = "On an InterGalactic Walkway"
+sector = "city"
+description = """
+You are on a well-paved path which seems that it was made deliberately for
+visitors like you.  The walkway continues north and a small exit lies west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9305
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 11600
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9303
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9322
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 9305
+  max = 4
+
+[[rooms]]
+vnum = 9305
+name = "End of the InterGalactic Walkway"
+sector = "city"
+description = """
+You notice the walkway has come to an abrupt end and you wonder why. You see
+that there is still a small path which leads north and one to the west.
+To the east lies a bridge."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9306
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9309
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9304
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9323
+
+[[rooms]]
+vnum = 9306
+name = "At the Undeveloped Part of the Galaxy"
+sector = "city"
+description = """
+This place looks deserted, covered with space debris.  Not a sign of life
+is around."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9305
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9324
+
+  [[rooms.mob_resets]]
+  vnum = 9306
+  max = 3
+
+[[rooms]]
+vnum = 9308
+name = "On the Bridge of Stars"
+sector = "city"
+description = """
+This bridge has been made by the stars to honour their ancestors.  The
+bridge itself shines brightly and makes you feel that you are walking on
+a path of light.  An entrance to an ancient building lies north and to
+the east lies the Milky Way."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9331
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9312
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9303
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 9305
+  max = 4
+
+[[rooms]]
+vnum = 9309
+name = "On the Bridge of Nebulae"
+sector = "city"
+description = """
+This bridge, like the other, was made as a memorial.  The nebulae had to
+make one just to show that they are as capable as the stars.  North lies
+a throne room."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9310
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9314
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9305
+
+  [[rooms.mob_resets]]
+  vnum = 9305
+  max = 4
+
+[[rooms]]
+vnum = 9310
+name = "The Throne Room of the Nebula King"
+sector = "inside"
+description = """
+You can only faintly make out that it is a throne room as it is too
+dark in here.  In the middle is an empty throne.  You wonder where
+the King has gone, maybe he is hiding from you?"""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9309
+
+  [[rooms.mob_resets]]
+  vnum = 9303
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 9303
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 9303
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 9307
+  max = 1
+
+[[rooms]]
+vnum = 9312
+name = "At the Start of the Milky Way"
+sector = "hills"
+description = """
+It is here that the famous old Milky Way starts flowing.  You are surrounded
+by streams of mist the moment you tread on it.  You can't see well in
+here ... luckily you haven't fallen yet!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9313
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9308
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+[[rooms]]
+vnum = 9313
+name = "Along the Milky Way"
+sector = "hills"
+description = """
+You are still travelling inside this path of mist.  You notice a small
+opening to the east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9314
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9317
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9312
+
+  [[rooms.mob_resets]]
+  vnum = 9301
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 9305
+  max = 4
+
+[[rooms]]
+vnum = 9314
+name = "At the End of the Milky Way"
+sector = "hills"
+description = """
+Just as you started enjoying this journey inside the mist, you have come to
+the end of it.  West leads to a bridge and east leads to somewhere else."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9318
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9313
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9309
+
+  [[rooms.mob_resets]]
+  vnum = 9306
+  max = 3
+
+[[rooms]]
+vnum = 9317
+name = "A Small Clearing"
+sector = "field"
+description = """
+You are inside a small clearing.  You can see that there are signs of a
+living creature nearby."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9318
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9313
+
+  [[rooms.mob_resets]]
+  vnum = 9304
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9301
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 9304
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9301
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 9310
+  max = 1
+
+[[rooms]]
+vnum = 9318
+name = "An Edge of the Galaxy"
+sector = "city"
+description = """
+You are on the very edge of the galaxy.  Nothing is here except that there
+is a path which leads down."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9317
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9314
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9319
+
+  [[rooms.mob_resets]]
+  vnum = 9303
+  max = 5
+
+[[rooms]]
+vnum = 9319
+name = "Very Near to a Gigantic Star"
+sector = "city"
+description = """
+You are very near to a gigantic red star.  While you are still fascinated
+by its beauty, the star keeps on growing ... suddenly you realize that you'd
+better leave."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9320
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9320
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9320
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9320
+
+[[rooms]]
+vnum = 9320
+name = "Too Bright to Tell"
+sector = "inside"
+description = """
+Indeed it is too bright to tell.  Because what you are witnessing is the
+rare event of a Supernova, how a star explodes itself into galactic dust.
+You may find yourself lucky to witness this rare event but even luckier,
+you have finally got out of this galaxy as your body turns into dust.
+That really HURTS!"""
+
+[[rooms]]
+vnum = 9321
+name = "The Star Cluster"
+sector = "city"
+description = """
+You are inside the home of the stars.  All you can see around you are stars
+and nothing else.  You eyes become pretty hurt as you look at them."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9322
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9303
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+[[rooms]]
+vnum = 9322
+name = "Another Edge of the Galaxy"
+sector = "field"
+description = """
+This is another uninhabited place.  Exits lie north, east and south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9323
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9304
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9321
+
+  [[rooms.mob_resets]]
+  vnum = 9301
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 9303
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 9304
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9301
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 9304
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9301
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 9306
+  max = 3
+
+[[rooms]]
+vnum = 9323
+name = "Corner of the Galaxy"
+sector = "city"
+description = """
+You wonder why the galaxy is limited.  All you have done in Astronomy
+courses now prove worthless.  Well who told you to take one at the start?"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9324
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9305
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9322
+
+  [[rooms.mob_resets]]
+  vnum = 9301
+  max = 3
+
+[[rooms]]
+vnum = 9324
+name = "Lost in Space"
+sector = "field"
+description = """
+You are now lost in space.  Compasses don't work here, sorry.  What's more
+you can sense darkness engulfing you.  You'd better get out quick."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9325
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9306
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9323
+
+[[rooms]]
+vnum = 9325
+name = "Black Hole"
+sector = "inside"
+description = """
+Well you have chosen the wrong path, sorry.  Nothing can escape from this
+monster, not even light.
+PANIC!  You can't escape!"""
+
+[[rooms]]
+vnum = 9326
+name = "The Homes of the Pleiades"
+sector = "city"
+description = """
+This is where the famous Seven Sisters live.  You'd better not disturb them."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9329
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9327
+
+  [[rooms.mob_resets]]
+  vnum = 9312
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 9312
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 9312
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 9312
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 9312
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 9312
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 9312
+  max = 7
+
+[[rooms]]
+vnum = 9327
+name = "Western Side of the Temple"
+sector = "city"
+description = """
+You are still wandering around this temple.  You notice exits lie in all
+directions except west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9326
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9330
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9328
+
+[[rooms]]
+vnum = 9328
+name = "Orion's Hunting Lodge"
+sector = "city"
+description = """
+This is dedicated to the Great Hunter of all time -- Orion.
+Scattered on the floor is the famous hunting equipment used by him."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9327
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9331
+
+  [[rooms.mob_resets]]
+  vnum = 9311
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9304
+    wear_loc = "waist"
+
+[[rooms]]
+vnum = 9329
+name = "Northern Side of the Temple"
+sector = "city"
+description = """
+You are still wandering around this temple.  You notice exits lie in all
+directions except north."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9332
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9330
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9326
+
+[[rooms]]
+vnum = 9330
+name = "The Offering Chamber"
+sector = "city"
+description = """
+This is the sacred offering chamber in which sacrifices are made.  You see a
+young girl here, chained to the wall, as if she is waiting for execution.
+You look up and realize the chains are sent down directly from above.
+Below you recognize the temple of Thalos."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9329
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9333
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9331
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9327
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9339
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 5250
+
+  [[rooms.mob_resets]]
+  vnum = 9308
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9328
+    wear_loc = "hold"
+
+[[rooms]]
+vnum = 9331
+name = "The Entrance of the Ancient Temple"
+sector = "city"
+description = """
+You have entered into this old temple, which was built originally for the gods
+in Mount Olympia, but it is now deserted as someone took over this part of the
+Universe."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9330
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9334
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9308
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9328
+
+[[rooms]]
+vnum = 9332
+name = "Hercules' Mighty Throne"
+sector = "city"
+description = """
+You stand before the throne of a long-forgotten hero.  It is full of bounty
+that he got from the Ten Labours."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9333
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9329
+
+  [[rooms.mob_resets]]
+  vnum = 9309
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9302
+    wear_loc = "arms"
+
+[[rooms]]
+vnum = 9333
+name = "Eastern Side of the Temple"
+sector = "city"
+description = """
+You are still wandering around this temple.  You notice exits lie in all
+directions except east."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9332
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9334
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9330
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+[[rooms]]
+vnum = 9334
+name = "Perseus' Chamber"
+sector = "city"
+description = """
+It is the chamber of the prince, Perseus.  However, he seems not to be here.
+Maybe he has gone to get Pegasus to save Andromeda?"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9333
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9331
+
+[[rooms]]
+vnum = 9339
+name = "On the Mystic Chains"
+sector = "mountain"
+description = """
+You are dangling on the chains.  You notice exits lie in all directions.
+Up above you see the chains continue upwards.  But a forcefield prevents
+you from going further upwards."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9348
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9351
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9342
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9345
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9354
+  key = 9324
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9330
+
+[[rooms]]
+vnum = 9342
+name = "On a Hill"
+sector = "hills"
+description = """
+Suddenly you find yourself on a hillside.  As you look around, you notice
+that Spring has descended upon you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9339
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9353
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9343
+
+  [[rooms.mob_resets]]
+  vnum = 9315
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9324
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9306
+    wear_loc = "neck1"
+
+[[rooms]]
+vnum = 9343
+name = "Inside a Spanish Bull-Ring"
+sector = "field"
+description = """
+You are inside what used to be a ground for bull fighting.  But you notice
+there are no Matadors around.  Maybe they are all dead?"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9342
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9344
+
+  [[rooms.mob_resets]]
+  vnum = 9316
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9307
+    wear_loc = "feet"
+
+[[rooms]]
+vnum = 9344
+name = "Inside a study"
+sector = "inside"
+description = """
+This is a strange study. Besides the desks and chairs you also see a large
+mirror in the middle.  So, you wonder, is this how you make a Gemini into
+two Gemini?"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9343
+
+  [[rooms.mob_resets]]
+  vnum = 9317
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9308
+    wear_loc = "hold"
+
+  [[rooms.mob_resets]]
+  vnum = 9318
+  max = 1
+
+[[rooms]]
+vnum = 9345
+name = "Along the seashore"
+sector = "field"
+description = """
+You start to feel the heat of Summer.  Amongst the rocky beach you notice
+hidden forms which could be camouflaged crabs."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9339
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9346
+
+  [[rooms.mob_resets]]
+  vnum = 9319
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9325
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9309
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 9346
+name = "Within the Deep Jungle"
+sector = "forest"
+description = """
+Nearby you can hear the roar of an animal.  Peering through the dense
+overgrowth you think you glimpse a pair of menacing eyes."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9345
+
+  [[rooms.mob_resets]]
+  vnum = 9320
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9310
+    wear_loc = "about"
+
+[[rooms]]
+vnum = 9347
+name = "Inside a Luxurious Bedroom"
+sector = "city"
+description = """
+A peaceful feeling overtakes you.  You see a magnificent four-poster bed.
+It's a double bed and there is only room for one more!  Well, what now ... ?"""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9348
+
+  [[rooms.mob_resets]]
+  vnum = 9321
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9311
+    wear_loc = "wrist_l"
+
+[[rooms]]
+vnum = 9348
+name = "The Supreme Court"
+sector = "city"
+description = """
+You are standing inside the dock of a court.  You feel an overwhelming
+sense of guilt and you want to protest your innocence!  You fear retribution
+and feel yourself exposed, just like the trees in Autumn."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9347
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9339
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9349
+
+  [[rooms.mob_resets]]
+  vnum = 9322
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9326
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9312
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9313
+    wear_loc = "shield"
+
+[[rooms]]
+vnum = 9349
+name = "In the Dry Desert"
+sector = "field"
+description = """
+You are confused by the shifting sands around you.  Through the shimmering
+heat you see the hazy outline of a giant scorpion ... is this a mirage?"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9348
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9350
+
+  [[rooms.mob_resets]]
+  vnum = 9323
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9314
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 9350
+name = "In the Woods"
+sector = "forest"
+description = """
+You find yourself in the center of a Centaurion hunting party.  You'd better
+hide yourself before you become the 'center attraction'!"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9349
+
+  [[rooms.mob_resets]]
+  vnum = 9324
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9315
+    wear_loc = "hold"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9316
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 9351
+name = "On a Mountain Peak"
+sector = "mountain"
+description = """
+You are on the highest peak of the Universe.  You look around and notice
+clouds below you.  One of the clouds resembles a goat-like form."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9352
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9339
+
+  [[rooms.mob_resets]]
+  vnum = 9325
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9327
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9317
+    wear_loc = "hands"
+
+[[rooms]]
+vnum = 9352
+name = "Inside a Waterfall"
+sector = "mountain"
+description = """
+The noise is deafening.  You are about to take a drink when you realize
+that the water is being poured out of a vessel of mind-boggling proportions!"""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9351
+
+  [[rooms.mob_resets]]
+  vnum = 9326
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9318
+    wear_loc = "hold"
+
+[[rooms]]
+vnum = 9353
+name = "Inside a Gigantic Clam"
+sector = "mountain"
+description = """
+You feel uneasy here as if some evil magic is being cast on you.
+You suspect something fishy is going on in here."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9342
+
+  [[rooms.mob_resets]]
+  vnum = 9327
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9319
+    wear_loc = "legs"
+
+  [[rooms.mob_resets]]
+  vnum = 9328
+  max = 1
+
+[[rooms]]
+vnum = 9354
+name = "End of the Mystic Chains"
+sector = "mountain"
+description = """
+You have reached the end of the mystic chains.  Looking up, you notice a
+small landing on which you can climb.  However, there seems to be another
+forcefield blocking your way."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 9355
+  key = 9325
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9339
+  key = 9324
+  flags = ["closed"]
+
+[[rooms]]
+vnum = 9355
+name = "On the Draco"
+sector = "hills"
+description = """
+You realize you are standing on scaly ground.  As you wonder what the ground
+is made of, you feel the ground move."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9356
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 9354
+  key = 9325
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 9302
+  max = 9
+
+[[rooms]]
+vnum = 9356
+name = "Tail of the Draco"
+sector = "hills"
+description = """
+At last you realize that you are on a giant snake-like dragon called the
+Draco, the guardian of the inner galaxy.  You realize that the Draco is
+actually flying now!"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9357
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9355
+
+[[rooms]]
+vnum = 9357
+name = "Path of the Draco"
+sector = "hills"
+description = """
+As you struggle along this scaly creature you realize that the only way
+you can reach to the inner galaxy is by going all the way to the head."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9358
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9356
+
+[[rooms]]
+vnum = 9358
+name = "Near the Legs of Draco"
+sector = "hills"
+description = """
+You are approaching the leg part of this creature.  You look around and see
+that the surrounding is all dark except for some faint lights from the
+distant stars."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9359
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9357
+
+  [[rooms.mob_resets]]
+  vnum = 9314
+  max = 2
+
+[[rooms]]
+vnum = 9359
+name = "On the Back of Draco"
+sector = "hills"
+description = """
+At last you are half way through this long, weary journey. You can see
+the wings are to the east but it seems that another forcefield is in the way."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9360
+  key = 9326
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9358
+
+[[rooms]]
+vnum = 9360
+name = "Between the Wings of Draco"
+sector = "hills"
+description = """
+You hear some giant flapping sounds nearby.  You desperately try to get hold
+of something as the forceful gusts sweep you away."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9361
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9359
+  key = 9326
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 9314
+  max = 2
+
+[[rooms]]
+vnum = 9361
+name = "Near the Arms of Draco"
+sector = "hills"
+description = """
+From above you can faintly make out the gigantic arms which extend far
+beyond into the darkness."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9362
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9360
+
+[[rooms]]
+vnum = 9362
+name = "On the Neck of Draco"
+sector = "hills"
+description = """
+Your journey is now approaching the end.  However, this neck seems to be
+endless."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9361
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9363
+
+[[rooms]]
+vnum = 9363
+name = "Approaching the Head of Draco"
+sector = "hills"
+description = """
+You have come to the end of Draco, but you can't find the head!
+You see a forcefield to the south, some distance away, beyond reach.
+If only the head were here ..."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9362
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9364
+  key = 9327
+  flags = ["closed"]
+
+  [[rooms.mob_resets]]
+  vnum = 9313
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9305
+    inv_only = true
+
+[[rooms]]
+vnum = 9364
+name = "At the Entrance of the Great Dipper"
+sector = "city"
+description = """
+Now you are in the innermost part of the galaxy.  What you are walking on now
+is the path of the Great Dipper or the Plough.  You notice that there are
+seven rooms in this zone, representing the seven stars of the Dipper."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9363
+  key = 9327
+  flags = ["closed"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9365
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9366
+
+[[rooms]]
+vnum = 9365
+name = "Cassiopeia's Throne"
+sector = "city"
+description = """
+This is the Throne room of the Queen of the Universe.  From here you can see
+every star and constellation in the Universe."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9364
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9367
+
+  [[rooms.mob_resets]]
+  vnum = 9330
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9320
+    wear_loc = "finger_l"
+
+[[rooms]]
+vnum = 9366
+name = "Along the Path of the Dipper"
+sector = "city"
+description = "You see stars around you but nothing of special interest."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9364
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9367
+
+[[rooms]]
+vnum = 9367
+name = "Cepheus' Throne"
+sector = "city"
+description = """
+This is the Throne room of the King of the Universe.  From here you can see
+every star and constellation in the Universe."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9366
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9365
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9368
+
+  [[rooms.mob_resets]]
+  vnum = 9331
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9321
+    wear_loc = "light"
+
+[[rooms]]
+vnum = 9368
+name = "Along the path of the Dipper"
+sector = "city"
+description = "You see stars around you but nothing of special interest."
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9367
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9369
+
+[[rooms]]
+vnum = 9369
+name = "Along the path of the Dipper"
+sector = "city"
+description = "You see stars around you but nothing of special interest."
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 9368
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9370
+
+[[rooms]]
+vnum = 9370
+name = "End of the Dipper"
+sector = "city"
+description = """
+You have finished the path of the Dipper.  Here, the most prominent feature
+is a set of claw-marks.  You also notice a room to the south; it looks as
+if Polaris could lie here."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9369
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 9371
+
+  [[rooms.mob_resets]]
+  vnum = 9329
+  max = 1
+
+[[rooms]]
+vnum = 9371
+name = "The Polar Star"
+sector = "city"
+description = """
+You have entered the private chamber of Polaris.  This is a room of great
+significance.  You can see a powerful telescope pointing down towards the
+Universe (SNOOPING!).  It is from here that Polaris commands the Universe.
+You feel you have come to end of your search in this galaxy ..."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 9370
+
+  [[rooms.mob_resets]]
+  vnum = 9332
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9322
+    wear_loc = "finger_r"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 9323
+    wear_loc = "wield"
+

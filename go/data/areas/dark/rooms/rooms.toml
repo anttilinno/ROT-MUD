@@ -1,0 +1,2048 @@
+[[rooms]]
+vnum = 14501
+name = "Land Ho!!"
+sector = "water_noswim"
+description = """
+At long last....land hoooo!  To the south, the pinacle of a large
+mountain has attracted your attention.  A sandy beach awaits your
+landing...trees wave in the wind and birds of many colors fly
+high above the land beyond the beach.
+     There is a small (Glowing) (Humming) tablet."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14502
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 9797
+
+[[rooms]]
+vnum = 14502
+name = "Approaching land"
+sector = "water_noswim"
+description = """
+The beach is quickly approaching and you had better take in
+your sail or you'll run aground.  From here you can see three
+huge mountaintops and a few trees next to two or three buildings."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14501
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14503
+
+[[rooms]]
+vnum = 14503
+name = "Rough waters at the beach"
+sector = "water_noswim"
+description = """
+The water rushes toward the beach causing large waves and
+a riptide which threatens to pull your vessel towards the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14502
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14504
+
+[[rooms]]
+vnum = 14504
+name = "The beach"
+sector = "desert"
+description = """
+You are standing on a sandy beach complete with seashells,
+palm trees and sand crabs.  To the south you see a line of
+palm trees standing next to and before two huge mountains."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14503
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14505
+
+[[rooms]]
+vnum = 14505
+name = "Sandy beach"
+sector = "desert"
+description = """
+The yellow sand is deep and makes walking hard.  Several large
+biting flies have found their dinner by lunching on your exposed
+skin.  The palm trees wave gently in the wind..their brown husks
+scraping a lovely tune."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14504
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14506
+
+[[rooms]]
+vnum = 14506
+name = "Water's Edge"
+sector = "desert"
+description = """
+You have walked quite a distance from your vessel.  If you
+look backwards you can see your anchored ship bobbing in the
+surf.  The path you are following begins to curve into the
+palms and toward the mountains."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14505
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14507
+
+[[rooms]]
+vnum = 14507
+name = "Sandy path"
+sector = "desert"
+description = """
+The sandy path you are following is slowly curving towards the
+beach and the palm trees.  Past the palms, to your west, are
+the tops of several buildings.  Smoke spirals into the air
+and you can almost smell grilled fish."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14506
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14508
+
+[[rooms]]
+vnum = 14508
+name = "Palm path"
+sector = "desert"
+description = """
+You are walking between the palm trees when you notice several
+large monkeys..weighing about 200 pounds each glancing down
+at you from their perches.  They appear to be sizing you up."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14507
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14509
+
+  [[rooms.mob_resets]]
+  vnum = 14501
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14501
+    inv_only = true
+
+[[rooms]]
+vnum = 14509
+name = "Palm trail"
+sector = "desert"
+description = """
+The trail you are following is covered with palm fronds and
+monkey droppings.  To the south of you a huge mountain dominates
+the view.  The glare is terrific at the mountain's peak from the
+sun beating down upon the snow."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14508
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14510
+
+[[rooms]]
+vnum = 14510
+name = "Cross Trail"
+sector = "desert"
+description = """
+The sandy trail leads west and east.  You are standing at the
+base of a huge mountain.  If you listen closely you can hear
+the crashing of the waves upon the beach to the north of you."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14509
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14514
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14511
+
+[[rooms]]
+vnum = 14511
+name = "Palm trail"
+sector = "desert"
+description = """
+The trail you are following travels alongside a row of palms
+growing on the beach.  The palms provide shade and relief from
+the sun's warm rays."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14510
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14512
+
+[[rooms]]
+vnum = 14512
+name = "Sandy palm trail"
+sector = "desert"
+description = """
+This trail has had recent traffic.  You can see indentions in
+the sand from someone's footsteps.  Two small running grooves
+indicates that the previous traveller had a small cart."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14511
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14513
+
+[[rooms]]
+vnum = 14513
+name = "Near the end"
+sector = "desert"
+description = """
+The trail is coming to an end.  To the northwest you can see
+three or four buildings nestled within the palms of the beach.
+At least one of the buildings is a warehouse."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14512
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14573
+
+[[rooms]]
+vnum = 14514
+name = "Sandy trail"
+sector = "desert"
+description = """
+This trail is heavily travelled.  You can easily see signs of
+others who have made this trip before you.  The sand is a
+glistening white with brown smears from mountain dirt."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14515
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14510
+
+[[rooms]]
+vnum = 14515
+name = "Palm view"
+sector = "desert"
+description = """
+Hundreds of palms block your sight of the ocean.  Their graceful
+height and delicate fronds make a wonderful screen to the sun's
+hot rays."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14516
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14514
+
+[[rooms]]
+vnum = 14516
+name = "Mountain trail"
+sector = "desert"
+description = """
+The sandy trail you have been following leaves the beach and
+enters the mountains.  Well maintained, the mountain trail is
+easy to follow and has obviously been smoothed to make your
+travel easier."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14515
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14517
+
+[[rooms]]
+vnum = 14517
+name = "Mountain trail"
+sector = "mountain"
+description = """
+The steep trail you are following cuts between a huge mountain
+to the west and two smaller mountains to the east.  A little
+further down the trail you can see a clearing of some kind."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14518
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14516
+
+[[rooms]]
+vnum = 14518
+name = "Steep trail"
+sector = "mountain"
+description = """
+Climbing high into the mountains you approach a clearing, encircled
+by bushes your avenues of retreat are limited.  Either go forward
+or back down the mountain."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14519
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14517
+
+[[rooms]]
+vnum = 14519
+name = "Mountain clearing"
+sector = "mountain"
+description = """
+The trail has led you to a mountain clearing.  Circled by bushes
+and a few shrubs this grassy clearing shows several signs of
+recent travel by a great number of people."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14524
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14520
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14518
+
+[[rooms]]
+vnum = 14520
+name = "Clearing"
+sector = "mountain"
+description = """
+The grassy mountain clearing is open to the sun and is full of
+the smells of a high mountain meadow.  A large swath of purple
+flowers carpets this side of the clearing."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14519
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14523
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14521
+
+  [[rooms.mob_resets]]
+  vnum = 14507
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14517
+    wear_loc = "head"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14518
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14516
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 14521
+name = "Mountain meadow"
+sector = "mountain"
+description = """
+The mountain meadow where you are standing has knee high grass,
+yellow flowers and is surrounded by the short shrubs of the area."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14520
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14522
+
+[[rooms]]
+vnum = 14522
+name = "Mountain view"
+sector = "mountain"
+description = """
+You are standing at the edge of a high mountain clearing.  You
+are completely surrounded by mountains, some of which are capped
+by white snow."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14523
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14521
+
+[[rooms]]
+vnum = 14523
+name = "Clearing's Center"
+sector = "mountain"
+description = """
+The mountain clearing is all about you.  You are standing in
+the middle of a mountain meadow surrounded by snow capped
+mountain peaks.  Flowers of every color brighten the area."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14524
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14526
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14522
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14520
+
+  [[rooms.mob_resets]]
+  vnum = 14508
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14517
+    wear_loc = "head"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14518
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14516
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 14524
+name = "Flowers everywhere"
+sector = "mountain"
+description = """
+The mountain clearing is carpeted with flowers of every color.
+Some of the flowers are extremely rare, however, all of them
+are beautiful and would make a wonderful addition to any home."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14525
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14523
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14519
+
+[[rooms]]
+vnum = 14525
+name = "Mountain clearing"
+sector = "mountain"
+description = """
+The beautiful mountain clearing you are standing in is surrounded
+by extremely high mountains...some of which are covered with snow."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14526
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14524
+
+[[rooms]]
+vnum = 14526
+name = "Opening to the sky"
+sector = "mountain"
+description = """
+The mountain field you are standing in is open to the sky
+and is framed by tall mountains."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14525
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14527
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14523
+
+[[rooms]]
+vnum = 14527
+name = "Mountain trail"
+sector = "mountain"
+description = """
+This trail leads from a mountain field to the bottom of a valley.
+The rich dirt of the trail is smooth and regular..signs that
+someone is maintaining the trail."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14526
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14528
+
+  [[rooms.mob_resets]]
+  vnum = 14509
+  max = 2
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14519
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14520
+    wear_loc = "hold"
+
+[[rooms]]
+vnum = 14528
+name = "Cross trails"
+sector = "mountain"
+description = """
+You are standing at a crossing of two different trails.  The
+trail to the east climbs a short mountain and ends at a lookout.
+The trail going down to the valley floor appears to be the most
+travelled route."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14527
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14533
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14529
+
+[[rooms]]
+vnum = 14529
+name = "Down trail"
+sector = "mountain"
+description = """
+This trail is cutting between several mountains and is very steep.
+A few shrubs line the trail as well as some beautiful flowers."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14528
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14530
+
+[[rooms]]
+vnum = 14530
+name = "Slippery trail"
+sector = "mountain"
+description = """
+The trail is passing over exposed bedrock and is very slippery.
+Be careful or you could slide to the bottom and get some nasty
+trail burns."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14529
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14531
+
+[[rooms]]
+vnum = 14531
+name = "Village view"
+sector = "mountain"
+description = """
+To the west is a small village composed of six or seven buildings
+and to the south of the village you see a garden, however, it's the
+river which attracts your attention.  You'll have to get a better
+view down the trail."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14530
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14532
+
+[[rooms]]
+vnum = 14532
+name = "The Valley"
+sector = "mountain"
+description = """
+You are standing at the beginning of a long valley.  Snowy
+mountains surround this lush valley and low clouds help reduce
+the temperature to a chill.  To the west of you is a small village."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14537
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14531
+
+[[rooms]]
+vnum = 14533
+name = "Small trail"
+sector = "mountain"
+description = """
+This small trail travels into the mountains and the wilderness
+which surrounds it.  The rocky trail shows no signs of recent travel."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14534
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14528
+
+[[rooms]]
+vnum = 14534
+name = "The Wilderness"
+sector = "mountain"
+description = """
+The wilderness is so disorganized.  Trails are rough and rocky,
+bushes with thorns crowd the trail and even the flowers are not
+as soft and lovely as the ones along the main trail."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14535
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14533
+
+[[rooms]]
+vnum = 14535
+name = "Wilderness trail"
+sector = "mountain"
+description = """
+This wilderness trail has none of the comforts of home.  Strange
+noises and unseen movement has begun to work on your nerves.
+You are approaching the end of the trail...at the top of a snow
+capped mountain."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14534
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 14536
+
+[[rooms]]
+vnum = 14536
+name = "Mountain top"
+sector = "mountain"
+description = """
+The view from this small mountaintop is very special.  You are
+closer to the heavens than you'll ever get.  The view from here
+reveals much about the valley far below.  Below you a river can
+be seen bisecting the valley floor.  A small valley and garden
+as well as the bridge crossing the river are completely surrounded
+by a ten or twelve foot high wall.  Two towers protect the valley
+entrance to the enclosure."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 14535
+
+  [[rooms.mob_resets]]
+  vnum = 14510
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14523
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14521
+    wear_loc = "about"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14522
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 14537
+name = "Village entrance"
+sector = "field"
+description = """
+The wide trail leads into a small village of seven buildings.
+Made from natural stone, the one story buildings are simple yet
+effective.  A large garden area borders the river bisecting
+the valley to the south.  Two huge towers on the other side of
+the river appear to be guarding a gate leading to the valley."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14532
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14551
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14538
+
+  [[rooms.obj_resets]]
+  vnum = 14528
+  max = 1
+
+[[rooms]]
+vnum = 14538
+name = "Malo Village"
+sector = "field"
+description = """
+You are standing at the entrance to Malo Village.  A small
+valley community of Humans, Dwarves, and Elves living together
+in wilderness harmony.  The village is alive with movement,
+everyone going about their business while the farm animals do
+what comes natural."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14537
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14539
+
+  [[rooms.mob_resets]]
+  vnum = 14511
+  max = 3
+
+[[rooms]]
+vnum = 14539
+name = "Malo Main"
+sector = "city"
+description = """
+Malo Main goes down the middle of the village.  It is covered
+with native stones and although short, it has the makings of
+a Better Streets entry.  The stone buildings on each side of the
+street are warm and toasty..with smoke pouring from the smoke
+stacks and yellow light coming from the shuttered windows."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14540
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14538
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14541
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14542
+
+  [[rooms.obj_resets]]
+  vnum = 14524
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14533
+  max = 1
+
+[[rooms]]
+vnum = 14540
+name = "Stone house"
+sector = "inside"
+description = """
+The stone house is warm and cozy.  Several thick blankets
+hang on the walls and a small fire is burning in the fireplace.
+Yellow candles light the room.  The room does not have anything
+of value in it."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14539
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 14525
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14529
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14530
+  max = 1
+
+[[rooms]]
+vnum = 14541
+name = "Gray Stone house"
+sector = "inside"
+description = """
+A loving hand has created this home.  Fine detail has been given
+to all wooden items and the furniture was made by a master."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14539
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 14529
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14534
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14532
+  max = 1
+
+[[rooms]]
+vnum = 14542
+name = "Malo main"
+sector = "city"
+description = """
+The stones you are walking on were gathered from local sites
+about the village.  Laid by Dwarves, the stones are almost
+seamless.  The air is very cool here between the houses."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14539
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14543
+
+[[rooms]]
+vnum = 14543
+name = "Village street"
+sector = "city"
+description = """
+To the west is the village well, while all about you the native
+stone buildings create a wonderful setting for this family life."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14544
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14542
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14545
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14546
+
+  [[rooms.mob_resets]]
+  vnum = 14512
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 14516
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 14517
+  max = 4
+
+[[rooms]]
+vnum = 14544
+name = "Brown House"
+sector = "inside"
+description = """
+This beautiful brown house has columns on each side of the
+door and it has a tile roof.  A large picture window at the
+rear of the house reveals a stunning view of the large
+mountain to the north of you."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14543
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 14525
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14529
+  max = 1
+
+[[rooms]]
+vnum = 14545
+name = "Green house"
+sector = "inside"
+description = """
+In an obvious effort to overshadow the brown house nearby,
+the owners of this home have applied an expensive dye to
+their home, turning it a brilliant green color."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14543
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 14531
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14530
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14534
+  max = 1
+
+[[rooms]]
+vnum = 14546
+name = "Village well"
+sector = "city"
+description = """
+The village well is covered by a small awning and has a very
+long rope to reach to the bottom of the well."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14543
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14547
+
+  [[rooms.mob_resets]]
+  vnum = 14513
+  max = 6
+
+  [[rooms.obj_resets]]
+  vnum = 14528
+  max = 1
+
+[[rooms]]
+vnum = 14547
+name = "End of the street"
+sector = "city"
+description = """
+You have reached the end of the street.  Several lovely houses
+surround you and prevent you from travelling further in this
+direction.  Looking past the homes you see a twenty foot tall
+wall ringing the village proper."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14548
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14546
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14550
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14549
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 14514
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 14515
+  max = 5
+
+[[rooms]]
+vnum = 14548
+name = "Simple home"
+sector = "inside"
+description = """
+Nothing special about this home except the fact that it's not
+special.  Even the fireplace is bare.  Where you might expect
+to see a display you see instead blank wall."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14547
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 14529
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14530
+  max = 1
+
+[[rooms]]
+vnum = 14549
+name = "Last house"
+sector = "inside"
+description = """
+The last house of this village has a large porch and a huge fireplace.
+It appears to be large enough to hold several people at the same time."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14547
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 14525
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14529
+  max = 1
+
+[[rooms]]
+vnum = 14550
+name = "A general store"
+sector = "inside"
+description = """
+You have entered a general store laden with wilderness supplies
+and everyday items necessary for survival.  If you look closely,
+you'll find a little of everything."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14547
+  flags = ["door"]
+
+  [[rooms.obj_resets]]
+  vnum = 14524
+  max = 1
+
+  [[rooms.obj_resets]]
+  vnum = 14534
+  max = 1
+
+[[rooms]]
+vnum = 14551
+name = "A very old road"
+sector = "city"
+description = """
+This ancient, overgrown road was made years before the village
+was constructed.  It's age is so great you can see where trees
+grew through it's center, were cut down and made into firewood."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14537
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14552
+
+[[rooms]]
+vnum = 14552
+name = "Garden and Old Road"
+sector = "city"
+description = """
+The old road leads south while a small path leads westward
+into a large garden patch.  To the south the road crosses
+a river with an ancient bridge.  Two towers can be seen on
+the other side...near the gated wall surrounding the village."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14551
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14553
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14581
+
+[[rooms]]
+vnum = 14553
+name = "The Bridge"
+sector = "city"
+description = """
+The bridge is made of local material finely worked with artistic
+designs of flying creatures.  Gargoyles and flying lions decorate
+the entire bridge."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14552
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14554
+
+[[rooms]]
+vnum = 14554
+name = "Middle of bridge"
+sector = "city"
+description = """
+>From this vantage point you see the river running west and east. Very cold 
+water hits the side of the bridge and throws cold spray into your face.  
+The wall encircling the village proper also encircles a long stretch of 
+the river."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14553
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14555
+
+[[rooms]]
+vnum = 14555
+name = "South side of bridge"
+sector = "city"
+description = """
+The bridge you are travelling on appears to have been constructed
+using the same material and methods used to build the ancient
+road you are travelling upon."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14554
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14556
+
+[[rooms]]
+vnum = 14556
+name = "Ancient road"
+sector = "city"
+description = """
+The ancient road widens as it drives straight as an arrow in a
+southern direction.  Although the road is cracked and crumbling
+at the edges it still provides the best travelling surface you
+have ever seen."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14555
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14557
+
+[[rooms]]
+vnum = 14557
+name = "Red stained road"
+sector = "city"
+description = """
+Several large red stains appear along this area of the ancient
+roadway.  Upon closer examination you are able to determine that
+the stains are old blood.  Surely a battle has been fought here!
+To your right and left short squat towers flank the road.  Small
+doors, low to the ground, provide entrance to the towers.  The
+tower construction is as ancient as the road."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14556
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14561
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14564
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14558
+
+[[rooms]]
+vnum = 14558
+name = "Before the West Tower"
+sector = "field"
+description = """
+The West Tower is a dark gray color.  Several gargoyles are
+crouching along the rim of the tower..protecting the residents
+from danger.  Stooping down you can see into the tower and out
+the other side."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14557
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14559
+
+[[rooms]]
+vnum = 14559
+name = "West Tower"
+sector = "inside"
+description = """
+This tower is rather small and has a dark, ominous feel about it.
+The roof has caved in, allowing the fresh mountain air to
+penetrate into every secret corner.  The entrance is to the east.
+The west wall has a large gaping hole in it's center."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14558
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14560
+
+[[rooms]]
+vnum = 14560
+name = "West Tower"
+sector = "inside"
+description = """
+Scattered about the fallen bricks and timbers from the roof are
+bones and broken furniture.  The huge hole in the west wall shows
+signs of fire.  The bricks scattered about the room appear to have
+been caused by a very large explosion."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14559
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14589
+
+[[rooms]]
+vnum = 14561
+name = "Before East Tower"
+sector = "field"
+description = """
+You are standing before the slim East Tower.  Unlike the West
+Tower this tower has been whitewashed.  Painted every three feet
+are red stylized crosses.  Again, unlike the West Tower this
+tower does not have gargoyles about it's rim."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14562
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14557
+
+[[rooms]]
+vnum = 14562
+name = "Inside the East Tower"
+sector = "inside"
+description = """
+A thin layer of dust covers the floor of this tower.  The markings
+in the dust indicate that someone, or something, has passed this
+way recently.  The room is mostly bare."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14563
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14561
+
+[[rooms]]
+vnum = 14563
+name = "East Tower"
+sector = "inside"
+description = """
+A large tapestry is hanging on the east wall.  The tapestry
+shows a mountain scene, with a river running through a valley
+and into a large cave mouth.  Several arrow slits provide access
+for both air and light."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14596
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14562
+
+[[rooms]]
+vnum = 14564
+name = "Ancient road"
+sector = "city"
+description = """
+Near the twin towers you have a really good view of the city
+wall and it's southern gate.  The wall is approximately 12 feet
+tall.  The gate is made of metal and has large spears protruding
+from the top to stop "wild animals" from climbing the barrier."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14557
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14565
+
+[[rooms]]
+vnum = 14565
+name = "Before the gate"
+sector = "city"
+description = """
+This huge metal gate appears to have been built much later than
+the ancient road it guards.  A close look at the door reveals
+a tiny, hand written sign attached to the gate."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14564
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14566
+  flags = ["door"]
+
+[[rooms]]
+vnum = 14566
+name = "Other side of the gate"
+sector = "city"
+description = """
+You are standing on the south side of the gate leading to
+Malo Village.  The ancient road continues to the south but is
+blocked by a rough wall of ill placed boulders.  On each side of
+the road are sharpened stakes driven at an angle into the ground.
+The stakes are obviously meant to keep travellers on the road."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14565
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14567
+
+[[rooms]]
+vnum = 14567
+name = "Ancient way"
+sector = "city"
+description = """
+The ancient road you are on is buried under a huge pile of
+boulders placed strategically across the road to block travel."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14566
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14568
+
+[[rooms]]
+vnum = 14568
+name = "Base of Boulders"
+sector = "city"
+description = """
+The boulders have been stacked to block travel on the ancient
+road.  Large stakes, sharpened and pointed toward the wall,
+keep travellers on the road."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14567
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14571
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14569
+
+[[rooms]]
+vnum = 14569
+name = "Path along boulders"
+sector = "field"
+description = """
+A small path travels along the roadblock to the west.  Skirting
+along sharpened stakes the path meanders amoungst and besides
+the huge boulders stacked precariously across the ancient road."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14568
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14570
+
+[[rooms]]
+vnum = 14570
+name = "A path"
+sector = "field"
+description = """
+The path comes to an abrupt halt.  The boulders curve inward,
+towards the city, and with the aid of the sharpened stakes all
+about you travel in this direction has been effectively cut off."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14569
+
+  [[rooms.mob_resets]]
+  vnum = 14520
+  max = 10
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14536
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14535
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 14571
+name = "A small path"
+sector = "field"
+description = """
+This small path leads you away from the ancient road, along
+the boulders and into the sharpened stakes set to keep you on
+the road."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14572
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14568
+
+[[rooms]]
+vnum = 14572
+name = "End of path"
+sector = "field"
+description = """
+The path has come to an end.  The high wall of boulders curves
+inward and effectively traps you against the sharpened stakes."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14571
+
+[[rooms]]
+vnum = 14573
+name = "Path's end"
+sector = "field"
+description = """
+You are approaching the end of the palm path.  Several buildings
+to the north of you appear to be both warehouses and living
+quarters.  The smell of drying fish is evident and a small fishing
+boat has been drydocked for repair."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14574
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14513
+
+[[rooms]]
+vnum = 14574
+name = "Entrance to Land's End"
+sector = "field"
+description = """
+Land's End is a small fishing village with such a small population it doesn't
+appear on any maps.  Two large warehouses and two homes are the only standing
+buildings."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14575
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14573
+
+  [[rooms.mob_resets]]
+  vnum = 14506
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14515
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14514
+    inv_only = true
+
+[[rooms]]
+vnum = 14575
+name = "Land's End Road"
+sector = "field"
+description = """
+This is the only "road" in Land's End.  The most accurate
+description would be a path.  On both sides of you stand large
+warehouses where tradegoods are stored.  A few fishing nets
+hang from nearby trees and a drying rack produces that strong
+fish smell which spreads through the air."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14576
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14578
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14574
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14579
+
+[[rooms]]
+vnum = 14576
+name = "Ocean View"
+sector = "field"
+description = """
+>From here you can see the ocean and any incoming vessels.
+Two homes stand nearby as well as a rowboat and three fishing
+vessels drydocked for the season.  Perhaps the fishing is bad."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14577
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14575
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14580
+
+[[rooms]]
+vnum = 14577
+name = "Oceanview Home"
+sector = "inside"
+description = """
+This lovely wooden home stands so near the water that it's
+occupants have the most beautiful view you've ever seen.  Several
+crabs have made their home outside the seaward window."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14576
+
+  [[rooms.mob_resets]]
+  vnum = 14503
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14505
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14506
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14507
+    inv_only = true
+
+[[rooms]]
+vnum = 14578
+name = "Large Warehouse"
+sector = "inside"
+description = """
+This large warehouse was built to contain tradegoods for all
+of the sailors and merchants expected to use Ocean View as a
+port of call.  Unfortunately, no one seems to know exactly
+where Ocean View is."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14575
+
+  [[rooms.mob_resets]]
+  vnum = 14502
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14502
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14503
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14504
+    inv_only = true
+
+[[rooms]]
+vnum = 14579
+name = "Largest Warehouse"
+sector = "inside"
+description = """
+You are standing in the largest warehouse on this side of the
+ocean.  The echo of your steps bounces back to you very quickly.
+When the weather turns incliment the local fishermen drag their
+vessels into this warehouse for safety."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14575
+
+  [[rooms.mob_resets]]
+  vnum = 14505
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14510
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14511
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14512
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14513
+    inv_only = true
+
+[[rooms]]
+vnum = 14580
+name = "Small home"
+sector = "inside"
+description = """
+This small home has been built from the bones of whales and
+other small sea animals.  Barnacles would feel right at home
+here...if the home were under water of course."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14576
+
+  [[rooms.mob_resets]]
+  vnum = 14504
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14508
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14509
+    inv_only = true
+
+[[rooms]]
+vnum = 14581
+name = "Garden way"
+sector = "field"
+description = """
+Garden way is simply a path leading through or near the vegatables
+planted by the villagers.  All about you are sprouting plants."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14552
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14582
+
+[[rooms]]
+vnum = 14582
+name = "Garden path"
+sector = "field"
+description = """
+All about you are growing tiny little plants that will one day
+feed the population of the village."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14581
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14583
+
+  [[rooms.mob_resets]]
+  vnum = 14518
+  max = 5
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14527
+    wear_loc = "head"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14526
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 14519
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14538
+    wear_loc = "shield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 14537
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 14583
+name = "Garden alley"
+sector = "field"
+description = """
+The path has now led you through several rows of beans, squash, and melons."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14582
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14584
+
+[[rooms]]
+vnum = 14584
+name = "Garden along the river"
+sector = "field"
+description = """
+The garden continues to parallel the mountain river.  While walking
+through the carrots you glance south into the river and see the
+remains of a wooden bridge washed ashore.  The bridge is flimsy
+and ill made and obviously was not meant to be permanent."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14583
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14585
+
+[[rooms]]
+vnum = 14585
+name = "Along the river"
+sector = "field"
+description = """
+The rushing water to your south has been used to irrigate the garden. Several
+large clay containers are gathered along the river for this very purpose."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14584
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14586
+
+[[rooms]]
+vnum = 14586
+name = "Behind the buildings"
+sector = "field"
+description = """
+You are walking behind the homes and quite by accident have
+discovered a child's toy.  The toy is a wooden doll, complete
+with dress and straw hair.  It is lying in the mud and appears
+to have been trampled."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14585
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14587
+
+[[rooms]]
+vnum = 14587
+name = "River View"
+sector = "field"
+description = """
+>From this part of the garden you have an excellent view of the
+river as it passes through the fence.  A huge section of the
+12 foot high fence is missing above the river.  Perhaps a massive
+rain washed that section of the fence away?"""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14586
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14588
+
+[[rooms]]
+vnum = 14588
+name = "Garden's end"
+sector = "field"
+description = """
+The garden ends here at the village wall.  The crops have been
+trampled and there's nothing here but a large mud patch.  A large
+mud patch with scores of tracks."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14587
+
+[[rooms]]
+vnum = 14589
+name = "Outside the West Tower"
+sector = "field"
+description = """
+The soft ground here shows evidence of recent travel.  Some of
+the many marks in the ground were obviously made by booted
+soldiers while the unshod footprints appear to have been made
+by nonhuman feet.  The prints are elongated and end in talons."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14560
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14590
+
+[[rooms]]
+vnum = 14590
+name = "Path near fence"
+sector = "field"
+description = """
+This tiny path goes to the fence then parallels it.  Following
+the path would take you near the river."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14591
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14589
+
+[[rooms]]
+vnum = 14591
+name = "Slaughter site"
+sector = "field"
+description = """
+Unexpectedly you have come across several skeletons and what
+would appear to be the site where several people were killed.
+Strips of cloth are embedded in the mud and stuck to bushes
+and the yellowing bones of two or three skeletons are scattered
+everywhere."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14592
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14590
+
+[[rooms]]
+vnum = 14592
+name = "Bushy path"
+sector = "field"
+description = """
+The closer you get to the river the bushier it becomes.  Squeezing
+past some of the bushes along this path is a sticky situation.
+There are 1 inch thorns on some of them.  Be careful."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14591
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14593
+
+[[rooms]]
+vnum = 14593
+name = "Near the fence"
+sector = "field"
+description = """
+Once again the path has come close to the fence.  Looking closely
+you discover several large holes dug under the fence.  If you
+were a little smaller you could have squeezed through those
+holes and gotten to the other side."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14594
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14592
+
+[[rooms]]
+vnum = 14594
+name = "Near the river"
+sector = "field"
+description = """
+The rushing water of the river drowns out nearly all sounds.
+You are alone with one of the forces of nature.  Looking across
+the river you can make out the vague outlines of village homes."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14593
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14595
+
+[[rooms]]
+vnum = 14595
+name = "River's edge"
+sector = "field"
+description = """
+You are standing at the edge of the river.  Several markings on
+the ground show where boats have been pulled ashore, however,
+you see no signs of them now.  The river passes through the 12 foot
+tall fence to your west.  A large section of the fence is gone,
+allowing passage into the countryside."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14594
+
+[[rooms]]
+vnum = 14596
+name = "Outside the East Tower"
+sector = "field"
+description = """
+You are standing along the east wall of the East Tower.  Tracks
+in the soft earth lead to the wall nearby and towards the river."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14597
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14563
+  flags = ["door"]
+
+[[rooms]]
+vnum = 14597
+name = "Small path at river's edge"
+sector = "field"
+description = """
+This small path has seen little traffic in recent times.  There
+are obvious signs of use by small animals, tracks, droppings, etc..
+however, no man sized creatures have passed this way for years.
+The river is rushing past you and flows through the large hole in
+the fence to your right.  Perhaps a large rain washed it away?"""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 14598
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14596
+
+[[rooms]]
+vnum = 14598
+name = "On the river"
+sector = "water_noswim"
+description = """
+You are on the river which flows south of Malo Village.  To
+the south of you are two short towers and of course the wall which
+surrounds the village.  To the east is a large hole in the fence.
+The river runs through that hole."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 14599
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 14597
+
+[[rooms]]
+vnum = 14599
+name = "Hole in wall"
+sector = "water_noswim"
+description = """
+You are passing through the hole in the wall which surrounds the
+village.  At first you thought that the river had created this
+hole but upon closer inspection it is obviously the work of man."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 14598
+

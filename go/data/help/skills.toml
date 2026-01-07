@@ -1,0 +1,864 @@
+# Skill help entries
+
+# === Combat Skills - Attacks ===
+
+[[help]]
+keywords = ["second attack"]
+description = """
+With this skill, you get a chance at a second attack each combat round.
+
+The chance increases with your proficiency in this skill.
+
+Class availability:
+  Warrior: Level 5
+  Thief: Level 12
+  Cleric: Level 24
+  Mage: Level 30
+"""
+see_also = ["third attack", "dual wield"]
+
+[[help]]
+keywords = ["third attack"]
+description = """
+Masters of combat can attempt a third attack each round.
+
+This skill is exclusive to warriors.
+
+Class availability:
+  Warrior: Level 25
+"""
+see_also = ["second attack", "dual wield"]
+
+[[help]]
+keywords = ["dual wield"]
+description = """
+Allows you to wield a weapon in your off-hand, gaining an extra attack.
+
+The off-hand weapon must be lighter than your primary weapon.
+
+Class availability:
+  Thief: Level 15
+  Warrior: Level 20
+"""
+see_also = ["second attack", "wield"]
+
+# === Combat Skills - Defensive ===
+
+[[help]]
+keywords = ["dodge"]
+description = """
+Dodge allows you to avoid incoming attacks by quickly moving aside.
+
+Your dexterity and skill level affect your dodge chance.
+
+Class availability:
+  Thief: Level 1
+  Warrior: Level 13
+  Mage: Level 20
+  Cleric: Level 22
+"""
+see_also = ["parry", "shield block"]
+
+[[help]]
+keywords = ["parry"]
+description = """
+Parry allows you to deflect incoming attacks with your weapon.
+
+You must be wielding a weapon to parry. Your skill and dexterity
+affect your parry chance.
+
+Class availability:
+  Warrior: Level 1
+  Thief: Level 13
+  Cleric: Level 20
+  Mage: Level 22
+"""
+see_also = ["dodge", "shield block"]
+
+[[help]]
+keywords = ["shield block"]
+description = """
+Shield block allows you to block attacks with your shield.
+
+You must be wearing a shield to use this skill.
+
+Class availability:
+  Warrior: Level 1
+  Cleric: Level 10
+"""
+see_also = ["dodge", "parry"]
+
+# === Combat Skills - Offensive ===
+
+[[help]]
+keywords = ["kick"]
+syntax = "kick <target>"
+description = """
+Deliver a powerful kick to your opponent, dealing damage.
+
+Kick can be used during combat for extra damage.
+
+Class availability:
+  Warrior: Level 8
+  Cleric: Level 12
+  Thief: Level 14
+"""
+see_also = ["bash", "trip"]
+
+[[help]]
+keywords = ["bash"]
+syntax = "bash <target>"
+description = """
+Slam into your opponent with your shield or body, attempting to
+knock them down.
+
+A successful bash stuns the target briefly.
+You must be wielding a shield for best results.
+
+Class availability:
+  Warrior: Level 1
+"""
+see_also = ["kick", "trip"]
+
+[[help]]
+keywords = ["trip"]
+syntax = "trip <target>"
+description = """
+Attempt to trip your opponent, causing them to fall.
+
+A successful trip puts the target on the ground, interrupting them.
+
+Class availability:
+  Thief: Level 1
+  Warrior: Level 15
+"""
+see_also = ["bash", "kick"]
+
+[[help]]
+keywords = ["dirt kicking", "dirt kick"]
+syntax = "dirt <target>"
+description = """
+Kick dirt into your opponent's eyes, temporarily blinding them.
+
+A blinded opponent has reduced combat effectiveness.
+
+Class availability:
+  Thief: Level 3
+  Warrior: Level 3
+"""
+see_also = ["blindness", "kick"]
+
+[[help]]
+keywords = ["disarm"]
+syntax = "disarm <target>"
+description = """
+Attempt to knock the weapon from your opponent's hands.
+
+A disarmed opponent must retrieve their weapon or fight unarmed.
+
+Class availability:
+  Warrior: Level 11
+  Thief: Level 12
+"""
+see_also = ["bash", "trip"]
+
+[[help]]
+keywords = ["backstab", "bs"]
+syntax = "backstab <target>"
+description = """
+A thief's signature attack - strike an unsuspecting enemy from behind.
+
+Backstab deals massive damage but can only be used to initiate combat.
+You must be hidden or the target must be unaware of you.
+
+Class availability:
+  Thief: Level 1
+"""
+see_also = ["circle", "hide", "sneak"]
+
+[[help]]
+keywords = ["circle"]
+syntax = "circle"
+description = """
+Circle around your opponent during combat and strike from behind.
+
+Unlike backstab, circle can be used during combat but deals less damage.
+
+Class availability:
+  Thief: Level 15
+"""
+see_also = ["backstab"]
+
+[[help]]
+keywords = ["berserk"]
+syntax = "berserk"
+description = """
+Enter a berserker rage, greatly increasing your combat power.
+
+While berserking:
+  - Increased damage
+  - Increased hitroll
+  - Reduced AC (more vulnerable)
+
+You cannot flee while berserking.
+
+Class availability:
+  Warrior: Level 18
+"""
+see_also = ["bash", "kick"]
+
+[[help]]
+keywords = ["rescue"]
+syntax = "rescue <target>"
+description = """
+Rescue an ally from combat, taking their place as the target.
+
+Use this to save a wounded party member.
+
+Class availability:
+  Warrior: Level 1
+  Cleric: Level 12
+"""
+see_also = ["group"]
+
+[[help]]
+keywords = ["fourth attack"]
+description = """
+Elite warriors can attempt a fourth attack each combat round.
+
+This skill is exclusive to warriors and requires mastery of third attack.
+
+Class availability:
+  Warrior: Level 35
+"""
+see_also = ["third attack", "fifth attack"]
+
+[[help]]
+keywords = ["fifth attack"]
+description = """
+The pinnacle of combat mastery - a fifth attack each round.
+
+Only the most experienced warriors can achieve this level of skill.
+
+Class availability:
+  Warrior: Level 45
+"""
+see_also = ["fourth attack", "third attack"]
+
+[[help]]
+keywords = ["enhanced damage"]
+description = """
+Training in dealing maximum damage with each strike.
+
+Increases the damage you deal with all weapon attacks.
+
+Class availability:
+  Warrior: Level 1
+  Ranger: Level 15
+  Thief: Level 25
+  Cleric: Level 30
+"""
+see_also = ["second attack", "bash"]
+
+[[help]]
+keywords = ["grip"]
+description = """
+Maintain a firm grip on your weapon, resisting disarm attempts.
+
+Higher skill makes it harder for enemies to knock your weapon away.
+
+Class availability:
+  Warrior: Level 15
+"""
+see_also = ["disarm"]
+
+[[help]]
+keywords = ["gouge"]
+syntax = "gouge <target>"
+description = """
+Attempt to gouge your opponent's eyes, temporarily blinding them.
+
+A successful gouge blinds the target for a short duration.
+
+Class availability:
+  Thief: Level 10
+"""
+see_also = ["dirt kicking", "blindness"]
+
+[[help]]
+keywords = ["stun"]
+syntax = "stun <target>"
+description = """
+Deliver a powerful blow designed to stun your opponent.
+
+A stunned enemy loses their next action.
+
+Class availability:
+  Warrior: Level 20
+"""
+see_also = ["bash", "trip"]
+
+[[help]]
+keywords = ["track"]
+syntax = "track <target>"
+description = """
+Hunt down a creature by following its tracks.
+
+Shows the direction a mob or player went when they left the area.
+
+Class availability:
+  Ranger: Level 10
+  Thief: Level 20
+"""
+see_also = ["sneak", "hide"]
+
+[[help]]
+keywords = ["hand to hand"]
+description = """
+Skill at fighting without a weapon.
+
+Higher skill means more damage when unarmed.
+
+Class availability:
+  Warrior: Level 6
+  Cleric: Level 10
+  Thief: Level 15
+  Mage: Level 25
+"""
+see_also = ["kick"]
+
+# === Thief Skills ===
+
+[[help]]
+keywords = ["sneak"]
+syntax = "sneak"
+description = """
+Move silently, avoiding detection.
+
+While sneaking, other creatures may not notice you entering the room.
+
+Class availability:
+  Thief: Level 4
+"""
+see_also = ["hide", "backstab"]
+
+[[help]]
+keywords = ["hide"]
+syntax = "hide"
+description = """
+Conceal yourself in the shadows.
+
+While hidden, you can use backstab for a surprise attack.
+Moving or attacking will break your concealment.
+
+Class availability:
+  Thief: Level 1
+"""
+see_also = ["sneak", "backstab"]
+
+[[help]]
+keywords = ["steal"]
+syntax = "steal <item> <target>"
+description = """
+Attempt to steal an item or gold from a target.
+
+Failing to steal from an NPC may result in combat!
+
+Class availability:
+  Thief: Level 5
+"""
+see_also = ["peek"]
+
+[[help]]
+keywords = ["pick lock", "pick"]
+syntax = "pick <direction>"
+description = """
+Attempt to pick a locked door.
+
+Higher skill means better chance of success.
+Some locks may be unpickable.
+
+Class availability:
+  Thief: Level 7
+"""
+see_also = ["sneak"]
+
+[[help]]
+keywords = ["peek"]
+description = """
+Glimpse into another's inventory without their knowledge.
+
+Used automatically when looking at someone.
+
+Class availability:
+  Thief: Level 1
+"""
+see_also = ["steal"]
+
+[[help]]
+keywords = ["envenom"]
+syntax = "envenom <weapon>"
+description = """
+Coat a weapon with deadly poison.
+
+Attacks with an envenomed weapon have a chance to poison the target.
+The poison wears off the weapon after some time.
+
+Class availability:
+  Thief: Level 10
+"""
+see_also = ["poison", "backstab"]
+
+# === Weapon Skills ===
+
+[[help]]
+keywords = ["sword"]
+description = """
+Skill with sword-type weapons.
+
+Higher skill means better accuracy and damage with swords.
+
+Class availability:
+  Warrior: Level 1
+  Thief: Level 6
+  Cleric: Level 15
+  Mage: Level 20
+"""
+see_also = ["dagger", "mace", "axe"]
+
+[[help]]
+keywords = ["dagger"]
+description = """
+Skill with daggers and knives.
+
+Higher skill means better accuracy and damage with daggers.
+Daggers are ideal for backstabbing.
+
+Class availability:
+  Mage: Level 1
+  Thief: Level 1
+  Warrior: Level 5
+  Cleric: Level 10
+"""
+see_also = ["sword", "backstab"]
+
+[[help]]
+keywords = ["spear"]
+description = """
+Skill with spears and polearms.
+
+Higher skill means better accuracy and damage with spears.
+
+Class availability:
+  Warrior: Level 5
+  Cleric: Level 15
+"""
+see_also = ["polearm", "sword"]
+
+[[help]]
+keywords = ["mace"]
+description = """
+Skill with maces and hammers.
+
+Higher skill means better accuracy and damage with maces.
+Maces are favored by clerics.
+
+Class availability:
+  Cleric: Level 1
+  Warrior: Level 6
+  Thief: Level 15
+"""
+see_also = ["flail", "sword"]
+
+[[help]]
+keywords = ["axe"]
+description = """
+Skill with axes and hatchets.
+
+Higher skill means better accuracy and damage with axes.
+
+Class availability:
+  Warrior: Level 1
+"""
+see_also = ["sword", "mace"]
+
+[[help]]
+keywords = ["flail"]
+description = """
+Skill with flails and morning stars.
+
+Higher skill means better accuracy and damage with flails.
+
+Class availability:
+  Cleric: Level 1
+  Warrior: Level 10
+"""
+see_also = ["mace", "whip"]
+
+[[help]]
+keywords = ["whip"]
+description = """
+Skill with whips.
+
+Higher skill means better accuracy and damage with whips.
+
+Class availability:
+  Thief: Level 10
+"""
+see_also = ["sword", "dagger"]
+
+[[help]]
+keywords = ["polearm"]
+description = """
+Skill with polearms (halberds, glaives, etc).
+
+Higher skill means better accuracy and damage with polearms.
+
+Class availability:
+  Warrior: Level 10
+"""
+see_also = ["spear", "sword"]
+
+# === Utility Skills ===
+
+[[help]]
+keywords = ["meditation"]
+description = """
+Accelerates mana regeneration through focused concentration.
+
+Meditation is most effective while resting or sleeping.
+
+Class availability:
+  Mage: Level 6
+  Cleric: Level 6
+"""
+see_also = ["fast healing"]
+
+[[help]]
+keywords = ["fast healing"]
+description = """
+Accelerates hit point regeneration.
+
+Fast healing is most effective while resting or sleeping.
+
+Class availability:
+  Warrior: Level 6
+  Cleric: Level 9
+  Mage: Level 15
+  Thief: Level 16
+"""
+see_also = ["meditation"]
+
+[[help]]
+keywords = ["haggle"]
+description = """
+Negotiate better prices with shopkeepers.
+
+Higher skill means better buying and selling prices.
+
+Class availability:
+  Thief: Level 1
+  Mage: Level 15
+  Cleric: Level 15
+  Warrior: Level 18
+"""
+see_also = ["buy", "sell"]
+
+[[help]]
+keywords = ["lore"]
+description = """
+Knowledge of items and their properties.
+
+Allows you to identify basic properties of items you examine.
+Casters (Mage, Cleric, Druid) use the 'identify' spell instead.
+
+Class availability:
+  Ranger: Level 5
+  Druid: Level 5
+  Thief: Level 6
+  Warrior: Level 15
+"""
+see_also = ["look", "identify"]
+
+[[help]]
+keywords = ["recall"]
+syntax = "recall"
+description = """
+Instantly return to your recall point (usually the temple).
+
+This skill consumes movement points. When used while fighting,
+your skill level determines the chance of success - higher skill
+means better chance to escape combat.
+
+Everyone starts with this skill at 40%. It improves through use.
+
+Class availability:
+  All classes: Level 1 (default skill)
+"""
+see_also = ["flee"]
+
+# === Magic Item Use ===
+
+[[help]]
+keywords = ["scrolls"]
+description = """
+Ability to read and use magical scrolls.
+
+Higher skill means better chance of successfully casting
+the spell contained in the scroll.
+
+Class availability:
+  Mage: Level 1
+  Cleric: Level 1
+  Thief: Level 10
+  Warrior: Level 20
+"""
+see_also = ["staves", "wands"]
+
+[[help]]
+keywords = ["staves"]
+description = """
+Ability to use magical staves.
+
+Higher skill means better chance of successfully invoking
+the power of the staff.
+
+Class availability:
+  Mage: Level 1
+  Cleric: Level 1
+  Thief: Level 15
+  Warrior: Level 25
+"""
+see_also = ["scrolls", "wands"]
+
+[[help]]
+keywords = ["wands"]
+description = """
+Ability to use magical wands.
+
+Higher skill means better chance of successfully using
+the wand's magical charges.
+
+Class availability:
+  Mage: Level 1
+  Cleric: Level 1
+  Thief: Level 12
+  Warrior: Level 25
+"""
+see_also = ["scrolls", "staves"]
+
+# === Skill Groups ===
+# These are bundles of related skills/spells that can be learned together
+
+[[help]]
+keywords = ["weaponsmaster"]
+description = """
+WEAPONSMASTER - Skill Group (Cost: 10 points)
+
+Complete mastery of all weapon types.
+
+Includes: axe, dagger, flail, mace, polearm, spear, sword, whip
+
+Available to: Warrior
+"""
+see_also = ["sword", "axe", "mace", "dagger"]
+
+[[help]]
+keywords = ["stealth"]
+description = """
+STEALTH - Skill Group (Cost: 6 points)
+
+The arts of moving unseen and striking from the shadows.
+
+Includes: sneak, hide, backstab, circle
+
+Available to: Thief
+"""
+see_also = ["sneak", "hide", "backstab", "circle"]
+
+[[help]]
+keywords = ["attack"]
+description = """
+ATTACK - Spell Group (Cost: 3 points)
+
+Offensive magical attacks.
+
+Mage version includes: magic missile, burning hands, chill touch, colour spray
+Cleric version includes: cause light, cause serious, cause critical, flamestrike
+
+Available to: Mage, Cleric
+"""
+see_also = ["magic missile", "fireball", "cause light", "flamestrike"]
+
+[[help]]
+keywords = ["beguiling"]
+description = """
+BEGUILING - Spell Group (Cost: 4 points)
+
+Spells that affect the mind and will of others.
+
+Includes: charm person, sleep
+
+Available to: Mage
+"""
+see_also = ["charm person", "sleep"]
+
+[[help]]
+keywords = ["combat"]
+description = """
+COMBAT - Spell Group (Cost: 7 points)
+
+Powerful offensive battle magic.
+
+Includes: acid blast, fireball, lightning bolt
+
+Available to: Mage
+"""
+see_also = ["fireball", "lightning bolt", "acid blast"]
+
+[[help]]
+keywords = ["detection"]
+description = """
+DETECTION - Spell Group (Cost: 4-5 points)
+
+Spells that reveal hidden information.
+
+Includes: detect evil, detect good, detect hidden, detect magic, detect invis, identify
+
+Available to: Mage (5), Cleric (5), Druid (4)
+"""
+see_also = ["detect magic", "detect invis", "detect hidden", "identify"]
+
+[[help]]
+keywords = ["enhancement"]
+description = """
+ENHANCEMENT - Spell Group (Cost: 6 points)
+
+Spells that boost physical abilities.
+
+Includes: giant strength, haste, infravision
+
+Available to: Mage
+"""
+see_also = ["giant strength", "haste", "infravision"]
+
+[[help]]
+keywords = ["illusion"]
+description = """
+ILLUSION - Spell Group (Cost: 4 points)
+
+Spells of deception and misdirection.
+
+Includes: invisibility, mass invis, ventriloquate
+
+Available to: Mage
+"""
+see_also = ["invisibility", "mass invis", "ventriloquate"]
+
+[[help]]
+keywords = ["maladictions"]
+description = """
+MALADICTIONS - Spell Group (Cost: 5 points)
+
+Curses and afflictions to weaken enemies.
+
+Includes: blindness, curse, poison, plague, weaken
+
+Available to: Mage
+"""
+see_also = ["blindness", "curse", "poison", "plague", "weaken"]
+
+[[help]]
+keywords = ["protective"]
+description = """
+PROTECTIVE - Spell Group (Cost: 6 points)
+
+Defensive magic to shield yourself and allies.
+
+Mage version includes: armor, shield, stone skin
+Cleric/Druid version includes: armor, sanctuary, shield
+
+Available to: Mage, Cleric, Druid
+"""
+see_also = ["armor", "shield", "sanctuary", "stone skin"]
+
+[[help]]
+keywords = ["transportation"]
+description = """
+TRANSPORTATION - Spell Group (Cost: 4-5 points)
+
+Magic for travel and movement.
+
+Mage version includes: fly, pass door, teleport, gate (5 points)
+Cleric version includes: fly, word of recall, summon (4 points)
+
+Available to: Mage, Cleric
+"""
+see_also = ["fly", "teleport", "gate", "word of recall", "summon"]
+
+[[help]]
+keywords = ["benedictions"]
+description = """
+BENEDICTIONS - Spell Group (Cost: 5 points)
+
+Holy blessings and divine protection.
+
+Includes: bless, calm, holy word, remove curse
+
+Available to: Cleric
+"""
+see_also = ["bless", "calm", "holy word", "remove curse"]
+
+[[help]]
+keywords = ["creation"]
+description = """
+CREATION - Spell Group (Cost: 2 points)
+
+Spells that create sustenance from nothing.
+
+Includes: create food, create water, create spring
+
+Available to: Cleric
+"""
+see_also = ["create food", "create water", "create spring"]
+
+[[help]]
+keywords = ["curative"]
+description = """
+CURATIVE - Spell Group (Cost: 4 points)
+
+Spells that cure afflictions and ailments.
+
+Includes: cure blindness, cure disease, cure poison
+
+Available to: Cleric, Druid
+"""
+see_also = ["cure blindness", "cure disease", "cure poison"]
+
+[[help]]
+keywords = ["healing"]
+description = """
+HEALING - Spell Group (Cost: 6-7 points)
+
+Restorative magic to mend wounds.
+
+Cleric version includes: cure light, cure serious, cure critical, heal, mass healing (7 points)
+Druid version includes: cure light, cure serious, cure critical, heal (6 points)
+
+Available to: Cleric, Druid
+"""
+see_also = ["cure light", "cure serious", "cure critical", "heal"]
+
+[[help]]
+keywords = ["weather"]
+description = """
+WEATHER - Spell Group (Cost: 3-5 points)
+
+Command over the forces of nature.
+
+Cleric version includes: call lightning, control weather (3 points)
+Druid version includes: call lightning, control weather, earthquake (5 points)
+
+Available to: Cleric, Druid
+"""
+see_also = ["call lightning", "control weather", "earthquake"]

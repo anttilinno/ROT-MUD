@@ -1,0 +1,587 @@
+[[mobiles]]
+vnum = 7000
+keywords = ["oldstyle", "mud", "monster", "mudmonster"]
+short_desc = "the horrifying mudmonster"
+long_desc = "A horrifying mudmonster is slowly evolving from the mud ..."
+description = """
+It sure looks like something out of a horror movie. It strongly resembles
+a huge figure made up from mud alone, and it sure looks like it had human 
+flesh for breakfast and is strongly intent on having the same for dinner."""
+level = 23
+sex = "none"
+act_flags = ["npc", "stay_area"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 7001
+keywords = ["oldstyle", "bat"]
+short_desc = "the small bat"
+long_desc = "The small fierce-looking bat is hanging from the ceiling."
+description = """
+You have never in your entire life seen such a mean looking small creature,
+though it looks rather peaceful, hanging there. The thought of arousing this
+cruel creature doesn't seem appealing."""
+level = 1
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["sneak", "flying", "dark_vision"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 7002
+keywords = ["oldstyle", "rat"]
+short_desc = "the great sewer rat"
+long_desc = "The huge hungry-looking sewer rat sits here."
+level = 10
+sex = "male"
+act_flags = ["npc", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 7003
+keywords = ["oldstyle", "spider"]
+short_desc = "the small spider"
+long_desc = "The small hairy spider."
+level = 1
+sex = "male"
+act_flags = ["npc", "aggressive"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 10
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 4
+  bonus = 0
+
+[[mobiles]]
+vnum = 7004
+keywords = ["oldstyle", "beetle"]
+short_desc = "the giant earth beetle"
+long_desc = "The giant mean-looking earth beetle crawls towards you."
+level = 16
+sex = "male"
+act_flags = ["npc"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
+[[mobiles]]
+vnum = 7005
+keywords = ["oldstyle", "maggot"]
+short_desc = "the maggot"
+long_desc = "The giant maggot crawls toward you."
+level = 6
+sex = "male"
+act_flags = ["npc"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 35
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 7006
+keywords = ["oldstyle", "snake"]
+short_desc = "the slithering snake"
+long_desc = "The snake slithers towards you."
+level = 7
+sex = "none"
+act_flags = ["npc", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 1
+
+[[mobiles]]
+vnum = 7007
+keywords = ["oldstyle", "wanderer"]
+short_desc = "the evil wanderer"
+long_desc = "The evil wanderer stares at you."
+description = """
+The evil wanderer is very thin.  He is dressed in a grey cloak."""
+level = 19
+sex = "male"
+act_flags = ["npc", "scavenger", "wimpy"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 7008
+keywords = ["oldstyle", "homonculus", "homo"]
+short_desc = "the homonculus"
+long_desc = "The homonculus is here, looking at you with an evil look."
+description = """
+The Homonculus appears in a man-like form, about 18'' tall, it has a
+greenish, reptilian skin, leathery wings, and a bat-like mouth, with
+teeth gleaming yellow."""
+level = 22
+sex = "none"
+act_flags = ["npc"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 8
+  bonus = 134
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 7010
+keywords = ["oldstyle", "chreffn"]
+short_desc = "the evil chreffn"
+long_desc = "The chreffn are crawling here, looking around with their yellow eyes."
+description = """
+The head and torso of a chreffn is copper-covered, with yellow,
+glowing eyes. The lower body is in an orange shading."""
+level = 23
+sex = "none"
+act_flags = ["npc", "scavenger", "wimpy"]
+affected_by = ["detect_invis", "sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 7011
+keywords = ["oldstyle", "morkoth"]
+short_desc = "the shadowy morkoth"
+long_desc = "The morkoth is standing here, waiting for someone to KILL!"
+description = """
+It's a five feet tall, shadow monster. The shape of this creature lies
+somewhere between a human and a rat. It breaths very heavily, while staring
+at you with such a glint in the eyes that reminds you of immense hunger."""
+level = 20
+sex = "none"
+act_flags = ["npc", "aggressive", "wimpy"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 7013
+keywords = ["oldstyle", "mud", "monster", "mudmonster"]
+short_desc = "the horrifying mudmonster"
+long_desc = "A horrifying mudmonster is slowly evolving from the mud ..."
+description = """
+It sure looks like something out of a horror movie. It strongly resembles
+a huge figure made up from mud alone, and it sure looks like it had human 
+flesh for breakfast and is strongly intent on having the same for dinner."""
+level = 23
+sex = "none"
+act_flags = ["npc", "aggressive", "stay_area"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+
+[[mobiles]]
+vnum = 7040
+keywords = ["oldstyle", "red", "dragon"]
+short_desc = "the red dragon"
+long_desc = "The red fierce-looking dragon stares at you angrily."
+description = """
+The red dragon stares at you, angrily, as it wakes when you
+arrives.  It says 'Oh, human YOU woke me up ... Hsss', while
+it moves closer.  'Can one NEVER sleep in peace ... Hsss'."""
+level = 64
+sex = "none"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+special = "spec_breath_fire"
+
+  [mobiles.hit_dice]
+  number = 10
+  size = 10
+  bonus = 1000
+
+  [mobiles.damage_dice]
+  number = 6
+  size = 4
+  bonus = 9
+
+[[mobiles]]
+vnum = 7041
+keywords = ["oldstyle", "sea", "hag"]
+short_desc = "the sea hag"
+long_desc = "The sea hag is swimming around here."
+description = """
+The sea hag is so ghastly looking that you feel the deepest fear.
+Big yellow eyes and sharp teeth.  Its ears are very big,
+and it has small sharp horns.  It hates beauty."""
+level = 27
+sex = "female"
+act_flags = ["npc", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_cast_undead"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 190
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 12
+  bonus = 3
+
+[[mobiles]]
+vnum = 7042
+keywords = ["oldstyle", "guardian", "naga"]
+short_desc = "the guardian naga"
+long_desc = "The guardian naga looks kindly at you."
+description = """
+The naga are a snake-liked creature. She is covered in green-gold
+scale with silvery triangles along her back. Her eyes are golden.
+She notice that you look at her, and she says: 'Watch out. This way
+leads to some evil creatures'."""
+level = 24
+sex = "female"
+act_flags = ["npc", "sentinel", "cleric"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_cast_cleric"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 3
+
+[[mobiles]]
+vnum = 7043
+keywords = ["oldstyle", "basilisk"]
+short_desc = "the scaled basilisk"
+long_desc = "The scaled basilisk crawls towards you slowly."
+description = """
+The basilisk is a reptilian monster. It has eight legs, and a strong
+toothy jaws. It is dull brown with yellowish underbelly. It's eyes are
+glowing pale green."""
+level = 25
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+special = "spec_breath_any"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 5
+  bonus = 3
+
+[[mobiles]]
+vnum = 7044
+keywords = ["oldstyle", "lemure", "blob"]
+short_desc = "the lemure blob"
+long_desc = "The lemure blob slithers terribly precisely towards you for an attack!"
+description = """
+This looks like a vaguely human blob. Big black yellow eyes, and a
+mouth going a little bit out from the face. The lemure does not look
+interested in you at all, but anyway it attacks. It looks like it's
+mind has been burned out."""
+level = 10
+sex = "none"
+act_flags = ["npc", "aggressive"]
+affected_by = ["sneak"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 7045
+keywords = ["oldstyle", "jones", "cruncher", "ettin"]
+short_desc = "Jones"
+long_desc = "Jones 'Cruncher' the ettin is standing here glaring at you."
+description = """
+At the first sight you thought Jones was an orc, but when it came
+closer you saw his second head. He wears an animal skin dress,
+filthy and moth eaten. Jones really stinks..."""
+level = 19
+sex = "male"
+act_flags = ["npc", "scavenger", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 121
+
+  [mobiles.damage_dice]
+  number = 2
+  size = 4
+  bonus = 2
+
+[[mobiles]]
+vnum = 7046
+keywords = ["oldstyle", "herald", "mouse", "killer", "ettin"]
+short_desc = "Herald"
+long_desc = "Herald 'Mouse-Killer' the ettin is standing here looking confused at you."
+description = """
+When you look at Herald, you feel pity. His dress are really poor,
+and the one of his heads hangs down. At the rope around his stomach
+hangs dead mouses and rats. He does not smell good."""
+level = 12
+sex = "male"
+act_flags = ["npc", "scavenger"]
+affected_by = ["infrared"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 7200
+keywords = ["oldstyle", "master", "mind", "mindflayer"]
+short_desc = "the master mindflayer"
+long_desc = "The master mindflayer is here, looking at you with an evil look."
+description = """
+It's a seven foot tall humanoid dressed in a purple cloak, and swinging a
+black and purple rod above its head as if it was going to attack you any
+moment now. In the middle of its head are four tentacles with sharp points."""
+level = 27
+sex = "none"
+act_flags = ["npc", "scavenger", "aggressive", "mage"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 170
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 2
+
+[[mobiles]]
+vnum = 7201
+keywords = ["oldstyle", "senior", "mind", "mindflayer"]
+short_desc = "the senior mindflayer"
+long_desc = "The senior mindflayer walks around here, looking for something useful."
+description = """
+This is a horrifying monster indeed, 6'6" high. Dressed in purple and black,
+and carrying a large mace in its hand. In the center of its head are four large
+tentacles with very sharp points."""
+level = 16
+sex = "none"
+act_flags = ["npc", "scavenger", "aggressive", "mage"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 85
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 1
+
+[[mobiles]]
+vnum = 7202
+keywords = ["oldstyle", "junior", "mind", "mindflayer"]
+short_desc = "the junior mindflayer"
+long_desc = "The junior mindflayer is here, watching you carefully from the corner."
+description = """
+This mindflayer is six foot high. It has a small mace in its belt, and is
+dressed in purple and black cloth. It has four small tentacles in the 
+center of its head."""
+level = 11
+sex = "none"
+act_flags = ["npc", "scavenger", "aggressive", "mage"]
+affected_by = ["detect_invis", "infrared"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 6
+  bonus = 60
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 6
+  bonus = 0
+
+[[mobiles]]
+vnum = 7203
+keywords = ["oldstyle", "wererat", "rat", "were"]
+short_desc = "the ugly wererat"
+long_desc = "An ugly wererat is here, looking at you with a strange flick in his eyes."
+description = """
+The wererat is about four foot tall. It looks very much like rat, except
+that it is standing."""
+level = 12
+sex = "none"
+act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 71
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 1
+
+[[mobiles]]
+vnum = 7204
+keywords = ["oldstyle", "rat", "gigantic"]
+short_desc = "the gigantic rat"
+long_desc = "There is a gigantic rat here, looking at you with a hungry look."
+description = """
+The gigantic rat is about ten foot long from head to tail and has claws
+the size of your head looking very nasty."""
+level = 23
+sex = "male"
+act_flags = ["npc", "sentinel", "aggressive"]
+affected_by = ["infrared"]
+alignment = 0
+special = "spec_poison"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 10
+  bonus = 150
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 10
+  bonus = 3
+

@@ -1,0 +1,2968 @@
+[[objects]]
+vnum = 11700
+keywords = ["blue", "marble", "fountain"]
+short_desc = "a blue marble fountain"
+long_desc = "A fountain of sculpted marble splashes quietly."
+item_type = "fountain"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 11701
+keywords = ["black", "marble", "key"]
+short_desc = "a black marble key"
+long_desc = "A small key carved of black marble lies here."
+item_type = "key"
+level = 1
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 11702
+keywords = ["tentacled", "key", "black", "stone"]
+short_desc = "a tentacled key"
+long_desc = "A black stone key carved in the form of 5 writhing tentacles lies here."
+item_type = "key"
+level = 1
+weight = 10
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["hum"]
+
+[[objects]]
+vnum = 11703
+keywords = ["lapis", "lazuli", "statue"]
+short_desc = "the lapis statue"
+long_desc = "A lapis lazuli statue of a praying drakyri kneels here."
+item_type = "fountain"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 11704
+keywords = ["pool", "water", "mirror"]
+short_desc = "a pool of water"
+long_desc = "A pool of water gleams in the light."
+item_type = "portal"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 11705
+keywords = ["guardian", "guardian's", "key", "silver"]
+short_desc = "the guardian's key"
+long_desc = "An ornate silver key lies here."
+item_type = "key"
+level = 1
+weight = 0
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 11706
+keywords = ["counter", "black", "stone"]
+short_desc = "a black counter"
+long_desc = "A black counter floats here.  A sign is attached to the counter top."
+item_type = "portal"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["hum"]
+
+[[objects]]
+vnum = 11707
+keywords = ["shimmering", "curtain", "light"]
+short_desc = "a shimmering curtain"
+long_desc = "A curtain of shimmering light hangs in midair."
+item_type = "portal"
+level = 0
+weight = 0
+cost = 0
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 11708
+keywords = ["table", "stone"]
+short_desc = "a large stone table"
+long_desc = "A large stone table stands here."
+item_type = "portal"
+level = 0
+weight = 0
+cost = 0
+
+[[objects]]
+vnum = 11709
+keywords = ["mithril", "((+*+))", "torque", "deriki"]
+short_desc = "a mithril {B((+*+)){x torque"
+long_desc = "An engraved mithril torque glows here."
+item_type = "armor"
+level = 97
+weight = 30
+cost = 10000
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 125
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 7
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 7
+
+[[objects]]
+vnum = 11710
+keywords = ["shimmering", "blue", "robe"]
+short_desc = "a shimmering blue robe"
+long_desc = "A blue robe shimmers here."
+item_type = "armor"
+level = 97
+weight = 50
+cost = 10000
+wear_flags = ["take", "about"]
+extra_flags = ["glow"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 130
+
+[[objects]]
+vnum = 11711
+keywords = ["magic", "flame"]
+short_desc = "a magic flame"
+long_desc = "A strange flame hovers here."
+item_type = "light"
+level = 97
+weight = 0
+cost = 10000
+wear_flags = ["take"]
+extra_flags = ["glow"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 115
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11712
+keywords = ["engraved", "((+*+))", "ring", "deriki"]
+short_desc = "an engraved {B((+*+)){x ring"
+long_desc = "An intricately engraved ring lies here."
+item_type = "armor"
+level = 97
+weight = 10
+cost = 10000
+wear_flags = ["take", "finger"]
+extra_flags = ["hum"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 110
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 90
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 10
+
+[[objects]]
+vnum = 11713
+keywords = ["((+*+))", "crest", "deriki"]
+short_desc = "a {B((+*+)){x crest"
+long_desc = "An ornate crest is here."
+item_type = "armor"
+level = 97
+weight = 20
+cost = 10000
+wear_flags = ["take", "hold"]
+extra_flags = ["glow"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -10
+
+[[objects]]
+vnum = 11714
+keywords = ["mithril", "((+*+))", "bracelet", "deriki"]
+short_desc = "a {B((+*+)){x bracelet"
+long_desc = "An ornate mithril bracelet is here, gleaming."
+item_type = "armor"
+level = 95
+weight = 20
+cost = 9500
+wear_flags = ["take", "wrist"]
+extra_flags = ["glow"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 90
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11715
+keywords = ["((+*+))", "chain", "belt", "deriki"]
+short_desc = "a {B((+*+)){x chain belt"
+long_desc = "An engraved chain belt glitters here."
+item_type = "armor"
+level = 92
+weight = 50
+cost = 9000
+wear_flags = ["take", "waist"]
+extra_flags = ["glow"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "con"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11716
+keywords = ["((+*+))", "shoes", "deriki"]
+short_desc = "a pair of {B((+*+)){x shoes"
+long_desc = "A pair of glittering shoes is here."
+item_type = "armor"
+level = 90
+weight = 50
+cost = 11100
+wear_flags = ["take", "feet"]
+extra_flags = ["glow"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 95
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 30
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+[[objects]]
+vnum = 11717
+keywords = ["((+*+))", "armbands", "arm", "bands", "deriki"]
+short_desc = "some {B((+*+)){x armbands"
+long_desc = "A pair of armbands glitters here."
+item_type = "armor"
+level = 92
+weight = 50
+cost = 11000
+wear_flags = ["take", "arms"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 20
+  ac_slash = 21
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "sex"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11718
+keywords = ["glittering", "((+*+))", "earring", "deriki"]
+short_desc = "a glittering {B((+*+)){x earring"
+long_desc = "An intricately carved earring glitters here."
+item_type = "armor"
+level = 90
+weight = 10
+cost = 12400
+wear_flags = ["take", "face"]
+extra_flags = ["glow", "magic"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "con"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 50
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11719
+keywords = ["glowing", "((+*+))", "sphere", "deriki"]
+short_desc = "a glowing {B((+*+)){x sphere"
+long_desc = "A sphere floats here, glowing with an eerie light."
+item_type = "armor"
+level = 90
+weight = 10
+cost = 10000
+wear_flags = ["take", "float"]
+extra_flags = ["glow", "hum", "bless"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 21
+
+  [[objects.affects]]
+  location = "sex"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "age"
+  modifier = -5
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11720
+keywords = ["((+*+))", "tunic", "deriki"]
+short_desc = "a {B((+*+)){x tunic"
+long_desc = "A tunic emblazoned with the Deriki crest is here."
+item_type = "armor"
+level = 90
+weight = 40
+cost = 10000
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 60
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -5
+
+[[objects]]
+vnum = 11721
+keywords = ["owl", "eyes", "feather"]
+short_desc = "Owl eyes"
+long_desc = "A pair of feather rimmed eyes are here."
+item_type = "armor"
+level = 95
+weight = 10
+cost = 9000
+wear_flags = ["take", "face"]
+extra_flags = ["magic", "bless"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 22
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -5
+
+[[objects]]
+vnum = 11722
+keywords = ["staff", "guarding", "mithril"]
+short_desc = "a staff of guarding"
+long_desc = "A polished mithril staff lies here."
+item_type = "staff"
+level = 95
+weight = 30
+cost = 10100
+wear_flags = ["take", "hold"]
+extra_flags = ["hum"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -20
+
+[[objects]]
+vnum = 11723
+keywords = ["gleaming", "((-*-))", "circlet", "treniste"]
+short_desc = "a gleaming {Y((-*-)){x circlet"
+long_desc = "An engraved golden circlet gleams here."
+item_type = "armor"
+level = 95
+weight = 20
+cost = 10500
+wear_flags = ["take", "head"]
+extra_flags = ["glow", "bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 7
+
+[[objects]]
+vnum = 11724
+keywords = ["((-*-))", "set", "chain", "armor", "treniste"]
+short_desc = "a set of {Y((-*-)){x chain armor"
+long_desc = "A set of engraved armor lies here."
+item_type = "armor"
+level = 95
+weight = 100
+cost = 15000
+wear_flags = ["take", "body"]
+extra_flags = ["bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 110
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11725
+keywords = ["white", "((-*-))", "belt", "treniste"]
+short_desc = "a white {Y((-*-)){x belt"
+long_desc = "A gleaming white belt lies here."
+item_type = "armor"
+level = 95
+weight = 30
+cost = 10000
+wear_flags = ["take", "waist"]
+extra_flags = ["bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 50
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11726
+keywords = ["pair", "((-*-))", "gauntlets", "treniste"]
+short_desc = "a pair of {Y((-*-)){x gauntlets"
+long_desc = "A pair of engraved gauntlets gleams here."
+item_type = "armor"
+level = 93
+weight = 50
+cost = 10150
+wear_flags = ["take", "hands"]
+extra_flags = ["bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 105
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 7
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11727
+keywords = ["pair", "((-*-))", "leggings", "treniste"]
+short_desc = "a pair of {Y((-*-)){x leggings"
+long_desc = "A pair of engraved golden leggings lies here."
+item_type = "armor"
+level = 92
+weight = 50
+cost = 12000
+wear_flags = ["take", "legs"]
+extra_flags = ["bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 60
+
+[[objects]]
+vnum = 11728
+keywords = ["white", "((-*-))", "visor", "treniste"]
+short_desc = "a white {Y((-*-)){x visor"
+long_desc = "A gleaming white visor is here."
+item_type = "armor"
+level = 88
+weight = 30
+cost = 9000
+wear_flags = ["take", "face"]
+extra_flags = ["glow", "bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 90
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11729
+keywords = ["golden", "((-*-))", "bracer", "treniste"]
+short_desc = "a golden {Y((-*-)){x bracer"
+long_desc = "An intricately carved golden bracer lies here."
+item_type = "armor"
+level = 93
+weight = 20
+cost = 11000
+wear_flags = ["take", "wrist"]
+extra_flags = ["bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11730
+keywords = ["embroidered", "((-*-))", "cape", "treniste"]
+short_desc = "an embroidered {Y((-*-)){x cape"
+long_desc = "A beautifully embroidered cape is here."
+item_type = "armor"
+level = 89
+weight = 40
+cost = 11200
+wear_flags = ["take", "about"]
+extra_flags = ["bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 21
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "sex"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 105
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = -20
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11731
+keywords = ["ancient", "tome"]
+short_desc = "an ancient tome"
+long_desc = "An ancient tome is here, covered with dust."
+item_type = "staff"
+level = 89
+weight = 50
+cost = 10000
+wear_flags = ["take", "hold"]
+extra_flags = ["hum", "invis", "magic"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 4
+
+[[objects]]
+vnum = 11732
+keywords = ["ornate", "mask"]
+short_desc = "an ornate mask"
+long_desc = "An ornately engraved mask is here."
+item_type = "armor"
+level = 88
+weight = 20
+cost = 11000
+wear_flags = ["take", "face"]
+extra_flags = ["hum", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "sex"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "level"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "age"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 95
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11733
+keywords = ["((-*-))", "sleeves", "pair", "golden", "treniste"]
+short_desc = "some {Y((-*-)){x sleeves"
+long_desc = "A pair of engraved golden sleeves lies here."
+item_type = "armor"
+level = 89
+weight = 40
+cost = 10000
+wear_flags = ["take", "arms"]
+extra_flags = ["bless", "anti_evil", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 85
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11734
+keywords = ["gleaming", "white", "sword"]
+short_desc = "a gleaming white sword"
+long_desc = "A white sword gleams brightly."
+item_type = "weapon"
+level = 90
+weight = 200
+cost = 10000
+wear_flags = ["take", "wield"]
+extra_flags = ["bless", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 11
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 15
+
+[[objects]]
+vnum = 11735
+keywords = ["gleaming", "white", "shield"]
+short_desc = "a gleaming white shield"
+long_desc = "a white shield lies here gleaming."
+item_type = "armor"
+level = 91
+weight = 50
+cost = 10000
+wear_flags = ["take", "shield"]
+extra_flags = ["bless", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11736
+keywords = ["deep", "indigo", "pill"]
+short_desc = "a deep indigo pill"
+long_desc = "A deep indigo pill lies here."
+item_type = "pill"
+level = 55
+weight = 10
+cost = 850
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 11737
+keywords = ["jet", "black", "->*<-", "helm", "reykaris"]
+short_desc = "a jet black  ->*<-  helm"
+long_desc = "An engraved black helm absorbs the light."
+item_type = "armor"
+level = 95
+weight = 40
+cost = 10000
+wear_flags = ["take", "head"]
+extra_flags = ["dark", "anti_good", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 7
+
+[[objects]]
+vnum = 11738
+keywords = ["taloned", "gloves"]
+short_desc = "a pair of taloned gloves"
+long_desc = "A pair of gloves with long, wicked talons lies here."
+item_type = "armor"
+level = 95
+weight = 30
+cost = 10000
+wear_flags = ["take", "hands"]
+extra_flags = ["anti_good", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 85
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 7
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 9
+
+[[objects]]
+vnum = 11739
+keywords = ["->*<-", "breast", "plate", "reykaris"]
+short_desc = "a  {D->*<-{x  breast plate"
+long_desc = "A dark breast plate is here."
+item_type = "armor"
+level = 95
+weight = 100
+cost = 15000
+wear_flags = ["take", "body"]
+extra_flags = ["evil", "anti_good", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 22
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 90
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 7
+
+[[objects]]
+vnum = 11740
+keywords = ["dark", "->*<-", "orb", "reykaris"]
+short_desc = "a dark  {D->*<-{x  orb"
+long_desc = "A dark orb floats here, radiating evil."
+item_type = "armor"
+level = 93
+weight = 0
+cost = 10000
+wear_flags = ["take", "float"]
+extra_flags = ["dark", "evil", "anti_good", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 60
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11741
+keywords = ["->*<-", "legplates", "leg", "plates", "reykaris"]
+short_desc = "some  {D->*<-{x  legplates"
+long_desc = "Some evil looking legplates are here."
+item_type = "armor"
+level = 92
+weight = 50
+cost = 10200
+wear_flags = ["take", "legs"]
+extra_flags = ["evil", "anti_good", "anti_neutral", "noremove"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11742
+keywords = ["carved", "->*<-", "ring", "reykaris"]
+short_desc = "a carved  {D->*<-{x  ring"
+long_desc = "A dark ring carved with strange symbols lies here."
+item_type = "armor"
+level = 89
+weight = 10
+cost = 10000
+wear_flags = ["take", "finger"]
+extra_flags = ["evil", "anti_good", "anti_neutral", "noremove"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 85
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11743
+keywords = ["cloak", "nightmares", "black"]
+short_desc = "a cloak of nightmares"
+long_desc = "A shadowy black cloak writhes with agony."
+item_type = "armor"
+level = 89
+weight = 20
+cost = 10000
+wear_flags = ["take", "about"]
+extra_flags = ["dark", "evil", "invis", "anti_good"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "int"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = -3
+
+  [[objects.affects]]
+  location = "age"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 85
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 60
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11744
+keywords = ["ebony", "->*<-", "bracer", "reykaris"]
+short_desc = "an ebony  {D->*<-{x  bracer"
+long_desc = "A carved ebony bracer is here."
+item_type = "armor"
+level = 92
+weight = 20
+cost = 12500
+wear_flags = ["take", "wrist"]
+extra_flags = ["evil", "anti_good", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 21
+  ac_bash = 21
+  ac_slash = 21
+  ac_exotic = 17
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 5
+
+[[objects]]
+vnum = 11745
+keywords = ["dark", "->*<-", "necklace", "reykaris"]
+short_desc = "a dark  {D->*<-{x  necklace"
+long_desc = "A dark necklace lies here."
+item_type = "treasure"
+level = 88
+weight = 20
+cost = 25000
+wear_flags = ["take", "neck"]
+extra_flags = ["evil", "anti_neutral"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "age"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 75
+
+[[objects]]
+vnum = 11746
+keywords = ["humanoid", "skull"]
+short_desc = "a humanoid skull"
+long_desc = "A humanoid skull stares at you with empty sockets."
+item_type = "treasure"
+level = 88
+weight = 20
+cost = 5000
+wear_flags = ["take", "hold"]
+extra_flags = ["evil"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 95
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11747
+keywords = ["pair", "obsidian", "->*<-", "boots", "reykaris"]
+short_desc = "a pair of  {D->*<-{x  boots"
+long_desc = "A pair of engraved obsidian boots lies here."
+item_type = "armor"
+level = 85
+weight = 30
+cost = 11000
+wear_flags = ["take", "feet"]
+extra_flags = ["evil", "anti_good", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 19
+  ac_bash = 19
+  ac_slash = 19
+  ac_exotic = 15
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 70
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 75
+
+[[objects]]
+vnum = 11748
+keywords = ["tempered", "silver", "throwing", "dagger"]
+short_desc = "a tempered throwing dagger"
+long_desc = "A silver dagger with a sharply tempered edge gleams wickedly."
+item_type = "weapon"
+level = 90
+weight = 200
+cost = 15000
+wear_flags = ["take", "wield"]
+extra_flags = ["dark", "evil"]
+
+  [objects.weapon]
+  dice_number = 5
+  dice_size = 11
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 20
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 25
+
+[[objects]]
+vnum = 11749
+keywords = ["->*<-", "sleeves", "obsidian", "reykaris"]
+short_desc = "some  {D->*<-{x  sleeves"
+long_desc = "Some carved obsidian sleeves are here."
+item_type = "armor"
+level = 88
+weight = 30
+cost = 10000
+wear_flags = ["take", "arms"]
+extra_flags = ["evil", "anti_good", "anti_neutral"]
+
+  [objects.armor]
+  ac_pierce = 20
+  ac_bash = 20
+  ac_slash = 20
+  ac_exotic = 16
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11750
+keywords = ["black", "collar", "runes", "runed", "leather"]
+short_desc = "a black runed collar"
+long_desc = "A black leather collar engraved with shimmering runes lies here."
+item_type = "armor"
+level = 85
+weight = 30
+cost = 5500
+wear_flags = ["take", "neck"]
+extra_flags = ["hum", "evil", "magic", "nodrop", "noremove"]
+
+  [objects.armor]
+  ac_pierce = 19
+  ac_bash = 19
+  ac_slash = 19
+  ac_exotic = 15
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "con"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 65
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 70
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11751
+keywords = ["demon's", "wings", "demon", "black"]
+short_desc = "demon's wings"
+long_desc = "A pair of membranous black wings lie here."
+item_type = "armor"
+level = 99
+weight = 50
+cost = 15000
+wear_flags = ["take", "arms"]
+extra_flags = ["hum", "evil"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "sex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "age"
+  modifier = 20
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 95
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 7
+
+[[objects]]
+vnum = 11752
+keywords = ["onyx", "-=+)>", "earring", "myrxes"]
+short_desc = "an onyx {W-=+)>{x earring"
+long_desc = "An earring of polished onyx glimmers in the shadows."
+item_type = "armor"
+level = 78
+weight = 10
+cost = 10000
+wear_flags = ["take", "face"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11753
+keywords = ["dark", "-=+)>", "gloves", "myrxes"]
+short_desc = "some dark {W-=+)>{x gloves"
+long_desc = "A pair of dark gloves absorbs the light."
+item_type = "armor"
+level = 78
+weight = 30
+cost = 10000
+wear_flags = ["take", "hands"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 19
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11754
+keywords = ["sharpened", "stiletto", "sharp"]
+short_desc = "a sharpened stiletto"
+long_desc = "A wickedly sharp stiletto gleams here."
+item_type = "weapon"
+level = 80
+weight = 200
+cost = 12500
+wear_flags = ["take", "wield"]
+extra_flags = ["dark", "nodrop", "bless"]
+
+  [objects.weapon]
+  dice_number = 13
+  dice_size = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 20
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 25
+
+[[objects]]
+vnum = 11755
+keywords = ["invisible", "flame"]
+short_desc = "an invisible flame"
+long_desc = "An invisible flame burns silently."
+item_type = "light"
+level = 80
+weight = 0
+cost = 11500
+wear_flags = ["take"]
+extra_flags = ["dark", "invis"]
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11756
+keywords = ["pair", "-=+)>", "sleeves", "myrxes"]
+short_desc = "a pair of {W-=+)>{x sleeves"
+long_desc = "Dark sleeves disappear in the shadows."
+item_type = "armor"
+level = 78
+weight = 30
+cost = 9900
+wear_flags = ["take", "arms"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11757
+keywords = ["engraved", "platinum", "][+][", "ring", "xaek"]
+short_desc = "an engraved platinum {w][+][{x ring"
+long_desc = "An engraved platinum ring lies here."
+item_type = "armor"
+level = 69
+weight = 20
+cost = 12000
+wear_flags = ["take", "finger"]
+
+  [objects.armor]
+  ac_pierce = 16
+  ac_bash = 16
+  ac_slash = 17
+  ac_exotic = 12
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 70
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11758
+keywords = ["dark", "-=+)>", "shroud", "shadows", "myrxes"]
+short_desc = "a dark {W-=+)>{x shroud"
+long_desc = "Deep shadows absorb the light."
+item_type = "armor"
+level = 75
+weight = 10
+cost = 10000
+wear_flags = ["take", "about"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 16
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 70
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11759
+keywords = ["black", "slim", "-=+)>", "bracer", "myrxes"]
+short_desc = "a slim {W-=+)>{x bracer"
+long_desc = "A slender black bracer gleams darkly."
+item_type = "armor"
+level = 73
+weight = 20
+cost = 8000
+wear_flags = ["take", "wrist"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 18
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -15
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11760
+keywords = ["shadowy", "-=+)>", "neckchain", "neck", "chain", "myrxes"]
+short_desc = "a shadowy {W-=+)>{x neckchain"
+long_desc = "A dark neckchain is here, shrouded in shadow."
+item_type = "armor"
+level = 72
+weight = 20
+cost = 12000
+wear_flags = ["take", "neck"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 17
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 60
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 60
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11761
+keywords = ["black", "-=+)>", "leggings", "leather", "pair", "myrxes"]
+short_desc = "a pair of black {W-=+)>{x leggings"
+long_desc = "A pair of black leather leggings lies here in a pool of shadow."
+item_type = "armor"
+level = 77
+weight = 40
+cost = 10000
+wear_flags = ["take", "legs"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 85
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11762
+keywords = ["silent", "-=+)>", "boots", "myrxes"]
+short_desc = "silent {W-=+)>{x boots"
+long_desc = "Some silent looking boots lie here."
+item_type = "armor"
+level = 75
+weight = 20
+cost = 8900
+wear_flags = ["take", "feet"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 19
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11763
+keywords = ["hair", "ring", "panther", "black"]
+short_desc = "a ring of the panther"
+long_desc = "A ring of black panther hair gleams darkly."
+item_type = "armor"
+level = 75
+weight = 10
+cost = 10000
+wear_flags = ["take", "finger"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11764
+keywords = ["black", "-=+)>", "belt", "myrxes"]
+short_desc = "a black {W-=+)>{x belt"
+long_desc = "An engraved black belt lies here."
+item_type = "armor"
+level = 75
+weight = 40
+cost = 7900
+wear_flags = ["take", "waist"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 19
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 5
+
+[[objects]]
+vnum = 11765
+keywords = ["ring", "lynx"]
+short_desc = "a ring of the lynx"
+long_desc = "A darkly beautiful ring lies here."
+item_type = "armor"
+level = 75
+weight = 10
+cost = 10000
+wear_flags = ["take", "finger"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11766
+keywords = ["night", "hawk", "talons"]
+short_desc = "night hawk talons"
+long_desc = "The sharp talons of a hawk gleam cruelly in the darkness."
+item_type = "armor"
+level = 73
+weight = 40
+cost = 9000
+wear_flags = ["take", "hands"]
+extra_flags = ["dark", "invis", "bless"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 17
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11767
+keywords = ["hunter's", "hunters", "hunter", "arrow", "mithril"]
+short_desc = "a hunter's arrow"
+long_desc = "A sharp mithril arrow gleams here."
+item_type = "weapon"
+level = 70
+weight = 200
+cost = 10000
+wear_flags = ["take", "wield"]
+extra_flags = ["glow"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 22
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 15
+
+[[objects]]
+vnum = 11768
+keywords = ["set", "][+][", "platemail", "plate", "mail", "xaek"]
+short_desc = "a set of {w][+][{x platemail"
+long_desc = "A set of engraved platemail is here."
+item_type = "armor"
+level = 78
+weight = 100
+cost = 10000
+wear_flags = ["take", "body"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11769
+keywords = ["bracer", "power"]
+short_desc = "a bracer of power"
+long_desc = "A bracer lies here, humming with power."
+item_type = "armor"
+level = 78
+weight = 20
+cost = 9900
+wear_flags = ["take", "wrist"]
+extra_flags = ["hum"]
+
+  [objects.armor]
+  ac_pierce = 19
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11770
+keywords = ["][+][", "shield", "xaek"]
+short_desc = "a {w][+][{x shield"
+long_desc = "An engraved shield is here."
+item_type = "armor"
+level = 77
+weight = 50
+cost = 10000
+wear_flags = ["take", "shield"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11771
+keywords = ["grey", "][+][", "legplates", "leg", "plates", "xaek"]
+short_desc = "some grey {w][+][{x legplates"
+long_desc = "A pair of strong grey legplates are here."
+item_type = "armor"
+level = 75
+weight = 90
+cost = 10000
+wear_flags = ["take", "legs"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11772
+keywords = ["][+][", "helm", "xaek"]
+short_desc = "a {w][+][{x helm"
+long_desc = "A sturdy helm lies here."
+item_type = "armor"
+level = 71
+weight = 50
+cost = 8000
+wear_flags = ["take", "head"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 17
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11773
+keywords = ["engraved", "][+][", "crest", "xaek"]
+short_desc = "an engraved {w][+][{x crest"
+long_desc = "The crest of house Xaek is here, gleaming."
+item_type = "armor"
+level = 68
+weight = 50
+cost = 11000
+wear_flags = ["take", "hold"]
+
+  [objects.armor]
+  ac_pierce = 16
+  ac_bash = 16
+  ac_slash = 16
+  ac_exotic = 12
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 65
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11774
+keywords = ["][+][", "armplates", "arm", "plates", "xaek"]
+short_desc = "strong {w][+][{x armplates"
+long_desc = "Some strong looking armplates are here."
+item_type = "armor"
+level = 73
+weight = 50
+cost = 10000
+wear_flags = ["take", "arms"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 17
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 50
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11775
+keywords = ["balanced", "adamantite", "longsword", "long", "sword"]
+short_desc = "a finely balance adamantite longsword"
+long_desc = "An adamantite longsword of superb craftsmanship gleams here."
+item_type = "weapon"
+level = 70
+weight = 300
+cost = 17800
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "bless"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 22
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 15
+
+[[objects]]
+vnum = 11776
+keywords = ["silver", "carven", "-(+)-", "ring", "noriva"]
+short_desc = "a carven {G-(+)-{x signet ring"
+long_desc = "A beautiful silver signet ring lies here."
+item_type = "armor"
+level = 78
+weight = 10
+cost = 10000
+wear_flags = ["take", "finger"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 80
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 80
+
+[[objects]]
+vnum = 11777
+keywords = ["niobium", "-(+)-", "circlet", "noriva"]
+short_desc = "a niobium {G-(+)-{x circlet"
+long_desc = "A beautiful niobium circlet lies here."
+item_type = "armor"
+level = 78
+weight = 20
+cost = 21500
+wear_flags = ["take", "head"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11778
+keywords = ["light", "shimmering", "-(+)-", "sphere", "noriva"]
+short_desc = "a shimmering {G-(+)-{x sphere"
+long_desc = "A sphere of shimmering light floats here."
+item_type = "armor"
+level = 77
+weight = 0
+cost = 15500
+wear_flags = ["take", "float"]
+extra_flags = ["glow", "hum", "bless"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 14
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 85
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 50
+
+[[objects]]
+vnum = 11779
+keywords = ["inlaid", "silver", "-(+)-", "bracelet", "noriva"]
+short_desc = "an inlaid silver {G-(+)-{x bracelet"
+long_desc = "A silver bracelet inlaid with gold is here."
+item_type = "armor"
+level = 74
+weight = 20
+cost = 12200
+wear_flags = ["take", "wrist"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 17
+  ac_slash = 18
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 95
+
+[[objects]]
+vnum = 11780
+keywords = ["-(+)-", "girth", "noriva"]
+short_desc = "a beautiful {G-(+)-{x girth"
+long_desc = "A beautifully engraved girth lies here."
+item_type = "armor"
+level = 71
+weight = 50
+cost = 10000
+wear_flags = ["take", "waist"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 17
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 50
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11781
+keywords = ["pair", "-(+)-", "sleeves", "noriva"]
+short_desc = "a pair of {G-(+)-{x sleeves"
+long_desc = "Some gleaming sleeves lie here."
+item_type = "armor"
+level = 69
+weight = 50
+cost = 9900
+wear_flags = ["take", "arms"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 16
+  ac_bash = 16
+  ac_slash = 16
+  ac_exotic = 12
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 85
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+[[objects]]
+vnum = 11782
+keywords = ["pair", "-(+)-", "gloves", "noriva"]
+short_desc = "some finely crafted {G-(+)-{x gloves"
+long_desc = "A pair of finely crafted gloves lies here."
+item_type = "armor"
+level = 73
+weight = 30
+cost = 11250
+wear_flags = ["take", "hands"]
+extra_flags = ["bless"]
+
+  [objects.armor]
+  ac_pierce = 17
+  ac_bash = 17
+  ac_slash = 17
+  ac_exotic = 13
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11783
+keywords = ["filligree", "-(+)-", "necklace", "noriva"]
+short_desc = "a filligree {G-(+)-{x necklace"
+long_desc = "A beautiful filligree necklace bearing the crest of myr'vale Noriva is here."
+item_type = "armor"
+level = 68
+weight = 20
+cost = 25500
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 16
+  ac_bash = 16
+  ac_slash = 16
+  ac_exotic = 12
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 4
+
+[[objects]]
+vnum = 11784
+keywords = ["tooled", "-(+)-", "boots", "noriva"]
+short_desc = "some tooled {G-(+)-{x boots"
+long_desc = "Some intricately tooled boots stand here."
+item_type = "armor"
+level = 68
+weight = 60
+cost = 11200
+wear_flags = ["take", "feet"]
+extra_flags = ["bless"]
+
+  [objects.armor]
+  ac_pierce = 16
+  ac_bash = 16
+  ac_slash = 16
+  ac_exotic = 12
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 75
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11785
+keywords = ["laerkai", "fury", "rage"]
+short_desc = "laerkai fury"
+long_desc = "A feeling of rage pulses here."
+item_type = "armor"
+level = 99
+weight = 0
+cost = 50000
+wear_flags = ["take", "float"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 250
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+[[objects]]
+vnum = 11786
+keywords = ["laerkai", "justice", "shield"]
+short_desc = "laerkai justice"
+long_desc = "A finely crafted shield is here."
+item_type = "armor"
+level = 99
+weight = 50
+cost = 50000
+wear_flags = ["take", "shield"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 110
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -25
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -15
+
+[[objects]]
+vnum = 11787
+keywords = ["laerkai", "pain"]
+short_desc = "laerkai pain"
+long_desc = "A wave of pain slams into you!"
+item_type = "armor"
+level = 99
+weight = 0
+cost = 50000
+wear_flags = ["take", "hands"]
+extra_flags = ["hum", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 15
+
+[[objects]]
+vnum = 11788
+keywords = ["shadows", "laerkai", "stealth"]
+short_desc = "laerkai stealth"
+long_desc = "The shadows are deep here."
+item_type = "armor"
+level = 99
+weight = 0
+cost = 50000
+wear_flags = ["take", "feet"]
+extra_flags = ["dark", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 10
+
+[[objects]]
+vnum = 11789
+keywords = ["laerkai", "might", "platemail", "plate", "mail"]
+short_desc = "laerkai might"
+long_desc = "A set of powerful looking platemail is here, humming."
+item_type = "armor"
+level = 99
+weight = 100
+cost = 50000
+wear_flags = ["take", "body"]
+extra_flags = ["hum", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 15
+
+[[objects]]
+vnum = 11790
+keywords = ["laerkai", "life", "health", "aura"]
+short_desc = "laerkai life"
+long_desc = "An aura of health permeates the room."
+item_type = "armor"
+level = 99
+weight = 0
+cost = 50000
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 250
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 8
+
+[[objects]]
+vnum = 11791
+keywords = ["laerkai", "power", "presense"]
+short_desc = "laerkai power"
+long_desc = "A presense of tremendous power is here."
+item_type = "armor"
+level = 99
+weight = 0
+cost = 55000
+wear_flags = ["take", "wrist"]
+extra_flags = ["hum", "bless"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 300
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 300
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 12
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 16
+
+[[objects]]
+vnum = 11792
+keywords = ["honed", "shortsword", "zedraikis"]
+short_desc = "a honed shortsword 'Zedraikis'"
+long_desc = "A finely honed shortsword gleams wickedly."
+item_type = "weapon"
+level = 99
+weight = 250
+cost = 55000
+wear_flags = ["take", "wield"]
+extra_flags = ["hum", "dark", "bless"]
+
+  [objects.weapon]
+  dice_number = 6
+  dice_size = 12
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 40
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 50
+
+[[objects]]
+vnum = 11793
+keywords = ["flame", "balance", "silver"]
+short_desc = "flame of balance"
+long_desc = "A shimmering silver flame hovers here."
+item_type = "light"
+level = 99
+weight = 0
+cost = 55000
+wear_flags = ["take"]
+extra_flags = ["glow", "invis", "bless", "anti_good", "anti_evil"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 175
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 175
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 12
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 12
+
+[[objects]]
+vnum = 11794
+keywords = ["drakyri", "arm", "guards", "pair", "silvery"]
+short_desc = "drakyri arm guards"
+long_desc = "A pair of silvery arm guards gleam here."
+item_type = "armor"
+level = 62
+weight = 40
+cost = 7500
+wear_flags = ["take", "arms"]
+extra_flags = ["glow"]
+
+  [objects.armor]
+  ac_pierce = 15
+  ac_bash = 15
+  ac_slash = 15
+  ac_exotic = 11
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11795
+keywords = ["drakyri", "girth", "silvery"]
+short_desc = "a drakyri girth"
+long_desc = "A gleaming silvery girth is here."
+item_type = "armor"
+level = 62
+weight = 40
+cost = 7500
+wear_flags = ["take", "waist"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 15
+  ac_bash = 15
+  ac_slash = 15
+  ac_exotic = 11
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 70
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11796
+keywords = ["drakyri", "wrist", "guard"]
+short_desc = "a drakyri wrist guard"
+long_desc = "A mithril wrist guard gleams here."
+item_type = "armor"
+level = 62
+weight = 20
+cost = 7500
+wear_flags = ["take", "wrist"]
+extra_flags = ["glow", "bless"]
+
+  [objects.armor]
+  ac_pierce = 15
+  ac_bash = 15
+  ac_slash = 15
+  ac_exotic = 11
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 70
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 4
+
+[[objects]]
+vnum = 11797
+keywords = ["drakyri", "dagger", "mithril"]
+short_desc = "a drakyri dagger"
+long_desc = "A sharp mithril dagger lies here."
+item_type = "weapon"
+level = 62
+weight = 200
+cost = 7500
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "bless"]
+
+  [objects.weapon]
+  dice_number = 6
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+[[objects]]
+vnum = 11798
+keywords = ["green", "greenish", "energy", "pill"]
+short_desc = "an energy pill"
+long_desc = "A greenish pill is here, humming with energy."
+item_type = "pill"
+level = 55
+weight = 10
+cost = 500
+wear_flags = ["take"]
+extra_flags = ["hum"]
+
+[[objects]]
+vnum = 11799
+keywords = ["warp", "pill"]
+short_desc = "a warp pill"
+long_desc = "A mysterious looking pill lies here."
+item_type = "pill"
+level = 55
+weight = 10
+cost = 300
+wear_flags = ["take"]
+extra_flags = ["hum"]
+

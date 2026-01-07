@@ -1,0 +1,567 @@
+[[objects]]
+vnum = 19900
+keywords = ["mystical", "waterfall", "icewine"]
+short_desc = "a Mystical Waterfall"
+long_desc = "A Mystical Waterfall flows down the side of this mountain."
+item_type = "fountain"
+level = 104
+weight = 60
+cost = 0
+extra_flags = ["glow", "magic", "nopurge", "nolocate", "melt_drop"]
+
+[[objects]]
+vnum = 19901
+keywords = ["artema", "wisdom", "claw"]
+short_desc = "{&Platinum{0 {^Claws{0"
+long_desc = "The claws of the great {&Platinum{0 {8Dragon{0 lie here!"
+item_type = "weapon"
+level = 104
+weight = 1
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "dark", "invis", "magic", "bless", "noremove", "rot_death", "nonmetal", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 555
+  dice_size = 555
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 500
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -100
+
+[[objects]]
+vnum = 19902
+keywords = ["scroll", "parchment", "health"]
+short_desc = "Parchment of {@Health{0"
+long_desc = "an acient piece of parchment lies here, {zemenating{0 a powerful aura."
+item_type = "scroll"
+level = 102
+weight = 1
+cost = 0
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic", "bless", "nolocate", "melt_drop"]
+
+[[objects]]
+vnum = 19903
+keywords = ["artema", "platinum", "scales"]
+short_desc = "{8Platinum scales{0"
+long_desc = "Artema's dragon scales have been ripped from his body and dropped here."
+item_type = "armor"
+level = 103
+weight = 1
+cost = 0
+wear_flags = ["take", "about"]
+extra_flags = ["noremove", "nopurge", "nolocate", "melt_drop"]
+
+  [objects.armor]
+  ac_pierce = 500
+  ac_bash = 500
+  ac_slash = 500
+  ac_exotic = 500
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 100
+
+[[objects]]
+vnum = 19904
+keywords = ["seal", "dragon", "archmage"]
+short_desc = "Seal of the {8Dragon{0 {4Archmage{0"
+long_desc = "The legendary Seal of the {8Dragon{0 {4ArchMage{0."
+item_type = "armor"
+level = 104
+weight = 1
+cost = 0
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nopurge", "nolocate", "melt_drop"]
+
+  [objects.armor]
+  ac_pierce = 30
+  ac_bash = 30
+  ac_slash = 30
+  ac_exotic = 30
+
+  [[objects.affects]]
+  location = "save_petri"
+  modifier = -100
+
+[[objects]]
+vnum = 19905
+keywords = ["thoth's", "protection", "shield"]
+short_desc = "{&Thoth's Protection{0"
+long_desc = "Thoth's ultimate protection floats in mid-air."
+item_type = "armor"
+level = 102
+weight = 1
+cost = 0
+wear_flags = ["take", "shield"]
+extra_flags = ["glow", "hum", "invis", "magic", "noremove", "nopurge", "nolocate", "melt_drop"]
+
+  [objects.armor]
+  ac_pierce = 500
+  ac_bash = 500
+  ac_slash = 500
+  ac_exotic = 500
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -100
+
+[[objects]]
+vnum = 19906
+keywords = ["level", "70", "magical", "force"]
+short_desc = "L.70 {#Magical Force{0"
+long_desc = "A magical force throbbs here."
+item_type = "weapon"
+level = 70
+weight = 2
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 14
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "save_petri"
+  modifier = -15
+
+[[objects]]
+vnum = 19907
+keywords = ["level", "80", "magical", "force"]
+short_desc = "L.80 {#Magical Force{0"
+long_desc = "A strong magical force throbbs here."
+item_type = "weapon"
+level = 80
+weight = 2
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 16
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "save_petri"
+  modifier = -15
+
+[[objects]]
+vnum = 19908
+keywords = ["level", "90", "magical", "force"]
+short_desc = "L.90 {#Magical Force{0"
+long_desc = "A powerful force throbbs here."
+item_type = "weapon"
+level = 90
+weight = 2
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 18
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "save_petri"
+  modifier = -15
+
+[[objects]]
+vnum = 19909
+keywords = ["level", "100", "magical", "force"]
+short_desc = "L.100 {#Magical Force{0"
+long_desc = "A magical force throbbs here."
+item_type = "weapon"
+level = 100
+weight = 2
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 20
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "save_petri"
+  modifier = -15
+
+[[objects]]
+vnum = 19910
+keywords = ["level", "70", "physical", "power"]
+short_desc = "L.70 {8Physical Power{0"
+long_desc = "A physical power lies here."
+item_type = "weapon"
+level = 70
+weight = 5
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 14
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+[[objects]]
+vnum = 19911
+keywords = ["level", "80", "physical", "power"]
+short_desc = "L.80 {8Physical Power{0"
+long_desc = "A physical power lies here."
+item_type = "weapon"
+level = 80
+weight = 5
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 16
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+[[objects]]
+vnum = 19912
+keywords = ["level", "90", "physical", "power"]
+short_desc = "L.90 {8Physical Power{0"
+long_desc = "A physical power lies here."
+item_type = "weapon"
+level = 90
+weight = 5
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 18
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+[[objects]]
+vnum = 19913
+keywords = ["level", "100", "physical", "power"]
+short_desc = "L.100 {8Physical Power{0"
+long_desc = "A physical power lies here."
+item_type = "weapon"
+level = 100
+weight = 5
+cost = 0
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
+
+  [objects.weapon]
+  dice_number = 10
+  dice_size = 20
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 15
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 2
+
+[[objects]]
+vnum = 19914
+keywords = ["potion", "quest", "cursed"]
+short_desc = "Treasure of Fanatics' Tower"
+long_desc = "The treasure of the Fanatics' Tower has been smashed on the floor."
+item_type = "potion"
+level = 99
+weight = 5
+cost = 0
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "hum", "evil", "invis", "magic", "anti_good", "anti_evil", "anti_neutral", "rot_death", "nolocate", "melt_drop"]
+
+[[objects]]
+vnum = 19915
+keywords = ["gogo", "shroud", "cloak"]
+short_desc = "{3Gogo{0's Shroud"
+long_desc = "Gogo's shroud is here.. All that is left of him after his demise."
+item_type = "npc_corpse"
+level = 85
+weight = 5
+cost = 0
+wear_flags = ["take", "about"]
+extra_flags = ["glow", "hum", "magic", "anti_good", "anti_evil", "nolocate", "melt_drop", "had_timer"]
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -50
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -15
+
+[[objects]]
+vnum = 19916
+keywords = ["leveling", "sphere"]
+short_desc = "a leveling sphere"
+long_desc = "a leveling sphere lies here."
+item_type = "light"
+level = 1
+weight = 40
+cost = 75
+wear_flags = ["take"]
+extra_flags = ["magic", "rot_death", "melt_drop", "had_timer"]
+
+[[objects]]
+vnum = 19917
+keywords = ["seal", "platinum", "dragon"]
+short_desc = "Seal of the {&Platinum{0 {8Dragon{0"
+long_desc = "The legendary Seal of the {&Platinum{0 {8Dragon{0."
+item_type = "armor"
+level = 104
+weight = 1
+cost = 0
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nopurge", "nolocate", "melt_drop"]
+
+  [objects.armor]
+  ac_pierce = 30
+  ac_bash = 30
+  ac_slash = 30
+  ac_exotic = 30
+
+  [[objects.affects]]
+  location = "save_petri"
+  modifier = -100
+
+[[objects]]
+vnum = 19918
+keywords = ["ice", "crystal", "god", "embrace"]
+short_desc = "a small {^ice crystal{0"
+long_desc = "{^A small Ice Crystal floats here in mid-air.{0"
+item_type = "warp_stone"
+level = 104
+weight = 0
+cost = 0
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic", "nodrop", "melt_drop", "had_timer"]
+
+[[objects]]
+vnum = 19919
+keywords = ["light", "eriana", "lantern"]
+short_desc = "The {#LIGHT{0 of Eriana"
+long_desc = "The {#LIGHT{0 of Eriana brightens your path ahead."
+item_type = "light"
+level = 101
+weight = 0
+cost = 10000
+wear_flags = ["take"]
+extra_flags = ["glow"]
+
+[[objects]]
+vnum = 19950
+keywords = ["level", "70", "magical", "robe"]
+short_desc = "{DL.70 {YMagical Robe{x"
+long_desc = "A magical robe is lying here"
+item_type = "armor"
+level = 70
+weight = 0
+cost = 0
+wear_flags = ["take", "about"]
+extra_flags = ["glow", "hum", "invis"]
+
+  [objects.armor]
+  ac_pierce = 15
+  ac_bash = 15
+  ac_slash = 15
+  ac_exotic = 15
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 100
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 100
+
+[[objects]]
+vnum = 19951
+keywords = ["level", "80", "magical", "robe"]
+short_desc = "{DL.80 {YMagical Robe{x"
+long_desc = "A magical robe is lying here"
+item_type = "armor"
+level = 80
+weight = 0
+cost = 0
+wear_flags = ["take", "about"]
+extra_flags = ["glow", "hum", "invis"]
+
+  [objects.armor]
+  ac_pierce = 18
+  ac_bash = 18
+  ac_slash = 18
+  ac_exotic = 18
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 4
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 125
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 125
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 125
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+[[objects]]
+vnum = 19952
+keywords = ["level", "90", "magical", "robe"]
+short_desc = "{DL.90 {YMagical Robe{x"
+long_desc = "A magical robe is lying here"
+item_type = "armor"
+level = 90
+weight = 0
+cost = 0
+wear_flags = ["take", "about"]
+extra_flags = ["glow", "hum", "invis"]
+
+  [objects.armor]
+  ac_pierce = 22
+  ac_bash = 22
+  ac_slash = 22
+  ac_exotic = 22
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 8
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 6
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 150
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 150
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 150
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 3
+
+[[objects]]
+vnum = 19953
+keywords = ["level", "100", "magical", "robe"]
+short_desc = "{DL.100 {YMagical Robe{x"
+long_desc = "A magical robe is lying here."
+item_type = "armor"
+level = 100
+weight = 0
+cost = 0
+wear_flags = ["take", "about"]
+extra_flags = ["glow", "hum", "invis"]
+
+  [objects.armor]
+  ac_pierce = 25
+  ac_bash = 25
+  ac_slash = 25
+  ac_exotic = 25
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 12
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 10
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 175
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 175
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 175
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 4
+

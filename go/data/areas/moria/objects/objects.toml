@@ -1,0 +1,488 @@
+[[objects]]
+vnum = 4000
+keywords = ["ring", "yellow", "green"]
+short_desc = "a yellow and green ring"
+long_desc = "A ring, with yellow and green ornamentation. It looks very old."
+item_type = "treasure"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take", "finger"]
+
+  [[objects.affects]]
+  location = "str"
+  modifier = -2
+
+[[objects]]
+vnum = 4001
+keywords = ["corpse"]
+short_desc = "a corpse"
+long_desc = "A halfway decayed corpse of a cartographer."
+item_type = "npc_corpse"
+level = 0
+weight = 1000
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["rot_death"]
+
+[[objects]]
+vnum = 4002
+keywords = ["coins"]
+short_desc = "some coins"
+long_desc = "A small pile of coins."
+item_type = "money"
+level = 0
+weight = 5000
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 4003
+keywords = ["dagger", "rusty"]
+short_desc = "a rusty dagger"
+long_desc = "A worn and rusty dagger is here."
+item_type = "weapon"
+level = 0
+weight = 10
+cost = 165
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -1
+
+[[objects]]
+vnum = 4004
+keywords = ["bullwhip", "whip"]
+short_desc = "a bullwhip"
+long_desc = "A coiled length of leather is here...looks like a nasty whip!"
+item_type = "weapon"
+level = 5
+weight = 30
+cost = 240
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 4005
+keywords = ["club", "tree", "huge"]
+short_desc = "a huge club"
+long_desc = "An uprooted tree leans against the wall."
+item_type = "weapon"
+level = 27
+weight = 250
+cost = 780
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 9
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = -2
+
+[[objects]]
+vnum = 4006
+keywords = ["furs", "smelly"]
+short_desc = "some smelly furs"
+long_desc = "A heap of smelly furs sit here."
+item_type = "armor"
+level = 15
+weight = 100
+cost = 510
+wear_flags = ["take", "about"]
+
+  [objects.armor]
+  ac_pierce = 5
+  ac_bash = 6
+  ac_slash = 5
+  ac_exotic = 1
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+[[objects]]
+vnum = 4050
+keywords = ["potion", "purple"]
+short_desc = "a purple potion"
+long_desc = "A purple potion is here."
+item_type = "potion"
+level = 21
+weight = 10
+cost = 720
+wear_flags = ["take", "hold"]
+
+[[objects]]
+vnum = 4051
+keywords = ["helmet", "metal"]
+short_desc = "a metal helmet"
+long_desc = "A metal helmet is here."
+item_type = "armor"
+level = 9
+weight = 40
+cost = 650
+wear_flags = ["take", "head"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 4
+  ac_bash = 4
+  ac_slash = 3
+  ac_exotic = 2
+
+  [[objects.affects]]
+  location = "saves"
+  modifier = -1
+
+[[objects]]
+vnum = 4052
+keywords = ["mushroom"]
+short_desc = "a mushroom"
+long_desc = "A small mushroom is here."
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 4053
+keywords = ["dirk"]
+short_desc = "a thieves dirk"
+long_desc = "A beautifully crafted dirk is lying here."
+item_type = "weapon"
+level = 15
+weight = 20
+cost = 590
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 4054
+keywords = ["axe", "war"]
+short_desc = "a war axe"
+long_desc = "A razor-sharp war axe rests on the ground."
+item_type = "weapon"
+level = 23
+weight = 70
+cost = 930
+wear_flags = ["take", "wield"]
+extra_flags = ["magic"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 4055
+keywords = ["sword", "broad"]
+short_desc = "a broad sword"
+long_desc = "A well-polished broadsword sits here."
+item_type = "weapon"
+level = 11
+weight = 80
+cost = 550
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 10
+
+[[objects]]
+vnum = 4056
+keywords = ["flail", "two", "two-headed"]
+short_desc = "a two-headed flail"
+long_desc = "A flail with two heavy, spiked heads is here."
+item_type = "weapon"
+level = 5
+weight = 70
+cost = 290
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 1
+  dice_size = 7
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+[[objects]]
+vnum = 4057
+keywords = ["mace", "heavy"]
+short_desc = "a heavy iron mace"
+long_desc = "A large iron mace with a wicked head rests on the ground."
+item_type = "weapon"
+level = 11
+weight = 100
+cost = 390
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 4058
+keywords = ["falchion", "sword"]
+short_desc = "a falchion"
+long_desc = "A curved sword with a heavy tip sits here."
+item_type = "weapon"
+level = 9
+weight = 80
+cost = 490
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+[[objects]]
+vnum = 4059
+keywords = ["voulge", "polearm"]
+short_desc = "a voulge"
+long_desc = "A long polearm with a curved blade is here."
+item_type = "weapon"
+level = 19
+weight = 120
+cost = 520
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -1
+
+[[objects]]
+vnum = 4100
+keywords = ["blade", "black", "demon"]
+short_desc = "the black demon blade"
+long_desc = "An evil black demon blade is here."
+item_type = "weapon"
+level = 21
+weight = 80
+cost = 940
+wear_flags = ["take", "wield"]
+extra_flags = ["magic", "anti_good", "anti_neutral"]
+
+  [objects.weapon]
+  dice_number = 3
+  dice_size = 4
+
+[[objects]]
+vnum = 4101
+keywords = ["gloves"]
+short_desc = "swordsman's gloves"
+long_desc = "Some gloves are here.  They look like the right equipment for fighting."
+item_type = "armor"
+level = 13
+weight = 10
+cost = 730
+wear_flags = ["take", "hands"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 4102
+keywords = ["scroll", "ysafg"]
+short_desc = "a scroll which reads \"ysafg\""
+long_desc = "A scroll which reads \"ysafg\", it looks very fragile and quite old."
+item_type = "scroll"
+level = 13
+weight = 10
+cost = 840
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 4103
+keywords = ["slime", "mold"]
+short_desc = "a green slime mold"
+long_desc = "A green slime mold is here. It smells REAL bad."
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["rot_death"]
+
+[[objects]]
+vnum = 4104
+keywords = ["slime", "mold"]
+short_desc = "a green slime mold"
+long_desc = "A green slime mold is here. It smells REAL bad."
+item_type = "food"
+level = 0
+weight = 10
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["rot_death"]
+
+[[objects]]
+vnum = 4105
+keywords = ["staff", "iron", "iron-shod"]
+short_desc = "an iron-shod staff"
+long_desc = "A long staff capped with iron leans against a wall."
+item_type = "weapon"
+level = 19
+weight = 60
+cost = 630
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 5
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -2
+
+[[objects]]
+vnum = 4150
+keywords = ["black", "potion"]
+short_desc = "a black potion"
+long_desc = "A thick black potion is here."
+item_type = "potion"
+level = 9
+weight = 10
+cost = 320
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+[[objects]]
+vnum = 4151
+keywords = ["staff", "oak"]
+short_desc = "a heavy oak staff"
+long_desc = "A ancient heavy oak staff is here."
+item_type = "staff"
+level = 25
+weight = 50
+cost = 5400
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = -20
+
+[[objects]]
+vnum = 4152
+keywords = ["dagger", "light", "silver"]
+short_desc = "a light silver dagger"
+long_desc = "A light silver dagger is here."
+item_type = "weapon"
+level = 13
+weight = 20
+cost = 660
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 4153
+keywords = ["star", "morning", "morningstar"]
+short_desc = "a morning star"
+long_desc = "A heavy, spiked morning star is here."
+item_type = "weapon"
+level = 17
+weight = 120
+cost = 270
+wear_flags = ["take", "wield"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -1
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+[[objects]]
+vnum = 4154
+keywords = ["map", "moria", "second"]
+short_desc = "a map of the second level of Moria"
+long_desc = "A rolled up map is here."
+item_type = "map"
+level = 0
+weight = 10
+cost = 100
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 4155
+keywords = ["map", "moria", "third"]
+short_desc = "a map of the third level of Moria"
+long_desc = "A rolled up map is here."
+item_type = "map"
+level = 0
+weight = 10
+cost = 200
+wear_flags = ["take"]
+

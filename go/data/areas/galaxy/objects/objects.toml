@@ -1,0 +1,526 @@
+[[objects]]
+vnum = 9301
+keywords = ["comet's", "tail"]
+short_desc = "a comet's tail"
+long_desc = "A long, slender whip lies here."
+item_type = "weapon"
+level = 19
+weight = 90
+cost = 390
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 6
+
+[[objects]]
+vnum = 9302
+keywords = ["arm", "hercules"]
+short_desc = "the Titanic Arm plates of Hercules"
+long_desc = "Arm plates of the Zodiac lie here."
+item_type = "armor"
+level = 43
+weight = 100
+cost = 3100
+wear_flags = ["take", "arms"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 6
+  ac_bash = 6
+  ac_slash = 6
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 9304
+keywords = ["belt", "orion"]
+short_desc = "the Titanic Belt of Orion"
+long_desc = "A belt of the Zodiac lies here."
+item_type = "armor"
+level = 33
+weight = 70
+cost = 3800
+wear_flags = ["take", "waist"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 6
+  ac_bash = 6
+  ac_slash = 6
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "con"
+  modifier = 2
+
+[[objects]]
+vnum = 9305
+keywords = ["skull", "draco"]
+short_desc = "an ugly skull of Draco"
+long_desc = "A massive skull of a dead Draco lies here."
+item_type = "staff"
+level = 27
+weight = 200
+cost = 4300
+wear_flags = ["take", "hold"]
+extra_flags = ["hum", "magic", "nodrop"]
+
+[[objects]]
+vnum = 9306
+keywords = ["fleece", "aries"]
+short_desc = "the Titanic Fleece of Aries"
+long_desc = "A fleece of the Zodiac lies here."
+item_type = "armor"
+level = 39
+weight = 90
+cost = 2000
+wear_flags = ["take", "neck"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -2
+
+[[objects]]
+vnum = 9307
+keywords = ["hoof", "taurus"]
+short_desc = "the Titanic Hoof of Taurus"
+long_desc = "A hoof of the Zodiac lies here."
+item_type = "armor"
+level = 39
+weight = 100
+cost = 1280
+wear_flags = ["take", "feet"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "move"
+  modifier = 20
+
+[[objects]]
+vnum = 9308
+keywords = ["mask", "gemini"]
+short_desc = "the Titanic Mask of Gemini"
+long_desc = "A mask of the Zodiac lies here."
+item_type = "armor"
+level = 31
+weight = 70
+cost = 3600
+wear_flags = ["take", "face"]
+extra_flags = ["glow", "magic", "nodrop", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 2
+  ac_bash = 2
+  ac_slash = 2
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "str"
+  modifier = 1
+
+[[objects]]
+vnum = 9309
+keywords = ["shell", "cancer"]
+short_desc = "the Titanic Shell of Cancer"
+long_desc = "A shell of the Zodiac lies here."
+item_type = "armor"
+level = 39
+weight = 150
+cost = 3800
+wear_flags = ["take", "body"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 3
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -2
+
+[[objects]]
+vnum = 9310
+keywords = ["skin", "leo"]
+short_desc = "the Titanic Skin of Leo"
+long_desc = "A skin of the Zodiac lies here."
+item_type = "armor"
+level = 39
+weight = 150
+cost = 1740
+wear_flags = ["take", "about"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 7
+  ac_bash = 7
+  ac_slash = 7
+  ac_exotic = 5
+
+[[objects]]
+vnum = 9311
+keywords = ["bracelet", "virgo"]
+short_desc = "the Titanic Bracelet of Virgo"
+long_desc = "A bracelet of the Zodiac lies here."
+item_type = "jewelry"
+level = 29
+weight = 10
+cost = 2600
+wear_flags = ["take", "wrist"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "wis"
+  modifier = 2
+
+[[objects]]
+vnum = 9312
+keywords = ["scale", "libra"]
+short_desc = "the Titanic Scale of Libra"
+long_desc = "A shield of the Zodiac lies here."
+item_type = "armor"
+level = 49
+weight = 150
+cost = 3900
+wear_flags = ["take", "shield"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 5
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -3
+
+[[objects]]
+vnum = 9313
+keywords = ["scale", "libra"]
+short_desc = "the Titanic Scale of Libra"
+long_desc = "A shield of the Zodiac lies here."
+item_type = "armor"
+level = 0
+weight = 150
+cost = 0
+wear_flags = ["take", "shield"]
+extra_flags = ["hum", "magic", "nodrop"]
+
+  [objects.armor]
+  ac_pierce = 1
+  ac_bash = 1
+  ac_slash = 1
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = -30
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = 6
+
+[[objects]]
+vnum = 9314
+keywords = ["sting", "scorpio"]
+short_desc = "the Sting of Scorpio"
+long_desc = "Sting of the Zodiac lies here."
+item_type = "weapon"
+level = 37
+weight = 70
+cost = 2700
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 4
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 1
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 3
+
+[[objects]]
+vnum = 9315
+keywords = ["arrow", "sagittarius"]
+short_desc = "the Arrow of Sagittarius"
+long_desc = "The Arrow of Sagittarius lies here."
+item_type = "wand"
+level = 21
+weight = 70
+cost = 3400
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+[[objects]]
+vnum = 9316
+keywords = ["bow", "sagittarius"]
+short_desc = "the Titanic Bow of Sagittarius"
+long_desc = "The Titanic Bow of Sagittarius lies here."
+item_type = "weapon"
+level = 39
+weight = 200
+cost = 2800
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.weapon]
+  dice_number = 2
+  dice_size = 9
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 3
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 1
+
+[[objects]]
+vnum = 9317
+keywords = ["horns", "capricorn"]
+short_desc = "the Titanic Horns of Capricorn"
+long_desc = "A pair of horns of the Zodiac lies here."
+item_type = "armor"
+level = 43
+weight = 60
+cost = 3000
+wear_flags = ["take", "hands"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 4
+  ac_bash = 4
+  ac_slash = 4
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 9318
+keywords = ["vessel", "aquarius"]
+short_desc = "the Ancient Vessel of Aquarius"
+long_desc = "A vessel of the Zodiac lies here."
+item_type = "staff"
+level = 23
+weight = 120
+cost = 5900
+wear_flags = ["take", "hold"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+[[objects]]
+vnum = 9319
+keywords = ["tail", "pisces"]
+short_desc = "the Titanic Tail of Pisces"
+long_desc = "A fish tail of the Zodiac lies here."
+item_type = "armor"
+level = 41
+weight = 100
+cost = 950
+wear_flags = ["take", "legs"]
+extra_flags = ["glow", "magic", "anti_evil"]
+
+  [objects.armor]
+  ac_pierce = 8
+  ac_bash = 8
+  ac_slash = 8
+  ac_exotic = 0
+
+  [[objects.affects]]
+  location = "dex"
+  modifier = -2
+
+  [[objects.affects]]
+  location = "ac"
+  modifier = -2
+
+[[objects]]
+vnum = 9320
+keywords = ["ring", "dignity"]
+short_desc = "the Ring of Dignity"
+long_desc = "A ring of specialty lies here."
+item_type = "jewelry"
+level = 51
+weight = 30
+cost = 4200
+wear_flags = ["take", "finger"]
+extra_flags = ["glow", "hum", "invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "int"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 25
+
+[[objects]]
+vnum = 9321
+keywords = ["sceptre", "might"]
+short_desc = "the Sceptre of Might"
+long_desc = "A sceptre of interest lies here."
+item_type = "light"
+level = 43
+weight = 40
+cost = 2400
+wear_flags = ["take", "neck", "body", "head", "feet", "hands", "arms", "shield", "about", "waist", "wrist", "wield"]
+extra_flags = ["glow", "hum", "invis", "magic", "anti_evil"]
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 9322
+keywords = ["ring", "universe"]
+short_desc = "the ring of the universe"
+long_desc = "Here lies a fortune ... a small ring of power."
+item_type = "jewelry"
+level = 59
+weight = 30
+cost = 1690
+wear_flags = ["take", "finger"]
+extra_flags = ["glow", "hum", "invis", "magic", "bless"]
+
+  [[objects.affects]]
+  location = "hit"
+  modifier = 30
+
+  [[objects.affects]]
+  location = "mana"
+  modifier = 10
+
+[[objects]]
+vnum = 9323
+keywords = ["great", "dipper"]
+short_desc = "the Great Dipper of the Skies"
+long_desc = "A dazzling white object lies on the ground."
+item_type = "weapon"
+level = 57
+weight = 200
+cost = 4200
+wear_flags = ["take", "wield"]
+extra_flags = ["glow", "hum", "invis", "magic", "bless"]
+
+  [objects.weapon]
+  dice_number = 4
+  dice_size = 6
+
+  [[objects.affects]]
+  location = "damroll"
+  modifier = 2
+
+  [[objects.affects]]
+  location = "hitroll"
+  modifier = 2
+
+[[objects]]
+vnum = 9324
+keywords = ["spring", "shoot"]
+short_desc = "a spring shoot"
+long_desc = "A shoot grows here, covered with dew."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow", "hum"]
+
+[[objects]]
+vnum = 9325
+keywords = ["summer", "flower"]
+short_desc = "a summer flower"
+long_desc = "A flower grows here, waiting to be picked up."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow", "hum"]
+
+[[objects]]
+vnum = 9326
+keywords = ["autumn", "leaf"]
+short_desc = "an autumn leaf"
+long_desc = "A leaf lies here, as if just fallen from a tree."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow", "hum"]
+
+[[objects]]
+vnum = 9327
+keywords = ["winter", "branch"]
+short_desc = "a winter branch"
+long_desc = "A branch lies here, still covered with snow."
+item_type = "key"
+level = 0
+weight = 20
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow", "hum"]
+
+[[objects]]
+vnum = 9328
+keywords = ["chains", "andromeda"]
+short_desc = "chains of Andromeda"
+long_desc = "Some chains lie on the floor."
+item_type = "trash"
+level = 0
+weight = 500
+cost = 0
+wear_flags = ["take"]
+extra_flags = ["glow", "invis"]
+

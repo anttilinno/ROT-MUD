@@ -1,0 +1,1593 @@
+[[rooms]]
+vnum = 1100
+name = "A dimly lit path"
+sector = "forest"
+description = """
+You tread through the deep, dark forest on a dimly lit path.  Up ahead you
+can hear the faint sounds of a village."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1101
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 6000
+
+[[rooms]]
+vnum = 1101
+name = "A dimly lit path"
+sector = "forest"
+description = """
+You tread through the deep, dark forest on a dimly lit path.  Up ahead you
+can hear the faint sounds of a village."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1102
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1100
+
+[[rooms]]
+vnum = 1102
+name = "A dimly lit path"
+sector = "forest"
+description = """
+You tread through the deep, dark forest on a dimly lit path.  The forest
+here seems less dense than to the south.  Northward you see the faint outline
+of a village."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1103
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1101
+
+[[rooms]]
+vnum = 1103
+name = "Entrance to the Shire"
+sector = "city"
+description = """
+You stand at the entrance to the Shire.  You see halflings, no more than
+wee tall, every which way you look. Bywater Road leads east and west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1104
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1102
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1118
+
+  [[rooms.obj_resets]]
+  vnum = 1102
+  max = 1
+
+[[rooms]]
+vnum = 1104
+name = "Bywater Road"
+sector = "city"
+description = """
+You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west while to the north lies the general store."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1105
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1106
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1103
+
+[[rooms]]
+vnum = 1105
+name = "The General Store"
+sector = "inside"
+description = """
+You are inside the general store.  All sorts of goodies are stacked on the
+many shelves.  Your local friendly shopkeeper is smiling patiently, waiting to 
+serve you to the best of his abilities.  The only exit is to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1104
+
+  [[rooms.mob_resets]]
+  vnum = 1118
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1111
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1112
+    inv_only = true
+
+[[rooms]]
+vnum = 1106
+name = "Bywater Road"
+sector = "city"
+description = """
+You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west.  To the north, steps lead to a friendly looking
+weaponry/armory while a nursery lies to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1107
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1109
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1108
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1104
+
+[[rooms]]
+vnum = 1107
+name = "The House of Arms"
+sector = "inside"
+description = """
+You are inside the finest weapons and armour shop in all of Shiredom.  The
+shopkeeper proudly displays his fine wares and humbly offers the best daggers
+that you have ever laid eyes on."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1106
+
+  [[rooms.mob_resets]]
+  vnum = 1120
+  max = 1
+
+[[rooms]]
+vnum = 1108
+name = "Kid'n Keep"
+sector = "inside"
+description = """
+You are inside Kid'n Keep, the convenient one-stop nursery that maintains
+the youth of the Shire.  Toddlers run every which way while their nursemaids
+sigh in exasperation.  The only exit lies to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1106
+
+  [[rooms.mob_resets]]
+  vnum = 1104
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 1104
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 1103
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1103
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1103
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1103
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1103
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1103
+  max = 6
+
+[[rooms]]
+vnum = 1109
+name = "A bend in the road"
+sector = "city"
+description = """
+Bywater Road continues west and south.  A large, imposing building lies
+to the east.  Farther to the south, you can see an Inn of some sort."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1110
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1112
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1106
+
+[[rooms]]
+vnum = 1110
+name = "Shiriff Post of the Eastern Shire"
+sector = "inside"
+description = """
+You are in the Shiriff Post which acts as the nucleus for the three shiriffs
+of the Eastern Shire.  As you examine the shiriffs on duty, you come to realize
+that the halflings of the Shire are not to be reckoned with.  You cower with 
+awe.  A door offers passage to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1111
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1109
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1116
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1111
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 1111
+name = "Thain's Office"
+sector = "inside"
+description = """
+You stand inside the office of the Thain, the police protectorate of the
+great Shire.  The Thain has sworn to protect the Shire from all thieves and
+murderers with his life, and so eyes you suspiciously.  A door to the west
+leads to the Shiriff Post."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1110
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 1112
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1117
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1108
+    wear_loc = "waist"
+
+[[rooms]]
+vnum = 1112
+name = "Bywater Road"
+sector = "city"
+description = """
+You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the north and south.  To the east you spy the training grounds for
+shiriffs in training."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1109
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1117
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1113
+
+[[rooms]]
+vnum = 1113
+name = "Bywater Road"
+sector = "city"
+description = """
+You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the north.  The private residences of Shire inhabitants are to
+the east and west while to the south lies the Ivy Bush, second only to the
+Green Dragon for its hospitality and service."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1112
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1115
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1116
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1114
+
+[[rooms]]
+vnum = 1114
+name = "A smial"
+sector = "inside"
+description = """
+You are inside a smial, a hole in the ground which serves as the proper
+dwelling place for halflings.  As you look around this private abode, you feel
+as if you were intruding and so quickly cover your eyes.  The only exit lies
+to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1113
+
+  [[rooms.mob_resets]]
+  vnum = 1128
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1103
+    inv_only = true
+
+[[rooms]]
+vnum = 1115
+name = "A smial"
+sector = "inside"
+description = """
+You are inside a smial, a hole in the ground which serves as the proper
+dwelling place for halflings.  As you look around this private abode, you feel
+as if you were intruding and so quickly cover your eyes.  The only exit lies
+to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1113
+
+  [[rooms.mob_resets]]
+  vnum = 1128
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1103
+    inv_only = true
+
+[[rooms]]
+vnum = 1116
+name = "The Ivy Bush"
+sector = "inside"
+description = """
+You are in the Ivy Bush, one of the most famous inns in all of Shiredom.
+Chique Shire urbanites and seasoned travelers fill the confines of the room
+with gay and lively talk.  A jovial innkeeper stops all that he is doing to
+await your command.  The only exit lies to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1113
+
+  [[rooms.mob_resets]]
+  vnum = 1113
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 648
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 649
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 650
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 1123
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1123
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1124
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 1124
+  max = 2
+
+  [[rooms.mob_resets]]
+  vnum = 1127
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 1127
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 1127
+  max = 7
+
+[[rooms]]
+vnum = 1117
+name = "Shiriff Training Grounds"
+sector = "inside"
+description = """
+The sounds of mock battle and feigned death cries fill your ears.  Every
+which way you turn you see halfling trainees at the prime of their youth.  A
+wizened old battle instructor meets your gaze and asks if he may be of 
+service.  The only exit lies to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1112
+
+  [[rooms.mob_resets]]
+  vnum = 1121
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1113
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 1126
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1115
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 1126
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1115
+    wear_loc = "wield"
+
+  [[rooms.mob_resets]]
+  vnum = 1126
+  max = 3
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1115
+    wear_loc = "wield"
+
+[[rooms]]
+vnum = 1118
+name = "Bywater Road"
+sector = "city"
+description = """
+You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west.  A large, imposing building lies to the south.
+You catch a glimpse of the Brandywine River to the north."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1103
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1119
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1120
+
+[[rooms]]
+vnum = 1119
+name = "Shiriff Post of the Bridge"
+sector = "inside"
+description = """
+You are in the Shiriff Post which acts as the nucleus for the three shiriffs
+of the Bridge.  As you examine the shiriffs on duty, you come to realize that
+the halflings of the Shire are not to be reckoned with.  You cower with awe.
+The only exit is to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1118
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1116
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1111
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 1120
+name = "Bywater Road"
+sector = "city"
+description = """
+You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east and west.  To the south you spy the Grocer's Delight,
+the premium grocer's shop in all the realm while to the north lies Brandywine
+Bridge."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1131
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1118
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1121
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1122
+
+[[rooms]]
+vnum = 1121
+name = "The Grocer's Delight"
+sector = "inside"
+description = """
+You tremble with ecstasy as the tempting odors of freshly made pipeweed
+bread fill your lungs.  Rumor has it that the pipeweed bread sold here can
+restore vitality.  You look around but find no one to take your order.  
+You then peep over the counter and discover a friendly grocer who is too 
+short to be seen over the counter.  The only exit is to the north."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1120
+
+  [[rooms.mob_resets]]
+  vnum = 1119
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1103
+    inv_only = true
+
+[[rooms]]
+vnum = 1122
+name = "Bywater Road"
+sector = "city"
+description = """
+You stand on Bywater Road, the busiest street in all of Shiredom.  The road
+continues to the east.  A small hill lies to the west while you can see a
+watermill to the far south.  You catch a glimpse of the Brandywine River to
+the north."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1120
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1123
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1126
+
+[[rooms]]
+vnum = 1123
+name = "Entrance to Watermill"
+sector = "inside"
+description = """
+You stand at the entrance to a watermill.  You hear the bustle of busy
+workers and the sound of a creaking mill.  Bywater Road is to the north while
+the watermill continues to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1122
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1124
+
+  [[rooms.mob_resets]]
+  vnum = 1115
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1115
+  max = 6
+
+[[rooms]]
+vnum = 1124
+name = "The Watermill"
+sector = "inside"
+description = """
+Halfling workers are scattered everywhere, busy at work.  You see the river
+to the west and get a compelling urge to grab the nearest worker and to toss
+him into the river.  The entrance stands to the north while a door offers
+passage to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1123
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1125
+  flags = ["door"]
+
+  [[rooms.mob_resets]]
+  vnum = 1115
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1115
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1115
+  max = 6
+
+  [[rooms.mob_resets]]
+  vnum = 1114
+  max = 1
+
+[[rooms]]
+vnum = 1125
+name = "Rear of watermill"
+sector = "inside"
+description = """
+You stand in a damp, dimly lit room.  Mildew clings to the walls and it
+appears as if you were the first person to enter the room in ages.  A barely
+visible portal in the ground catches your eye."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1124
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 1146
+
+  [[rooms.mob_resets]]
+  vnum = 1115
+  max = 6
+
+[[rooms]]
+vnum = 1126
+name = "Took Hill"
+sector = "hills"
+description = """
+You stand on top of Took Hill, named after the legendary Bandobras Took.
+You feel honored to be standing on a hill named after your hero.  From this
+vantage point you can see all of shiredom.  You get the feeling that with
+one stomp you could eliminate their great city.  You can see the outline of
+Midgaard to the far east.  Sounds of joyful celebration are heard from the
+fields west of here.  The Brandywine flows by lazily nearby."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1122
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1128
+
+[[rooms]]
+vnum = 1127
+name = "Northern end of grassy field"
+sector = "field"
+description = """
+You stand in a grassy field--nothing to get too excited about.  The field
+extends toward the south and the west.  To the east you see Took Hill."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1128
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+[[rooms]]
+vnum = 1128
+name = "A grassy field"
+sector = "field"
+description = """
+You stand in the center of a grassy field.  A great birthday party appears
+to be taking place.  Great tables of food are spread out and a young halfling
+beauty offers you welcome.  You are enticed by her generosity and suggestive
+winks."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1127
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1126
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1129
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1130
+
+  [[rooms.mob_resets]]
+  vnum = 1125
+  max = 1
+
+  [[rooms.mob_resets]]
+  vnum = 1100
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1104
+    wear_loc = "about"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1100
+    wear_loc = "light"
+
+[[rooms]]
+vnum = 1129
+name = "Southern end of grassy field"
+sector = "field"
+description = """
+You stand in a grassy field--nothing to get too excited about.  The field
+extends toward the north and the west.  To the east you see Took Hill."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1128
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+[[rooms]]
+vnum = 1130
+name = "Western end of grassy field"
+sector = "field"
+description = """
+You stand in a grassy field--nothing to get too excited about.  The field
+extends every which way but west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1128
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+  [[rooms.mob_resets]]
+  vnum = 1122
+  max = 9
+
+[[rooms]]
+vnum = 1131
+name = "Brandywine Bridge"
+sector = "city"
+description = """
+You stand on a solidly built bridge.  As you look down you spy gaily
+colored fish swimming with the current of Brandywine River.  The cool water
+looks invitingly refreshing and you get a sudden urge to strip and bathe in
+the river, but you hear the laughter of women nearby and so resist the urge.
+Delving Lane extends to the north while Bywater Road can be seen to the south."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1132
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1120
+
+[[rooms]]
+vnum = 1132
+name = "Delving Lane"
+sector = "city"
+description = """
+Delving Lane runs north and south in this small borough of the Shire.  To 
+the south stands Brandywine Bridge.  The Green Dragon, the undisputed leader
+in the art of innkeeping, offers rest and comfort to the east.  You hear the
+bray of horses from the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1133
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1144
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1131
+
+[[rooms]]
+vnum = 1133
+name = "Delving Lane"
+sector = "city"
+description = """
+Delving Lane runs north and south in this small borough of the Shire.  A 
+large, imposing building lies to the east.  You hear the bray of horses from
+the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1134
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1145
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1132
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1138
+
+[[rooms]]
+vnum = 1134
+name = "Delving Lane"
+sector = "city"
+description = """
+Delving Lane runs north and south in this small borough of the Shire. There
+is a small house to the west, nothing to the east, and up ahead you see a round
+door which leads to a rather impressive abode."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1135
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1133
+
+[[rooms]]
+vnum = 1135
+name = "Bag End"
+sector = "inside"
+description = """
+You stand in a comfortably well-equipped house, a palace by humble halfling
+standards.  On the wall you see a banner which reads "Home Sweet Home".
+A solid oak door to the east leads to a pantry while you see a cozy bedroom
+to the west."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1137
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1134
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1136
+
+[[rooms]]
+vnum = 1136
+name = "Bedroom"
+sector = "inside"
+description = """
+You stand in the private bedroom of Bag End.  There are two beds to the
+side, neither of which are made.  Portraits of halflings hang on the wall,
+and as you gaze upon them you come to the conclusion that the owner of
+Bag End comes from a long line of distinguished halflings.  A cozy fire
+in the fireplace keeps the room warm and comfortable."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1135
+
+  [[rooms.mob_resets]]
+  vnum = 1116
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1106
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 622
+    wear_loc = "head"
+
+  [[rooms.mob_resets]]
+  vnum = 1117
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1107
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 621
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 1137
+name = "Pantry"
+sector = "inside"
+description = """
+You are inside the pantry.  Shelves filled with food and drink surround
+you on all sides.  You wonder why a halfling would need so much to eat.
+The presence of something unseen chills you to your bones.  On the floor
+you spy a trapdoor."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1135
+  flags = ["door"]
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 1156
+
+  [[rooms.mob_resets]]
+  vnum = 1101
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1101
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1105
+    wear_loc = "finger_l"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 623
+    wear_loc = "legs"
+
+[[rooms]]
+vnum = 1138
+name = "A grassy field"
+sector = "field"
+description = """
+You stand upon a grassy field.  A bull stands grazing not far away and
+out of the corner of your eye you can see him considering you.  The sound
+of animals fill the air from the north.  To the south you see a pig pen."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1142
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1133
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1139
+
+  [[rooms.mob_resets]]
+  vnum = 1108
+  max = 1
+
+[[rooms]]
+vnum = 1139
+name = "Pig pen"
+sector = "city"
+description = """
+You feel your boots sinking into the mud.  Numerous pigs roam about,
+oblivious to your company.  A grassy field is to the north while you see
+a small path winding to the west."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1138
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1140
+
+  [[rooms.mob_resets]]
+  vnum = 1106
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1106
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1106
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1106
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1106
+  max = 5
+
+[[rooms]]
+vnum = 1140
+name = "A stony path"
+sector = "city"
+description = """
+You walk on a stony path which leads to a small residence to the north.
+From the east you hear the noisy din of pigs."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1141
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1139
+
+[[rooms]]
+vnum = 1141
+name = "Gamgee Residence"
+sector = "inside"
+description = """
+You stand inside a modest home.  You deduce that this is indeed the home
+of whomever owns the surrounding lands.  The air is somewhat musty and 
+the smell reminds you of a stable.  As you look around disdainfully, you
+think to yourself that this is more of a shack than a proper residence and
+you long for the urban riches of the Shire proper."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1140
+
+  [[rooms.mob_resets]]
+  vnum = 1102
+  max = 1
+
+[[rooms]]
+vnum = 1142
+name = "A barn"
+sector = "inside"
+description = """
+Animals of every sort fill the small barn.  You feel the hot breath of
+horses and cows on your neck and you feel the sudden need for fresh air.
+Other than that, you feel cozy and protected and don't mind staying for a
+bit longer.  All the warmth and good vibes remind you of the days when your
+mother would hold you in her arms and sing you to sleep.  You find yourself
+wanting to cradle all the animals."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1143
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1138
+
+  [[rooms.mob_resets]]
+  vnum = 1105
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 1105
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 1105
+  max = 3
+
+  [[rooms.mob_resets]]
+  vnum = 1109
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 1109
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 1109
+  max = 4
+
+  [[rooms.mob_resets]]
+  vnum = 1109
+  max = 4
+
+[[rooms]]
+vnum = 1143
+name = "A chicken coop"
+sector = "inside"
+description = """
+You stand inside a rather crowded chicken coop.  The cackle of hens fill
+the air.  The only exit is to the south."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1142
+
+  [[rooms.mob_resets]]
+  vnum = 1107
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 1107
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 1107
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 1107
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 1107
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 1107
+  max = 6
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+[[rooms]]
+vnum = 1144
+name = "The Green Dragon"
+sector = "inside"
+description = """
+Welcome to the Green Dragon, the undisputed leader in the art of
+innkeeping.  A rather charming and friendly hostess stands to the side,
+ready to offer you food and drink.  While most of the patrons are halfling
+locals, you spy an occasional human or two.  As you listen more closely
+to the conversations that fill the inn, you hear the tales of great and
+seasoned adventurers as well as the usual gossip.  You feel as if you've
+found your second home in the Green Dragon.  You see a stairway leading
+upwards."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1132
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 1157
+
+  [[rooms.mob_resets]]
+  vnum = 1130
+  max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1110
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 648
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 649
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 650
+    inv_only = true
+
+  [[rooms.mob_resets]]
+  vnum = 1123
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1123
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1123
+  max = 5
+
+  [[rooms.mob_resets]]
+  vnum = 1127
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 1127
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 1127
+  max = 7
+
+  [[rooms.mob_resets]]
+  vnum = 1127
+  max = 7
+
+[[rooms]]
+vnum = 1145
+name = "Shiriff Post of Delving Lane"
+sector = "inside"
+description = """
+You are in the Shiriff Post which acts as the nucleus for the three shiriffs
+of Delving Lane.  As you examine the shiriffs on duty, you come to realize
+that the halflings of the Shire are not to be reckoned with.  You cower with
+awe.  The only exit is to the west."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1133
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1116
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1111
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 1146
+name = "A dark tunnel"
+sector = "inside"
+description = """
+You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  You see light from a small
+hole in the ceiling while to the east you see nothing but darkness."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1147
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 1125
+
+[[rooms]]
+vnum = 1147
+name = "A dark tunnel"
+sector = "inside"
+description = """
+You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  The tunnel continues east and
+west.  All you can see is darkness."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1148
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1146
+
+[[rooms]]
+vnum = 1148
+name = "A dark tunnel"
+sector = "inside"
+description = """
+You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  The tunnel continues east and
+west.  All you can see is darkness."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1149
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1147
+
+[[rooms]]
+vnum = 1149
+name = "A three way intersection"
+sector = "inside"
+description = """
+You stand at an intersection.  The tunnel continues east and west while
+to the north you can barely make out a smaller trail."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1151
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1150
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1148
+
+[[rooms]]
+vnum = 1150
+name = "End of a dark tunnel"
+sector = "inside"
+description = """
+You stand at the end of a dark tunnel.  The underground tunnel continues
+to the west.  From a trapdoor in the ceiling you can hear the din of
+adventurers."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1149
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3001
+
+[[rooms]]
+vnum = 1151
+name = "A dark tunnel"
+sector = "inside"
+description = """
+You stand inside a small underground tunnel.  The ceiling is so low that
+you must crouch to avoid hitting your head.  The tunnel continues north and
+south.  To the west you see a Shirriff Post while to the east lies a small
+home.  All you can see is darkness."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1152
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1154
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1149
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1153
+
+[[rooms]]
+vnum = 1152
+name = "A dark tunnel"
+sector = "inside"
+description = """
+You stand inside a small underground tunnel.  The ceiling is so low that 
+you must crouch to avoid hitting your head.  The tunnel continues north and
+south.  To the west lies a small home.  All you can see is darkness."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 1156
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1151
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1155
+
+[[rooms]]
+vnum = 1153
+name = "Shiriff Post of the Lower Shire"
+sector = "inside"
+description = """
+You are in the shiriff Post which acts as the nucleus for the three shiriffs 
+of the Lower Shire.  As you examine the shiriffs on duty, you come to realize
+that the halflings of the Shire are not to be reckoned with.  You cower with
+awe.  The only exit is to the east."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1151
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 1116
+    wear_loc = "wield"
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1110
+  max = 8
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+  [[rooms.mob_resets]]
+  vnum = 1111
+  max = 4
+
+    [[rooms.mob_resets.equips]]
+    vnum = 616
+    wear_loc = "body"
+
+[[rooms]]
+vnum = 1154
+name = "A halfling hole"
+sector = "inside"
+description = """
+You stand inside a rather crudely built halfling hole.  The many passageways
+and winding paths remind you of a rodent's lair.  The air is musty and damp
+and you feel the need for fresh air."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 1151
+
+  [[rooms.mob_resets]]
+  vnum = 1128
+  max = 4
+
+[[rooms]]
+vnum = 1155
+name = "A halfling hole"
+sector = "inside"
+description = """
+You stand inside a rather crudely built halfling hole.  The many passageways
+and winding paths remind you of a rodent's lair.  The air is musty and damp
+and you feel the need for fresh air."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 1152
+
+  [[rooms.mob_resets]]
+  vnum = 1128
+  max = 4
+
+[[rooms]]
+vnum = 1156
+name = "End of a dark tunnel"
+sector = "inside"
+description = """
+You are at one end of a dark tunnel.  The tunnel continues to the south
+while on the ceiling you can make out a trapdoor."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 1152
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 1137
+
+[[rooms]]
+vnum = 1157
+name = "The Inn of the Green Dragon"
+sector = "inside"
+description = """
+You are standing in the Inn of the Green dragon.  Large paintings of 
+halflings at work, and halflings at play adorn the walls.  Comfortable 
+benches and seats line the walls.  A stairway leads down."""
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 1144
+
+  [[rooms.mob_resets]]
+  vnum = 1131
+  max = 1
+

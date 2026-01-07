@@ -1,0 +1,48 @@
+[[mobiles]]
+vnum = 1000
+keywords = ["oldstyle", "fairy", "dragon"]
+short_desc = "A fairy dragon"
+long_desc = "A fairy dragon is fluttering around here looking for something to do..."
+description = """
+It's a cute little multi-colored dragon...about 2 foot long.
+It gracefully dances around your head."""
+level = 9
+sex = "none"
+act_flags = ["npc", "stay_area", "mage"]
+affected_by = ["detect_invis", "detect_magic", "infrared", "flying"]
+alignment = 0
+special = "spec_cast_mage"
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 46
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 5
+  bonus = 0
+
+[[mobiles]]
+vnum = 1001
+keywords = ["oldstyle", "griffin"]
+short_desc = "A griffin"
+long_desc = "A large black winged griffin swoops into an attack."
+description = """
+Golden maned and black all over.  It's quite a beautiful creature if not
+for the fact it is hungry and is attacking you!"""
+level = 16
+sex = "male"
+act_flags = ["npc", "aggressive", "stay_area"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 2
+  size = 7
+  bonus = 96
+
+  [mobiles.damage_dice]
+  number = 1
+  size = 7
+  bonus = 2
+
