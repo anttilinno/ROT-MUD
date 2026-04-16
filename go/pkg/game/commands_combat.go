@@ -243,6 +243,46 @@ func (d *CommandDispatcher) cmdBackstab(ch *types.Character, args string) {
 	}
 }
 
+func (d *CommandDispatcher) cmdAssassinate(ch *types.Character, args string) {
+	if ch.IsNPC() {
+		return
+	}
+
+	if args == "" {
+		d.send(ch, "Assassinate whom?\r\n")
+		return
+	}
+
+	victim := FindCharInRoom(ch, args)
+	if victim == nil {
+		d.send(ch, "They aren't here.\r\n")
+		return
+	}
+
+	skillLevel := 0
+	if ch.PCData != nil && ch.PCData.Learned != nil {
+		skillLevel = ch.PCData.Learned["assassinate"]
+	}
+	if skillLevel <= 0 {
+		d.send(ch, "You don't know how to assassinate.\r\n")
+		return
+	}
+
+	if d.Combat == nil {
+		return
+	}
+
+	result := d.Combat.DoAssassinate(ch, victim)
+	if result.Message != "" {
+		d.send(ch, result.Message)
+		return
+	}
+
+	if d.Skills != nil {
+		d.Skills.CheckImprove(ch, "assassinate", result.Success, 2)
+	}
+}
+
 func (d *CommandDispatcher) cmdBash(ch *types.Character, args string) {
 	var victim *types.Character
 

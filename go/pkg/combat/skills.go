@@ -77,6 +77,12 @@ func (c *CombatSystem) DoBackstab(ch, victim *types.Character) SkillResult {
 		if ch.Level >= 30 {
 			multiplier = 5
 		}
+		if ch.Level >= 50 {
+			multiplier = 6
+		}
+		if ch.Level >= 75 {
+			multiplier = 7
+		}
 
 		// Calculate damage
 		dam := c.calculateWeaponDamage(ch, weapon) * multiplier
@@ -626,6 +632,116 @@ func (c *CombatSystem) DoFeed(ch, victim *types.Character) SkillResult {
 		}
 
 		result.Success = false
+	}
+
+	return result
+}
+
+// DoAssassinate executes an assassinate attack — precision strike with a venom-coated blade.
+// High-level thief skill (L75+): deals 75% of the victim's max HP on success.
+// Requires a dagger, the AffVenomReady state (set by the venom command), a fresh
+// (uninjured) target, and being out of combat.
+// On failure: the venom is still consumed; falls back to a regular backstab-level hit.
+func (c *CombatSystem) DoAssassinate(ch, victim *types.Character) SkillResult {
+	result := SkillResult{}
+
+	// Must wield a dagger specifically
+	weapon := ch.GetEquipment(types.WearLocWield)
+	if weapon == nil || weapon.Values[0] != 2 { // 2 = WEAPON_DAGGER
+		result.Message = "You need to wield a dagger to assassinate.\r\n"
+		return result
+	}
+
+	// Opener only — can't assassinate while already fighting
+	if ch.Fighting != nil {
+		result.Message = "You can't set up a proper assassination mid-fight.\r\n"
+		return result
+	}
+
+	if victim == ch {
+		result.Message = "Assassinating yourself seems counterproductive.\r\n"
+		return result
+	}
+
+	if IsSafe(ch, victim) {
+		result.Message = "You cannot attack them.\r\n"
+		return result
+	}
+
+	// Undead and vampires have no vital organs and are immune to poison — venom is useless
+	if victim.Act.Has(types.ActUndead) || victim.Act.Has(types.ActVampire) {
+		result.Message = "Venom has no effect on the undead.\r\n"
+		return result
+	}
+
+	// Require venom prologue — blade must be pre-coated with the venom command
+	if !ch.IsAffected(types.AffVenomReady) {
+		result.Message = "You need to coat your blade with venom first.\r\n"
+		return result
+	}
+
+	// Consume the venom state regardless of outcome
+	ch.AffectedBy.Remove(types.AffVenomReady)
+	for _, aff := range ch.Affected.All() {
+		if aff.Type == "venom" {
+			ch.RemoveAffect(aff)
+			break
+		}
+	}
+
+	// Target must be at or near full health — an alert, wounded target
+	// spots the blade before you can strike true.
+	if victim.Hit < victim.MaxHit*3/4 {
+		result.Message = fmt.Sprintf("%s is too alert and wounded to assassinate.\r\n", victim.Name)
+		return result
+	}
+
+	// Get skill level
+	skillLevel := 0
+	if ch.PCData != nil {
+		skillLevel = ch.PCData.Learned["assassinate"]
+	}
+	if ch.IsNPC() {
+		skillLevel = ch.Level * 2
+	}
+
+	// Significant lag — lining up the lethal strike takes time
+	ch.Wait = 36
+
+	// Start combat
+	SetFighting(ch, victim)
+
+	if NumberPercent() < skillLevel || !IsAwake(victim) {
+		// Success: venom-coated precision strike — 75% of victim's max HP
+		dam := victim.MaxHit * 3 / 4
+		c.Damage(ch, victim, dam, types.DamPierce, true)
+
+		if c.Output != nil {
+			c.Output(ch, fmt.Sprintf("You drive your poisoned blade deep — %s reels from the venom!\r\n", victim.Name))
+			c.Output(victim, fmt.Sprintf("%s drives a poison-coated blade into you!\r\n", ch.Name))
+		}
+
+		result.Success = true
+		result.Damage = dam
+	} else {
+		// Failure: target spotted the strike — deal regular backstab damage instead
+		multiplier := 5
+		if ch.Level >= 50 {
+			multiplier = 6
+		}
+		if ch.Level >= 75 {
+			multiplier = 7
+		}
+		dam := c.calculateWeaponDamage(ch, weapon) * multiplier
+		c.Damage(ch, victim, dam, types.DamPierce, true)
+
+		if c.Output != nil {
+			c.Output(ch, fmt.Sprintf("%s spots your strike and you fall back to a quick stab!\r\n", victim.Name))
+			c.Output(victim, fmt.Sprintf("%s lunges at you with a quick stab!\r\n", ch.Name))
+		}
+
+		result.Success = false
+		result.Damage = dam
 	}
 
 	return result

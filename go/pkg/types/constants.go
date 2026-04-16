@@ -323,6 +323,7 @@ const (
 	DamHarm
 	DamCharm
 	DamSound
+	DamSilver // Silver weapons — vampires are vulnerable
 )
 
 // WeaponClass represents weapon types

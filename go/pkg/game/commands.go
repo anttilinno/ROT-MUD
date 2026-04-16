@@ -1787,6 +1787,8 @@ func (d *CommandDispatcher) registerBasicCommands() {
 	d.Registry.Register("kill", d.cmdKill, types.PosStanding, 0)
 	d.Registry.Register("flee", d.cmdFlee, types.PosFighting, 0)
 	d.Registry.Register("backstab", d.cmdBackstab, types.PosStanding, 0)
+	d.Registry.Register("venom", d.cmdVenom, types.PosStanding, 0)
+	d.Registry.Register("assassinate", d.cmdAssassinate, types.PosStanding, 0)
 	d.Registry.Register("bash", d.cmdBash, types.PosFighting, 0)
 	d.Registry.Register("kick", d.cmdKick, types.PosFighting, 0)
 	d.Registry.Register("trip", d.cmdTrip, types.PosFighting, 0)

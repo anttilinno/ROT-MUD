@@ -91,6 +91,7 @@ const (
 	AffSwim                                 // Can swim
 	AffRegeneration                         // Regenerating
 	AffSlow                                 // Slowed
+	AffVenomReady                           // Blade coated with venom (assassinate prologue)
 )
 
 // Has returns true if the flag is set
@@ -377,6 +378,7 @@ const (
 	ImmDrowning                       // Immune to drowning
 	ImmLight                          // Immune to light
 	ImmSound                          // Immune to sound
+	ImmSilver                         // Immune/resistant/vulnerable to silver
 )
 
 // Has returns true if the flag is set

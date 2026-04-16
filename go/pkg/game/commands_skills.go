@@ -846,8 +846,10 @@ func (d *CommandDispatcher) getAvailableSkills(ch *types.Character) []Individual
 		"steal":     {0, 0, 4, 0},
 		"pick lock": {0, 0, 3, 0},
 		"peek":      {0, 0, 1, 0},
-		"envenom":   {0, 0, 5, 0},
-		"track":     {0, 0, 4, 0},
+		"envenom":    {0, 0, 5, 0},
+		"track":      {0, 0, 4, 0},
+		"venom":      {0, 0, 5, 0},
+		"assassinate": {0, 0, 6, 0},
 		// Weapon skills
 		"sword":   {5, 4, 3, 2},
 		"dagger":  {2, 4, 2, 3},

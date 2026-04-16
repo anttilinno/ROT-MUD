@@ -243,10 +243,14 @@ func GetThac0(ch *types.Character) int {
 			thac0_32 = 6
 		}
 	} else {
-		// Players use class-based thac0
-		// For now, use generic values (warrior-like for simplicity)
-		thac0_00 = 20
-		thac0_32 = -10
+		// Players use class-specific thac0 from the class table
+		if cl := types.GetClass(ch.Class); cl != nil {
+			thac0_00 = cl.Thac0_00
+			thac0_32 = cl.Thac0_32
+		} else {
+			thac0_00 = 20
+			thac0_32 = -10 // fallback: warrior-like
+		}
 	}
 
 	thac0 := Interpolate(ch.Level, thac0_00, thac0_32)
@@ -308,6 +312,15 @@ const (
 	ImmVulnerable
 )
 
+// isVampire returns true for player vampire/lich classes and ActVampire mobs.
+// Used to apply innate fire and silver vulnerabilities.
+func isVampire(ch *types.Character) bool {
+	if ch.IsNPC() {
+		return ch.Act.Has(types.ActVampire)
+	}
+	return ch.Class == types.ClassVampire || ch.Class == types.ClassLich
+}
+
 // CheckImmune determines if the victim is immune/resistant/vulnerable to a damage type
 func CheckImmune(victim *types.Character, damType types.DamageType) ImmunityResult {
 	var immFlag, resFlag, vulnFlag types.ImmFlags
@@ -329,6 +342,8 @@ func CheckImmune(victim *types.Character, damType types.DamageType) ImmunityResu
 		immFlag, resFlag, vulnFlag = types.ImmPierce, types.ImmPierce, types.ImmPierce
 	case types.DamSlash:
 		immFlag, resFlag, vulnFlag = types.ImmSlash, types.ImmSlash, types.ImmSlash
+	case types.DamSilver:
+		immFlag, resFlag, vulnFlag = types.ImmSilver, types.ImmSilver, types.ImmSilver
 	default:
 		return ImmNormal
 	}
@@ -342,5 +357,14 @@ func CheckImmune(victim *types.Character, damType types.DamageType) ImmunityResu
 	if victim.Vuln.Has(vulnFlag) {
 		return ImmVulnerable
 	}
+
+	// Innate vampire vulnerabilities: fire and silver deal extra damage
+	// regardless of explicit Vuln flags (unless immune/resistant above)
+	if isVampire(victim) {
+		if damType == types.DamFire || damType == types.DamSilver {
+			return ImmVulnerable
+		}
+	}
+
 	return ImmNormal
 }

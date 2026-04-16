@@ -579,7 +579,7 @@ func spellCureCritical(caster *types.Character, level int, target interface{}) b
 		return false
 	}
 
-	heal := combat.Dice(3, 8) + level
+	heal := combat.Dice(3, 8) + level - 6
 	victim.Hit = min(victim.Hit+heal, victim.MaxHit)
 	return true
 }
@@ -590,8 +590,7 @@ func spellHeal(caster *types.Character, level int, target interface{}) bool {
 		return false
 	}
 
-	heal := 100 + level
-	victim.Hit = min(victim.Hit+heal, victim.MaxHit)
+	victim.Hit = min(victim.Hit+100+level, victim.MaxHit)
 	return true
 }
 
@@ -1294,32 +1293,58 @@ func spellBurningHands(caster *types.Character, level int, target interface{}) b
 	return true
 }
 
-// Shocking Grasp - Mage damage spell that works better when wet
+// Shocking Grasp - Mage damage spell
+// Original uses a lookup table; usable from ~L15, plateaus around 40-47 at high levels.
 func spellShockingGrasp(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
 	if !ok || victim == nil {
 		return false
 	}
 
-	// 26d4 damage (can be very high)
-	dam := combat.Dice(26, 4)
+	// Table values from original (index = level, 0 = unusable at that level).
+	damTable := []int{
+		0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // L0-9
+		0, 0, 0, 0, 0, 25, 26, 27, 28, 29, // L10-19
+		34, 35, 36, 37, 38, 39, 40, 40, 40, 40, // L20-29
+		40, 41, 41, 42, 42, 43, 43, 44, 44, 45, // L30-39
+		45, 45, 46, 46, 46, 47, 47, 47, 47, 47, // L40-49
+		45, 46, 46, 46, 47, 47, 47, 47, 47, 47, // L50-59
+		47, // L60
+	}
+
+	idx := level
+	if idx >= len(damTable) {
+		idx = len(damTable) - 1
+	}
+	base := damTable[idx]
+	if base == 0 {
+		return false // spell not effective at this level
+	}
+
+	// Original: number_range(base/2, base*2)
+	dam := base/2 + combat.Dice(1, base*3/2+1)
+	if dam > base*2 {
+		dam = base * 2
+	}
 	if dam < 1 {
 		dam = 1
 	}
 
+	dam = checkDamageResist(victim, dam, types.DamLightning)
 	victim.Hit -= dam
 	return true
 }
 
 // Mass Healing - Cleric area healing spell
+// Original C: calls spell_heal (+100) and spell_refresh for each group member in room
 func spellMassHealing(caster *types.Character, level int, target interface{}) bool {
-	// This would heal all characters in the room
-	// For now, just heal the caster
-	if caster.Hit < caster.MaxHit {
-		heal := combat.Dice(3, 8) + level
-		caster.Hit += heal
-		if caster.Hit > caster.MaxHit {
-			caster.Hit = caster.MaxHit
+	if caster.InRoom == nil {
+		return false
+	}
+	for _, member := range caster.InRoom.People {
+		// Only heal same type (PC heals PCs, NPC heals NPCs)
+		if member.IsNPC() == caster.IsNPC() {
+			member.Hit = min(member.Hit+100, member.MaxHit)
 		}
 	}
 	return true
@@ -1559,7 +1584,8 @@ func spellCureDisease(caster *types.Character, level int, target interface{}) bo
 
 // Earthquake - Cleric area damage spell
 func spellEarthquake(caster *types.Character, level int, target interface{}) bool {
-	dam := combat.Dice(1, 8) + level/2
+	// Original: level + dice(2, 8)
+	dam := level + combat.Dice(2, 8)
 
 	// Damage all characters in room except caster
 	for _, victim := range caster.InRoom.People {
@@ -1587,7 +1613,8 @@ func spellCallLightning(caster *types.Character, level int, target interface{}) 
 		return false
 	}
 
-	dam := combat.Dice(level/2, 6)
+	// Original: dice(level/2, 8)
+	dam := combat.Dice(level/2, 8)
 
 	// Damage all characters in room except caster
 	for _, victim := range caster.InRoom.People {
@@ -1611,18 +1638,19 @@ func spellCallLightning(caster *types.Character, level int, target interface{}) 
 // === Additional Spell Implementations ===
 
 // Acid Blast - Mage damage spell
+// Original: dice(level, 12) with save for half — strongest single-target mage spell.
 func spellAcidBlast(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
 	if !ok || victim == nil {
 		return false
 	}
 
-	// 1d8 + level damage
-	dam := combat.Dice(1, 8) + level
+	dam := combat.Dice(level, 12)
 	if dam < 1 {
 		dam = 1
 	}
 
+	dam = checkDamageResist(victim, dam, types.DamAcid)
 	victim.Hit -= dam
 	return true
 }
@@ -1645,65 +1673,72 @@ func spellColourSpray(caster *types.Character, level int, target interface{}) bo
 }
 
 // Demonfire - Cleric damage spell
+// Original: dice(level, 10) with save for half.
 func spellDemonfire(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
 	if !ok || victim == nil {
 		return false
 	}
 
-	// 2d8 + level damage
-	dam := combat.Dice(2, 8) + level
+	dam := combat.Dice(level, 10)
 	if dam < 1 {
 		dam = 1
 	}
 
+	dam = checkDamageResist(victim, dam, types.DamNegative)
 	victim.Hit -= dam
 	return true
 }
 
 // Energy Drain - Mage damage spell
+// Original: dice(1, level) HP damage + heals caster; also drains XP and halves mana (TODO).
 func spellEnergyDrain(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
 	if !ok || victim == nil {
 		return false
 	}
 
-	// 5d6 + level/2 damage
-	dam := combat.Dice(5, 6) + level/2
+	dam := combat.Dice(1, level)
 	if dam < 1 {
 		dam = 1
 	}
 
+	dam = checkDamageResist(victim, dam, types.DamNegative)
 	victim.Hit -= dam
 
-	// Chance to reduce victim's level (simplified)
-	if combat.NumberPercent() < 20 {
-		// Would reduce victim's level in a full implementation
+	// Caster absorbs the drained energy
+	if dam > 0 && caster.Hit < caster.MaxHit {
+		caster.Hit += dam
+		if caster.Hit > caster.MaxHit {
+			caster.Hit = caster.MaxHit
+		}
 	}
 
 	return true
 }
 
 // Flamestrike - Cleric damage spell
+// Original: dice(6 + level/2, 8) with save for half.
 func spellFlamestrike(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
 	if !ok || victim == nil {
 		return false
 	}
 
-	// 6d8 + level damage
-	dam := combat.Dice(6, 8) + level
+	dam := combat.Dice(6+level/2, 8)
 	if dam < 1 {
 		dam = 1
 	}
 
+	dam = checkDamageResist(victim, dam, types.DamFire)
 	victim.Hit -= dam
 	return true
 }
 
 // Chain Lightning - Mage area damage spell
 func spellChainLightning(caster *types.Character, level int, target interface{}) bool {
-	dam := combat.Dice(level/2, 6)
+	// Original: dice(level, 6) — top-tier mage AoE, save reduces to 1/3.
+	dam := combat.Dice(level, 6)
 
 	// Damage all characters in room except caster
 	for _, victim := range caster.InRoom.People {
@@ -2100,16 +2135,24 @@ func spellDispelEvil(caster *types.Character, level int, target interface{}) boo
 		return false
 	}
 
-	// Only damages evil creatures
-	if victim.Alignment > -350 {
+	// Good creatures are divinely protected; neutral are unaffected
+	if victim.Alignment >= -350 {
 		return false
 	}
 
-	dam := combat.Dice(6, 8) + level
-	if dam < 1 {
-		dam = 1
+	// Original: if victim HP > level*4 use dice(level,4); else max(victim.HP, dice(level,4))
+	// The second branch effectively finishes off a wounded target.
+	dam := combat.Dice(level, 4)
+	if victim.Hit <= level*4 {
+		rolled := combat.Dice(level, 4)
+		if victim.Hit > rolled {
+			dam = victim.Hit
+		} else {
+			dam = rolled
+		}
 	}
 
+	dam = checkDamageResist(victim, dam, types.DamHoly)
 	victim.Hit -= dam
 	return true
 }
@@ -2121,30 +2164,52 @@ func spellDispelGood(caster *types.Character, level int, target interface{}) boo
 		return false
 	}
 
-	// Only damages good creatures
-	if victim.Alignment < 350 {
+	// Evil creatures are protected; neutral are unaffected
+	if victim.Alignment <= 350 {
 		return false
 	}
 
-	dam := combat.Dice(6, 8) + level
-	if dam < 1 {
-		dam = 1
+	dam := combat.Dice(level, 4)
+	if victim.Hit <= level*4 {
+		rolled := combat.Dice(level, 4)
+		if victim.Hit > rolled {
+			dam = victim.Hit
+		} else {
+			dam = rolled
+		}
 	}
 
+	dam = checkDamageResist(victim, dam, types.DamNegative)
 	victim.Hit -= dam
 	return true
 }
 
 // Harm - Cleric damage spell
+// Original: reduces victim to near-death — dam = max(20, victim.HP - 1d4), capped at 100.
+// On save: min(50, dam/2) but still capped at 100.
+// The spell is devastating against low-HP targets; less effective against healthy ones.
 func spellHarm(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
 	if !ok || victim == nil {
 		return false
 	}
 
-	dam := combat.Dice(10, 10) + level*2
-	if dam < 1 {
-		dam = 1
+	dam := victim.Hit - combat.Dice(1, 4)
+	if dam < 20 {
+		dam = 20
+	}
+
+	// Save: half damage, minimum 50 (still very painful)
+	if combat.NumberPercent() < 50 {
+		dam = dam / 2
+		if dam > 50 {
+			dam = 50
+		}
+	}
+
+	// Hard cap
+	if dam > 100 {
+		dam = 100
 	}
 
 	victim.Hit -= dam
@@ -2790,18 +2855,18 @@ func spellDisintegrate(caster *types.Character, level int, target interface{}) b
 
 // Holy Word - Cleric ultimate area spell
 func spellHolyWord(caster *types.Character, level int, target interface{}) bool {
-	// Damage evil creatures, heal good ones
+	// Original: dice(level, 6) to evil targets; dice(level, 4) heals good allies.
 	for _, victim := range caster.InRoom.People {
 		if victim == caster {
 			continue
 		}
 
-		// Simplified alignment check
-		if victim.Alignment < 0 { // Evil
-			dam := combat.Dice(20, 10) + level*2
+		if victim.Alignment < -350 { // Evil
+			dam := combat.Dice(level, 6)
+			dam = checkDamageResist(victim, dam, types.DamHoly)
 			victim.Hit -= dam
-		} else if victim.Alignment > 0 { // Good
-			heal := combat.Dice(10, 10) + level
+		} else if victim.Alignment > 350 { // Good — healed
+			heal := combat.Dice(level, 4)
 			victim.Hit += heal
 			if victim.Hit > victim.MaxHit {
 				victim.Hit = victim.MaxHit

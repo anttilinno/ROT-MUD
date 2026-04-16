@@ -1,6 +1,8 @@
 package combat
 
 import (
+	"strings"
+
 	"rotmud/pkg/types"
 )
 
@@ -31,8 +33,11 @@ func (c *CombatSystem) OneHit(ch, victim *types.Character, secondary bool) Damag
 		wield = ch.GetEquipment(types.WearLocWield)
 	}
 
-	// Determine damage type
+	// Determine damage type — silver weapons use DamSilver so vampire vulnerability applies
 	damType := GetWeaponDamType(ch)
+	if wield != nil && strings.ToLower(wield.Material) == "silver" {
+		damType = types.DamSilver
+	}
 
 	// Get weapon skill based on weapon type
 	skill := c.getWeaponSkill(ch, wield)

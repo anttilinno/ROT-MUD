@@ -196,6 +196,18 @@ func DefaultSkills() *SkillRegistry {
 		SetClassLevel(Thief, 20, 5).
 		SetClassLevel(Warrior, 0, 0))
 
+	r.Register(NewSkill("venom").
+		SetClassLevel(Mage, 0, 0).
+		SetClassLevel(Cleric, 0, 0).
+		SetClassLevel(Thief, 35, 5).
+		SetClassLevel(Warrior, 0, 0))
+
+	r.Register(NewSkill("assassinate").
+		SetClassLevel(Mage, 0, 0).
+		SetClassLevel(Cleric, 0, 0).
+		SetClassLevel(Thief, 75, 6).
+		SetClassLevel(Warrior, 0, 0))
+
 	// === Vampire Skills ===
 
 	r.Register(NewSkill("feed").

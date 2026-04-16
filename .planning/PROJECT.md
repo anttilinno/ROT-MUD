@@ -2,11 +2,11 @@
 
 ## What This Is
 
-A refactor of the ROT-MUD Go server's race and class system to replace hardcoded struct fields with a declarative, data-driven trait architecture. Races and classes are defined in TOML data files with typed trait annotations (vulnerabilities, resistances, immunities, stat modifiers, capability flags, Lua-scripted behavior hooks). Combat and spell code queries the composed trait set instead of doing race/class equality checks.
+A full data-driven overhaul of the ROT-MUD Go server's game entity systems. Races, classes, skills, spells, and mobs are all moved from hardcoded Go struct tables to declarative TOML data files with typed trait annotations (vulnerabilities, resistances, immunities, stat modifiers, capability flags, Lua-scripted behavior hooks). Combat, magic, and skill code queries the composed trait set instead of doing identity checks. The game becomes a data-driven engine where content lives in files, not code.
 
 ## Core Value
 
-Any new race or class can be added by writing a data file — zero Go code changes required.
+Any new race, class, skill, spell, or mob type can be added by writing a data file — zero Go code changes required.
 
 ## Requirements
 
@@ -21,17 +21,25 @@ Any new race or class can be added by writing a data file — zero Go code chang
 ### Active
 
 - [ ] **TRAIT-01**: Typed trait structs — Vulnerability, Resistance, Immunity, StatModifier, CapabilityFlag, BehaviorHook
-- [ ] **TRAIT-02**: Additive trait composition — race traits + class traits merged at entity creation
-- [ ] **TRAIT-03**: Trait query API — `HasTrait`, `GetModifier`, `HasCapability` on character
-- [ ] **DATA-01**: TOML data files for races with traits section
-- [ ] **DATA-02**: TOML data files for classes with traits section
-- [ ] **DATA-03**: Loader reads trait definitions from files at startup
-- [ ] **LUA-01**: Lua VM embedded; BehaviorHook trait runs named script on trigger event
-- [ ] **LUA-02**: Hook events: OnDeath, OnAttack, OnSpellCast
-- [ ] **COMBAT-01**: Combat damage code queries trait set (VulnerableToSilver, ResistFire, etc.) instead of race/class constants
-- [ ] **MIGRATE-01**: All 19 existing races migrated to TOML data files with equivalent traits
-- [ ] **MIGRATE-02**: All 14 existing classes migrated to TOML data files with equivalent traits
-- [ ] **PROOF-01**: New race (e.g. Vampire) added via data file only — no Go changes
+- [ ] **TRAIT-02**: Additive trait composition — entity traits merged at runtime; per-axis caps prevent blowup
+- [ ] **TRAIT-03**: Trait query API — `HasTrait`, `GetModifier`, `HasCapability`, `ResolveImmunity`, `HooksFor`
+- [ ] **DATA-01**: TOML data files for races with homogeneous trait sections
+- [ ] **DATA-02**: TOML data files for classes with homogeneous trait sections; remort classes stack additively on tier-1
+- [ ] **DATA-03**: TOML data files for skills and skill groups with trait sections
+- [ ] **DATA-04**: TOML data files for spells with trait sections (damage type, target, effects)
+- [ ] **DATA-05**: TOML data files for mob types/templates with trait sections
+- [ ] **DATA-06**: Loader validates and reads all entity TOML files at startup with batch error reporting
+- [ ] **LUA-01**: gopher-lua VM embedded; BehaviorHook runs sandboxed script with instruction-count + context timeout
+- [ ] **LUA-02**: Five hook events: OnBeforeDamage, OnAfterDamage, OnDeath, OnSpellCast, OnLevelUp
+- [ ] **COMBAT-01**: All identity checks (`ch.Race ==`, `ch.Class ==`, etc.) in combat/magic/game replaced with trait queries
+- [ ] **COMBAT-02**: Forbidden-pattern lint (CI) prevents new identity checks outside `pkg/types/` and `pkg/loader/`
+- [ ] **MIGRATE-01**: All 19 races migrated to TOML; parity verified by golden-master suite
+- [ ] **MIGRATE-02**: All 14 classes migrated to TOML; parity verified
+- [ ] **MIGRATE-03**: All skills and skill groups migrated to TOML; parity verified
+- [ ] **MIGRATE-04**: All spells migrated to TOML; parity verified
+- [ ] **MIGRATE-05**: Mob type templates migrated to TOML; parity verified
+- [ ] **MIGRATE-06**: Golden-master test suite captures all entity behaviors before migration starts
+- [ ] **PROOF-01**: New race added via TOML only — zero Go changes; includes Lua behavior hook
 
 ### Out of Scope
 

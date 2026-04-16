@@ -354,6 +354,87 @@ func (d *CommandDispatcher) cmdPeek(ch *types.Character, args string) {
 	}
 }
 
+// cmdVenom coats the wielded dagger with venom from a carried vial.
+// This sets AffVenomReady, which assassinate consumes as its required prologue.
+// Syntax: venom
+func (d *CommandDispatcher) cmdVenom(ch *types.Character, args string) {
+	if ch.IsNPC() {
+		return
+	}
+
+	// Can't prep while fighting
+	if ch.InCombat() {
+		d.send(ch, "You can't carefully coat a blade mid-fight.\r\n")
+		return
+	}
+
+	// Already prepped
+	if ch.IsAffected(types.AffVenomReady) {
+		d.send(ch, "Your blade is already coated with venom.\r\n")
+		return
+	}
+
+	// Must wield a dagger
+	weapon := ch.GetEquipment(types.WearLocWield)
+	if weapon == nil || weapon.Values[0] != 2 { // 2 = WEAPON_DAGGER
+		d.send(ch, "You need to wield a dagger to apply venom.\r\n")
+		return
+	}
+
+	// Check skill
+	skillLevel := 0
+	if ch.PCData != nil && ch.PCData.Learned != nil {
+		skillLevel = ch.PCData.Learned["venom"]
+	}
+	if skillLevel <= 0 {
+		d.send(ch, "You don't know how to prepare venom.\r\n")
+		return
+	}
+
+	// Find a vial of venom in inventory
+	var vial *types.Object
+	for _, obj := range ch.Inventory {
+		name := strings.ToLower(obj.Name)
+		if strings.Contains(name, "vial") || strings.Contains(name, "venom") {
+			vial = obj
+			break
+		}
+	}
+	if vial == nil {
+		d.send(ch, "You need a vial of venom to coat your blade.\r\n")
+		return
+	}
+
+	// Skill check — failure wastes the vial
+	if combat.NumberPercent() >= skillLevel {
+		d.send(ch, fmt.Sprintf("Your hand slips and you ruin the venom.\r\n"))
+		ch.RemoveInventory(vial)
+		if d.Skills != nil {
+			d.Skills.CheckImprove(ch, "venom", false, 3)
+		}
+		return
+	}
+
+	// Consume the vial and apply the ready state (lasts 2 ticks)
+	ch.RemoveInventory(vial)
+
+	aff := &types.Affect{
+		Type:      "venom",
+		Level:     ch.Level,
+		Duration:  2,
+		Location:  types.ApplyNone,
+		Modifier:  0,
+		BitVector: types.AffVenomReady,
+	}
+	ch.AddAffect(aff)
+
+	d.send(ch, fmt.Sprintf("You carefully coat %s with deadly venom.\r\n", weapon.ShortDesc))
+
+	if d.Skills != nil {
+		d.Skills.CheckImprove(ch, "venom", true, 3)
+	}
+}
+
 // Helper to start combat
 func (d *CommandDispatcher) startCombat(attacker, victim *types.Character) {
 	if attacker.Fighting == nil {
