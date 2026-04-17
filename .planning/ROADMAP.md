@@ -37,7 +37,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The fixture covers mob-template behavior samples (aggro, assist, immunities, special attacks) at representative levels
   4. Running the fixture twice on the unmodified codebase produces byte-identical output; `combat_sim_test.go` integrates the fixture and runs in CI as the parity gate
   5. Any intentional change to entity behavior during later phases produces a visible, diffable fixture failure
-**Plans**: TBD
+**Plans:** 3 plans
+Plans:
+- [ ] 01-01-PLAN.md — Refactor pkg/combat/dice.go with package-scope seedable RNG (SetRand) and add CombatSystem.Rand field per D-02
+- [ ] 01-02-PLAN.md — Create pkg/golden/ package (doc.go, fixture.go scenario runners, golden_test.go driver with -update flag)
+- [ ] 01-03-PLAN.md — Generate and commit initial testdata/entities.golden snapshot (human-verify checkpoint)
 
 ### Phase 2: Trait Type System
 **Goal**: A pure-Go trait system exists where entities (races, classes, skills, spells, mobs, rooms, items) can be composed from typed trait values and queried by combat/magic/skill code
@@ -175,7 +179,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Golden-Master Safety Net | 0/TBD | Not started | - |
+| 1. Golden-Master Safety Net | 0/3 | Not started | - |
 | 2. Trait Type System | 0/TBD | Not started | - |
 | 3. Race & Class Loaders | 0/TBD | Not started | - |
 | 4. Lua Scripting Host | 0/TBD | Not started | - |
