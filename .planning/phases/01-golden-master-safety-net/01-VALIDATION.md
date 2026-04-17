@@ -19,7 +19,7 @@ created: 2026-04-17
 |----------|-------|
 | **Framework** | go test |
 | **Config file** | none — stdlib only |
-| **Quick run command** | `cd go && go test ./pkg/golden/... -run TestGoldenMaster -timeout 30s` |
+| **Quick run command** | `cd go && go test ./pkg/golden/... -run TestGolden -timeout 30s` |
 | **Full suite command** | `cd go && go test ./... -timeout 120s` |
 | **Estimated runtime** | ~10 seconds |
 
@@ -27,7 +27,7 @@ created: 2026-04-17
 
 ## Sampling Rate
 
-- **After every task commit:** Run `cd go && go test ./pkg/golden/... -run TestGoldenMaster -timeout 30s`
+- **After every task commit:** Run `cd go && go test ./pkg/golden/... -run TestGolden -timeout 30s`
 - **After every plan wave:** Run `cd go && go test ./... -timeout 120s`
 - **Before `/gsd-verify-work`:** Full suite must be green
 - **Max feedback latency:** 30 seconds
@@ -39,8 +39,8 @@ created: 2026-04-17
 | Task ID | Plan | Wave | Requirement | Threat Ref | Secure Behavior | Test Type | Automated Command | File Exists | Status |
 |---------|------|------|-------------|------------|-----------------|-----------|-------------------|-------------|--------|
 | 1-01-01 | 01 | 1 | MIGRATE-06 | — | N/A | unit | `cd go && go build ./pkg/combat/...` | ❌ W0 | ⬜ pending |
-| 1-01-02 | 01 | 1 | MIGRATE-06 | — | N/A | unit | `cd go && go test ./pkg/golden/... -run TestGoldenMaster -count=2` | ❌ W0 | ⬜ pending |
-| 1-01-03 | 01 | 1 | MIGRATE-06 | — | N/A | golden | `cd go && go test ./pkg/golden/... -run TestGoldenMaster -update && go test ./pkg/golden/... -run TestGoldenMaster -count=2` | ❌ W0 | ⬜ pending |
+| 1-01-02 | 01 | 1 | MIGRATE-06 | — | N/A | unit | `cd go && go test ./pkg/golden/... -run TestGolden -count=2` | ❌ W0 | ⬜ pending |
+| 1-01-03 | 01 | 1 | MIGRATE-06 | — | N/A | golden | `cd go && go test ./pkg/golden/... -run TestGolden -update && go test ./pkg/golden/... -run TestGolden -count=2` | ❌ W0 | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -50,7 +50,7 @@ created: 2026-04-17
 
 - [ ] `go/pkg/golden/` directory — create package skeleton
 - [ ] `go/pkg/combat/dice.go` — add `SetRand()` hook for deterministic RNG
-- [ ] `go/pkg/golden/golden_test.go` — stub `TestGoldenMaster` so `go test` resolves
+- [ ] `go/pkg/golden/golden_test.go` — stub `TestGolden` so `go test` resolves
 
 *Existing `go test ./...` infrastructure covers the rest.*
 
@@ -60,7 +60,7 @@ created: 2026-04-17
 
 | Behavior | Requirement | Why Manual | Test Instructions |
 |----------|-------------|------------|-------------------|
-| Byte-identical golden file on two successive runs | MIGRATE-06 | CI diff requires `-update` flag management | Run `go test ./pkg/golden/... -run TestGoldenMaster -count=2` and confirm no diff output |
+| Byte-identical golden file on two successive runs | MIGRATE-06 | CI diff requires `-update` flag management | Run `go test ./pkg/golden/... -run TestGolden -count=2` and confirm no diff output |
 
 ---
 

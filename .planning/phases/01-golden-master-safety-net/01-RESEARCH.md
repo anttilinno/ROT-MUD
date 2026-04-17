@@ -555,27 +555,27 @@ func runDefenseTrial(buf *bytes.Buffer, defenderClass, attackerClass, level int)
 | A4 | Adding `testify/assert` is optional and not required. | Standard Stack | LOW — stdlib comparison works; testify is a nice-to-have for diff rendering. |
 | A5 | The existing fallback `GetSkill` in `CombatSystem` (returns `20 + ch.Level*2` when `SkillGetter == nil`) is acceptable for the fixture's baseline scenarios. | Example D | LOW — the fixture should inject `SkillGetter` explicitly for reproducibility anyway (Example D does). |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Extract shared `testutil` vs. duplicate helpers?**
    - What we know: `combat_sim_test.go` has `makePlayer`, `makeMob`, `raceStatAtLevel`, `classEquipAC`, `weaponDice`, etc. — about 400 lines of useful builders.
    - What's unclear: whether refactoring these into `pkg/testutil/` as part of this phase is in scope, or whether duplication is preferred to keep this phase minimal.
-   - Recommendation: **duplicate for Phase 1.** The sim file is a moving target (recent commits have tuned it heavily); decoupling the golden fixture from sim-tuning churn is valuable. A later cleanup phase can merge them if the duplication pain grows.
+   - RESOLVED: **duplicate for Phase 1.** The sim file is a moving target (recent commits have tuned it heavily); decoupling the golden fixture from sim-tuning churn is valuable. A later cleanup phase can merge them if the duplication pain grows.
 
 2. **Include a representative mob section or defer entirely?** (per Claude's discretion)
    - What we know: `makeMob` and `makeCasterMob` exist. Aggro/assist behavior lives in `pkg/ai/` and requires a `GameHandlers` struct to wire up fully.
    - What's unclear: whether a *stat-and-immunity* mob snapshot (without AI behavior) counts as "representative mob behavior" per success criterion #3.
-   - Recommendation: **include stat/immunity coverage for warrior + caster mob templates (matches what `combat_sim_test.go` uses); explicitly defer aggro/assist AI to a later phase, and note this in the fixture comment so Phase 6 (Mob Type Loaders) knows to extend it.**
+   - RESOLVED: **include stat/immunity coverage for warrior + caster mob templates (matches what `combat_sim_test.go` uses); explicitly defer aggro/assist AI to a later phase, and note this in the fixture comment so Phase 6 (Mob Type Loaders) knows to extend it.**
 
 3. **One golden file or multiple?**
    - What we know: D-01 says "the file" (singular).
    - What's unclear: whether growing the file past ~5000 lines becomes a review burden.
-   - Recommendation: **start with one `testdata/entities.golden`.** If it crosses ~10k lines during future expansion (Phase 8+ adds the full 19×14 matrix), split then. Premature splitting adds coordination cost.
+   - RESOLVED: **start with one `testdata/entities.golden`.** If it crosses ~10k lines during future expansion (Phase 8+ adds the full 19×14 matrix), split then. Premature splitting adds coordination cost.
 
 4. **Should `SetRand` be exported from `pkg/combat` or hidden behind a test-only build tag?**
    - What we know: `pkg/golden/` imports `pkg/combat`; an exported `SetRand` is reachable by any caller.
    - What's unclear: whether test-only hooks leak into production binaries.
-   - Recommendation: **export it publicly.** The function is harmless (passing `nil` restores global). Build tags would complicate testing and IDE tooling. A doc comment `// SetRand installs a deterministic RNG source; intended for tests.` is sufficient.
+   - RESOLVED: **export it publicly.** The function is harmless (passing `nil` restores global). Build tags would complicate testing and IDE tooling. A doc comment `// SetRand installs a deterministic RNG source; intended for tests.` is sufficient.
 
 ## Environment Availability
 
