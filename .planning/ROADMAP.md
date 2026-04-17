@@ -37,11 +37,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The fixture covers mob-template behavior samples (aggro, assist, immunities, special attacks) at representative levels
   4. Running the fixture twice on the unmodified codebase produces byte-identical output; `combat_sim_test.go` integrates the fixture and runs in CI as the parity gate
   5. Any intentional change to entity behavior during later phases produces a visible, diffable fixture failure
-**Plans:** 3 plans
+**Plans:** 4 plans
 Plans:
 - [x] 01-01-PLAN.md — Refactor pkg/combat/dice.go with package-scope seedable RNG (SetRand) and add CombatSystem.Rand field per D-02
 - [x] 01-02-PLAN.md — Create pkg/golden/ package (doc.go, fixture.go scenario runners, golden_test.go driver with -update flag)
-- [ ] 01-03-PLAN.md — Generate and commit initial testdata/entities.golden snapshot (human-verify checkpoint)
+- [x] 01-03-PLAN.md — Generate and commit initial testdata/entities.golden snapshot (human-verify checkpoint)
+- [ ] 01-04-PLAN.md — Close VERIFICATION.md SC #3 gap: add mob-template coverage (immunity, aggro, caster special) to the golden fixture
 
 ### Phase 2: Trait Type System
 **Goal**: A pure-Go trait system exists where entities (races, classes, skills, spells, mobs, rooms, items) can be composed from typed trait values and queried by combat/magic/skill code
