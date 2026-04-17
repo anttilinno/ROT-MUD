@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"sort"
 
+	"rotmud/pkg/ai"
 	"rotmud/pkg/combat"
 	"rotmud/pkg/magic"
 	"rotmud/pkg/types"
@@ -17,7 +18,7 @@ import (
 func runFixture(buf *bytes.Buffer) {
 	fmt.Fprintln(buf, "# ROT-MUD entity golden snapshot")
 	fmt.Fprintln(buf, "# Seed: 42 (do not change without regenerating)")
-	fmt.Fprintln(buf, "# Coverage: 19 races x warrior Lv20 + 14 classes x human Lv20 + spells + skills")
+	fmt.Fprintln(buf, "# Coverage: 19 races x warrior Lv20 + 14 classes x human Lv20 + spells + skills + mob templates")
 	fmt.Fprintln(buf)
 
 	runRaceWarriorCombos(buf)
@@ -30,6 +31,9 @@ func runFixture(buf *bytes.Buffer) {
 	fmt.Fprintln(buf)
 
 	runSkillScenarios(buf)
+	fmt.Fprintln(buf)
+
+	runMobTemplateSamples(buf)
 }
 
 // runRaceWarriorCombos: each of the 19 races paired with the warrior class at level 20.
@@ -672,4 +676,189 @@ func makeMob(level int) *types.Character {
 
 	mob.Position = types.PosStanding
 	return mob
+}
+
+// runMobTemplateSamples exercises mob-template behavior (immunities, aggro,
+// caster special). Covers ROADMAP Phase 1 success criterion #3. Each
+// sub-scenario builds fresh characters (Pitfall #3) and a fresh AISystem
+// — no state leaks between scenarios.
+//
+// The three sub-scenarios and what they pin into the snapshot:
+//
+//	MobImm   — that mob.Imm/Res/Vuln flag bits render through formatImmBits
+//	           (watches the immunity data surface).
+//	MobAggro — that ai.AISystem.ProcessMobile + types.ActAggressive
+//	           triggers StartCombat against a player in the same room
+//	           (watches the aggro branch of defaultBehavior).
+//	MobCast  — that the spec_cast_mage SpecialFunc registered by
+//	           ai.NewSpecialRegistry is invoked when mob.Special is set,
+//	           and that it routes through ctx.CastSpell
+//	           (watches the mob-special dispatch path).
+func runMobTemplateSamples(buf *bytes.Buffer) {
+	fmt.Fprintln(buf, "=== MOB TEMPLATES (seed=42) ===")
+	emitMobImmunityScenario(buf, 20)
+	emitMobAggroScenario(buf, 20)
+	emitMobCasterScenario(buf, 22)
+}
+
+// emitMobImmunityScenario builds a warrior-class mob at the given level,
+// sets a known cocktail of immunity / resistance / vulnerability flags,
+// and emits one line rendering them through formatImmBits. No AI or
+// combat is run — this scenario only proves the data surface is visible
+// in the snapshot.
+func emitMobImmunityScenario(buf *bytes.Buffer, level int) {
+	mob := makeMob(level)
+	// Known flag cocktail — if the trait-migration phases change how
+	// these are stored (e.g. move from bitfield to trait struct), the
+	// snapshot MUST show the same flag names rendered here.
+	mob.Imm.Set(types.ImmFire)
+	mob.Imm.Set(types.ImmSilver)
+	mob.Res.Set(types.ImmCharm)
+	mob.Vuln.Set(types.ImmCold)
+
+	fmt.Fprintf(buf, "MobImm   Lv=%-3d name=%-10s Imm=%s Res=%s Vuln=%s\n",
+		level,
+		mob.Name,
+		formatImmBits(mob.Imm),
+		formatImmBits(mob.Res),
+		formatImmBits(mob.Vuln),
+	)
+}
+
+// emitMobAggroScenario builds a level-N aggressive warrior mob and a
+// level-N human warrior player in the same room (neither fighting),
+// wires a minimal ai.AISystem with a recording StartCombat callback,
+// and invokes ProcessMobile on the mob. It emits whether aggro fired
+// and against whom.
+//
+// This exercises the ActAggressive branch in ai.(*AISystem).defaultBehavior.
+func emitMobAggroScenario(buf *bytes.Buffer, level int) {
+	mob := makeMob(level)
+	mob.Name = "AggroMob"
+	mob.Act.Set(types.ActAggressive)
+
+	player := makePlayer(types.ClassWarrior, types.RaceHuman, level)
+	player.Name = "AggroTarget"
+
+	room := types.NewRoom(101, "AggroArena", "AggroArena.")
+	mob.InRoom = room
+	player.InRoom = room
+	room.AddPerson(mob)
+	room.AddPerson(player)
+
+	var aggroFiredAgainst string
+
+	aiSys := ai.NewAISystem()
+	aiSys.Output = func(_ *types.Character, _ string) {}
+	aiSys.ActToRoom = func(_ string, _, _ *types.Character, _ func(ch *types.Character, msg string)) {}
+	aiSys.StartCombat = func(attacker, victim *types.Character) {
+		// Record the aggro target; do NOT actually start combat (we want
+		// the rest of the fixture to remain deterministic regardless of
+		// post-aggro combat dice).
+		if attacker == mob && victim != nil {
+			aggroFiredAgainst = victim.Name
+		}
+	}
+	aiSys.MoveChar = func(_ *types.Character, _ types.Direction) {}
+
+	aiSys.ProcessMobile(mob)
+
+	victimName := aggroFiredAgainst
+	if victimName == "" {
+		victimName = "-"
+	}
+	fmt.Fprintf(buf, "MobAggro Lv=%-3d name=%-10s Act=aggressive aggroFired=%-5v victim=%s\n",
+		level,
+		mob.Name,
+		aggroFiredAgainst != "",
+		victimName,
+	)
+}
+
+// emitMobCasterScenario builds a level-N caster mob with Special =
+// "spec_cast_mage" and a same-level player victim, puts them in combat
+// (both Fighting set and PosFighting), wires a minimal ai.AISystem with
+// a recording CastSpell callback, and invokes the special function
+// directly via the Registry. It emits whether the special fired and
+// which spell it attempted.
+//
+// This exercises the ch.Special -> SpecialRegistry.Find ->
+// SpecialFunc(specCastMage) path in ai.(*AISystem).ProcessMobile.
+func emitMobCasterScenario(buf *bytes.Buffer, level int) {
+	mob := makeMob(level)
+	mob.Name = "CasterMob"
+	mob.Level = level
+	mob.Mana = 1000
+	mob.MaxMana = 1000
+	mob.Special = "spec_cast_mage"
+
+	victim := makePlayer(types.ClassWarrior, types.RaceHuman, level)
+	victim.Name = "CasterTarget"
+	victim.Hit = 1000
+	victim.MaxHit = 1000
+
+	room := types.NewRoom(102, "CasterArena", "CasterArena.")
+	mob.InRoom = room
+	victim.InRoom = room
+	room.AddPerson(mob)
+	room.AddPerson(victim)
+
+	// spec_cast_mage requires Position == PosFighting and a victim whose
+	// Fighting field points at the caster. Set both sides without
+	// actually running combat.SetFighting (which may have other side
+	// effects we want to keep out of this scenario).
+	mob.Position = types.PosFighting
+	mob.Fighting = victim
+	victim.Position = types.PosFighting
+	victim.Fighting = mob
+
+	var attempted string
+	castFired := false
+
+	// Use the Registry directly so we can supply a custom SpecialContext
+	// with a recording CastSpell. This is the explicitly authorised path
+	// per VERIFICATION gap SC #3.
+	aiSys := ai.NewAISystem()
+	specFn := aiSys.Registry.Find("spec_cast_mage")
+	if specFn == nil {
+		fmt.Fprintf(buf, "MobCast  Lv=%-3d name=%-10s Special=spec_cast_mage REGISTRY_MISSING\n", level, mob.Name)
+		return
+	}
+
+	beforeHp := victim.Hit
+	ctx := &ai.SpecialContext{
+		Magic:       nil,
+		Output:      func(_ *types.Character, _ string) {},
+		ActToRoom:   func(_ string, _, _ *types.Character, _ func(ch *types.Character, msg string)) {},
+		StartCombat: func(_, _ *types.Character) {},
+		CastSpell: func(_ *types.Character, spellName string, v *types.Character) bool {
+			if attempted == "" {
+				attempted = spellName
+			}
+			castFired = true
+			// Pretend the spell landed for 1 HP so the snapshot shows a
+			// non-zero delta whenever cast fired.
+			if v != nil {
+				v.Hit -= 1
+			}
+			return true
+		},
+		MoveChar: func(_ *types.Character, _ types.Direction) {},
+	}
+
+	specFn(mob, ctx)
+
+	spellLabel := attempted
+	if spellLabel == "" {
+		spellLabel = "none"
+	}
+	fmt.Fprintf(buf, "MobCast  Lv=%-3d name=%-10s Special=spec_cast_mage fighting=%-5v spellAttempted=%-15s castFired=%-5v victimHp=%d->%d\n",
+		level,
+		mob.Name,
+		mob.Fighting != nil,
+		spellLabel,
+		castFired,
+		beforeHp,
+		victim.Hit,
+	)
 }
