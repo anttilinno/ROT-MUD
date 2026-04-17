@@ -1,0 +1,55 @@
+# ROT-MUD entity golden snapshot
+# Seed: 42 (do not change without regenerating)
+# Coverage: 19 races x warrior Lv20 + 14 classes x human Lv20 + spells + skills
+
+=== RACE x WARRIOR (Lv 20, seed=42) ===
+Race=human        HP=343  Str=18 Dex=18 Con=18 Hit%= 60.0 Dam= 392 Imm=- Res=- Vuln=-
+Race=elf          HP=314  Str=16 Dex=21 Con=15 Hit%= 56.7 Dam= 347 Imm=- Res=- Vuln=-
+Race=dwarf        HP=381  Str=20 Dex=15 Con=22 Hit%= 50.0 Dam= 396 Imm=- Res=- Vuln=-
+Race=giant        HP=371  Str=22 Dex=14 Con=21 Hit%= 60.0 Dam= 414 Imm=- Res=- Vuln=-
+Race=pixie        HP=305  Str=11 Dex=21 Con=13 Hit%= 83.3 Dam= 390 Imm=- Res=- Vuln=-
+Race=halfling     HP=343  Str=13 Dex=20 Con=18 Hit%= 53.3 Dam= 261 Imm=- Res=- Vuln=-
+Race=halforc      HP=371  Str=20 Dex=17 Con=21 Hit%= 67.9 Dam= 446 Imm=- Res=- Vuln=-
+Race=goblin       HP=343  Str=14 Dex=20 Con=18 Hit%= 60.0 Dam= 327 Imm=- Res=- Vuln=-
+Race=halfelf      HP=333  Str=17 Dex=18 Con=17 Hit%= 43.3 Dam= 286 Imm=- Res=- Vuln=-
+Race=avian        HP=333  Str=14 Dex=18 Con=17 Hit%= 53.3 Dam= 301 Imm=- Res=- Vuln=-
+Race=gnome        HP=305  Str=13 Dex=15 Con=14 Hit%= 46.7 Dam= 237 Imm=- Res=- Vuln=-
+Race=draconian    HP=371  Str=22 Dex=14 Con=21 Hit%= 53.3 Dam= 415 Imm=- Res=- Vuln=-
+Race=centaur      HP=371  Str=21 Dex=17 Con=21 Hit%= 60.0 Dam= 452 Imm=- Res=- Vuln=-
+Race=gnoll        HP=362  Str=20 Dex=17 Con=20 Hit%= 90.0 Dam= 447 Imm=- Res=- Vuln=-
+Race=heucuva      HP=352  Str=21 Dex=16 Con=19 Hit%= 66.7 Dam= 446 Imm=- Res=- Vuln=-
+Race=kenku        HP=314  Str=16 Dex=21 Con=15 Hit%= 60.0 Dam= 355 Imm=- Res=- Vuln=-
+Race=minotaur     HP=381  Str=23 Dex=14 Con=22 Hit%= 53.3 Dam= 426 Imm=- Res=- Vuln=-
+Race=satyr        HP=362  Str=21 Dex=17 Con=20 Hit%= 72.7 Dam= 431 Imm=- Res=- Vuln=-
+Race=titan        HP=400  Str=25 Dex=12 Con=24 Hit%= 66.7 Dam= 455 Imm=- Res=- Vuln=-
+
+=== CLASS x HUMAN (Lv 20, seed=42) ===
+Class=mage         THAC0_00=20  THAC0_32=6   HP=172  Mana=510  HitRoll=6   DamRoll=5   Hit%= 46.7 Dam= 238
+Class=cleric       THAC0_00=20  THAC0_32=2   HP=210  Mana=270  HitRoll=6   DamRoll=5   Hit%= 46.7 Dam= 304
+Class=thief        THAC0_00=20  THAC0_32=-4  HP=248  Mana=190  HitRoll=6   DamRoll=5   Hit%= 80.0 Dam= 430
+Class=warrior      THAC0_00=20  THAC0_32=-10 HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 60.0 Dam= 375
+Class=ranger       THAC0_00=20  THAC0_32=-6  HP=267  Mana=190  HitRoll=6   DamRoll=7   Hit%= 69.2 Dam= 439
+Class=druid        THAC0_00=20  THAC0_32=2   HP=210  Mana=190  HitRoll=6   DamRoll=5   Hit%= 43.3 Dam= 269
+Class=vampire      THAC0_00=20  THAC0_32=-3  HP=191  Mana=190  HitRoll=6   DamRoll=5   Hit%= 73.3 Dam= 372
+Class=wizard       THAC0_00=20  THAC0_32=4   HP=286  Mana=190  HitRoll=6   DamRoll=5   Hit%= 60.0 Dam= 308
+Class=priest       THAC0_00=20  THAC0_32=-1  HP=210  Mana=270  HitRoll=6   DamRoll=5   Hit%= 60.0 Dam= 369
+Class=mercenary    THAC0_00=20  THAC0_32=-6  HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 63.3 Dam= 383
+Class=gladiator    THAC0_00=20  THAC0_32=-14 HP=419  Mana=190  HitRoll=6   DamRoll=5   Hit%= 72.4 Dam= 446
+Class=strider      THAC0_00=20  THAC0_32=-8  HP=381  Mana=190  HitRoll=6   DamRoll=7   Hit%= 53.3 Dam= 388
+Class=sage         THAC0_00=20  THAC0_32=-1  HP=305  Mana=190  HitRoll=6   DamRoll=5   Hit%= 50.0 Dam= 325
+Class=lich         THAC0_00=20  THAC0_32=-3  HP=286  Mana=190  HitRoll=6   DamRoll=5   Hit%= 70.0 Dam= 376
+
+=== SPELL EXECUTIONS (seed=42) ===
+Spell=acid blast         Lv=22  Class=mage       success=true  dHP=137   dMana=0    victimHp=1000->863
+Spell=bless              Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
+Spell=cure light         Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
+Spell=fireball           Lv=22  Class=mage       success=true  dHP=47    dMana=0    victimHp=1000->953
+Spell=heal               Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
+Spell=magic missile      Lv=10  Class=mage       success=true  dHP=14    dMana=0    victimHp=1000->986
+Spell=sanctuary          Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
+
+=== SKILL EXECUTIONS (seed=42) ===
+Backstab Lv=20  thief vs mob: victimHp=430->430 damage=0 fighting=true
+Kick Lv=20  warrior vs mob: victimHp=430->430 damage=0
+Defense Lv=20  warrior    vs thief     : dodged=25  parried=58  blocked=0   hit=17 
+Defense Lv=20  thief      vs warrior   : dodged=28  parried=37  blocked=0   hit=35 
