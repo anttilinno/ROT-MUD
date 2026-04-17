@@ -1,6 +1,6 @@
 # ROT-MUD entity golden snapshot
 # Seed: 42 (do not change without regenerating)
-# Coverage: 19 races x warrior Lv20 + 14 classes x human Lv20 + spells + skills
+# Coverage: 19 races x warrior Lv20 + 14 classes x human Lv20 + spells + skills + mob templates
 
 === RACE x WARRIOR (Lv 20, seed=42) ===
 Race=human        HP=343  Str=18 Dex=18 Con=18 Hit%= 60.0 Dam= 392 Imm=- Res=- Vuln=-
@@ -53,3 +53,8 @@ Backstab Lv=20  thief vs mob: victimHp=430->430 damage=0 fighting=true
 Kick Lv=20  warrior vs mob: victimHp=430->430 damage=0
 Defense Lv=20  warrior    vs thief     : dodged=25  parried=58  blocked=0   hit=17 
 Defense Lv=20  thief      vs warrior   : dodged=28  parried=37  blocked=0   hit=35 
+
+=== MOB TEMPLATES (seed=42) ===
+MobImm   Lv=20  name=Mob        Imm=[fire,silver] Res=[charm] Vuln=[cold]
+MobAggro Lv=20  name=AggroMob   Act=aggressive aggroFired=true  victim=AggroTarget
+MobCast  Lv=22  name=CasterMob  Special=spec_cast_mage fighting=true  spellAttempted=none            castFired=false victimHp=1000->1000
