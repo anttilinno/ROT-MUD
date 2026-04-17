@@ -42,7 +42,7 @@ Plans:
 - [x] 01-01-PLAN.md — Refactor pkg/combat/dice.go with package-scope seedable RNG (SetRand) and add CombatSystem.Rand field per D-02
 - [x] 01-02-PLAN.md — Create pkg/golden/ package (doc.go, fixture.go scenario runners, golden_test.go driver with -update flag)
 - [x] 01-03-PLAN.md — Generate and commit initial testdata/entities.golden snapshot (human-verify checkpoint)
-- [ ] 01-04-PLAN.md — Close VERIFICATION.md SC #3 gap: add mob-template coverage (immunity, aggro, caster special) to the golden fixture
+- [x] 01-04-PLAN.md — Close VERIFICATION.md SC #3 gap: add mob-template coverage (immunity, aggro, caster special) to the golden fixture
 
 ### Phase 2: Trait Type System
 **Goal**: A pure-Go trait system exists where entities (races, classes, skills, spells, mobs, rooms, items) can be composed from typed trait values and queried by combat/magic/skill code
