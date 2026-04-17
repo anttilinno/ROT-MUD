@@ -39,7 +39,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   5. Any intentional change to entity behavior during later phases produces a visible, diffable fixture failure
 **Plans:** 3 plans
 Plans:
-- [ ] 01-01-PLAN.md — Refactor pkg/combat/dice.go with package-scope seedable RNG (SetRand) and add CombatSystem.Rand field per D-02
+- [x] 01-01-PLAN.md — Refactor pkg/combat/dice.go with package-scope seedable RNG (SetRand) and add CombatSystem.Rand field per D-02
 - [ ] 01-02-PLAN.md — Create pkg/golden/ package (doc.go, fixture.go scenario runners, golden_test.go driver with -update flag)
 - [ ] 01-03-PLAN.md — Generate and commit initial testdata/entities.golden snapshot (human-verify checkpoint)
 
