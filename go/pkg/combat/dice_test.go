@@ -87,3 +87,28 @@ func TestEdgeCasesPreserved(t *testing.T) {
 		t.Error("NumberBits(-1) must return 0")
 	}
 }
+
+func TestCombatSystemRandField(t *testing.T) {
+	cs := NewCombatSystem()
+	if cs.Rand != nil {
+		t.Fatalf("expected zero-value nil Rand, got %v", cs.Rand)
+	}
+	cs.Rand = rand.New(rand.NewSource(7))
+	if cs.Rand == nil {
+		t.Fatal("assignment to cs.Rand did not stick")
+	}
+}
+
+func TestCombatSystemRandFieldTypeByReflection(t *testing.T) {
+	var cs CombatSystem
+	ty := reflect.TypeOf(cs)
+	f, ok := ty.FieldByName("Rand")
+	if !ok {
+		t.Fatal("CombatSystem has no Rand field")
+	}
+	want := "*rand.Rand"
+	got := f.Type.String()
+	if got != want {
+		t.Fatalf("Rand field type: want %q got %q", want, got)
+	}
+}
