@@ -1,6 +1,8 @@
 package combat
 
 import (
+	"math/rand"
+
 	"rotmud/pkg/types"
 )
 
@@ -44,6 +46,7 @@ type CombatSystem struct {
 	OnDamage    OnDamageFunc    // Called when damage is dealt (for metrics)
 	OnKill      OnKillFunc      // Called when a character is killed (for quests)
 	OnDeath     OnDeathFunc     // Called after death processing (for autoloot/autosac)
+	Rand        *rand.Rand      // When non-nil, receiver methods may prefer this source over package RNG (test hook, see dice.go SetRand for the package-wide equivalent)
 }
 
 // GetSkill returns a character's skill level, falling back to level-based if no getter
