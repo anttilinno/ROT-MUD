@@ -24,6 +24,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 10: Mob Migration** - All mob type templates expressed in TOML with verified behavior parity
 - [ ] **Phase 11: Area & Item Traits** - Extend the existing area loader with trait parsing for rooms and items; annotate existing area files with NoMagic zones, silver/fire weapons, etc.
 - [ ] **Phase 12: Extensibility Proof** - New race (Lizardman) added by data file only, zero Go diff, with Lua behavior hook
+- [ ] **Phase 13: Economic Overhaul** - Add durability/repair, smith custom crafting, identify fees, and bank fees so the economy has real coin sinks; rebalance mob drops to a stable source/sink ratio (see `.planning/ECONOMY.md` for sub-phase detail)
 
 ## Phase Details
 
@@ -161,10 +162,24 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. The full test suite (including the Phase 1 golden-master parity for existing races, classes, skills, spells, mobs, rooms, and items) still passes after the new race is added
 **Plans**: TBD
 
+### Phase 13: Economic Overhaul
+**Goal**: The game economy has real coin sinks (durability/repair, smith custom crafting, identify fees, bank fees) and mob drops are rebalanced to a stable source/sink ratio near 1.0 per level bucket
+**Depends on**: None (independent of trait system; can begin once the currency commit lands)
+**Requirements**: ECON-01, ECON-02, ECON-03, ECON-04, ECON-05, ECON-06
+**Success Criteria** (what must be TRUE):
+  1. A coin ledger records every credit/debit on `ch.Coin` and `ch.PCData.BankCoin` with txn type, amount, source/target, and tick; sim tests produce a per-level-bucket source/sink ratio report
+  2. Weapons and armor have hits-based durability that ticks down in combat; broken items wear-fail with halved stats but are not destroyed; `repair` command at smith NPCs restores durability at a cost scaled by item Cost and damage fraction
+  3. Master smith NPCs craft bespoke items from base+affix recipes (TOML data); crafted item stats are hard-capped at the level of the best comparable area drop and are bound on pickup
+  4. Items at vnum-level ≥ 20 drop unidentified; sage NPCs charge a flat fraction of `item.Cost` to identify
+  5. Bank deposits remain free; withdrawals at non-home bankers and player-to-player transfers charge a configurable fee
+  6. After all sinks land, `mobCoinDrop` is rebalanced and the death-loss percentage reduced so the sim source/sink ratio per level bucket lands within ±10% of 1.0; the death penalty drops from 10% to 5% of carried coin
+**Plans**: TBD
+**Reference**: `.planning/ECONOMY.md` for sub-phase breakdown (E1 baseline → E6 rebalance), open decisions, and risk register
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13
 
 **Parallelization opportunities** (parallelization=true in config):
 - Phase 4 (Lua Scripting Host) is independent of Phases 3/5/6 and can run in parallel once Phase 2 lands
@@ -172,6 +187,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 - Phases 5 (skills/spells loaders) and 6 (mob loaders) can run in parallel after Phase 3 lands
 - Phases 8, 9, 10 (migration) can run in parallel after their respective loader phases and Phase 7 land
 - Phase 11 (area/item traits) can run in parallel with Phases 8/9/10 once Phase 7 lands (it extends the existing area loader, so it does not need the race/class/skill/spell/mob loader phases)
+- Phase 13 (economic overhaul) is independent of the trait system and can run in parallel with Phases 2–12 once the currency commit lands
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -187,3 +203,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 10. Mob Migration | 0/TBD | Not started | - |
 | 11. Area & Item Traits | 0/TBD | Not started | - |
 | 12. Extensibility Proof | 0/TBD | Not started | - |
+| 13. Economic Overhaul | 0/TBD | Not started | - |
