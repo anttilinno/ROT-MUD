@@ -25,6 +25,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 11: Area & Item Traits** - Extend the existing area loader with trait parsing for rooms and items; annotate existing area files with NoMagic zones, silver/fire weapons, etc.
 - [ ] **Phase 12: Extensibility Proof** - New race (Lizardman) added by data file only, zero Go diff, with Lua behavior hook
 - [ ] **Phase 13: Economic Overhaul** - Add durability/repair, smith custom crafting, identify fees, and bank fees so the economy has real coin sinks; rebalance mob drops to a stable source/sink ratio (see `.planning/ECONOMY.md` for sub-phase detail)
+- [ ] **Phase 14: LLM-Driven NPCs** - Local-LLM-backed dialog for shopkeepers/smiths/sages (Tier 1) and plan-once tactical combat for area bosses (Tier 2), with first-class scripted fallback, circuit breaker, and feature flag (see `.planning/LLM-NPC.md` for sub-phase detail)
 
 ## Phase Details
 
@@ -176,10 +177,24 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: TBD
 **Reference**: `.planning/ECONOMY.md` for sub-phase breakdown (E1 baseline → E6 rebalance), open decisions, and risk register
 
+### Phase 14: LLM-Driven NPCs
+**Goal**: Selected NPCs (shopkeepers, smiths, sages, area bosses) are driven by a local LLM for dialog and tactical combat planning, with a first-class scripted fallback that runs identically when the LLM is unavailable
+**Depends on**: None — independent of trait system and economy overhaul; benefits from Phases 4 (Lua hook taxonomy) and 8-12 (data-driven mob kits) but does not block on them
+**Requirements**: LLM-01, LLM-02, LLM-03, LLM-04, LLM-05, LLM-06
+**Success Criteria** (what must be TRUE):
+  1. Async LLM worker pool calls a local endpoint (Ollama / llama.cpp / vLLM); requests are non-blocking, results dispatch back through the game loop; per-mob serial with overflow drop
+  2. Scripted fallback runs identically to current behavior when the LLM is off, unreachable, slow, or returns invalid output; a per-endpoint circuit breaker opens after 5/10 failures and recovers via half-open probing; `llmstat` immortal command exposes queue depth, breaker state, p50/p95 latency, and failure rate
+  3. Tier 1 (dialog) NPCs flagged with `llm_enabled = true` emit tool calls (`say`, `emote`, `set_price`, `offer_item`, `refuse`) which the server validates and executes; persona + per-(mob, player) dialog memory persisted to JSONL
+  4. Tier 2 (combat) bosses flagged with `llm_combat = true` produce a structured battle plan on aggro (opener, HP-phase rotations, replan triggers, taunt lines, exploit notes); per-round combat is a cheap scripted FSM walking the plan; replan triggers fire async without blocking the round
+  5. Post-fight post-mortem stores structured lessons keyed by `(mob_vnum, player_id)`; rematches load lessons into the plan-call context, producing visibly escalating mob tactics
+  6. Phase 1 golden-master combat parity still passes with the LLM feature flag off; an `llm_smoke_test.go` mocks the endpoint and verifies tool validation, fallback paths, circuit breaker transitions, and overflow handling
+**Plans**: TBD
+**Reference**: `.planning/LLM-NPC.md` for sub-phase breakdown (N1 worker pool → N6 Tier 2 rollout), tool surface, schema definitions, and risk register
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14
 
 **Parallelization opportunities** (parallelization=true in config):
 - Phase 4 (Lua Scripting Host) is independent of Phases 3/5/6 and can run in parallel once Phase 2 lands
@@ -188,6 +203,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 - Phases 8, 9, 10 (migration) can run in parallel after their respective loader phases and Phase 7 land
 - Phase 11 (area/item traits) can run in parallel with Phases 8/9/10 once Phase 7 lands (it extends the existing area loader, so it does not need the race/class/skill/spell/mob loader phases)
 - Phase 13 (economic overhaul) is independent of the trait system and can run in parallel with Phases 2–12 once the currency commit lands
+- Phase 14 (LLM-driven NPCs) is independent of all other phases; can run anytime in parallel. Benefits from Phase 4 (Lua hook taxonomy) and the data-driven mob kits from Phases 8/10 landing first, but stub events suffice
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -204,3 +220,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 11. Area & Item Traits | 0/TBD | Not started | - |
 | 12. Extensibility Proof | 0/TBD | Not started | - |
 | 13. Economic Overhaul | 0/TBD | Not started | - |
+| 14. LLM-Driven NPCs | 0/TBD | Not started | - |
