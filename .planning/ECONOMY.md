@@ -428,12 +428,15 @@ Boon table is **god-specific data**. War god offers damage boons; nature god off
 
 #### Temple geography
 
-Good and neutral gods keep temples inside cities. Evil and chaotic gods do not — city guards turn evil-aligned characters away. Two flavors of evil temple:
+Good and neutral gods keep temples inside good-aligned cities (Midgaard). Evil and chaotic gods are barred from those cities by guards; their temples live elsewhere. **Three forms — all first-pass content:**
 
-- **Wilderness shrines** (first pass): small temples in dangerous outdoor zones (e.g. `Bloodmoor`, `Cursed Glade`, `Drow Forest`). Cheap to add via existing area loader. One shrine per evil god, reachable on foot from city gates.
-- **Outlaw cities** (later content): full alternate hubs (`Shadowport`, `Skullhold`) with their own banks, smiths, enchanters, and temple complexes. Mirror the Midgaard service set for evil-aligned players. Deferred — wilderness shrines first.
+- **Wilderness shrines**: small temples in dangerous outdoor zones (e.g. `Bloodmoor`, `Cursed Glade`, `Drow Forest`). Cheap to add via existing area loader. One shrine per evil god, reachable on foot from city gates. Serve as roadside checkpoints between hub cities.
+- **Outlaw city: `Shadowport`** (evil-aligned hub): full alternate hub with bank, smiths, enchanters, sages, temple complex, housing market, and MUD school exit destination. Mirrors the Midgaard service set for evil-aligned players. Its guards refuse good-aligned characters above the threshold (mirror-image of Midgaard rules).
+- **Outlaw city: `Skullhold`** (chaotic-aligned hub): full alternate hub with the same service set. Caters to chaotic-neutral and chaotic-evil play. Guards enforce a chaos-tolerant ruleset (no aggro on alignment alone; pickpocket / brawl is legal).
 
-Neutral gods (nature, trade) may have shrines both in-city and in wilderness; players access whichever they reach first.
+Neutral gods (nature, trade) may have shrines in all three hubs plus wilderness; players access whichever they reach first. Good gods refused entry to Shadowport / Skullhold in the same way evil gods are refused in Midgaard — symmetrical.
+
+This makes evil + chaotic play a fully self-sufficient endgame loop. An evil character does not need to bribe their way into Midgaard for daily life; only for cross-faction quest content or specific items only Midgaard merchants stock.
 
 #### City guard alignment enforcement
 
@@ -462,24 +465,26 @@ Players finish the tutorial inside good-aligned Midgaard. The MUD school's final
 - Sergeant flavor line varies by choice ("You've chosen a dark path. Walk it elsewhere — and don't return to my city unless you've cleansed your soul.").
 - Destination teleport based on choice:
   - `good` / `neutral` → Midgaard market square
-  - `evil` → south gate, deposit at the Bloodmoor shrine road (within walking distance of evil wilderness shrines)
-  - `chaotic` → docks gate, ferry to a wilderness camp near chaotic shrines
-- **Choice is non-binding** — sets destination, not god-pick or alignment. Players can convert later via `pray` and atonement.
+  - `evil` → Shadowport central plaza (full hub with services on arrival)
+  - `chaotic` → Skullhold bazaar (full hub with services on arrival)
+- **Choice is non-binding** — sets destination hub, not god-pick or alignment. Players can convert later via `pray` and atonement, and travel between hubs via the road network.
 - Implementation: escort is a one-way `transfer` command issued by the sergeant. Cheap; no literal pathing.
 
 This solves the trapped-evil-newbie problem without requiring evil players to fight through hostile guards on day one.
 
-#### Re-entry paths for evil characters
+#### Cross-faction city access
 
-Evil characters eventually need access to a good-lawful city (a unique quest, a specific shop, a player they want to meet). Three legal paths back in:
+Most daily play happens inside the player's home hub (Midgaard for good/neutral, Shadowport for evil, Skullhold for chaotic). Cross-faction visits are needed only for specific content: a Midgaard-only quest, a Shadowport-only enchant reagent, a unique merchant in Skullhold.
+
+Each hub enforces alignment thresholds symmetrically (good/neutral aggro in Shadowport; evil aggro in Midgaard; Skullhold is chaos-tolerant but bans paladins / clerics of lawful-good gods). Three cross-faction entry paths apply at any hostile hub gate:
 
 | Path        | Cost                       | Notes |
 |-------------|----------------------------|-------|
-| `atone <good-god>` quest | time + good-aligned kills | Slow drift of Align back toward neutral. Permanent. |
-| `disguise` (thief) / `polymorph` (mage) | reagents + skill check | Time-limited city entry. Skill-gated; thief-only or mage-only. Links to E3.5 reagent economy. |
-| `bribe <guard> <amount>` at city gate | big coin payment scaling with Align distance | Time-limited gate pass (1 in-game hour). Per-real-day limit prevents spam. Strong coin sink for evil endgame players. |
+| `atone <hub-aligned-god>` quest | time + aligned kills | Slow Align drift back toward the target hub's alignment. Permanent until next drift. |
+| `disguise` (thief) / `polymorph` (mage) | reagents + skill check | Time-limited entry. Skill-gated. Links to E3.5 reagent economy. |
+| `bribe <guard> <amount>` at the gate | coin scaling with Align distance | Time-limited gate pass. Per-real-day limit prevents spam. Big coin sink. |
 
-Each path is intentional friction. Evil play is a choice; cities remain hostile but not unreachable.
+Each path is intentional friction. Cross-faction play is a choice; hostile hubs remain reachable but never daily.
 
 #### Temple shops (worshipper + cleric paths)
 
@@ -590,6 +595,84 @@ data/gods/<god_name>.toml
 - Each god has a populated temple shop with at least open / worshipper / cleric / favored stock tiers; cleric-only and favor-only items honor their gates.
 - Opposing-alignment refusal verified by integration test: lawful character refused entry to chaotic-evil temple shop and vice versa.
 - Phase 1 golden-master combat parity passes with the god system off (feature flag) and with a deterministic atheist character used as the canonical reference.
+- Shadowport and Skullhold load as full hubs (bank, smiths, enchanters, sages, temple complex, MUD school exit destination, housing market) and pass the same service-set integration tests as Midgaard.
+
+### E9 — Player housing (recurring rent sink + utility upgrades)
+
+**Goal:** Long-running recurring coin sink tied to lifestyle, not combat. Hometown choice (already in E5) becomes meaningful: cheaper rent in your home hub, double rent elsewhere. Optional one-time upgrades convert housing into a personal services hub (forge, workbench, altar, safe) that converts upfront coin into ongoing rent multipliers.
+
+#### Hub housing markets
+
+Each first-pass hub (Midgaard, Shadowport, Skullhold) has its own innkeeper-run housing market with the same 4 tiers. Wilderness camps may rent rough lodging at room-tier prices for chaotic-evil characters who want zero city ties.
+
+| Tier      | Rent / real-time week | Storage slots | Notes |
+|-----------|----------------------:|--------------:|-------|
+| Room      | 5g                    | 20            | newbie-affordable; inn quarter |
+| Cottage   | 50g                   | 60            | mid-game; suburban district |
+| Manor     | 500g                  | 200           | endgame; noble / outlaw quarter, social status |
+| Fortress  | 2p                    | 500           | guild/clan tier; outside city walls; PvP-server defensible |
+
+#### Hometown discount
+
+- House in your registered `home_city` (same data field as the E5 bank hometown) → full listed rent.
+- House in any other hub → **2× listed rent**, mirroring the E5 non-home withdrawal-fee structure. Same data field; no schema change.
+- Atheist players still pick a hometown (purely civic, no god). Evil-aligned players can register Shadowport (or wilderness camp). Chaotic players can register Skullhold.
+- `change_hometown <city>` at any banker: flat 1p fee + 14-day real-time cooldown. Prevents alt-cycling for arbitrage.
+
+#### Mechanics
+
+- `rent <tier>` at innkeeper → pay deposit (1 week rent) + first week → assigned a house instance with a private door keyed to the player.
+- Rent auto-debits **weekly real-time** from bank balance first, then carried coin if bank insufficient.
+- Missed rent → 7-day real-time grace; door locked, contents frozen.
+- After grace + 30 days no payment → auto-downgrade to the next-lower tier if balance can sustain it (auto-evict gracefully). Otherwise eviction: storage contents auctioned by the innkeeper, proceeds returned to bank minus 20% innkeeper fee.
+- `recall home` ports to your house entryway; cooldown shorter than temple recall, longer than mage `teleport`. Cross-hub legal (works from any zone if not no-recall).
+- House interior is a small instanced area (entryway + storage room + optional upgrade rooms). Items inside the storage room have no carry-weight check; bank-grade no-decay.
+
+#### Upgrades (one-time coin sink, ongoing service)
+
+Each upgrade installs a fixture in the house. Coin paid once at construction; some upgrades raise weekly rent (maintenance).
+
+| Upgrade        | Build cost | Rent mult | Effect |
+|----------------|-----------:|----------:|--------|
+| Smith forge    | 100g       | +10%      | in-house `repair` at 50% NPC price; no smith travel |
+| Workbench      | 250g       | +15%      | craft T1/T2 in-house (no smith pilgrimage); T3 still requires master smith |
+| Alchemy bench  | 250g       | +15%      | enchant from home at standard NPC odds; brick risk unchanged |
+| Personal safe  | 500g       | +20%      | bank node — deposit/withdraw without traveling to a banker; subject to E5 hometown rules |
+| Altar          | 1p         | +25%      | in-house `pray` for daily heal/mana boon; cleric-of-this-god gets discounted install (50% off) |
+| Trophy hall    | 500g       | +10%      | display worn-out crafted gear, retired Uniques; pure cosmetic; social-flex |
+
+Upgrades stack. A fully-loaded Manor with all six upgrades adds **+95% rent** on top of base 500g/week → 975g/week. Significant ongoing sink — only worthwhile for genuinely active endgame players.
+
+#### Evil + chaotic housing
+
+- Shadowport markets identical tier table; rent paid through Shadowport innkeeper. Good-aligned characters refused as renters above the suspicious threshold (mirror Midgaard rules).
+- Skullhold markets identical tier table; chaotic-tolerant. Pickpocket risk in low-tier neighborhoods adds emergent flavor but does not affect rent system.
+- Wilderness camps (Bloodmoor, Cursed Glade) offer Room-tier only (5g/week). Limited storage, no upgrades possible. Pure shelter for hardcore evil players who don't want any hub ties.
+
+#### Integration with prior phases
+
+- **E2 durability:** smith forge upgrade replaces smith travel for routine repairs. Upfront sink + per-repair savings.
+- **E3 crafting:** workbench upgrade unlocks at-home T1/T2 crafting. T3 still requires master-smith pilgrimage (preserves the social hub).
+- **E3.5 enchants:** alchemy bench replicates standard enchant NPC. Brick risk unchanged — no exploit.
+- **E5 banks:** personal safe is a bank node, governed by the same E5 hometown rules (free withdrawal at home; surcharge if you set a different hometown after the safe is built).
+- **E7 lottery:** house storage holds Lottery Set members during incomplete collections; trophy hall displays completed sets and retired Uniques.
+- **E8 gods + temples:** altar upgrade is god-specific; once installed, it's locked to the player's current god. Switching gods (apostasy) requires rebuilding the altar. Cleric-of-this-god discount on install matches the temple-shop tier discount.
+
+#### Commands
+
+- `rent <tier>` at innkeeper: take a lease.
+- `unrent` at innkeeper: voluntarily downgrade tier or move out (storage shipped to bank for safekeeping; 10% innkeeper fee).
+- `upgrade <fixture>` at innkeeper: build an upgrade. Cost surfaced as quote; weekly rent recalculated.
+- `recall home`: fast port to entryway.
+- `safe` / `store <item>` / `take <item>` while in the storage room: like bank, no carry-weight.
+- `house` (no arg): current tier, balance, upgrades, weeks paid, next debit time.
+
+**Exit criteria:**
+- Four tiers rent correctly at the documented prices; hometown discount honored; cross-hub 2× honored.
+- Auto-debit, grace period, auto-downgrade, and eviction all fire correctly in sim and integration tests.
+- Each upgrade installs and its effect verified end-to-end (e.g. workbench actually crafts T2 without smith proximity).
+- Shadowport and Skullhold markets honor symmetrical alignment-refusal rules.
+- Phase 1 golden-master combat parity passes with the housing feature flag off.
 
 ## Open Decisions
 
@@ -632,6 +715,13 @@ data/gods/<god_name>.toml
 | MUD school exit choice binding | binding god-pick / non-binding destination | non-binding — destination only, convert later via pray |
 | Bribe per-real-day cap | 1 / 3 / unlimited (scales) | 1 per real-day — anti-spam, big coin sink per use |
 | Disguise / polymorph entry duration | 5 / 15 / 60 in-game min | 15 in-game min — enough for a focused errand |
+| Hub city set in first pass | 2 hubs (Midgaard + Shadowport) / 3 hubs (+ Skullhold) / 4+ | 3 hubs — covers good, evil, chaotic; viable solo loop per faction |
+| Housing rent cadence | weekly real-time / monthly real-time / per-login | weekly real-time — predictable, mid-friction |
+| Housing missed-rent action | full eviction / auto-downgrade / freeze indefinitely | grace + 30-day freeze + auto-downgrade — protects long-paused players |
+| Cross-hub rent multiplier | 1.5× / 2× / 3× | 2× — matches E5 bank withdrawal-fee structure |
+| Housing upgrade availability per tier | all tiers / Cottage+ / Manor+ | all tiers — newbie Room can install a forge if they pay |
+| Trophy hall scope | crafted only / all worn-out / Uniques only | all worn-out — pure cosmetic, broad appeal |
+| Change-hometown fee + cooldown | 0.5p / 1d / 1p / 14d / 2p / 30d | 1p / 14d real-time — prevents arbitrage, allows real relocation |
 
 ## Risks
 
@@ -662,6 +752,12 @@ data/gods/<god_name>.toml
 - **(E8) Evil player permanently locked out of good cities.** Mitigation: three re-entry paths (atone quest, disguise/polymorph, bribe). All intentional friction, none permanent locks.
 - **(E8) Bribe path turns alignment into pay-to-bypass.** Mitigation: bribe is per-real-day, scales with Align distance, time-limited entry only. Doesn't grant temple-quarter access or change Align. Pure logistics, not absolution.
 - **(E8) Wilderness shrine raid griefing — high-level good players camp evil temple roads.** Mitigation: shrine grounds carry a `safezone` flag preventing PvP within a radius; approach roads not protected (free game). PvP server toggle.
+- **(E9) Long pause locks players out / loses gear.** Mitigation: 7-day grace + 30-day freeze + auto-downgrade ladder. Gear is never destroyed; auctioned proceeds return to bank. Players returning after months are inconvenienced, not bankrupted.
+- **(E9) Housing rent decouples from earned coin — chase players who don't earn at endgame.** Mitigation: rent auto-debits from bank first, carried coin second; tier curve is matched to E1 baseline + E2/E3/E5/E8 sinks so rent never exceeds 10-15% of typical weekly earn at any tier; auto-downgrade prevents catastrophic mismatch.
+- **(E9) Housing upgrades trivialize the broader smith / enchanter / bank / temple economy.** Mitigation: upgrade costs are large (100g-1p one-time + rent multiplier); upgrades replicate **standard NPC** behavior, not better (enchant odds unchanged, brick risk unchanged, T3 craft still requires master smith pilgrimage); altar boons match temple-shop cleric tier, not god-of-this-altar exclusive.
+- **(E9) Hometown lock-in feels punishing for players who relocate.** Mitigation: `change_hometown` legal at any banker; 1p fee + 14-day cooldown. Meaningful choice, not a wall.
+- **(E9) Trophy hall encourages BoP-circumvention by displaying tradeable items.** Mitigation: trophy hall is display-only (read-only); displayed items cannot be retrieved without dismantling the display (10g fee). No new exchange surface.
+- **(E9) Shadowport / Skullhold content cost balloons.** Mitigation: hub service set is templated. Same NPC interfaces as Midgaard (banker, smith, enchanter, sage, innkeeper, master smith, temple keeper, master enchanter) with reskins. Each hub is ~30% the area-content cost of Midgaard, not 100%, because the templates are shared.
 
 ## Dependencies
 
@@ -676,7 +772,10 @@ data/gods/<god_name>.toml
 - E8 pantheon TOML loader follows the same homogeneous-section pattern. Existing `ch.Align` is repurposed (no schema change required, but tests must verify save round-trip).
 - E8 boons that grant temporary affects use the existing affect system (no new infrastructure).
 - E8 atheism flag is implicit (no god picked); no save schema change beyond `ch.PCData.Favor map[string]int` and `ch.PCData.ChosenGod string`.
+- E9 player housing reuses the E5 hometown field — no new schema for hometown discount. New schema: `ch.PCData.House struct { Hub, Tier, Upgrades, NextRentTick, ... }` plus a per-player instanced area registry.
+- E9 upgrades replicate existing NPC behavior in-house; no new combat / magic mechanics introduced. Workbench reuses E3 craft tool surface; alchemy bench reuses E3.5 enchant tool surface; altar reuses E8 boon command set.
+- Shadowport and Skullhold are area-content additions (~30% area cost of Midgaard each via shared NPC templates). New area files only; existing loader unchanged.
 
 ## Roadmap Integration
 
-Phase 13 in `ROADMAP.md` references this document. The Phase 13 success criteria expand to cover E3 race+class crafting (criterion #3), E3.5 enchants (new criterion), E7 lottery + damaged drops (new criterion), and E8 gods + favor (new criterion). E1 baseline + E2 durability + E4 identify + E5 bank fees + E6 rebalance remain numbered 1, 2, 4, 5, 6 in ROADMAP success criteria; E3.5 / E7 / E8 are appended as criteria 7, 8, 9.
+Phase 13 in `ROADMAP.md` references this document. The Phase 13 success criteria expand to cover E3 race+class crafting (criterion #3), E3.5 enchants (criterion #7), E7 lottery + damaged drops (criterion #8), E8 gods + favor + hubs (criterion #9), and E9 player housing + hub markets (criterion #10). E1 baseline + E2 durability + E4 identify + E5 bank fees + E6 rebalance remain numbered 1, 2, 4, 5, 6.
