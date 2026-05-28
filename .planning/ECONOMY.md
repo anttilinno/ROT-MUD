@@ -426,6 +426,61 @@ Boon table is **god-specific data**. War god offers damage boons; nature god off
 - ~10% flat penalty on `Hp_max` and `Mana_max` regen rates vs an on-favor worshipper (reasonable choice cost, not a wall).
 - Cannot use any temple services (resurrection, identify-god-alignment, etc.).
 
+#### Temple geography
+
+Good and neutral gods keep temples inside cities. Evil and chaotic gods do not — city guards turn evil-aligned characters away. Two flavors of evil temple:
+
+- **Wilderness shrines** (first pass): small temples in dangerous outdoor zones (e.g. `Bloodmoor`, `Cursed Glade`, `Drow Forest`). Cheap to add via existing area loader. One shrine per evil god, reachable on foot from city gates.
+- **Outlaw cities** (later content): full alternate hubs (`Shadowport`, `Skullhold`) with their own banks, smiths, enchanters, and temple complexes. Mirror the Midgaard service set for evil-aligned players. Deferred — wilderness shrines first.
+
+Neutral gods (nature, trade) may have shrines both in-city and in wilderness; players access whichever they reach first.
+
+#### City guard alignment enforcement
+
+City guards consult `ch.Align` plus a per-area `respect_alignment` flag (already in E8 risks). Default Midgaard = good-lawful enforcement; outlaw cities flip the rules.
+
+| Player state                                    | Guard reaction in a good-lawful city |
+|-------------------------------------------------|--------------------------------------|
+| L < 5 (any alignment)                           | Ignored (newbie grace)               |
+| L ≥ 5, Align ≥ -350 (neutral or good)           | Welcome                              |
+| L ≥ 5, Align -350 to -700 (evil)                | Suspicious — refused entry to temple quarter; normal elsewhere |
+| L ≥ 5, Align < -700 (chaotic-evil)              | Aggro on sight; guards attack on city entry |
+
+Alignment drift comes from gameplay (sacrifice/blasphemy, aligned kills). Reaching `Align < -700` is sustained evil play — guard hostility is consequence, not accident.
+
+#### Newbie grace
+
+- Below L5, `ch.Align` is clamped to a floor of -100 regardless of evil-aligned actions. Prevents griefing MUD school (killing good NPCs to spike Align before graduation) and protects the escort-exit choice from being foreclosed.
+- Alignment drift unlocks fully at L5.
+
+#### MUD school graduation: escorted exit
+
+Players finish the tutorial inside good-aligned Midgaard. The MUD school's final quest is **destination selection** — the player picks the kind of life they intend to lead, and the guard sergeant routes them out the appropriate gate.
+
+- NPC `Recruit Sergeant` runs a final dialog at MUD school's graduation room.
+- Player picks one of: `good`, `neutral`, `evil`, `chaotic`.
+- Sergeant flavor line varies by choice ("You've chosen a dark path. Walk it elsewhere — and don't return to my city unless you've cleansed your soul.").
+- Destination teleport based on choice:
+  - `good` / `neutral` → Midgaard market square
+  - `evil` → south gate, deposit at the Bloodmoor shrine road (within walking distance of evil wilderness shrines)
+  - `chaotic` → docks gate, ferry to a wilderness camp near chaotic shrines
+- **Choice is non-binding** — sets destination, not god-pick or alignment. Players can convert later via `pray` and atonement.
+- Implementation: escort is a one-way `transfer` command issued by the sergeant. Cheap; no literal pathing.
+
+This solves the trapped-evil-newbie problem without requiring evil players to fight through hostile guards on day one.
+
+#### Re-entry paths for evil characters
+
+Evil characters eventually need access to a good-lawful city (a unique quest, a specific shop, a player they want to meet). Three legal paths back in:
+
+| Path        | Cost                       | Notes |
+|-------------|----------------------------|-------|
+| `atone <good-god>` quest | time + good-aligned kills | Slow drift of Align back toward neutral. Permanent. |
+| `disguise` (thief) / `polymorph` (mage) | reagents + skill check | Time-limited city entry. Skill-gated; thief-only or mage-only. Links to E3.5 reagent economy. |
+| `bribe <guard> <amount>` at city gate | big coin payment scaling with Align distance | Time-limited gate pass (1 in-game hour). Per-real-day limit prevents spam. Strong coin sink for evil endgame players. |
+
+Each path is intentional friction. Evil play is a choice; cities remain hostile but not unreachable.
+
 #### Temple shops (worshipper + cleric paths)
 
 Each god's temple hosts a shop component (separate quartermaster NPC inside the temple room or a flagged temple-keeper mob). Stocks god-domain items: divine reagents (E3.5), domain-themed weapons (war god → maces / blades, nature god → staves / sickles, death god → daggers / cursed amulets), prayer-scroll books, holy symbols, potions, atonement supplies.
@@ -500,6 +555,8 @@ Each god's temple hosts a shop component (separate quartermaster NPC inside the 
 - `atone` at temple: start atonement quest (negative-favor recovery).
 - `favor`: display current favor for active god + recent decay/gain history.
 - `pay_with_favor <item>` at temple shop: purchase listed item using favor instead of coin (dual-currency items only).
+- `bribe <guard> <amount>` at a hostile city gate: per-real-day-limited gate pass for evil characters returning to a good-lawful city.
+- `disguise` (thief) / `polymorph self` (mage): time-limited evade of city guard alignment check.
 
 #### Data layout
 
@@ -568,6 +625,13 @@ data/gods/<god_name>.toml
 | Atheist surcharge at temple shop | 0% / 25% / 50% | 25% — choice cost, not gate |
 | Opposing-alignment temple access | refused entry / refused service / hostile guards | refused service first; hostile guards as later toggle |
 | Favor-only items | a few iconic / many / none | a few iconic (resurrection-scroll, divine weapons) — forces real worship for identity items |
+| Law axis (separate from Align) | add now / lump into Align / defer | defer — lump chaotic+evil onto current Align; revisit if nuance needed |
+| Evil temple form | wilderness shrines / outlaw cities / both | wilderness shrines first; outlaw cities later content |
+| City guard Align thresholds | -350/-700 / -500/-800 / -250/-600 | -350/-700 first pass; tune by playtest |
+| Newbie grace Align floor (L<5) | -50 / -100 / -200 | -100 — generous, prevents grief, doesn't lock evil grad path |
+| MUD school exit choice binding | binding god-pick / non-binding destination | non-binding — destination only, convert later via pray |
+| Bribe per-real-day cap | 1 / 3 / unlimited (scales) | 1 per real-day — anti-spam, big coin sink per use |
+| Disguise / polymorph entry duration | 5 / 15 / 60 in-game min | 15 in-game min — enough for a focused errand |
 
 ## Risks
 
@@ -594,6 +658,10 @@ data/gods/<god_name>.toml
 - **(E8) Temple-shop discount stacking with set bonuses + enchants trivializes cleric economy.** Mitigation: cleric discount applies only to listed coin price, not favor price; favor-only items unaffected by discounts. Sim check during E6.
 - **(E8) Opposing-alignment refusal forces tedious travel for shopping.** Mitigation: most stock is duplicated across same-alignment temples; only god-iconic items are temple-exclusive. Atheists and same-alignment-different-god worshippers have surcharge but full access.
 - **(E8) Cleric class becomes mandatory for endgame divine items.** Mitigation: a few iconic divine items are cleric-locked, but the bulk of god-themed stock is worshipper-accessible. Cleric advantage is discount + breadth, not exclusive endgame access.
+- **(E8) Evil newbie traps post-MUD-school.** Mitigation: graduation escort routes evil-intending players to evil-aligned wilderness shrine roads. Newbie grace below L5 clamps Align so the destination choice isn't foreclosed by tutorial play. Non-binding choice — players can convert later.
+- **(E8) Evil player permanently locked out of good cities.** Mitigation: three re-entry paths (atone quest, disguise/polymorph, bribe). All intentional friction, none permanent locks.
+- **(E8) Bribe path turns alignment into pay-to-bypass.** Mitigation: bribe is per-real-day, scales with Align distance, time-limited entry only. Doesn't grant temple-quarter access or change Align. Pure logistics, not absolution.
+- **(E8) Wilderness shrine raid griefing — high-level good players camp evil temple roads.** Mitigation: shrine grounds carry a `safezone` flag preventing PvP within a radius; approach roads not protected (free game). PvP server toggle.
 
 ## Dependencies
 
