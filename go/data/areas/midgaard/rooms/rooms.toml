@@ -3845,6 +3845,17 @@ A small note hangs on the wall."""
     vnum = 3033
     inv_only = true
 
+    # Emergency newbie consumables — added so general-store shoppers can
+    # buy a basic cure potion and an escape scroll without trekking to the
+    # apothecary or magic shop.
+    [[rooms.mob_resets.equips]]
+    vnum = 3083
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3042
+    inv_only = true
+
     [[rooms.mob_resets.equips]]
     vnum = 3383
     inv_only = true

@@ -31,3 +31,7 @@ description = "Convert all ROM areas to TOML format"
 depends = ["areconv"]
 dir = "go"
 run = "./areaconv --all ../C/rot/area ./data/areas"
+
+[tasks.repomap]
+description = "Generate repo map via aider --show-repo-map (LLM context)"
+run = "uvx --quiet --python 3.12 --from aider-chat aider --show-repo-map --map-tokens 4096 --exit"

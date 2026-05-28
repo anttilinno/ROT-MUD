@@ -16,6 +16,7 @@ import (
 	"rotmud/pkg/loader"
 	"rotmud/pkg/magic"
 	"rotmud/pkg/persistence"
+	"rotmud/pkg/shops"
 	"rotmud/pkg/types"
 )
 
@@ -430,6 +431,11 @@ func (s *Server) LoadWorld() error {
 	s.GameLoop.Areas = world.Areas
 	s.GameLoop.World = world
 
+	// Wire shop system: convert loader.ShopData → shops.Shop, build registry,
+	// install handler on the dispatcher so buy/sell/list/value commands work.
+	s.Dispatcher.Shops = buildShopHandler(world, s.GameLoop)
+	s.logger.Info("shops loaded", "count", len(world.Shops))
+
 	// Load help files
 	helpPath := s.DataPath + "/help"
 	helpSystem := help.NewSystem()
@@ -596,10 +602,9 @@ func (s *Server) handleAutolootAutosac(killer, victim *types.Character, corpse *
 		if corpse.InRoom != nil {
 			corpse.InRoom.RemoveObject(corpse)
 		}
-		// Give a small amount of gold as sacrifice reward
-		gold := 1
-		killer.Gold += gold
-		s.SendToCharacter(killer, fmt.Sprintf("The gods give you %d gold coin for your sacrifice.\r\n", gold))
+		// Give a small amount of coin as sacrifice reward (1 copper)
+		killer.Coin += 1
+		s.SendToCharacter(killer, "The gods give you 1c for your sacrifice.\r\n")
 	}
 }
 
@@ -1758,4 +1763,77 @@ func (s *Server) dismissAllFollowers(ch *types.Character) {
 			s.GameLoop.RemoveCharacter(follower)
 		}
 	}
+}
+
+// shopWorldAdapter adapts game.GameLoop to shops.WorldInterface so the shop
+// handler can query the current hour and instantiate items from templates.
+type shopWorldAdapter struct {
+	loop *game.GameLoop
+}
+
+func (a *shopWorldAdapter) GetCurrentHour() int {
+	if a.loop == nil || a.loop.WorldTime == nil {
+		return 12
+	}
+	return a.loop.WorldTime.Time.Hour
+}
+
+func (a *shopWorldAdapter) GetObjectTemplate(vnum int) *types.Object {
+	if a.loop == nil || a.loop.Resets == nil {
+		return nil
+	}
+	return a.loop.Resets.CreateObjFromTemplate(vnum)
+}
+
+func (a *shopWorldAdapter) CloneObject(template *types.Object) *types.Object {
+	if template == nil {
+		return nil
+	}
+	return a.GetObjectTemplate(template.Vnum)
+}
+
+// shopItemTypeMap mirrors pkg/game/reset.go's parseItemType helper. Used
+// only to translate loader.ShopData.BuyTypes ([]string) into the numeric
+// shops.Shop.BuyTypes ([]int) form at registry build time.
+var shopItemTypeMap = map[string]int{
+	"light":      int(types.ItemTypeLight),
+	"scroll":     int(types.ItemTypeScroll),
+	"wand":       int(types.ItemTypeWand),
+	"staff":      int(types.ItemTypeStaff),
+	"weapon":     int(types.ItemTypeWeapon),
+	"treasure":   int(types.ItemTypeTreasure),
+	"armor":      int(types.ItemTypeArmor),
+	"potion":     int(types.ItemTypePotion),
+	"clothing":   int(types.ItemTypeClothing),
+	"furniture":  int(types.ItemTypeFurniture),
+	"trash":      int(types.ItemTypeTrash),
+	"container":  int(types.ItemTypeContainer),
+	"drink":      int(types.ItemTypeDrinkCon),
+	"key":        int(types.ItemTypeKey),
+	"food":       int(types.ItemTypeFood),
+	"money":      int(types.ItemTypeMoney),
+	"boat":       int(types.ItemTypeBoat),
+	"fountain":   int(types.ItemTypeFountain),
+	"pill":       int(types.ItemTypePill),
+}
+
+// buildShopHandler converts the auto-registered loader shop data into a
+// shops.ShopRegistry and wires a handler against a GameLoop-backed
+// WorldInterface adapter.
+func buildShopHandler(world *loader.World, loop *game.GameLoop) *shops.ShopHandler {
+	registry := shops.NewShopRegistry()
+	for keeperVnum, data := range world.GetAllShops() {
+		s := shops.NewShop(keeperVnum)
+		s.ProfitBuy = data.ProfitBuy
+		s.ProfitSell = data.ProfitSell
+		s.OpenHour = data.OpenHour
+		s.CloseHour = data.CloseHour
+		for _, name := range data.BuyTypes {
+			if v, ok := shopItemTypeMap[name]; ok {
+				s.BuyTypes = append(s.BuyTypes, v)
+			}
+		}
+		registry.Register(s)
+	}
+	return shops.NewShopHandler(registry, &shopWorldAdapter{loop: loop})
 }

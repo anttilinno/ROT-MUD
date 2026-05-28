@@ -2481,12 +2481,7 @@ func (d *CommandDispatcher) cmdScore(ch *types.Character, args string) {
 		ch.PermStats[types.StatCon], ch.GetStat(types.StatCon)))
 
 	// Money
-	if ch.Platinum > 0 {
-		d.send(ch, fmt.Sprintf("You have %d platinum, %d gold and %d silver coins.\r\n",
-			ch.Platinum, ch.Gold, ch.Silver))
-	} else {
-		d.send(ch, fmt.Sprintf("You have %d gold and %d silver coins.\r\n", ch.Gold, ch.Silver))
-	}
+	d.send(ch, fmt.Sprintf("You have %s.\r\n", types.FormatCoinLong(ch.Coin)))
 
 	// Experience
 	if ch.Level < 51 { // Below immortal
@@ -2819,7 +2814,7 @@ func (d *CommandDispatcher) cmdCount(ch *types.Character, args string) {
 
 func (d *CommandDispatcher) cmdWorth(ch *types.Character, args string) {
 	if ch.IsNPC() {
-		d.send(ch, fmt.Sprintf("You have %d gold and %d silver.\r\n", ch.Gold, ch.Silver))
+		d.send(ch, fmt.Sprintf("You have %s.\r\n", types.FormatCoinLong(ch.Coin)))
 		return
 	}
 
@@ -2833,7 +2828,7 @@ func (d *CommandDispatcher) cmdWorth(ch *types.Character, args string) {
 		expNeeded = 0
 	}
 
-	d.send(ch, fmt.Sprintf("You have %d gold and %d silver,\r\n", ch.Gold, ch.Silver))
+	d.send(ch, fmt.Sprintf("You have %s,\r\n", types.FormatCoinLong(ch.Coin)))
 	d.send(ch, fmt.Sprintf("and %d experience (%d exp to level).\r\n", ch.Exp, expNeeded))
 }
 
@@ -5278,7 +5273,7 @@ func (d *CommandDispatcher) cmdLoad(ch *types.Character, args string) {
 			MaxMana:   mobTemplate.ManaDice.Number*mobTemplate.ManaDice.Size + mobTemplate.ManaDice.Bonus,
 			Move:      100,
 			MaxMove:   100,
-			Gold:      mobTemplate.Gold,
+			Coin:      int64(mobTemplate.Gold),
 			Alignment: mobTemplate.Alignment,
 			Position:  types.PosStanding,
 			InRoom:    ch.InRoom,

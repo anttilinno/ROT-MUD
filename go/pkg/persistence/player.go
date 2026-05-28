@@ -30,11 +30,9 @@ type PlayerSave struct {
 	// Stats
 	Stats [5]int `json:"stats"`
 
-	// Money
-	Gold     int `json:"gold"`
-	Silver   int `json:"silver"`
-	Platinum int `json:"platinum"`
-	BankGold int `json:"bank_gold,omitempty"`
+	// Money (total copper pieces; see pkg/types/currency.go).
+	Coin     int64 `json:"coin"`
+	BankCoin int64 `json:"bank_coin,omitempty"`
 
 	// Experience
 	Exp   int `json:"exp"`
@@ -221,9 +219,7 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 		Move:      ch.Move,
 		MaxMove:   ch.MaxMove,
 		Stats:     ch.PermStats,
-		Gold:      int(ch.Gold),
-		Silver:    int(ch.Silver),
-		Platinum:  int(ch.Platinum),
+		Coin:      ch.Coin,
 		Exp:       int(ch.Exp),
 		Trust:     ch.Trust,
 		Played:    ch.Played,
@@ -247,7 +243,7 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 		save.Bamfin = ch.PCData.Bamfin
 		save.Bamfout = ch.PCData.Bamfout
 		save.Clan = ch.PCData.Clan
-		save.BankGold = ch.PCData.BankGold
+		save.BankCoin = ch.PCData.BankCoin
 		save.QuestProgress = ch.PCData.QuestProgress
 		save.ForgetList = ch.PCData.ForgetList
 		save.Aliases = ch.PCData.Aliases
@@ -354,9 +350,7 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 	ch.Move = save.Move
 	ch.MaxMove = save.MaxMove
 	ch.PermStats = save.Stats
-	ch.Gold = save.Gold
-	ch.Silver = save.Silver
-	ch.Platinum = save.Platinum
+	ch.Coin = save.Coin
 	ch.Exp = int(save.Exp)
 	ch.Trust = save.Trust
 	ch.Played = save.Played
@@ -391,7 +385,7 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 			Bamfin:        save.Bamfin,
 			Bamfout:       save.Bamfout,
 			Clan:          save.Clan,
-			BankGold:      save.BankGold,
+			BankCoin:      save.BankCoin,
 			QuestProgress: save.QuestProgress,
 			ForgetList:    save.ForgetList,
 			Aliases:       save.Aliases,

@@ -24,6 +24,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 10: Mob Migration** - All mob type templates expressed in TOML with verified behavior parity
 - [ ] **Phase 11: Area & Item Traits** - Extend the existing area loader with trait parsing for rooms and items; annotate existing area files with NoMagic zones, silver/fire weapons, etc.
 - [ ] **Phase 12: Extensibility Proof** - New race (Lizardman) added by data file only, zero Go diff, with Lua behavior hook
+- [ ] **Phase 13: Economic Overhaul** - Add durability/repair, smith custom crafting, identify fees, and bank fees so the economy has real coin sinks; rebalance mob drops to a stable source/sink ratio (see `.planning/ECONOMY.md` for sub-phase detail)
+- [ ] **Phase 14: LLM-Driven NPCs** - Local-LLM-backed dialog for shopkeepers/smiths/sages (Tier 1) and plan-once tactical combat for area bosses (Tier 2), with first-class scripted fallback, circuit breaker, and feature flag (see `.planning/LLM-NPC.md` for sub-phase detail)
 
 ## Phase Details
 
@@ -166,10 +168,42 @@ Plans:
   4. The full test suite (including the Phase 1 golden-master parity for existing races, classes, skills, spells, mobs, rooms, and items) still passes after the new race is added
 **Plans**: TBD
 
+### Phase 13: Economic Overhaul
+**Goal**: The game economy has real coin sinks (durability/repair, race+class crafting, magical enchants, identify fees, bank fees, RNG loot lottery, gods + temples + faction hubs, player housing) and mob drops are rebalanced to a stable source/sink ratio near 1.0 per level bucket
+**Depends on**: None (independent of trait system; can begin once the currency commit lands)
+**Requirements**: ECON-01, ECON-02, ECON-03, ECON-04, ECON-05, ECON-06, ECON-07, ECON-08, ECON-09, ECON-10
+**Success Criteria** (what must be TRUE):
+  1. A coin ledger records every credit/debit on `ch.Coin` and `ch.PCData.BankCoin` with txn type, amount, source/target, and tick; sim tests produce a per-level-bucket source/sink ratio report
+  2. Weapons and armor have hits-based durability that ticks down in combat; broken items wear-fail with halved stats but are not destroyed; `repair` command at smith NPCs restores durability at a cost scaled by item Cost and damage fraction
+  3. Master smith NPCs craft race+class-aware gear from TOML recipes across 12 shared slots plus 1 race-signature slot; crafting is 3-tier level-gated (T1 L1+, T2 L31+, T3 L76+); T3 is best-in-slot at level cap and requires recipe-specific boss-drop materials; on-affinity (race+class match) wearers unlock 4/6/8/13-piece set bonuses; off-affinity wearers cap at T2; all crafted items are bind-on-pickup with a salvage path that refunds ~50% coin / ~80% materials / 100% craft-XP
+  4. Items at vnum-level ≥ 20 drop unidentified; sage NPCs charge a flat fraction of `item.Cost` to identify; identify cost scales by rarity (Magic / Rare / Set / Unique) for lottery drops
+  5. Bank deposits remain free; withdrawals at non-home bankers and player-to-player transfers charge a configurable fee
+  6. After all sinks land, `mobCoinDrop` is rebalanced and the death-loss percentage reduced so the sim source/sink ratio per level bucket lands within ±10% of 1.0; the death penalty drops from 10% to 5% of carried coin
+  7. Enchanter NPCs add one magical enchant slot to crafted T2+/T3 and lottery-rare-or-better found items; three difficulty tiers (Simple / Greater / Master) with surfaced odds (95% / 75% / 40%); Master-tier fail can brick the item (10% destroy chance); reagents are tradeable on the player market; `scour` strips an enchant for re-enchanting at a coin cost
+  8. Mob-killed equipment drops at degraded durability (`max(0.10, 1 - dmg_taken_pct) * baseDurabilityMax`), with chest/quest/shop/bank items exempt; rarity tiers (Normal / Magic / Rare / Lottery-Set / Unique) roll affixes scoped by base type and ilvl; `MagicFind` stat shifts rarity weights with a soft cap; auto-loot filters honor rarity and durability thresholds
+  9. Pantheon of 6-9 gods loads from TOML; players pick at L10+ via `pray <god>`; `sacrifice` / `tithe` / `offer` / `boon` / `atone` / `favor` / `pay_with_favor` / `bribe` commands implemented and persisted; each god has a temple shop with tiered access (open / worshipper / cleric / favored) and opposing-alignment refusal; cleric-of-this-god discount is the deepest; coin and favor are both valid currencies for temple purchases (favor-only items exist for iconic relics); tithe + decay loop creates recurring favor pressure on real-time clock. Three hub cities load in first pass: Midgaard (good/lawful), Shadowport (evil), Skullhold (chaotic) — each with bank, smiths, enchanters, sages, temple complex, housing market, and MUD school exit destination; symmetrical alignment-refusal at hub gates; wilderness shrines sit between hubs for one-shrine-per-god roadside coverage. City guards enforce alignment thresholds (newbie grace L<5, suspicious -350 to -700, hostile <-700); MUD school graduation offers a non-binding destination choice (good / neutral / evil / chaotic) with a guard-sergeant escort that one-way-teleports new grads to the appropriate hub plaza; cross-faction city entry is gated through atonement, disguise/polymorph, or per-real-day-limited gate bribes
+  10. Innkeeper-run housing markets in each hub offer four rent tiers (Room 5g / Cottage 50g / Manor 500g / Fortress 2p per real-time week); rent in the player's registered home hub (shared E5 hometown field) is the listed price, cross-hub rent is 2× listed; weekly real-time auto-debit from bank then carried coin, with a 7-day grace + 30-day freeze + auto-downgrade-or-eviction ladder when balance runs out; `rent` / `unrent` / `upgrade` / `recall home` / `house` commands implemented; six one-time upgrades available (smith forge, workbench, alchemy bench, personal safe, altar, trophy hall) each adding a rent multiplier and replicating standard NPC behavior in-house (T3 craft still requires master-smith pilgrimage; enchant brick risk unchanged); `change_hometown <city>` costs 1p and 14-day real-time cooldown; storage room slot count scales with tier and is bank-grade (no decay, no carry-weight)
+**Plans**: TBD
+**Reference**: `.planning/ECONOMY.md` for sub-phase breakdown (E1 baseline → E2 durability → E3 race+class crafting → E3.5 enchants → E4 identify → E5 bank fees → E6 rebalance → E7 loot lottery + damaged drops → E8 gods + favor + temple shops + three-hub geography → E9 player housing + per-hub markets), open decisions, and risk register
+
+### Phase 14: LLM-Driven NPCs
+**Goal**: Selected NPCs (shopkeepers, smiths, sages, area bosses) are driven by a local LLM for dialog and tactical combat planning, with a first-class scripted fallback that runs identically when the LLM is unavailable
+**Depends on**: None — independent of trait system and economy overhaul; benefits from Phases 4 (Lua hook taxonomy) and 8-12 (data-driven mob kits) but does not block on them
+**Requirements**: LLM-01, LLM-02, LLM-03, LLM-04, LLM-05, LLM-06
+**Success Criteria** (what must be TRUE):
+  1. Async LLM worker pool calls a local endpoint (Ollama / llama.cpp / vLLM); requests are non-blocking, results dispatch back through the game loop; per-mob serial with overflow drop
+  2. Scripted fallback runs identically to current behavior when the LLM is off, unreachable, slow, or returns invalid output; a per-endpoint circuit breaker opens after 5/10 failures and recovers via half-open probing; `llmstat` immortal command exposes queue depth, breaker state, p50/p95 latency, and failure rate
+  3. Tier 1 (dialog) NPCs flagged with `llm_enabled = true` emit tool calls (`say`, `emote`, `set_price`, `offer_item`, `refuse`) which the server validates and executes; persona + per-(mob, player) dialog memory persisted to JSONL
+  4. Tier 2 (combat) bosses flagged with `llm_combat = true` produce a structured battle plan on aggro (opener, HP-phase rotations, replan triggers, taunt lines, exploit notes); per-round combat is a cheap scripted FSM walking the plan; replan triggers fire async without blocking the round
+  5. Post-fight post-mortem stores structured lessons keyed by `(mob_vnum, player_id)`; rematches load lessons into the plan-call context, producing visibly escalating mob tactics
+  6. Phase 1 golden-master combat parity still passes with the LLM feature flag off; an `llm_smoke_test.go` mocks the endpoint and verifies tool validation, fallback paths, circuit breaker transitions, and overflow handling
+**Plans**: TBD
+**Reference**: `.planning/LLM-NPC.md` for sub-phase breakdown (N1 worker pool → N6 Tier 2 rollout), tool surface, schema definitions, and risk register
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14
 
 **Parallelization opportunities** (parallelization=true in config):
 - Phase 4 (Lua Scripting Host) is independent of Phases 3/5/6 and can run in parallel once Phase 2 lands
@@ -177,6 +211,8 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 - Phases 5 (skills/spells loaders) and 6 (mob loaders) can run in parallel after Phase 3 lands
 - Phases 8, 9, 10 (migration) can run in parallel after their respective loader phases and Phase 7 land
 - Phase 11 (area/item traits) can run in parallel with Phases 8/9/10 once Phase 7 lands (it extends the existing area loader, so it does not need the race/class/skill/spell/mob loader phases)
+- Phase 13 (economic overhaul) is independent of the trait system and can run in parallel with Phases 2–12 once the currency commit lands
+- Phase 14 (LLM-driven NPCs) is independent of all other phases; can run anytime in parallel. Benefits from Phase 4 (Lua hook taxonomy) and the data-driven mob kits from Phases 8/10 landing first, but stub events suffice
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -192,3 +228,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 10. Mob Migration | 0/TBD | Not started | - |
 | 11. Area & Item Traits | 0/TBD | Not started | - |
 | 12. Extensibility Proof | 0/TBD | Not started | - |
+| 13. Economic Overhaul | 0/TBD | Not started | - |
+| 14. LLM-Driven NPCs | 0/TBD | Not started | - |

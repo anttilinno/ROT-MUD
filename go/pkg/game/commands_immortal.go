@@ -179,8 +179,8 @@ func (d *CommandDispatcher) cmdMstat(ch *types.Character, args string) {
 	d.send(ch, fmt.Sprintf("HP: %d/%d  Mana: %d/%d  Move: %d/%d\r\n",
 		victim.Hit, victim.MaxHit, victim.Mana, victim.MaxMana, victim.Move, victim.MaxMove))
 
-	d.send(ch, fmt.Sprintf("Gold: %d  Silver: %d  Exp: %d\r\n",
-		victim.Gold, victim.Silver, victim.Exp))
+	d.send(ch, fmt.Sprintf("Coin: %s  Exp: %d\r\n",
+		types.FormatCoin(victim.Coin), victim.Exp))
 
 	d.send(ch, fmt.Sprintf("Str: %d  Int: %d  Wis: %d  Dex: %d  Con: %d\r\n",
 		victim.GetStat(types.StatStr), victim.GetStat(types.StatInt),
@@ -749,7 +749,7 @@ func (d *CommandDispatcher) cmdMset(ch *types.Character, args string) {
 			d.send(ch, "Gold must be positive.\r\n")
 			return
 		}
-		victim.Gold = value
+		victim.Coin = int64(value) * types.CopperPerGold
 		d.send(ch, "Ok.\r\n")
 
 	case "silver":
@@ -757,7 +757,31 @@ func (d *CommandDispatcher) cmdMset(ch *types.Character, args string) {
 			d.send(ch, "Silver must be positive.\r\n")
 			return
 		}
-		victim.Silver = value
+		victim.Coin = int64(value) * types.CopperPerSilver
+		d.send(ch, "Ok.\r\n")
+
+	case "copper":
+		if value < 0 {
+			d.send(ch, "Copper must be positive.\r\n")
+			return
+		}
+		victim.Coin = int64(value)
+		d.send(ch, "Ok.\r\n")
+
+	case "platinum":
+		if value < 0 {
+			d.send(ch, "Platinum must be positive.\r\n")
+			return
+		}
+		victim.Coin = int64(value) * types.CopperPerPlatinum
+		d.send(ch, "Ok.\r\n")
+
+	case "coin":
+		if value < 0 {
+			d.send(ch, "Coin must be positive.\r\n")
+			return
+		}
+		victim.Coin = int64(value)
 		d.send(ch, "Ok.\r\n")
 
 	case "exp":
