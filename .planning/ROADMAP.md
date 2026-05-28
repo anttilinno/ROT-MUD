@@ -170,7 +170,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Success Criteria** (what must be TRUE):
   1. A coin ledger records every credit/debit on `ch.Coin` and `ch.PCData.BankCoin` with txn type, amount, source/target, and tick; sim tests produce a per-level-bucket source/sink ratio report
   2. Weapons and armor have hits-based durability that ticks down in combat; broken items wear-fail with halved stats but are not destroyed; `repair` command at smith NPCs restores durability at a cost scaled by item Cost and damage fraction
-  3. Master smith NPCs craft bespoke items from base+affix recipes (TOML data); crafted item stats are hard-capped at the level of the best comparable area drop and are bound on pickup
+  3. Master smith NPCs craft race+class-aware gear from TOML recipes across 12 shared slots plus 1 race-signature slot; crafting is 3-tier level-gated (T1 L1+, T2 L31+, T3 L76+); T3 is best-in-slot at level cap and requires recipe-specific boss-drop materials; on-affinity (race+class match) wearers unlock 4/6/8/13-piece set bonuses; off-affinity wearers cap at T2; all crafted items are bind-on-pickup with a salvage path that refunds ~50% coin / ~80% materials / 100% craft-XP
   4. Items at vnum-level ≥ 20 drop unidentified; sage NPCs charge a flat fraction of `item.Cost` to identify
   5. Bank deposits remain free; withdrawals at non-home bankers and player-to-player transfers charge a configurable fee
   6. After all sinks land, `mobCoinDrop` is rebalanced and the death-loss percentage reduced so the sim source/sink ratio per level bucket lands within ±10% of 1.0; the death penalty drops from 10% to 5% of carried coin
