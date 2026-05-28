@@ -4,10 +4,10 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: Phase 1 context gathered
-last_updated: "2026-04-17T11:05:22.421Z"
+last_updated: "2026-04-19T16:54:00.574Z"
 last_activity: 2026-04-17
 progress:
-  total_phases: 12
+  total_phases: 14
   completed_phases: 1
   total_plans: 4
   completed_plans: 4
@@ -69,6 +69,10 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 None yet.
+
+### Roadmap Evolution
+
+- 2026-05-28: Merged divergent master — added Phase 13 Economic Overhaul (durability/repair, race+class crafting, enchants, identify/bank fees, loot lottery, gods+temples, player housing; see `.planning/ECONOMY.md`) and Phase 14 LLM-Driven NPCs (Tier 1 dialog + Tier 2 boss combat planning, scripted fallback, circuit breaker; see `.planning/LLM-NPC.md`). Both independent of trait system; can run in parallel with Phases 2-12. Earlier Ollama-only Phase 13 draft superseded by the richer Phase 14.
 
 ### Blockers/Concerns
 
