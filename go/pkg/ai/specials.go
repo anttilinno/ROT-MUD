@@ -592,13 +592,12 @@ func specThief(ch *types.Character, ctx *SpecialContext) bool {
 		return false
 	}
 
-	// Try to steal gold
+	// Try to pickpocket coin
 	if combat.NumberPercent() < 50 {
-		// Steal some gold
-		gold := victim.Gold * combat.NumberRange(1, 20) / 100
-		if gold > 0 {
-			ch.Gold += gold / 2
-			victim.Gold -= gold
+		coin := victim.Coin * int64(combat.NumberRange(1, 20)) / 100
+		if coin > 0 {
+			ch.Coin += coin / 2
+			victim.Coin -= coin
 
 			if ctx.Output != nil {
 				ctx.Output(victim, "You feel lighter.\r\n")
@@ -640,13 +639,13 @@ func specNasty(ch *types.Character, ctx *SpecialContext) bool {
 
 	switch combat.NumberBits(2) {
 	case 0:
-		// Steal gold
-		gold := victim.Gold / 10
-		victim.Gold -= gold
-		ch.Gold += gold
+		// Steal coin
+		coin := victim.Coin / 10
+		victim.Coin -= coin
+		ch.Coin += coin
 
 		if ctx.ActToRoom != nil {
-			ctx.ActToRoom("$n rips apart your coin purse, spilling your gold!", ch, victim, ctx.Output)
+			ctx.ActToRoom("$n rips apart your coin purse, spilling your coins!", ch, victim, ctx.Output)
 		}
 		return true
 

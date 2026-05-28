@@ -264,16 +264,22 @@ func (d *CommandDispatcher) cmdSplit(ch *types.Character, args string) {
 		return
 	}
 
-	// Parse amount
-	var amount int
-	_, err := fmt.Sscanf(args, "%d", &amount)
-	if err != nil || amount <= 0 {
-		d.send(ch, "You must split a positive amount of gold.\r\n")
+	// Parse amount with denomination support
+	amount, all, ok := parseCoinArg(args)
+	if !ok {
+		d.send(ch, "Split how much? (e.g. 'split 5 gold', 'split 100 copper', 'split all')\r\n")
+		return
+	}
+	if all {
+		amount = ch.Coin
+	}
+	if amount <= 0 {
+		d.send(ch, "You must split a positive amount.\r\n")
 		return
 	}
 
-	if amount > ch.Gold {
-		d.send(ch, "You don't have that much gold.\r\n")
+	if amount > ch.Coin {
+		d.send(ch, "You don't have that much.\r\n")
 		return
 	}
 
@@ -285,7 +291,7 @@ func (d *CommandDispatcher) cmdSplit(ch *types.Character, args string) {
 
 	// Count group members in the same room
 	members := d.getGroupMembers(leader)
-	memberCount := 0
+	memberCount := int64(0)
 	for _, m := range members {
 		if m.InRoom == ch.InRoom {
 			memberCount++
@@ -302,12 +308,12 @@ func (d *CommandDispatcher) cmdSplit(ch *types.Character, args string) {
 	extra := amount - (share * memberCount)
 
 	if share == 0 {
-		d.send(ch, "That's not enough gold to split.\r\n")
+		d.send(ch, "That's not enough to split.\r\n")
 		return
 	}
 
 	// Deduct from splitter
-	ch.Gold -= amount
+	ch.Coin -= amount
 
 	// Give to all members in the room
 	for _, member := range members {
@@ -316,11 +322,13 @@ func (d *CommandDispatcher) cmdSplit(ch *types.Character, args string) {
 		}
 		if member == ch {
 			// Splitter keeps their share plus any remainder
-			member.Gold += share + extra
-			d.send(member, fmt.Sprintf("You split %d gold. Your share is %d gold.\r\n", amount, share+extra))
+			member.Coin += share + extra
+			d.send(member, fmt.Sprintf("You split %s. Your share is %s.\r\n",
+				types.FormatCoin(amount), types.FormatCoin(share+extra)))
 		} else {
-			member.Gold += share
-			d.send(member, fmt.Sprintf("%s splits %d gold. Your share is %d gold.\r\n", ch.Name, amount, share))
+			member.Coin += share
+			d.send(member, fmt.Sprintf("%s splits %s. Your share is %s.\r\n",
+				ch.Name, types.FormatCoin(amount), types.FormatCoin(share)))
 		}
 	}
 }

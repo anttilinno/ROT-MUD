@@ -23,7 +23,7 @@ func TestPlayerSave(t *testing.T) {
 		ch.MaxMana = 100
 		ch.Move = 80
 		ch.MaxMove = 100
-		ch.Gold = 500
+		ch.Coin = 500 // 5 silver
 		ch.Exp = 10000
 		ch.Alignment = 350
 		ch.PermStats[types.StatStr] = 18
@@ -58,9 +58,8 @@ func TestPlayerLoad(t *testing.T) {
 		original.MaxMana = 150
 		original.Move = 90
 		original.MaxMove = 120
-		original.Gold = 1000
-		original.Silver = 500
-		original.Platinum = 10
+		// 10pp + 10gp + 5sp + 0cp = 10000 + 1000 + 500 = 11500 copper
+		original.Coin = 11500
 		original.Exp = 50000
 		original.Alignment = -500
 		original.PermStats[types.StatStr] = 20
@@ -93,8 +92,8 @@ func TestPlayerLoad(t *testing.T) {
 		if loaded.MaxHit != 250 {
 			t.Errorf("expected max_hit 250, got %d", loaded.MaxHit)
 		}
-		if loaded.Gold != 1000 {
-			t.Errorf("expected gold 1000, got %d", loaded.Gold)
+		if loaded.Coin != 11500 {
+			t.Errorf("expected coin 11500, got %d", loaded.Coin)
 		}
 		if loaded.Alignment != -500 {
 			t.Errorf("expected alignment -500, got %d", loaded.Alignment)

@@ -323,9 +323,9 @@ func (d *CommandDispatcher) getFromContainer(ch *types.Character, itemName, cont
 
 	container.RemoveContent(obj)
 
-	// If looting money from own corpse, add directly to gold
+	// If looting money from own corpse, add directly to coin purse
 	if obj.ItemType == types.ItemTypeMoney && container.ItemType == types.ItemTypeCorpsePC && container.Owner == ch.Name {
-		ch.Gold += obj.Cost
+		ch.Coin += int64(obj.Cost)
 		d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
 		ActToRoom("$n gets $p from $P.", ch, nil, obj, d.Output)
 		return
@@ -353,9 +353,9 @@ func (d *CommandDispatcher) getAllFromContainer(ch *types.Character, container *
 
 		container.RemoveContent(obj)
 
-		// If looting money from own corpse, add directly to gold
+		// If looting money from own corpse, add directly to coin purse
 		if obj.ItemType == types.ItemTypeMoney && isOwnCorpse {
-			ch.Gold += obj.Cost
+			ch.Coin += int64(obj.Cost)
 			d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
 			found = true
 			continue
@@ -749,21 +749,18 @@ func (d *CommandDispatcher) cmdSacrifice(ch *types.Character, args string) {
 		return
 	}
 
-	// Calculate gold reward (1 gold per 10 levels of item, minimum 1)
-	gold := obj.Level / 10
-	if gold < 1 {
-		gold = 1
+	// Sacrifice reward — 5% of the item's base copper value, floor 1cp.
+	coinReward := int64(obj.Cost) / 20
+	if coinReward < 1 {
+		coinReward = 1
 	}
 
 	// Sacrifice the object
 	ObjFromRoom(obj)
-	ch.Gold += gold
+	ch.Coin += coinReward
 
-	if gold == 1 {
-		d.send(ch, fmt.Sprintf("The gods give you one gold coin for your sacrifice of %s.\r\n", obj.ShortDesc))
-	} else {
-		d.send(ch, fmt.Sprintf("The gods give you %d gold coins for your sacrifice of %s.\r\n", gold, obj.ShortDesc))
-	}
+	d.send(ch, fmt.Sprintf("The gods give you %s for your sacrifice of %s.\r\n",
+		types.FormatCoin(coinReward), obj.ShortDesc))
 	ActToRoom("$n sacrifices $p to the gods.", ch, nil, obj, d.Output)
 }
 

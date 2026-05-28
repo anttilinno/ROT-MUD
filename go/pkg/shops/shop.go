@@ -51,23 +51,23 @@ func (s *Shop) IsOpen(hour int) bool {
 	return hour >= s.OpenHour || hour < s.CloseHour
 }
 
-// GetBuyPrice calculates price shopkeeper pays to buy an item
-func (s *Shop) GetBuyPrice(obj *types.Object, ch *types.Character) int {
+// GetBuyPrice calculates price (in copper) shopkeeper pays for an item.
+func (s *Shop) GetBuyPrice(obj *types.Object, ch *types.Character) int64 {
 	if obj == nil {
 		return 0
 	}
 
-	// Base price
-	price := obj.Cost
+	// Base price (Object.Cost is now copper pieces)
+	price := int64(obj.Cost)
 
 	// Apply shop profit margin (lower = shop pays less)
-	price = price * s.ProfitBuy / 100
+	price = price * int64(s.ProfitBuy) / 100
 
 	// Apply haggle skill bonus
-	haggleBonus := getHaggleBonus(ch)
+	haggleBonus := int64(getHaggleBonus(ch))
 	price = price * (100 + haggleBonus) / 100
 
-	// Minimum price of 1
+	// Minimum price of 1cp on any non-free item
 	if price < 1 && obj.Cost > 0 {
 		price = 1
 	}
@@ -75,23 +75,23 @@ func (s *Shop) GetBuyPrice(obj *types.Object, ch *types.Character) int {
 	return price
 }
 
-// GetSellPrice calculates price customer pays to buy an item
-func (s *Shop) GetSellPrice(obj *types.Object, ch *types.Character) int {
+// GetSellPrice calculates price (in copper) the customer pays for an item.
+func (s *Shop) GetSellPrice(obj *types.Object, ch *types.Character) int64 {
 	if obj == nil {
 		return 0
 	}
 
-	// Base price
-	price := obj.Cost
+	// Base price (Object.Cost is now copper pieces)
+	price := int64(obj.Cost)
 
 	// Apply shop profit margin (higher = customer pays more)
-	price = price * s.ProfitSell / 100
+	price = price * int64(s.ProfitSell) / 100
 
 	// Apply haggle skill bonus (reduces price for good hagglers)
-	haggleBonus := getHaggleBonus(ch)
+	haggleBonus := int64(getHaggleBonus(ch))
 	price = price * (100 - haggleBonus/2) / 100
 
-	// Minimum price of 1
+	// Minimum price of 1cp on any non-free item
 	if price < 1 && obj.Cost > 0 {
 		price = 1
 	}

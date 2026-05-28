@@ -703,9 +703,8 @@ func (h *LoginHandler) initializeNewCharacter(ch *types.Character) {
 		ch.PCData.Condition[types.CondDrunk] = 0
 	}
 
-	// Starting gold
-	ch.Gold = 20
-	ch.Silver = 0
+	// Starting coin: 2 silver (200 copper) — a humble peasant's purse.
+	ch.Coin = 2 * types.CopperPerSilver
 
 	// Alignment (neutral by default, may be set by alignment choice)
 	if ch.Alignment == 0 {

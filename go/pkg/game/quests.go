@@ -257,7 +257,9 @@ func (qs *QuestSystem) CompleteQuest(ch *types.Character, questID int) bool {
 			quest := qs.GetQuest(questID)
 			if quest != nil {
 				ch.Exp += quest.RewardXP
-				ch.Gold += quest.RewardGold
+				// RewardGold stays denominated in gold pieces in the quest
+				// schema; convert to copper at award time.
+				ch.Coin += int64(quest.RewardGold) * types.CopperPerGold
 			}
 
 			return true

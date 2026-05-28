@@ -192,11 +192,12 @@ func (d *CommandDispatcher) cmdSteal(ch *types.Character, args string) {
 		return
 	}
 
-	// Check for stealing gold
-	if strings.ToLower(itemName) == "gold" || strings.ToLower(itemName) == "coins" {
-		// Stealing gold
-		if victim.Gold <= 0 {
-			d.send(ch, "They don't have any gold.\r\n")
+	// Check for stealing coin
+	low := strings.ToLower(itemName)
+	if low == "gold" || low == "coins" || low == "coin" || low == "silver" ||
+		low == "copper" || low == "platinum" {
+		if victim.Coin <= 0 {
+			d.send(ch, "They don't have any coin.\r\n")
 			return
 		}
 
@@ -216,16 +217,21 @@ func (d *CommandDispatcher) cmdSteal(ch *types.Character, args string) {
 			return
 		}
 
-		// Success - steal 1/10 to 1/4 of their gold
-		amount := combat.NumberRange(victim.Gold/10, victim.Gold/4)
+		// Success - steal 1/10 to 1/4 of their coin
+		lo := victim.Coin / 10
+		hi := victim.Coin / 4
+		if hi < lo {
+			hi = lo
+		}
+		amount := int64(combat.NumberRange(int(lo), int(hi)))
 		if amount <= 0 {
 			amount = 1
 		}
 
-		ch.Gold += amount
-		victim.Gold -= amount
+		ch.Coin += amount
+		victim.Coin -= amount
 
-		d.send(ch, fmt.Sprintf("You steal %d gold coins.\r\n", amount))
+		d.send(ch, fmt.Sprintf("You steal %s.\r\n", types.FormatCoin(amount)))
 
 		if d.Skills != nil {
 			d.Skills.CheckImprove(ch, "steal", true, 2)
@@ -344,9 +350,9 @@ func (d *CommandDispatcher) cmdPeek(ch *types.Character, args string) {
 		}
 	}
 
-	// Also show their gold if peeking at NPC
-	if victim.IsNPC() && victim.Gold > 0 {
-		d.send(ch, fmt.Sprintf("  %d gold coins\r\n", victim.Gold))
+	// Also show their coin if peeking at NPC
+	if victim.IsNPC() && victim.Coin > 0 {
+		d.send(ch, fmt.Sprintf("  %s in coins\r\n", types.FormatCoin(victim.Coin)))
 	}
 
 	if d.Skills != nil {

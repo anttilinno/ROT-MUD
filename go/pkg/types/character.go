@@ -71,10 +71,9 @@ type Character struct {
 	// Affects
 	Affected AffectList // Active affects
 
-	// Money
-	Gold     int // Gold coins
-	Silver   int // Silver coins
-	Platinum int // Platinum coins
+	// Money — stored as total copper pieces. See pkg/types/currency.go
+	// for denomination helpers (1pp = 10gp = 100sp = 1000cp).
+	Coin int64
 
 	// Experience
 	Exp   int // Experience points
@@ -161,7 +160,7 @@ type PCData struct {
 	Points          int // Creation points spent
 	OverspentPoints int // Creation points overspent (affects XP per level)
 	Security        int // Builder security level
-	BankGold        int // Gold stored in bank
+	BankCoin        int64 // Coin stored in bank, in copper pieces
 
 	// Dupe tracking (alternate character names owned by same player)
 	Dupes []string // List of alternate character names

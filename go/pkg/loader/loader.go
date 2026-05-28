@@ -2,6 +2,7 @@ package loader
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"path/filepath"
 	"strings"
@@ -9,6 +10,56 @@ import (
 	"github.com/pelletier/go-toml/v2"
 	"rotmud/pkg/types"
 )
+
+// mobCoinDrop computes the copper-piece purse a mob carries.
+//
+//	If the TOML 'gold' field is set, treat its number as copper (historical
+//	"gold" data is now reinterpreted under the new currency model) and
+//	randomise ±50%.
+//
+//	If unset (the common case — most legacy mob files have no gold field),
+//	fall back to a level-scaled curve: lv * 10 copper, then randomise ±50%.
+//	Linear scaling keeps the medieval feel intact at endgame; most player
+//	income should come from looted gear sold to shops, not mob purses.
+//
+//	Casters (ActMage / ActCleric) carry 25% more, plain warriors 33% less
+//	(common bandits, not wealthy).
+//
+//	Indicative median purses:
+//	  L1   ~1c       (a single copper)
+//	  L10  ~1s       (a coin or two)
+//	  L20  ~2s       (half a day's wage)
+//	  L50  ~5s       (a respectable purse)
+//	  L100 ~1g       (a heroic haul)
+func mobCoinDrop(tmpl *MobileData) int64 {
+	var base int64
+	if tmpl.Gold > 0 {
+		base = int64(tmpl.Gold)
+	} else {
+		base = int64(tmpl.Level) * 10
+	}
+	// Class adjustments — only when using the level-scaled fallback.
+	if tmpl.Gold == 0 {
+		for _, f := range tmpl.ActFlags {
+			switch strings.ToLower(f) {
+			case "mage", "cleric":
+				base = base * 5 / 4
+			case "warrior":
+				base = base * 2 / 3
+			}
+		}
+	}
+	if base <= 0 {
+		return 0
+	}
+	// Random in [50%, 150%].
+	lo := base / 2
+	hi := base * 3 / 2
+	if hi <= lo {
+		return base
+	}
+	return lo + rand.Int63n(hi-lo+1)
+}
 
 // LoadConfigFromString parses config from TOML string
 func LoadConfigFromString(data string) (*Config, error) {
@@ -184,7 +235,81 @@ func (l *AreaLoader) LoadAll() (*World, error) {
 	// Resolve room exits
 	l.resolveExits(world)
 
+	// Auto-register shops for any keeper mob that carries inv_only items.
+	// Historic .are conversions don't include [mobiles.shop] sections; this
+	// fills the gap so existing keeper inventories actually become shoppable.
+	autoRegisterShops(world)
+
 	return world, nil
+}
+
+// autoRegisterShops scans room mob_resets for inv_only equipment. Any mob
+// vnum that gets stocked this way and lacks an explicit [mobiles.shop]
+// section is registered with a default ShopData derived from the keeper's
+// name (smart per-keyword BuyTypes filter, otherwise general store).
+func autoRegisterShops(world *World) {
+	for _, room := range world.Rooms {
+		for _, mr := range room.MobResets {
+			if world.Shops[mr.Vnum] != nil {
+				continue // explicit shop config already present
+			}
+			hasInvOnly := false
+			for _, eq := range mr.Equips {
+				if eq.InvOnly {
+					hasInvOnly = true
+					break
+				}
+			}
+			if !hasInvOnly {
+				continue
+			}
+			tmpl := world.MobTemplates[mr.Vnum]
+			if tmpl == nil {
+				continue
+			}
+			world.Shops[mr.Vnum] = defaultShopFor(tmpl)
+		}
+	}
+}
+
+// defaultShopFor constructs a ShopData for a keeper mob based on the
+// keeper's short description and keywords. Margins favor the shop on both
+// sides (player buys at 120% cost, sells at 50% cost) — typical small-town
+// merchant exploiting adventurers' need for cash.
+func defaultShopFor(tmpl *MobileData) *ShopData {
+	desc := strings.ToLower(tmpl.ShortDesc + " " + strings.Join(tmpl.Keywords, " "))
+	contains := func(s string) bool { return strings.Contains(desc, s) }
+
+	var buy []string
+	switch {
+	case contains("alchem"), contains("apothec"), contains("potion"):
+		buy = []string{"potion", "pill"}
+	case contains("scribe"), contains("scroll"):
+		buy = []string{"scroll"}
+	case contains("wand"), contains("staff"), contains("mage"):
+		buy = []string{"wand", "staff", "scroll", "potion"}
+	case contains("smith"), contains("blacksmith"), contains("weaponsmith"):
+		buy = []string{"weapon", "armor"}
+	case contains("armorer"), contains("armourer"), contains("armor"):
+		buy = []string{"armor"}
+	case contains("baker"), contains("grocer"), contains("butcher"):
+		buy = []string{"food", "drink"}
+	case contains("tavern"), contains("barkeep"), contains("innkeeper"):
+		buy = []string{"drink", "food"}
+	case contains("light"), contains("lantern"), contains("candle"):
+		buy = []string{"light"}
+	default:
+		// General store — buys most adventurer detritus
+		buy = []string{"armor", "weapon", "treasure", "light", "food", "drink", "potion", "scroll", "wand", "staff", "clothing"}
+	}
+
+	return &ShopData{
+		BuyTypes:   buy,
+		ProfitBuy:  50,  // shop pays 50% of base cost when buying from player
+		ProfitSell: 120, // player pays 120% of base cost when buying from shop
+		OpenHour:   0,
+		CloseHour:  24,
+	}
 }
 
 // loadArea loads a single area directory
@@ -573,7 +698,7 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	ch.LongDesc = tmpl.LongDesc
 	ch.Desc = tmpl.Description
 	ch.Alignment = tmpl.Alignment
-	ch.Gold = tmpl.Gold
+	ch.Coin = mobCoinDrop(tmpl)
 	ch.HitRoll = tmpl.Hitroll
 
 	// Parse sex

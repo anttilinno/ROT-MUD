@@ -304,12 +304,12 @@ func (c *CombatSystem) handlePlayerDeath(killer, victim *types.Character) {
 		}
 	}
 
-	// Apply death penalty - lose 10% of gold on person (not in bank)
-	goldLoss := victim.Gold / 10
-	if goldLoss > 0 {
-		victim.Gold -= goldLoss
+	// Apply death penalty - lose 10% of coin on person (not in bank).
+	coinLoss := victim.Coin / 10
+	if coinLoss > 0 {
+		victim.Coin -= coinLoss
 		if c.Output != nil {
-			c.Output(victim, fmt.Sprintf("You lose %d gold coins.\r\n", goldLoss))
+			c.Output(victim, fmt.Sprintf("You lose %s.\r\n", types.FormatCoin(coinLoss)))
 		}
 	}
 
@@ -491,13 +491,13 @@ func (c *CombatSystem) makeCorpse(ch *types.Character) *types.Object {
 		}
 	}
 
-	// Add gold to corpse
-	if ch.Gold > 0 {
-		goldObj := types.NewObject(0, fmt.Sprintf("%d gold coins", ch.Gold), types.ItemTypeMoney)
-		goldObj.Name = "gold coins"
-		goldObj.Cost = ch.Gold
-		corpse.AddContent(goldObj)
-		ch.Gold = 0
+	// Add coin to corpse (single money object representing all denominations).
+	if ch.Coin > 0 {
+		coinObj := types.NewObject(0, fmt.Sprintf("%s in coins", types.FormatCoin(ch.Coin)), types.ItemTypeMoney)
+		coinObj.Name = "coins money"
+		coinObj.Cost = int(ch.Coin)
+		corpse.AddContent(coinObj)
+		ch.Coin = 0
 	}
 
 	// Place corpse in room

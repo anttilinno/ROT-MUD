@@ -94,9 +94,8 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 	price := shop.GetSellPrice(obj, ch)
 
 	// Check if player can afford it
-	totalGold := ch.Gold + ch.Silver/100
-	if totalGold < price {
-		h.sendToChar(ch, "You can't afford it. It costs %d gold.\r\n", price)
+	if ch.Coin < price {
+		h.sendToChar(ch, "You can't afford it. It costs %s.\r\n", types.FormatCoin(price))
 		return
 	}
 
@@ -118,14 +117,8 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 		return
 	}
 
-	// Deduct money
-	ch.Gold -= price
-	if ch.Gold < 0 {
-		// Use silver to make up the difference
-		silverNeeded := (-ch.Gold * 100)
-		ch.Silver -= silverNeeded
-		ch.Gold = 0
-	}
+	// Deduct money (all balances are in copper)
+	ch.Coin -= price
 
 	// Clone the object for the buyer (don't remove from shop inventory)
 	newObj := h.World.CloneObject(obj)
@@ -138,7 +131,7 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 	newObj.CarriedBy = ch
 	ch.Inventory = append(ch.Inventory, newObj)
 
-	h.sendToChar(ch, "You buy %s for %d gold.\r\n", obj.ShortDesc, price)
+	h.sendToChar(ch, "You buy %s for %s.\r\n", obj.ShortDesc, types.FormatCoin(price))
 
 	// Notify the room
 	if ch.InRoom != nil {
@@ -211,9 +204,9 @@ func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
 	obj.CarriedBy = nil
 
 	// Pay the player
-	ch.Gold += price
+	ch.Coin += price
 
-	h.sendToChar(ch, "You sell %s for %d gold.\r\n", obj.ShortDesc, price)
+	h.sendToChar(ch, "You sell %s for %s.\r\n", obj.ShortDesc, types.FormatCoin(price))
 
 	// Notify the room
 	if ch.InRoom != nil {
@@ -246,7 +239,7 @@ func (h *ShopHandler) DoList(ch *types.Character, argument string) {
 	}
 
 	var sb strings.Builder
-	sb.WriteString("[Lvl Price Qty] Item\r\n")
+	sb.WriteString("[Lvl        Price Qty] Item\r\n")
 
 	// Group items by vnum and count quantities
 	itemCounts := make(map[int]int)
@@ -267,8 +260,8 @@ func (h *ShopHandler) DoList(ch *types.Character, argument string) {
 			continue
 		}
 
-		sb.WriteString(fmt.Sprintf("[%3d %5d %3d] %s\r\n",
-			obj.Level, price, qty, obj.ShortDesc))
+		sb.WriteString(fmt.Sprintf("[%3d %12s %3d] %s\r\n",
+			obj.Level, types.FormatCoin(price), qty, obj.ShortDesc))
 	}
 
 	h.sendToChar(ch, "%s", sb.String())
@@ -315,8 +308,8 @@ func (h *ShopHandler) DoValue(ch *types.Character, argument string) {
 		return
 	}
 
-	h.sendToChar(ch, "%s says 'I'll give you %d gold for %s.'\r\n",
-		keeper.ShortDesc, price, obj.ShortDesc)
+	h.sendToChar(ch, "%s says 'I'll give you %s for %s.'\r\n",
+		keeper.ShortDesc, types.FormatCoin(price), obj.ShortDesc)
 }
 
 // Helper functions

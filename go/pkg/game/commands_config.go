@@ -165,7 +165,8 @@ func FormatPrompt(ch *types.Character) string {
 	prompt = strings.ReplaceAll(prompt, "%M", fmt.Sprintf("%d", ch.MaxMana))
 	prompt = strings.ReplaceAll(prompt, "%v", fmt.Sprintf("%d", ch.Move))
 	prompt = strings.ReplaceAll(prompt, "%V", fmt.Sprintf("%d", ch.MaxMove))
-	prompt = strings.ReplaceAll(prompt, "%g", fmt.Sprintf("%d", ch.Gold))
+	// %g shows total coin in compact denominated form (e.g. "5g 2s").
+	prompt = strings.ReplaceAll(prompt, "%g", types.FormatCoin(ch.Coin))
 	prompt = strings.ReplaceAll(prompt, "%a", fmt.Sprintf("%d", ch.Alignment))
 	prompt = strings.ReplaceAll(prompt, "%c", "\r\n")
 
