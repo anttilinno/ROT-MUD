@@ -180,6 +180,57 @@ Each axis blocks pure-grind in another dimension: coin alone can't get you T3; m
 - Power-cap test fixture passes: no recipe + set combo exceeds the tier cap.
 - Salvage round-trip recovers expected % of resources; ledger records `craft_fee` and `salvage_refund` correctly.
 
+### E3.5 — Magical enchantments (high-coin sink + risk drama)
+
+**Goal:** Add one magical enchant slot per qualifying item. Big-coin sink for endgame players; risk model gives crit-fail drama and a brick-risk pressure on master-tier attempts.
+
+**New NPC type: enchanter.** Located in the mage quarter / arcane hubs. Distinct from smiths.
+
+**Eligible items:**
+- Crafted T2 and T3
+- D2-style Magic / Rare / Set / Unique found items (see E7)
+- **Not** eligible: crafted T1, shop commodity items, quest rewards (already unique), money, materials, reagents
+
+**One enchant slot per item.** Re-enchanting first requires `scour <item>` at the enchanter — strips current enchant, costs coin (no refund). Second sink layer that punishes indecision.
+
+**Three difficulty tiers, three risk profiles:**
+
+| Tier      | Success | Coin cost (vs item.Cost) | Fail consequence                      |
+|-----------|--------:|--------------------------|---------------------------------------|
+| Simple    |  95%    | 50%                      | Coin lost; reagents kept              |
+| Greater   |  75%    | 100%                     | Coin + reagents lost; −1 dur tier     |
+| Master    |  40%    | 200%                     | Coin + reagents lost; 10% chance item destroyed |
+
+`destroyed` on master-fail removes the item from inventory entirely. Surfaces odds explicitly in NPC dialog so players know the gamble (`"The enchanter eyes your blade. 'Master enchant: forty percent success, ten percent ruin. Pay 12g.'"`).
+
+**Reagents (new item type `ItemTypeReagent`):**
+- Drop from spell-using mobs (mages, demons, liches). Reagent type tied to mob's magic school.
+- Examples: `wisdom_dust` (mage drops), `hellfire_essence` (demon drops), `void_shard` (lich drops), `seraph_feather` (paladin/divine drops).
+- Reagents are tradeable on the player market (unlike crafted gear, which is BoP). Creates a player-driven reagent economy.
+- Each enchant recipe requires 1-3 reagent types in specific qty.
+
+**Enchant pool** (data in `data/enchants/*.toml`):
+- **Stat boosts:** `HitRoll +N`, `DamRoll +N`, `Mana +N`, `Hp +N`, `Resist <school> +N%`
+- **Capability flags:** `SlayUndead`, `ColdBrand`, `FireBrand`, `Silver`, `Holy`
+- **Proc triggers:** `OnHit: cast sanctuary 5%`, `OnHit: drain 3hp`, `OnTakenDamage: shield 10%`
+
+Enchant power scales with tier: Simple gives `+2 HitRoll`-class boosts, Greater gives `+5 HitRoll`-class, Master gives `+8` plus a capability flag or proc.
+
+**Commands:**
+- `enchant <item> <enchant-name>` at enchanter → quote (coin + reagents + tier difficulty + odds) → confirm → roll.
+- `scour <item>` at enchanter → strip current enchant, no refund.
+- `inspect <item>` (already in E3) shows the active enchant if any.
+
+**Interaction with crafted set bonuses (E3):**
+- Enchants are item-level, not set-level. Adding enchants does not break set membership.
+- A full crafted set with 13 enchanted pieces is the absolute endgame BIS. Long, expensive grind to assemble.
+
+**Exit criteria:**
+- Enchanter NPC type wired; three tier commands work.
+- Reagent drops from at least three mob archetypes (arcane / divine / chaotic).
+- Brick rate observed in sim sits at ~10% on master-fail; full pipeline (coin sink + reagent sink + brick chance) verified via ledger.
+- Power-cap fixture extended to include enchant deltas: enchanted T3 full-set still bounded within design ceiling.
+
 ### E4 — Identification + appraisal (info sink)
 
 **Goal:** Compulsory mid-game drain on every meaningful drop.
@@ -208,14 +259,280 @@ Each axis blocks pure-grind in another dimension: coin alone can't get you T3; m
 
 ### E6 — Faucet rebalance
 
-**Goal:** Re-tune mob drops down where E2–E5 sinks now compensate. End state: source/sink ratio ≈ 1.0 per bucket.
+**Goal:** Re-tune mob drops down where E2–E5/E3.5 sinks now compensate. End state: source/sink ratio ≈ 1.0 per bucket.
 
-- Re-run E1 sim with E2–E5 sinks active; measure new equilibrium per level bucket.
+- Re-run E1 sim with E2/E3/E3.5/E4/E5 sinks active; measure new equilibrium per level bucket.
 - Adjust `mobCoinDrop` curve coefficients (per-level multiplier).
 - Death penalty: 10% → 5% of carried coin (sinks cover loss-pressure).
 - Boss-material drop rate: revisit deterministic-per-kill default. If T3 crafting is too easy, drop to 50% per kill and add a guaranteed pity-timer (5th kill always drops).
+- Reagent drop rate (E3.5): tune so enchanting a single T3 set member at master tier is 1-2 hours of focused arcane-mob farming.
 - Golden master from E1 updates to new baseline.
 - **Exit criteria:** Sim ratio sink/source within ±10% of 1.0 per bucket; golden master locked.
+
+### E7 — Loot lottery + damaged drops (Diablo 2 style)
+
+**Goal:** Mob-killed equipment drops at degraded durability (lore + repair sink amplifier). Parallel RNG-loot path to crafted gear: rarity tiers (Magic / Rare / Set / Unique) with affix rolls scoped to base item type and item-level.
+
+#### Damaged drops
+
+- When a mob with worn equipment dies, dropped gear inherits damage proportional to fight length:
+  ```
+  drop_durability = max(0.10, 1 - dmg_taken_pct) * baseDurabilityMax
+  ```
+- One-shot kills → near-pristine drops (fast farming preserves loot value).
+- Long grindy kills → beat-up drops, immediate repair pressure.
+- Floor at 10% so dropped gear is always wearable briefly.
+
+**Exemptions (pristine):**
+- Items inside containers / chests (hoarded, not worn).
+- Quest-reward items.
+- Shop inventory.
+- Items withdrawn from bank.
+- Boss-mob "shard" materials (already an `ItemTypeMaterial`, not worn gear).
+
+#### Rarity tiers
+
+| Rarity   | Color tag | Affix slots             | Drop weight | ilvl gate    |
+|----------|-----------|-------------------------|-------------|--------------|
+| Normal   | white     | 0                       | 70          | none         |
+| Magic    | blue      | 1 prefix + 1 suffix     | 25          | mob L ≥ 10   |
+| Rare     | yellow    | up to 3 prefix + 3 suffix | 4         | mob L ≥ 25   |
+| Set      | green     | preset (member of a unique set) | 0.8 | mob L ≥ 40 |
+| Unique   | gold      | preset, item-unique     | 0.2         | mob L ≥ 50   |
+
+Rarities renamed to disambiguate from crafted set bonuses (E3):
+- **Crafted Sets** = the 13-piece craft system from E3 with affinity-gated set bonuses.
+- **Lottery Sets** = D2-style world-found set members (e.g. "Sigon's Set"). Used as the label in player-facing text to avoid confusion.
+
+#### Magic Find
+
+- Player stat `MagicFind` accumulates from gear, certain quests, and consumables.
+- Roll-time formula: `rarity_weights[i] *= 1 + MagicFind/100` for non-Normal rarities; Normal weight unchanged.
+- Soft cap at +300% MagicFind; diminishing returns above.
+- Surfaces as a column in `score` output.
+
+#### ilvl + affix pools
+
+- `ilvl = max(mob.Level, area.Level + 5 if mob.is_boss)`. Boss kills always roll on at least area level + 5.
+- Affix pools live in `data/affixes/<base_type>.toml`:
+  - prefixes: `data/affixes/<base>/prefixes.toml`
+  - suffixes: `data/affixes/<base>/suffixes.toml`
+- Each affix declares `min_ilvl`, `max_ilvl`, value range, weight, and conflict tags (an item never rolls two affixes from the same conflict group).
+- Affix scoping: certain affixes only spawn on certain bases (e.g. `of the Whale` only on body armor; `Sharp` only on weapons). Matches the D2 base-restriction model.
+
+#### Set + Unique tables
+
+- `data/loot/sets/*.toml` — each set TOML declares members (item base + preset affixes) and the set bonus stacking (2-piece / 4-piece / etc.).
+- `data/loot/uniques/*.toml` — each unique declares a base item, preset affixes, lore text, and a `weight` in its drop bucket.
+- A mob's drop spec can opt out of set/unique pool via `lottery_excludes = ["set", "unique"]` for low-quality vendors / target-dummy mobs.
+
+#### Identify (E4 interaction)
+
+- Magic / Rare / Set / Unique drops at `mob.Level ≥ 20` arrive unidentified (E4 already covers this).
+- Identify cost scales with rarity: Normal = 0, Magic = base, Rare = 2×, Set = 4×, Unique = 8×. Surfaces a real gamble — vendor unidentified gold or pay the ID fee.
+
+#### Interaction with crafted gear (E3)
+
+- Single-slot Rare can exceed T2 crafted in raw stats; single-slot Unique can match T3 single-piece.
+- Crafted T3 full 13-piece set with set bonuses + enchants is the absolute BIS — Rare/Unique drops cannot replicate the on-affinity set + signature bonus.
+- Found gear is enchantable (E3.5) provided rarity ≥ Magic.
+- Crafted gear is BoP; Rare/Unique drops are tradeable (drives a player market for found loot).
+
+#### Auto-loot filters
+
+- New config setting: `autoloot_rarity <threshold>` (`none`, `magic`, `rare`, `set`, `unique`). Only auto-pickup at or above the threshold.
+- Players can also `autoloot_dur_min <pct>` to skip items below a durability floor — vendor trash trash is automatically left for the corpse decay.
+
+#### Commands
+
+- `loot` and `get <item> corpse` (existing) now display rarity color and durability percentage.
+- `inspect <item>` shows rarity, affixes (if identified), durability, and (if applicable) set/lottery-set membership progress.
+
+**Exit criteria:**
+
+- Mob-killed gear drops at the documented durability formula; chest / quest / shop / bank items remain pristine.
+- All four rarity tiers (Magic / Rare / Set / Unique) roll correctly with weighted affix pools scoped by item base and ilvl.
+- Lottery Sets and Uniques load from TOML; at least 3 starter sets and 6 starter uniques covering the L40-100 band.
+- Auto-loot filters honor rarity and durability thresholds.
+- Identify cost scales by rarity; ledger records `identify_fee` correctly per rarity tier.
+- Power-cap fixture extended: best in-game outcome (Rare/Unique gear in every non-craftable scenario, on-affinity T3 full crafted+enchanted in the best scenario) is documented and bounded.
+
+### E8 — Gods + favor (worship as sink + progression)
+
+**Goal:** Players choose 1 of N gods. Sacrifices, offerings, and tithes convert items / coin / mob corpses into per-god **favor**. Favor buys divine boons that shortcut progression or grant rare buffs. Recurring tithes plus passive favor decay create a durable sink that bites whether you craft, fight, or loot.
+
+#### Pantheon
+
+- **6–9 gods** at first pass, defined in `data/gods/*.toml`.
+- Each god declares:
+  - `domain` (war, magic, death, nature, trade, healing, chaos, light, dark)
+  - `alignment` (existing `ch.Align` axis repurposed: good / neutral / evil)
+  - `favored_offerings` (mob race tags, item types, alignment vectors)
+  - `hated_offerings` (blasphemy table — sacrificing these costs favor)
+  - `boon_table` (tier → cost in favor → effect)
+- Player picks at L10+ via `pray <god>` at a temple. Stays unset for atheists (legal, mild penalty — see Risks).
+- Switching gods later: `pray <new-god>` at that god's temple. **Apostasy penalty:** old favor reset to 0; new god starts at -50 favor; 7-day real-time cooldown between switches.
+
+#### Existing `Align` axis repurposed
+
+- `ch.Align` was already a -1000..+1000 int. Now drifts toward the chosen god's alignment based on play (aligned kills, hated kills, sacrifices).
+- Drift far from god's alignment → favor accrual rate halves; `pray` rejected with a flavor message ("The god turns from you").
+- Atonement quest restores alignment (see Atonement below).
+
+#### Sacrifice + offering mechanics
+
+Extend existing `sacrifice <corpse>` (currently grants 1cp via `server.go` adapter):
+
+| Source                        | Favor delta            | Coin cost            | Notes |
+|-------------------------------|------------------------|----------------------|-------|
+| Corpse of favored-race mob    | +1 to +5 (level-scaled) | 0                    | aligned kill bonus, replaces today's flat 1cp |
+| Corpse of hated-race mob      | -2 (blasphemy)         | 0                    | god is offended; can refuse to count if hated > favored ratio too high |
+| `tithe <N>` at temple         | +1 per 100g            | N (consumed)         | flat coin sink, no item |
+| `offer <item>` at temple      | +item.Cost / 100       | item destroyed       | universal item sink |
+| Boss-material item            | +50                    | rare mat destroyed   | dramatic; competes with E3 T3 crafting |
+| God-domain reagent (E3.5)     | +10                    | reagent destroyed    | links enchant economy |
+| `consecrate` (PvE-only event) | +20                    | living mob destroyed | dark gods only; gated to specific quest mobs, not arbitrary player kills |
+
+Favor is **per-god**, stored as `ch.PCData.Favor[god_name]`. Saved in player file.
+
+#### Boons (favor spend)
+
+Each god publishes a per-tier boon table. Costs in favor; many also have per-day or per-session cooldowns. Example schema:
+
+| Cost  | Boon                                              | Cooldown      |
+|-------|---------------------------------------------------|---------------|
+| 10    | `pray` for full heal + mana refill                | 1× per game-day |
+| 50    | Cast god-domain T1 spell as if known              | 1× per session |
+| 100   | Bless next crafted item (free Simple enchant)     | per item, no cooldown |
+| 200   | God-signature affect for 1 hour (regen / fire-brand / etc.) | 1× per session |
+| 500   | Unlock god-domain quest chain                     | single-use lifetime |
+| 1000  | Resurrect at temple (no XP loss next death this session) | 1× per session |
+| 2000  | Divine weapon enchant (master-tier, **no brick risk**) | per item |
+
+Boon table is **god-specific data**. War god offers damage boons; nature god offers regen; trade god offers shop discounts; death god offers undead-control. Power roughly equal across gods; flavor differs.
+
+#### Tithe + corruption (recurring sink)
+
+- Each god has a `tithe_target` per real-time week — typically a small percent (1-3%) of total coin earned.
+- Players who hit the tithe target keep favor stable.
+- Players under the target → favor decays at `decayRate` per real-time day until target met or favor hits 0.
+- Favor at 0 + repeated decay → favor goes **negative**: temple guards aggro on entry; boons disabled; the god's domain mobs deal +10% damage to the player.
+- Recovery: `atone <god>` quest. God-domain PvE objective + flat coin offering. Returns favor to 0 and restores boon access.
+
+#### Atheism (no god picked)
+
+- Legal at all levels.
+- No boons available.
+- ~10% flat penalty on `Hp_max` and `Mana_max` regen rates vs an on-favor worshipper (reasonable choice cost, not a wall).
+- Cannot use any temple services (resurrection, identify-god-alignment, etc.).
+
+#### Temple shops (worshipper + cleric paths)
+
+Each god's temple hosts a shop component (separate quartermaster NPC inside the temple room or a flagged temple-keeper mob). Stocks god-domain items: divine reagents (E3.5), domain-themed weapons (war god → maces / blades, nature god → staves / sickles, death god → daggers / cursed amulets), prayer-scroll books, holy symbols, potions, atonement supplies.
+
+**Pricing + access tiers** (per shopper relative to this god):
+
+| Shopper status                            | Buy multiplier | Sell multiplier | Notes |
+|-------------------------------------------|---------------:|----------------:|-------|
+| Cleric class + this god + favor > 100     | 0.50× (deep discount) | 1.20× | full inventory + cleric-only stock |
+| Worshipper (any class) + favor > 0        | 0.75×          | 1.10×           | full standard inventory |
+| Worshipper + favor ≤ 0 (lapsed)           | 1.00×          | 1.00×           | standard stock only; cleric-only refused |
+| Atheist or worshipper of different but same-alignment god | 1.25×        | 0.90×           | standard stock only |
+| Worshipper of **opposing-alignment** god  | refused        | refused         | temple guards may aggro on entry |
+
+**Inventory tiers** declared per item in `data/temples/<god>/inventory.toml`:
+
+- `tier = "open"` — sold to anyone whose status above is not refused.
+- `tier = "worshipper"` — requires favor > 0 with this god.
+- `tier = "cleric"` — requires `ch.Class == "cleric"` (or a `CapabilityFlag = ClericOf<god>` once trait system lands) AND favor > 100.
+- `tier = "favored"` — requires favor > N (per item). Used for unique relics, master-tier divine weapons, prayer-books of high-tier domain spells.
+
+**Currency: coin OR favor.**
+
+- Default purchase deducts coin.
+- `pay_with_favor <item>` deducts favor at the listed `favor_price` (e.g. 200 favor for a holy water flask, 5000 favor for a divine weapon).
+- Favor-only items have no `coin_price` — they cannot be coin-purchased at any markup. Forces real worship engagement for the iconic items.
+- Player can freely choose coin vs favor at point of sale for dual-currency items.
+
+**Cleric-only stock examples:**
+- Domain spell prayer-books (cast L+5 spells without learning cost — single-use)
+- Divine weapons (master-tier enchanted, no brick risk, BoP-on-purchase)
+- Holy symbols (passive +favor accrual rate while worn)
+- Atonement supplies (bulk-discount on `atone` quest reagents)
+- Resurrection-scroll for party member (consumes 1000 favor)
+
+**Worshipper-tier stock examples:**
+- Divine reagents at favorable price (cuts E3.5 enchant cost)
+- Blessed potions (cheaper full-heal / mana refill than standard alchemists)
+- Identify scrolls for god-domain items only (cheaper than sage)
+- Temple recall scroll (faster return to home temple)
+
+**Open-tier stock examples:**
+- Basic candles, prayer-flags, journals (low-coin newbie items)
+- Atonement starter (for lapsed worshippers)
+
+**Sell-back:** temple buys back god-domain items (returning relics, donating gear) at the matching multiplier. Counts as a small `offer` — sell-back of a god-domain item grants +1 favor in addition to coin.
+
+**Why this matters as a sink:**
+- Cleric players get a dedicated economic loop tied to identity, not just generic shops.
+- Worshippers have a discount path: tithe to maintain favor, get cheaper reagents/potions.
+- Coin sink + favor sink + class differentiation all in one system.
+- Opposing-alignment refusal makes god choice meaningful for shopping geography — chaotic-evil players cannot use lawful-good temples and vice versa, forcing travel + market diversity.
+
+#### Integration with prior phases
+
+- **E3 crafting:** god-domain T3 sets unlocked by god-domain boss materials (`seal_of_war`, `relic_of_nature`). On-favor characters with the god-aligned T3 set get an additional 5% bonus on top of class-affinity bonus.
+- **E3.5 enchants:** 2000-favor boon **bypasses brick risk** at master tier — turns the god into endgame enchant insurance. Divine reagents (`seraph_feather`, `hellfire_essence`) drop more frequently from god-domain mobs of same alignment.
+- **E4 identify:** temples ID god-domain items for free. Mini perk, encourages temple visits.
+- **E5 banks:** trade god (if implemented) reduces bank withdrawal/transfer fees by half for worshippers.
+- **E7 lottery:** Unique items can carry `god_aligned = "war"`. Worn by:
+  - On-favor worshipper → +20% affix values
+  - Atheist or different god → equips normally, no bonus
+  - **Opposing alignment** worshipper → item refuses to equip (`"The blade burns your hand."`)
+
+#### Commands
+
+- `pray <god>` at temple: initial dedication, or after alignment drift to reaffirm.
+- `pray` (no arg): consume small favor (10) for heal + mana refill (per-day cooldown).
+- `tithe <amount>` at temple: convert coin to favor.
+- `offer <item>` at temple: convert item to favor.
+- `boon <name>` at temple: spend favor for a listed boon.
+- `atone` at temple: start atonement quest (negative-favor recovery).
+- `favor`: display current favor for active god + recent decay/gain history.
+- `pay_with_favor <item>` at temple shop: purchase listed item using favor instead of coin (dual-currency items only).
+
+#### Data layout
+
+```
+data/gods/<god_name>.toml
+  name = "Tyr"
+  domain = "war"
+  alignment = 500           # good
+  favored_races = ["evil_orc", "demon", "undead"]
+  hated_races = ["human", "elf", "halfling"]
+  favored_item_types = ["weapon"]
+  
+  [[boon]]
+  cost = 10
+  name = "battle_blessing"
+  effect = "heal_full,mana_full"
+  cooldown = "1 day"
+  
+  [[boon]]
+  cost = 2000
+  name = "divine_enchant"
+  effect = "free_master_enchant"
+  cooldown = "per_item"
+```
+
+**Exit criteria:**
+- Pantheon TOML loads with 6–9 gods; loader batch-validates.
+- `pray` / `tithe` / `offer` / `boon` / `atone` / `favor` / `pay_with_favor` commands implemented; favor + chosen god persisted in player save.
+- Sacrifice grants per-god favor instead of (only) the current 1cp; flat 1cp fallback for atheists.
+- Tithe and decay loop runs on real-time clock; ledger records `tithe_offering`, `favor_decay`, `boon_spend`, `temple_purchase`, `favor_purchase`.
+- Each god has a populated temple shop with at least open / worshipper / cleric / favored stock tiers; cleric-only and favor-only items honor their gates.
+- Opposing-alignment refusal verified by integration test: lawful character refused entry to chaotic-evil temple shop and vice versa.
+- Phase 1 golden-master combat parity passes with the god system off (feature flag) and with a deterministic atheist character used as the canonical reference.
 
 ## Open Decisions
 
@@ -232,6 +549,25 @@ Each axis blocks pure-grind in another dimension: coin alone can't get you T3; m
 | T1 craft availability | every smith / select smiths only | every smith — tutorial reach |
 | T3 craft availability | every smith / one master smith per class hub | one master per class — pilgrimage adds friction |
 | Salvage refund rate (coin / mats / xp) | 50/80/100 / 30/60/100 / etc. | 50% coin / 80% mats / 100% craft-XP — encourages experimentation, still drains |
+| Enchant brick rate (Master tier) | 5% / 10% / 15% | 10% — meaningful drama, not punishing |
+| Enchant slot count per item | 1 / 2 / tier-based | 1 first pass; revisit after E3.5 telemetry |
+| Reagent tradeability | tradeable / BoP | tradeable — drives player market |
+| Damaged-drop durability floor | 5% / 10% / 25% | 10% — wearable briefly, immediate repair pressure |
+| Rarity drop weights (Normal / Magic / Rare / Set / Unique) | 70/25/4/0.8/0.2 (D2-ish) / softer / harder | D2-ish first pass; tune in E6 |
+| MagicFind soft cap | +200% / +300% / +500% | +300% — meaningful chase, prevents trivializing |
+| Identify cost by rarity (Normal / Magic / Rare / Set / Unique) | 0/1/2/4/8 × base / linear | exponential 0/1/2/4/8 — punishes hoarding unidentified Uniques |
+| Auto-loot default rarity threshold | none / magic / rare | none — players opt in |
+| Pantheon size | 6 / 9 / 12 gods | 6 first pass; expand if engagement holds |
+| God-pick gate | creation / L10 temple visit | L10 temple — players learn classes first |
+| Apostasy cooldown | 3 / 7 / 14 days real-time | 7 days — meaningful commitment, not eternal |
+| Atheist penalty (Hp/Mana regen) | 5% / 10% / 20% | 10% — choice cost, viable solo |
+| Tithe target (% of weekly coin earned) | 1% / 3% / 5% | 1-3% per god, tuned in E6 |
+| Favor decay rate (per real-time day under-tithed) | linear / accelerating | linear first pass; revisit if hoarding emerges |
+| Cleric discount magnitude at temple shop | 25% / 50% / 75% off | 50% — strong cleric identity, doesn't trivialize |
+| Worshipper discount magnitude | 10% / 25% / 50% off | 25% — meaningful, not min-max forcing |
+| Atheist surcharge at temple shop | 0% / 25% / 50% | 25% — choice cost, not gate |
+| Opposing-alignment temple access | refused entry / refused service / hostile guards | refused service first; hostile guards as later toggle |
+| Favor-only items | a few iconic / many / none | a few iconic (resurrection-scroll, divine weapons) — forces real worship for identity items |
 
 ## Risks
 
@@ -243,6 +579,21 @@ Each axis blocks pure-grind in another dimension: coin alone can't get you T3; m
 - **Custom craft + LLM-driven NPCs interact weirdly.** Mitigation: LLM smith dialog (Phase 14 Tier 1) describes the craft path, but the craft tool surface is the authoritative API; LLM cannot bypass tier or material gates.
 - **Inflation overshoots after rebalance.** Mitigation: E6 ratio test gates rebalance; revert if drift >10%.
 - **New player friction at L1–10.** Mitigation: durability slow at low item tiers; no ID fee below L20; no transfer fee below 1g; T1 crafting cheap and tutorial-paced.
+- **(E3.5) Enchant brick rate frustrates players.** Mitigation: cap at 10% on Master tier; never on Simple/Greater. Surface odds explicitly in NPC dialog before confirmation. God boon (E8) provides a brick-free path for the truly committed.
+- **(E3.5) Reagent grind becomes mandatory chore.** Mitigation: reagents are tradeable on player market — players can buy in via coin instead of farming.
+- **(E7) Damaged-on-drop nerfs found gear too hard.** Mitigation: 10% durability floor; cheap repair at low L; one-shot kills preserve durability.
+- **(E7) D2 vendor trash floods chat.** Mitigation: `autoloot_rarity` filter; `autoloot_dur_min` filter; corpse decay sweeps un-looted Normal items.
+- **(E7) Set/Unique drops trivialize T3 crafted.** Mitigation: crafted T3 on-affinity full set + signature bonus + enchant unmatched by any single Rare/Unique drop. Best character mixes both paths.
+- **(E7) RNG-loot chase invalidates planned crafting.** Mitigation: crafted gear is BoP and earned by deterministic progression; lottery loot is tradeable and chasable. Two playstyles, both valid endgame.
+- **(E8) God-meta min-maxing — one god dominates.** Mitigation: boon power roughly equal across gods; differentiate by playstyle (war = burst, nature = sustain, trade = utility). A/B sim per god during E6.
+- **(E8) Atheist players locked out of late game.** Mitigation: atheism legal with mild ~10% regen penalty; not a wall. Pure-atheist endgame still beatable with T3 crafted + Unique drops.
+- **(E8) Alt god-hopping for boon-stacking.** Mitigation: apostasy resets favor + 7-day cooldown + starting penalty.
+- **(E8) PvP imbalance from god-aligned gear refusing equip.** Mitigation: scoped to PvE; PvP servers configurable via `respect_god_alignment` flag.
+- **(E8) Tithe and decay loop feels like real-life chore.** Mitigation: small tithe target (1-3% weekly); decay gentle (linear, ~5 favor / real-day); favor can be banked far above tithe target so casual play remains viable.
+- **(E8) Favor + Phase 14 LLM NPCs interact unpredictably.** Mitigation: LLM temple priests describe boons + costs but the boon tool surface is authoritative; LLM cannot grant favor or boons outside the validated commands.
+- **(E8) Temple-shop discount stacking with set bonuses + enchants trivializes cleric economy.** Mitigation: cleric discount applies only to listed coin price, not favor price; favor-only items unaffected by discounts. Sim check during E6.
+- **(E8) Opposing-alignment refusal forces tedious travel for shopping.** Mitigation: most stock is duplicated across same-alignment temples; only god-iconic items are temple-exclusive. Atheists and same-alignment-different-god worshippers have surcharge but full access.
+- **(E8) Cleric class becomes mandatory for endgame divine items.** Mitigation: a few iconic divine items are cleric-locked, but the bulk of god-themed stock is worshipper-accessible. Cleric advantage is discount + breadth, not exclusive endgame access.
 
 ## Dependencies
 
@@ -250,7 +601,14 @@ Each axis blocks pure-grind in another dimension: coin alone can't get you T3; m
 - E3 set bonuses naturally piggyback on the trait query API (Phase 2) and the race/class TOML (Phase 8). Land trait system first if both run concurrently; otherwise E3 wires stat bonuses through a temporary hand-rolled apply step that the trait migration replaces.
 - Race-class affinity data lives in the race TOML and is read by E3 craft validation; aligns with DATA-01 / DATA-02 schemas.
 - Phase 14 LLM smith dialog references the crafting tool surface; LLM has no authority over tier/material gates.
+- E3.5 enchant power values reuse the trait-system stat axes (TRAIT-01) and capability flags. Loading enchant TOML mirrors the homogeneous-section pattern from DATA-03.
+- E7 rarity / affix pools reuse the same trait stat axes. Lottery Set and Unique TOML files load via the same batch-validated loader as crafted recipes; failures abort startup.
+- E7 damaged-on-drop reads `Object.DurabilityMax` from E2; E2 lands first or E7 stubs durability with a defaulted constant.
+- E7 MagicFind stat is a new `StatModifier` that flows through the trait query API (Phase 2).
+- E8 pantheon TOML loader follows the same homogeneous-section pattern. Existing `ch.Align` is repurposed (no schema change required, but tests must verify save round-trip).
+- E8 boons that grant temporary affects use the existing affect system (no new infrastructure).
+- E8 atheism flag is implicit (no god picked); no save schema change beyond `ch.PCData.Favor map[string]int` and `ch.PCData.ChosenGod string`.
 
 ## Roadmap Integration
 
-Phase 13 in `ROADMAP.md` already references this document. Success criteria ECON-01..06 update once E3 is rewritten (the criteria currently say "bound on pickup, capped at best comparable area drop"; criterion #3 needs to change to reflect the 3-tier + set-bonus + best-in-slot-at-T3 model).
+Phase 13 in `ROADMAP.md` references this document. The Phase 13 success criteria expand to cover E3 race+class crafting (criterion #3), E3.5 enchants (new criterion), E7 lottery + damaged drops (new criterion), and E8 gods + favor (new criterion). E1 baseline + E2 durability + E4 identify + E5 bank fees + E6 rebalance remain numbered 1, 2, 4, 5, 6 in ROADMAP success criteria; E3.5 / E7 / E8 are appended as criteria 7, 8, 9.

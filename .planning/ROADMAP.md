@@ -164,18 +164,21 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: TBD
 
 ### Phase 13: Economic Overhaul
-**Goal**: The game economy has real coin sinks (durability/repair, smith custom crafting, identify fees, bank fees) and mob drops are rebalanced to a stable source/sink ratio near 1.0 per level bucket
+**Goal**: The game economy has real coin sinks (durability/repair, race+class crafting, magical enchants, identify fees, bank fees, RNG loot lottery, gods + temples) and mob drops are rebalanced to a stable source/sink ratio near 1.0 per level bucket
 **Depends on**: None (independent of trait system; can begin once the currency commit lands)
-**Requirements**: ECON-01, ECON-02, ECON-03, ECON-04, ECON-05, ECON-06
+**Requirements**: ECON-01, ECON-02, ECON-03, ECON-04, ECON-05, ECON-06, ECON-07, ECON-08, ECON-09
 **Success Criteria** (what must be TRUE):
   1. A coin ledger records every credit/debit on `ch.Coin` and `ch.PCData.BankCoin` with txn type, amount, source/target, and tick; sim tests produce a per-level-bucket source/sink ratio report
   2. Weapons and armor have hits-based durability that ticks down in combat; broken items wear-fail with halved stats but are not destroyed; `repair` command at smith NPCs restores durability at a cost scaled by item Cost and damage fraction
   3. Master smith NPCs craft race+class-aware gear from TOML recipes across 12 shared slots plus 1 race-signature slot; crafting is 3-tier level-gated (T1 L1+, T2 L31+, T3 L76+); T3 is best-in-slot at level cap and requires recipe-specific boss-drop materials; on-affinity (race+class match) wearers unlock 4/6/8/13-piece set bonuses; off-affinity wearers cap at T2; all crafted items are bind-on-pickup with a salvage path that refunds ~50% coin / ~80% materials / 100% craft-XP
-  4. Items at vnum-level ≥ 20 drop unidentified; sage NPCs charge a flat fraction of `item.Cost` to identify
+  4. Items at vnum-level ≥ 20 drop unidentified; sage NPCs charge a flat fraction of `item.Cost` to identify; identify cost scales by rarity (Magic / Rare / Set / Unique) for lottery drops
   5. Bank deposits remain free; withdrawals at non-home bankers and player-to-player transfers charge a configurable fee
   6. After all sinks land, `mobCoinDrop` is rebalanced and the death-loss percentage reduced so the sim source/sink ratio per level bucket lands within ±10% of 1.0; the death penalty drops from 10% to 5% of carried coin
+  7. Enchanter NPCs add one magical enchant slot to crafted T2+/T3 and lottery-rare-or-better found items; three difficulty tiers (Simple / Greater / Master) with surfaced odds (95% / 75% / 40%); Master-tier fail can brick the item (10% destroy chance); reagents are tradeable on the player market; `scour` strips an enchant for re-enchanting at a coin cost
+  8. Mob-killed equipment drops at degraded durability (`max(0.10, 1 - dmg_taken_pct) * baseDurabilityMax`), with chest/quest/shop/bank items exempt; rarity tiers (Normal / Magic / Rare / Lottery-Set / Unique) roll affixes scoped by base type and ilvl; `MagicFind` stat shifts rarity weights with a soft cap; auto-loot filters honor rarity and durability thresholds
+  9. Pantheon of 6-9 gods loads from TOML; players pick at L10+ via `pray <god>`; `sacrifice` / `tithe` / `offer` / `boon` / `atone` / `favor` / `pay_with_favor` commands implemented and persisted; each god has a temple shop with tiered access (open / worshipper / cleric / favored) and opposing-alignment refusal; cleric-of-this-god discount is the deepest; coin and favor are both valid currencies for temple purchases (favor-only items exist for iconic relics); tithe + decay loop creates recurring favor pressure on real-time clock
 **Plans**: TBD
-**Reference**: `.planning/ECONOMY.md` for sub-phase breakdown (E1 baseline → E6 rebalance), open decisions, and risk register
+**Reference**: `.planning/ECONOMY.md` for sub-phase breakdown (E1 baseline → E2 durability → E3 race+class crafting → E3.5 enchants → E4 identify → E5 bank fees → E6 rebalance → E7 loot lottery + damaged drops → E8 gods + favor + temple shops), open decisions, and risk register
 
 ### Phase 14: LLM-Driven NPCs
 **Goal**: Selected NPCs (shopkeepers, smiths, sages, area bosses) are driven by a local LLM for dialog and tactical combat planning, with a first-class scripted fallback that runs identically when the LLM is unavailable
