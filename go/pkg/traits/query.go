@@ -50,10 +50,16 @@ func (ts *TraitSet) HasTrait(kind TraitKind) bool {
 }
 
 // HasCapability reports whether the resolved capability bitset contains key.
-// It assumes Resolve has run. This path is O(1) and zero-allocation (SC#4):
-// lookupCapability is a non-allocating map read and CapBits.Has is a value
-// receiver — no strings are built, no slices ranged, no maps allocated.
+// It auto-resolves if Resolve has not yet run, so a freshly composed set never
+// silently reports a present capability as absent — a forgotten Resolve would
+// otherwise produce wrong-but-silent results under the behavioral-parity
+// constraint. On an already-resolved set this path is O(1) and zero-allocation
+// (SC#4): lookupCapability is a non-allocating map read and CapBits.Has is a
+// value receiver — no strings are built, no slices ranged, no maps allocated.
 func (ts *TraitSet) HasCapability(key string) bool {
+	if !ts.resolved {
+		ts.Resolve()
+	}
 	bit, ok := lookupCapability(key)
 	if !ok {
 		return false
@@ -61,26 +67,40 @@ func (ts *TraitSet) HasCapability(key string) bool {
 	return ts.caps.Has(bit)
 }
 
-// GetModifier returns the resolved, clamped summed delta for stat. It assumes
-// Resolve has run and bounds-guards the index (out-of-range returns 0).
+// GetModifier returns the resolved, clamped summed delta for stat. It
+// auto-resolves if Resolve has not yet run, and bounds-guards the index
+// (out-of-range returns 0).
 func (ts *TraitSet) GetModifier(stat types.Stat) int {
 	if stat < 0 || stat >= types.MaxStats {
 		return 0
+	}
+	if !ts.resolved {
+		ts.Resolve()
 	}
 	return ts.modSum[stat]
 }
 
 // ResolveImmunity maps the resolved, clamped per-axis RIS sum to the tri-state
-// vocabulary (D-03 thresholds, assuming Resolve has run):
+// vocabulary (D-03 thresholds). It auto-resolves if Resolve has not yet run, so
+// a fire-immune entity is never silently treated as taking normal damage:
 //
 //	sum >= +CAP    -> Immune
 //	+1 .. +CAP-1   -> Resist
 //	sum  < 0       -> Vuln
 //	sum == 0       -> Normal
 //
+// Unknown-axis contract: an axis with no contributing RIS trait has no entry in
+// the risSum map and reads as 0 -> ImmNormal. This is intentional and matches
+// the absence of any RIS effect; a garbage/out-of-enum DamageType is therefore
+// treated as Normal rather than flagged. (GetModifier instead rejects
+// out-of-range stat indices because modSum is a fixed array, not a map.)
+//
 // This mirrors combat.ImmunityResult's precedence (Immune > Resist > Vuln >
 // Normal) without importing pkg/combat.
 func (ts *TraitSet) ResolveImmunity(axis types.DamageType) ImmunityResult {
+	if !ts.resolved {
+		ts.Resolve()
+	}
 	sum := ts.risSum[axis]
 	switch {
 	case sum >= CAP:

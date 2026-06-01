@@ -101,6 +101,41 @@ func TestHasCapability(t *testing.T) {
 	})
 }
 
+func TestQueryAutoResolvesUnresolvedSet(t *testing.T) {
+	// WR-01: querying a composed-but-unresolved set must not silently report
+	// "no effect". The query methods auto-resolve so a forgotten Resolve()
+	// cannot produce wrong-but-silent combat/magic outcomes.
+	t.Run("ResolveImmunity auto-resolves (fire-immune entity is not Normal)", func(t *testing.T) {
+		ts := TraitSet{Immunities: []Immunity{{DamageType: types.DamFire, Magnitude: 100}}}
+		// Deliberately NOT calling ts.Resolve() here.
+		if got := ts.ResolveImmunity(types.DamFire); got != ImmImmune {
+			t.Errorf("ResolveImmunity on unresolved set = %v, expected ImmImmune (auto-resolve)", got)
+		}
+	})
+	t.Run("HasCapability auto-resolves", func(t *testing.T) {
+		ts := TraitSet{Capabilities: []Capability{{Key: "autoresolve-flight"}}}
+		if !ts.HasCapability("autoresolve-flight") {
+			t.Error("HasCapability on unresolved set = false, expected true (auto-resolve)")
+		}
+	})
+	t.Run("GetModifier auto-resolves", func(t *testing.T) {
+		ts := TraitSet{Modifiers: []StatModifier{{Stat: types.StatStr, Delta: 4}}}
+		if got := ts.GetModifier(types.StatStr); got != 4 {
+			t.Errorf("GetModifier on unresolved set = %d, expected 4 (auto-resolve)", got)
+		}
+	})
+}
+
+func TestResolveImmunityUnknownAxisIsNormal(t *testing.T) {
+	// WR-04: an axis with no contributing RIS trait reads as ImmNormal. This is
+	// the documented contract for ResolveImmunity (unknown axis == Normal).
+	ts := TraitSet{Resistances: []Resistance{{DamageType: types.DamFire, Magnitude: 50}}}
+	ts.Resolve()
+	if got := ts.ResolveImmunity(types.DamCold); got != ImmNormal {
+		t.Errorf("ResolveImmunity(unknown axis) = %v, expected ImmNormal", got)
+	}
+}
+
 func TestHasCapabilityZeroAlloc(t *testing.T) {
 	ts := TraitSet{Capabilities: []Capability{{Key: "zeroalloc-flight"}}}
 	ts.Resolve()
