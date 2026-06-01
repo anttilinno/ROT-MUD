@@ -1,10 +1,11 @@
 ---
 phase: 1
 slug: golden-master-safety-net
-status: draft
-nyquist_compliant: false
-wave_0_complete: false
+status: validated
+nyquist_compliant: true
+wave_0_complete: true
 created: 2026-04-17
+validated: 2026-06-01
 ---
 
 # Phase 1 — Validation Strategy
@@ -36,11 +37,14 @@ created: 2026-04-17
 
 ## Per-Task Verification Map
 
-| Task ID | Plan | Wave | Requirement | Threat Ref | Secure Behavior | Test Type | Automated Command | File Exists | Status |
-|---------|------|------|-------------|------------|-----------------|-----------|-------------------|-------------|--------|
-| 1-01-01 | 01 | 1 | MIGRATE-06 | — | N/A | unit | `cd go && go build ./pkg/combat/...` | ❌ W0 | ⬜ pending |
-| 1-01-02 | 01 | 1 | MIGRATE-06 | — | N/A | unit | `cd go && go test ./pkg/golden/... -run TestGolden -count=2` | ❌ W0 | ⬜ pending |
-| 1-01-03 | 01 | 1 | MIGRATE-06 | — | N/A | golden | `cd go && go test ./pkg/golden/... -run TestGolden -update && go test ./pkg/golden/... -run TestGolden -count=2` | ❌ W0 | ⬜ pending |
+| Task ID | Plan | Wave | Requirement | Test Type | Automated Command | File Exists | Status |
+|---------|------|------|-------------|-----------|-------------------|-------------|--------|
+| 1-01-01 | 01 | 1 | MIGRATE-06 | unit | `cd go && go test ./pkg/combat/ -run 'TestSetRandDeterministic\|TestSetRandRestore\|TestDefaultRandFallsThroughToGlobal\|TestEdgeCasesPreserved' -count=2 -timeout 30s` | ✅ pkg/combat/dice_test.go | ✅ green |
+| 1-01-02 | 01 | 1 | MIGRATE-06 | unit | `cd go && go test ./pkg/combat/ -run 'TestCombatSystemRandField\|TestCombatSystemRandFieldTypeByReflection' -timeout 10s` | ✅ pkg/combat/dice_test.go | ✅ green |
+| 1-02-01 | 02 | 2 | MIGRATE-06 | golden | `cd go && go build ./pkg/golden/... && go vet ./pkg/golden/...` | ✅ pkg/golden/fixture.go, doc.go | ✅ green |
+| 1-02-02 | 02 | 2 | MIGRATE-06 | golden | `cd go && go test ./pkg/golden/ -run TestGolden -timeout 30s` | ✅ pkg/golden/golden_test.go | ✅ green |
+| 1-03-01 | 03 | 3 | MIGRATE-06 | golden | `cd go && go test ./pkg/golden/ -run TestGolden -count=2 -timeout 60s` | ✅ pkg/golden/testdata/entities.golden | ✅ green |
+| 1-04-01 | 04 | 4 | MIGRATE-06 | golden | `cd go && go test ./pkg/golden/ -run TestGolden -count=2 -timeout 60s` (MOB TEMPLATES section) | ✅ pkg/golden/testdata/entities.golden | ✅ green |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -48,9 +52,9 @@ created: 2026-04-17
 
 ## Wave 0 Requirements
 
-- [ ] `go/pkg/golden/` directory — create package skeleton
-- [ ] `go/pkg/combat/dice.go` — add `SetRand()` hook for deterministic RNG
-- [ ] `go/pkg/golden/golden_test.go` — stub `TestGolden` so `go test` resolves
+- [x] `go/pkg/golden/` directory — package created (doc.go, fixture.go, golden_test.go)
+- [x] `go/pkg/combat/dice.go` — `SetRand()` hook added for deterministic RNG
+- [x] `go/pkg/golden/golden_test.go` — `TestGolden` implemented and green
 
 *Existing `go test ./...` infrastructure covers the rest.*
 
@@ -58,19 +62,36 @@ created: 2026-04-17
 
 ## Manual-Only Verifications
 
-| Behavior | Requirement | Why Manual | Test Instructions |
-|----------|-------------|------------|-------------------|
-| Byte-identical golden file on two successive runs | MIGRATE-06 | CI diff requires `-update` flag management | Run `go test ./pkg/golden/... -run TestGolden -count=2` and confirm no diff output |
+None. Determinism (byte-identical golden on two successive runs) is fully automated via
+`go test ./pkg/golden/ -run TestGolden -count=2`, which the standard `go test ./...` CI path
+executes. The `-update` regeneration discipline is enforced by commit-message visibility +
+PR review (threat T-01-03-01), not a separate test, and does not count as a manual-only gap.
 
 ---
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
-- [ ] Sampling continuity: no 3 consecutive tasks without automated verify
-- [ ] Wave 0 covers all MISSING references
-- [ ] No watch-mode flags
-- [ ] Feedback latency < 30s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] Sampling continuity: no 3 consecutive tasks without automated verify
+- [x] Wave 0 covers all MISSING references
+- [x] No watch-mode flags
+- [x] Feedback latency < 30s
+- [x] `nyquist_compliant: true` set in frontmatter
 
-**Approval:** pending
+**Approval:** validated 2026-06-01 — all 6 tasks have automated verification, full suite green.
+
+---
+
+## Validation Audit 2026-06-01
+
+| Metric | Count |
+|--------|-------|
+| Gaps found | 0 |
+| Resolved | 0 |
+| Escalated | 0 |
+
+Audit reconciled the stale pre-execution draft against shipped artifacts. All 4 plans
+(01-04) executed; sole requirement MIGRATE-06 is fully COVERED by automated tests:
+`pkg/combat/dice_test.go` (RNG determinism, 6 tests) and `pkg/golden/golden_test.go`
+(`TestGolden` parity gate, `-count=2` byte-identical). No auditor spawn required — zero gaps.
+Cross-checked against 01-VERIFICATION.md (status passed, 5/5, SC #3 closed by 01-04).
