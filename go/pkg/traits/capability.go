@@ -14,12 +14,23 @@ const capBitsCeiling = 256
 type CapBits [4]uint64
 
 // Has reports whether bit is set. O(1) and zero-allocation (value receiver).
+// Out-of-range bits (bit < 0 || bit >= capBitsCeiling) report false rather than
+// indexing the backing array out of bounds and panicking — these are exported
+// methods on an exported type, so external callers may pass arbitrary bits.
 func (b CapBits) Has(bit int) bool {
+	if bit < 0 || bit >= capBitsCeiling {
+		return false
+	}
 	return b[bit>>6]&(1<<(uint(bit)&63)) != 0
 }
 
-// Set sets bit on the receiver (pointer receiver for mutation).
+// Set sets bit on the receiver (pointer receiver for mutation). Out-of-range
+// bits (bit < 0 || bit >= capBitsCeiling) are silently ignored rather than
+// indexing the backing array out of bounds and panicking.
 func (b *CapBits) Set(bit int) {
+	if bit < 0 || bit >= capBitsCeiling {
+		return
+	}
 	b[bit>>6] |= 1 << (uint(bit) & 63)
 }
 
