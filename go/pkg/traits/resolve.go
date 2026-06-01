@@ -1,6 +1,10 @@
 package traits
 
-import "rotmud/pkg/types"
+import (
+	"log/slog"
+
+	"rotmud/pkg/types"
+)
 
 // CAP is the per-axis RIS magnitude clamp (D-03). Each damage axis's summed
 // magnitude is pinned to [-CAP, +CAP] so additive stacking across an arbitrary
@@ -80,11 +84,18 @@ func (ts *TraitSet) Resolve() {
 		ts.modSum[m.Stat] = clampMod(ts.modSum[m.Stat] + clampMod(m.Delta))
 	}
 
-	// Intern each capability and OR its bit in. Overflow (>256 distinct) is
-	// skipped without panic (bounded-growth defense carried forward to P3).
+	// Intern each capability and OR its bit in. When the 256-bit registry
+	// ceiling is reached, an as-yet-unregistered key cannot be assigned a bit
+	// and is dropped. Rather than dropping silently — which makes the same data
+	// file yield different in-game behavior depending on global load order
+	// (WR-02) — surface each discarded key via slog so a content author learns
+	// their capability was discarded. Resolve still does not panic.
 	for _, c := range ts.Capabilities {
 		if bit, ok := internCapability(c.Key); ok {
 			ts.caps.Set(bit)
+		} else {
+			slog.Warn("traits: capability dropped, 256-bit registry ceiling reached",
+				"key", c.Key, "ceiling", capBitsCeiling)
 		}
 	}
 
