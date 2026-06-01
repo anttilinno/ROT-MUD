@@ -4,21 +4,21 @@ milestone: v1.0
 milestone_name: milestone
 status: ready_to_plan
 stopped_at: Phase 02 complete (2/2) — ready to discuss Phase 3
-last_updated: 2026-06-01T18:15:03.316Z
-last_activity: 2026-06-01 -- Phase 02 execution started
+last_updated: 2026-06-01T22:30:00.000Z
+last_activity: 2026-06-01 -- Phase 02 complete (UAT 9/9 passed)
 progress:
   total_phases: 14
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
   completed_plans: 6
-  percent: 7
+  percent: 14
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-16)
+See: .planning/PROJECT.md (updated 2026-06-01)
 
 **Core value:** Any new race, class, skill, spell, or mob type can be added by writing a data file — zero Go code changes required.
 **Current focus:** Phase 3 — race & class loaders
@@ -36,7 +36,7 @@ Progress: [░░░░░░░░░░] 0%
 
 **Velocity:**
 
-- Total plans completed: 6
+- Total plans completed: 8
 - Average duration: n/a
 - Total execution time: 0.0 hours
 
@@ -61,7 +61,7 @@ Progress: [░░░░░░░░░░] 0%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- Additive trait stacking (race + class + skill/spell effects + room + item all apply) — pending validation during Phase 2
+- Additive trait stacking (race + class + skill/spell effects + room + item all apply) — ✓ validated Phase 2 (Compose/Merge + clamped Resolve)
 - BehaviorHooks scripted in Lua (gopher-lua, hand-written API, single game-loop LState) — pending validation during Phase 4
 - TOML data files with homogeneous sections (no polymorphic unmarshal via pelletier/go-toml/v2) — locked by Phase 3
 - Trait query API replaces identity checks across combat/magic/skills/game; CI lint enforces — locked by Phase 7
@@ -93,6 +93,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-06-01T17:37:39.750Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-trait-type-system/02-CONTEXT.md
+Last session: 2026-06-01T22:30:00Z
+Stopped at: Phase 2 complete (UAT 9/9 passed), ready to plan Phase 3
+Resume file: None

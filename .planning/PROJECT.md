@@ -17,12 +17,12 @@ Any new race, class, skill, spell, or mob type can be added by writing a data fi
 - ✓ Combat system with damage calculation and hit/miss checks — existing
 - ✓ Magic system with 40+ spells and affect management — existing
 - ✓ Skills system with proficiency tracking and improvement — existing
+- ✓ **TRAIT-01**: Typed trait structs — Vulnerability, Resistance, Immunity, StatModifier, Capability, BehaviorHook — Phase 2
+- ✓ **TRAIT-02**: Additive trait composition — TraitSet Compose/Merge + Resolve with per-axis RIS caps (±100) and per-stat caps (±25) — Phase 2
+- ✓ **TRAIT-03**: Trait query API — `HasTrait`, `GetModifier`, `HasCapability`, `ResolveImmunity`, `HooksFor` — Phase 2
 
 ### Active
 
-- [ ] **TRAIT-01**: Typed trait structs — Vulnerability, Resistance, Immunity, StatModifier, CapabilityFlag, BehaviorHook
-- [ ] **TRAIT-02**: Additive trait composition — entity traits merged at runtime; per-axis caps prevent blowup
-- [ ] **TRAIT-03**: Trait query API — `HasTrait`, `GetModifier`, `HasCapability`, `ResolveImmunity`, `HooksFor`
 - [ ] **DATA-01**: TOML data files for races with homogeneous trait sections
 - [ ] **DATA-02**: TOML data files for classes with homogeneous trait sections; remort classes stack additively on tier-1
 - [ ] **DATA-03**: TOML data files for skills and skill groups with trait sections
@@ -67,10 +67,13 @@ Lua is the standard MUD scripting language and fits the hook use case — small 
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Additive trait stacking (race + class both apply) | Simplest model; no precedence rules needed | — Pending |
-| BehaviorHooks scripted in Lua | Standard MUD scripting; separates logic from Go code | — Pending |
-| TOML data files for trait definitions | Consistent with existing world data loading pattern | — Pending |
-| Trait query API instead of race/class constant checks | Eliminates scattered identity checks throughout combat/magic | — Pending |
+| Additive trait stacking (race + class both apply) | Simplest model; no precedence rules needed | ✓ Validated — Compose/Merge append in source order, Resolve sums per-axis (Phase 2) |
+| BehaviorHooks scripted in Lua | Standard MUD scripting; separates logic from Go code | — Pending (BehaviorHook.Script is reference-only until Phase 4) |
+| TOML data files for trait definitions | Consistent with existing world data loading pattern | — Pending (Phase 3 loaders) |
+| Trait query API instead of race/class constant checks | Eliminates scattered identity checks throughout combat/magic | ✓ Built — 5-method read-only API on TraitSet (Phase 2); wired into combat at Phase 7 |
+| Per-axis RIS clamp ±100, per-stat clamp ±25 | Bound trait stacking against DoS/overflow regardless of source count (T-02-02) | ✓ Validated — clamps proven by cap-boundary tests (Phase 2) |
+| traits.ImmunityResult mirrors combat.ImmunityResult by order, not import | Avoid future import cycle while keeping parity bridge | ✓ Validated — enum-order-mirrors-combat test (Phase 2) |
+| 256-bit CapBits capability registry with non-panic overflow | Zero-alloc O(1) capability queries; bounded growth | ✓ Validated — zero-alloc + 257th-key overflow tests (Phase 2) |
 
 ## Evolution
 
@@ -90,4 +93,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-16 after initialization*
+*Last updated: 2026-06-01 after Phase 2*
