@@ -56,28 +56,28 @@ func (ts *TraitSet) Resolve() {
 	ts.modSum = [types.MaxStats]int{}
 
 	// Per-axis RIS sum: Resistance/Immunity add positive, Vulnerability negative.
+	// Clamp incrementally so the running sum stays in [-CAP, +CAP] after every
+	// step. Each individual magnitude is also clamped before being added. This
+	// makes int overflow impossible regardless of how large the unvalidated,
+	// data-sourced magnitudes (P3 TOML) are: a pathological pile of huge
+	// magnitudes can never accumulate past the bound and flip sign.
 	for _, r := range ts.Resistances {
-		ts.risSum[r.DamageType] += r.Magnitude
+		ts.risSum[r.DamageType] = clamp(ts.risSum[r.DamageType] + clamp(r.Magnitude))
 	}
 	for _, im := range ts.Immunities {
-		ts.risSum[im.DamageType] += im.Magnitude
+		ts.risSum[im.DamageType] = clamp(ts.risSum[im.DamageType] + clamp(im.Magnitude))
 	}
 	for _, v := range ts.Vulnerabilities {
-		ts.risSum[v.DamageType] -= v.Magnitude
-	}
-	for axis, sum := range ts.risSum {
-		ts.risSum[axis] = clamp(sum)
+		ts.risSum[v.DamageType] = clamp(ts.risSum[v.DamageType] - clamp(v.Magnitude))
 	}
 
-	// Per-stat modifier sum, then clamp each entry.
+	// Per-stat modifier sum, clamped incrementally for the same overflow-safety
+	// reason as the RIS sums above.
 	for _, m := range ts.Modifiers {
 		if m.Stat < 0 || m.Stat >= types.MaxStats {
 			continue // bounds-guard: ignore out-of-range stat indices
 		}
-		ts.modSum[m.Stat] += m.Delta
-	}
-	for i := range ts.modSum {
-		ts.modSum[i] = clampMod(ts.modSum[i])
+		ts.modSum[m.Stat] = clampMod(ts.modSum[m.Stat] + clampMod(m.Delta))
 	}
 
 	// Intern each capability and OR its bit in. Overflow (>256 distinct) is
