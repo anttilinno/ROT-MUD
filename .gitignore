@@ -30,3 +30,4 @@ Thumbs.db
 # Tool caches
 .cache/
 .aider*
+graphify-out/
