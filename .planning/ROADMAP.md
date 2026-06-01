@@ -14,7 +14,7 @@ Transform the ROT-MUD entity systems (races, classes, skills, spells, mob templa
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Golden-Master Safety Net** - Capture current combat, spell, skill, and mob behavior in a deterministic parity suite before any migration starts
-- [ ] **Phase 2: Trait Type System** - Typed trait structs, additive composition with per-axis caps, and a trait query API in pure Go
+- [x] **Phase 2: Trait Type System** - Typed trait structs, additive composition with per-axis caps, and a trait query API in pure Go (completed 2026-06-01)
 - [ ] **Phase 3: Race & Class Loaders** - Homogeneous-section TOML files for races and classes, read and batch-validated at startup
 - [ ] **Phase 4: Lua Scripting Host** - Sandboxed gopher-lua VM running five named hook events with hand-written Go API (parallelizable with Phase 3/5/6)
 - [ ] **Phase 5: Skills & Spells Loaders** - TOML data files for skills, skill groups, and spells with trait annotations, validated at startup
@@ -63,7 +63,7 @@ Plans:
   3. The trait query API (`HasTrait`, `HasCapability`, `GetModifier`, `ResolveImmunity`, `HooksFor`) is callable from any package and covered by unit tests
   4. A resolved-trait bitmask cache makes `HasCapability` O(1) with zero allocation per query
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 Plans:
 **Wave 1**
 
@@ -71,7 +71,7 @@ Plans:
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
-- [ ] 02-02-PLAN.md — Composition + query API: TraitSet, Resolve() (clamped RIS/stat sums + bitset), HasTrait/HasCapability/GetModifier/ResolveImmunity/HooksFor (TRAIT-02, TRAIT-03)
+- [x] 02-02-PLAN.md — Composition + query API: TraitSet, Resolve() (clamped RIS/stat sums + bitset), HasTrait/HasCapability/GetModifier/ResolveImmunity/HooksFor (TRAIT-02, TRAIT-03)
 
 ### Phase 3: Race & Class Loaders
 
@@ -270,7 +270,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Golden-Master Safety Net | 0/3 | Not started | - |
-| 2. Trait Type System | 1/2 | In Progress|  |
+| 2. Trait Type System | 2/2 | Complete   | 2026-06-01 |
 | 3. Race & Class Loaders | 0/TBD | Not started | - |
 | 4. Lua Scripting Host | 0/TBD | Not started | - |
 | 5. Skills & Spells Loaders | 0/TBD | Not started | - |
