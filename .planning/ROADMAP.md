@@ -55,7 +55,10 @@ Plans:
   2. Traits from multiple sources (race + class, or skill + spell effect, or room + item) combine additively at the merge site, with per-axis caps preventing stacking blowup
   3. The trait query API (`HasTrait`, `HasCapability`, `GetModifier`, `ResolveImmunity`, `HooksFor`) is callable from any package and covered by unit tests
   4. A resolved-trait bitmask cache makes `HasCapability` O(1) with zero allocation per query
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — Foundation: trait structs, TraitKind/HookEvent enums, capability string->bit registry + 256-bit CapBits primitive (TRAIT-01)
+- [ ] 02-02-PLAN.md — Composition + query API: TraitSet, Resolve() (clamped RIS/stat sums + bitset), HasTrait/HasCapability/GetModifier/ResolveImmunity/HooksFor (TRAIT-02, TRAIT-03)
 
 ### Phase 3: Race & Class Loaders
 **Goal**: Races and classes can be declared in TOML files with homogeneous trait sections and are validated and loaded at server startup
@@ -217,7 +220,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Golden-Master Safety Net | 0/3 | Not started | - |
-| 2. Trait Type System | 0/TBD | Not started | - |
+| 2. Trait Type System | 0/2 | Not started | - |
 | 3. Race & Class Loaders | 0/TBD | Not started | - |
 | 4. Lua Scripting Host | 0/TBD | Not started | - |
 | 5. Skills & Spells Loaders | 0/TBD | Not started | - |
