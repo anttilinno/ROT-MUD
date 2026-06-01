@@ -63,11 +63,11 @@ Plans:
   3. The trait query API (`HasTrait`, `HasCapability`, `GetModifier`, `ResolveImmunity`, `HooksFor`) is callable from any package and covered by unit tests
   4. A resolved-trait bitmask cache makes `HasCapability` O(1) with zero allocation per query
 
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
 **Wave 1**
 
-- [ ] 02-01-PLAN.md — Foundation: trait structs, TraitKind/HookEvent enums, capability string->bit registry + 256-bit CapBits primitive (TRAIT-01)
+- [x] 02-01-PLAN.md — Foundation: trait structs, TraitKind/HookEvent enums, capability string->bit registry + 256-bit CapBits primitive (TRAIT-01)
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -270,7 +270,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Golden-Master Safety Net | 0/3 | Not started | - |
-| 2. Trait Type System | 0/2 | Not started | - |
+| 2. Trait Type System | 1/2 | In Progress|  |
 | 3. Race & Class Loaders | 0/TBD | Not started | - |
 | 4. Lua Scripting Host | 0/TBD | Not started | - |
 | 5. Skills & Spells Loaders | 0/TBD | Not started | - |
