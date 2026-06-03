@@ -208,6 +208,11 @@ type CommandDispatcher struct {
 
 	// Admin data
 	BanList map[string]bool // Site bans (site -> permanent)
+
+	// greetPulse tracks the last game pulse at which each LLM mob greeted an
+	// entering player, for per-mob greeting cooldown. Accessed only from the
+	// single-threaded game loop.
+	greetPulse map[*types.Character]uint64
 }
 
 // CommandEntry represents a registered command
@@ -1653,6 +1658,7 @@ func NewCommandDispatcher() *CommandDispatcher {
 		MOBprogs: NewMOBprogSystem(),
 		OLC:      builder.NewOLCSystem(),
 	}
+	d.greetPulse = make(map[*types.Character]uint64)
 	d.registerBasicCommands()
 
 	// Wire up OLC system output
@@ -1810,6 +1816,7 @@ func (d *CommandDispatcher) registerBasicCommands() {
 	// Magic commands
 	d.Registry.Register("cast", d.cmdCast, types.PosFighting, 0)
 	d.Registry.Register("spells", d.cmdSpells, types.PosDead, 0)
+	d.Registry.Register("heal", d.cmdHeal, types.PosStanding, 0)
 
 	// Shop commands
 	d.Registry.Register("buy", d.cmdBuy, types.PosStanding, 0)
@@ -2187,6 +2194,9 @@ func (d *CommandDispatcher) doMove(ch *types.Character, dir types.Direction) {
 
 	// Show room description
 	d.doLook(ch, "")
+
+	// LLM-enabled mobs may greet the entering player.
+	d.greetLLMMobs(ch, newRoom, false)
 
 	// Move followers (charmed mobs, pets, group members)
 	d.moveFollowers(ch, oldRoom, newRoom, dir)
@@ -3422,15 +3432,218 @@ func (d *CommandDispatcher) notifyLLMMobs(speaker *types.Character, room *types.
 	if d.LLM == nil || !d.LLM.Enabled() || speaker.IsNPC() {
 		return
 	}
+	state := observableState(speaker)
+	hints := entryHints(speaker, room)
 	for _, mob := range room.People {
 		if mob.IsNPC() && mob.LLMEnabled {
 			d.LLM.Submit(llm.Request{
-				Key:        mob,
-				Persona:    mob.LLMPersona,
-				PlayerName: speaker.Name,
-				PlayerSay:  said,
+				Key:          mob,
+				Persona:      mob.LLMPersona,
+				PlayerName:   speaker.Name,
+				PlayerSay:    said,
+				PlayerState:  state,
+				WorldContext: hints,
 			})
 		}
+	}
+}
+
+// greetGapPulses is the minimum number of game pulses between greetings from a
+// single mob (4 pulses/sec, so 240 = 60 seconds).
+const greetGapPulses = 240
+
+// greetChancePercent is the chance a mob greets a given (eligible) entry.
+const greetChancePercent = 50
+
+// GreetOnSpawn greets the player from any LLM mob in their current room when they
+// enter the game (login, recall, teleport). Unlike walking between rooms, this
+// always greets (subject only to the per-mob cooldown) so arriving in the world
+// feels alive.
+func (d *CommandDispatcher) GreetOnSpawn(ch *types.Character) {
+	if ch != nil {
+		d.greetLLMMobs(ch, ch.InRoom, true)
+	}
+}
+
+// greetLLMMobs lets LLM-enabled mobs proactively greet a player who just entered
+// the room, with a brief in-character line — a casual hello, a word of wisdom, or
+// a grounded hint about the surroundings. Gated per-mob by a cooldown; when
+// guaranteed is false an additional coin flip throttles greetings so walking back
+// and forth (or traveling in groups) does not spam.
+func (d *CommandDispatcher) greetLLMMobs(entering *types.Character, room *types.Room, guaranteed bool) {
+	if d.LLM == nil || !d.LLM.Enabled() || entering.IsNPC() || room == nil {
+		return
+	}
+	var pulse uint64
+	if d.GameLoop != nil {
+		pulse = d.GameLoop.GetPulseCount()
+	}
+
+	var state, hints string // built lazily, only if some mob will actually greet
+	computed := false
+
+	for _, mob := range room.People {
+		if !mob.IsNPC() || !mob.LLMEnabled || mob == entering {
+			continue
+		}
+		// Cooldown: skip if this mob greeted too recently.
+		if last, ok := d.greetPulse[mob]; ok && pulse-last < greetGapPulses {
+			continue
+		}
+		// Random gate so not every eligible entry triggers a greeting,
+		// unless this greeting is guaranteed (e.g. entering the game).
+		if !guaranteed && combat.NumberPercent() > greetChancePercent {
+			continue
+		}
+		if !computed {
+			state = observableState(entering)
+			hints = entryHints(entering, room)
+			computed = true
+		}
+		if d.LLM.Submit(llm.Request{
+			Key:          mob,
+			Persona:      mob.LLMPersona,
+			PlayerName:   entering.Name,
+			PlayerState:  state,
+			Greeting:     true,
+			WorldContext: hints,
+		}) {
+			d.greetPulse[mob] = pulse
+		}
+	}
+}
+
+// entryHints summarizes grounded world context an NPC could use to advise an
+// arriving traveler: the area and how its danger compares to the player's level,
+// the available exits, and any notably dangerous mobs in adjacent rooms.
+func entryHints(ch *types.Character, room *types.Room) string {
+	var parts []string
+
+	if room.Area != nil {
+		a := room.Area
+		switch {
+		case a.HighRange > 0 && ch.Level+5 < a.LowRange:
+			parts = append(parts, fmt.Sprintf("this region (%s) is perilous for one of level %d, suited to levels %d-%d", a.Name, ch.Level, a.LowRange, a.HighRange))
+		case a.HighRange > 0 && ch.Level > a.HighRange+5:
+			parts = append(parts, fmt.Sprintf("this region (%s) holds little danger for one as seasoned as level %d", a.Name, ch.Level))
+		case a.Name != "":
+			parts = append(parts, "this region is "+a.Name)
+		}
+	}
+
+	var dirs []string
+	for dir := 0; dir < len(room.Exits); dir++ {
+		if ex := room.Exits[dir]; ex != nil && ex.ToRoom != nil {
+			dirs = append(dirs, types.Direction(dir).String())
+		}
+	}
+	if len(dirs) > 0 {
+		parts = append(parts, "exits lead "+strings.Join(dirs, ", "))
+	}
+
+	seen := map[string]bool{}
+	var threats []string
+	for dir := 0; dir < len(room.Exits) && len(threats) < 3; dir++ {
+		ex := room.Exits[dir]
+		if ex == nil || ex.ToRoom == nil {
+			continue
+		}
+		for _, m := range ex.ToRoom.People {
+			if m.IsNPC() && m.ShortDesc != "" && m.Level > ch.Level+3 && !seen[m.ShortDesc] {
+				seen[m.ShortDesc] = true
+				threats = append(threats, fmt.Sprintf("%s lurks to the %s", m.ShortDesc, types.Direction(dir).String()))
+				if len(threats) >= 3 {
+					break
+				}
+			}
+		}
+	}
+	if len(threats) > 0 {
+		parts = append(parts, strings.Join(threats, "; "))
+	}
+
+	if len(parts) == 0 {
+		return ""
+	}
+	return "Your surroundings: " + strings.Join(parts, "; ") + "."
+}
+
+// observableState summarizes what an NPC could plausibly perceive about a
+// character by looking at them: physical condition, visible afflictions, a
+// rough impression of wealth, and worn equipment. It is fed to the LLM as
+// observed context so dialog can react to the speaker. Exact coin counts are
+// deliberately not exposed — only a wealth impression a stranger could gauge.
+func observableState(ch *types.Character) string {
+	var parts []string
+
+	// Physical condition (reuses the look-at-character descriptor).
+	parts = append(parts, conditionString(ch))
+
+	// Visible afflictions a healer would notice.
+	var ails []string
+	if ch.IsAffected(types.AffPoison) {
+		ails = append(ails, "poisoned")
+	}
+	if ch.IsAffected(types.AffPlague) {
+		ails = append(ails, "stricken with plague")
+	}
+	if ch.IsAffected(types.AffBlind) {
+		ails = append(ails, "blinded")
+	}
+	if ch.IsAffected(types.AffCurse) {
+		ails = append(ails, "cursed")
+	}
+	if ch.IsAffected(types.AffWeaken) {
+		ails = append(ails, "weakened")
+	}
+	if ch.PCData != nil {
+		if ch.PCData.Condition[types.CondHunger] == 0 {
+			ails = append(ails, "famished")
+		}
+		if ch.PCData.Condition[types.CondThirst] == 0 {
+			ails = append(ails, "parched")
+		}
+	}
+	if len(ails) > 0 {
+		parts = append(parts, "appears "+strings.Join(ails, ", "))
+	}
+
+	// Rough wealth impression from total copper held.
+	parts = append(parts, "looks "+wealthImpression(ch.Coin))
+
+	// Visible worn equipment (short descriptions), capped to stay terse.
+	var gear []string
+	for loc := types.WearLocLight; loc < types.WearLocMax; loc++ {
+		if obj := ch.Equipment[loc]; obj != nil && obj.ShortDesc != "" {
+			gear = append(gear, obj.ShortDesc)
+			if len(gear) >= 6 {
+				break
+			}
+		}
+	}
+	if len(gear) > 0 {
+		parts = append(parts, "is wearing "+strings.Join(gear, ", "))
+	} else {
+		parts = append(parts, "wears no visible equipment")
+	}
+
+	return strings.Join(parts, ", and ")
+}
+
+// wealthImpression maps a copper total to a qualitative band a stranger could
+// estimate from appearance.
+func wealthImpression(copper int64) string {
+	switch {
+	case copper <= 0:
+		return "destitute, without a coin to their name"
+	case copper < 50:
+		return "poor"
+	case copper < 500:
+		return "of modest means"
+	case copper < 5000:
+		return "comfortably well-off"
+	default:
+		return "wealthy"
 	}
 }
 

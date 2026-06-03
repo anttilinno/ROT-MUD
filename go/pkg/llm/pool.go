@@ -8,17 +8,20 @@ import (
 
 // chatter is the subset of Client the Pool needs, so tests can inject a stub.
 type chatter interface {
-	Chat(ctx context.Context, persona, playerName, playerSay string) (Action, error)
+	Chat(ctx context.Context, req Request) (Action, error)
 }
 
 // Request is one dialog turn to think about. Key is opaque to the Pool and is
 // echoed back on the Result so the caller can map it to a mob (we pass the
 // *types.Character). The Pool keeps at most one in-flight request per Key.
 type Request struct {
-	Key        any
-	Persona    string
-	PlayerName string
-	PlayerSay  string
+	Key          any
+	Persona      string
+	PlayerName   string
+	PlayerSay    string
+	PlayerState  string // optional: what the NPC can observe about the speaker
+	Greeting     bool   // mob-initiated greeting on player entry (no PlayerSay)
+	WorldContext string // optional: area/exits/nearby-mob hints for grounding
 }
 
 // Result carries the outcome of a Request. On Err != nil the caller must use
@@ -163,7 +166,7 @@ func (p *Pool) handle(req Request) {
 	defer cancel()
 
 	atomic.AddInt64(&p.calls, 1)
-	act, err := p.chat.Chat(ctx, req.Persona, req.PlayerName, req.PlayerSay)
+	act, err := p.chat.Chat(ctx, req)
 	if err == nil {
 		err = act.Validate()
 	}

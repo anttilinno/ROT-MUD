@@ -413,6 +413,9 @@ func (h *HTTPServer) enterGameWS(ws *WebSocketSession) {
 	// Show the room
 	h.server.Dispatcher.Registry.Execute("look", ch, "")
 
+	// Let any LLM-enabled mob in the room greet the arriving player.
+	h.server.Dispatcher.GreetOnSpawn(ch)
+
 	// Reset login state
 	if ws.login != nil {
 		ws.login.Reset()

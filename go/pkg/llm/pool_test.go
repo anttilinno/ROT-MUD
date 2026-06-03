@@ -15,7 +15,7 @@ type stubChatter struct {
 	gate chan struct{} // if non-nil, Chat blocks until it receives
 }
 
-func (s *stubChatter) Chat(ctx context.Context, persona, playerName, playerSay string) (Action, error) {
+func (s *stubChatter) Chat(ctx context.Context, req Request) (Action, error) {
 	if s.gate != nil {
 		select {
 		case <-s.gate:

@@ -3,10 +3,14 @@ package llm
 import (
 	"fmt"
 	"strings"
+	"unicode"
 )
 
-// maxLineLen caps NPC output length (Tier 1 say/emote length cap).
-const maxLineLen = 200
+// maxLineLen caps NPC output length (Tier 1 say/emote length cap). It is a
+// safety rail against runaway generation, not the target length — the prompt
+// asks the model for one or two sentences, which finish well under this. Set
+// generously so normal replies are never truncated mid-sentence.
+const maxLineLen = 400
 
 // Action is a validated tool call returned by the model. Tier 1 surface only:
 // say, emote, refuse. The game server dispatches this; it never trusts the raw
@@ -30,7 +34,62 @@ func (a Action) Validate() error {
 	if len(a.Line) > maxLineLen {
 		return fmt.Errorf("line too long (%d > %d)", len(a.Line), maxLineLen)
 	}
+	if reason := garbageReason(a.Line); reason != "" {
+		return fmt.Errorf("line looks degenerate: %s", reason)
+	}
 	return nil
+}
+
+// garbageReason detects the failure modes small local models fall into —
+// leaking markup/JSON tokens, emitting code or email-like strings, control
+// characters, or repetition loops — and returns a short reason if the line is
+// not plausible NPC speech. Empty string means the line is acceptable. When a
+// line is rejected the Pool treats it as a failure and the caller falls back to
+// scripted behavior (silent), which is preferable to printing garbage.
+func garbageReason(line string) string {
+	// Markup / structured-output / code leakage never appears in NPC speech.
+	for _, bad := range []string{"`", "@", "{", "}", "</", "/>", "```", "json", "http", "\\u", "\\n"} {
+		if strings.Contains(strings.ToLower(line), bad) {
+			return "contains " + bad
+		}
+	}
+	// Control characters (other than ordinary spaces) signal corruption.
+	for _, r := range line {
+		if r != '\t' && r != '\n' && r != '\r' && unicode.IsControl(r) {
+			return "control character"
+		}
+	}
+	// Repetition loop: any 16-char window repeated 3+ times.
+	if isRepetitive(line) {
+		return "repetition loop"
+	}
+	// Real speech has real words. A line with almost no letters (e.g. "1") is a
+	// degenerate single-token output, not dialog.
+	letters := 0
+	for _, r := range line {
+		if unicode.IsLetter(r) {
+			letters++
+		}
+	}
+	if letters < 2 {
+		return "too few letters"
+	}
+	return ""
+}
+
+// isRepetitive reports whether a 16-character substring occurs three or more
+// times — the signature of a degenerate generation loop.
+func isRepetitive(s string) bool {
+	const win = 16
+	if len(s) < win*3 {
+		return false
+	}
+	for i := 0; i+win <= len(s); i++ {
+		if strings.Count(s, s[i:i+win]) >= 3 {
+			return true
+		}
+	}
+	return false
 }
 
 // tier1Schema is the OpenAI response_format that llama.cpp compiles into a GBNF

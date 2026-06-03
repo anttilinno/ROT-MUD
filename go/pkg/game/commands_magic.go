@@ -151,3 +151,114 @@ func (d *CommandDispatcher) cmdSpells(ch *types.Character, args string) {
 	d.send(ch, fmt.Sprintf("\r\nCurrent mana: %d/%d\r\n", ch.Mana, ch.MaxMana))
 	d.send(ch, fmt.Sprintf("You have %d practice sessions left.\r\n", ch.Practice))
 }
+
+// healOffer is one purchasable service sold by a temple healer (spec_cast_adept).
+// Cost is the price in copper (the economy's base unit; historical "gold" numbers
+// in area data are read as copper). Spell is the magic-registry spell name, or ""
+// for the special "mana" restore.
+type healOffer struct {
+	Keyword string
+	Spell   string
+	Word    string // magic word the healer utters
+	Cost    int64  // copper
+	Desc    string
+}
+
+// healMenu mirrors the classic ROM healer (do_heal in healer.c). Prices are in
+// copper, scaled to this server's economy.
+var healMenu = []healOffer{
+	{"light", "cure light", "judicandus dies", 10, "cure light wounds"},
+	{"serious", "cure serious", "judicandus med", 15, "cure serious wounds"},
+	{"critic", "cure critical", "judicandus maximus", 25, "cure critical wounds"},
+	{"heal", "heal", "pumo", 50, "healing spell"},
+	{"blind", "cure blindness", "judicandus noselacri", 20, "cure blindness"},
+	{"disease", "cure disease", "judicandus eugzagz", 15, "cure disease"},
+	{"poison", "cure poison", "judicandus sausabru", 25, "cure poison"},
+	{"uncurse", "remove curse", "candusima", 50, "remove curse"},
+	{"refresh", "refresh", "candusima", 5, "restore movement"},
+	{"mana", "", "energizer", 10, "restore mana"},
+}
+
+// healerOrder names the faction a healer collects donations for. There is no
+// structured faction field on mobs yet, so this is a sensible generic default;
+// it is the single place to wire a per-mob faction later.
+func healerOrder(healer *types.Character) string {
+	return "the temple"
+}
+
+// findHealer returns the first visible NPC in the room running the healer
+// special function, or nil if none is present.
+func (d *CommandDispatcher) findHealer(ch *types.Character) *types.Character {
+	if ch.InRoom == nil {
+		return nil
+	}
+	for _, mob := range ch.InRoom.People {
+		if mob.IsNPC() && mob.Special == "spec_cast_adept" {
+			return mob
+		}
+	}
+	return nil
+}
+
+// cmdHeal implements the healer shop: with no argument it prints the menu of
+// services and prices; with a keyword it charges the player and has the healer
+// cast the corresponding spell. Ported from ROM's do_heal.
+func (d *CommandDispatcher) cmdHeal(ch *types.Character, args string) {
+	healer := d.findHealer(ch)
+	if healer == nil {
+		d.send(ch, "You can't do that here.\r\n")
+		return
+	}
+
+	order := healerOrder(healer)
+	arg := strings.ToLower(strings.TrimSpace(args))
+	if arg == "" {
+		d.send(ch, fmt.Sprintf("In return for a donation to %s, the healer offers:\r\n\r\n", order))
+		for _, o := range healMenu {
+			d.send(ch, fmt.Sprintf("  %-8s - %-22s suggested donation: %s\r\n",
+				o.Keyword, o.Desc, types.FormatCoin(o.Cost)))
+		}
+		d.send(ch, "\r\nType heal <type> to make a donation and receive a blessing.\r\n")
+		return
+	}
+
+	var offer *healOffer
+	for i := range healMenu {
+		if strings.HasPrefix(healMenu[i].Keyword, arg) {
+			offer = &healMenu[i]
+			break
+		}
+	}
+	if offer == nil {
+		ActToChar("$N tells you 'Type 'heal' to see the blessings I offer for a donation.'", ch, healer, nil, d.Output)
+		return
+	}
+
+	cost := offer.Cost
+	if ch.Coin < cost {
+		ActToChar("$N tells you 'That donation is beyond your means right now, child.'", ch, healer, nil, d.Output)
+		return
+	}
+	ch.Coin -= cost
+	ActToChar(fmt.Sprintf("$N accepts your donation of %s to %s.", types.FormatCoin(cost), order), ch, healer, nil, d.Output)
+
+	ActToRoom("$n utters the words '"+offer.Word+"'.", healer, nil, nil, d.Output)
+
+	if offer.Spell == "" {
+		// "mana" — not a spell; restore the buyer's mana.
+		ch.Mana = ch.MaxMana
+		d.send(ch, "A warm glow passes through you; your mana is restored.\r\n")
+		return
+	}
+
+	if d.Magic == nil || d.Magic.Registry == nil {
+		d.send(ch, "The magic system is not available.\r\n")
+		return
+	}
+	spell := d.Magic.Registry.FindByName(offer.Spell)
+	if spell == nil || spell.Func == nil {
+		d.send(ch, "Something goes wrong with the spell.\r\n")
+		return
+	}
+	spell.Func(healer, healer.Level, ch)
+}

@@ -1130,6 +1130,9 @@ func (s *Server) enterGame(session *Session) {
 	// Show the room
 	s.Dispatcher.Registry.Execute("look", ch, "")
 
+	// Let any LLM-enabled mob in the room greet the arriving player.
+	s.Dispatcher.GreetOnSpawn(ch)
+
 	// Reset login state for next connection
 	s.Login.ResetState()
 }
