@@ -9,6 +9,7 @@ import (
 
 	"rotmud/pkg/ai"
 	"rotmud/pkg/combat"
+	"rotmud/pkg/llm"
 	"rotmud/pkg/loader"
 	"rotmud/pkg/magic"
 	"rotmud/pkg/skills"
@@ -71,6 +72,12 @@ type GameLoop struct {
 	Combat    *combat.CombatSystem // Combat system for violence updates
 	Skills    *skills.SkillSystem  // Skills system for passive skills
 	WorldTime *WorldTime           // Time and weather system
+
+	// LLM-driven NPC dialog (Tier 1). LLM is the async worker pool (nil when
+	// the feature is off); OnLLMResult dispatches each drained result. The game
+	// loop never blocks on the LLM — it only drains ready results each pulse.
+	LLM         *llm.Pool
+	OnLLMResult func(llm.Result)
 
 	mu sync.RWMutex
 }
@@ -145,6 +152,9 @@ func (g *GameLoop) pulse() {
 		g.OnPulse()
 	}
 
+	// Drain any ready LLM dialog results (never blocks).
+	g.drainLLM()
+
 	// Violence update (combat) - every 3 pulses
 	if pulseNum%PulseViolence == 0 {
 		g.violenceUpdate()
@@ -185,6 +195,23 @@ func (g *GameLoop) violenceUpdate() {
 	// Process combat for all fighting characters
 	if g.Combat != nil {
 		g.Combat.ViolenceUpdate(g.Characters)
+	}
+}
+
+// drainLLM dispatches all LLM dialog results ready this pulse. Non-blocking:
+// it stops as soon as the result channel is empty. Dispatch (including the
+// scripted fallback on error) is delegated to OnLLMResult.
+func (g *GameLoop) drainLLM() {
+	if g.LLM == nil || g.OnLLMResult == nil {
+		return
+	}
+	for {
+		select {
+		case res := <-g.LLM.Results():
+			g.OnLLMResult(res)
+		default:
+			return
+		}
 	}
 }
 

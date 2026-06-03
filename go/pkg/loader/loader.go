@@ -807,6 +807,10 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	// Set special function (e.g. spec_cast_adept)
 	ch.Special = tmpl.Special
 
+	// LLM dialog opt-in (Tier 1)
+	ch.LLMEnabled = tmpl.LLMEnabled
+	ch.LLMPersona = tmpl.LLMPersona
+
 	return ch
 }
 

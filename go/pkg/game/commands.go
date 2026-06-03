@@ -10,6 +10,7 @@ import (
 	"rotmud/pkg/builder"
 	"rotmud/pkg/combat"
 	"rotmud/pkg/help"
+	"rotmud/pkg/llm"
 	"rotmud/pkg/loader"
 	"rotmud/pkg/magic"
 	"rotmud/pkg/shops"
@@ -192,6 +193,7 @@ type CommandDispatcher struct {
 	MOBprogs *MOBprogSystem                        // MOB program system
 	OLC      *builder.OLCSystem                    // Online creation system
 	Help     *help.System                          // Help system
+	LLM      *llm.Pool                             // LLM-driven NPC dialog pool (nil when disabled)
 
 	// Callbacks for server-level operations
 	OnSave            func(ch *types.Character) error // Called when player saves
@@ -1925,6 +1927,7 @@ func (d *CommandDispatcher) registerBasicCommands() {
 	d.Registry.Register("slay", d.cmdSlay, types.PosDead, 100)
 	d.Registry.Register("freeze", d.cmdFreeze, types.PosDead, 100)
 	d.Registry.Register("mstat", d.cmdMstat, types.PosDead, 100)
+	d.Registry.Register("llmstat", d.cmdLLMStat, types.PosDead, 100)
 	d.Registry.Register("ostat", d.cmdOstat, types.PosDead, 100)
 	d.Registry.Register("rstat", d.cmdRstat, types.PosDead, 100)
 	d.Registry.Register("mfind", d.cmdMfind, types.PosDead, 100)
@@ -3405,6 +3408,28 @@ func (d *CommandDispatcher) cmdSay(ch *types.Character, args string) {
 	for _, other := range room.People {
 		if other != ch {
 			d.send(other, msg)
+		}
+	}
+
+	d.notifyLLMMobs(ch, room, args)
+}
+
+// notifyLLMMobs enqueues an LLM dialog turn for every LLM-enabled NPC in the
+// room when a player speaks. Never blocks: the pool drops the request if the
+// mob is already thinking, the breaker is open, or the queue is full, in which
+// case the mob simply stays silent (its scripted behavior is unaffected).
+func (d *CommandDispatcher) notifyLLMMobs(speaker *types.Character, room *types.Room, said string) {
+	if d.LLM == nil || !d.LLM.Enabled() || speaker.IsNPC() {
+		return
+	}
+	for _, mob := range room.People {
+		if mob.IsNPC() && mob.LLMEnabled {
+			d.LLM.Submit(llm.Request{
+				Key:        mob,
+				Persona:    mob.LLMPersona,
+				PlayerName: speaker.Name,
+				PlayerSay:  said,
+			})
 		}
 	}
 }

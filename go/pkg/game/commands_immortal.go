@@ -219,6 +219,29 @@ func (d *CommandDispatcher) cmdMstat(ch *types.Character, args string) {
 	}
 }
 
+// cmdLLMStat shows the LLM dialog worker pool state (LLM-NPC.md llmstat).
+func (d *CommandDispatcher) cmdLLMStat(ch *types.Character, args string) {
+	if d.LLM == nil {
+		d.send(ch, "LLM dialog layer is not initialized.\r\n")
+		return
+	}
+	s := d.LLM.Stats()
+	enabled := "disabled"
+	if s.Enabled {
+		enabled = "enabled"
+	}
+	breaker := "closed"
+	if s.BreakerOpen {
+		breaker = "OPEN (falling back to scripted)"
+	}
+	d.send(ch, fmt.Sprintf("LLM dialog: %s\r\n", enabled))
+	d.send(ch, fmt.Sprintf("Workers: %d  Queue depth: %d  In flight: %d\r\n",
+		s.Workers, s.QueueDepth, s.Inflight))
+	d.send(ch, fmt.Sprintf("Circuit breaker: %s\r\n", breaker))
+	d.send(ch, fmt.Sprintf("Calls: %d  Failures: %d  Drops: %d\r\n",
+		s.Calls, s.Failures, s.Drops))
+}
+
 // cmdOstat shows detailed object statistics
 func (d *CommandDispatcher) cmdOstat(ch *types.Character, args string) {
 	if args == "" {

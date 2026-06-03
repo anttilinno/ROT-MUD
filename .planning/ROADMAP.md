@@ -26,7 +26,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 11: Area & Item Traits** - Extend the existing area loader with trait parsing for rooms and items; annotate existing area files with NoMagic zones, silver/fire weapons, etc.
 - [ ] **Phase 12: Extensibility Proof** - New race (Lizardman) added by data file only, zero Go diff, with Lua behavior hook
 - [ ] **Phase 13: Economic Overhaul** - Add durability/repair, smith custom crafting, identify fees, and bank fees so the economy has real coin sinks; rebalance mob drops to a stable source/sink ratio (see `.planning/ECONOMY.md` for sub-phase detail)
-- [ ] **Phase 14: LLM-Driven NPCs** - Local-LLM-backed dialog for shopkeepers/smiths/sages (Tier 1) and plan-once tactical combat for area bosses (Tier 2), with first-class scripted fallback, circuit breaker, and feature flag (see `.planning/LLM-NPC.md` for sub-phase detail)
+- [ ] **Phase 14: LLM-Driven NPCs** - Local-LLM-backed dialog for shopkeepers/smiths/sages (Tier 1) and plan-once tactical combat for area bosses (Tier 2), with first-class scripted fallback, circuit breaker, and feature flag (see `.planning/LLM-NPC.md` for sub-phase detail) — *N1+N2 exploratory spike landed 2026-06-03 (`pkg/llm`, Otho live); not yet a formally planned/verified phase*
 
 ## Phase Details
 
@@ -250,6 +250,13 @@ Plans:
   6. Phase 1 golden-master combat parity still passes with the LLM feature flag off; an `llm_smoke_test.go` mocks the endpoint and verifies tool validation, fallback paths, circuit breaker transitions, and overflow handling
 
 **Plans**: TBD
+
+**Spike progress (2026-06-03, exploratory — not a formally planned/verified phase):**
+
+- **N1 — worker pool + endpoint client: DONE.** `pkg/llm` ships async worker pool (non-blocking, per-mob in-flight dedup, drop-on-overflow), llama.cpp OpenAI-compatible client with grammar-constrained `json_schema` sampling, circuit breaker (opens 5/10, half-open probe, 60s cooldown), Tier-1 tool-call validation, and the `llmstat` immortal command. Mock-endpoint unit tests cover validation, fallback, breaker transitions, and overflow (criterion 6's `llm_smoke_test` intent).
+- **N2 — Tier 1 dialog on one mob: DONE.** Otho the money changer (vnum 3162) flagged `llm_enabled` with a persona in TOML; player `say` in-room triggers an LLM dialog turn delivered back through the game loop; live-verified end-to-end against a local llama.cpp server.
+- **Gaps vs full phase:** feature gated by env var (`ROTMUD_LLM`), not `config.toml` (server has no config loader yet); tool surface is `say`/`emote`/`refuse` only (no `set_price`/`offer_item`); no per-(mob,player) JSONL dialog memory; `llmstat` lacks p50/p95 latency; Tier 2 combat (N4–N6, criteria 4–5) not started; golden-master parity (criterion 6) deferred until Phase 1 exists.
+
 **Reference**: `.planning/LLM-NPC.md` for sub-phase breakdown (N1 worker pool → N6 Tier 2 rollout), tool surface, schema definitions, and risk register
 
 ## Progress
@@ -282,4 +289,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 11. Area & Item Traits | 0/TBD | Not started | - |
 | 12. Extensibility Proof | 0/TBD | Not started | - |
 | 13. Economic Overhaul | 0/TBD | Not started | - |
-| 14. LLM-Driven NPCs | 0/TBD | Not started | - |
+| 14. LLM-Driven NPCs | 0/TBD | Spike (N1+N2 landed) | - |

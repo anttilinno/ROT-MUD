@@ -13,6 +13,7 @@ import (
 	"rotmud/pkg/combat"
 	"rotmud/pkg/game"
 	"rotmud/pkg/help"
+	"rotmud/pkg/llm"
 	"rotmud/pkg/loader"
 	"rotmud/pkg/magic"
 	"rotmud/pkg/persistence"
@@ -55,6 +56,9 @@ type Server struct {
 	Quests     *game.QuestSystem
 	World      *loader.World
 	DataPath   string // Path to data directory
+
+	// LLM-driven NPC dialog worker pool (nil when the feature is disabled)
+	LLM *llm.Pool
 
 	// Player persistence
 	Persistence *persistence.PlayerPersistence
@@ -288,6 +292,19 @@ func New(logger *slog.Logger) *Server {
 		game.ActToRoom("$n has arrived.", ch, nil, nil, func(c *types.Character, m string) {
 			s.SendToCharacter(c, m)
 		})
+	}
+
+	// Wire up the LLM-driven NPC dialog layer (Tier 1). Off unless ROTMUD_LLM
+	// is set; see pkg/llm.ConfigFromEnv. When enabled, the pool runs LLM calls
+	// off the game-loop goroutine and the loop drains results each pulse.
+	if cfg := llm.ConfigFromEnv(); cfg.Enabled {
+		pool := llm.NewPool(cfg)
+		pool.Start()
+		s.LLM = pool
+		s.Dispatcher.LLM = pool
+		s.GameLoop.LLM = pool
+		s.GameLoop.OnLLMResult = s.dispatchLLMResult
+		s.logger.Info("LLM dialog enabled", "endpoint", cfg.Endpoint, "model", cfg.Model, "workers", cfg.Workers)
 	}
 
 	// Wire up clan system
@@ -908,6 +925,11 @@ func (s *Server) Start(port int) error {
 	// Stop the game loop
 	s.GameLoop.Stop()
 
+	// Stop the LLM worker pool
+	if s.LLM != nil {
+		s.LLM.Stop()
+	}
+
 	// Close all existing connections
 	s.mu.Lock()
 	for conn := range s.sessions {
@@ -1296,6 +1318,41 @@ func (s *Server) SendToCharacter(ch *types.Character, msg string) {
 				}
 			}
 			return
+		}
+	}
+}
+
+// dispatchLLMResult delivers an LLM dialog result to the mob's room. Called by
+// the game loop (single-threaded) as it drains results. On any error the mob
+// stays silent — identical to its behavior with the LLM disabled.
+func (s *Server) dispatchLLMResult(res llm.Result) {
+	mob, ok := res.Key.(*types.Character)
+	if !ok || mob.InRoom == nil {
+		return
+	}
+	if res.Err != nil {
+		s.logger.Debug("LLM dialog fell back to scripted (silent)",
+			"mob", mob.ShortDesc, "error", res.Err)
+		return
+	}
+
+	name := mob.ShortDesc
+	if name == "" {
+		name = mob.Name
+	}
+	var line string
+	switch res.Action.Tool {
+	case "say", "refuse":
+		line = fmt.Sprintf("%s says '%s'\r\n", name, res.Action.Line)
+	case "emote":
+		line = fmt.Sprintf("%s %s\r\n", name, res.Action.Line)
+	default:
+		return
+	}
+
+	for _, other := range mob.InRoom.People {
+		if !other.IsNPC() {
+			s.SendToCharacter(other, line)
 		}
 	}
 }
@@ -1796,25 +1853,25 @@ func (a *shopWorldAdapter) CloneObject(template *types.Object) *types.Object {
 // only to translate loader.ShopData.BuyTypes ([]string) into the numeric
 // shops.Shop.BuyTypes ([]int) form at registry build time.
 var shopItemTypeMap = map[string]int{
-	"light":      int(types.ItemTypeLight),
-	"scroll":     int(types.ItemTypeScroll),
-	"wand":       int(types.ItemTypeWand),
-	"staff":      int(types.ItemTypeStaff),
-	"weapon":     int(types.ItemTypeWeapon),
-	"treasure":   int(types.ItemTypeTreasure),
-	"armor":      int(types.ItemTypeArmor),
-	"potion":     int(types.ItemTypePotion),
-	"clothing":   int(types.ItemTypeClothing),
-	"furniture":  int(types.ItemTypeFurniture),
-	"trash":      int(types.ItemTypeTrash),
-	"container":  int(types.ItemTypeContainer),
-	"drink":      int(types.ItemTypeDrinkCon),
-	"key":        int(types.ItemTypeKey),
-	"food":       int(types.ItemTypeFood),
-	"money":      int(types.ItemTypeMoney),
-	"boat":       int(types.ItemTypeBoat),
-	"fountain":   int(types.ItemTypeFountain),
-	"pill":       int(types.ItemTypePill),
+	"light":     int(types.ItemTypeLight),
+	"scroll":    int(types.ItemTypeScroll),
+	"wand":      int(types.ItemTypeWand),
+	"staff":     int(types.ItemTypeStaff),
+	"weapon":    int(types.ItemTypeWeapon),
+	"treasure":  int(types.ItemTypeTreasure),
+	"armor":     int(types.ItemTypeArmor),
+	"potion":    int(types.ItemTypePotion),
+	"clothing":  int(types.ItemTypeClothing),
+	"furniture": int(types.ItemTypeFurniture),
+	"trash":     int(types.ItemTypeTrash),
+	"container": int(types.ItemTypeContainer),
+	"drink":     int(types.ItemTypeDrinkCon),
+	"key":       int(types.ItemTypeKey),
+	"food":      int(types.ItemTypeFood),
+	"money":     int(types.ItemTypeMoney),
+	"boat":      int(types.ItemTypeBoat),
+	"fountain":  int(types.ItemTypeFountain),
+	"pill":      int(types.ItemTypePill),
 }
 
 // buildShopHandler converts the auto-registered loader shop data into a

@@ -96,6 +96,11 @@ type Character struct {
 	DefaultPos Position // Default position
 	Special    string   // Special behavior function name (e.g. "spec_cast_mage")
 
+	// LLM-driven dialog (Tier 1). Only mobs with LLMEnabled ever talk to the
+	// LLM worker pool; everything else uses scripted behavior unchanged.
+	LLMEnabled bool   // this mob opts into LLM dialog takeover
+	LLMPersona string // fixed in-character identity injected as the system prompt
+
 	// Tracking (for track skill)
 	TrackFrom [MaxTrack]int // Room vnums character came from
 	TrackTo   [MaxTrack]int // Room vnums character went to
@@ -155,11 +160,11 @@ type PCData struct {
 	ForgetList    []string    // Players to ignore (max 10)
 
 	// Other
-	Recall          int // Recall room vnum
-	SavedRoom       int // Last room vnum when player quit (0 = use recall)
-	Points          int // Creation points spent
-	OverspentPoints int // Creation points overspent (affects XP per level)
-	Security        int // Builder security level
+	Recall          int   // Recall room vnum
+	SavedRoom       int   // Last room vnum when player quit (0 = use recall)
+	Points          int   // Creation points spent
+	OverspentPoints int   // Creation points overspent (affects XP per level)
+	Security        int   // Builder security level
 	BankCoin        int64 // Coin stored in bank, in copper pieces
 
 	// Dupe tracking (alternate character names owned by same player)

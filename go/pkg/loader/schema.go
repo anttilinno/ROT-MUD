@@ -5,6 +5,18 @@ type Config struct {
 	Server   ServerConfig   `toml:"server"`
 	Logging  LoggingConfig  `toml:"logging"`
 	Security SecurityConfig `toml:"security"`
+	LLM      LLMConfig      `toml:"llm"`
+}
+
+// LLMConfig configures the LLM-driven NPC layer. Off by default. The running
+// server currently reads these from env vars (see pkg/llm.ConfigFromEnv); the
+// toml shape is here for when config.toml loading is wired into the server.
+type LLMConfig struct {
+	Enabled   bool   `toml:"enabled"`
+	Endpoint  string `toml:"endpoint"`
+	Model     string `toml:"model"`
+	Workers   int    `toml:"workers"`
+	TimeoutMs int    `toml:"timeout_ms"`
 }
 
 type ServerConfig struct {
@@ -131,6 +143,10 @@ type MobileData struct {
 	DefaultPos  string    `toml:"default_pos"`
 	Special     string    `toml:"special"` // Special behavior function name (e.g. "spec_cast_mage")
 	Shop        *ShopData `toml:"shop"`
+
+	// LLM-driven dialog (Tier 1). Opt-in per mob; see .planning/LLM-NPC.md.
+	LLMEnabled bool   `toml:"llm_enabled"`
+	LLMPersona string `toml:"llm_persona"`
 
 	// MOBprogs references mobprog files by name (loaded from mobprogs/ directory)
 	MOBprogs []string `toml:"mobprogs"`
