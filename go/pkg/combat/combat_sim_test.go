@@ -77,7 +77,7 @@ func classEquipAC(classIdx, level int) int {
 	// Base curve: lightly armoured adventurer, improving with level.
 	base := 80 - level*7
 	switch classIdx {
-	case types.ClassWarrior, types.ClassDemon:
+	case types.ClassWarrior:
 		base -= 25 // plate armour
 	case types.ClassRanger, types.ClassCleric:
 		base -= 10 // chain / mail
@@ -210,7 +210,7 @@ func simWeaponDice(classIdx, level int) (int, int) {
 // weaponTypeForClass maps class to ROM weapon type (0=exotic,1=sword,2=dagger,3=spear,4=mace)
 func weaponTypeForClass(classIdx int) int {
 	switch classIdx {
-	case types.ClassWarrior, types.ClassDemon:
+	case types.ClassWarrior:
 		return 1 // sword
 	case types.ClassRanger:
 		return 3 // spear
@@ -439,7 +439,7 @@ func mobCastSpellDam(level int) int {
 func weaponSkillForClass(classIdx, level int) int {
 	var growth float64
 	switch classIdx {
-	case types.ClassWarrior, types.ClassDemon:
+	case types.ClassWarrior:
 		growth = 4.0
 	case types.ClassRanger:
 		growth = 3.5
@@ -493,7 +493,7 @@ func dodgeSkillForClass(classIdx, level int) int {
 func parrySkillForClass(classIdx, level int) int {
 	var growth float64
 	switch classIdx {
-	case types.ClassWarrior, types.ClassDemon, types.ClassRanger:
+	case types.ClassWarrior, types.ClassRanger:
 		growth = 2.5 // trained melee fighters parry well
 	case types.ClassThief, types.ClassCleric:
 		growth = 2.0
