@@ -207,6 +207,9 @@ func GetHitroll(ch *types.Character) int {
 	}
 	hr += strTable[str][0]
 
+	powerHit, _ := ch.PowerBonus()
+	hr += powerHit
+
 	return hr
 }
 
@@ -226,6 +229,8 @@ func GetDamroll(ch *types.Character) int {
 
 	pieces, _ := ch.DemonicSet()
 	dr += pieces * types.DemonDamrollPerPiece
+	_, powerDam := ch.PowerBonus()
+	dr += powerDam
 
 	return dr
 }
@@ -354,13 +359,14 @@ func CheckImmune(victim *types.Character, damType types.DamageType) ImmunityResu
 		return ImmNormal
 	}
 
+	innateRes, innateVuln := victim.InnateRIS()
 	if victim.Imm.Has(immFlag) {
 		return ImmImmune
 	}
-	if victim.Res.Has(resFlag) {
+	if victim.Res.Has(resFlag) || innateRes.Has(resFlag) {
 		return ImmResistant
 	}
-	if victim.Vuln.Has(vulnFlag) {
+	if victim.Vuln.Has(vulnFlag) || innateVuln.Has(vulnFlag) {
 		return ImmVulnerable
 	}
 

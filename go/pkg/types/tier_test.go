@@ -34,6 +34,9 @@ func TestRerollAscend(t *testing.T) {
 	if ch.Class != ClassDemon || ch.Level != 1 || ch.Exp != 0 || ch.PCData.Tier != TierAscended {
 		t.Fatalf("after ascend: class=%d level=%d exp=%d tier=%d", ch.Class, ch.Level, ch.Exp, ch.PCData.Tier)
 	}
+	if !ch.Saveable() {
+		t.Fatal("ascended level-1 character must be saveable")
+	}
 	if ch.SkillClass() != ClassCleric {
 		t.Fatalf("SkillClass = %d, want origin cleric", ch.SkillClass())
 	}

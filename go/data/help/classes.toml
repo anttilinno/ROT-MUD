@@ -15,7 +15,12 @@ TIER 1 (Starting Classes):
   Ghoul     - Blood-bound servant of the undead, feeds on blood
 
 TIER 2 (Supernatural Classes - see 'help reroll'):
-  Demon     - Pact-bound fiend, buys powers with demonic power
+  Demon      - Pact-bound fiend; hellfire, wings, demonic armour
+  Vampire    - Embraced ghoul; disciplines of blood (ghouls only)
+  Werewolf   - Survivor of the bite; gifts of the wild, war form
+  Magus      - Awakened mage; spheres of forces, life and mind
+  Highlander - Immortal swordsman; katas and the quickening
+  Angel      - Raised among the host; holy fire, wings, glory
 
 Use 'help <classname>' for details on each class.
 """
@@ -228,17 +233,97 @@ keywords = ["demon", "tier 2"]
 description = """
 DEMON - Pact-Bound Fiend (Tier 2 Class)
 
-Demons are heroes who sealed a pact with a demon lord. They restart
-at level 1 but keep every skill of their mortal class, and grow in
-power by earning demonic power and spending it on infernal gifts and
-demonic armour.
+Demons are heroes who sealed a pact with the demon lord. They restart at
+level 1 but keep every skill of their mortal class. They buy infernal
+gifts with demonic power and alone may wear demonic armour (see 'help
+demonarmour'). Demons resist fire but holy power burns them.
 
 Prime Attribute: Strength
-Requirement: Reroll at level 101, then complete the pact rite
-
-The undead (heucuva), avians and pixies cannot make a demonic pact.
+Requirement: Reroll at level 101, then complete the demon lord's pact
+Currency: demonic power (earned from kills; see 'help powers')
+Barred races: heucuva, avian, pixie.
 """
-see_also = ["reroll", "classes"]
+see_also = ["reroll", "powers", "rite", "classes"]
+
+[[help]]
+keywords = ["vampire"]
+description = """
+VAMPIRE - Kindred of the Blood (Tier 2 Class)
+
+Only a ghoul may receive the Embrace. Vampires master disciplines:
+celerity, fortitude, potence, auspex, protean, obfuscate, and at last
+the bloodrage. Fire and silver are their bane; poison and negative
+energy barely touch them.
+
+Prime Attribute: Constitution
+Requirement: Reroll at level 101, then receive the elder's Embrace (ghouls only)
+Currency: blood (earned from kills; see 'help powers')
+Barred races: heucuva, titan, giant.
+"""
+see_also = ["reroll", "powers", "rite", "classes"]
+
+[[help]]
+keywords = ["werewolf", "garou"]
+description = """
+WEREWOLF - Child of the Moon (Tier 2 Class)
+
+Those who survive the great wolf's bite gain gifts of the wild: claws,
+keen senses, iron hide, and the towering crinos war form. Silver burns
+them.
+
+Prime Attribute: Strength
+Requirement: Reroll at level 101, then survive the great wolf's hunt
+Currency: rage (earned from kills; see 'help powers')
+Barred races: heucuva, pixie, avian, kenku.
+"""
+see_also = ["reroll", "powers", "rite", "classes"]
+
+[[help]]
+keywords = ["magus", "awakened"]
+description = """
+MAGUS - The Awakened (Tier 2 Class)
+
+A magus has seen through the world to the quintessence beneath. The
+spheres of forces, life, mind, prime and correspondence bend reality
+to their will.
+
+Prime Attribute: Intelligence
+Requirement: Reroll at level 101, then pass the archmagus' awakening
+Currency: quintessence (earned from kills; see 'help powers')
+Barred races: minotaur, gnoll, giant.
+"""
+see_also = ["reroll", "powers", "rite", "classes"]
+
+[[help]]
+keywords = ["highlander", "immortal swordsman"]
+description = """
+HIGHLANDER - The Immortal Blade (Tier 2 Class)
+
+Highlanders cannot die of age and live for the duel. Their katas
+sharpen blade and body, and the quickening turns them into a storm of
+steel.
+
+Prime Attribute: Strength
+Requirement: Reroll at level 101, then claim the swordmaster's quickening
+Currency: quickening (earned from kills; see 'help powers')
+Barred races: heucuva, pixie.
+"""
+see_also = ["reroll", "powers", "rite", "classes"]
+
+[[help]]
+keywords = ["angel", "seraph"]
+description = """
+ANGEL - Raised Among the Host (Tier 2 Class)
+
+Angels are the mirror of demons: wings, holy fire and a glory that
+blinds. Holy power cannot harm them, but negative energy can.
+
+Prime Attribute: Wisdom
+Requirement: Reroll at level 101, then complete the seraph's crusade
+Currency: grace (earned from kills; see 'help powers')
+Barred races: heucuva, goblin, gnoll, halforc.
+"""
+see_also = ["reroll", "powers", "rite", "classes"]
 
 [[help]]
 keywords = ["reroll", "remort", "tier 2"]
@@ -253,9 +338,103 @@ the rite of a Tier 2 class. When the rite is complete:
 - You keep every skill and spell your mortal class learned
 - Some races are barred from some rites
 
-Tier 2 classes:
-  Demon     - rite: a pact with a demon lord
+Rites are performed in the Hall of Rites, down the stair behind the
+altar of the Temple of Thoth. Talk to a master with 'rite', take the rite
+with 'rite begin', and return with 'rite complete' once its deed is done.
+
+Tier 2 classes and their rites:
+  Demon      - slay ten good creatures (level 50+)
+  Vampire    - drain ten victims (level 50+) at night; ghouls only
+  Werewolf   - hunt ten creatures (level 50+) at night
+  Magus      - defeat ten spellcasters (level 50+)
+  Highlander - best ten warriors (level 50+)
+  Angel      - cast down ten evil creatures (level 50+)
 
 Rerolling cannot be undone.
 """
-see_also = ["classes", "demon"]
+see_also = ["classes", "rite", "powers"]
+
+[[help]]
+keywords = ["rite", "rites"]
+description = """
+Syntax: rite
+        rite begin
+        rite complete
+
+Used before a tier 2 master in the Hall of Rites (down from the Temple
+of Thoth). 'rite' hears the master's terms and your progress, 'rite
+begin' takes up that rite (abandoning any other), and 'rite complete'
+ascends you once the deed is done. You must have rerolled first.
+"""
+see_also = ["reroll", "powers"]
+
+[[help]]
+keywords = ["powers", "inpart", "disciplines", "gifts", "spheres", "katas"]
+description = """
+Syntax: powers
+        powers <power>
+
+Tier 2 classes develop supernatural powers instead of levelling skills.
+'powers' lists your class's powers, their costs and which you own;
+'powers <name>' buys one. Some powers require another first.
+
+Every kill earns currency equal to the victim's level: demonic power,
+blood, rage, quintessence, quickening or grace. Passive powers work at
+once; active powers unlock a command (see 'help travel', 'help forms',
+'help inferno').
+"""
+see_also = ["travel", "forms", "inferno", "demonarmour"]
+
+[[help]]
+keywords = ["travel", "mist", "moonbridge", "correspondence"]
+description = """
+Syntax: travel <player>
+
+With a travel power (demon travel, vampire mist, werewolf moonbridge,
+magus correspondence, angel travel) you step across the world to any
+player. Costs 50 movement. Blocked from no-recall rooms and into
+private or solitary rooms.
+"""
+see_also = ["powers"]
+
+[[help]]
+keywords = ["forms", "demonform", "bloodrage", "crinos", "quickening", "angelform"]
+description = """
+Syntax: demonform | bloodrage | crinos | quickening | angelform
+
+Each tier 2 class's ultimate power is a battle form lasting 8 ticks:
++5 hitroll and +10 damroll. Costs 50 movement; cannot be renewed while
+it lasts.
+"""
+see_also = ["powers"]
+
+[[help]]
+keywords = ["inferno", "forcebolt", "smite"]
+description = """
+Syntax: inferno | forcebolt | smite
+
+Demons (inferno, fire), magi (forcebolt, energy) and angels (smite,
+holy) strike every hostile creature in the room at once. Costs 40 mana.
+Not usable in safe rooms.
+"""
+see_also = ["powers"]
+
+[[help]]
+keywords = ["demonarmour", "demonarmor", "demonic armour"]
+description = """
+Syntax: demonarmour <tier> <slot>
+
+The demon lord forges demonic armour for demons. Every piece costs 2000
+demonic power; higher tiers also cost coin:
+  black   free       grey    10 gold    purple   30 gold
+  red     60 gold    brass  100 gold
+
+Slots: ring collar plate helmet leggings boots gauntlets sleeves cape
+belt bracer visor.
+
+Each worn piece gives a demon +2 damroll. Purple, red and brass pieces
+each give a 3, 4 or 5 percent chance that a hostile spell fizzles. Only
+demons can wear it, and only the demon who forged it. Sacrificing a
+piece drains its 2000 power back into you; the coin is lost.
+"""
+see_also = ["demon", "powers"]

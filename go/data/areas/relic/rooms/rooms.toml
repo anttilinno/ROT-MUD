@@ -1,0 +1,160 @@
+# Hall of Rites: tier-2 rite masters (.planning/TIER2-GODWARS.md). Linked down from the Temple of Thoth (3001).
+
+[[rooms]]
+vnum = 29600
+name = "The Crossroads Beneath the Temple"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+A vaulted crypt lies hidden beneath the Temple of Thoth. Six sealed paths
+once led from here to powers older than the gods of the temple above; now
+the seals are broken. Heat breathes from the north, grave-cold from the
+east, the smell of wet pine and fur from the south, and a hum of raw magic
+from the west. Worn stairs lead up to the temple and down into the dark."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 3001
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 29601
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 29602
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 29603
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 29604
+
+  [[rooms.exits]]
+  direction = "down"
+  to_vnum = 29607
+
+[[rooms]]
+vnum = 29601
+name = "The Brass Throne"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+Walls of black iron glow dull red. Upon a throne of brass sits a lord of
+hell, patient as a moneylender. Heroes come here to trade their souls."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 29600
+
+  [[rooms.mob_resets]]
+  vnum = 29601
+  max = 1
+
+[[rooms]]
+vnum = 29602
+name = "The Crypt of the Elder"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+Candles burn without warmth among rows of stone coffins. One stands open,
+and its occupant regards you with eyes that have seen centuries."""
+
+  [[rooms.exits]]
+  direction = "west"
+  to_vnum = 29600
+
+  [[rooms.mob_resets]]
+  vnum = 29602
+  max = 1
+
+[[rooms]]
+vnum = 29603
+name = "The Moonlit Glade"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+Impossibly, a silver moon hangs above this underground glade. Something
+vast and furred watches from between the trees."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 29600
+
+  [[rooms.mob_resets]]
+  vnum = 29603
+  max = 1
+
+[[rooms]]
+vnum = 29604
+name = "The Chantry"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+Shelves of books reach into shadow. Sigils drift through the air like
+dust motes, rearranging themselves into words you almost understand."""
+
+  [[rooms.exits]]
+  direction = "east"
+  to_vnum = 29600
+
+  [[rooms.mob_resets]]
+  vnum = 29604
+  max = 1
+
+[[rooms]]
+vnum = 29607
+name = "The Lower Hall"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+The stair ends in a long hall. To the north lies bare earth ringed by
+standing stones; to the south, a light too bright to look at directly."""
+
+  [[rooms.exits]]
+  direction = "up"
+  to_vnum = 29600
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 29605
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 29606
+
+[[rooms]]
+vnum = 29605
+name = "Holy Ground"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+A ring of standing stones marks ground where no immortal may draw steel
+against another. A swordsman waits in the centre, blade point-down."""
+
+  [[rooms.exits]]
+  direction = "south"
+  to_vnum = 29607
+
+  [[rooms.mob_resets]]
+  vnum = 29605
+  max = 1
+
+[[rooms]]
+vnum = 29606
+name = "The Radiant Stair"
+sector = "inside"
+room_flags = ["safe", "indoors", "no_mob"]
+description = """
+Golden steps rise into light. A figure with folded wings stands upon
+them, stern and beautiful."""
+
+  [[rooms.exits]]
+  direction = "north"
+  to_vnum = 29607
+
+  [[rooms.mob_resets]]
+  vnum = 29606
+  max = 1

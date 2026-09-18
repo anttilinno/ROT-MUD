@@ -64,3 +64,18 @@ func ForgeDemonic(obj *Object, tier int, owner string) {
 	obj.ShortDesc = strings.Replace(obj.ShortDesc, "demonic", colour+" demonic", 1)
 	obj.LongDesc = strings.Replace(obj.LongDesc, "demonic", colour+" demonic", 1)
 }
+
+// Forging costs at the demon lord (T3). GodWars charged 5000 power plus
+// quest points per tier; ROT has no quest points, so higher tiers cost coin.
+// Sacrificing a piece refunds the power, never the coin.
+const DemonArmourPower = 2000
+
+// DemonArmourCoin is the coin (copper) each tier costs to forge.
+var DemonArmourCoin = [...]int64{0, 10 * CopperPerGold, 30 * CopperPerGold, 60 * CopperPerGold, 100 * CopperPerGold}
+
+// DemonicSlots maps the slot names used by `demonarmour` to template vnums.
+var DemonicSlots = map[string]int{
+	"ring": 29650, "collar": 29651, "plate": 29652, "helmet": 29653,
+	"leggings": 29654, "boots": 29655, "gauntlets": 29656, "sleeves": 29657,
+	"cape": 29658, "belt": 29659, "bracer": 29660, "visor": 29661,
+}

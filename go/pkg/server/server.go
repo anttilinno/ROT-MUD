@@ -338,7 +338,7 @@ func New(logger *slog.Logger) *Server {
 	// Wire up quit callback
 	s.Dispatcher.OnQuit = func(ch *types.Character) {
 		// Save and disconnect the player
-		if ch.PCData != nil && ch.Level > 1 {
+		if ch.PCData != nil && ch.Saveable() {
 			s.Persistence.SavePlayer(ch)
 		}
 		// Remove from game and close connection
@@ -974,7 +974,7 @@ func (s *Server) handleConnection(conn net.Conn) {
 			// Dismiss any pets/followers before disconnecting
 			s.dismissAllFollowers(session.Character)
 
-			if session.Character.Level > 1 {
+			if session.Character.Saveable() {
 				if err := s.Persistence.SavePlayer(session.Character); err != nil {
 					s.logger.Error("failed to save player on disconnect", "error", err, "name", session.Character.Name)
 				}
@@ -1042,7 +1042,7 @@ func (s *Server) handleConnection(conn net.Conn) {
 		if strings.ToLower(line) == "quit" {
 			// Save character before quitting (but not level 1 - avoid abandoned characters)
 			if session.Character != nil && session.Character.PCData != nil {
-				if session.Character.Level > 1 {
+				if session.Character.Saveable() {
 					if err := s.Persistence.SavePlayer(session.Character); err != nil {
 						s.logger.Error("failed to save player on quit", "error", err)
 					}
@@ -1540,8 +1540,8 @@ func (s *Server) tickUpdate() {
 		}
 	}
 
-	// Process affect tick for all characters
-	s.Dispatcher.Magic.ProcessAffectTick(s.GameLoop.Characters)
+	// Affect decay runs in GameLoop.tickUpdate (processAffectDecay), which
+	// calls this OnTick first; ticking here too halved every affect's duration.
 }
 
 func min(a, b int) int {

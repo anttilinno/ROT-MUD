@@ -62,6 +62,11 @@ type PlayerSave struct {
 	Clan          int               `json:"clan,omitempty"`
 	Tier          int               `json:"tier,omitempty"`    // 0 mortal, 1 rerolled (rite pending), 2 ascended
 	Classes       []int             `json:"classes,omitempty"` // origin class history; [0] drives skill lookups
+	Power         int               `json:"power,omitempty"`
+	PowerTotal    int               `json:"power_total,omitempty"`
+	Powers        map[string]bool   `json:"powers,omitempty"`
+	Rite          int               `json:"rite,omitempty"`
+	RiteKills     int               `json:"rite_kills,omitempty"`
 	QuestProgress map[int]int       `json:"quest_progress,omitempty"`
 	ForgetList    []string          `json:"forget_list,omitempty"`
 	Aliases       map[string]string `json:"aliases,omitempty"`
@@ -248,6 +253,11 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 		save.Clan = ch.PCData.Clan
 		save.Tier = ch.PCData.Tier
 		save.Classes = ch.PCData.Classes
+		save.Power = ch.PCData.Power
+		save.PowerTotal = ch.PCData.PowerTotal
+		save.Powers = ch.PCData.Powers
+		save.Rite = ch.PCData.Rite
+		save.RiteKills = ch.PCData.RiteKills
 		save.BankCoin = ch.PCData.BankCoin
 		save.QuestProgress = ch.PCData.QuestProgress
 		save.ForgetList = ch.PCData.ForgetList
@@ -393,6 +403,11 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 			Clan:          save.Clan,
 			Tier:          save.Tier,
 			Classes:       save.Classes,
+			Power:         save.Power,
+			PowerTotal:    save.PowerTotal,
+			Powers:        save.Powers,
+			Rite:          save.Rite,
+			RiteKills:     save.RiteKills,
 			BankCoin:      save.BankCoin,
 			QuestProgress: save.QuestProgress,
 			ForgetList:    save.ForgetList,

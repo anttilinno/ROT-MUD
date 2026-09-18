@@ -749,6 +749,10 @@ func (d *CommandDispatcher) cmdSacrifice(ch *types.Character, args string) {
 		return
 	}
 
+	if d.sacrificeDemonic(ch, obj) {
+		return
+	}
+
 	// Sacrifice reward — 5% of the item's base copper value, floor 1cp.
 	coinReward := int64(obj.Cost) / 20
 	if coinReward < 1 {

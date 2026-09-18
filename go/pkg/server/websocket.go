@@ -330,7 +330,7 @@ func (h *HTTPServer) handleWebSocket(w http.ResponseWriter, r *http.Request) {
 		// Dismiss any pets/followers before disconnecting
 		h.server.dismissAllFollowers(wsSession.Character)
 
-		if wsSession.Character.Level > 1 {
+		if wsSession.Character.Saveable() {
 			if err := h.server.Persistence.SavePlayer(wsSession.Character); err != nil {
 				h.logger.Error("failed to save player on WS disconnect", "error", err, "name", wsSession.Character.Name)
 			}

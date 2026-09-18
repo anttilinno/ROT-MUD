@@ -145,6 +145,10 @@ func reverseModifier(ch *types.Character, af *types.Affect) {
 
 // AffectTick processes affect decay for a character
 // Returns a list of wear-off messages for expired affects
+// WearOffMessages holds wear-off text for affects that are not spells,
+// keyed by affect type (e.g. tier-2 battle forms, registered by package game).
+var WearOffMessages = map[string]string{}
+
 func AffectTick(ch *types.Character, registry *SpellRegistry) []string {
 	var messages []string
 
@@ -157,11 +161,15 @@ func AffectTick(ch *types.Character, registry *SpellRegistry) []string {
 		ch.AffectedBy = ch.Affected.GetBitVector()
 		ch.ShieldedBy = ch.Affected.GetShieldVector()
 
-		// Get wear-off message from spell
+		// Get wear-off message from spell, else from non-spell affects (power forms)
 		if registry != nil {
 			if spell := registry.FindByName(af.Type); spell != nil && spell.WearOff != "" {
 				messages = append(messages, spell.WearOff)
+				continue
 			}
+		}
+		if msg := WearOffMessages[af.Type]; msg != "" {
+			messages = append(messages, msg)
 		}
 	}
 

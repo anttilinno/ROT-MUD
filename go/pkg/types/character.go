@@ -148,6 +148,13 @@ type PCData struct {
 	Tier    int   // Character tier/remort level
 	Classes []int // Multi-class support (primary, secondary, etc.)
 
+	// Tier-2 powers (.planning/TIER2-GODWARS.md)
+	Power      int             // spendable class currency
+	PowerTotal int             // lifetime class currency earned
+	Powers     map[string]bool // bought power keys (PowerTable)
+	Rite       int             // tier-2 class whose rite a rerolled hero has begun (0 = none)
+	RiteKills  int             // qualifying kills toward that rite
+
 	// Conditions
 	Condition [4]int // drunk, full, thirst, hunger
 
@@ -234,7 +241,7 @@ func (ch *Character) GetStat(stat int) int {
 	if stat < 0 || stat >= MaxStats {
 		return 0
 	}
-	return ch.PermStats[stat] + ch.ModStats[stat]
+	return ch.PermStats[stat] + ch.ModStats[stat] + ch.powerStat(stat)
 }
 
 // HitPercent returns current HP as a percentage
@@ -287,7 +294,7 @@ func (ch *Character) CanSee() bool {
 
 // IsAffected returns true if the character has the given affect flag
 func (ch *Character) IsAffected(flag AffectFlags) bool {
-	return ch.AffectedBy.Has(flag)
+	return ch.AffectedBy.Has(flag) || ch.powerAffects().Has(flag)
 }
 
 // AddAffect adds an affect to the character and updates AffectedBy/ShieldedBy flags

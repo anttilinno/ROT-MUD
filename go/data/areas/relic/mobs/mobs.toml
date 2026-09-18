@@ -1,0 +1,146 @@
+# Tier-2 rite masters; vnums are Class.Tier2.MasterVnum in pkg/types/classes.go.
+
+[[mobiles]]
+vnum = 29601
+keywords = ["demon", "lord", "brass"]
+short_desc = "the demon lord"
+long_desc = "A demon lord lounges on his brass throne, weighing your soul."
+description = """
+Horns curl from a brow like cracked obsidian. The demon lord's smile is
+all contract and no warmth. Type 'rite' to hear his price; demons may
+'demonarmour' here."""
+level = 100
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = -1000
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 29999
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 10
+  bonus = 100
+
+[[mobiles]]
+vnum = 29602
+keywords = ["elder", "vampire", "methuselah"]
+short_desc = "the elder vampire"
+long_desc = "An elder vampire rests in an open coffin, watching you."
+description = """
+Her skin is marble and her patience endless. She embraces only ghouls
+who have proven themselves. Type 'rite' to hear her terms."""
+level = 100
+sex = "female"
+act_flags = ["npc", "sentinel", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = -500
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 29999
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 10
+  bonus = 100
+
+[[mobiles]]
+vnum = 29603
+keywords = ["wolf", "great", "garou"]
+short_desc = "the great wolf"
+long_desc = "A great wolf of silver fur watches you from between the trees."
+description = """
+Larger than a horse and older than the city above, the great wolf
+decides who survives its bite. Type 'rite' to learn the hunt."""
+level = 100
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 29999
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 10
+  bonus = 100
+
+[[mobiles]]
+vnum = 29604
+keywords = ["archmagus", "magus", "master"]
+short_desc = "the archmagus"
+long_desc = "An archmagus studies you over a floating book."
+description = """
+Sigils orbit her like moons. She awakens those who can take quintessence
+from other casters. Type 'rite' to hear the trial."""
+level = 100
+sex = "female"
+act_flags = ["npc", "sentinel", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 29999
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 10
+  bonus = 100
+
+[[mobiles]]
+vnum = 29605
+keywords = ["swordmaster", "immortal", "highlander"]
+short_desc = "the immortal swordmaster"
+long_desc = "An immortal swordmaster waits on holy ground, blade point-down."
+description = """
+He has taken a thousand heads and lost none. Type 'rite' to learn how
+to claim the quickening."""
+level = 100
+sex = "male"
+act_flags = ["npc", "sentinel", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 0
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 29999
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 10
+  bonus = 100
+
+[[mobiles]]
+vnum = 29606
+keywords = ["seraph", "angel", "herald"]
+short_desc = "the seraph"
+long_desc = "A seraph stands upon the radiant stair, wings folded."
+description = """
+Six wings, too many eyes, and a voice like a choir. Type 'rite' to hear
+what heaven asks of you."""
+level = 100
+sex = "female"
+act_flags = ["npc", "sentinel", "no_purge"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 1000
+
+  [mobiles.hit_dice]
+  number = 1
+  size = 1
+  bonus = 29999
+
+  [mobiles.damage_dice]
+  number = 10
+  size = 10
+  bonus = 100

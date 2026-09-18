@@ -2,7 +2,7 @@
 
 ## Status
 
-Design draft, 2026-09-18. Not yet on the roadmap. **T0 + T1 implemented** on branch `feat/tier2-godwars`. Reference codebase: GodWars Deluxe fork at
+Design draft, 2026-09-18. Not yet on the roadmap. **T0–T4 implemented** on branch `feat/tier2-godwars`. Reference codebase: GodWars Deluxe fork at
 `~/Repos/Misc/GodWars` (github.com/benjamin-small/GodWars). Port **mechanics and ideas**, not code —
 GodWars file headers still carry Richard Woolcock's "not to be copied without permission" notice.
 
@@ -40,7 +40,7 @@ actives, demonform) onto champions. Power + quest points also craft a **12-slot 
 five colour tiers; each worn piece raises the damage cap and higher tiers add a flat chance for hostile
 spells to fizzle. Sacrificing a piece refunds exactly its power cost.
 
-## Tier-2 roster (proposed)
+## Tier-2 roster
 
 | Tier-2 class | GodWars source | Entry rite | Currency | Notes |
 |---|---|---|---|---|
@@ -101,48 +101,65 @@ Hybrids (abomination, lich-as-vamp+mage, baali, …) are **out of scope** — th
 - Known gap (pre-existing, not T1's): armour `Values` AC is never applied on equip anywhere in ROT,
   so the templates' `ac_*` values are inert. Fixing it rebalances all armour; track separately.
 
-### T2 — Demon powers
+### T2 — Powers (all tier-2 classes) ✅
 
-Each `inpart` power becomes a keyed entry in `PCData.Powers` that contributes a trait bundle.
+- `types.PowerTable`: 45 powers across the six classes (GodWars inpart, disciplines, gifts, spheres,
+  katas). Owned powers are keys in `PCData.Powers`; `powers` lists, `powers <key>` buys (with
+  prerequisites and costs).
+- **Passive effects are derived at query time, never stored as affects**, so nothing drifts across
+  save/load. There are four choke points:
+  - `Character.IsAffected`: power affect flags (flying, haste, detect, infravision, sneak, regeneration)
+  - `Character.GetStat`: stat bonuses
+  - `combat.GetHitroll`/`GetDamroll`: hitroll and damroll bonuses
+  - `combat.CheckImmune`: `InnateRIS()`, i.e. class innate resistance/vulnerability plus power resistances
+- Active powers unlock commands:
+  - `travel <player>` (demon travel, vampire mist, werewolf moonbridge, magus correspondence, angel
+    travel)
+  - room blasts `inferno`/`forcebolt`/`smite` (fire/energy/holy)
+  - battle forms `demonform`/`bloodrage`/`crinos`/`quickening`/`angelform`
+- A form's affect is only a timer (`ApplyNone`); its +5/+10 bonus is derived in `PowerBonus`.
+  Wear-off text for non-spell affects goes through `magic.WearOffMessages`.
+- Deferred: head/tail mutations, weaponform (player-as-object), champion/prince hierarchy, hooves,
+  scry/eyespy, imp summon, firewall.
 
-| Power | GW cost | ROT effect |
-|---|---|---|
-| fangs, claws | 2500 | capability `natural_weapon` + bite/claw damage noun, unarmed damage bonus |
-| hooves | 1500 | movement cost reduction |
-| wings | 1000 | capability `fly` (permanent affect) |
-| nightsight | 3000 | capability `infravision` + see in dark |
-| might | 7500 | modifier: damage bonus |
-| toughness | 7500 | resistances: bash/slash/pierce |
-| speed | 7500 | extra attack |
-| shadowsight, scry | 7500 | detect hidden / remote look skill |
-| travel | 1500 | skill: go to a player's room |
-| eyespy | 1000 | skill: summon a watcher mob |
-| inferno, firewall | 10000 / 1000 | skills: room fire damage / blocking exit |
-| imp | 10000 | skill: summon imp pet |
-| demonform | 25000 | toggle: timed trait overlay (claws + nightsight + stat boost), morph name |
+### T3 — Rites + power economy ✅
 
-- `inpart <power>` buys for **self** (no player demon-lord hierarchy — the lord is an NPC; see T3).
-- Deferred: head/tail mutations, weaponform (player-as-object), champion/prince hierarchy.
+- **Hall of Rites** (`data/areas/relic`, rooms 29600–29607): down the stair behind the Temple of
+  Thoth (3001). There is one master NPC per class (29601–29606) in safe, no_mob rooms.
+- **Rite flow**: `reroll confirm` (hero) → at a master: `rite` (terms and progress) → `rite begin` →
+  complete the deed → `rite complete` → `Character.Ascend`. Each rite is data (`Class.Tier2.Rite`):
+  kill N NPCs with minimum level, alignment, night-only and act-flag filters.
+- **Faucet**: `Combat.OnKill` was declared but never wired. It is now wired to `onKill`:
+  - tier-2 players earn the victim's level in currency (pets earn for their owner)
+  - rerolled heroes advance their rite
+- **Demon armour**: `demonarmour <tier> <slot>` at the demon lord costs 2000 power plus coin
+  (black free; grey 10g, purple 30g, red 60g, brass 100g). GodWars' quest points became coin because
+  ROT has none.
+- **Recycle loop**: sacrificing a demonic piece refunds its 2000 power to a demon (the coin is lost).
+- Not done: the E1 ledger (not built yet), boss-material gating (E3 materials don't exist yet).
 
-### T3 — Pact quest + power economy
+### T4 — Remaining tier-2 classes ✅
 
-- **Entry**: tier-1 hero with `Tier = 1` eligibility completes a pact chain given by a demon-lord NPC
-  (LLM dialog tier fits here): e.g. kill 3 named good-aligned mobs → deliver a soul-gem → pact scene.
-  Completion sets class = demon, grants starting power.
-- **Faucets** (GodWars → ROT):
-  - mob kill: +`victim.Level` power (GW `fight.c:5275`)
-  - sacrifice demonic item: refund its power cost (GW recycle loop; maps to E3 `salvage`)
-  - boss kill: flat bonus
-  - player kill: none unless ROT gets PK
-- **Sinks**: `inpart` powers; `demonarmour <tier> <slot>` crafting at the demon-lord.
-- GodWars gates higher armour tiers on quest points; ROT has none. Replace with **boss materials**
-  (E3 `ItemTypeMaterial`) + coin, so demon armour rides the E3 smith economy rather than inventing QP.
-- Ledger (E1) txn types: `power_gain`, `power_spend`, `power_refund`.
+- Vampire (ghouls only, via `Tier2.OriginClasses`), werewolf, magus, highlander and angel are in
+  `ClassTable` with race bars, innate RIS, currency, master and rite.
+- Innate RIS:
+  - demon: fire res, holy vuln
+  - vampire: negative/poison res, fire/silver vuln
+  - werewolf: silver vuln
+  - angel: holy res, negative vuln
 
-### T4+ — Remaining tier-2 classes
+### Fixes found along the way
 
-One phase per class, each reusing T0's currency + powers + set machinery: new power table, new rite,
-optionally a 12-slot set with its own tier colours (GodWars angels reuse the same templates).
+- **Saving**: ascended characters restart at level 1, but quit/disconnect skipped saving every
+  level-1 character. Now `Character.Saveable()` means level > 1 **or** rerolled/ascended.
+- **Affects ticked twice per tick** (server `tickUpdate` and `GameLoop.processAffectDecay`), halving
+  every spell duration. The server copy is removed.
+- **Still open (pre-existing, not fixed):**
+  - HP/mana/move regen also runs twice per tick (server `tickUpdate` and
+    `GameLoop.processRegeneration`). Fixing it halves regen game-wide, which is a balance decision.
+  - Armour AC values are never applied on equip.
+  - Buff affects are re-added on load without their stat modifiers but reversed on expiry, so a
+    save/load mid-buff permanently lowers the stat.
 
 ## Relation to existing plans
 
@@ -153,7 +170,7 @@ optionally a 12-slot set with its own tier colours (GodWars angels reuse the sam
 - **Roadmap Phase 7/8**: T0's composition point is a preview of Phase 7; tier-2 classes join the Phase 8
   TOML migration.
 
-## Race limits (proposed defaults, tune freely)
+## Race limits (as built; tune in `ClassTable`)
 
 Encoded as `Class.AllowedRaces` (empty = all races).
 

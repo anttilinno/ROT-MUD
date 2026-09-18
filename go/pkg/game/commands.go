@@ -1660,6 +1660,8 @@ func NewCommandDispatcher() *CommandDispatcher {
 	}
 	d.greetPulse = make(map[*types.Character]uint64)
 	d.registerBasicCommands()
+	d.registerPowerCommands()
+	d.Combat.OnKill = d.onKill
 
 	// Wire up OLC system output
 	d.OLC.Output = func(ch *types.Character, msg string) {

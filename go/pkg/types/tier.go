@@ -21,6 +21,7 @@ var (
 	ErrNotRerolled  = errors.New("they have not rerolled")
 	ErrNotTier2     = errors.New("that is not a tier 2 class")
 	ErrRaceBarred   = errors.New("their race may not take that rite")
+	ErrOriginBarred = errors.New("their class may not take that rite")
 	ErrNoPlayerData = errors.New("no player data")
 )
 
@@ -54,10 +55,14 @@ func (ch *Character) Ascend(class int) error {
 		return ErrNotTier2
 	case !ClassTable[class].RaceAllowed(ch.Race):
 		return ErrRaceBarred
+	case !ClassTable[class].OriginAllowed(ch.Class):
+		return ErrOriginBarred
 	}
 	ch.PCData.Classes = []int{ch.Class}
 	ch.Class = class
 	ch.PCData.Tier = TierAscended
+	ch.PCData.Power, ch.PCData.PowerTotal, ch.PCData.Powers = 0, 0, nil
+	ch.PCData.Rite, ch.PCData.RiteKills = 0, 0
 	ch.Level = 1
 	ch.Exp = 0
 	ch.SetStartingVitals()
@@ -79,4 +84,28 @@ func (ch *Character) SetStartingVitals() {
 	}
 	ch.MaxMove = 100 + ch.GetStat(StatCon) + ch.GetStat(StatDex)
 	ch.Hit, ch.Mana, ch.Move = ch.MaxHit, ch.MaxMana, ch.MaxMove
+}
+
+// Matches reports whether killing victim counts toward the rite.
+func (r Rite) Matches(victim *Character, night bool) bool {
+	switch {
+	case !victim.IsNPC(), victim.Level < r.MinLevel:
+		return false
+	case r.Night && !night:
+		return false
+	case r.ActFlag != 0 && !victim.Act.Has(r.ActFlag):
+		return false
+	case r.Align > 0 && victim.Alignment < 350: // ROM IS_GOOD threshold
+		return false
+	case r.Align < 0 && victim.Alignment > -350: // ROM IS_EVIL threshold
+		return false
+	}
+	return true
+}
+
+// Saveable reports whether a player's progress is written on quit or
+// disconnect. Fresh level-1 characters are dropped to avoid abandoned
+// accounts; ascended tier-2 characters restart at level 1 and must persist.
+func (ch *Character) Saveable() bool {
+	return ch.Level > 1 || (ch.PCData != nil && ch.PCData.Tier > TierMortal)
 }
