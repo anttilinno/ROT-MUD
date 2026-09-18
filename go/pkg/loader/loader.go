@@ -826,6 +826,7 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	}
 
 	setMobStats(ch, slices.Contains(tmpl.OffFlags, "fast"))
+	applyMobFloor(ch)
 
 	// Set default position
 	ch.Position = types.PosStanding
