@@ -7,6 +7,10 @@ description = """
 A cute little blue smurf with a white hat and white boots.  You have a sudden
 urge to crush him."""
 level = 1
+hitroll = 0
+ac = [100, 100, 100, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -31,6 +35,10 @@ long_desc = "A smurf is here, picking berries."
 description = """
 A small smurf is quietly picking berries.  He seems to hardly notice you."""
 level = 2
+hitroll = 0
+ac = [100, 100, 100, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -56,6 +64,10 @@ description = """
 Brainy Smurf has on his usual glasses.  Brainy Smurf isn't liked much by the
 other smurfs.  They fear his knowledge.  Knowledge is power!"""
 level = 6
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -81,6 +93,10 @@ description = """
 Handy is always building something.  He never takes a break.  Why don't you
 give him a break, like all of his bones."""
 level = 6
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -106,6 +122,10 @@ description = """
 Sleepy never gets enough sleep.  You would think he goes to college.  I wonder
 if he has ever stayed up a whole night without sleeping."""
 level = 5
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -131,6 +151,10 @@ description = """
 Hefty is a total health nut.  He lifts weights, eats right, and exercises all
 the time.  Won't do him much good when he's DEAD."""
 level = 5
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -155,6 +179,10 @@ long_desc = "Grumpy Smurf is here, swearing."
 description = """
 Grumpy has never been happy in his whole life.  So why don't you just end it?"""
 level = 5
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -180,6 +208,10 @@ description = """
 Jokey loves to give people presents.  Too bad the present explodes when opened.
 Oh well, to each his own."""
 level = 6
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -205,6 +237,10 @@ description = """
 Smurfette is the cutest little smurf you've ever seen.  If only she were your
 size.  I wonder how much she charges the other smurfs."""
 level = 6
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -231,6 +267,10 @@ Yep, its Papa Smurf all right.  Red hat and boots and the funny little white
 beard.  Papa Smurf treats his fellow smurfs with dignity and respect.  That
 is why Papa Smurf is so popular among the ladies."""
 level = 19
+hitroll = 0
+ac = [20, 20, 20, 60]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "mage"]
 alignment = 0
@@ -255,6 +295,10 @@ description = """
 Gargamel has never done anything right in his life.  He has caught smurfs
 before but always lets them escape.  He brings true meaning to the word moron."""
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 70]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy", "cleric"]
 alignment = 0
@@ -279,6 +323,10 @@ description = """
 Gargamel's worthless cat.  He is just about as dumb as Gargamel.  He should
 just grab a smurf in his teeth and chew away."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0

@@ -7,6 +7,12 @@ description = """
 This small dragon hisses at you as you enter the room.  Although it is only a
 few feet long, its sharp teeth make you think twice about petting it."""
 level = 13
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["pierce"]
+race = "dragon"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["infrared", "flying"]
@@ -33,6 +39,10 @@ This horrible creature is a bizarre cross between a man and a dragon.  He
 has black scales and a seven foot wingspan.  He scowls at you and hefts his 
 spear as you enter the room."""
 level = 25
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis"]
@@ -55,6 +65,10 @@ short_desc = "the dragon master"
 long_desc = "The lord of this crypt is here."
 description = "He doesn't look happy to see you."
 level = 54
+hitroll = 0
+ac = [-80, -80, -80, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["flying"]
@@ -80,6 +94,10 @@ A powerful looking mage is standing in this room studying his spells.  You are
 surprised at the fact that he is human, and realize that he must be very
 powerful to have been accepted by the creatures which live here."""
 level = 43
+hitroll = 0
+ac = [-50, -50, -50, 30]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["detect_invis"]
@@ -105,6 +123,10 @@ description = """
 A Draconian stands here, dressed in simple robes.  Around his neck you 
 notice a golden medallion in the shape of a five headed dragon."""
 level = 43
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "cleric"]
 affected_by = ["detect_invis"]
@@ -131,6 +153,10 @@ The king of the draconians sits here on a golden throne.  He looks as
 though he could crush your head with a single blow.  Yet you sense that he 
 is controlled by a greater power."""
 level = 52
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["detect_invis"]
@@ -157,6 +183,10 @@ This is a concubine of the king.  She is lounging here, wearing nothing at
 all.  You find yourself strangely repulsed as she draws a knife and 
 prepares to defend herself."""
 level = 11
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -180,6 +210,10 @@ description = """
 This creature has devoted its life to defending the king.  Your intrusion has
 not pleased it."""
 level = 36
+hitroll = 0
+ac = [-30, -30, -30, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden"]
@@ -204,6 +238,12 @@ description = """
 You see before you the master of this Tower, Tiamat.  She frowns at you as she
 prepares to make you pay for your insolence ... with your lives!"""
 level = 102
+hitroll = 0
+ac = [-220, -220, -220, 20]
+off_flags = ["disarm", "dodge", "trip"]
+imm_flags = ["summon", "charm"]
+res_flags = ["magic", "weapon"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "flying", "haste"]
@@ -229,6 +269,13 @@ description = """
 This huge red dragon dominates the chamber.  As you turn to flee, he grins at
 you and invites you to stay ... forever!"""
 level = 89
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+imm_flags = ["fire"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["pierce", "cold"]
+race = "dragon"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -254,6 +301,13 @@ description = """
 This huge black wyrm laughs at your puny weapons.  You realize that he is not
 going to roll over and die for you."""
 level = 78
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+imm_flags = ["acid"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["pierce", "lightning"]
+race = "dragon"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -280,6 +334,13 @@ This dragon towers over you.  Recalling your previous experiences with white
 dragons, you are not afraid.  She smiles at you and says 'I think you will find
 me a greater challenge than my offspring.'"""
 level = 74
+hitroll = 0
+ac = [-120, -120, -120, 50]
+off_flags = ["disarm", "dodge", "trip"]
+imm_flags = ["cold"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["pierce", "fire"]
+race = "dragon"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -306,6 +367,13 @@ This huge beast appears to be the most directly related to the draconians.
 She looks at you with sorrow in her eyes and says 'You have slaughtered my 
 children.  Prepare to die.'"""
 level = 81
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+imm_flags = ["poison"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["pierce", "mental"]
+race = "dragon"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -331,6 +399,10 @@ description = """
 A hydra is here, guarding the entrance to a sealed vault.  You have the feeling
 it isn't happy to see you."""
 level = 36
+hitroll = 0
+ac = [-30, -30, -30, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -356,6 +428,10 @@ description = """
 He looks like he's under a lot of stress.  He would probably like it if you
 left him alone."""
 level = 9
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -381,6 +457,10 @@ description = """
 This used to be one of the warriors of this tribe.  He was denied his final
 rest, however, and now guards this corridor tirelessly as a zombie."""
 level = 18
+hitroll = 0
+ac = [20, 20, 20, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -404,6 +484,12 @@ short_desc = "the phase dragon"
 long_desc = "A Phase Dragon is darting around the room."
 description = "This small dragon looks like he's up to no good."
 level = 20
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm", "bash", "fire"]
+vuln_flags = ["pierce", "cold"]
+race = "dragon"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -429,6 +515,10 @@ description = """
 This dragon man looks VERY foolish, dressed in a green and blue striped 
 suit.  As you enter the room, he points at you and laughs."""
 level = 9
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -454,6 +544,10 @@ description = """
 This draconian looks VERY busy as she orders her slaves around.  You think 
 it might be a good idea to leave her alone."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["detect_invis", "detect_hidden"]

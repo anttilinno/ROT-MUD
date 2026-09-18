@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"os"
 	"path/filepath"
+	"slices"
 	"strings"
 
 	"github.com/pelletier/go-toml/v2"
@@ -757,6 +758,12 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 			ch.Act.Set(types.ActThief)
 		case "undead":
 			ch.Act.Set(types.ActUndead)
+		case "ranger":
+			ch.Act.Set(types.ActRanger)
+		case "druid":
+			ch.Act.Set(types.ActDruid)
+		case "vampire":
+			ch.Act.Set(types.ActVampire)
 		case "train":
 			ch.Act.Set(types.ActTrain)
 		case "practice":
@@ -800,6 +807,25 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 		}
 	}
 
+	ch.Imm = parseImmFlags(tmpl.ImmFlags)
+	ch.Res = parseImmFlags(tmpl.ResFlags)
+	ch.Vuln = parseImmFlags(tmpl.VulnFlags)
+	ch.DamType = types.DamageType(parseMobDamageType(tmpl.DamageType))
+	ch.Size = parseSize(tmpl.Size)
+
+	// Armour class: from the template (already in ROM's x10 units), else
+	// ROM's old-format default by level.
+	if tmpl.AC != [4]int{} {
+		ch.Armor = tmpl.AC
+	} else {
+		for i := range 3 {
+			ch.Armor[i] = interpolate(tmpl.Level, 100, -100)
+		}
+		ch.Armor[types.ACExotic] = interpolate(tmpl.Level, 100, 0)
+	}
+
+	setMobStats(ch, slices.Contains(tmpl.OffFlags, "fast"))
+
 	// Set default position
 	ch.Position = types.PosStanding
 	ch.DefaultPos = types.PosStanding
@@ -812,6 +838,81 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	ch.LLMPersona = tmpl.LLMPersona
 
 	return ch
+}
+
+// setMobStats gives a mob ROM create_mobile's stats: 11 + level/4 (max 25),
+// adjusted for class act flags, OFF_FAST and size.
+func setMobStats(ch *types.Character, fast bool) {
+	base := min(25, 11+ch.Level/4)
+	for i := range ch.PermStats {
+		ch.PermStats[i] = base
+	}
+	adj := func(flag types.ActFlags, str, intel, wis, dex, con int) {
+		if ch.Act.Has(flag) {
+			ch.PermStats[types.StatStr] += str
+			ch.PermStats[types.StatInt] += intel
+			ch.PermStats[types.StatWis] += wis
+			ch.PermStats[types.StatDex] += dex
+			ch.PermStats[types.StatCon] += con
+		}
+	}
+	adj(types.ActWarrior, 3, -1, 0, 0, 2)
+	adj(types.ActThief, 0, 1, -1, 3, 0)
+	adj(types.ActCleric, 1, 0, 3, -1, 0)
+	adj(types.ActMage, -1, 3, 0, 1, 0)
+	adj(types.ActRanger, 3, 1, 0, 0, -1)
+	adj(types.ActDruid, -1, 0, 3, 1, 0)
+	adj(types.ActVampire, 1, 0, -1, 0, 3)
+	if fast {
+		ch.PermStats[types.StatDex] += 2
+	}
+	ch.PermStats[types.StatStr] += int(ch.Size - types.SizeMedium)
+	ch.PermStats[types.StatCon] += int(ch.Size-types.SizeMedium) / 2
+}
+
+// interpolate is ROM's linear level interpolation between level 0 and 32.
+func interpolate(level, v00, v32 int) int {
+	return v00 + level*(v32-v00)/32
+}
+
+var immFlagNames = map[string]types.ImmFlags{
+	"summon": types.ImmSummon, "charm": types.ImmCharm, "magic": types.ImmMagic,
+	"weapon": types.ImmWeapon, "bash": types.ImmBash, "pierce": types.ImmPierce,
+	"slash": types.ImmSlash, "fire": types.ImmFire, "cold": types.ImmCold,
+	"lightning": types.ImmLightning, "acid": types.ImmAcid, "poison": types.ImmPoison,
+	"negative": types.ImmNegative, "holy": types.ImmHoly, "energy": types.ImmEnergy,
+	"mental": types.ImmMental, "disease": types.ImmDisease, "drowning": types.ImmDrowning,
+	"light": types.ImmLight, "sound": types.ImmSound, "silver": types.ImmSilver,
+}
+
+func parseImmFlags(names []string) (flags types.ImmFlags) {
+	for _, n := range names {
+		flags |= immFlagNames[n]
+	}
+	return flags
+}
+
+var mobDamageTypes = map[string]types.DamageType{
+	"bash": types.DamBash, "pierce": types.DamPierce, "slash": types.DamSlash,
+	"fire": types.DamFire, "cold": types.DamCold, "lightning": types.DamLightning,
+	"acid": types.DamAcid, "poison": types.DamPoison, "negative": types.DamNegative,
+	"holy": types.DamHoly, "energy": types.DamEnergy,
+}
+
+func parseMobDamageType(s string) types.DamageType {
+	if t, ok := mobDamageTypes[s]; ok {
+		return t
+	}
+	return types.DamNone
+}
+
+func parseSize(s string) types.Size {
+	for i, n := range []string{"tiny", "small", "medium", "large", "huge", "giant"} {
+		if s == n {
+			return types.Size(i)
+		}
+	}
+	return types.SizeMedium
 }
 
 // Helper functions

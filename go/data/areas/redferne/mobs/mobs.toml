@@ -8,6 +8,10 @@ The Knight is standing here, smiling at you. He is dressed all in
 white, blue and silver. He looks VERY strong, as he stands here, ready to
 help the innocent."""
 level = 57
+hitroll = 0
+ac = [-90, -90, -90, 40]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_invis"]
@@ -31,6 +35,12 @@ short_desc = "the Greater God John"
 long_desc = "The Greater God John is on the phone lambasting a real estate agent for mispelling his name."
 description = "Boy, is he upset!"
 level = 1
+hitroll = -1
+ac = [100, 100, 100, 100]
+damage_type = "holy"
+off_flags = ["disarm", "dodge", "fast", "trip"]
+size = "large"
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0

@@ -8,6 +8,10 @@ The ethereal knight is clad in shadowy black armor. It appears as though he
 was involved in the carnage that occurred here. His soul is trapped here, as
 he waits for release."""
 level = 50
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis"]
@@ -34,6 +38,10 @@ The old tree looks as though the wind has battered and torn at it for years.
 Very few leaves remain. Its limbs are crooked and gnarled. It moans as the 
 wind pushes it back and forth."""
 level = 40
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -58,6 +66,10 @@ The cave dweller looks like a mixture of several disgusting monsters. It has
 a bird's beak, huge white eyes, a furry body, and long clawed hands and feet.
 It sees you and snarls."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_evil", "detect_magic", "sneak"]
@@ -82,6 +94,10 @@ long_desc = "A rather large rock toad sits here, croaking loudly."
 description = """
 A grey toad. Its about the size of a cow. Small horns grow all over its body."""
 level = 27
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -105,6 +121,10 @@ description = """
 The weeping willow has long thins branches. These branches seem to droop in
 anguish and dismay. You hear a faint sound of crying."""
 level = 50
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis"]
@@ -128,6 +148,10 @@ long_desc = "A mistling emerges from the mist surrounding you."
 description = """
 It looks like a thin wisp of mist that has gained substance and size."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["hide"]
@@ -153,6 +177,10 @@ The swamp wraith is made of mist and is in the image of a great warrior. He
 appears to emerge from the mist. You feel the cold radiating from his form as
 he nears you."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 alignment = 0
@@ -177,6 +205,10 @@ description = """
 You see a pitifully overworked ogre. It is dressed in rags and shuffles along
 with its head hung low. It sees you and cringes in mortal terror."""
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "stay_area", "wimpy"]
 alignment = 0
@@ -200,6 +232,10 @@ description = """
 The ogre warrior is dressed in thick fur armor. He looks quite large and
 formidable."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
 alignment = 0
@@ -223,6 +259,10 @@ description = """
 The ogre guard stands here manning his post. It appears as though he would
 fight to the death before abandoning his post."""
 level = 37
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -246,6 +286,10 @@ description = """
 The ogre shaman is draped in thick fur cloaks and pelts. He has all types of
 charms and holy symbols draped about him. He looks at you and snarls."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 60]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "cleric"]
 affected_by = ["detect_invis"]
@@ -271,6 +315,10 @@ description = """
 This is the biggest ogre you have ever seen. He is heavily equipped and looks
 quite formidable. He towers high above you and growls menacingly."""
 level = 50
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["detect_invis"]
@@ -295,6 +343,10 @@ description = """
 The plains barbarian is clad in heavy furs. He seems used to the chilling cold
 and icy wastes."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
 alignment = 0
@@ -318,6 +370,10 @@ description = """
 The white yeti looks like a huge white snow ape. Its long arms end in long
 curved talons and its mouth is full of sharp teeth."""
 level = 32
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
 alignment = 0
@@ -342,6 +398,10 @@ description = """
 The huge worm is almost 50 feet long. Its huge gaping mouth spews ice and snow
 as it charges directly at you."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -366,6 +426,10 @@ description = """
 You see a rather ragged and cold minotaur. It appears to be looking for a warm
 place to seek refuge from the cold."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy"]
 alignment = 0
@@ -389,6 +453,10 @@ description = """
 The minotaur is clad in heavy furs. Beneath these furs, you see the gleam of
 his armor."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -412,6 +480,10 @@ description = """
 You see a huge minotaur that is dressed in thick furs and armor. He has black
 fur and red eyes. He looks quite capable of protecting the city."""
 level = 42
+hitroll = 0
+ac = [-50, -50, -50, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -435,6 +507,10 @@ description = """
 The minotaur stands rigidly before the gates of the keep. It looks quite
 miserable standing in the driven snow and ice."""
 level = 49
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
 affected_by = ["detect_invis"]
@@ -459,6 +535,10 @@ description = """
 The high guard is dressed in blue plate armour. He looks quite dangerous and
 skilled."""
 level = 50
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
@@ -483,6 +563,10 @@ description = """
 The royal guard is quite huge. He is dressed in heavy red armor and wields a
 huge glaive. He looks quite capable of protecting the keep."""
 level = 51
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
@@ -507,6 +591,10 @@ description = """
 This minotaur wields a huge morningstar and is clad in heavy crimson plate and
 furs."""
 level = 55
+hitroll = 0
+ac = [-80, -80, -80, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
@@ -531,6 +619,10 @@ description = """
 She looks quite attractive. Her low cut gown reveals why she was chosen to be
 in the harem."""
 level = 3
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy"]
 alignment = 0
@@ -552,6 +644,10 @@ short_desc = "the Minotaur Butler"
 long_desc = "A minotaur butler stands here rigidly, awaiting orders."
 description = "He looks quite regal and refined to be a minotaur."
 level = 40
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy"]
 alignment = 0
@@ -575,6 +671,10 @@ description = """
 The ring-keeper is a huge minotaur. You notice a huge ring of multicolored
 keys hanging from his belt. He wears huge, spiked brass knuckles."""
 level = 58
+hitroll = 0
+ac = [-80, -80, -80, 10]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_invis"]
@@ -600,6 +700,10 @@ description = """
 Gorak is HUGE. His bulging muscles are confined beneath heavy armor. He is the
 master of the warrior guild of Mahn-Tor."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
@@ -624,6 +728,10 @@ description = """
 Darkoth is a living incarnation of evil. He radiates a dark aura, and a cold
 chill runs down your spine. He is the master of the Mahn-Tor anti-paladins."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
@@ -649,6 +757,10 @@ description = """
 Tyrgoth is the minotaur incarnation of good. You feel safe and at ease in his
 presence. He is the leader of the Mahn-Tor paladins."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis"]
@@ -674,6 +786,10 @@ Amyrok is a small minotaur. He is clad in loose robes and emits an aura of
 power. He appears quite dangerous, despite his size. He is the leader of the
 mages of Mahn-Tor."""
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 10]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "mage"]
 affected_by = ["detect_invis"]
@@ -699,6 +815,10 @@ description = """
 Sumaron is clad in white glowing robes. He is goodness incarnate. He is the
 master of all the clerics of Mahn-Tor."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 40]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "cleric"]
 affected_by = ["detect_invis"]
@@ -724,6 +844,10 @@ description = """
 Nasturn is quite a natural looking minotaur. He is dressed in leather and
 wears no metal of any type. He looks at you and smiles."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 40]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
@@ -749,6 +873,10 @@ description = """
 Belrak is clad in green and brown leather. He looks quite agile and thin, when
 compared to the normal minotaur. He looks at you with a slight smirk."""
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
@@ -773,6 +901,10 @@ description = """
 Dorgar is clad all in black. He is tall and slender, unlike most minotaurs. He
 appears to be quite a skilled thief."""
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["hide"]
@@ -798,6 +930,10 @@ Mahn-Tor towers above you. He is simply huge. Mahn-Tor is clad in the best of
 armor and robes. He wields the largest axe you have ever seen. You can see why
 Mahn-Tor is the leader of the minotaurs. He is awe-inspiring."""
 level = 65
+hitroll = 0
+ac = [-100, -100, -100, 0]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "mage"]
 affected_by = ["detect_invis", "flying", "pass_door"]

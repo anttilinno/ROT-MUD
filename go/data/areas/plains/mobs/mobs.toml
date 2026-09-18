@@ -7,6 +7,10 @@ description = """
 Aruncus is a tall, skinny druid with a face marked by nature.
 He seems to be in peace with himself and his surroundings."""
 level = 25
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy"]
 affected_by = ["detect_invis"]
@@ -32,6 +36,10 @@ Sorbus bares the marks of a long, hard life in solitude.
 He is dressed in simple clothing and looks like he has little
 or nothing to say."""
 level = 8
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -55,6 +63,10 @@ description = """
 He seems like a nice person with no interest in harming you or others.
 He wears normal, light clothing and has an anonymous face."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -78,6 +90,10 @@ description = """
 She seems like a nice person with no interest in harming you or others.
 She wears a minimum of clothing and has big ... eyes."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -102,6 +118,10 @@ Shudde-M'ell is about 15 ft long and is surrounded by an evil stench,
 The worm is the protector of the treasure of G'harne and has been so
 for as long anyone can remember."""
 level = 48
+hitroll = 0
+ac = [-60, -60, -60, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
@@ -128,6 +148,10 @@ He looks like a mean trader from the outskirts of Midgaard.
 His life is seems to be totally occupied with trading.
 He looks very fit and capable of protecting his goods."""
 level = 45
+hitroll = 0
+ac = [-60, -60, -60, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0
@@ -151,6 +175,10 @@ description = """
 The Innkeeper looks skilled in brewing different beers and mixing the
 wierdest drinks known. He also looks very big."""
 level = 45
+hitroll = 0
+ac = [-60, -60, -60, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -172,6 +200,10 @@ short_desc = "the cute rabbit"
 long_desc = "A cute rabbit is here."
 description = "It is a small, furry creature with long ears and big feet."
 level = 1
+hitroll = 0
+ac = [90, 90, 90, 100]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "rabbit"
 sex = "none"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -196,6 +228,12 @@ Ravan's pet dragon is about 3 ft. tall with small pointy teeth.
 The small wings are eagerly trying to lift her from the ground,
 but so far they haven't succeeded."""
 level = 20
+hitroll = 0
+ac = [20, 20, 20, 60]
+off_flags = ["dodge"]
+res_flags = ["charm", "bash", "fire"]
+vuln_flags = ["pierce", "cold"]
+race = "dragon"
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]

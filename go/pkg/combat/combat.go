@@ -332,51 +332,63 @@ func isVampire(ch *types.Character) bool {
 	return ch.Class == types.ClassGhoul
 }
 
-// CheckImmune determines if the victim is immune/resistant/vulnerable to a damage type
-func CheckImmune(victim *types.Character, damType types.DamageType) ImmunityResult {
-	var immFlag, resFlag, vulnFlag types.ImmFlags
+// immBits maps each damage type to its specific IMM/RES/VULN bit (ROM check_immune).
+var immBits = map[types.DamageType]types.ImmFlags{
+	types.DamBash: types.ImmBash, types.DamPierce: types.ImmPierce, types.DamSlash: types.ImmSlash,
+	types.DamFire: types.ImmFire, types.DamCold: types.ImmCold, types.DamLightning: types.ImmLightning,
+	types.DamAcid: types.ImmAcid, types.DamPoison: types.ImmPoison, types.DamNegative: types.ImmNegative,
+	types.DamHoly: types.ImmHoly, types.DamEnergy: types.ImmEnergy, types.DamMental: types.ImmMental,
+	types.DamDisease: types.ImmDisease, types.DamDrowning: types.ImmDrowning, types.DamLight: types.ImmLight,
+	types.DamCharm: types.ImmCharm, types.DamSound: types.ImmSound, types.DamSilver: types.ImmSilver,
+}
 
-	switch damType {
-	case types.DamFire:
-		immFlag, resFlag, vulnFlag = types.ImmFire, types.ImmFire, types.ImmFire
-	case types.DamCold:
-		immFlag, resFlag, vulnFlag = types.ImmCold, types.ImmCold, types.ImmCold
-	case types.DamLightning:
-		immFlag, resFlag, vulnFlag = types.ImmLightning, types.ImmLightning, types.ImmLightning
-	case types.DamAcid:
-		immFlag, resFlag, vulnFlag = types.ImmAcid, types.ImmAcid, types.ImmAcid
-	case types.DamPoison:
-		immFlag, resFlag, vulnFlag = types.ImmPoison, types.ImmPoison, types.ImmPoison
-	case types.DamBash:
-		immFlag, resFlag, vulnFlag = types.ImmBash, types.ImmBash, types.ImmBash
-	case types.DamPierce:
-		immFlag, resFlag, vulnFlag = types.ImmPierce, types.ImmPierce, types.ImmPierce
-	case types.DamSlash:
-		immFlag, resFlag, vulnFlag = types.ImmSlash, types.ImmSlash, types.ImmSlash
-	case types.DamSilver:
-		immFlag, resFlag, vulnFlag = types.ImmSilver, types.ImmSilver, types.ImmSilver
-	default:
+// CheckImmune determines if the victim is immune/resistant/vulnerable to a
+// damage type, following ROM check_immune: IMM/RES/VULN_WEAPON cover bash,
+// pierce and slash, IMM/RES/VULN_MAGIC cover every other type, and a
+// type-specific bit overrides the umbrella (a vulnerability downgrades an
+// umbrella immunity or resistance by one step).
+func CheckImmune(victim *types.Character, damType types.DamageType) ImmunityResult {
+	if damType == types.DamNone {
 		return ImmNormal
 	}
-
 	innateRes, innateVuln := victim.InnateRIS()
-	if victim.Imm.Has(immFlag) {
+	imm, res, vuln := victim.Imm, victim.Res|innateRes, victim.Vuln|innateVuln
+	// Innate vampire vulnerabilities: fire and silver.
+	if isVampire(victim) {
+		vuln |= types.ImmFire | types.ImmSilver
+	}
+
+	umbrella := types.ImmMagic
+	if damType <= types.DamSlash {
+		umbrella = types.ImmWeapon
+	}
+	def := ImmNormal
+	switch {
+	case imm.Has(umbrella):
+		def = ImmImmune
+	case res.Has(umbrella):
+		def = ImmResistant
+	case vuln.Has(umbrella):
+		def = ImmVulnerable
+	}
+
+	bit, ok := immBits[damType]
+	if !ok {
+		return def
+	}
+	switch {
+	case imm.Has(bit):
 		return ImmImmune
-	}
-	if victim.Res.Has(resFlag) || innateRes.Has(resFlag) {
+	case res.Has(bit) && def != ImmImmune:
 		return ImmResistant
-	}
-	if victim.Vuln.Has(vulnFlag) || innateVuln.Has(vulnFlag) {
+	case vuln.Has(bit):
+		switch def {
+		case ImmImmune:
+			return ImmResistant
+		case ImmResistant:
+			return ImmNormal
+		}
 		return ImmVulnerable
 	}
-
-	// Innate vampire vulnerabilities: fire and silver deal extra damage
-	// regardless of explicit Vuln flags (unless immune/resistant above)
-	if isVampire(victim) {
-		if damType == types.DamFire || damType == types.DamSilver {
-			return ImmVulnerable
-		}
-	}
-
-	return ImmNormal
+	return def
 }

@@ -6,6 +6,13 @@ long_desc = "A tridrone is here doing a menial task."
 description = """
 You see what appears to be a 3 sided pyramid with spidery arms and legs."""
 level = 16
+hitroll = 0
+ac = [40, 30, 40, 50]
+damage_type = "bash"
+off_flags = ["trip"]
+imm_flags = ["charm", "negative", "holy", "mental", "disease"]
+res_flags = ["fire", "cold", "acid"]
+race = "modron"
 sex = "none"
 act_flags = ["npc", "scavenger", "stay_area"]
 affected_by = ["infrared"]
@@ -28,6 +35,13 @@ short_desc = "the quadrone"
 long_desc = "A quadrone is here watching for trespassers."
 description = "A cubic creature, with spiny arms and legs."
 level = 21
+hitroll = 3
+ac = [10, 0, 10, 20]
+damage_type = "bash"
+off_flags = ["bash", "disarm", "parry"]
+imm_flags = ["charm", "negative", "holy", "mental", "disease"]
+res_flags = ["fire", "cold", "acid"]
+race = "modron"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_invis", "infrared"]
@@ -51,6 +65,13 @@ long_desc = "The pentadrone is here policing the area."
 description = """
 A five-armed creature which resembles a starfish on thin stilt-like legs."""
 level = 27
+hitroll = 3
+ac = [-20, -20, 0, -10]
+damage_type = "bash"
+off_flags = ["bash", "disarm", "dodge", "rescue", "trip"]
+imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["fire", "cold", "acid"]
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_invis", "infrared"]
@@ -73,6 +94,13 @@ short_desc = "the decaton"
 long_desc = "A decaton is here overseeing the other modrons."
 description = "The decaton is a large, ten-tentacled sphere on stumpy legs."
 level = 34
+hitroll = 4
+ac = [-40, -40, 0, -20]
+damage_type = "bash"
+off_flags = ["area_attack", "bash", "disarm", "parry", "trip"]
+imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["fire", "cold", "acid"]
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
 affected_by = ["detect_invis", "infrared"]
@@ -95,6 +123,15 @@ short_desc = "the nonaton"
 long_desc = "A nonaton is here preserving law and order."
 description = "A cylidrical modron with 9 tentacles and stubby legs."
 level = 40
+hitroll = 5
+ac = [-40, -40, -20, -30]
+damage_type = "bash"
+off_flags = ["area_attack", "disarm", "dodge", "trip"]
+imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["fire", "cold", "acid"]
+vuln_flags = ["slash"]
+size = "large"
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
 affected_by = ["detect_invis", "infrared"]
@@ -119,6 +156,15 @@ description = """
 The octon has a collar at shoulder level with 8 tentacled arms growing out of
 it."""
 level = 43
+hitroll = 5
+ac = [-50, -50, -30, -40]
+damage_type = "bash"
+off_flags = ["area_attack", "bash", "disarm", "fast", "parry"]
+imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["fire", "cold", "acid"]
+vuln_flags = ["slash"]
+size = "large"
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis", "infrared"]
@@ -143,6 +189,13 @@ description = """
 The septon appears as a human with a large bald head. It has a shoulder collar
 with 7 tentacles coming from it."""
 level = 48
+hitroll = 5
+ac = [-60, -60, -60, -40]
+damage_type = "bash"
+off_flags = ["area_attack", "dodge", "parry", "crush"]
+imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["fire", "cold", "acid"]
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage"]
 affected_by = ["detect_invis", "infrared"]
@@ -167,6 +220,14 @@ description = """
 A hexton appears as a humanoid with 6 arms: 2 large human arms with 6 fingers,
 and 4 tentacles below tipped with sharp claws."""
 level = 52
+hitroll = 7
+ac = [-80, -80, -80, -40]
+damage_type = "slash"
+off_flags = ["area_attack", "bash", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip"]
+imm_flags = ["summon", "charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["magic", "fire", "cold", "acid"]
+size = "large"
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -192,6 +253,14 @@ Quintons look like tall, stocky humanoids with 4 flexible arms jutting from the
 shoulders.  A prehensile tail serves as the creature's 5th arm, and they have
 fan-like wings attached to their shoulders."""
 level = 56
+hitroll = 6
+ac = [-70, -80, -60, -80]
+damage_type = "bash"
+off_flags = ["area_attack", "parry", "tail", "crush"]
+imm_flags = ["summon", "charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["fire", "cold", "acid"]
+size = "large"
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis", "infrared"]
@@ -217,6 +286,14 @@ Tertians look very human, save for their 12 foot size, the horns jutting from
 the sides of their bald heads, and the long prehensile tail ending in a mace-
 like ball."""
 level = 66
+hitroll = 12
+ac = [-110, -130, -100, -90]
+damage_type = "bash"
+off_flags = ["bash", "disarm", "dodge"]
+imm_flags = ["summon", "charm", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["magic", "fire", "cold", "acid"]
+size = "huge"
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
 affected_by = ["detect_invis", "infrared"]
@@ -241,6 +318,14 @@ description = """
 The secundi is an incredibly thin, tall humanoids with long, narrow faces
 and deepset eyes. It radiates intense power."""
 level = 71
+hitroll = 15
+ac = [-110, -140, -110, -120]
+damage_type = "bash"
+off_flags = ["disarm", "dodge", "fast", "kick", "parry", "trip"]
+imm_flags = ["summon", "charm", "fire", "cold", "acid", "negative", "holy", "mental", "disease", "drowning"]
+res_flags = ["magic", "fire", "cold", "acid"]
+size = "huge"
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -266,6 +351,14 @@ Primus is a huge being who rises out of the energy pool and glares at you with
 violet eyes. His right hand is wreathed in darkness, his left in light, and
 he looks very displeased to see you."""
 level = 80
+hitroll = 20
+ac = [-150, -150, -150, -150]
+damage_type = "energy"
+off_flags = ["area_attack", "fast"]
+imm_flags = ["summon", "charm", "fire", "cold", "acid", "negative", "holy", "mental", "disease", "drowning", "light"]
+res_flags = ["magic", "fire", "cold", "acid"]
+size = "giant"
+race = "modron"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]

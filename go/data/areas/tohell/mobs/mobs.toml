@@ -9,6 +9,10 @@ of Hell.  Its black eyes stare into your soul with a hunger that makes you
 shiver.  The guardian stands motionless before you.  Its rough grey skin
 looks impervious to normal weapons."""
 level = 89
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -32,6 +36,10 @@ short_desc = "the pile of gold coins"
 long_desc = "A pile of gold coins lies on the ground."
 description = "A large sparkly pile of gold coins."
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 40]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -57,6 +65,10 @@ description = """
 This is the most handsome male you have ever seen.  The well-defined
 muscles on his naked body make your mouth water."""
 level = 79
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared", "haste"]
@@ -82,6 +94,10 @@ description = """
 This is the most beautiful female you have ever seen. The curves of her
 naked body make you sweat and babble uncontrollably."""
 level = 79
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared", "haste"]
@@ -104,6 +120,10 @@ short_desc = "the gold bar"
 long_desc = "A shiny gold bar lies on the ground."
 description = "This gold bar must be worth bucks!"
 level = 73
+hitroll = 0
+ac = [-120, -120, -120, 30]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -128,6 +148,10 @@ long_desc = "A yummy looking chicken pot pie is here."
 description = """
 You see a golden-crusted pot pie filled with chicken and vegetables."""
 level = 83
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -152,6 +176,10 @@ long_desc = "A yummy looking beef pot pie is here."
 description = """
 You see a golden-crusted pot pie filled with beef and vegetables."""
 level = 83
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -175,6 +203,10 @@ short_desc = "a yummy vegetable pot pie"
 long_desc = "A yummy looking vegetable pot pie is here."
 description = "You see a golden-crusted pot pie filled with vegetables."
 level = 84
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -200,6 +232,10 @@ description = """
 You see the faint silhouette of a person. Looking closely at it, you can barely 
 make out features that would identify it as the person it was in life."""
 level = 64
+hitroll = 0
+ac = [-100, -100, -100, 40]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["infrared"]
@@ -225,6 +261,10 @@ description = """
 You see a unrecognizable person going through unheard-of and
 indescribable torture. It screams out at you in pain and terror."""
 level = 68
+hitroll = 0
+ac = [-110, -110, -110, 0]
+off_flags = ["dodge"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["infrared"]
@@ -251,6 +291,10 @@ This poor soul looks as if he has been chewed on and spit out.  He writhes
 He is in agony and terror as he gasps frantically for Death to answer his
 desperate plea..."""
 level = 92
+hitroll = 0
+ac = [-160, -160, -160, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "key"]
 affected_by = ["infrared", "haste"]
@@ -277,6 +321,10 @@ The wall consists of greying and sinewy flesh - faces, hands,
 broken bones, feet, and toes jutting from the surface. You hear low moans
 of horror, pain, and sorrow issuing from within."""
 level = 99
+hitroll = 0
+ac = [-200, -200, -200, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -303,6 +351,10 @@ Rotting flesh and gore drop from the bones of this creature.
 Its decaying eyes stare at you intently as it sees only your
 delicious and juicy brain."""
 level = 69
+hitroll = 0
+ac = [-110, -110, -110, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "key"]
 affected_by = ["infrared", "haste"]
@@ -327,6 +379,10 @@ description = """
 The bloody arm of some poor, luckless individual.  The stench of the
 gore-covered limb makes you want to retch."""
 level = 65
+hitroll = 0
+ac = [-110, -110, -110, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -349,6 +405,10 @@ short_desc = "bloody severed foot"
 long_desc = "A bloody severed foot lies here."
 description = "This bloody foot definitely wasn't a lucky one."
 level = 65
+hitroll = 0
+ac = [-110, -110, -110, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -373,6 +433,10 @@ description = """
 I wonder how the person that lost this smells...Hopefully not as bad as
 this nose does..."""
 level = 65
+hitroll = 0
+ac = [-110, -110, -110, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -396,6 +460,10 @@ long_desc = "The blood in the fountain gurgles merrily."
 description = """
 You see gallons and gallons of thick red blood gurgling in the fountain."""
 level = 90
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -421,6 +489,10 @@ description = """
 This soul is definitely clueless to as where he is. He holds a ticket
 that reads #14349023402342039840293481234900049."""
 level = 88
+hitroll = 0
+ac = [-150, -150, -150, -20]
+off_flags = ["dodge"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["infrared", "haste"]
@@ -447,6 +519,10 @@ This was once a person.  Now it is only a charred and smoking hulk that
 is being burned for eternity.  It screams out as the flames lick at its
 body and devour its flesh..."""
 level = 87
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -472,6 +548,10 @@ description = """
 Stringy bits of flesh blow gently in the breeze. The bones rattle as you walk
 by them."""
 level = 74
+hitroll = 0
+ac = [-120, -120, -120, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -499,6 +579,10 @@ often fed upon by demon lords and princes.  Its green-and-red blotched
 skin gives it a diseased and decaying look.  It somewhat resembles a
 shadow or a ghost."""
 level = 70
+hitroll = 0
+ac = [-110, -110, -110, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "wimpy"]
 affected_by = ["infrared", "haste"]
@@ -525,6 +609,10 @@ This is a sad individual. He smells strongly of the rotten food that has been
 thrown at him. He sits here chained to the wall, banished to Hell forever by
 the gods."""
 level = 70
+hitroll = 0
+ac = [-110, -110, -110, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -551,6 +639,10 @@ She is sad-looking, indeed:  cuts and scrapes all over her.  Many scars
 and burns cover her face and arms.  The appalling condition of her once-lovely
 breasts makes you avert your eyes."""
 level = 75
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -576,6 +668,10 @@ He is sad-looking, indeed:  cuts and scrapes all over him.  Many scars
 and burns cover his face and arms.  One of his arms is broken at the
 elbow and hangs limply by his side."""
 level = 76
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -600,6 +696,10 @@ description = """
 This very large demon stands before you, licking his daggerlike teeth.
 Yellow spittle runs down the scales of his blackened skin."""
 level = 79
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["infrared"]
@@ -625,6 +725,10 @@ description = """
 You can barely make out anything on it. All you can make out are the flames 
 of Hell consuming it, and the smell of burning flesh."""
 level = 84
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -651,6 +755,10 @@ He is the typical construction worker:  T-shirt, jeans, yellow hard hat.
 As you look closer at the hard hat, you notice that it says:
              '4th DEMONsion Construction Co.'"""
 level = 89
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -676,6 +784,10 @@ She is the typical construction worker:  T-shirt, jeans, yellow hard hat.
 As you look closer at the hard hat, you notice that it says:
              '4th DEMONsion Construction Co.'"""
 level = 92
+hitroll = 0
+ac = [-160, -160, -160, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -702,6 +814,10 @@ erupts with blisters and puss.  As you look at it, it smiles at you with
 sharp, blood-covered teeth.  This is definitely a face only a mother could
 love."""
 level = 95
+hitroll = 0
+ac = [-180, -180, -180, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -728,6 +844,10 @@ It is simply a large, door-sized wall of fire.  It slowly inches across the
 room, burning everything in its path, including the poor souls that are chained
 to the various posts around the room."""
 level = 92
+hitroll = 0
+ac = [-160, -160, -160, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "flying", "haste"]
@@ -753,6 +873,10 @@ This freak of a canine is rusty red to red-brown in color. Its eyes glow a
 ghastly red. Its sooty black teeth and tongue are covered with green spittle
 that runs down its dung covered coat."""
 level = 90
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "key"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -779,6 +903,10 @@ As you look at the corpse, you recoil when you see that its eyes still
 move.  They stare intently from its bluish face, as if pleading for your
 help."""
 level = 93
+hitroll = 0
+ac = [-170, -170, -170, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -807,6 +935,10 @@ slowly and painfully freezing the damned souls, quickly thawing them
 and then starting over. Every couple of minutes, it takes time out to 
 break an appendage off a nearby soul and beat the soul with it."""
 level = 102
+hitroll = 0
+ac = [-220, -220, -220, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "flying", "haste"]
@@ -834,6 +966,10 @@ under an iceflow.  It will desperately gasp for air for a few minutes,
 then will seem to die briefly.  Always, it is restored and begins thrashing
 about again."""
 level = 97
+hitroll = 0
+ac = [-190, -190, -190, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -859,6 +995,10 @@ A large meat hook is imbedded deep within the back of the corpse. You
 see small white maggots eating away at the body. The flesh seems to
 move and wriggle with a life of its own..."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -883,6 +1023,10 @@ description = """
 What a cute little penguin! Wait, why is it looking at you that way?
 HEY! Penguins don't have teeth!"""
 level = 102
+hitroll = 0
+ac = [-210, -210, -210, -50]
+off_flags = ["dodge"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "mage"]
 affected_by = ["infrared"]
@@ -910,6 +1054,10 @@ It runs about screaming, 'I SCREAM, YOU SCREAM!
 
 WE ALL SCREAM FOR I SCREAM!!!'"""
 level = 102
+hitroll = 0
+ac = [-220, -220, -220, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -938,6 +1086,10 @@ He is dressed in a white jumpsuit with the words,
 
 written on it in large, yellow letters."""
 level = 102
+hitroll = 0
+ac = [-220, -220, -220, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
@@ -967,6 +1119,10 @@ a oversized, orange jumpsuit. The words,
 back in large, black letters.
 He seems none too happy to see you."""
 level = 103
+hitroll = 0
+ac = [-230, -230, -230, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -992,6 +1148,10 @@ This very sexy secretary seems to be just sitting here amusing herself
 by watching the little lights on the telephone blink. She is oblivious
 to your presence and seems fascinated by the phones."""
 level = 85
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1016,6 +1176,10 @@ description = """
 Just looking at him makes your blood boil. 
 AAAAAAAAAAaaaaaaaaaaaarrrrrrrrgggggghhhhh!!!!!!!!!!!"""
 level = 87
+hitroll = 0
+ac = [-150, -150, -150, 20]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1041,6 +1205,10 @@ description = """
 You see a rather plain-looking office personel here, filing paperwork on
 someone."""
 level = 87
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1065,6 +1233,10 @@ description = """
 It's a jolly old man, with red cheeks and a roly-poly belly and a laugh
 as jolly as you can get. Must be Santa Claus!"""
 level = 87
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1089,6 +1261,10 @@ description = """
 The dark, black robes hide most of his features, but you can nearly make
 out his emaciated face beneath the hood."""
 level = 103
+hitroll = 0
+ac = [-230, -230, -230, -10]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1112,6 +1288,10 @@ short_desc = "a bowl of blood"
 long_desc = "A bowl of blood sits on the altar."
 description = "It is a wooden bowl filled with blood and bits of flesh."
 level = 96
+hitroll = 0
+ac = [-180, -180, -180, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1135,6 +1315,10 @@ long_desc = "A jury member sits here with a \"Guilty\" sign, waiting for the tri
 description = """
 It seems to be a lesser demon disguised as mortal. Fair trial?  Not likely."""
 level = 79
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1159,6 +1343,10 @@ description = """
 This is the High Judge of Hell. He has never found anyone innocent
 and is notorious for his painful and harsh punishments."""
 level = 102
+hitroll = 0
+ac = [-220, -220, -220, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1183,6 +1371,10 @@ long_desc = "The Lawyer from Hell sits here, playing games on his laptop compute
 description = """
 Slimy, sleezy, and with very sharp teeth... A lawyer all right..."""
 level = 102
+hitroll = 0
+ac = [-220, -220, -220, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1207,6 +1399,10 @@ description = """
 She seems not to notice you, but is absorbed in her favorite soap,
 'As The Hell Burns'"""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1233,6 +1429,10 @@ and then goes back to practicing.
 
 He is known to buy anything, and to sell anything sold to him."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1256,6 +1456,10 @@ long_desc = "A maintenance worker is here, fixing stuff."
 description = """
 He is in a yellow jumpsuit with a large nuclear-warning symbol on the back."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1278,6 +1482,10 @@ short_desc = "weeds"
 long_desc = "A weed is growing out of the cement."
 description = "You see a nasty yellow-and-purple weed."
 level = 79
+hitroll = 0
+ac = [-130, -130, -130, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1303,6 +1511,10 @@ He is a crafty old fart who looks about 1000 years old, but his figurines
 are pretty well-known.  He was rumored to have disappeared around Solace 100
 years ago."""
 level = 104
+hitroll = 0
+ac = [-240, -240, -240, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1327,6 +1539,10 @@ description = """
 This is what used to be a horse.  Hmm, maybe - it's hard to tell.  Half
 of it has been digested already."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1351,6 +1567,10 @@ description = """
 A large, brown-and-green, slime-covered reptile, its function seems to be
 to move to each food item and barf acid all over it."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1376,6 +1596,10 @@ description = """
 It's one of those really nasty pieces of food in the refrigerator that
 disappears, and you wonder if it just walked away...."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1400,6 +1624,10 @@ description = """
 He is dressed in a black jumpsuit with a large nuclear-warning symbol on
 the back."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1424,6 +1652,10 @@ description = """
 He is dressed in a black jumpsuit with a large lighting bolt symbol on
 the back."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1452,6 +1684,10 @@ Warning lights blink rapidly as the coffee shorts out the control panel.
 Homer calmly stands up, unplugs the control panel, and sits down
 for a nap."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1474,6 +1710,10 @@ short_desc = "devil's food cake"
 long_desc = "A nice slice of devil's food cake is here, waiting to be eaten."
 description = "Mmmmmm...Don't you just want to take a bite?"
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1497,6 +1737,10 @@ long_desc = "A mad cook is here, cooking up a storm."
 description = """
 He spots you and screams, 'Git awa froom mi food!  I'll kill you!'"""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1518,6 +1762,10 @@ keywords = ["oldstyle", "frantic", "lady"]
 short_desc = "frantic lady"
 long_desc = "A frantic lady is here, looking in vain for a sale and tearing her hair out."
 level = 83
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared", "haste"]
@@ -1539,6 +1787,10 @@ keywords = ["oldstyle", "nuclear", "technician"]
 short_desc = "nuclear technician"
 long_desc = "A nuclear technician is here, fiddling with his rad suit."
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1560,6 +1812,10 @@ keywords = ["oldstyle", "stray", "proton"]
 short_desc = "stray proton"
 long_desc = "A stray proton is here, whizzing about."
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1581,6 +1837,10 @@ keywords = ["oldstyle", "radiation"]
 short_desc = "radiation"
 long_desc = "The radiation in the room does unknown things to you."
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1607,6 +1867,10 @@ the panic button at the moment, chuckling happily as workers on the
 reactor floor below frantically check dials and gauges, while lights
 are flashing and sirens are screaming in the background."""
 level = 104
+hitroll = 0
+ac = [-240, -240, -240, 20]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1634,6 +1898,10 @@ were unlucky enough to be tortured close to him.  His black-taloned
 nails rip slowly through their flesh as he cackles with glee at the
 sounds of their unending pain..."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1659,6 +1927,10 @@ description = """
 This enormous carcass looks as if it came from a small dragon or a very
 large cow."""
 level = 86
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -1683,6 +1955,10 @@ long_desc = "A guard dog sits here, guarding the break room."
 description = """
 A vicious-looking pit bull / demon-dog mix is here, slobbering on the donuts."""
 level = 89
+hitroll = 0
+ac = [-150, -150, -150, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "key"]
 affected_by = ["infrared", "haste"]
@@ -1707,6 +1983,10 @@ long_desc = "A mouth-watering, juicy steak is here, steaming."
 description = """
 Mmmmmmm.....Steak....Mmmmmm...You feel your mouth start to water."""
 level = 101
+hitroll = 0
+ac = [-210, -210, -210, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]

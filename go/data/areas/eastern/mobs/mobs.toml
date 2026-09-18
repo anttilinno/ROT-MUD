@@ -7,6 +7,10 @@ description = """
 Dressed in loose fitting rags, this man looks like he could use
 some rest."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 affected_by = ["sneak"]
@@ -31,6 +35,10 @@ description = """
 Dressed in loose fitting rags, this man looks like he could use
 LOTS of rest."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["sneak"]
@@ -55,6 +63,12 @@ description = """
 This relatively harmless snake has bright alternating bands of red, yellow
 and black."""
 level = 7
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["poison"]
+vuln_flags = ["cold"]
+race = "snake"
 sex = "none"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -77,6 +91,10 @@ long_desc = "A small, red scorpion scuttles away at your approach."
 description = """
 The little tail is mighty dangerous for such a small creature."""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -98,6 +116,10 @@ short_desc = "The giant, purple sand worm"
 long_desc = "A giant, purple sand worm thrusts up out of the sand and attacks!"
 description = "He's big, mean, and purple. Watch out!"
 level = 36
+hitroll = 0
+ac = [-30, -30, -30, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -118,6 +140,12 @@ keywords = ["oldstyle", "dragon", "brass"]
 short_desc = "the brass dragon"
 long_desc = "The brass dragon steps out of the darkness and says 'Hello'.\nThen adds to it, 'Prepare to die, have a nice day!'"
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm", "bash", "fire"]
+vuln_flags = ["pierce", "cold"]
+race = "dragon"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -144,8 +172,12 @@ He is clad in silk robes lined with gold thread. At his side
 is a large, engraved cutlass. He has an especially haughty air
 about him."""
 level = 27
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
-act_flags = ["npc", "stay_area", "wimpy", "undead"]
+act_flags = ["npc", "stay_area", "wimpy", "undead", "druid"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -167,8 +199,12 @@ description = """
 This is the nomad leader's second in command. His clothes are richly
 woven of silk and gold thread. A nasty cutlass hangs at his side."""
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
-act_flags = ["npc", "sentinel", "undead"]
+act_flags = ["npc", "sentinel", "undead", "druid"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -187,6 +223,10 @@ keywords = ["oldstyle", "nomad", "warrior"]
 short_desc = "The nomad warrior"
 long_desc = "A proud nomad warrior stands here."
 level = 20
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -207,6 +247,10 @@ keywords = ["oldstyle", "slave", "young"]
 short_desc = "The slave"
 long_desc = "A young slave sits here staring at you with pleading eyes."
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0
@@ -230,8 +274,12 @@ description = """
 The dracolich is now only bone with pieces of flesh hanging from it.
 Obviously it no longer fears death."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
-act_flags = ["npc", "sentinel", "aggressive", "undead"]
+act_flags = ["npc", "sentinel", "aggressive", "undead", "druid"]
 affected_by = ["detect_invis"]
 alignment = 0
 special = "spec_breath_fire"
@@ -254,6 +302,10 @@ long_desc = "The drider looks at you viciously while it draws its sword."
 description = """
 This half-spider, half-drow creature is a formidable opponent."""
 level = 15
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
@@ -277,6 +329,10 @@ long_desc = "A duergar is here mining precious stones with his pick."
 description = """
 The duergar could crush your head as easily as it does those rocks."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
@@ -301,6 +357,10 @@ description = """
 The myconoid looks something like a giant mushroom (and probably
 has the same effect)."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy"]
 affected_by = ["detect_invis"]
@@ -323,6 +383,10 @@ short_desc = "The myconoid shaman"
 long_desc = "A rather large myconoid stands here chanting in a strange tongue."
 description = "The shaman shoots spores into the air."
 level = 15
+hitroll = 0
+ac = [30, 30, 30, 80]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy", "cleric"]
 affected_by = ["detect_invis"]
@@ -345,6 +409,10 @@ keywords = ["oldstyle", "dustdigger"]
 short_desc = "The dustdigger"
 long_desc = "A small oasis invites you to dive in."
 level = 13
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 alignment = 0
@@ -366,6 +434,10 @@ short_desc = "The rabid camel"
 long_desc = "A very dangerous rabid camel snorts at you."
 description = "Don't mess with this animal."
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0

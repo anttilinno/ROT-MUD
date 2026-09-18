@@ -8,6 +8,10 @@ He is a tall but bulky man in his late fifties.  His features are worn with
 decades of hard work and his somewhat crouched expression is one of deep
 sorrow and depression.  He is haunted by a memory of a lost paradise."""
 level = 8
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -29,6 +33,10 @@ short_desc = "the rotting zombie"
 long_desc = "A rotting zombie is staggering towards you with outstretched hands."
 description = "Maggots crawl all over its decaying body."
 level = 8
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
@@ -54,6 +62,10 @@ description = """
 It is a walking corpse with long fangs and long, sharp nails that most of
 resemble claws.  Its eyes are a dark yellow colour and glare hungrily at you."""
 level = 11
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
@@ -79,6 +91,10 @@ description = """
 The dusty bones are almost brown.  It must have been buried for a very long
 time."""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
@@ -104,6 +120,10 @@ description = """
 The dusty bones are almost brown.  It must have been buried for a very long
 time."""
 level = 6
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["infrared"]
@@ -127,6 +147,10 @@ short_desc = "the rotting zombie"
 long_desc = "A rotting zombie is staggering towards you with outstretched hands."
 description = "Maggots crawl all over its decaying body."
 level = 7
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["infrared"]

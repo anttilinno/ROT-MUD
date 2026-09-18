@@ -9,6 +9,10 @@ armored, and he uses his equipment with a practiced precision.  Luckily for
 you, this guard will only use his deadly skills for the good of the citizens of
 Ofcol."""
 level = 37
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "warrior"]
 alignment = 0
@@ -36,6 +40,10 @@ weight.  The second is to show her rank of office.  The third is that platinum
 is the hardest metal she can find.  She is willing to defend Ofcol to her 
 death."""
 level = 66
+hitroll = 0
+ac = [-110, -110, -110, 30]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
@@ -63,6 +71,10 @@ charm, but by brute strength.  He had fought in three orc wars and is a
 descendent of a surviving cityguard of old Thalos.  He believes that everything
 has to be hard won to be kept, and that laxity is for the weak."""
 level = 53
+hitroll = 0
+ac = [-80, -80, -80, 40]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_invis"]
@@ -91,6 +103,10 @@ guards.  Jacklyn is very beautiful, but whether it is due to her pale softness
 or her magic, no one has ever found out.  She isn't very strong physically, but
 she need not be."""
 level = 53
+hitroll = 0
+ac = [-70, -70, -70, 20]
+off_flags = ["dodge"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["detect_invis"]
@@ -117,6 +133,10 @@ Jim is big and brawny, just like what you'd expect of a blacksmith.  He is
 smiling a very big smile, as he looks at your coins.  You wonder if he likes
 the metals or the value of the coins."""
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -140,6 +160,10 @@ description = """
 Sam is a middle-aged workman.  He looks tired, but never too tired to get that
 last sale from you.  He grins at you slightly."""
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -164,6 +188,10 @@ Madam Tracy is a bit old, but not to the point of senility.  Besides, she knows
 the hard ways of this world and is ready for it.  She spends her time at the
 shop, trading little things (for a wee bit of profit)."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -188,6 +216,10 @@ Marty is a big man.  He used to hunt the animals he sells, but now he lets his
 son, Jim, raise and slaughter the animals for him.  Marty still knows how to
 kill, though."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -213,6 +245,10 @@ Ofcol, and the great vegetables this land produces is unbelievable to her too.
 Farmer Elizabeth smiles at you nicely, but you bet she is doing that just to
 get a good price off of you!"""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -238,6 +274,10 @@ old, but she is still in charge of the still.  She cackles lightly at herself
 every time she tastes her whiskey, which is quite often!
 Granny Jenkins cackles again."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -262,6 +302,10 @@ Jack is the son of Marty, and you can see the family resemblance (especially in
 their shared affinity for slaughtering animals.)  Jack leers at you as you
 enter.  "Came by to watch, eh?", he asks."""
 level = 24
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "wimpy"]
 alignment = 0
@@ -286,6 +330,10 @@ Farmer Sara is all covered with bits of straw and grime, but underneath all
 that, she doesn't look that bad.  She smiles at you demurely, and goes back to
 her work."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0
@@ -309,6 +357,10 @@ description = """
 The hen has yellow feathers and small wings.  It looks like a chicken, if
 you've ever seen one."""
 level = 2
+hitroll = 0
+ac = [90, 90, 90, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "wimpy", "pet"]
 alignment = 0
@@ -331,6 +383,10 @@ long_desc = "A cow is here, munching on grass."
 description = """
 The cow is here happily grazing.  It moos at you and goes back to grazing."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "pet"]
 alignment = 0
@@ -353,6 +409,10 @@ long_desc = "A cow is here, waiting to be milked."
 description = """
 The cow is just standing here.  She moos at you and otherwise ignores you."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "pet"]
 alignment = 0
@@ -376,6 +436,10 @@ description = """
 The horse whinnies at you, then runs around you a few times, then just goes
 back to grazing."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "wimpy", "pet"]
 alignment = 0
@@ -398,6 +462,10 @@ long_desc = "A pig is playing here, getting itself and you dirty."
 description = """
 The pig looks dirty.  It snorts and sniffs at you, then goes back to its slop."""
 level = 8
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "pig"
 sex = "none"
 act_flags = ["npc", "sentinel", "pet"]
 alignment = 0
@@ -422,6 +490,10 @@ The citizen smiles at you.  He is having a great day, and he wishes the same
 for you.  He looks at you strangely, though, wondering why you are so armed and
 armored."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "wimpy"]
 alignment = 0
@@ -446,6 +518,10 @@ The citizen smiles at you.  She is having a great day, and she wishes the same
 for you.  She looks at you strangely, though, wondering why you are so armed
 and armored."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "wimpy"]
 alignment = 0
@@ -469,6 +545,10 @@ description = """
 The little boy looks up at you and says, 'Hi.  Can I have a piece of candy?'
 He then smiles and runs away, remembering his game."""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "wimpy"]
 alignment = 0
@@ -492,6 +572,10 @@ description = """
 The little girl looks up at you and says, 'Hi.  Can I have a pretty little
 coin?'  She then smiles and runs away, remembering her game."""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "wimpy"]
 alignment = 0
@@ -516,6 +600,10 @@ The maid startles at your presence.  'You are ruining my floors!  Wait till
 Master and Mistress come back.  You will get me in trouble!  Shoo!', she says.
 She hits you with her broom."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "wimpy"]
 alignment = 0
@@ -541,6 +629,10 @@ Nyles is a hefty guy, who looks like he's waiting for the next bar fight to
 join in.  He keeps an eye on you and his glasses, making sure you don't steal
 any."""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -566,6 +658,10 @@ armored, and he uses his equipment with a practiced precision.  Luckily for
 you, this guard will only use his deadly skills for the good of the citizens of
 Ofcol."""
 level = 38
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -591,6 +687,10 @@ After years of traveling around the world, this bard has decided to stay in the
 peaceful city of Ofcol, and to sing of its unmatched glories.  He smiles at
 you, hinting toward a tip from you in ever a subtle way."""
 level = 26
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -613,6 +713,10 @@ long_desc = "A servant is here, carrying the duties of the Keeper of the Golden 
 description = """
 The servant smiles good-naturedly at you, then goes on his duties."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -634,6 +738,10 @@ short_desc = "a squire"
 long_desc = "A squire is here, scurrying from duty to duty."
 description = "This young man smiles at you, but is too busy to chat."
 level = 13
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -656,6 +764,10 @@ long_desc = "A page is here, sending a message to his knight."
 description = """
 The page smiles for you, asking if he can do you a favor too."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -680,6 +792,10 @@ The Priestess of Ofcol is an old woman, perfectly at peace with herself and
 with the world.  She devotes all her time to help teach you the ways of her
 god, Bahamut.  The dragon symbol around her neck looks almost alive."""
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -705,6 +821,10 @@ He smiles at you, with the enthusiasm of a little kid.  "What're you doing just
 STANDING here, young man?  Go help that other squire there!", he yells.  He
 turns to you and with a consipatory tone, whispers, "Kids!""""
 level = 40
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "warrior"]
 alignment = 0
@@ -730,6 +850,10 @@ This person looks almost like a dragon itself.  His golden scales gleam with
 power.  He smiles at you with a vicious grin.  You're happy that he doesn't
 look upset at your presence."""
 level = 57
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -755,6 +879,12 @@ This dragon's head is taller than you.  He is annoyed at your disturbance, but
 realizing that you're no danger to him, he ignores you.  He waves to one of
 his attendants to escort you away."""
 level = 84
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm", "bash", "fire"]
+vuln_flags = ["pierce", "cold"]
+race = "dragon"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["infrared", "flying"]
@@ -780,6 +910,10 @@ description = """
 This elder servant to the Gold Dragon is very loyal to him, willing to risk
 his life for his liege."""
 level = 41
+hitroll = 0
+ac = [-40, -40, -40, 30]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 alignment = 0
@@ -804,6 +938,10 @@ description = """
 This person looks like a dragon itself.  His golden scales gleam with power.
 He smiles at you, showing very sharp teeth."""
 level = 41
+hitroll = 0
+ac = [-50, -50, -50, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -830,6 +968,10 @@ armored, and he uses his equipment with a practiced precision.  Luckily for
 you, this guard will only use his deadly skills for the good of the citizens of
 Ofcol."""
 level = 38
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0

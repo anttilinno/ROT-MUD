@@ -8,6 +8,10 @@ The harpy looks at you with blood in her eyes.  Her entire body is
 caked in filth and grime and she stinks to high heaven.  Her razor-
 sharp talons flex as she considers you for her dinner."""
 level = 40
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
@@ -34,6 +38,10 @@ her wings and you see insects crawling around them.  Her hair is
 matted and greasy and you are sickened by the stench that pervades
 her presence."""
 level = 46
+hitroll = 0
+ac = [-60, -60, -60, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
@@ -58,6 +66,10 @@ description = """
 The air elemental is hard to see.  You know that it is there
 because objects behind it seem to waver and are slightly blurred."""
 level = 49
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "sneak", "hide"]
@@ -82,6 +94,10 @@ description = """
 The efreeti towers menacingly over you.  It is dressed in the
 finest ghostly silks and a headdress with an elaborate brooch."""
 level = 53
+hitroll = 0
+ac = [-80, -80, -80, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger"]
 affected_by = ["detect_invis", "sneak"]
@@ -105,6 +121,10 @@ long_desc = "The gigantic roc."
 description = """
 This bird has a wingspan that stretches several spear-lengths.  Itmoves surprisingly fast for something of its size."""
 level = 48
+hitroll = 0
+ac = [-60, -60, -60, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -128,6 +148,10 @@ description = """
 This bird has a wingspan that stretches several spear-lengths.  It
 moves surprisingly fast for something of its size."""
 level = 55
+hitroll = 0
+ac = [-80, -80, -80, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -152,6 +176,10 @@ The witch has jet black hair and sickly green skin.  She is covered
 with warts and boils.  Her nails are long and sharp and look like
 they would be quite painful.  Her eyes pierce your very soul."""
 level = 61
+hitroll = 0
+ac = [-100, -100, -100, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis"]

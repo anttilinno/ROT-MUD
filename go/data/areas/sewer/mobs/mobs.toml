@@ -8,6 +8,10 @@ It sure looks like something out of a horror movie. It strongly resembles
 a huge figure made up from mud alone, and it sure looks like it had human 
 flesh for breakfast and is strongly intent on having the same for dinner."""
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "stay_area"]
 affected_by = ["sneak"]
@@ -33,6 +37,11 @@ You have never in your entire life seen such a mean looking small creature,
 though it looks rather peaceful, hanging there. The thought of arousing this
 cruel creature doesn't seem appealing."""
 level = 1
+hitroll = 0
+ac = [90, 90, 90, 100]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+vuln_flags = ["light"]
+race = "bat"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["sneak", "flying", "dark_vision"]
@@ -54,6 +63,10 @@ keywords = ["oldstyle", "rat"]
 short_desc = "the great sewer rat"
 long_desc = "The huge hungry-looking sewer rat sits here."
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["infrared"]
@@ -75,6 +88,10 @@ keywords = ["oldstyle", "spider"]
 short_desc = "the small spider"
 long_desc = "The small hairy spider."
 level = 1
+hitroll = 0
+ac = [90, 90, 90, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["sneak"]
@@ -96,6 +113,10 @@ keywords = ["oldstyle", "beetle"]
 short_desc = "the giant earth beetle"
 long_desc = "The giant mean-looking earth beetle crawls towards you."
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc"]
 affected_by = ["infrared"]
@@ -117,6 +138,10 @@ keywords = ["oldstyle", "maggot"]
 short_desc = "the maggot"
 long_desc = "The giant maggot crawls toward you."
 level = 6
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc"]
 affected_by = ["infrared"]
@@ -138,6 +163,12 @@ keywords = ["oldstyle", "snake"]
 short_desc = "the slithering snake"
 long_desc = "The snake slithers towards you."
 level = 7
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["poison"]
+vuln_flags = ["cold"]
+race = "snake"
 sex = "none"
 act_flags = ["npc", "aggressive"]
 affected_by = ["infrared"]
@@ -162,6 +193,10 @@ long_desc = "The evil wanderer stares at you."
 description = """
 The evil wanderer is very thin.  He is dressed in a grey cloak."""
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy"]
 affected_by = ["infrared"]
@@ -187,6 +222,10 @@ The Homonculus appears in a man-like form, about 18'' tall, it has a
 greenish, reptilian skin, leathery wings, and a bat-like mouth, with
 teeth gleaming yellow."""
 level = 22
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc"]
 affected_by = ["detect_invis", "infrared"]
@@ -211,6 +250,10 @@ description = """
 The head and torso of a chreffn is copper-covered, with yellow,
 glowing eyes. The lower body is in an orange shading."""
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "wimpy"]
 affected_by = ["detect_invis", "sneak"]
@@ -236,6 +279,10 @@ It's a five feet tall, shadow monster. The shape of this creature lies
 somewhere between a human and a rat. It breaths very heavily, while staring
 at you with such a glint in the eyes that reminds you of immense hunger."""
 level = 20
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "wimpy"]
 affected_by = ["infrared"]
@@ -261,6 +308,10 @@ It sure looks like something out of a horror movie. It strongly resembles
 a huge figure made up from mud alone, and it sure looks like it had human 
 flesh for breakfast and is strongly intent on having the same for dinner."""
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["sneak"]
@@ -286,6 +337,10 @@ The red dragon stares at you, angrily, as it wakes when you
 arrives.  It says 'Oh, human YOU woke me up ... Hsss', while
 it moves closer.  'Can one NEVER sleep in peace ... Hsss'."""
 level = 64
+hitroll = 0
+ac = [-100, -100, -100, 50]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "infrared"]
@@ -312,6 +367,10 @@ The sea hag is so ghastly looking that you feel the deepest fear.
 Big yellow eyes and sharp teeth.  Its ears are very big,
 and it has small sharp horns.  It hates beauty."""
 level = 27
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "aggressive"]
 affected_by = ["infrared"]
@@ -339,6 +398,10 @@ scale with silvery triangles along her back. Her eyes are golden.
 She notice that you look at her, and she says: 'Watch out. This way
 leads to some evil creatures'."""
 level = 24
+hitroll = 0
+ac = [0, 0, 0, 70]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["infrared"]
@@ -365,6 +428,10 @@ The basilisk is a reptilian monster. It has eight legs, and a strong
 toothy jaws. It is dull brown with yellowish underbelly. It's eyes are
 glowing pale green."""
 level = 25
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "infrared"]
@@ -392,6 +459,10 @@ mouth going a little bit out from the face. The lemure does not look
 interested in you at all, but anyway it attacks. It looks like it's
 mind has been burned out."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive"]
 affected_by = ["sneak"]
@@ -417,6 +488,10 @@ At the first sight you thought Jones was an orc, but when it came
 closer you saw his second head. He wears an animal skin dress,
 filthy and moth eaten. Jones really stinks..."""
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
 affected_by = ["infrared"]
@@ -442,6 +517,10 @@ When you look at Herald, you feel pity. His dress are really poor,
 and the one of his heads hangs down. At the rope around his stomach
 hangs dead mouses and rats. He does not smell good."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger"]
 affected_by = ["infrared"]
@@ -467,6 +546,10 @@ It's a seven foot tall humanoid dressed in a purple cloak, and swinging a
 black and purple rod above its head as if it was going to attack you any
 moment now. In the middle of its head are four tentacles with sharp points."""
 level = 27
+hitroll = 0
+ac = [-10, -10, -10, 50]
+off_flags = ["dodge"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "mage"]
 affected_by = ["detect_invis", "infrared"]
@@ -493,6 +576,10 @@ This is a horrifying monster indeed, 6'6" high. Dressed in purple and black,
 and carrying a large mace in its hand. In the center of its head are four large
 tentacles with very sharp points."""
 level = 16
+hitroll = 0
+ac = [40, 40, 40, 70]
+off_flags = ["dodge"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "mage"]
 affected_by = ["detect_invis", "infrared"]
@@ -519,6 +606,10 @@ This mindflayer is six foot high. It has a small mace in its belt, and is
 dressed in purple and black cloth. It has four small tentacles in the 
 center of its head."""
 level = 11
+hitroll = 0
+ac = [50, 50, 50, 80]
+off_flags = ["dodge"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "mage"]
 affected_by = ["detect_invis", "infrared"]
@@ -544,6 +635,10 @@ description = """
 The wererat is about four foot tall. It looks very much like rat, except
 that it is standing."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["infrared"]
@@ -569,6 +664,10 @@ description = """
 The gigantic rat is about ten foot long from head to tail and has claws
 the size of your head looking very nasty."""
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]

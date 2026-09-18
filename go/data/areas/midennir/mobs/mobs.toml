@@ -7,6 +7,14 @@ description = """
 This huge winged creature looks really menacing.  You are happy it doesn't
 APPEAR to be very hungry ... yet."""
 level = 15
+hitroll = 2
+ac = [50, 40, 50, 60]
+damage_type = "pierce"
+off_flags = ["bash", "berserk", "dodge", "fast", "trip"]
+imm_flags = ["poison"]
+vuln_flags = ["light"]
+size = "huge"
+race = "wyvern"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "flying"]
@@ -31,6 +39,14 @@ long_desc = "A mountain goblin is wandering about, mumbling to himself."
 description = """
 You see before you a small and twisted creature with knotted muscles."""
 level = 12
+hitroll = 1
+ac = [40, 60, 40, 90]
+damage_type = "bash"
+off_flags = ["parry"]
+res_flags = ["mental"]
+vuln_flags = ["holy", "light", "silver"]
+size = "small"
+race = "goblin"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
@@ -55,6 +71,13 @@ description = """
 The poor boy has numerous cuts and scratches, but appears to be all right.
 He is apparently the only survivor of the ambush."""
 level = 8
+hitroll = 0
+ac = [80, 80, 80, 100]
+damage_type = "bash"
+off_flags = ["kick"]
+vuln_flags = ["magic"]
+size = "small"
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0
@@ -79,6 +102,13 @@ The Innkeeper now spends most of his days waiting for customers, while the
 nights are spent watching out for goblins.  His inn is no longer the happy
 place that is used to be in days past."""
 level = 19
+hitroll = 1
+ac = [20, 20, 20, 80]
+damage_type = "bash"
+off_flags = ["backstab", "dodge", "parry"]
+imm_flags = ["summon", "charm"]
+res_flags = ["magic", "weapon"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -102,6 +132,11 @@ description = """
 You can smell the alcohol on his breath from across the room.  This poor bard
 has been sitting here quite a while, drinking himself into oblivion."""
 level = 15
+hitroll = 3
+ac = [30, 50, 30, 60]
+damage_type = "bash"
+off_flags = ["dodge", "kick", "kick_dirt", "parry", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "thief", "warrior"]
 affected_by = ["detect_invis"]
@@ -126,6 +161,11 @@ description = """
 The man is obviously an outlaw, and has no qualms about slashing you into
 little bits."""
 level = 16
+hitroll = 2
+ac = [50, 30, 30, 60]
+damage_type = "bash"
+off_flags = ["backstab", "dodge", "kick_dirt", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["sneak"]
@@ -150,6 +190,13 @@ description = """
 The goblin lieutenant is rather angry, and looking for one of his men to
 beat up upon, but maybe you will do just fine ..."""
 level = 13
+hitroll = 1
+ac = [30, 50, 30, 80]
+damage_type = "bash"
+off_flags = ["berserk", "parry", "trip"]
+res_flags = ["mental"]
+vuln_flags = ["holy", "light", "silver"]
+race = "goblin"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
@@ -174,6 +221,13 @@ description = """
 The leader doesn't look too happy that you have found him here.  He grabs
 for his shortsword and lunges for your neck."""
 level = 18
+hitroll = 2
+ac = [10, 30, 10, 60]
+damage_type = "bash"
+off_flags = ["berserk", "kick_dirt", "parry", "trip"]
+res_flags = ["mental"]
+vuln_flags = ["holy", "light", "silver"]
+race = "goblin"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]

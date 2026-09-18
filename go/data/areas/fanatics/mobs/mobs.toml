@@ -7,6 +7,15 @@ description = """
 Hiryuu is a beautiful silvery Dragon.  This one is
 quite loyal to her master, the great Platinum Dragon."""
 level = 102
+hitroll = 999
+ac = [-9990, -9990, -9990, -9990]
+damage_type = "slash"
+off_flags = ["area_attack", "berserk", "fade", "fast", "rescue", "tail"]
+imm_flags = ["charm", "bash", "fire", "acid", "poison", "disease", "drowning"]
+res_flags = ["charm", "magic", "bash", "slash", "fire", "cold", "negative", "holy", "energy", "mental", "light"]
+vuln_flags = ["weapon", "pierce", "cold", "lightning", "silver"]
+size = "giant"
+race = "dragon"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "train", "practice", "cleric", "mage", "warrior", "no_purge"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "pass_door", "dark_vision"]
@@ -34,6 +43,15 @@ stares at you and snickers that you would come this far with so little help.  He
 is obviously the cause for all the strange weather lately, but why was there only
 fire and ice, yet no real lightning?"""
 level = 110
+hitroll = 999
+ac = [-500, -500, -500, -500]
+damage_type = "slash"
+off_flags = ["area_attack", "berserk", "fade", "tail", "crush"]
+imm_flags = ["summon", "charm", "bash", "fire", "cold", "poison", "disease"]
+res_flags = ["magic", "weapon", "slash", "fire", "cold", "acid", "energy", "mental"]
+vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
+size = "giant"
+race = "draconian"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage", "warrior", "no_purge"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "sneak", "hide", "flying", "dark_vision"]
@@ -60,6 +78,14 @@ This is the weakest of the magical beings of the Fanatics' Tower.  It has
 devoted its life to the 11th {8Draconian {4ArchMage{0.  Its robes are inlaid
 with beautiful designs."""
 level = 82
+hitroll = 125
+ac = [-200, -200, -200, -200]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -86,6 +112,14 @@ This is the second weakest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 10th {8Draconian {4ArchMage{0.  Its robes
 are inlaid with beautiful designs."""
 level = 88
+hitroll = 150
+ac = [-210, -210, -210, -210]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -112,6 +146,14 @@ This is an ugly mage, one of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 9th {8Draconian {4ArchMage{0.  Its robes
 are inlaid with beautiful designs."""
 level = 92
+hitroll = 175
+ac = [-220, -220, -220, -220]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -138,6 +180,14 @@ This is a great mage, one of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 8th {8Draconian {4ArchMage{0.  Its robes
 are inlaid with beautiful designs."""
 level = 98
+hitroll = 200
+ac = [-230, -230, -230, -230]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -164,6 +214,14 @@ This is one of the happiest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 7th {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 102
+hitroll = 225
+ac = [-250, -250, -250, -250]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -190,6 +248,14 @@ This is one of the magical beings of the Fanatics' Tower.  It has devoted
 its life to the 6th {8Draconian {4ArchMage{0.  Its robes are inlaid with
 beautiful designs."""
 level = 106
+hitroll = 250
+ac = [-300, -300, -300, -300]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -216,6 +282,14 @@ This is an evil being from the magical beings of the Fanatics' Tower.  It has
 devoted its life to the 5th {8Draconian {4ArchMage{0.  Its robes are inlaid
 with beautiful designs."""
 level = 110
+hitroll = 275
+ac = [-320, -320, -320, -320]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -242,6 +316,14 @@ This is a strong mage from the Fanatics' Tower.  It has devoted its life
 to the 4th {8Draconian {4ArchMage{0.  Its robes are inlaid with beautiful
 designs."""
 level = 114
+hitroll = 300
+ac = [-350, -350, -350, -350]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -268,6 +350,14 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 3rd {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 118
+hitroll = 325
+ac = [-370, -370, -370, -370]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -294,6 +384,14 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 2nd {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 122
+hitroll = 325
+ac = [-400, -400, -400, -400]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -320,6 +418,14 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 126
+hitroll = 350
+ac = [-420, -420, -420, -420]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying", "haste"]
@@ -346,6 +452,14 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 132
+hitroll = 375
+ac = [-450, -450, -450, -450]
+damage_type = "energy"
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+imm_flags = ["weapon", "bash", "pierce"]
+res_flags = ["charm", "fire", "cold", "acid"]
+vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -372,6 +486,14 @@ This is the weakest of the war-like beings of the Fanatics' Tower.  It has
 devoted its life to the 11th {8Draconian {4ArchMage{0.  Its armour has been
 etched with some beautiful designs."""
 level = 82
+hitroll = 125
+ac = [-200, -200, -200, -200]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -398,6 +520,14 @@ This is the second weakest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 10th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 88
+hitroll = 150
+ac = [-210, -210, -210, -210]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -424,6 +554,14 @@ This is an ugly mob, one of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 9th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 92
+hitroll = 175
+ac = [-220, -220, -220, -220]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -450,6 +588,14 @@ This is a great warrior, one of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 8th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 98
+hitroll = 200
+ac = [-210, -210, -210, -210]
+damage_type = "slash"
+off_flags = ["berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -476,6 +622,14 @@ This is one of the happiest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 7th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 102
+hitroll = 225
+ac = [-250, -250, -250, -250]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -502,6 +656,14 @@ This is one of the war-like beings of the Fanatics' Tower.  It has devoted
 its life to the 6th {8Draconian {4ArchMage{0.  Its armour has been etched
 with some beautiful designs."""
 level = 106
+hitroll = 250
+ac = [-300, -300, -300, -300]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -528,6 +690,14 @@ This is an evil being from the war-like beings of the Fanatics' Tower.  It has
 devoted its life to the 5th {8Draconian {4ArchMage{0.  Its armour has been
 etched with some beautiful designs."""
 level = 110
+hitroll = 275
+ac = [-320, -320, -320, -320]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -554,6 +724,14 @@ This is a strong warrior from the Fanatics' Tower.  It has devoted its life
 to the 4th {8Draconian {4ArchMage{0.  Its armour has been etched with some
 beautiful designs."""
 level = 114
+hitroll = 300
+ac = [-350, -350, -350, -350]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -580,6 +758,14 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 3rd {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 118
+hitroll = 325
+ac = [-370, -370, -370, -370]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -606,6 +792,14 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 2nd {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 122
+hitroll = 350
+ac = [-400, -400, -400, -400]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["magic", "weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared"]
@@ -632,6 +826,14 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 126
+hitroll = 375
+ac = [-420, -420, -420, -420]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["magic", "weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared", "haste"]
@@ -658,6 +860,14 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 132
+hitroll = 400
+ac = [-450, -450, -450, -450]
+damage_type = "slash"
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+imm_flags = ["magic", "poison", "disease"]
+res_flags = ["charm", "bash", "fire", "cold"]
+vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared", "haste"]
@@ -683,6 +893,13 @@ description = """
 The Adept of Eriana tells you "{6asking for restores is the best way {1*not*{6
 to get one!  }:>{0""""
 level = 110
+hitroll = 999
+ac = [-9990, -9990, -9990, -9990]
+damage_type = "bash"
+off_flags = ["area_attack", "fade", "fast", "crush"]
+imm_flags = ["summon", "charm", "magic", "weapon", "bash", "pierce", "slash", "fire", "cold", "lightning", "acid", "poison", "negative", "holy", "energy", "mental", "disease", "drowning", "light"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "train", "practice", "cleric", "mage", "warrior", "no_purge"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "pass_door", "dark_vision"]
@@ -708,6 +925,15 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated by Artema..."""
 level = 90
+hitroll = 150
+ac = [-300, -300, -300, -300]
+damage_type = "slash"
+off_flags = ["area_attack", "backstab", "berserk", "fade", "tail"]
+imm_flags = ["summon", "charm", "bash", "poison", "disease"]
+res_flags = ["fire", "cold", "acid"]
+vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
+size = "giant"
+race = "draconian"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "dark_vision"]
@@ -733,6 +959,15 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated so long ago..."""
 level = 95
+hitroll = 200
+ac = [-220, -220, -220, -220]
+damage_type = "slash"
+off_flags = ["area_attack", "berserk", "fade", "tail"]
+imm_flags = ["summon", "charm", "bash", "poison", "disease"]
+res_flags = ["fire", "cold", "acid"]
+vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
+size = "giant"
+race = "draconian"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision"]
@@ -758,6 +993,15 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated so long ago..."""
 level = 105
+hitroll = 250
+ac = [-500, -500, -500, -500]
+damage_type = "slash"
+off_flags = ["area_attack", "berserk", "fade", "tail"]
+imm_flags = ["summon", "charm", "bash", "poison", "disease"]
+res_flags = ["fire", "cold", "acid"]
+vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
+size = "giant"
+race = "draconian"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision"]
@@ -783,6 +1027,15 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated so long ago..."""
 level = 115
+hitroll = 300
+ac = [-300, -300, -300, -300]
+damage_type = "slash"
+off_flags = ["area_attack", "berserk", "fade", "tail"]
+imm_flags = ["summon", "charm", "bash", "poison", "disease"]
+res_flags = ["fire", "cold", "acid"]
+vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
+size = "giant"
+race = "draconian"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision"]
@@ -807,6 +1060,14 @@ long_desc = "A thief is here, determined to kill you dead!"
 description = """
 This is the weakest of the thieving beings of the Fanatics' Tower.  It has devoted its life to the 11th {bDraconian {DArchMage{x.  Its coat is inlaid with strange designs."""
 level = 82
+hitroll = 125
+ac = [-200, -200, -200, -200]
+damage_type = "pierce"
+off_flags = ["backstab"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -830,6 +1091,14 @@ long_desc = "A fanatical thief is here, ready to stab your heart!"
 description = """
 This is the second weakest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 10th Draconian ArchMage.  It's cloak has been enlaid with beautiful designs."""
 level = 88
+hitroll = 150
+ac = [-210, -210, -210, -210]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -854,6 +1123,14 @@ long_desc = "An ugly thief is here, ready to stab your heart!"
 description = """
 This is an ugly mob, one of the thieving beings of the Fanatics' Tower. It has devoted its life to the 9th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 92
+hitroll = 175
+ac = [-220, -220, -220, -220]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+imm_flags = ["bash", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -878,6 +1155,14 @@ long_desc = "A great thief is here, ready to stab your heart!"
 description = """
 This is a great thief, one of the thieving beings of the Fanatics' Tower. It has devoted its life to the 8th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 98
+hitroll = 200
+ac = [-220, -220, -220, -220]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -902,6 +1187,14 @@ long_desc = "A grinning thief is here, ready to stab your heart!"
 description = """
 This is one of the happiest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 7th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 102
+hitroll = 225
+ac = [-250, -250, -250, -250]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -926,6 +1219,14 @@ long_desc = "A thief is here, ready to stab your heart!"
 description = """
 This is one of the thieving beings of the Fanatics' Tower.  It has devoted its life to the 6th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 106
+hitroll = 250
+ac = [-300, -300, -300, -300]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -950,6 +1251,14 @@ long_desc = "An evil thief is here, ready to stab your heart!"
 description = """
 This is an evil being from the thieving beings of the Fanatics' Tower.  It has devoted its life to the 5th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 110
+hitroll = 275
+ac = [-320, -320, -320, -320]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -974,6 +1283,14 @@ long_desc = "A strong thief is here, ready to stab your heart!"
 description = """
 This is a strong thief from the Fanatics' Tower.  It has devoted its life to the 4th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 114
+hitroll = 300
+ac = [-350, -350, -350, -350]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -998,6 +1315,14 @@ long_desc = "A powerful thief is here, ready to stab your heart!"
 description = """
 This is one of the strongest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 3rd Draconian ArchMage.  Its armour has been inlaid with some beautiful designs."""
 level = 118
+hitroll = 325
+ac = [-370, -370, -370, -370]
+damage_type = "pierce"
+off_flags = ["backstab", "berserk", "disarm", "dodge", "kick", "parry", "trip"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1022,6 +1347,14 @@ long_desc = "A powerful thief is here, ready to stab your heart!"
 description = """
 This is one of the strongest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 2nd Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 122
+hitroll = 350
+ac = [-400, -400, -400, -400]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1046,6 +1379,14 @@ long_desc = "A very powerful thief is here, ready to stab your heart!"
 description = """
 This is one of the strongest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 1st Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 126
+hitroll = 375
+ac = [-420, -420, -420, -420]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
@@ -1070,6 +1411,14 @@ long_desc = "One of the strongest thieves is here, ready to stab your heart!"
 description = """
 This is one of the strongest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 1st Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 132
+hitroll = 400
+ac = [-450, -450, -450, -450]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+imm_flags = ["bash", "poison", "disease"]
+res_flags = ["charm", "pierce", "fire", "cold"]
+vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]

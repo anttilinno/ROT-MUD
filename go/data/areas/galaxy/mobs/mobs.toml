@@ -5,6 +5,10 @@ short_desc = "a poor mudder"
 long_desc = "A poor mudder, lost in this place."
 description = "You will become him if you are not careful."
 level = 8
+hitroll = 0
+ac = [70, 70, 70, 90]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -28,6 +32,10 @@ short_desc = "a beautiful star"
 long_desc = "A beautiful white star smiles at you."
 description = "You can't tell what the star looks like, she is too bright!"
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
 alignment = 0
@@ -49,6 +57,10 @@ short_desc = "a young nebula"
 long_desc = "A young nebula, waiting to become a star."
 description = "It hasn't got a definite shape, it is just a cloud of mist."
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -71,6 +83,10 @@ long_desc = "A speedy comet is waiting to crush your head in."
 description = """
 You see the offspring of Halley's comet, here just to wipe everything out."""
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -94,6 +110,10 @@ description = """
 You notice the giant is not as tough as his name sounds ...
 Still he can be very powerful."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy"]
 alignment = 0
@@ -117,6 +137,10 @@ description = """
 Like the red giant, he is also appointed to stand guard for the galaxy.
 But somehow he manages to escape.  Though tiny, it can take a lot of hits!"""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -140,6 +164,10 @@ description = """
 You can only make out its shape from the darkness.  He was cursed to stay in
 here and his face may never be seen by anyone again."""
 level = 35
+hitroll = 0
+ac = [-30, -30, -30, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["sneak", "hide"]
@@ -164,8 +192,12 @@ description = """
 She was once a princess of beauty.  However, her beauty has led to a Goddess's
 jealousy and she has to suffer here endlessly until Perseus comes."""
 level = 35
+hitroll = 0
+ac = [-30, -30, -30, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
-act_flags = ["npc", "sentinel", "stay_area"]
+act_flags = ["npc", "sentinel", "stay_area", "ranger"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -188,6 +220,10 @@ He has been put to do the Ten Labours -- ten impossible tasks, by Hera, the
 queen goddess, who disliked him.  But he finished them all and at the end was
 granted immortality. He is a very brave and strong fighter."""
 level = 38
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 alignment = 0
@@ -209,6 +245,10 @@ short_desc = "the wild Pegasus"
 long_desc = "The wild pegasus is grazing peacefully."
 description = "It is the legendary horse with wings on its back."
 level = 34
+hitroll = 0
+ac = [-30, -30, -30, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy"]
 alignment = 0
@@ -234,6 +274,10 @@ killed by Scorpio.  The gods put them both up as constellations but one
 appears on one side of the sky and the other the other side so they will
 never meet."""
 level = 37
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 alignment = 0
@@ -257,6 +301,10 @@ description = """
 These are the seven sisters of the Myths, and as for why they are here, no
 one knows; even the Gods themselves have forgotten."""
 level = 21
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
 alignment = 0
@@ -281,6 +329,10 @@ This evil-looking head is even larger than a giant.  He is the last guardian
 before entering the inner galaxy.  His neck is flexing in a random fashion so 
 hitting the head is certainly not easy."""
 level = 49
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
@@ -307,6 +359,10 @@ You see a tiny creature which looks like a dragon except that its body
 resembles a snake.  Gosh, is this a draco, you wonder, is this the thing
 we are on now?"""
 level = 17
+hitroll = 0
+ac = [20, 20, 20, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 alignment = 0
@@ -331,6 +387,10 @@ description = """
 You see a white goat here, the first guardian of the Zodiac,
 also the ruler of Spring. He looks as if he is expecting you."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -355,6 +415,10 @@ description = """
 You see a wild-looking bull with a bad temper.  He is well-built and looks like 
 he can fight well ... indeed he has fought with Orion before and survived."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis"]
@@ -380,6 +444,10 @@ description = """
 As soon as you see him you know that he is the most perfect man you have seen.
 You can't find any imperfections on him."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -404,6 +472,10 @@ description = """
 As soon as you see him you see the most imperfect man you have ever seen.
 How can there be such a contrast?  You wonder ..."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 60]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "cleric"]
 affected_by = ["detect_invis", "pass_door"]
@@ -430,6 +502,10 @@ You see a gigantic crab (YES, it is bigger than you!) with a crushed shell.
 Legend is that he was crushed by Hercules when he was sent by Hera to kill him.
 So Hera made Cancer a constellation for his work."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -455,6 +531,10 @@ His metallic skin means that he could be the one which was killed by Hercules
 during his first Labour.  His skin is so weapon-proof that Hercules had to use
 his bare hands to tear the lion into two from its mouth!"""
 level = 43
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis"]
@@ -481,6 +561,10 @@ From what you have seen, you now realize that legends are legends, and Virgo
 may not be the maid of chastity and purity at all!  But still she looks
 gorgeous and is waiting for your first move, whatever it is ..."""
 level = 43
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -505,6 +589,10 @@ description = """
 He is a wise old man and can see people's thoughts through their eyes....
 Now all he can see from you is greed and bloodshed."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -529,6 +617,10 @@ description = """
 Ever since he killed Orion in the myths, he has been punished by having 
 Sagittarius' arrow aimed at his heart forever."""
 level = 43
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis"]
@@ -553,6 +645,10 @@ long_desc = "Sagittarius the centaur is waiting to let go of his well aimed arro
 description = """
 He is a centaur and a well trained archer. No one can escape his arrows."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -578,6 +674,10 @@ You see a mean-looking ram here.  He used to be a fierce fighter in the ancient
 war but now the gods have decided to put him here, to live out the rest of his 
 days in peace."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -602,6 +702,10 @@ description = """
 The pretty Water Bearer is smiling at you, you think you'd better give her a 
 hand with holding the vessel."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -626,6 +730,10 @@ description = """
 She has been forced to serve her husband, who had been cursed to turn into a
 fish and she deserves your pity."""
 level = 43
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 alignment = 0
@@ -650,6 +758,10 @@ description = """
 He was once a very handsome man but now has turned into an ugly big fish.
 So he becomes jealous of any living thing which is more handsome than him."""
 level = 43
+hitroll = 0
+ac = [-50, -50, -50, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 alignment = 0
@@ -674,6 +786,11 @@ description = """
 The Huge Bear which resides in the northern skies is here. 
 You think you'd better turn back.  At least you have got a chance of survival."""
 level = 53
+hitroll = 0
+ac = [-80, -80, -80, 40]
+off_flags = ["berserk", "disarm", "kick", "parry", "crush"]
+res_flags = ["bash", "cold"]
+race = "bear"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis"]
@@ -698,6 +815,10 @@ long_desc = "Cassiopeia, the queen of the Universe, is sitting on her throne."
 description = """
 She is the Queen of Dignity; facing her you feel all your dignity has gone."""
 level = 51
+hitroll = 0
+ac = [-70, -70, -70, 20]
+off_flags = ["dodge"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis"]
@@ -723,6 +844,10 @@ description = """
 He is the King of Might as well as of the Universe. You suddenly feel very
 weak and useless in front of him."""
 level = 52
+hitroll = 0
+ac = [-70, -70, -70, 20]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 alignment = 0
@@ -749,6 +874,10 @@ Even the King and the Queen obey him.  As you look at him you notice he is
 actually a STAR, with dazzling bright light ... maybe you shouldn't have come
 here at all?"""
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_invis"]

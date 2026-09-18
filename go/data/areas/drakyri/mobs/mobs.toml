@@ -12,6 +12,12 @@ her forehead:
 
                              {B((+*+)){x"""
 level = 103
+hitroll = 0
+ac = [-330, -340, -350, -340]
+damage_type = "energy"
+off_flags = ["disarm", "dodge", "fade"]
+res_flags = ["charm", "lightning", "acid"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -39,6 +45,13 @@ with the pale skin.  Intelligent silver eyes regard you warily.  A
 mark on the hem of his clothing indicates his rank as consort to the head
 of major house Deriki, Lechandre."""
 level = 103
+hitroll = 0
+ac = [-320, -340, -320, -330]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+res_flags = ["charm", "lightning"]
+vuln_flags = ["pierce"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -66,6 +79,13 @@ flowing in waves over delicate iridescent wings.  The lady, engrossed in
 her experiment, does not seem to notice you.  She wears the insignia of
 she'vale Deriki and the mark of the first in command."""
 level = 99
+hitroll = 0
+ac = [-180, -180, -190, -190]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+res_flags = ["charm", "cold"]
+vuln_flags = ["fire"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -92,6 +112,13 @@ The second in command of house Deriki, Roweni wields formidable power.
 She bears the fine boned features of an elf and the iridescent wings
 of the fae.  Pale green eyes watch you measuringly."""
 level = 95
+hitroll = 0
+ac = [-230, -240, -240, -250]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+res_flags = ["charm", "cold"]
+vuln_flags = ["fire"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -118,6 +145,12 @@ A ponytail of silvery hair hangs over the man's shoulder as he bends over
 a stack of parchment.  He bears the mark of the treye, third in command,
 of she'vale Deriki."""
 level = 92
+hitroll = 0
+ac = [-230, -240, -200, -220]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+res_flags = ["charm", "acid"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -146,6 +179,13 @@ a serious silver gaze.  A silvery blue dot shimmers between her eyebrows,
 marking her as the heir to Deriki.  When she comes into full power, the
 dot will be replaced by the house crest."""
 level = 97
+hitroll = 0
+ac = [-260, -250, -270, -270]
+damage_type = "energy"
+off_flags = ["dodge", "fade", "kick"]
+res_flags = ["charm"]
+vuln_flags = ["lightning"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -172,6 +212,12 @@ The girl's silver eyes sparkle with laughter as she watches you watching
 her.  A narrow mark along one cheekbone denotes her as one of the
 younger siblings (ira'deia) of the heir."""
 level = 93
+hitroll = 0
+ac = [-240, -230, -230, -230]
+damage_type = "pierce"
+off_flags = ["dodge", "fade", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "flying", "haste"]
@@ -198,6 +244,12 @@ The intelligent silver eyes are narrowed in concentration as he practices,
 seemingly oblivious to your presence.  A blue mark along his cheekbone
 indicates that he is a younger sibling of the Deriki heir."""
 level = 94
+hitroll = 0
+ac = [-250, -240, -230, -240]
+damage_type = "slash"
+off_flags = ["dodge", "fade", "fast", "trip"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -225,6 +277,13 @@ Noticing your intrusion, the youth glances up, flipping back short
 golden locks to examine you with curious grey-silver eyes.  He
 bears the mark of an ira'deian, or younger child, along one cheekbone."""
 level = 93
+hitroll = 0
+ac = [-250, -250, -260, -240]
+damage_type = "bash"
+off_flags = ["dodge", "fade", "kick_dirt"]
+res_flags = ["charm", "lightning"]
+vuln_flags = ["acid"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "haste"]
@@ -248,6 +307,14 @@ short_desc = "Zeion"
 long_desc = "A snow owl the color of blue ice cocks its head at you."
 description = "Huge dark eyes examine you curiously."
 level = 100
+hitroll = 0
+ac = [-300, -290, -300, -280]
+damage_type = "bash"
+off_flags = ["bash", "berserk", "disarm", "dodge", "fade"]
+res_flags = ["cold", "lightning"]
+vuln_flags = ["fire"]
+size = "large"
+race = "unique"
 sex = "either"
 act_flags = ["npc", "scavenger"]
 affected_by = ["flying", "dark_vision"]
@@ -271,6 +338,12 @@ long_desc = "An assistant rushes around setting up an experiment."
 description = """
 He seems a little harried and glares at you for getting in the way."""
 level = 91
+hitroll = 0
+ac = [-200, -200, -220, -210]
+damage_type = "bash"
+off_flags = ["berserk", "dodge", "fade"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -299,6 +372,12 @@ ear!  Ack!  The mage glares at your interruption and mumbles something
 about idiots and fried brains.  An odor of singed hair wafts from
 your left ear."""
 level = 90
+hitroll = 0
+ac = [-190, -200, -200, -180]
+damage_type = "pierce"
+off_flags = ["dodge", "fade"]
+res_flags = ["charm"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -325,6 +404,13 @@ A transparent form hovers here, writhing and moaning.  It seems
 to be trapped in one place by some kind of magic which apparently
 holds despite the form's continuous lashing."""
 level = 97
+hitroll = 0
+ac = [-300, -330, -320, -300]
+damage_type = "energy"
+off_flags = ["berserk", "dodge", "fade"]
+res_flags = ["weapon"]
+vuln_flags = ["negative", "holy", "energy"]
+race = "unique"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["faerie_fire", "flying", "pass_door", "dark_vision"]
@@ -350,6 +436,13 @@ description = """
 It seems to be made of semi-transparent substance shaped in the form
 of a magical glyph, created to guard the house against outside threats."""
 level = 100
+hitroll = 0
+ac = [-300, -300, -300, -280]
+damage_type = "energy"
+off_flags = ["berserk", "disarm", "dodge", "fade"]
+res_flags = ["pierce", "negative", "holy"]
+vuln_flags = ["lightning", "energy", "mental"]
+race = "unique"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "hide", "flying", "pass_door", "dark_vision"]
@@ -378,6 +471,13 @@ A golden symbol shimmers between his brows:
 
                           {Y((-*-)){x"""
 level = 100
+hitroll = 0
+ac = [-300, -280, -280, -260]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry"]
+imm_flags = ["holy"]
+res_flags = ["charm", "silver"]
+vuln_flags = ["negative"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["detect_evil", "infrared"]
@@ -403,6 +503,12 @@ Shining gold hair catches the light, surrounding the lady with a faint
 golden halo.  Bright blue eyes gaze back at you serenely.  You sense
 an aura of great power behind the gentle smile."""
 level = 99
+hitroll = 0
+ac = [-290, -260, -280, -250]
+off_flags = ["berserk", "disarm", "dodge"]
+res_flags = ["charm", "holy"]
+vuln_flags = ["negative"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 affected_by = ["detect_evil", "infrared", "flying"]
@@ -429,6 +535,13 @@ Powerful golden eyes catch and hold your gaze for a moment, and
 one eyebrow raises in question.  He bears the mark of a sh'ayan
 on his collar."""
 level = 95
+hitroll = 0
+ac = [-260, -270, -260, -210]
+damage_type = "energy"
+off_flags = ["bash", "berserk", "disarm", "dodge", "parry"]
+res_flags = ["charm", "holy"]
+vuln_flags = ["negative"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_evil", "infrared", "flying"]
@@ -455,6 +568,13 @@ Despite the white strands, the pale face betrays a youthful power,
 and her stance betrays an aura of authority.  She bears the mark of
 the Treniste sequas, the second in command."""
 level = 93
+hitroll = 0
+ac = [-240, -230, -240, -200]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "kick", "parry"]
+res_flags = ["charm", "cold", "holy"]
+vuln_flags = ["fire", "negative"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_evil", "infrared", "flying"]
@@ -480,6 +600,12 @@ Gold flecked blue eyes watch you measuringly from a handsome elvish
 face.  On his collar is the mark of the treye, third in command,
 of house Treniste."""
 level = 90
+hitroll = 0
+ac = [-180, -180, -190, -190]
+off_flags = ["disarm", "dodge", "kick"]
+res_flags = ["charm", "holy"]
+vuln_flags = ["negative"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_evil", "infrared", "flying"]
@@ -507,6 +633,13 @@ Though slight, honed muscles betray continuous weapons training and
 a catlike speed.  A golden dot on her forehead marks this girl as
 the Treniste na'deia, or heir."""
 level = 96
+hitroll = 1
+ac = [-270, -260, -250, -240]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "fast", "kick", "parry"]
+res_flags = ["charm", "lightning", "holy"]
+vuln_flags = ["cold", "negative"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_evil", "infrared", "flying"]
@@ -532,6 +665,13 @@ He seems focused on a huge blue bound tome.  A glance at the lettering
 along the spine indicates that it has something to do with magic.
 Along one cheekbone, you notice the tiny mark of a Treniste ira'deian."""
 level = 91
+hitroll = 0
+ac = [-210, -200, -200, -180]
+damage_type = "lightning"
+off_flags = ["dodge", "fade"]
+res_flags = ["charm", "fire", "holy"]
+vuln_flags = ["cold", "negative"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden", "infrared", "flying"]
@@ -559,6 +699,13 @@ maneuvers with a speed and agility that make it seem like a dance.
 Noticing your scrutiny, she pauses, and you notice the mark of
 an ira'deia along one cheekbone."""
 level = 92
+hitroll = 0
+ac = [-230, -210, -200, -200]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "fast", "kick", "parry"]
+res_flags = ["charm", "holy"]
+vuln_flags = ["negative"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_evil", "infrared", "flying"]
@@ -583,6 +730,13 @@ description = """
 The paladin seems to follow your every move, as if measuring your
 worth."""
 level = 95
+hitroll = 0
+ac = [-260, -220, -230, -230]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "dodge", "kick", "parry"]
+res_flags = ["charm", "holy"]
+vuln_flags = ["negative"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["detect_evil", "infrared", "flying"]
@@ -612,6 +766,13 @@ of house Reykaris:
 
                         {D->*<-{x"""
 level = 100
+hitroll = 0
+ac = [-300, -300, -300, -300]
+off_flags = ["disarm", "dodge", "fade"]
+imm_flags = ["negative"]
+res_flags = ["charm", "fire"]
+vuln_flags = ["cold", "holy"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "detect_good", "infrared", "flying"]
@@ -638,6 +799,13 @@ Slitted eyes like slashes of darkness gaze back at you.  You sense
 an aura of complete evil and corruption radiating from this man..
 He bears the mark of the deiayan (consort) of she'vale Reykaris."""
 level = 99
+hitroll = 0
+ac = [-280, -280, -290, -270]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "dodge", "parry"]
+res_flags = ["charm", "negative"]
+vuln_flags = ["holy"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_good", "infrared", "flying"]
@@ -664,6 +832,13 @@ Despite her beauty, you sense something evil and deadly behind the
 blue eyes and pale golden hair.  The mark of the Reykaris sh'aya
 is emblazoned along her collar."""
 level = 96
+hitroll = 0
+ac = [-250, -260, -260, -240]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "parry"]
+res_flags = ["charm", "negative"]
+vuln_flags = ["holy"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_good", "infrared", "flying"]
@@ -688,6 +863,13 @@ description = """
 Dark slitted eyes seem to follow your every move.  You notice the
 mark of the Reykaris sequas on her collar."""
 level = 93
+hitroll = 0
+ac = [-240, -220, -230, -210]
+damage_type = "slash"
+off_flags = ["dodge", "kick", "parry"]
+res_flags = ["charm", "negative"]
+vuln_flags = ["holy"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_good", "infrared", "flying"]
@@ -713,6 +895,13 @@ He notices you watching him and smiles nastily, sending a shiver
 of warning down your spine.  Along the collar is the mark of the
 Reykaris treye, the third in command."""
 level = 91
+hitroll = 0
+ac = [-200, -200, -200, -200]
+damage_type = "bash"
+off_flags = ["dodge", "kick"]
+res_flags = ["charm", "cold", "negative"]
+vuln_flags = ["holy", "energy"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_good", "infrared", "flying"]
@@ -739,6 +928,13 @@ Jet black hair frames a handsome elfish face.  Dark slitted eyes
 glare at you angrily.  Between his eyebrows shimmers the black dot
 of the heir to Reykaris."""
 level = 95
+hitroll = 0
+ac = [-260, -260, -250, -250]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "fade"]
+res_flags = ["charm", "fire", "negative"]
+vuln_flags = ["cold", "holy", "mental"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "detect_good", "infrared", "flying"]
@@ -767,6 +963,12 @@ a skull at you, bearly missing your shoulder.  The dark eyes flash
 mischieviously.  You notice a dark mark along one cheekbone indicating
 her status as an ira'deia, younger child, of house Reykaris."""
 level = 91
+hitroll = 0
+ac = [-200, -210, -200, -200]
+damage_type = "bash"
+off_flags = ["dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger"]
 affected_by = ["detect_good", "infrared", "sneak", "flying", "haste"]
@@ -793,6 +995,13 @@ a bitter not-smile.  One hand draws back, and the light glints off
 a silvery throwing dagger balanced in her palm.  Along one cheekbone
 is the mark of an ira'deia of house Reykaris."""
 level = 90
+hitroll = 0
+ac = [-230, -230, -240, -180]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "parry"]
+res_flags = ["charm", "negative"]
+vuln_flags = ["holy"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "thief"]
 affected_by = ["detect_hidden", "detect_good", "infrared", "sneak", "hide", "flying", "haste"]
@@ -817,6 +1026,13 @@ description = """
 Short, jet black hair frames a narrow face with high cheekbones and dark
 slitted eyes.  The mark of an ira'deian glimmers along one cheekbone."""
 level = 92
+hitroll = 0
+ac = [-220, -210, -220, -200]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "parry"]
+res_flags = ["charm", "negative"]
+vuln_flags = ["holy"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_good", "infrared", "flying"]
@@ -839,6 +1055,14 @@ short_desc = "the hellish guardian"
 long_desc = "A hellish guardian stalks here, looking for prey."
 description = "A rabid reddish light flickers behind narrow green cat eyes."
 level = 89
+hitroll = 0
+ac = [-180, -170, -170, -150]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "kick_dirt", "parry"]
+res_flags = ["fire", "negative"]
+vuln_flags = ["cold", "holy"]
+size = "large"
+race = "pig"
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_good"]
@@ -865,6 +1089,13 @@ four long muscular legs ending in wicked claws stands here, straining
 against the magic which holds it.  The red eyes glint, and
 the long muzzle opens to emit a furious, ear-piercing screech!"""
 level = 92
+hitroll = 0
+ac = [-200, -210, -220, -200]
+damage_type = "pierce"
+off_flags = ["berserk", "disarm", "dodge", "kick"]
+res_flags = ["acid"]
+vuln_flags = ["mental"]
+race = "pig"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -889,6 +1120,14 @@ Barely visible in the darkness, you notice a disfigured shape behind
 the eyes.  Twisted lips part to reveal cruel white canines.  The
 figure emits a threatening snarl.."""
 level = 91
+hitroll = 0
+ac = [-200, -200, -210, -200]
+damage_type = "slash"
+off_flags = ["berserk", "disarm", "dodge", "kick_dirt"]
+res_flags = ["weapon", "negative"]
+vuln_flags = ["magic", "holy"]
+size = "large"
+race = "pig"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_good", "hide", "flying"]
@@ -917,6 +1156,13 @@ spell.  As you continue your scrutiny, thin lips draw back in a
 blood-freezing snarl, and a trail of very real blood drips from
 the gleaming white fangs!"""
 level = 90
+hitroll = 0
+ac = [-200, -220, -210, -200]
+damage_type = "slash"
+off_flags = ["dodge", "fade"]
+res_flags = ["negative"]
+vuln_flags = ["holy"]
+race = "human"
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_good", "dark_vision"]
@@ -943,6 +1189,12 @@ Thick black tentacles the width of your head twine and writh
 menacingly.  The tentacles part momentarily, and you notice a
 round, fanged mouth at the center, dripping blood."""
 level = 91
+hitroll = 0
+ac = [-210, -200, -210, -200]
+damage_type = "slash"
+off_flags = ["berserk", "disarm", "parry"]
+size = "huge"
+race = "unique"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["haste", "dark_vision"]
@@ -966,6 +1218,14 @@ long_desc = "A hulking figure snarls viciously."
 description = """
 You catch a glimpse of hellish red eyes and wickedly sharp black talons."""
 level = 105
+hitroll = 0
+ac = [-350, -350, -340, -340]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "fade"]
+res_flags = ["negative", "disease"]
+vuln_flags = ["holy", "light", "silver"]
+size = "large"
+race = "unique"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_magic", "dark_vision"]
@@ -993,6 +1253,12 @@ silver eyes gleam from a dark, narrow face like twin daggers.
 
                         {W-=+)>{x"""
 level = 83
+hitroll = 1
+ac = [-160, -170, -160, -140]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "aggressive", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "haste", "dark_vision"]
@@ -1018,6 +1284,12 @@ The slender form of a drakyri is nearly invisible in the shadows.
 His wary stance betrays a dangerous catlike grace.  You notice
 that he bears the mark of a deiayan of house Myrxes."""
 level = 83
+hitroll = 1
+ac = [-160, -160, -150, -120]
+damage_type = "slash"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying"]
@@ -1043,6 +1315,12 @@ Lean honed muscles balance with the grace of a cat.  The dark slitted
 eyes seem to follow your every move.  Along one dark collar, you notice
 the mark of the Myrxes sh'aya."""
 level = 80
+hitroll = 0
+ac = [-140, -140, -130, -110]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying"]
@@ -1069,6 +1347,12 @@ elvish face.  The figure seems at home in the shadows and occasionally
 merges with them, disappearing from sight.  Along the collar, he
 wears the mark of a sequen, second in command of Myrxes."""
 level = 76
+hitroll = 0
+ac = [-150, -130, -140, -120]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "haste"]
@@ -1095,6 +1379,12 @@ dark wings.  Dark slitted eyes glitter dangerously from a fair, fine
 boned face.  The mark of the Myrxes treye, third in command, is
 emblazoned on his collar."""
 level = 74
+hitroll = 0
+ac = [-130, -120, -130, -110]
+damage_type = "slash"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "dark_vision"]
@@ -1122,6 +1412,12 @@ directly at you, the lady seems to be aware of your movements.  Her
 smooth, silent gait displays a dangerous, well controlled power.
 Between her eyebrows is the mark of the Myrxes heir."""
 level = 81
+hitroll = 1
+ac = [-150, -140, -150, -150]
+damage_type = "slash"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "dark_vision"]
@@ -1147,6 +1443,12 @@ The girl moves with a powerful agility that reminds you of a panther.
 Slitted silver eyes pierce the darkness to bore into your own.  Along
 one cheekbone is the mark of an ira'deia of Myrxes."""
 level = 78
+hitroll = 0
+ac = [-150, -130, -130, -80]
+damage_type = "slash"
+off_flags = ["backstab", "disarm", "dodge", "fast", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "dark_vision"]
@@ -1169,6 +1471,12 @@ short_desc = "Delise"
 long_desc = "A drakyri emerges from the shadows."
 description = "Pale green cat eyes seem to glow with a silent power."
 level = 78
+hitroll = 0
+ac = [-130, -140, -150, -140]
+damage_type = "slash"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "dark_vision"]
@@ -1193,6 +1501,12 @@ description = """
 Powerful muscles ripple beneath a shadow black coat.  Emerald green
 cat eyes flicker constantly around the room, taking in everything."""
 level = 73
+hitroll = 0
+ac = [-150, -150, -150, -130]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "fast", "parry"]
+size = "large"
+race = "cat"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "sneak", "hide", "dark_vision"]
@@ -1217,6 +1531,12 @@ description = """
 The form of a huge, dark lynx is barely visible in the shadows.
 Slitted silver eyes flicker towards you, and she hisses in warning."""
 level = 73
+hitroll = 0
+ac = [-130, -130, -140, -130]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "fast", "parry"]
+size = "large"
+race = "cat"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "sneak", "hide", "dark_vision"]
@@ -1241,6 +1561,12 @@ description = """
 She hovers silently, powerful wings outspread.  Beneath the intelligent
 dark eyes, a cruel black beak opens to emit a shrill scream of challenge!"""
 level = 75
+hitroll = 0
+ac = [-140, -150, -160, -140]
+damage_type = "pierce"
+off_flags = ["bash", "berserk", "disarm", "dodge", "fast"]
+size = "huge"
+race = "song bird"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["sneak", "hide", "flying", "dark_vision"]
@@ -1266,6 +1592,12 @@ The form flits through the shadows with a dangerous silent speed.
 The head turns towards you for a moment, fixing you with a sinister
 silver gaze that sends a chill up your spine."""
 level = 71
+hitroll = 0
+ac = [-130, -130, -120, -110]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "dark_vision"]
@@ -1291,6 +1623,12 @@ description = """
 A lithe humanoid form crouches in the shadows, aiming a silvery
 arrow at you with dangerous accuracy."""
 level = 72
+hitroll = 0
+ac = [-140, -130, -140, -110]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "kick_dirt", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying", "dark_vision"]
@@ -1319,6 +1657,12 @@ grey mark of myr'vale Xaek:
 
                         {w][+][{x"""
 level = 80
+hitroll = 1
+ac = [-180, -180, -170, -150]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "dodge", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["infrared", "flying"]
@@ -1344,6 +1688,12 @@ Lean, powerful muscles indicate a lifetime of physical training
 and weapons work.  Along the collar is the mark of the deiayan (consort)
 of the head of house Xaek."""
 level = 79
+hitroll = 1
+ac = [-160, -170, -170, -160]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["infrared", "flying"]
@@ -1371,6 +1721,12 @@ golden eyes gleam with adrenaline and a commanding power as she glances
 up to meet your gaze.  On her collar, she bears the mark of the
 Xaek's first commander (sh'aya)."""
 level = 77
+hitroll = 1
+ac = [-170, -170, -170, -170]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "fast", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared", "flying"]
@@ -1397,6 +1753,12 @@ gracefully through sword maneuvers.  As she spins and parries with
 dizzying speed and grace, she seems almost one with her sword.
 She wears the mark of the sequas, second commander, of Xaek."""
 level = 74
+hitroll = 0
+ac = [-140, -150, -130, -130]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "fast", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared", "flying"]
@@ -1423,6 +1785,12 @@ beneath leather practice armor, yet he moves with a quickness that
 make this man a dangerous enemy.  Emblazoned on his collar, you notice
 the mark of the Xaek treye, third commander."""
 level = 71
+hitroll = 0
+ac = [-100, -110, -120, -100]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared", "flying", "dark_vision"]
@@ -1449,6 +1817,13 @@ green eyes.  He towers several inches above you, yet his honed
 muscles maintain the perfect balance of a warrior.  A grey dot in the
 center of his forehead marks him as the na'deia (heir) to Xaek."""
 level = 76
+hitroll = 1
+ac = [-150, -140, -150, -140]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "kick", "parry"]
+res_flags = ["charm"]
+size = "large"
+race = "elf"
 sex = "male"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared", "dark_vision"]
@@ -1474,6 +1849,12 @@ Mithril flashes in a silvery blur as the girl slashes and dodges with
 deadly speed and accuracy.  Along her cheekbone is the mark of
 an ira'deia."""
 level = 72
+hitroll = 0
+ac = [-120, -120, -130, -110]
+damage_type = "slash"
+off_flags = ["bash", "disarm", "dodge", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared", "dark_vision"]
@@ -1498,6 +1879,14 @@ description = """
 Grey fur shimmers over powerful muscles.  Intelligent golden eyes
 follow you warily."""
 level = 72
+hitroll = 0
+ac = [-120, -120, -100, -110]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "dodge", "fast", "parry"]
+res_flags = ["fire", "energy"]
+vuln_flags = ["cold", "mental"]
+size = "large"
+race = "cat"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["dark_vision"]
@@ -1522,6 +1911,14 @@ description = """
 The lion moves with a powerful, silent grace which is strangely at odds
 with her size.  Deep emerald eyes flicker around the room."""
 level = 71
+hitroll = 0
+ac = [-100, -110, -140, -110]
+damage_type = "pierce"
+off_flags = ["disarm", "dodge", "fast", "kick", "parry"]
+res_flags = ["cold", "mental"]
+vuln_flags = ["fire", "energy"]
+size = "large"
+race = "cat"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["dark_vision"]
@@ -1544,6 +1941,13 @@ short_desc = "a guardian knight"
 long_desc = "A knight stands here watchfully."
 description = "The knight is tall, powerful, and quite ready to defend."
 level = 71
+hitroll = 0
+ac = [-120, -120, -120, -120]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "kick", "parry"]
+res_flags = ["charm"]
+size = "large"
+race = "elf"
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
 affected_by = ["infrared"]
@@ -1568,6 +1972,12 @@ description = """
 The drakyri works through defensive maneuvers over and over, with
 growing agility and quickness."""
 level = 70
+hitroll = 0
+ac = [-120, -110, -120, -110]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["infrared"]
@@ -1590,6 +2000,12 @@ short_desc = "a sparring warrior"
 long_desc = "A drakyri warrior is here, sparring."
 description = "The warrior seems quite intent on weapons work."
 level = 70
+hitroll = 0
+ac = [-120, -110, -120, -90]
+damage_type = "slash"
+off_flags = ["disarm", "dodge", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared"]
@@ -1617,6 +2033,13 @@ the arched brows is the shimmering green insignia of myr'vale Noriva:
 
                            {G-(+)-{x"""
 level = 81
+hitroll = 0
+ac = [-200, -190, -180, -210]
+damage_type = "bash"
+off_flags = ["dodge", "kick", "parry"]
+res_flags = ["charm", "negative", "holy"]
+vuln_flags = ["fire", "energy"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -1644,6 +2067,13 @@ the lady's white clad back, between delicate iridescent wings.
 Above the fine, high cheekbones, clear silver eyes sparkle with energy.
 On her collar, the lady bears the mark of the deiaya of myr'vale Noriva."""
 level = 80
+hitroll = 0
+ac = [-190, -200, -180, -190]
+damage_type = "bash"
+off_flags = ["disarm", "dodge", "kick"]
+res_flags = ["charm", "fire", "negative", "holy"]
+vuln_flags = ["cold", "energy"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -1669,6 +2099,13 @@ description = """
 An aura of health and power surrounds her.  A mark on her collar
 indicates her rank as sh'aya of myr'vale (minor house) Noriva."""
 level = 77
+hitroll = 0
+ac = [-160, -170, -150, -160]
+damage_type = "bash"
+off_flags = ["dodge", "kick"]
+res_flags = ["charm", "fire", "cold", "mental"]
+vuln_flags = ["acid", "energy"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden", "detect_good", "infrared"]
@@ -1696,6 +2133,13 @@ drakyri paladins do not need to be purely good.  In this case,
 Lerylke is the sequen of myr'vale Noriva, a neutral house.  Hence,
 he is neutral and worships neutral gods and goddesses."""
 level = 74
+hitroll = 0
+ac = [-130, -140, -140, -120]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "parry"]
+res_flags = ["charm", "negative", "holy"]
+vuln_flags = ["lightning"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -1721,6 +2165,12 @@ Despite his scruffy work clothing, Nerr emanates health and power.
 His slitted golden eyes are narrowed in concentration as he heightens
 the health of the herbs as he weeds."""
 level = 72
+hitroll = 0
+ac = [-110, -120, -120, -100]
+damage_type = "bash"
+off_flags = ["dodge", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -1748,6 +2198,12 @@ concentrates.  Iridescent wings drape down her back, lifting
 occasionally to stretch.  Between her eyebrows shimmers the green
 dot of the Noriva na'deia."""
 level = 77
+hitroll = 0
+ac = [-160, -150, -170, -160]
+damage_type = "bash"
+off_flags = ["dodge", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -1775,6 +2231,13 @@ fluttering iridescent wings.  Lively green gold eyes sparkle
 with laughter.  Yet beneath the youthful smile, you sense great power.
 On one cheekbone, she bears the mark of an ira'deia of Noriva."""
 level = 72
+hitroll = 0
+ac = [-100, -120, -130, -110]
+damage_type = "bash"
+off_flags = ["disarm", "dodge", "fade", "fast", "kick"]
+res_flags = ["charm", "fire", "cold", "lightning"]
+vuln_flags = ["bash"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "flying"]
@@ -1801,6 +2264,13 @@ He seems to be engrossed in a tome on healing.  Wavy white gold hair,
 cut short, frames a handsome, youthful face and sparkling green eyes.
 Along one cheekbone is the mark of a Noriva ira'deian."""
 level = 72
+hitroll = 0
+ac = [-110, -110, -120, -120]
+damage_type = "bash"
+off_flags = ["dodge", "kick"]
+res_flags = ["charm", "fire"]
+vuln_flags = ["cold"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -1827,6 +2297,11 @@ Snowy white fur gleams softly in the light.  You feel the urge to pet
 it.. but as you reach out your hand, the slitted green eyes snap open
 and the cat hisses warningly."""
 level = 72
+hitroll = 0
+ac = [-120, -120, -120, -120]
+damage_type = "slash"
+off_flags = ["berserk", "dodge", "fast"]
+race = "cat"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["sneak", "dark_vision"]
@@ -1851,6 +2326,11 @@ description = """
 Silvery grey fur shimmers in the light.  Bright silver cat eyes
 follow you warily."""
 level = 73
+hitroll = 0
+ac = [-140, -130, -130, -120]
+damage_type = "slash"
+off_flags = ["dodge", "fast", "kick_dirt"]
+race = "cat"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_hidden", "sneak", "dark_vision"]
@@ -1876,6 +2356,13 @@ As you gaze at it, the form seems to sharpen and come into focus.
 It appears to be the spirit of a drakyri, long dead and set to
 guard here."""
 level = 71
+hitroll = 0
+ac = [-110, -130, -120, -140]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+res_flags = ["negative", "holy"]
+vuln_flags = ["fire", "cold", "lightning"]
+race = "unique"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "flying", "pass_door", "dark_vision"]
@@ -1902,6 +2389,14 @@ Even her eyes seem to glow with a strange, reddish light.  You
 sense an aura of raw magical power around her, controllable only
 by the best.. which she is."""
 level = 105
+hitroll = 0
+ac = [-380, -360, -350, -350]
+damage_type = "fire"
+off_flags = ["dodge", "fade"]
+imm_flags = ["fire"]
+res_flags = ["charm", "magic"]
+vuln_flags = ["cold"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["infrared", "flying"]
@@ -1929,6 +2424,13 @@ gaze after a brief glance.  He is the Shield, one of the most
 devoted and powerful of the drakyri knights, and a member of the
 elite force of drakyri, the Laerkai."""
 level = 102
+hitroll = -1
+ac = [-330, -330, -330, -330]
+off_flags = ["bash", "berserk", "kick", "parry"]
+imm_flags = ["holy"]
+res_flags = ["charm"]
+vuln_flags = ["negative"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -1954,6 +2456,13 @@ description = """
 The drakyri emanates an aura of pure evil power.  Noting your gaze,
 she smiles a cruel not-smile and flexes wickedly sharp taloned hands."""
 level = 102
+hitroll = 1
+ac = [-300, -310, -310, -300]
+off_flags = ["berserk", "disarm", "dodge", "kick", "parry"]
+imm_flags = ["negative"]
+res_flags = ["charm"]
+vuln_flags = ["holy"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -1980,6 +2489,13 @@ sharp silver eyes pierce the darkness like knife blades.  His movements
 are characterized by a curious catlike grace which betrays extreme
 power and agility, both dangerous."""
 level = 105
+hitroll = 2
+ac = [-390, -400, -410, -400]
+damage_type = "pierce"
+off_flags = ["backstab", "disarm", "dodge", "fast", "kick_dirt"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["energy"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying"]
@@ -2006,6 +2522,14 @@ plates of her armor.  Her sheer might would best most warriors in
 combat, and as she moves her sword, you see that she has the skill
 to be a master."""
 level = 101
+hitroll = 2
+ac = [-300, -300, -300, -300]
+damage_type = "bash"
+off_flags = ["bash", "berserk", "disarm", "kick", "parry"]
+res_flags = ["charm", "weapon"]
+vuln_flags = ["lightning", "acid", "mental"]
+size = "large"
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared", "flying"]
@@ -2030,6 +2554,12 @@ description = """
 Though not much taller than yourself, the drakyri seems to tower
 far above you, as if possessed by some divine presense."""
 level = 101
+hitroll = 0
+ac = [-310, -300, -290, -300]
+off_flags = ["dodge", "kick", "parry"]
+res_flags = ["charm", "negative", "holy"]
+vuln_flags = ["fire", "energy"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -2060,6 +2590,13 @@ her represents a single house and excels in that house's specialty,
 the master comes from a union between the Deriki and Myrxes houses.
 Trained by both, she has become a lethal blend of sorcery and stealth."""
 level = 110
+hitroll = 3
+ac = [-440, -450, -450, -450]
+damage_type = "energy"
+off_flags = ["disarm", "dodge", "fade", "fast", "kick_dirt", "parry"]
+res_flags = ["charm", "pierce", "fire", "cold", "acid"]
+vuln_flags = ["lightning", "energy", "mental"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "hide", "flying"]
@@ -2086,6 +2623,13 @@ The Guardian is a drakyri raised and trained specially to guard and serve
 the drakyri council.  She excels at many skills, due to decades of
 devotion and training, and is a formidable opponent."""
 level = 104
+hitroll = 1
+ac = [-340, -330, -330, -330]
+damage_type = "lightning"
+off_flags = ["bash", "berserk", "disarm", "dodge", "fade", "parry"]
+res_flags = ["charm", "cold", "negative", "holy"]
+vuln_flags = ["fire", "lightning", "mental"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -2115,6 +2659,14 @@ in death to serve the council.  The Mediator resides over the council
 when it is in session and resolves disputes.  Due to its ancient wisdom,
 it passes the final judgment on all issues that affect the race as a whole."""
 level = 110
+hitroll = 0
+ac = [-420, -420, -420, -410]
+off_flags = ["disarm", "dodge", "kick", "parry"]
+imm_flags = ["charm", "bash", "light"]
+res_flags = ["lightning", "acid", "poison", "disease"]
+vuln_flags = ["mental", "sound"]
+size = "huge"
+race = "unique"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "cleric", "mage", "no_align"]
 affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "detect_good", "flying", "pass_door", "dark_vision"]
@@ -2140,6 +2692,12 @@ description = """
 This is a knight trained by myr'vale Xaek and sworn to guard and
 protect the land and its inhabitants til death."""
 level = 66
+hitroll = 0
+ac = [-140, -130, -140, -110]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
 affected_by = ["infrared", "flying"]
@@ -2164,6 +2722,12 @@ description = """
 Trained by she'vale Deriki, this mage is sworn to protect the land
 and its inhabitants until death."""
 level = 68
+hitroll = 0
+ac = [-120, -120, -120, -120]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+res_flags = ["charm"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -2191,6 +2755,12 @@ of the land and its inhabitants.  The healer has no allegiances
 except to the isle as a whole and answers to no one but the laerkai
 master, the mediator, and the warden."""
 level = 68
+hitroll = 0
+ac = [-110, -110, -120, -130]
+damage_type = "bash"
+off_flags = ["kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -2217,6 +2787,12 @@ This drakyri has been trained by myr'vale Myrxes to perform special
 jobs in the outside world.  The assassin answers mainly to the laerkai
 master, and occasionally to the mediator or warden."""
 level = 67
+hitroll = 1
+ac = [-120, -120, -130, -90]
+damage_type = "pierce"
+off_flags = ["disarm", "dodge", "kick_dirt"]
+res_flags = ["charm"]
+race = "elf"
 sex = "either"
 act_flags = ["npc", "scavenger", "thief"]
 affected_by = ["detect_hidden", "infrared", "sneak", "hide", "flying"]
@@ -2243,6 +2819,13 @@ scrutiny, he glances up, revealing sparkling blue eyes which hold
 a youthful power which is quite at odds with his apparent frailty.
 He winks at you and returns to his work."""
 level = 65
+hitroll = 0
+ac = [-200, -200, -200, -200]
+damage_type = "lightning"
+off_flags = ["disarm", "dodge", "fade", "kick_dirt", "parry"]
+imm_flags = ["summon"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying"]
@@ -2269,6 +2852,13 @@ gates to the isle against hostile invasion.  Her sharp silver eyes,
 slitted like a cat's catch and hold your own, seeming to weigh your
 very soul."""
 level = 108
+hitroll = 2
+ac = [-380, -380, -380, -380]
+off_flags = ["bash", "berserk", "disarm", "dodge", "fast", "kick", "parry"]
+imm_flags = ["summon"]
+res_flags = ["charm", "weapon"]
+vuln_flags = ["fire", "cold", "mental"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "dark_vision"]

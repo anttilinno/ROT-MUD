@@ -7,6 +7,12 @@ description = """
 This huge behemoth towers to a height of 15 feet.  He sneers at you 
 as he approaches and raises two black taloned claws to strike you."""
 level = 32
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["berserk", "disarm", "dodge", "trip"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["fire", "acid"]
+race = "troll"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_hidden", "infrared"]
@@ -32,6 +38,12 @@ This big troll towers several feet over you.  He has a large spear
 which he seems to ply with utmost prowess.  He jabs his spear at you
 and cackles with glee."""
 level = 27
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["berserk", "disarm", "dodge", "trip"]
+res_flags = ["charm", "bash"]
+vuln_flags = ["fire", "acid"]
+race = "troll"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_hidden", "infrared"]
@@ -55,6 +67,10 @@ long_desc = "An ogre stands here getting ready to beat in your face."
 description = """
 This mean bastard looks like he could tear you limb from limb."""
 level = 40
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -77,6 +93,10 @@ long_desc = "The Swamp Thing shambles about here.  It seems hungry."
 description = """
 The Swamp Thing has huge fists, which look like they could pound you flat."""
 level = 48
+hitroll = 0
+ac = [-60, -60, -60, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 alignment = 0
@@ -98,6 +118,10 @@ short_desc = "a gnoll"
 long_desc = "There is a mean looking gnoll here."
 description = "The Gnoll seems annoyed at your presence."
 level = 60
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -122,6 +146,10 @@ description = """
 This huge beast stands about 20 feet in height and has huge green clawed
 appendages."""
 level = 42
+hitroll = 0
+ac = [-50, -50, -50, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -146,6 +174,10 @@ description = """
 This rather small beast looks like you could take it out with a single
 sword blow."""
 level = 6
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 affected_by = ["sneak"]
@@ -171,6 +203,10 @@ This strange little creature seems very hard to keep your eyes on.
 You stare as hard as you can at the glowing ball of floating light and
 are just able to notice a small pair of glowing eyes."""
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 affected_by = ["sneak"]
@@ -193,6 +229,12 @@ short_desc = "the monstrous snake"
 long_desc = "A monstrous snake slithers towards you, thinking 'breakfast'."
 description = "This 10 meter anaconda looks rather hungry."
 level = 31
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["poison"]
+vuln_flags = ["cold"]
+race = "snake"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["sneak", "hide"]
@@ -216,6 +258,12 @@ short_desc = "a large snake"
 long_desc = "A rather large python rests in a coil here."
 description = "It's the largest Amazon python you have ever seen."
 level = 21
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["poison"]
+vuln_flags = ["cold"]
+race = "snake"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["sneak", "hide"]
@@ -241,6 +289,10 @@ description = """
 Yech!  She manages to make even Smurfette look attractive.  That's ok,
 because she thinks you stink too, and she's about to do something about it."""
 level = 18
+hitroll = 0
+ac = [30, 30, 30, 80]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -266,6 +318,10 @@ description = """
 This dark apparition stands a meager 13 feet in height.  Even in the dim
 swamp light, the blade of his scythe gleams."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -291,6 +347,10 @@ description = """
 This wolf looks plump.  She probably ate a friend or two of yours who came
 into the marsh."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "wolf"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
@@ -314,6 +374,10 @@ long_desc = "A heap of garbage shambles towards you."
 description = """
 This grotesque pile of plant matter fills you with utmost horror."""
 level = 25
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "scavenger", "stay_area"]
 affected_by = ["hide"]
@@ -338,6 +402,10 @@ description = """
 This old orc has an array of bones stuck in his hair and strange symbols
 painted on his face and hands."""
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 70]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "key", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -362,6 +430,12 @@ long_desc = "A marsh giant stomps towards you."
 description = """
 This huge monster of a man has green gnarly teeth and a BIG stick."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["fire", "cold"]
+vuln_flags = ["lightning", "mental"]
+race = "giant"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "key", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -384,6 +458,10 @@ short_desc = "a gargoyle"
 long_desc = "A large gargoyle lands next to you, baring his fangs at you."
 description = "This creepy fellow looks like he could use you as a meal."
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "key", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]

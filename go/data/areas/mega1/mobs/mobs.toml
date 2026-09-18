@@ -8,6 +8,10 @@ He is a tall, thin boy.  He is looking for his gang mates.  He and his
 mates have cost city authorities many millions of creds a week in
 vandalism repairs."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -31,6 +35,10 @@ description = """
 This punk is from one of the rowdiest, scruffiest, and definitely most
 fashionable of all gangs -- the Grunge Mongers."""
 level = 19
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -55,6 +63,10 @@ A sad victim of Future Shock, this man is immensely dangerous and will
 not be stopped by anyone who tries to deter him from revenge upon the
 Justice Department."""
 level = 34
+hitroll = 0
+ac = [-30, -30, -30, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
@@ -79,6 +91,10 @@ description = """
 A member of a local Block's Citi-Def militia, this man is well-armed
 and undersupervised."""
 level = 32
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 affected_by = ["infrared"]
@@ -103,6 +119,10 @@ long_desc = "A dunk is here blending into the crowd."
 description = """
 He blends into the crowd as his hand travels into another citizen's pocket."""
 level = 19
+hitroll = 0
+ac = [20, 20, 20, 80]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -128,6 +148,10 @@ description = """
 A practitioner in Mega-City One's largest growth industry, mugging, is
 looking you over for a possible business transaction."""
 level = 28
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -152,6 +176,10 @@ A member of Mega-City One's Justice Department is here considering what
 crimes you have committed.  Being a rookie he will probably be easier on
 you though."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -177,6 +205,10 @@ description = """
 Wallaby Gleep is a heavy-set man who gives you the impression that he is
 unintelligent and unimaginative, but looks can be deceiving."""
 level = 44
+hitroll = 0
+ac = [-50, -50, -50, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -202,6 +234,10 @@ He is a thin angular crook, pretty close to everyone's idea of Ebeneezer
 Scrooge.  Indeed, the only thing guaranteed to bring a spark to his dead
 eyes is the mention of money."""
 level = 50
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -227,6 +263,10 @@ Ramirez is a dour man who knows that he's never going to get a better
 deal out of life.  He is content to run the bite fights for Throt and
 Gleep."""
 level = 37
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0
@@ -250,6 +290,10 @@ description = """
 He is a dedicated, if somewhat pessimistic Judge.  He is the Senior Judge
 of the Downtown Quadrant."""
 level = 59
+hitroll = 0
+ac = [-90, -90, -90, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -276,6 +320,10 @@ Beddows is a clone from the same stock as the ex-Chief Judge McGruder.
 She is fanatically dedicated to her job and has no ambitions other than
 to enforce the LAW."""
 level = 49
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -300,6 +348,10 @@ long_desc = "A bite fighter is here sharpening his teeth."
 description = """
 A bite fighter is here with sharpened teeth and a bad attitude."""
 level = 40
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0

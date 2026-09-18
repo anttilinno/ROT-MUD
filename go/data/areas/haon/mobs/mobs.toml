@@ -8,6 +8,10 @@ He is six feet tall and looks quite strong, muscles bulging under his heavy,
 chequered shirt.  His features are worn with hard work and his expression is
 one of a peaceful man leading a simple life."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -31,6 +35,11 @@ description = """
 The bear is a big, brown, furry animal with very large claws and very sharp
 teeth.  It doesn't resemble those cute little thingies from toy shops at all."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["berserk", "disarm", "dodge", "trip", "crush"]
+res_flags = ["bash", "cold"]
+race = "bear"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -55,6 +64,10 @@ This small, furry creature with long ears and big feet has been attacked by
 the dreaded rabbit rabies, a horrible disease that turns helpless and innocent
 rabbits into ferocious and bloodthirsty monsters."""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "rabbit"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -78,8 +91,12 @@ description = """
 She is a graceful creature on long, slender legs, and with large, brown eyes
 looking back at you with an air of watchful interest."""
 level = 3
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
-act_flags = ["npc", "sentinel", "stay_area", "pet"]
+act_flags = ["npc", "sentinel", "stay_area", "pet", "ranger"]
 affected_by = ["detect_invis"]
 alignment = 0
 
@@ -101,6 +118,10 @@ long_desc = "A brown fox is here, looking for some rabbits to chew up."
 description = """
 It is a large fox with beautiful, red-brown fur and a long, thick brush."""
 level = 4
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "fox"
 sex = "none"
 act_flags = ["npc", "stay_area"]
 affected_by = ["dark_vision"]
@@ -125,6 +146,10 @@ description = """
 It is an exceptionally large wolf with thick, black fur.  Saliva is dripping
 quickly from its long, white fangs.  It looks quite dangerous and very angry."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -148,6 +173,10 @@ description = """
 It is an exceptionally large wolf with thick, black fur.  Saliva is dripping
 quickly from its long, white fangs.  It looks quite dangerous and very angry."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -170,6 +199,10 @@ long_desc = "A large, grey wolf is here, glaring hungrily at you."
 description = """
 The large, grey wolf eyes you with interest while licking its lips."""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "wolf"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
@@ -193,6 +226,10 @@ long_desc = "A large, black wolf is here, glaring hungrily at you."
 description = """
 The large, black wolf eyes you with interest while licking its lips."""
 level = 6
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "wolf"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
@@ -219,6 +256,12 @@ colossal body.  Numerous holes in its heavy wings tell of many fights as does
 the nicks in the horns on its head.  It smells as disgusting as only dragons
 do."""
 level = 49
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm", "bash", "fire"]
+vuln_flags = ["pierce", "cold"]
+race = "dragon"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -245,8 +288,12 @@ This little fellow is only three foot tall with wild matted brown hair and long
 tangled brown beard.  He wears ragged brown and green clothing and looks as if
 he is having great fun."""
 level = 20
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
-act_flags = ["npc", "scavenger", "wimpy"]
+act_flags = ["npc", "scavenger", "wimpy", "ranger"]
 affected_by = ["detect_invis", "sneak"]
 alignment = 0
 
@@ -269,6 +316,10 @@ description = """
 The druid looks quite old.  You would think him venerable, but you know
 he would be a tough foe."""
 level = 34
+hitroll = 0
+ac = [-30, -30, -30, 60]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "cleric"]
 affected_by = ["detect_invis"]

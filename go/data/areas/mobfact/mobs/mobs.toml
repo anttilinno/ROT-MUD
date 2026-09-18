@@ -7,6 +7,11 @@ description = """
 You see a mutant beastly fido, glaring at you with green eyes!  You wonder if
 this factory meets ASPCA guidlines...."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+vuln_flags = ["magic"]
+race = "fido"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
 affected_by = ["detect_invis"]
@@ -32,6 +37,10 @@ You see Foreman Floyd of the Mob factory -- a sterling example of what comes
 of dedicated Mudding!  Rewarded for his years of dedication as a monster
 slayer, Floyd now creates the beasts for other adventurers to fight."""
 level = 24
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -57,6 +66,10 @@ You see a Cityguard head floating around without a care in the world.
 Obviously, this one got past quality control!  Careful, those teeth look
 sharp..."""
 level = 18
+hitroll = 0
+ac = [20, 20, 20, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "unique"
 sex = "none"
 act_flags = ["npc", "stay_area"]
 affected_by = ["flying"]
@@ -81,6 +94,10 @@ description = """
 You see and smell a drunk who looks much like other drunks...but he is spinning
 in place!  Someone should tell him that he is a REVOLTING drunk."""
 level = 3
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 alignment = 0
@@ -104,6 +121,10 @@ description = """
 Yick.  Looks like someone had digestion problems!  Either that, or the 
 hydraulic fluid is leaking again."""
 level = 8
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0
@@ -127,6 +148,10 @@ description = """
 The worker wears a bright orange pair of overalls, with the words "Mob
 Factory" written in a bright purple starburst.  Fashion plate, he's not."""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy"]
 alignment = 0
@@ -150,6 +175,10 @@ description = """
 If Floyd walks in, you can bet there'll be trouble.  Guess she shouldn't have
 worked the late shift!"""
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0

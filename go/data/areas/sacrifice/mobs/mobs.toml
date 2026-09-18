@@ -8,6 +8,13 @@ Bert stands almost 7 feet tall, with a girth resembling that
 of a house.  The scars on his face and arms tell you that he's
 seen his fair share of combat."""
 level = 46
+hitroll = 10
+ac = [-150, -150, -150, -150]
+damage_type = "bash"
+off_flags = ["bash", "disarm", "kick"]
+imm_flags = ["summon", "charm", "magic", "weapon"]
+size = "large"
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 alignment = 0
@@ -30,6 +37,15 @@ long_desc = "A huge green sea serpent stares at you hungrily."
 description = """
 The sea serpent resembles a cross between a dragon and a snake."""
 level = 32
+hitroll = 0
+ac = [-30, -60, -60, -10]
+damage_type = "acid"
+off_flags = ["disarm", "dodge", "trip"]
+imm_flags = ["drowning"]
+res_flags = ["summon", "charm", "bash", "fire", "cold", "acid"]
+vuln_flags = ["pierce", "cold"]
+size = "huge"
+race = "dragon"
 sex = "either"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis", "infrared", "flying"]

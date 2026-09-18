@@ -7,6 +7,10 @@ description = """
 The asp is a small, smooth-scaled snake the color of worn pottery.
 The poison bite of this snake has felled many a mighty pharoah."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -31,6 +35,10 @@ description = """
 The cobra snake waves back and forth before you, its hood displaying brilliant
 colors designed to serve notice to its prey that it is about to strike."""
 level = 13
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -55,6 +63,10 @@ description = """
 The mongoose is a wily rodent, a quick hunter of nasty poisonous snakes.
 She sniffs you and appears to be looking for food in your hand."""
 level = 21
+hitroll = 0
+ac = [10, 10, 10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared"]
@@ -80,6 +92,10 @@ The pyramid watcher has made a pledge to destroy any would-be looters of
 the tombs of the pharoahs.  He is clad from head to foot in utilitarian
 sand-colored clothing."""
 level = 15
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -102,6 +118,10 @@ long_desc = "A sneaky tomb thief moves about in search of treasure."
 description = """
 The thief brushes against you briefly, then slinks back into the shadows."""
 level = 19
+hitroll = 0
+ac = [20, 20, 20, 80]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
@@ -129,6 +149,10 @@ has made his life from stealing things from others, including many items stolen
 recently from under the nose of the hapless guardians of this pyramid.  Someday
 he might get caught, but not today..."""
 level = 35
+hitroll = 0
+ac = [-30, -30, -30, 60]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
@@ -155,6 +179,10 @@ The carpet is simply beautiful, made from intricately woven silken material.
 It seems to rise up at the touch of your feet.  Wait, it is rising, a few feet
 above the ground!  In fact, it seems to be ALIVE!"""
 level = 17
+hitroll = 0
+ac = [20, 20, 20, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "infrared"]
@@ -179,6 +207,10 @@ description = """
 You only see the disfigured, rotting features of decaying human flesh,
 animated by the distempered spirit of a long-deceased person."""
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared"]
@@ -204,6 +236,10 @@ The sandman is exactly that -- some sort of strange being formed from the sands
 of the desert floor.  It seems quite large and strong and at home in the heat
 and sandy winds."""
 level = 28
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared"]
@@ -228,6 +264,10 @@ description = """
 The efreeti is a mighty being formed from living fire.  He gazes down at you 
 with disdain and scorn, arms folded across his mighty chest."""
 level = 40
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "infrared"]
@@ -254,6 +294,10 @@ The column has been carved into a set of four shapely women, each facing
 outward into the room.  The sandstone of the caryatid is smooth with age,
 but you can still make out a deadly stone sword in the hands of each figure."""
 level = 47
+hitroll = 0
+ac = [-60, -60, -60, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -280,6 +324,10 @@ imprisoned in a small lamp, used to do the bidding of those who find him.
 He smiles down at you congenially, arms folded across his blue-tinged 
 skin, and strokes his goatee."""
 level = 56
+hitroll = 0
+ac = [-80, -80, -80, 10]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["infrared"]
@@ -307,6 +355,10 @@ of birds, mighty wingspans, and a full set of four paws to rend their victims
 to pieces.  They tend to be quite jealous of the sharper wits of their older
 cousins."""
 level = 30
+hitroll = 0
+ac = [-20, -20, -20, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["infrared"]
@@ -333,6 +385,10 @@ beautiful dark-skinned woman from the waist up, a feathery set of wings
 and the hind legs of a mighty cat.  Right now she is confused, having 
 just heard a puzzling riddle from a cousin criosphinx."""
 level = 37
+hitroll = 0
+ac = [-40, -40, -40, 60]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
@@ -359,6 +415,10 @@ The criosphinx is a calm and friendly creature, having the head of a ram atop
 the body of a well-furred feline with eagle-like wings.  He delights in riddles,
 and in poking occasional fun at his easily confused lesser cousins."""
 level = 46
+hitroll = 0
+ac = [-60, -60, -60, 50]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
@@ -386,6 +446,10 @@ face  is quite man-like, perhaps even handsome, and a massive pair of feathered
 wings.  Tales are told of pharoahs that were rendered permanently deaf by the 
 mighty roar of this sphinx."""
 level = 54
+hitroll = 0
+ac = [-80, -80, -80, 40]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
@@ -413,6 +477,10 @@ dormancy.  It has become almost indistinguishable from the sand that surrounds
 it, although you can still make out the features of the handsome face that once
 advised many rulers."""
 level = 81
+hitroll = 0
+ac = [-140, -140, -140, 40]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_magic"]
@@ -441,6 +509,10 @@ you, clad only in the raiments he was left in when he last slept.  His hair is
 a soft black, his skin a deep chocolate, and his tall frame is totally still, 
 his chest not even moving to breathe."""
 level = 75
+hitroll = 0
+ac = [-130, -130, -130, 30]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis", "detect_magic", "infrared"]

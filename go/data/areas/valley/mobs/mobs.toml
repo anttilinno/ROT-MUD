@@ -8,6 +8,10 @@ A beast is the size of the largest common dog.  It has a greenish coat with
 brown spots.  Its shape, along with its colors, make this cooshee almost
 undetectable as it moves."""
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "dog"
 sex = "none"
 act_flags = ["npc", "stay_area", "wimpy"]
 affected_by = ["sneak"]
@@ -34,6 +38,11 @@ hatred in his eyes, and you try to avoid his stare.  His tense body looks ready
 to spring upon you, like a mountain lion stalking its prey.  He sees you
 noticing him, and quietly disappears."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["infrared", "sneak"]
@@ -58,6 +67,11 @@ description = """
 This elf is almost as tall as you are, but much slimmer and more agile.
 She glares at you, then quickly disappears before you see more of her."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["infrared", "sneak"]
@@ -82,6 +96,11 @@ description = """
 This elf is almost as tall as you are, but much slimmer and more agile.
 He glares at your intrusion and attacks with menace."""
 level = 14
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared", "sneak"]
@@ -106,6 +125,11 @@ description = """
 This elf is almost as tall as you are, but much slimmer and more agile.
 She glares at your intrusion and attacks with menace."""
 level = 13
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared", "sneak"]
@@ -129,6 +153,11 @@ long_desc = "A valley elf scout wanders the valley, searching for intruders like
 description = """
 The elf notices your intrusion and attacks with determination."""
 level = 11
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["infrared", "sneak"]
@@ -153,6 +182,11 @@ description = """
 She is currently doing some menial chores, and ignores your intrusion except
 when you are in her way."""
 level = 11
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy"]
 affected_by = ["infrared", "sneak"]
@@ -177,6 +211,11 @@ description = """
 This elf looks quite old, probably twenty or more times your age.  He looks
 quite potent, though."""
 level = 29
+hitroll = 0
+ac = [-20, -20, -20, 60]
+off_flags = ["disarm", "kick", "parry"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "cleric"]
 affected_by = ["infrared"]
@@ -202,6 +241,11 @@ description = """
 This elf looks quite old, probably twenty or more times your age.  She looks
 quite potent, though."""
 level = 30
+hitroll = 0
+ac = [-10, -10, -10, 50]
+off_flags = ["dodge"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "mage"]
 affected_by = ["infrared"]
@@ -227,6 +271,10 @@ description = """
 This big beast looks like a small red dragon, but has many more heads than a
 regular dragon, too.  It doesn't look happy."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -249,6 +297,10 @@ short_desc = "an old hermit"
 long_desc = "An old hermit sits here, smoking a pipe."
 description = "He looks old and feeble."
 level = 5
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "wimpy"]
 alignment = 0
@@ -271,6 +323,10 @@ long_desc = "An old mage busies himself with some chemicals."
 description = """
 Talemon looks harmless, but the fireballs he throws at you don't."""
 level = 50
+hitroll = 0
+ac = [-60, -60, -60, 20]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "mage"]
 alignment = 0
@@ -295,6 +351,10 @@ description = """
 This daemon is unhappy with its summoned job, and is willing to take out it's
 anger at you!"""
 level = 49
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -317,6 +377,10 @@ long_desc = "A wolf is here, looking for small prey."
 description = """
 The wolf is covered with brown hair.  It looks at you with fright."""
 level = 7
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "fast", "trip"]
+race = "wolf"
 sex = "none"
 act_flags = ["npc", "aggressive", "wimpy"]
 affected_by = ["dark_vision"]
@@ -341,6 +405,10 @@ description = """
 With horns and spots over coarse, brown hair, this beast is the spit and
 image of ... an antelope."""
 level = 11
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "wimpy"]
 alignment = 0

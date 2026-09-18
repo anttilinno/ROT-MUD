@@ -10,6 +10,10 @@ and holding a multi-colored staff.  Although he appears to be older
 than the oldest man, he seems to have an inner strength which most mortals
 cannot overcome."""
 level = 35
+hitroll = 0
+ac = [-30, -30, -30, 40]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis"]
@@ -38,6 +42,10 @@ light hangs from his belt, and on his finger you see the One Ring.  Although
 usually a halfling of peace, he will fight you to the death if you attempt
 to take away that which belongs to him."""
 level = 39
+hitroll = 0
+ac = [-40, -40, -40, 60]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -64,6 +72,10 @@ Farmer Gamgee is a short, stout halfling of thirty years.  His skin has
 been tanned from working the fields night and day.  He's quite a jolly
 chap, always ready to befriend an injured bunny rabbit."""
 level = 14
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0
@@ -87,6 +99,10 @@ description = """
 The toddler is dressed in nothing but his birthday suit.  He crawls about
 for he hasn't learned to walk yet.  He peers up at you and asks "da da?""""
 level = 3
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0
@@ -111,6 +127,10 @@ The nursemaid looks rather tired and worn out.  Taking care of so many
 toddlers for too long has evidently taken its toll.  She looks to you and
 in her eyes you can see her longing for a better life."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -135,6 +155,10 @@ The cow looks like it hasn't been milked in quite some time.  Although she
 is past her prime, you see that she still has a lot of years left, and that
 if provoked, her rear kick can be quite deadly."""
 level = 7
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "stay_area", "pet"]
 alignment = 0
@@ -159,6 +183,10 @@ The pig appears quite happy to be a pig.  He is oblivious to your presence
 and cares only for the care-free life that he leads.  It is enormously fat
 and consequently cannot move around very quickly."""
 level = 6
+hitroll = 0
+ac = [70, 70, 70, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "pig"
 sex = "none"
 act_flags = ["npc", "stay_area", "pet"]
 alignment = 0
@@ -181,6 +209,10 @@ long_desc = "A chicken sits on her nest."
 description = """
 The chicken is bright and healthy.  She has no weapons but her beak."""
 level = 4
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "stay_area", "pet"]
 alignment = 0
@@ -205,6 +237,10 @@ The bull is in top condition.  He looks like quite a fighter, nothing to be
 reckoned with.  With his horns and his hooves he can attack just about
 anything."""
 level = 11
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -227,6 +263,10 @@ long_desc = "A horse becomes frightened by your presence."
 description = """
 The horse looks at you and turns away.  You can tell that it is afraid of you."""
 level = 8
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "pet"]
 alignment = 0
@@ -252,6 +292,10 @@ ever roaming, looking for signs of trouble from riff-raff like you.  In
 his belt is a thin dagger, and on his body he wears a suit of leather armor.
 This is one halfling you don't want to mess with."""
 level = 15
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 alignment = 0
@@ -278,6 +322,10 @@ ever roaming, looking for signs of trouble from riff raff like you.  In
 his belt is a thin dagger, and on his body he wears a suit of leather armor.
 This is one halfling you don't want to mess with."""
 level = 15
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 alignment = 0
@@ -304,6 +352,10 @@ deep 'Hullo'.  He walks about comfortably, secure in the knowledge that
 as long as he's in office, the Shire will always remain a safe haven for
 Shire folk."""
 level = 28
+hitroll = 0
+ac = [-10, -10, -10, 80]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "warrior"]
 alignment = 0
@@ -328,6 +380,10 @@ description = """
 The Innkeeper is a jolly old halfling who spends his days eavesdropping on
 local gossip.  In his younger days, he was quite a seasoned traveller."""
 level = 24
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 alignment = 0
@@ -352,6 +408,10 @@ The Miller is an impatient young halfling, always trying to command more
 respect from his workers than he can get.  He looks like the type of person
 who deserves a spanking but never got one."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 alignment = 0
@@ -376,6 +436,10 @@ The mill worker is in fine shape from the hard labor that he does at the
 mill.  He doesn't notice your presence, but he looks like he could break you
 in two without thinking about it."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -400,6 +464,10 @@ The tall elven warrior is light and fair-skinned.  The expression that he wears
 on his countenance is solemn and tragic.  He cares not for this world any
 longer and wearies of it."""
 level = 33
+hitroll = 0
+ac = [-20, -20, -20, 40]
+off_flags = ["dodge"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 alignment = 0
@@ -425,6 +493,10 @@ Grim and cold, the dwarven prince is quite strong and bulky, even for the
 dwarves of his land.  His glowing eyes peer out of his bushy face and stare
 beyond your gaze."""
 level = 33
+hitroll = 0
+ac = [-30, -30, -30, 60]
+off_flags = ["disarm", "kick", "parry"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
 alignment = 0
@@ -449,6 +521,10 @@ description = """
 The shopkeeper will fight like a madman to protect his store from riff-raff
 like you."""
 level = 42
+hitroll = 0
+ac = [-50, -50, -50, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -473,6 +549,10 @@ The grocer is a large, jovial halfling who knows how to enjoy his pipeweed.
 However, he also knows that it's worth protecting and so will do everything
 in his power to prevent riff-raff like you from stealing it."""
 level = 42
+hitroll = 0
+ac = [-50, -50, -50, 70]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -496,6 +576,10 @@ description = """
 The blacksmith is a lean and mean fighting machine.  His knowledge of weapons
 and armour would certainly help him in any fight against riff-raff like you."""
 level = 99
+hitroll = 0
+ac = [-200, -200, -200, 30]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -518,6 +602,10 @@ long_desc = "The battle master offers you the services of his fine trainees."
 description = """
 The battle master is a wizened fighter, with many scars to prove his worth."""
 level = 49
+hitroll = 0
+ac = [-70, -70, -70, 60]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -542,6 +630,10 @@ description = """
 The halfling youth is not yet quite in the prime of his youth.  He's knee
 high and you get the sudden urge to step on him."""
 level = 5
+hitroll = 0
+ac = [80, 80, 80, 100]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -568,6 +660,10 @@ The seasoned adventurer has seen his share of glory days.  Although he is
 past his prime, he still looks like he could put up more than his share of
 a good fight."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -591,6 +687,10 @@ description = """
 The gossip is all talk and no action.  You're transfixed by her ability to
 talk so much so quickly."""
 level = 7
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0
@@ -616,6 +716,10 @@ stare at her, thoughts of all else vanish.  You get the sudden urge to grovel
 at her feet, hoping she'll take you in like a lost puppy.  You wouldn't dare
 harm a hair on her precious little head."""
 level = 12
+hitroll = 0
+ac = [40, 40, 40, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -640,6 +744,10 @@ The trainee smiles smugly, aware of your interest in him.  He's a little
 fresh, but his enthusiasm and desire to please more than make up for what
 he lacks in skill."""
 level = 10
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -664,6 +772,10 @@ The urbanite seems very much at home in his surroundings.  His clothes are
 all of the latest fashions and his manners impeccable.  He offers you some
 coins if you'd be so good as to order a drink for him."""
 level = 7
+hitroll = 0
+ac = [60, 60, 60, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
 alignment = 0
@@ -685,6 +797,10 @@ short_desc = "a country bumpkin"
 long_desc = "A country bumpkin dreams of pipeweed and its many uses."
 description = "The country bumpkin snores noisily."
 level = 9
+hitroll = 0
+ac = [50, 50, 50, 90]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -708,6 +824,10 @@ description = """
 The Innkeeper is a jolly old halfling who spends his days eavesdropping on
 local gossip.  In his younger days, he was quite a seasoned traveller."""
 level = 24
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -729,6 +849,10 @@ short_desc = "the receptionist"
 long_desc = "The receptionist sits here, signing forms."
 description = "He is a very professional looking type."
 level = 23
+hitroll = 0
+ac = [0, 0, 0, 80]
+off_flags = ["disarm", "dodge", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -753,6 +877,10 @@ The shiriff is over waist high, quite tall for a halfling.
 He looks at you, smiles and asks you if you have seen a halfling youth
 somewhere outside the shire."""
 level = 16
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0

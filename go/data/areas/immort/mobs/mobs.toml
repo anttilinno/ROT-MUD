@@ -9,6 +9,14 @@ his unsleeping gaze over the Rainbow bridge.  His trusty Gjallor-horn never
 leaves his side, and shall remain unwinded until the dread ship Naglfar sails
 towards Valhalla on the dawn of Ragnarok."""
 level = 107
+hitroll = 30
+ac = [-200, -200, -200, -100]
+damage_type = "bash"
+off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "crush"]
+imm_flags = ["summon", "charm", "mental"]
+res_flags = ["magic", "weapon"]
+size = "large"
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden", "infrared", "dark_vision"]
@@ -34,6 +42,11 @@ Snowy white fur gleams softly in the light.  You feel the urge to pet
 it.. but as you reach out your hand, the slitted green eyes snap open
 and the cat hisses warningly."""
 level = 72
+hitroll = 0
+ac = [-420, -420, -420, -420]
+damage_type = "slash"
+off_flags = ["berserk", "dodge", "fast"]
+race = "cat"
 sex = "either"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["sneak", "dark_vision"]

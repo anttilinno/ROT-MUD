@@ -6,6 +6,10 @@ long_desc = "A man works here on the lawn."
 description = """
 An older man is working here to keep the grounds of Camelot looking beautiful."""
 level = 20
+hitroll = 0
+ac = [0, 0, 0, 0]
+off_flags = ["dodge", "fast", "kick"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["haste"]
@@ -29,6 +33,11 @@ long_desc = "A young man stands here defending Camelot from intruders."
 description = """
 A well-armored man watches over those who enter and pass through his master's residence.  The man looks upon you with a suspicious gaze; he has learned through experience that adventurers are often troublesome travellers."""
 level = 23
+hitroll = 3
+ac = [-40, -40, -40, 0]
+damage_type = "bash"
+off_flags = ["berserk", "disarm", "dodge", "fast", "kick", "parry", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -51,6 +60,11 @@ long_desc = "A young boy attends to his duties."
 description = """
 You see a young lad hurrying to deliver a message to his master.  His eyes dart around as he keeps an eye on you and his surroundings."""
 level = 21
+hitroll = 1
+ac = [0, 0, 0, 0]
+off_flags = ["dodge", "kick_dirt", "parry", "trip"]
+size = "small"
+race = "human"
 sex = "male"
 act_flags = ["npc", "wimpy", "no_align"]
 affected_by = ["haste"]
@@ -75,6 +89,10 @@ long_desc = "An elderly chef chops onions here."
 description = """
 You see a man working feverishly to prepare dinner for His Lord, King Arthur of Camelot."""
 level = 24
+hitroll = 1
+ac = [0, 0, 0, 0]
+off_flags = ["dodge", "kick_dirt", "parry", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "wimpy", "no_align"]
 affected_by = ["haste"]
@@ -98,6 +116,11 @@ long_desc = "An enemy of the King rests here in shackles."
 description = """
 You see a weary woman leaning up against the stone wall.  Her hair is scraggly and she looks gaunt and weak."""
 level = 22
+hitroll = 5
+ac = [-50, -50, -50, -50]
+damage_type = "bash"
+off_flags = ["dodge", "fast", "kick", "parry"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["plague"]
@@ -121,6 +144,12 @@ long_desc = "An enemy of the King rests here in shackles."
 description = """
 You see a weary man with a scraggly beard leaning up against the stone wall.  His face is gaunt and his legs have withered some from the lack of proper nurishment."""
 level = 23
+hitroll = 5
+ac = [-50, -50, -50, -50]
+damage_type = "energy"
+off_flags = ["dodge", "fast", "kick", "parry"]
+res_flags = ["magic"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["weaken"]
@@ -144,6 +173,11 @@ long_desc = "A guard watches you carefully."
 description = """
 A strong man watches for any sign of disobediance to his Highness, the King.  He stands perfectly straight; only his eyes move, following you closely.  His diligence to his duties is a tribute to his master's skill as a leader."""
 level = 27
+hitroll = 6
+ac = [-50, -50, -50, 0]
+damage_type = "bash"
+off_flags = ["berserk", "disarm", "dodge", "fast", "kick", "parry", "trip"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 affected_by = ["detect_evil", "detect_invis", "haste"]
@@ -170,6 +204,13 @@ been honored many times by his ruler, King Arthur, for his loyalty to the
 crown.  His victories are well known throughout the land, especially one
 important fact:  Lancelot has never lost a hand to hand duel."""
 level = 27
+hitroll = 7
+ac = [-100, -100, -100, -50]
+damage_type = "energy"
+off_flags = ["berserk", "disarm", "dodge", "fast", "kick", "parry"]
+imm_flags = ["disease"]
+res_flags = ["charm", "pierce", "poison", "mental"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_evil", "detect_invis", "haste"]
@@ -198,6 +239,13 @@ time here, in this room, writing of his adventures.  No doubt this piece
 of work would be interesting; perhaps he'll include the tale of your death
 in it."""
 level = 29
+hitroll = 7
+ac = [-100, -100, -100, -50]
+damage_type = "energy"
+off_flags = ["berserk", "disarm", "dodge", "fast", "kick", "parry"]
+imm_flags = ["disease"]
+res_flags = ["charm", "pierce", "poison", "mental"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_evil", "detect_invis", "haste"]
@@ -224,6 +272,13 @@ his death were, indeed, greatly exaggerated.  After defeating the vicious
 swarm of enemies from the south, Galahad returned to Camelot to train the
 land's best men to serve the crown."""
 level = 30
+hitroll = 7
+ac = [-100, -100, -100, -50]
+damage_type = "energy"
+off_flags = ["berserk", "disarm", "dodge", "fast", "kick", "parry"]
+imm_flags = ["disease"]
+res_flags = ["charm", "pierce", "poison", "mental"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_evil", "detect_invis", "haste"]
@@ -251,6 +306,13 @@ entered the seminary.  This friendship has benefited both men:  Turpin's
 church coffers have grown, and Arthur has received the benefit of divine
 intervention when necessary."""
 level = 27
+hitroll = 0
+ac = [-50, -50, -50, 0]
+damage_type = "bash"
+off_flags = ["dodge", "fast", "kick", "parry"]
+imm_flags = ["poison", "mental", "disease"]
+res_flags = ["charm", "magic", "weapon"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
 alignment = 0
@@ -277,6 +339,11 @@ seen.  He seems ready to sacrifice his life for the gentle ruler of this
 land.  The skill of those selected to serve King Arthur in such an important
 place--Camelot--is widely known and feared."""
 level = 32
+hitroll = 7
+ac = [-70, -70, -70, -50]
+off_flags = ["disarm", "dodge", "fast", "kick", "parry", "trip"]
+size = "large"
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["detect_invis", "flying", "haste"]
@@ -304,6 +371,14 @@ stops working on his project, wipes his hands, and moves to confront you.
 The Great Merlin has dispatched many young adventurers to the after-life;
 perhaps you will be among those "lucky" few."""
 level = 32
+hitroll = 10
+ac = [-100, -100, -100, -200]
+damage_type = "bash"
+off_flags = ["dodge", "fast", "parry"]
+imm_flags = ["charm", "holy", "mental"]
+res_flags = ["magic", "cold", "mental"]
+vuln_flags = ["poison"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
 affected_by = ["detect_invis", "detect_magic", "flying"]
@@ -332,6 +407,12 @@ You can recall all the tales your father told you about this kind, gentle
 man.  At the sight of his enormous sword, the legendary Excalibur, the
 stories of a weak, old ruler quickly pass from your mind."""
 level = 35
+hitroll = 10
+ac = [-100, -100, -100, -50]
+damage_type = "bash"
+off_flags = ["disarm", "dodge", "fast", "kick", "parry", "rescue", "trip"]
+res_flags = ["charm", "slash", "poison", "energy", "mental"]
+race = "unique"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
 affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "flying", "haste"]

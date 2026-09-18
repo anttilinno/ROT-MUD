@@ -7,6 +7,13 @@ description = """
 This BIG monkey must weigh at least 200 pounds. It is covered with black
 fur and has the ugliest teeth you have ever seen."""
 level = 10
+hitroll = 0
+ac = [10, 10, 10, 80]
+damage_type = "bash"
+off_flags = ["backstab", "parry"]
+vuln_flags = ["magic"]
+size = "large"
+race = "human"
 sex = "female"
 act_flags = ["npc", "aggressive"]
 alignment = 0
@@ -30,6 +37,12 @@ description = """
 This Elf does not appear to be very prosperous. His violet eyes look you
 over as he tries to decide if you are a client or a salesman."""
 level = 12
+hitroll = 0
+ac = [0, 0, 0, 80]
+damage_type = "bash"
+off_flags = ["berserk", "disarm"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["infrared"]
@@ -53,6 +66,13 @@ long_desc = "The Dwarven Merchant greets you, \"Welcome!\""
 description = """
 This merchant has the Eye of the Tiger. "Welcome my friend," he says."""
 level = 12
+hitroll = 0
+ac = [0, 0, 0, 80]
+damage_type = "bash"
+off_flags = ["berserk", "disarm"]
+res_flags = ["poison", "disease"]
+vuln_flags = ["drowning"]
+race = "dwarf"
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["infrared"]
@@ -77,6 +97,13 @@ description = """
 This man is only four feet tall but has a powerful body.  His arms reach
 almost to his calves."""
 level = 12
+hitroll = 0
+ac = [0, 0, 0, 80]
+damage_type = "bash"
+off_flags = ["trip"]
+vuln_flags = ["magic"]
+size = "small"
+race = "human"
 sex = "either"
 act_flags = ["npc", "stay_area", "wimpy"]
 alignment = 0
@@ -99,6 +126,12 @@ long_desc = "A large Human Merchant stands ready to sell you."
 description = """
 Many of the merchants you have seen throughout your life resemble this man."""
 level = 5
+hitroll = 1
+ac = [70, 50, 50, 100]
+damage_type = "bash"
+off_flags = ["backstab", "kick_dirt", "trip"]
+vuln_flags = ["magic"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
 alignment = 0
@@ -122,6 +155,12 @@ description = """
 This adventurer is a largish, oafish, boy with the largest ego you've ever
 seen.  His ego is writing checks his character will never be able to cash."""
 level = 7
+hitroll = 0
+ac = [40, 40, 40, 90]
+damage_type = "bash"
+off_flags = ["backstab", "kick_dirt", "trip"]
+vuln_flags = ["magic"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy", "thief"]
 alignment = 0
@@ -145,6 +184,12 @@ description = """
 This soldier has an alert look about him.  With his pointed beard and
 sharp sword the security he provides comes mostly from his presence."""
 level = 15
+hitroll = 3
+ac = [0, 0, 0, 80]
+damage_type = "pierce"
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+res_flags = ["magic"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -168,6 +213,12 @@ description = """
 This soldier greets you with a bared blade. I don't think you'll be
 sneaking up on him."""
 level = 15
+hitroll = 3
+ac = [0, 0, 0, 80]
+damage_type = "slash"
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+res_flags = ["magic"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -190,6 +241,12 @@ long_desc = "This Sleepy Soldier doesn't see you."
 description = """
 Without looking in his eye you have no idea how tough he would be."""
 level = 17
+hitroll = 0
+ac = [-30, -30, -30, 70]
+damage_type = "pierce"
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+res_flags = ["magic"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -213,6 +270,12 @@ description = """
 This female Watcher is one of those cultist who protect the rest of the
 world from those they determine are evil."""
 level = 20
+hitroll = 4
+ac = [-40, -60, -60, 0]
+damage_type = "bash"
+off_flags = ["bash", "berserk", "disarm", "fast", "parry", "rescue"]
+res_flags = ["magic"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "sentinel", "warrior"]
 affected_by = ["infrared"]
@@ -236,6 +299,11 @@ short_desc = "the fat pig"
 long_desc = "A fat pig is rooting around for food."
 description = "This fat pig is very hungry. He eats just about ANYTHING."
 level = 5
+hitroll = 0
+ac = [50, 50, 50, 90]
+damage_type = "pierce"
+off_flags = ["backstab", "berserk", "disarm", "kick"]
+race = "pig"
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 affected_by = ["detect_good"]
@@ -260,6 +328,12 @@ description = """
 The dog looks back at you.  After a few moments it sits up..
 puts a cigar in it's mouth, lights it, and asks, "So..what's up bub?""""
 level = 7
+hitroll = 3
+ac = [40, 40, 40, 80]
+damage_type = "pierce"
+off_flags = ["bash", "berserk", "fast", "rescue"]
+res_flags = ["magic"]
+race = "dog"
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["detect_hidden"]
@@ -284,6 +358,15 @@ description = """
 This chicken is so skinny it WOULDN'T provide enough meat for a soup.
         ************ IT ESCAPE FROM KFC BAR !!! *************"""
 level = 35
+hitroll = 0
+ac = [-110, -110, -110, 50]
+damage_type = "pierce"
+off_flags = ["area_attack", "berserk", "dodge", "fast", "kick", "kick_dirt"]
+imm_flags = ["magic"]
+res_flags = ["magic"]
+vuln_flags = ["slash", "poison"]
+size = "small"
+race = "song bird"
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "practice", "cleric", "mage", "warrior"]
 affected_by = ["flying"]
@@ -308,6 +391,11 @@ description = """
 This guy looks like an advertisement for a wilderness clothing company.
 >From his buckskins to his fur cap he fits the part."""
 level = 5
+hitroll = 1
+ac = [70, 50, 50, 100]
+off_flags = ["backstab", "kick_dirt", "trip"]
+vuln_flags = ["magic"]
+race = "human"
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
 alignment = 0
@@ -331,6 +419,11 @@ description = """
 She appears to be distracted by some inner thought. Although she seems
 to be in good health, her eyes are puffy and red."""
 level = 8
+hitroll = 0
+ac = [30, 30, 30, 90]
+off_flags = ["backstab", "kick_dirt", "trip"]
+vuln_flags = ["magic"]
+race = "human"
 sex = "female"
 act_flags = ["npc", "scavenger", "thief"]
 alignment = 0
@@ -353,6 +446,13 @@ long_desc = "An Elven Man is here, looking for something."
 description = """
 The Elven Man looks at you intently before continuing on his way."""
 level = 13
+hitroll = 0
+ac = [-10, -10, -10, 80]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+imm_flags = ["summon"]
+res_flags = ["charm"]
+race = "elf"
 sex = "male"
 act_flags = ["npc", "sentinel", "practice", "mage"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "dark_vision"]
@@ -375,6 +475,13 @@ short_desc = "the Elven Woman"
 long_desc = "A beautiful Elven Woman paces back and forth before you."
 description = "Looking into her eyes causes you great fear."
 level = 16
+hitroll = 0
+ac = [-20, -20, -20, 70]
+damage_type = "energy"
+off_flags = ["dodge", "fade"]
+imm_flags = ["summon"]
+res_flags = ["charm"]
+race = "elf"
 sex = "female"
 act_flags = ["npc", "sentinel", "practice", "mage"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "dark_vision"]
@@ -397,6 +504,14 @@ short_desc = "the Dwarven Woman"
 long_desc = "The Dwarven Woman is smacking her fist in her hand."
 description = "Stand back!  She's about to blow!!!"
 level = 16
+hitroll = 0
+ac = [-20, -20, -20, 70]
+damage_type = "bash"
+off_flags = ["bash", "berserk", "disarm", "kick", "parry"]
+imm_flags = ["summon"]
+res_flags = ["poison", "disease"]
+vuln_flags = ["drowning"]
+race = "unique"
 sex = "female"
 act_flags = ["npc", "sentinel", "practice", "warrior"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -419,6 +534,14 @@ short_desc = "the Dwarven Man"
 long_desc = "A large Dwarven Man walks by you."
 description = "He looks back at you, then dismisses you as unimportant."
 level = 19
+hitroll = 0
+ac = [-40, -40, -40, 70]
+damage_type = "bash"
+off_flags = ["bash", "berserk", "disarm", "kick", "parry"]
+imm_flags = ["summon"]
+res_flags = ["poison", "disease"]
+vuln_flags = ["drowning"]
+race = "unique"
 sex = "male"
 act_flags = ["npc", "sentinel", "practice", "warrior"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -445,6 +568,14 @@ about 250 pounds his bite will be worse than you would think. He is lightly
 armed and armored, doesn't wear boots, and has claws and talons with which
 to fight."""
 level = 12
+hitroll = 0
+ac = [0, 0, 0, 80]
+damage_type = "slash"
+off_flags = ["bash", "kick"]
+res_flags = ["poison", "mental", "disease"]
+vuln_flags = ["magic", "holy", "light", "silver"]
+size = "huge"
+race = "goblin"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["infrared"]

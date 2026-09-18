@@ -125,6 +125,7 @@ type MobileData struct {
 	Level       int       `toml:"level"`
 	Sex         string    `toml:"sex"`
 	Race        string    `toml:"race"`
+	Size        string    `toml:"size"`
 	Alignment   int       `toml:"alignment"`
 	ActFlags    []string  `toml:"act_flags"`
 	AffectedBy  []string  `toml:"affected_by"`
