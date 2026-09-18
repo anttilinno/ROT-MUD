@@ -1,0 +1,230 @@
+# Demonic armour: one template per slot; tier and owner are set when forged
+# (types.ForgeDemonic). Vnums 29650-29661 = types.VnumDemonicFirst..Last.
+
+[[objects]]
+vnum = 29650
+keywords = ["demonic", "ring"]
+short_desc = "a demonic ring"
+long_desc = "A demonic ring smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "finger"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29651
+keywords = ["demonic", "collar"]
+short_desc = "a demonic collar"
+long_desc = "A demonic collar smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "neck"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29652
+keywords = ["demonic", "plate", "breastplate", "armour"]
+short_desc = "a demonic breastplate"
+long_desc = "A demonic breastplate smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "body"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29653
+keywords = ["demonic", "helmet", "helm"]
+short_desc = "a demonic helmet"
+long_desc = "A demonic helmet smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "head"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29654
+keywords = ["demonic", "leggings"]
+short_desc = "a pair of demonic leggings"
+long_desc = "A pair of demonic leggings smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "legs"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29655
+keywords = ["demonic", "boots"]
+short_desc = "a pair of demonic boots"
+long_desc = "A pair of demonic boots smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "feet"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29656
+keywords = ["demonic", "gauntlets"]
+short_desc = "a pair of demonic gauntlets"
+long_desc = "A pair of demonic gauntlets smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "hands"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29657
+keywords = ["demonic", "sleeves"]
+short_desc = "a pair of demonic sleeves"
+long_desc = "A pair of demonic sleeves smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "arms"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29658
+keywords = ["demonic", "cape", "cloak"]
+short_desc = "a demonic cape"
+long_desc = "A demonic cape smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "about"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29659
+keywords = ["demonic", "belt"]
+short_desc = "a demonic belt"
+long_desc = "A demonic belt smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "waist"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29660
+keywords = ["demonic", "bracer"]
+short_desc = "a demonic bracer"
+long_desc = "A demonic bracer smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "wrist"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3
+
+[[objects]]
+vnum = 29661
+keywords = ["demonic", "visor"]
+short_desc = "a demonic visor"
+long_desc = "A demonic visor smoulders here, crafted from hellforged steel."
+item_type = "armor"
+level = 1
+weight = 5
+cost = 0
+material = "hellsteel"
+wear_flags = ["take", "face"]
+extra_flags = ["magic"]
+
+  [objects.armor]
+  ac_pierce = 3
+  ac_bash = 3
+  ac_slash = 3
+  ac_exotic = 3

@@ -224,6 +224,9 @@ func GetDamroll(ch *types.Character) int {
 	}
 	dr += strTable[str][1]
 
+	pieces, _ := ch.DemonicSet()
+	dr += pieces * types.DemonDamrollPerPiece
+
 	return dr
 }
 

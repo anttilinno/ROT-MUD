@@ -2,7 +2,7 @@
 
 ## Status
 
-Design draft, 2026-09-18. Not yet on the roadmap. **T0 implemented** on branch `feat/tier2-godwars`. Reference codebase: GodWars Deluxe fork at
+Design draft, 2026-09-18. Not yet on the roadmap. **T0 + T1 implemented** on branch `feat/tier2-godwars`. Reference codebase: GodWars Deluxe fork at
 `~/Repos/Misc/GodWars` (github.com/benjamin-small/GodWars). Port **mechanics and ideas**, not code —
 GodWars file headers still carry Richard Woolcock's "not to be copied without permission" notice.
 
@@ -69,7 +69,7 @@ Hybrids (abomination, lich-as-vamp+mage, baali, …) are **out of scope** — th
   `ch.ResolvedTraits()` composition point — race + class + bought powers + worn-item traits, cached and
   invalidated on equip/unequip/purchase (T1).
 
-### T1 — Demon items (12-slot set)
+### T1 — Demon items (12-slot set) ✅
 
 - Slot → `WearLocation` mapping (no new wear locations):
 
@@ -82,16 +82,24 @@ Hybrids (abomination, lich-as-vamp+mage, baali, …) are **out of scope** — th
   | leggings | Legs | bracer | WristL/R |
   | boots | Feet | visor | Face |
 
-- 12 object templates in a new `data/areas/relic/` (or similar) area, name/short-desc templated by tier
-  (`a %s demonic ring`), matching GodWars' one-template-per-slot trick.
-- Tiers: black → grey → purple → red → brass. Each piece: set tag `demonic`, tier, `Owner` = crafter
-  (existing `Object.Owner`), anti-good, wear restricted to demons.
-- Set bonus **recomputed from worn equipment** on every equip/unequip, not a running counter (GodWars'
-  `pcdata->demonic` counter drifts across death/quit paths):
-  - per piece: damage bonus (ROT has no damcap; use `DamRoll` modifier or % damage — tune in sim)
-  - purple/red/brass: +3/+4/+5 % spell-fizzle chance per piece → new `spell_fizzle` modifier axis,
-    checked once in the spell-hit path (`pkg/magic`)
-- Timer decay message "vanishes in a blast of flames" when a demonic item decays.
+- As built:
+  - `data/areas/relic`: 12 templates at vnums 29650–29661 (GodWars' relic range), level 1, named
+    "a demonic <slot>". `types.ForgeDemonic(obj, tier, owner)` inserts the tier colour
+    ("a purple demonic ring") and binds the piece; T3's `demonarmour` command calls it. `oload`
+    gives an unforged, unbound piece (counts as black).
+  - `Object.Tier` added and persisted. Tiers: black, grey, purple, red, brass.
+  - `ch.DemonicSet()` recomputes pieces and fizzle chance from worn equipment on every call: no
+    running counter (GodWars' drifted), no cache. Non-demons get nothing.
+  - Per piece: +2 damroll (`types.DemonDamrollPerPiece`, applied in `combat.GetDamroll`).
+  - Purple/red/brass: +3/+4/+5 % hostile-spell fizzle per piece (full brass = 60 %), checked by
+    `Spell.Fizzles` at every offensive-spell call site (cast, object cast, wand/scroll/etc.).
+  - Wear: demons only; a bound piece only by its owner.
+- Dropped from the original plan:
+  - Traits composition point: `DemonicSet` is the only consumer, so there's nothing to compose yet.
+    Revisit with T2 powers.
+  - Decay message: forged pieces have no timer.
+- Known gap (pre-existing, not T1's): armour `Values` AC is never applied on equip anywhere in ROT,
+  so the templates' `ac_*` values are inert. Fixing it rebalances all armour; track separately.
 
 ### T2 — Demon powers
 

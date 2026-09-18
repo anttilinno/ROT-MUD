@@ -103,6 +103,7 @@ type ObjectSave struct {
 	Cost       int    `json:"cost,omitempty"`        // Base value in gold
 	Material   string `json:"material,omitempty"`    // Material type
 	Owner      string `json:"owner,omitempty"`       // Player owner (for quest items)
+	Tier       int    `json:"tier,omitempty"`        // Crafted tier
 	Values     [5]int `json:"values,omitempty"`      // Type-specific values
 
 	// Object affects
@@ -315,6 +316,7 @@ func (p *PlayerPersistence) objectToSave(obj *types.Object) ObjectSave {
 		Cost:       obj.Cost,
 		Material:   obj.Material,
 		Owner:      obj.Owner,
+		Tier:       obj.Tier,
 		Values:     obj.Values,
 	}
 
@@ -473,6 +475,7 @@ func (p *PlayerPersistence) saveToObject(save *ObjectSave) *types.Object {
 		obj.Owner = save.Owner
 	}
 	obj.Values = save.Values
+	obj.Tier = save.Tier
 
 	// Restore object affects
 	for _, affSave := range save.Affects {

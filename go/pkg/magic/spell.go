@@ -1,6 +1,7 @@
 package magic
 
 import (
+	"rotmud/pkg/combat"
 	"rotmud/pkg/types"
 )
 
@@ -191,4 +192,15 @@ func (r *SpellRegistry) All() []*Spell {
 		spells = append(spells, spell)
 	}
 	return spells
+}
+
+// Fizzles reports whether an offensive spell harmlessly fizzles on a target
+// wearing demonic armour (GodWars: "Nothing happens.").
+func (s *Spell) Fizzles(target interface{}) bool {
+	victim, ok := target.(*types.Character)
+	if !ok || s.Target != TargetCharOffense {
+		return false
+	}
+	_, fizzle := victim.DemonicSet()
+	return fizzle > 0 && combat.NumberPercent() <= fizzle
 }

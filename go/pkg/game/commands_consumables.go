@@ -503,6 +503,10 @@ func (d *CommandDispatcher) castObjectSpell(ch, victim *types.Character, obj *ty
 		target = ch
 	}
 
+	if spell.Fizzles(target) {
+		d.send(ch, "Nothing happens.\r\n")
+		return
+	}
 	spell.Func(ch, level, target)
 }
 

@@ -1,0 +1,8 @@
+id = "relic"
+name = "Relics"
+credits = "{ ALL } Tier 2 relics (GodWars-style demonic armour)"
+reset_interval = 120
+
+[vnum_range]
+min = 29600
+max = 29699

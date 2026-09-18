@@ -968,6 +968,17 @@ func (d *CommandDispatcher) wearObjWithReplace(ch *types.Character, obj *types.O
 		return false
 	}
 
+	if types.IsDemonic(obj) {
+		if ch.Class != types.ClassDemon {
+			d.send(ch, fmt.Sprintf("%s sears your flesh; only a demon can wear it.\r\n", capitalizeFirst(obj.ShortDesc)))
+			return false
+		}
+		if obj.Owner != "" && obj.Owner != ch.Name {
+			d.send(ch, fmt.Sprintf("%s is bound to %s.\r\n", capitalizeFirst(obj.ShortDesc), obj.Owner))
+			return false
+		}
+	}
+
 	// Determine wear location
 	loc := wearLocationForItem(obj)
 	if loc == types.WearLocNone {

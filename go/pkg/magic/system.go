@@ -133,6 +133,11 @@ func (m *MagicSystem) Cast(caster *types.Character, spellName string, targetArg 
 		return false
 	}
 
+	if spell.Fizzles(target) {
+		m.send(caster, "Nothing happens.\r\n")
+		return false
+	}
+
 	// Cast the spell
 	success := spell.Func(caster, caster.Level, target)
 
@@ -796,6 +801,11 @@ func (m *MagicSystem) ObjectCast(spellSlot int, level int, caster *types.Charact
 		target = obj
 	default:
 		target = nil
+	}
+
+	if spell.Fizzles(target) {
+		m.send(caster, "Nothing happens.\r\n")
+		return false
 	}
 
 	// Cast the spell

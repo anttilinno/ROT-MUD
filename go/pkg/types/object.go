@@ -30,6 +30,7 @@ type Object struct {
 	Enchanted bool       // Has been enchanted
 	Affects   AffectList // Object affects (when worn)
 	Owner     string     // Player owner (for quest items)
+	Tier      int        // Crafted tier (demonic armour: DemonBlack..DemonBrass)
 	Clan      int        // Clan restriction
 	Class     int        // Class restriction
 
