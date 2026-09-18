@@ -14,7 +14,6 @@ Features implemented but disabled until prerequisites are met:
 Features from the original C codebase not yet implemented:
 
 ### Commands
-- reroll/rerol - Tier/remort system restart
 - ooc - Out-of-character channel
 - social (global) - Global social emotes
 - gmote - Global emote
@@ -35,7 +34,6 @@ Features from the original C codebase not yet implemented:
 - spec_cast_clan_adept - Clan hall healer NPC
 
 ### Systems
-- Tier/Remort - Multi-tier advancement with bonuses
 - Wedding Board - Wedding announcements
 - Jukebox Lyrics Tick - Tick-based lyrics display
 - Corner Room - Punishment room with restrictions
@@ -61,11 +59,12 @@ Optional features for future implementation:
 - Spouse commands
 - Divorce mechanics
 
-### Tier/Remort System
-- Multi-tier advancement beyond max level
-- Remort to restart with bonuses
-- Tier-specific skills/spells
-- Legacy stat bonuses
+### Tier-2 follow-ups
+Tier 2 (reroll + GodWars-style supernatural classes) is implemented — see
+`.planning/TIER2-GODWARS.md`. Still open:
+- Skill tables for tier-2 characters whose origin is ranger, druid or ghoul
+- Deferred GodWars pieces: demon-lord/champion hierarchy, weaponform, head/tail mutations, imp/eyespy/firewall
+- Tier-2 in the combat simulator (origin class + powers + demonic gear)
 
 ### Clan Halls
 - Clan-owned rooms/areas

@@ -2,9 +2,10 @@
 
 ## Status
 
-Design draft, 2026-09-18. Not yet on the roadmap. **T0–T4 implemented** on branch `feat/tier2-godwars`. Reference codebase: GodWars Deluxe fork at
-`~/Repos/Misc/GodWars` (github.com/benjamin-small/GodWars). Port **mechanics and ideas**, not code —
-GodWars file headers still carry Richard Woolcock's "not to be copied without permission" notice.
+**T0–T4 implemented** (2026-09-18), roadmap Phase 15. Reference codebase: GodWars Deluxe fork
+(github.com/benjamin-small/GodWars @ `9f54659`); how to get it on a new machine and where to look:
+[`docs/REFERENCES.md`](../docs/REFERENCES.md). Port **mechanics and ideas**, not code — GodWars file
+headers still carry Richard Woolcock's "not to be copied without permission" notice.
 
 ## Decisions taken
 

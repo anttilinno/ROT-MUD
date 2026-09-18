@@ -9,7 +9,7 @@ This is a **modified fork** of the original port, intended for continued develop
 - Full combat system with multi-hit attacks, dual wielding, dodge, parry, shield block
 - 60+ spells across damage, healing, buffs, debuffs, and utility
 - Skill system with class-based availability and improvement
-- 4 classes (Mage, Cleric, Thief, Warrior) and 5 races
+- 7 classes and 19 races, plus 6 GodWars-style tier-2 classes reached by `reroll` + a rite
 - Clan, quest, pet/follower, shop, and note systems
 - 61 areas with 4,072 rooms, 1,341 mobiles, 1,677 objects
 - WebSocket support, REST API, Prometheus metrics
@@ -17,6 +17,8 @@ This is a **modified fork** of the original port, intended for continued develop
 See [docs/FEATURES.md](docs/FEATURES.md) for the complete feature list.
 
 See [docs/ROADMAP.md](docs/ROADMAP.md) for planned and unimplemented features.
+
+See [docs/REFERENCES.md](docs/REFERENCES.md) for external sources (GodWars, the ROT 1.4 original) and import tools.
 
 ## Quick Start
 

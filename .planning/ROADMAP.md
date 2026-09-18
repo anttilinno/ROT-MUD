@@ -26,6 +26,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 11: Area & Item Traits** - Extend the existing area loader with trait parsing for rooms and items; annotate existing area files with NoMagic zones, silver/fire weapons, etc.
 - [ ] **Phase 12: Extensibility Proof** - New race (Lizardman) added by data file only, zero Go diff, with Lua behavior hook
 - [ ] **Phase 13: Economic Overhaul** - Add durability/repair, smith custom crafting, identify fees, and bank fees so the economy has real coin sinks; rebalance mob drops to a stable source/sink ratio (see `.planning/ECONOMY.md` for sub-phase detail)
+- [x] **Phase 15: Tier-2 GodWars Classes** - Reroll + per-class rites into six supernatural classes with bought powers, demonic armour and a Hall of Rites (see `.planning/TIER2-GODWARS.md`) (completed 2026-09-18)
+- [ ] **Phase 16: Combat & Mob Balance** - Restore mob data lost in conversion, ROM mob spawning, stat consistency, gear caps and mob difficulty floors, measured with the world-data combat sim — *mob/gear pass landed 2026-09-18; class balance open*
 - [ ] **Phase 14: LLM-Driven NPCs** - Local-LLM-backed dialog for shopkeepers/smiths/sages (Tier 1) and plan-once tactical combat for area bosses (Tier 2), with first-class scripted fallback, circuit breaker, and feature flag (see `.planning/LLM-NPC.md` for sub-phase detail) — *N1+N2 exploratory spike landed 2026-06-03 (`pkg/llm`, Otho live); not yet a formally planned/verified phase*
 
 ## Phase Details
@@ -259,6 +261,41 @@ Plans:
 
 **Reference**: `.planning/LLM-NPC.md` for sub-phase breakdown (N1 worker pool → N6 Tier 2 rollout), tool surface, schema definitions, and risk register
 
+### Phase 15: Tier-2 GodWars Classes
+
+**Goal**: The unreachable ROM remort classes are replaced by GodWars-style supernatural classes that heroes reach in play
+**Depends on**: None (hand-coded Go now; joins the Phase 8 TOML migration later)
+**Reference**: `.planning/TIER2-GODWARS.md` (design + as-built), `docs/REFERENCES.md` (GodWars source)
+**Status**: Complete 2026-09-18 on branch `feat/tier2-godwars`
+
+  1. `reroll confirm` (hero) + a class rite at the Hall of Rites ascends into demon, vampire (ghouls only), werewolf, magus, highlander or angel; level resets to 1, origin-class skills kept (`SkillClass`)
+  2. 45 bought powers (`powers`) derived at query time via `IsAffected`/`GetStat`/`GetHitroll`/`GetDamroll`/`CheckImmune`; active powers `travel`, room blasts, timed battle forms
+  3. 12-slot demonic armour in 5 tiers forged at the demon lord (`demonarmour`), set bonus from worn gear, spell-fizzle, sacrifice refund
+  4. Kill faucet: tier-2 players earn the victim's level in class currency (`Combat.OnKill` wired)
+
+**Open**: skill tables for ranger/druid/ghoul origins; tier-2 in the combat sim; deferred GodWars pieces (hierarchy, weaponform, mutations)
+
+### Phase 16: Combat & Mob Balance
+
+**Goal**: Mobs, gear and fights behave like ROM and hit the 15-22 s fight target, verified by simulation against real world data
+**Depends on**: None
+**Reference**: `go/pkg/combat/combat_sim_world_test.go` (world sim), `docs/REFERENCES.md` (re-import tools)
+**Status**: Mob/gear pass landed 2026-09-18 on branch `feat/tier2-godwars`
+
+Done:
+
+  1. Mob data lost in the .are→TOML conversion (hitroll, AC, damage type, off/imm/res/vuln, size, race, ranger/druid/vampire act flags) re-imported for 1341 mobs; spawn follows ROM `create_mobile` (stats, AC); `CheckImmune` follows ROM (weapon/magic umbrella flags)
+  2. Stat consistency: one regen per tick, affects tick once, armour AC applies, item and spell modifiers applied exactly once on every path, saves store base stats and dispel spells on quit
+  3. Level 60+ item bonuses capped per item; mob HP floor at every level; damage/hitroll/AC floor from L60
+  4. World sim: best-in-slot vs median mob lasts 11-26 s at L10-L60 for every class except mage and thief
+
+Open:
+
+  1. Mage kills everything in 4-8 s up to L60; thief backstab one-shots from L75
+  2. Best-in-slot still beats the toughest mob at every level from L60; consider a per-character total gear cap
+  3. The sim's caster-mob model (L75 median Ramses kills everyone in 2-5 s) needs checking against real spec_cast behaviour
+  4. Mob race-table flags (`const.c race_table`) not imported; `OffFlags` not used by combat
+
 ## Progress
 
 **Execution Order:**
@@ -290,3 +327,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 12. Extensibility Proof | 0/TBD | Not started | - |
 | 13. Economic Overhaul | 0/TBD | Not started | - |
 | 14. LLM-Driven NPCs | 0/TBD | Spike (N1+N2 landed) | - |
+| 15. Tier-2 GodWars Classes | T0–T4 | Complete | 2026-09-18 |
+| 16. Combat & Mob Balance | mob/gear pass | In progress | - |
