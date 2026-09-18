@@ -699,6 +699,13 @@ func runSim(classIdx, raceIdx, level, n int) simResult {
 
 // runSimWith runs n fights using a custom mob factory, enabling caster-mob tests.
 func runSimWith(classIdx, raceIdx, level, n int, mobFn func(int) *types.Character) simResult {
+	return runSimFull(classIdx, raceIdx, level, n, makePlayer, mobFn)
+}
+
+// runSimFull runs n fights with custom player and mob factories.
+func runSimFull(classIdx, raceIdx, level, n int,
+	playerFn func(classIdx, raceIdx, level int) *types.Character,
+	mobFn func(int) *types.Character) simResult {
 	cs := NewCombatSystem()
 	cs.Output = func(_ *types.Character, _ string) {}
 	cs.SkillGetter = func(ch *types.Character, skillName string) int {
@@ -733,7 +740,7 @@ func runSimWith(classIdx, raceIdx, level, n int, mobFn func(int) *types.Characte
 	res.n = n
 
 	for i := 0; i < n; i++ {
-		p := makePlayer(classIdx, raceIdx, level)
+		p := playerFn(classIdx, raceIdx, level)
 		m := mobFn(level)
 		isMobCaster := m.Act.Has(types.ActMage) || m.Act.Has(types.ActCleric)
 
