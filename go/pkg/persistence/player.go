@@ -85,9 +85,6 @@ type PlayerSave struct {
 	// Inventory and equipment
 	Inventory []ObjectSave          `json:"inventory,omitempty"`
 	Equipment map[string]ObjectSave `json:"equipment,omitempty"`
-
-	// Affects
-	Affects []AffectSave `json:"affects,omitempty"`
 }
 
 // ObjectSave represents a saved object
@@ -120,16 +117,6 @@ type ObjectSave struct {
 
 // ObjectAffectSave represents an affect on an object
 type ObjectAffectSave struct {
-	Type      string `json:"type"`
-	Level     int    `json:"level"`
-	Duration  int    `json:"duration"`
-	Location  int    `json:"location"`
-	Modifier  int    `json:"modifier"`
-	BitVector uint64 `json:"bitvector"`
-}
-
-// AffectSave represents a saved affect
-type AffectSave struct {
 	Type      string `json:"type"`
 	Level     int    `json:"level"`
 	Duration  int    `json:"duration"`
@@ -211,8 +198,16 @@ func (p *PlayerPersistence) playerPath(name string) string {
 	return filepath.Join(p.BasePath, safeName+".json")
 }
 
-// characterToSave converts a Character to a PlayerSave
+// characterToSave converts a Character to a PlayerSave.
+//
+// Vitals, hitroll and damroll are saved at their base values: modifiers from
+// worn items and active affects are subtracted. Worn items re-apply on load
+// (Character.Equip); spell affects are not saved at all, so quitting dispels
+// them. This keeps stats from drifting across save/load.
 func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
+	maxHit := ch.MaxHit - ch.ModifierSum(types.ApplyHit)
+	maxMana := ch.MaxMana - ch.ModifierSum(types.ApplyMana)
+	maxMove := ch.MaxMove - ch.ModifierSum(types.ApplyMove)
 	save := &PlayerSave{
 		Name:      ch.Name,
 		Level:     ch.Level,
@@ -220,19 +215,19 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 		Race:      ch.Race,
 		Sex:       int(ch.Sex),
 		Alignment: ch.Alignment,
-		Hit:       ch.Hit,
-		MaxHit:    ch.MaxHit,
-		Mana:      ch.Mana,
-		MaxMana:   ch.MaxMana,
-		Move:      ch.Move,
-		MaxMove:   ch.MaxMove,
+		Hit:       min(ch.Hit, maxHit),
+		MaxHit:    maxHit,
+		Mana:      min(ch.Mana, maxMana),
+		MaxMana:   maxMana,
+		Move:      min(ch.Move, maxMove),
+		MaxMove:   maxMove,
 		Stats:     ch.PermStats,
 		Coin:      ch.Coin,
 		Exp:       int(ch.Exp),
 		Trust:     ch.Trust,
 		Played:    ch.Played,
-		Hitroll:   ch.HitRoll,
-		Damroll:   ch.DamRoll,
+		Hitroll:   ch.HitRoll - ch.ModifierSum(types.ApplyHitroll),
+		Damroll:   ch.DamRoll - ch.ModifierSum(types.ApplyDamroll),
 	}
 
 	// Save room vnum
@@ -292,17 +287,7 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 		}
 	}
 
-	// Save affects
-	for _, aff := range ch.Affected.All() {
-		save.Affects = append(save.Affects, AffectSave{
-			Type:      aff.Type,
-			Level:     aff.Level,
-			Duration:  aff.Duration,
-			Location:  int(aff.Location),
-			Modifier:  aff.Modifier,
-			BitVector: uint64(aff.BitVector),
-		})
-	}
+	// Spell affects are deliberately not saved: quitting dispels them.
 
 	return save
 }
@@ -438,7 +423,11 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 		ch.AddInventory(obj)
 	}
 
-	// Restore equipment
+	// Restore equipment onto base armour class; Equip re-applies each item's
+	// affects and AC on top of the base values saved above.
+	for i := range ch.Armor {
+		ch.Armor[i] = 100
+	}
 	for locName, objSave := range save.Equipment {
 		loc := parseWearLocation(locName)
 		if loc != types.WearLocNone {
@@ -447,18 +436,8 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 		}
 	}
 
-	// Restore affects
-	for _, affSave := range save.Affects {
-		aff := types.NewAffect(
-			affSave.Type,
-			affSave.Level,
-			affSave.Duration,
-			types.ApplyType(affSave.Location),
-			affSave.Modifier,
-			types.AffectFlags(affSave.BitVector),
-		)
-		ch.AddAffect(aff)
-	}
+	// Affects in saves written before they were dispelled on quit are ignored:
+	// their modifiers were baked into the saved stats.
 
 	return ch
 }

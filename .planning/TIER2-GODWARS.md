@@ -154,12 +154,19 @@ Hybrids (abomination, lich-as-vamp+mage, baali, …) are **out of scope** — th
   level-1 character. Now `Character.Saveable()` means level > 1 **or** rerolled/ascended.
 - **Affects ticked twice per tick** (server `tickUpdate` and `GameLoop.processAffectDecay`), halving
   every spell duration. The server copy is removed.
-- **Still open (pre-existing, not fixed):**
-  - HP/mana/move regen also runs twice per tick (server `tickUpdate` and
-    `GameLoop.processRegeneration`). Fixing it halves regen game-wide, which is a balance decision.
-  - Armour AC values are never applied on equip.
-  - Buff affects are re-added on load without their stat modifiers but reversed on expiry, so a
-    save/load mid-buff permanently lowers the stat.
+- **Fixed in a follow-up** (stat consistency):
+  - HP/mana/move regen ran twice per tick. The server copy is dropped; ROM-style
+    `GameLoop.processRegeneration` remains.
+  - Armour AC now applies. `Character.Equip`/`Unequip` apply and remove item affects plus ROM
+    `apply_ac` AC (body ×3; head/legs/about ×2; rings/light/float 0) on every path: wear, remove,
+    death, disarm, consumed wands. Game code no longer applies item affects separately.
+  - `Character.AddAffect`/`RemoveAffect` apply and reverse their modifier. Game-code affects
+    (berserk, dirt kick, weaken, poisoned food, plague spread, ...) used to skip applying but still
+    reversed on expiry, permanently inverting the stat.
+  - Save/load: base stats are saved (item and affect modifiers stripped). Spell affects are not
+    saved, i.e. dispelled on quit. Load starts AC at 100 and re-equips. The duplicate
+    login-time `applyEquipmentAffects` is removed.
+- **Deferred by decision:** skill tables for ranger/druid/ghoul origins; wiring quests to `OnKill`.
 
 ## Relation to existing plans
 

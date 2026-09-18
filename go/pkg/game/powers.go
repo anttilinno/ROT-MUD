@@ -22,7 +22,7 @@ const (
 
 // blastPowers maps area-damage power commands to their damage type and messages.
 var blastPowers = map[string]struct {
-	damType       types.DamageType
+	damType        types.DamageType
 	toChar, toRoom string
 }{
 	"inferno":   {types.DamFire, "You call forth the fires of hell!", "$n calls forth the fires of hell!"},

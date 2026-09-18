@@ -15,7 +15,6 @@ import (
 	"rotmud/pkg/help"
 	"rotmud/pkg/llm"
 	"rotmud/pkg/loader"
-	"rotmud/pkg/magic"
 	"rotmud/pkg/persistence"
 	"rotmud/pkg/shops"
 	"rotmud/pkg/types"
@@ -1105,11 +1104,6 @@ func (s *Server) enterGame(session *Session) {
 		}
 	}
 
-	// Reapply equipment affects for returning players
-	if !s.Login.IsNewPlayer() {
-		s.applyEquipmentAffects(ch)
-	}
-
 	// Otherwise use default temple
 	if startRoom == nil {
 		startRoom = s.getOrCreateStartRoom()
@@ -1135,19 +1129,6 @@ func (s *Server) enterGame(session *Session) {
 
 	// Reset login state for next connection
 	s.Login.ResetState()
-}
-
-// applyEquipmentAffects applies all stat modifiers from equipped items
-// This is called when a player logs in to restore equipment bonuses
-func (s *Server) applyEquipmentAffects(ch *types.Character) {
-	for _, obj := range ch.Equipment {
-		if obj == nil {
-			continue
-		}
-		for _, af := range obj.Affects.All() {
-			magic.ApplyModifier(ch, af)
-		}
-	}
 }
 
 // getOrCreateStartRoom returns the starting room
@@ -1364,83 +1345,8 @@ func (s *Server) dispatchLLMResult(res llm.Result) {
 func (s *Server) tickUpdate() {
 	// Use GetCharacters() for thread-safe iteration
 	for _, ch := range s.GameLoop.GetCharacters() {
-		// HP regeneration
-		if ch.Hit < ch.MaxHit {
-			// Base regen based on position
-			var gain int
-			switch ch.Position {
-			case types.PosSleeping:
-				gain = ch.MaxHit / 8
-			case types.PosResting:
-				gain = ch.MaxHit / 12
-			case types.PosSitting:
-				gain = ch.MaxHit / 16
-			default:
-				gain = ch.MaxHit / 24
-			}
-
-			// Room bonus
-			if ch.InRoom != nil {
-				gain = gain * ch.InRoom.HealRate / 100
-			}
-
-			// Minimum gain
-			if gain < 1 {
-				gain = 1
-			}
-
-			ch.Hit = min(ch.Hit+gain, ch.MaxHit)
-		}
-
-		// Mana regeneration
-		if ch.Mana < ch.MaxMana {
-			var gain int
-			switch ch.Position {
-			case types.PosSleeping:
-				gain = ch.MaxMana / 6
-			case types.PosResting:
-				gain = ch.MaxMana / 10
-			case types.PosSitting:
-				gain = ch.MaxMana / 14
-			default:
-				gain = ch.MaxMana / 20
-			}
-
-			// Intelligence bonus
-			gain += ch.GetStat(types.StatInt) / 2
-
-			// Room bonus
-			if ch.InRoom != nil {
-				gain = gain * ch.InRoom.ManaRate / 100
-			}
-
-			if gain < 1 {
-				gain = 1
-			}
-
-			ch.Mana = min(ch.Mana+gain, ch.MaxMana)
-		}
-
-		// Move regeneration
-		if ch.Move < ch.MaxMove {
-			var gain int
-			switch ch.Position {
-			case types.PosSleeping:
-				gain = ch.MaxMove / 4
-			case types.PosResting:
-				gain = ch.MaxMove / 8
-			case types.PosSitting:
-				gain = ch.MaxMove / 12
-			default:
-				gain = ch.MaxMove / 16
-			}
-
-			if gain < 1 {
-				gain = 1
-			}
-
-			ch.Move = min(ch.Move+gain, ch.MaxMove)
-		}
+		// HP/mana/move regeneration runs in GameLoop.processRegeneration (ROM
+		// hit_gain/mana_gain/move_gain); doing it here too doubled regen.
 
 		// Process poison damage
 		if ch.IsAffected(types.AffPoison) && !ch.IsAffected(types.AffSlow) {

@@ -597,10 +597,11 @@ func TestRemoveCommand(t *testing.T) {
 			Modifier: 2,
 		})
 
-		// Equip it (simulating login with equipped items)
+		// Equip it (simulating login with equipped items); Equip applies the affect
 		ch.Equip(sword, types.WearLocWield)
-		// Manually apply affect to simulate proper load
-		ch.HitRoll += 2
+		if ch.HitRoll != initialHitroll+2 {
+			t.Fatalf("Equip should apply +2 hitroll, got %d", ch.HitRoll)
+		}
 
 		d.Dispatch(Command{Character: ch, Input: "remove sword"})
 

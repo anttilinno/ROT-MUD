@@ -299,6 +299,7 @@ func (ch *Character) IsAffected(flag AffectFlags) bool {
 
 // AddAffect adds an affect to the character and updates AffectedBy/ShieldedBy flags
 func (ch *Character) AddAffect(aff *Affect) {
+	ch.Modify(aff, +1)
 	ch.Affected.Add(aff)
 	ch.AffectedBy |= aff.BitVector
 	ch.ShieldedBy |= aff.ShieldVector
@@ -306,6 +307,7 @@ func (ch *Character) AddAffect(aff *Affect) {
 
 // RemoveAffect removes an affect and updates AffectedBy/ShieldedBy flags
 func (ch *Character) RemoveAffect(aff *Affect) {
+	ch.Modify(aff, -1)
 	ch.Affected.Remove(aff)
 	// Recalculate flags from remaining affects
 	ch.AffectedBy = ch.Affected.GetBitVector()
@@ -369,6 +371,7 @@ func (ch *Character) Equip(obj *Object, loc WearLocation) {
 	ch.Equipment[loc] = obj
 	obj.WearLoc = loc
 	obj.CarriedBy = ch
+	ch.itemEffects(obj, loc, +1)
 }
 
 // Unequip removes an object from an equipment slot
@@ -378,6 +381,7 @@ func (ch *Character) Unequip(loc WearLocation) *Object {
 	}
 	obj := ch.Equipment[loc]
 	if obj != nil {
+		ch.itemEffects(obj, loc, -1)
 		obj.WearLoc = WearLocNone
 		ch.Equipment[loc] = nil
 	}

@@ -26,19 +26,13 @@ func AddAffect(ch *types.Character, af *types.Affect) {
 		return
 	}
 
-	// Apply the modifier
-	applyModifier(ch, af)
-
-	// Add to affect list (the character's method handles AffectedBy)
+	// Add to affect list; the character's method applies the modifier and flags
 	ch.AddAffect(af)
 }
 
 // RemoveAffect removes an affect from a character
 func RemoveAffect(ch *types.Character, af *types.Affect) {
-	// Reverse the modifier
-	reverseModifier(ch, af)
-
-	// Remove from list (the character's method handles AffectedBy)
+	// The character's method reverses the modifier and recomputes flags
 	ch.RemoveAffect(af)
 }
 
@@ -74,74 +68,10 @@ func ReverseModifier(ch *types.Character, af *types.Affect) {
 }
 
 // applyModifier applies an affect's stat modifier
-func applyModifier(ch *types.Character, af *types.Affect) {
-	mod := af.Modifier
-
-	switch af.Location {
-	case types.ApplyStr:
-		ch.ModStats[types.StatStr] += mod
-	case types.ApplyDex:
-		ch.ModStats[types.StatDex] += mod
-	case types.ApplyInt:
-		ch.ModStats[types.StatInt] += mod
-	case types.ApplyWis:
-		ch.ModStats[types.StatWis] += mod
-	case types.ApplyCon:
-		ch.ModStats[types.StatCon] += mod
-	case types.ApplyHit:
-		ch.MaxHit += mod
-	case types.ApplyMana:
-		ch.MaxMana += mod
-	case types.ApplyMove:
-		ch.MaxMove += mod
-	case types.ApplyAC:
-		ch.Armor[types.ACPierce] += mod
-		ch.Armor[types.ACBash] += mod
-		ch.Armor[types.ACSlash] += mod
-		ch.Armor[types.ACExotic] += mod
-	case types.ApplyHitroll:
-		ch.HitRoll += mod
-	case types.ApplyDamroll:
-		ch.DamRoll += mod
-	case types.ApplySaves:
-		// ch.Saving += mod (if we add this field)
-	}
-}
+func applyModifier(ch *types.Character, af *types.Affect) { ch.Modify(af, +1) }
 
 // reverseModifier reverses an affect's stat modifier
-func reverseModifier(ch *types.Character, af *types.Affect) {
-	mod := -af.Modifier
-
-	switch af.Location {
-	case types.ApplyStr:
-		ch.ModStats[types.StatStr] += mod
-	case types.ApplyDex:
-		ch.ModStats[types.StatDex] += mod
-	case types.ApplyInt:
-		ch.ModStats[types.StatInt] += mod
-	case types.ApplyWis:
-		ch.ModStats[types.StatWis] += mod
-	case types.ApplyCon:
-		ch.ModStats[types.StatCon] += mod
-	case types.ApplyHit:
-		ch.MaxHit += mod
-	case types.ApplyMana:
-		ch.MaxMana += mod
-	case types.ApplyMove:
-		ch.MaxMove += mod
-	case types.ApplyAC:
-		ch.Armor[types.ACPierce] += mod
-		ch.Armor[types.ACBash] += mod
-		ch.Armor[types.ACSlash] += mod
-		ch.Armor[types.ACExotic] += mod
-	case types.ApplyHitroll:
-		ch.HitRoll += mod
-	case types.ApplyDamroll:
-		ch.DamRoll += mod
-	case types.ApplySaves:
-		// ch.Saving += mod
-	}
-}
+func reverseModifier(ch *types.Character, af *types.Affect) { ch.Modify(af, -1) }
 
 // AffectTick processes affect decay for a character
 // Returns a list of wear-off messages for expired affects

@@ -5,7 +5,6 @@ import (
 	"strconv"
 	"strings"
 
-	"rotmud/pkg/magic"
 	"rotmud/pkg/types"
 )
 
@@ -32,21 +31,6 @@ func parseQuantityArg(args string) (int, string) {
 	}
 
 	return count, parts[1]
-}
-
-// applyObjectAffects applies all of an object's affects to a character (when equipping)
-// Unlike spell affects, object affects just modify stats - they don't add to the Affected list
-func applyObjectAffects(ch *types.Character, obj *types.Object) {
-	for _, af := range obj.Affects.All() {
-		magic.ApplyModifier(ch, af)
-	}
-}
-
-// removeObjectAffects removes all of an object's affects from a character (when unequipping)
-func removeObjectAffects(ch *types.Character, obj *types.Object) {
-	for _, af := range obj.Affects.All() {
-		magic.ReverseModifier(ch, af)
-	}
 }
 
 // Object manipulation commands: get, drop, give, put, sacrifice
@@ -1040,8 +1024,6 @@ func (d *CommandDispatcher) wearObjWithReplace(ch *types.Character, obj *types.O
 
 	// Remove existing equipment if present
 	if existing := ch.GetEquipment(loc); existing != nil {
-		// Remove affects from the old item
-		removeObjectAffects(ch, existing)
 		// Unequip and put back in inventory
 		ch.Unequip(loc)
 		ch.AddInventory(existing)
@@ -1052,9 +1034,6 @@ func (d *CommandDispatcher) wearObjWithReplace(ch *types.Character, obj *types.O
 	// Equip the item
 	ch.RemoveInventory(obj)
 	ch.Equip(obj, loc)
-
-	// Apply object affects to character
-	applyObjectAffects(ch, obj)
 
 	d.send(ch, fmt.Sprintf("You wear %s %s.\r\n", obj.ShortDesc, wearLocationName(loc)))
 	ActToRoom("$n wears $p.", ch, nil, obj, d.Output)
@@ -1130,9 +1109,6 @@ func (d *CommandDispatcher) cmdWield(ch *types.Character, args string) {
 	// Equip the weapon
 	ch.RemoveInventory(obj)
 	ch.Equip(obj, types.WearLocWield)
-
-	// Apply object affects to character
-	applyObjectAffects(ch, obj)
 
 	d.send(ch, fmt.Sprintf("You wield %s.\r\n", obj.ShortDesc))
 	ActToRoom("$n wields $p.", ch, nil, obj, d.Output)
@@ -1213,9 +1189,6 @@ func (d *CommandDispatcher) cmdSecond(ch *types.Character, args string) {
 	ch.RemoveInventory(obj)
 	ch.Equip(obj, types.WearLocSecondary)
 
-	// Apply object affects to character
-	applyObjectAffects(ch, obj)
-
 	d.send(ch, fmt.Sprintf("You wield %s in your off-hand.\r\n", obj.ShortDesc))
 	ActToRoom("$n wields $p in $s off-hand.", ch, nil, obj, d.Output)
 }
@@ -1256,9 +1229,6 @@ func (d *CommandDispatcher) cmdRemove(ch *types.Character, args string) {
 		return
 	}
 
-	// Remove object affects from character
-	removeObjectAffects(ch, obj)
-
 	// Unequip the item
 	ch.Unequip(loc)
 	ch.AddInventory(obj)
@@ -1280,9 +1250,6 @@ func (d *CommandDispatcher) removeAll(ch *types.Character) {
 		if obj.ExtraFlags.Has(types.ItemNoDrop) {
 			continue
 		}
-
-		// Remove object affects from character
-		removeObjectAffects(ch, obj)
 
 		// Unequip the item
 		ch.Unequip(i)

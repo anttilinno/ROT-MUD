@@ -697,7 +697,7 @@ func (d *CommandDispatcher) doZap(ch *types.Character, args string) {
 		d.send(ch, fmt.Sprintf("Your %s explodes into fragments.\r\n", wand.ShortDesc))
 		ActToRoom("$n's $p explodes into fragments.", ch, nil, wand, d.Output)
 		// Remove from equipment
-		ch.Equipment[types.WearLocHold] = nil
+		ch.Unequip(types.WearLocHold)
 	}
 }
 
@@ -796,7 +796,7 @@ func (d *CommandDispatcher) doBrandish(ch *types.Character, args string) {
 		d.send(ch, fmt.Sprintf("Your %s blazes bright and is gone.\r\n", staff.ShortDesc))
 		ActToRoom("$n's $p blazes bright and is gone.", ch, nil, staff, d.Output)
 		// Remove from equipment
-		ch.Equipment[types.WearLocHold] = nil
+		ch.Unequip(types.WearLocHold)
 	}
 }
 

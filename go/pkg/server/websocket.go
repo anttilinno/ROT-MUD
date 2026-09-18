@@ -385,11 +385,6 @@ func (h *HTTPServer) enterGameWS(ws *WebSocketSession) {
 		}
 	}
 
-	// Reapply equipment affects for returning players
-	if ws.login == nil || !ws.login.IsNewPlayer() {
-		h.server.applyEquipmentAffects(ch)
-	}
-
 	// Otherwise use default temple
 	if startRoom == nil {
 		startRoom = h.server.getOrCreateStartRoom()
