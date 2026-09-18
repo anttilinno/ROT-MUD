@@ -4,6 +4,8 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+
+	"rotmud/pkg/types"
 )
 
 func TestNewSystem(t *testing.T) {
@@ -298,23 +300,9 @@ func TestCharacterCreationHelpFiles(t *testing.T) {
 	}
 
 	// All class names from types/classes.go
-	classes := []string{
-		// Tier 1 (mortal)
-		"mage",
-		"cleric",
-		"thief",
-		"warrior",
-		"ranger",
-		"druid",
-		"vampire",
-		// Tier 2 (remort)
-		"wizard",
-		"priest",
-		"mercenary",
-		"gladiator",
-		"strider",
-		"sage",
-		"lich",
+	var classes []string
+	for _, c := range types.ClassTable {
+		classes = append(classes, c.Name)
 	}
 
 	// All race names from types/races.go

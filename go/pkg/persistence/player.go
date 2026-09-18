@@ -60,6 +60,8 @@ type PlayerSave struct {
 
 	// Clan and quest data
 	Clan          int               `json:"clan,omitempty"`
+	Tier          int               `json:"tier,omitempty"`    // 0 mortal, 1 rerolled (rite pending), 2 ascended
+	Classes       []int             `json:"classes,omitempty"` // origin class history; [0] drives skill lookups
 	QuestProgress map[int]int       `json:"quest_progress,omitempty"`
 	ForgetList    []string          `json:"forget_list,omitempty"`
 	Aliases       map[string]string `json:"aliases,omitempty"`
@@ -243,6 +245,8 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 		save.Bamfin = ch.PCData.Bamfin
 		save.Bamfout = ch.PCData.Bamfout
 		save.Clan = ch.PCData.Clan
+		save.Tier = ch.PCData.Tier
+		save.Classes = ch.PCData.Classes
 		save.BankCoin = ch.PCData.BankCoin
 		save.QuestProgress = ch.PCData.QuestProgress
 		save.ForgetList = ch.PCData.ForgetList
@@ -385,6 +389,8 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 			Bamfin:        save.Bamfin,
 			Bamfout:       save.Bamfout,
 			Clan:          save.Clan,
+			Tier:          save.Tier,
+			Classes:       save.Classes,
 			BankCoin:      save.BankCoin,
 			QuestProgress: save.QuestProgress,
 			ForgetList:    save.ForgetList,

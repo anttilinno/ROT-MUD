@@ -49,7 +49,7 @@ func (s *SkillSystem) GetSkillByIndex(ch *types.Character, sn int) int {
 		}
 
 		// Check level requirement
-		reqLevel := skill.GetLevel(ch.Class)
+		reqLevel := skill.GetLevel(ch.SkillClass())
 		if reqLevel == 0 || ch.Level < reqLevel {
 			return 0
 		}
@@ -129,8 +129,8 @@ func (s *SkillSystem) CheckImprove(ch *types.Character, skillName string, succes
 	}
 
 	// Check if character knows this skill
-	reqLevel := skill.GetLevel(ch.Class)
-	rating := skill.GetRating(ch.Class)
+	reqLevel := skill.GetLevel(ch.SkillClass())
+	rating := skill.GetRating(ch.SkillClass())
 	if reqLevel == 0 || rating == 0 || ch.Level < reqLevel {
 		return
 	}
@@ -220,7 +220,7 @@ func (s *SkillSystem) LearnSkill(ch *types.Character, skillName string, amount i
 	}
 
 	// Check if character can learn this skill
-	reqLevel := skill.GetLevel(ch.Class)
+	reqLevel := skill.GetLevel(ch.SkillClass())
 	if reqLevel == 0 || ch.Level < reqLevel {
 		return false
 	}

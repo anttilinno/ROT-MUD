@@ -315,13 +315,13 @@ const (
 	ImmVulnerable
 )
 
-// isVampire returns true for player vampire/lich classes and ActVampire mobs.
+// isVampire returns true for player ghouls and ActVampire mobs.
 // Used to apply innate fire and silver vulnerabilities.
 func isVampire(ch *types.Character) bool {
 	if ch.IsNPC() {
 		return ch.Act.Has(types.ActVampire)
 	}
-	return ch.Class == types.ClassVampire || ch.Class == types.ClassLich
+	return ch.Class == types.ClassGhoul
 }
 
 // CheckImmune determines if the victim is immune/resistant/vulnerable to a damage type

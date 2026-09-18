@@ -186,7 +186,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 		// Exact match in learned - check if it's a skill or spell
 		if d.Skills != nil {
 			if skillDef := d.Skills.Registry.FindByName(skillName); skillDef != nil {
-				reqLvl := skillDef.GetLevel(ch.Class)
+				reqLvl := skillDef.GetLevel(ch.SkillClass())
 				if reqLvl > 0 && ch.Level >= reqLvl {
 					foundSkill = skillName
 					requiredLevel = reqLvl
@@ -196,7 +196,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 		}
 		if foundSkill == "" && d.Magic != nil && d.Magic.Registry != nil {
 			if spellDef := d.Magic.Registry.FindByName(skillName); spellDef != nil {
-				reqLvl := spellDef.GetClassLevel(ch.Class)
+				reqLvl := spellDef.GetClassLevel(ch.SkillClass())
 				if reqLvl > 0 && reqLvl <= maxPlayerLevel && ch.Level >= reqLvl {
 					foundSkill = skillName
 					requiredLevel = reqLvl
@@ -209,7 +209,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 	// Check for exact match in registries (not yet learned)
 	if foundSkill == "" && d.Skills != nil {
 		if skillDef := d.Skills.Registry.FindByName(skillName); skillDef != nil {
-			classLevel := skillDef.GetLevel(ch.Class)
+			classLevel := skillDef.GetLevel(ch.SkillClass())
 			if classLevel > 0 && ch.Level >= classLevel {
 				foundSkill = skillDef.Name
 				requiredLevel = classLevel
@@ -225,7 +225,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 	}
 	if foundSkill == "" && d.Magic != nil && d.Magic.Registry != nil {
 		if spellDef := d.Magic.Registry.FindByName(skillName); spellDef != nil {
-			classLevel := spellDef.GetClassLevel(ch.Class)
+			classLevel := spellDef.GetClassLevel(ch.SkillClass())
 			if classLevel > 0 && classLevel <= maxPlayerLevel {
 				if ch.Level >= classLevel {
 					foundSkill = spellDef.Name
@@ -252,7 +252,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 				// Check skill registry
 				if d.Skills != nil {
 					if skillDef := d.Skills.Registry.FindByName(skill); skillDef != nil {
-						reqLvl := skillDef.GetLevel(ch.Class)
+						reqLvl := skillDef.GetLevel(ch.SkillClass())
 						if reqLvl > 0 && ch.Level >= reqLvl {
 							foundSkill = skill
 							requiredLevel = reqLvl
@@ -264,7 +264,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 				// Check magic registry
 				if d.Magic != nil && d.Magic.Registry != nil {
 					if spellDef := d.Magic.Registry.FindByName(skill); spellDef != nil {
-						reqLvl := spellDef.GetClassLevel(ch.Class)
+						reqLvl := spellDef.GetClassLevel(ch.SkillClass())
 						if reqLvl > 0 && reqLvl <= maxPlayerLevel && ch.Level >= reqLvl {
 							foundSkill = skill
 							requiredLevel = reqLvl
@@ -280,7 +280,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 	// Finally check prefix matches in registries (not yet learned)
 	if foundSkill == "" && d.Skills != nil {
 		if skillDef := d.Skills.Registry.FindByPrefix(skillName); skillDef != nil {
-			classLevel := skillDef.GetLevel(ch.Class)
+			classLevel := skillDef.GetLevel(ch.SkillClass())
 			if classLevel > 0 && ch.Level >= classLevel {
 				foundSkill = skillDef.Name
 				requiredLevel = classLevel
@@ -294,7 +294,7 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 	}
 	if foundSkill == "" && d.Magic != nil && d.Magic.Registry != nil {
 		if spellDef := d.Magic.Registry.FindByPrefix(skillName); spellDef != nil {
-			classLevel := spellDef.GetClassLevel(ch.Class)
+			classLevel := spellDef.GetClassLevel(ch.SkillClass())
 			if classLevel > 0 && classLevel <= maxPlayerLevel {
 				if ch.Level >= classLevel {
 					foundSkill = spellDef.Name
@@ -379,7 +379,7 @@ func (d *CommandDispatcher) listPracticableSkillsAndSpells(ch *types.Character) 
 		// Check if it's a skill
 		if d.Skills != nil {
 			if skillDef := d.Skills.Registry.FindByName(name); skillDef != nil {
-				reqLevel := skillDef.GetLevel(ch.Class)
+				reqLevel := skillDef.GetLevel(ch.SkillClass())
 				if reqLevel > 0 && ch.Level >= reqLevel {
 					entries = append(entries, practiceEntry{
 						name:    name,
@@ -397,7 +397,7 @@ func (d *CommandDispatcher) listPracticableSkillsAndSpells(ch *types.Character) 
 		const maxPlayerLevel = 51
 		if d.Magic != nil && d.Magic.Registry != nil {
 			if spellDef := d.Magic.Registry.FindByName(name); spellDef != nil {
-				reqLevel := spellDef.GetClassLevel(ch.Class)
+				reqLevel := spellDef.GetClassLevel(ch.SkillClass())
 				// Only show spells the class can actually learn (reqLevel <= maxPlayerLevel)
 				if reqLevel > 0 && reqLevel <= maxPlayerLevel && ch.Level >= reqLevel {
 					entries = append(entries, practiceEntry{
@@ -533,7 +533,7 @@ func (d *CommandDispatcher) cmdSkills(ch *types.Character, args string) {
 			continue // Skip spells - those go in cmdSpells
 		}
 
-		reqLevel := skill.GetLevel(ch.Class)
+		reqLevel := skill.GetLevel(ch.SkillClass())
 		if reqLevel == 0 {
 			continue // Class can't learn this skill
 		}
@@ -643,7 +643,7 @@ func (d *CommandDispatcher) listGainableSkills(ch *types.Character) {
 
 	// Determine if groups are spell groups or skill groups based on class
 	groupType := "Spell"
-	if ch.Class == types.ClassWarrior || ch.Class == types.ClassThief {
+	if sc := ch.SkillClass(); sc == types.ClassWarrior || sc == types.ClassThief {
 		groupType = "Skill"
 	}
 
@@ -691,7 +691,7 @@ func (d *CommandDispatcher) listGainableSkills(ch *types.Character) {
 func (d *CommandDispatcher) tryGainSkillOrGroup(ch *types.Character, guildmaster *types.Character, name string) {
 	// Determine group type based on class
 	groupType := "spells"
-	if ch.Class == types.ClassWarrior || ch.Class == types.ClassThief {
+	if sc := ch.SkillClass(); sc == types.ClassWarrior || sc == types.ClassThief {
 		groupType = "skills"
 	}
 
@@ -809,7 +809,7 @@ func (d *CommandDispatcher) getAvailableGroups(ch *types.Character) []SkillGroup
 		},
 	}
 
-	if cg, ok := classGroups[ch.Class]; ok {
+	if cg, ok := classGroups[ch.SkillClass()]; ok {
 		return cg
 	}
 	return nil
@@ -872,7 +872,7 @@ func (d *CommandDispatcher) getAvailableSkills(ch *types.Character) []Individual
 	result := make([]IndividualSkill, 0)
 	for name, costs := range skillCosts {
 		cost := 0
-		switch ch.Class {
+		switch ch.SkillClass() {
 		case types.ClassMage:
 			cost = costs[0]
 		case types.ClassCleric:

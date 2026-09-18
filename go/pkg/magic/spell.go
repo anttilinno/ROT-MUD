@@ -97,7 +97,7 @@ func (s *Spell) CanCast(ch *types.Character) bool {
 	}
 
 	// Check class level requirement using class index
-	reqLevel := s.GetClassLevel(ch.Class)
+	reqLevel := s.GetClassLevel(ch.SkillClass())
 	if reqLevel == 0 {
 		return false // Class can't learn this spell
 	}

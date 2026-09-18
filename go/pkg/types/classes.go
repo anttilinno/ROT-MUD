@@ -1,5 +1,7 @@
 package types
 
+import "slices"
+
 // Class represents a character class
 type Class struct {
 	Name         string // Class name
@@ -15,6 +17,7 @@ type Class struct {
 	FreesMana    bool   // Uses mana?
 	BaseGroup    string // Base skill group
 	DefaultGroup string // Default skill group
+	BarredRaces  []int  // Tier 2: races that may not take this class's rite
 }
 
 // Class indices - Tier 1 (mortal)
@@ -25,16 +28,10 @@ const (
 	ClassWarrior = 3
 	ClassRanger  = 4
 	ClassDruid   = 5
-	ClassVampire = 6
-	// Tier 2 (remort)
-	ClassWizard    = 7
-	ClassPriest    = 8
-	ClassMercenary = 9
-	ClassGladiator = 10
-	ClassStrider   = 11
-	ClassSage      = 12
-	ClassLich      = 13
-	MaxClass       = 14
+	ClassGhoul   = 6
+	// Tier 2 (GodWars-style supernatural, reached by reroll + rite)
+	ClassDemon = 7
+	MaxClass   = 8
 )
 
 // ClassTable contains all class definitions
@@ -133,8 +130,8 @@ var ClassTable = []Class{
 		DefaultGroup: "druid default",
 	},
 	{
-		Name:         "vampire",
-		ShortName:    "Vam",
+		Name:         "ghoul",
+		ShortName:    "Gho",
 		PrimeStat:    StatCon,
 		StartWeapon:  3020, // OBJ_VNUM_SCHOOL_DAGGER
 		Guilds:       [3]int{3375, 9758, 18113},
@@ -144,114 +141,26 @@ var ClassTable = []Class{
 		HPMax:        8,
 		ManaGain:     -30,
 		FreesMana:    true,
-		BaseGroup:    "vampire basics",
-		DefaultGroup: "vampire default",
+		BaseGroup:    "ghoul basics",
+		DefaultGroup: "ghoul default",
 	},
-	// Tier 2 Classes (Remort) — better Thac0_32 than tier 1 equivalents
+	// Tier 2 Classes — see .planning/TIER2-GODWARS.md
 	{
-		Name:         "wizard",
-		ShortName:    "Wiz",
-		PrimeStat:    StatInt,
-		StartWeapon:  3020,
-		Guilds:       [3]int{3018, 9618, 18113},
-		Thac0_00:     20,
-		Thac0_32:     4,
-		HPMin:        6,
-		HPMax:        18,
-		ManaGain:     -4,
-		FreesMana:    true,
-		BaseGroup:    "wizard basics",
-		DefaultGroup: "wizard default",
-	},
-	{
-		Name:         "priest",
-		ShortName:    "Prs",
-		PrimeStat:    StatWis,
-		StartWeapon:  3021,
-		Guilds:       [3]int{3003, 9619, 5699},
-		Thac0_00:     20,
-		Thac0_32:     -1,
-		HPMin:        -3,
-		HPMax:        20,
-		ManaGain:     2,
-		FreesMana:    true,
-		BaseGroup:    "priest basics",
-		DefaultGroup: "priest default",
-	},
-	{
-		Name:         "mercenary",
-		ShortName:    "Mer",
-		PrimeStat:    StatDex,
-		StartWeapon:  3020,
-		Guilds:       [3]int{3028, 9639, 5633},
-		Thac0_00:     20,
-		Thac0_32:     -6,
-		HPMin:        8,
-		HPMax:        23,
-		ManaGain:     -14,
-		FreesMana:    false,
-		BaseGroup:    "mercenary basics",
-		DefaultGroup: "mercenary default",
-	},
-	{
-		Name:         "gladiator",
-		ShortName:    "Gla",
+		Name:         "demon",
+		ShortName:    "Dem",
 		PrimeStat:    StatStr,
 		StartWeapon:  3022,
 		Guilds:       [3]int{3022, 9633, 5613},
 		Thac0_00:     20,
-		Thac0_32:     -14,
-		HPMin:        14,
-		HPMax:        25,
-		ManaGain:     -20,
-		FreesMana:    false,
-		BaseGroup:    "gladiator basics",
-		DefaultGroup: "gladiator default",
-	},
-	{
-		Name:         "strider",
-		ShortName:    "Str",
-		PrimeStat:    StatInt,
-		StartWeapon:  3020,
-		Guilds:       [3]int{3372, 9752, 18111},
-		Thac0_00:     20,
-		Thac0_32:     -8,
-		HPMin:        10,
-		HPMax:        25,
-		ManaGain:     -14,
-		FreesMana:    true,
-		BaseGroup:    "strider basics",
-		DefaultGroup: "strider default",
-	},
-	{
-		Name:         "sage",
-		ShortName:    "Sag",
-		PrimeStat:    StatWis,
-		StartWeapon:  3024,
-		Guilds:       [3]int{3369, 9755, 18111},
-		Thac0_00:     20,
-		Thac0_32:     -1,
-		HPMin:        7,
+		Thac0_32:     -10,
+		HPMin:        13,
 		HPMax:        20,
 		ManaGain:     -10,
-		FreesMana:    true,
-		BaseGroup:    "sage basics",
-		DefaultGroup: "sage default",
-	},
-	{
-		Name:         "lich",
-		ShortName:    "Lic",
-		PrimeStat:    StatCon,
-		StartWeapon:  3020,
-		Guilds:       [3]int{3375, 9758, 18113},
-		Thac0_00:     20,
-		Thac0_32:     -3,
-		HPMin:        6,
-		HPMax:        18,
-		ManaGain:     -40,
-		FreesMana:    true,
-		BaseGroup:    "lich basics",
-		DefaultGroup: "lich default",
+		FreesMana:    false,
+		BaseGroup:    "demon basics",
+		DefaultGroup: "demon default",
+		// GodWars: "You cannot make a pact with the undead"; sky/fey races as celestial counterweights.
+		BarredRaces: []int{RaceHeucuva, RaceAvian, RacePixie},
 	},
 }
 
@@ -293,5 +202,10 @@ func ClassName(classIndex int) string {
 
 // IsTier2Class returns true if the class is a remort/tier 2 class
 func IsTier2Class(classIndex int) bool {
-	return classIndex >= ClassWizard && classIndex < MaxClass
+	return classIndex >= ClassDemon && classIndex < MaxClass
+}
+
+// RaceAllowed reports whether a race may take this class.
+func (c *Class) RaceAllowed(race int) bool {
+	return !slices.Contains(c.BarredRaces, race)
 }

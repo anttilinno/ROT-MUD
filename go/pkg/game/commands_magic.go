@@ -101,7 +101,7 @@ func (d *CommandDispatcher) cmdSpells(ch *types.Character, args string) {
 
 	var classSpells []spellInfo
 	for _, spell := range d.Magic.Registry.All() {
-		reqLevel := spell.GetClassLevel(ch.Class)
+		reqLevel := spell.GetClassLevel(ch.SkillClass())
 		if reqLevel == 0 || reqLevel > maxPlayerLevel {
 			continue // Class can't learn this spell (0 = not available, 53+ = class restriction)
 		}

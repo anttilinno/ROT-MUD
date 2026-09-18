@@ -209,6 +209,16 @@ func (ch *Character) IsNPC() bool {
 	return ch.Act.Has(ActNPC)
 }
 
+// SkillClass is the class index used for skill and spell level lookups.
+// Tier-2 classes have no skill table of their own; they keep the origin
+// tier-1 class they ascended from (PCData.Classes[0]).
+func (ch *Character) SkillClass() int {
+	if IsTier2Class(ch.Class) && ch.PCData != nil && len(ch.PCData.Classes) > 0 {
+		return ch.PCData.Classes[0]
+	}
+	return ch.Class
+}
+
 // IsPlayer returns true if this is a player
 func (ch *Character) IsPlayer() bool {
 	return !ch.IsNPC()

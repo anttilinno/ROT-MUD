@@ -458,15 +458,15 @@ func classEquipAC(classIdx, level int) int {
 	// Base curve: lightly armoured adventurer, improving with level.
 	base := 80 - level*7
 	switch classIdx {
-	case types.ClassWarrior, types.ClassGladiator:
+	case types.ClassWarrior, types.ClassDemon:
 		base -= 25 // plate armour
-	case types.ClassRanger, types.ClassStrider, types.ClassCleric, types.ClassPriest:
+	case types.ClassRanger, types.ClassCleric:
 		base -= 10 // chain / mail
-	case types.ClassThief, types.ClassMercenary:
+	case types.ClassThief:
 		base += 10 // leather
-	case types.ClassDruid, types.ClassSage:
+	case types.ClassDruid:
 		base += 15 // light leather
-	case types.ClassVampire, types.ClassLich:
+	case types.ClassGhoul:
 		base += 5 // supernatural resilience — undead flesh is harder to damage than leather
 	default: // mage, wizard
 		base += 35 // robes only
@@ -526,7 +526,7 @@ func weaponDice(classIdx, level int) (int, int) {
 	}
 	// Mages and vampire use lighter weapons (dagger/claw)
 	switch classIdx {
-	case types.ClassMage, types.ClassWizard, types.ClassVampire, types.ClassLich:
+	case types.ClassMage, types.ClassGhoul:
 		size = size * 2 / 3
 		if size < 4 {
 			size = 4
@@ -538,14 +538,14 @@ func weaponDice(classIdx, level int) (int, int) {
 // weaponTypeForClass maps class to ROM weapon type (0=exotic,1=sword,2=dagger,3=spear,4=mace)
 func weaponTypeForClass(classIdx int) int {
 	switch classIdx {
-	case types.ClassWarrior, types.ClassGladiator:
+	case types.ClassWarrior, types.ClassDemon:
 		return 1 // sword
-	case types.ClassRanger, types.ClassStrider:
+	case types.ClassRanger:
 		return 3 // spear
-	case types.ClassThief, types.ClassMercenary, types.ClassMage, types.ClassWizard,
-		types.ClassVampire, types.ClassLich:
+	case types.ClassThief, types.ClassMage,
+		types.ClassGhoul:
 		return 2 // dagger
-	case types.ClassCleric, types.ClassPriest:
+	case types.ClassCleric:
 		return 4 // mace
 	default:
 		return 0 // exotic / polearm
@@ -612,7 +612,7 @@ func makePlayer(classIdx, raceIdx, level int) *types.Character {
 	// Enhanced damage skill bonus: ranger/strider get DamRoll bonus
 	// (mirrors combat_sim_test.go logic at the snapshot commit).
 	switch classIdx {
-	case types.ClassRanger, types.ClassStrider:
+	case types.ClassRanger:
 		ch.DamRoll += level / 8
 	}
 

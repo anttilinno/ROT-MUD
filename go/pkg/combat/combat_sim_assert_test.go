@@ -48,7 +48,7 @@ var simSnapClasses = []int{
 	types.ClassThief,
 	types.ClassCleric,
 	types.ClassDruid,
-	types.ClassVampire,
+	types.ClassGhoul,
 	types.ClassMage,
 }
 
@@ -80,7 +80,7 @@ var simSnapWarriorMob = map[int][]simSnapCell{
 		{22, 7.6, 72.3, 40.1}, {40, 10.3, 87.9, 36.1}, {68, 13.6, 94.1, 29.2},
 		{59, 15.2, 102.5, 32.5}, {59, 18.2, 105.2, 35.2}, {72, 21.0, 137.0, 39.6},
 	},
-	types.ClassVampire: {
+	types.ClassGhoul: {
 		{94, 11.1, 3.3, 0.8}, {6, 21.8, 6.4, 4.7}, {24, 10.7, 31.6, 18.7},
 		{24, 9.4, 61.0, 31.2}, {45, 12.5, 73.9, 27.7}, {72, 13.2, 96.0, 30.4},
 		{62, 14.9, 105.3, 32.5}, {63, 17.7, 108.0, 35.7}, {75, 20.9, 139.4, 39.4},
@@ -119,7 +119,7 @@ var simSnapCasterMob = map[int][]simSnapCell{
 		{83, 7.3, 72.8, 36.1}, {0, 5.0, 97.4, 95.4}, {0, 4.9, 118.0, 121.3},
 		{0, 4.6, 133.4, 149.8}, {0, 3.7, 106.6, 242.4}, {0, 3.7, 136.9, 326.9},
 	},
-	types.ClassVampire: {
+	types.ClassGhoul: {
 		{21, 6.5, 3.0, 4.4}, {1, 11.5, 9.4, 9.1}, {12, 7.9, 34.5, 27.0},
 		{55, 7.8, 65.9, 37.4}, {0, 4.7, 88.5, 94.7}, {0, 4.4, 122.8, 121.3},
 		{0, 4.2, 142.6, 149.6}, {0, 3.2, 109.6, 241.3}, {0, 3.0, 141.2, 325.0},
@@ -395,7 +395,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 			}
 
 			// Thief opener
-			if rounds == 1 && (classIdx == types.ClassThief || classIdx == types.ClassMercenary) &&
+			if rounds == 1 && (classIdx == types.ClassThief) &&
 				p.Fighting == m && IsAwake(p) {
 				var burst int
 				if level >= 75 {
@@ -410,7 +410,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 
 			// Thief circle
 			if rounds > 1 && rounds%4 == 0 &&
-				(classIdx == types.ClassThief || classIdx == types.ClassMercenary) &&
+				(classIdx == types.ClassThief) &&
 				m.Position > types.PosDead && p.Fighting == m && IsAwake(p) {
 				wn, ws := simWeaponDice(classIdx, level)
 				circle := Dice(wn, ws)*2 + p.DamRoll
@@ -419,7 +419,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 			}
 
 			// Ranger dual-wield
-			if (classIdx == types.ClassRanger || classIdx == types.ClassStrider) &&
+			if (classIdx == types.ClassRanger) &&
 				m.Position > types.PosDead && p.Fighting == m && IsAwake(p) {
 				offSkill := weaponSkillForClass(classIdx, level) / 3
 				if Dice(1, 100) <= offSkill {
@@ -445,7 +445,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 					dealt := applyMobDmg(sd)
 					res.totalPDmg += dealt
 					UpdatePosition(m)
-					if (classIdx == types.ClassVampire || classIdx == types.ClassLich) &&
+					if (classIdx == types.ClassGhoul) &&
 						p.Hit < p.MaxHit {
 						p.Hit += dealt / 12
 						if p.Hit > p.MaxHit {
@@ -547,7 +547,7 @@ var simSnapSanctuaryMob = map[int][]simSnapCell{
 		{10, 7.8, 62.7, 40.3}, {24, 11.0, 74.2, 36.5}, {49, 14.9, 78.5, 29.7},
 		{40, 16.3, 85.8, 33.0}, {59, 18.5, 101.2, 35.1}, {67, 21.3, 133.9, 39.1},
 	},
-	types.ClassVampire: {
+	types.ClassGhoul: {
 		{60, 19.0, 1.8, 0.9}, {2, 22.2, 5.7, 4.7}, {9, 10.8, 26.9, 18.8},
 		{9, 9.5, 52.2, 30.3}, {26, 13.4, 62.5, 27.8}, {38, 14.6, 78.0, 30.3},
 		{36, 16.4, 85.5, 33.1}, {60, 18.2, 104.6, 35.4}, {69, 21.4, 135.3, 39.2},

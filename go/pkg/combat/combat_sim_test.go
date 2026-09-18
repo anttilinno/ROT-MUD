@@ -77,15 +77,15 @@ func classEquipAC(classIdx, level int) int {
 	// Base curve: lightly armoured adventurer, improving with level.
 	base := 80 - level*7
 	switch classIdx {
-	case types.ClassWarrior, types.ClassGladiator:
+	case types.ClassWarrior, types.ClassDemon:
 		base -= 25 // plate armour
-	case types.ClassRanger, types.ClassStrider, types.ClassCleric, types.ClassPriest:
+	case types.ClassRanger, types.ClassCleric:
 		base -= 10 // chain / mail
-	case types.ClassThief, types.ClassMercenary:
+	case types.ClassThief:
 		base += 10 // leather
-	case types.ClassDruid, types.ClassSage:
+	case types.ClassDruid:
 		base += 15 // light leather
-	case types.ClassVampire, types.ClassLich:
+	case types.ClassGhoul:
 		base += 5 // supernatural resilience — undead flesh is harder to damage than leather
 	default: // mage, wizard
 		base += 35 // robes only
@@ -145,7 +145,7 @@ func weaponDice(classIdx, level int) (int, int) {
 	}
 	// Mages and vampire use lighter weapons (dagger/claw)
 	switch classIdx {
-	case types.ClassMage, types.ClassWizard, types.ClassVampire, types.ClassLich:
+	case types.ClassMage, types.ClassGhoul:
 		size = size * 2 / 3
 		if size < 4 {
 			size = 4
@@ -210,14 +210,14 @@ func simWeaponDice(classIdx, level int) (int, int) {
 // weaponTypeForClass maps class to ROM weapon type (0=exotic,1=sword,2=dagger,3=spear,4=mace)
 func weaponTypeForClass(classIdx int) int {
 	switch classIdx {
-	case types.ClassWarrior, types.ClassGladiator:
+	case types.ClassWarrior, types.ClassDemon:
 		return 1 // sword
-	case types.ClassRanger, types.ClassStrider:
+	case types.ClassRanger:
 		return 3 // spear
-	case types.ClassThief, types.ClassMercenary, types.ClassMage, types.ClassWizard,
-		types.ClassVampire, types.ClassLich:
+	case types.ClassThief, types.ClassMage,
+		types.ClassGhoul:
 		return 2 // dagger
-	case types.ClassCleric, types.ClassPriest:
+	case types.ClassCleric:
 		return 4 // mace
 	default:
 		return 0 // exotic / polearm
@@ -289,7 +289,7 @@ func makePlayer(classIdx, raceIdx, level int) *types.Character {
 	// Ranger/strider get DamRoll bonus — compensates for lighter armor vs warrior.
 	// Thief/merc do NOT: backstab + circle provide their burst compensation.
 	switch classIdx {
-	case types.ClassRanger, types.ClassStrider:
+	case types.ClassRanger:
 		ch.DamRoll += level / 8
 	}
 
@@ -305,9 +305,11 @@ func makePlayer(classIdx, raceIdx, level int) *types.Character {
 // L1-L30:  bell-curve formula — quadratic with +33% bonus at L10 fading to 0 at L30.
 // L31-L80: linear at 30/level from the L30 base (710).
 // L81+:    steeper ramp at 40/level — endgame mobs scale harder.
-//           Breakpoint at L80 so L75 balance is fully preserved; the steeper slope
-//           only affects L81+ where player HP growth outpaces mob DPS and all classes
-//           were winning 75-88% at L100 against only a 59% baseline from mage.
+//
+//	Breakpoint at L80 so L75 balance is fully preserved; the steeper slope
+//	only affects L81+ where player HP growth outpaces mob DPS and all classes
+//	were winning 75-88% at L100 against only a 59% baseline from mage.
+//
 // Values: L10=200, L20=430, L30=710, L50=1310, L60=1610, L75=2060, L80=2210, L100=3010
 func mobHP(level int) int {
 	if level <= 30 {
@@ -409,10 +411,11 @@ func makeCasterMob(level int) *types.Character {
 // mobCastSpellDam returns direct spell damage dealt by a caster mob.
 // Bypasses physical defence (dodge/parry); magic resistance would reduce this
 // but is not yet simulated.
-//   L10: avg  8.5  (1d6+lv/2 → 3.5+5)
-//   L30: avg 39    (2d8+lv   → 9+30)
-//   L60: avg 138   (4d8+lv*2 → 18+120)
-//   L100: avg 218  (4d8+lv*2 → 18+200) — everyone loses without MR
+//
+//	L10: avg  8.5  (1d6+lv/2 → 3.5+5)
+//	L30: avg 39    (2d8+lv   → 9+30)
+//	L60: avg 138   (4d8+lv*2 → 18+120)
+//	L100: avg 218  (4d8+lv*2 → 18+200) — everyone loses without MR
 func mobCastSpellDam(level int) int {
 	switch {
 	case level >= 75:
@@ -424,9 +427,9 @@ func mobCastSpellDam(level int) int {
 	case level >= 40:
 		return Dice(3, 8) + level*2 // greater fireball tier
 	case level >= 22:
-		return Dice(2, 8) + level   // fireball tier
+		return Dice(2, 8) + level // fireball tier
 	case level >= 13:
-		return Dice(2, 6) + level   // lightning bolt tier
+		return Dice(2, 6) + level // lightning bolt tier
 	default:
 		return Dice(1, 6) + level/2 // magic missile tier
 	}
@@ -436,15 +439,15 @@ func mobCastSpellDam(level int) int {
 func weaponSkillForClass(classIdx, level int) int {
 	var growth float64
 	switch classIdx {
-	case types.ClassWarrior, types.ClassGladiator:
+	case types.ClassWarrior, types.ClassDemon:
 		growth = 4.0
-	case types.ClassRanger, types.ClassStrider:
+	case types.ClassRanger:
 		growth = 3.5
-	case types.ClassThief, types.ClassMercenary:
+	case types.ClassThief:
 		growth = 3.0
-	case types.ClassCleric, types.ClassPriest, types.ClassDruid, types.ClassSage:
+	case types.ClassCleric, types.ClassDruid:
 		growth = 2.5
-	case types.ClassVampire, types.ClassLich:
+	case types.ClassGhoul:
 		growth = 2.0
 	default: // mage, wizard
 		growth = 1.5
@@ -462,17 +465,17 @@ func weaponSkillForClass(classIdx, level int) int {
 func dodgeSkillForClass(classIdx, level int) int {
 	var growth float64
 	switch classIdx {
-	case types.ClassThief, types.ClassMercenary:
+	case types.ClassThief:
 		growth = 3.0 // light armor, highest dodge
-	case types.ClassRanger, types.ClassStrider:
+	case types.ClassRanger:
 		growth = 2.5 // medium armor, good dodge
-	case types.ClassMage, types.ClassWizard:
+	case types.ClassMage:
 		growth = 2.0 // robes only, rely on evasion
-	case types.ClassVampire, types.ClassLich:
+	case types.ClassGhoul:
 		growth = 2.0 // supernatural agility
-	case types.ClassDruid, types.ClassSage:
+	case types.ClassDruid:
 		growth = 1.5 // light leather, moderate
-	case types.ClassCleric, types.ClassPriest:
+	case types.ClassCleric:
 		growth = 1.0 // chain mail restricts movement
 	default: // warrior — plate armor limits agility but fighters learn to dodge over time
 		growth = 2.0
@@ -490,13 +493,13 @@ func dodgeSkillForClass(classIdx, level int) int {
 func parrySkillForClass(classIdx, level int) int {
 	var growth float64
 	switch classIdx {
-	case types.ClassWarrior, types.ClassGladiator, types.ClassRanger, types.ClassStrider:
+	case types.ClassWarrior, types.ClassDemon, types.ClassRanger:
 		growth = 2.5 // trained melee fighters parry well
-	case types.ClassThief, types.ClassMercenary, types.ClassCleric, types.ClassPriest:
+	case types.ClassThief, types.ClassCleric:
 		growth = 2.0
-	case types.ClassVampire, types.ClassLich:
+	case types.ClassGhoul:
 		growth = 2.0 // unnatural reflexes
-	case types.ClassDruid, types.ClassSage:
+	case types.ClassDruid:
 		growth = 1.5
 	default: // mage — barely parries
 		growth = 0.5
@@ -527,7 +530,7 @@ func extraAttackSkillForClass(classIdx, level, tier int) int {
 // spellManaCost returns the mana cost of the best available spell.
 func spellManaCost(classIdx, level int) int {
 	switch classIdx {
-	case types.ClassMage, types.ClassWizard:
+	case types.ClassMage:
 		if level >= 30 {
 			return 20 // acid blast
 		} else if level >= 22 {
@@ -536,21 +539,21 @@ func spellManaCost(classIdx, level int) int {
 			return 20 // lightning bolt
 		}
 		return 15 // magic missile
-	case types.ClassCleric, types.ClassPriest:
+	case types.ClassCleric:
 		if level >= 45 {
 			return 20
 		} else if level >= 23 {
 			return 17
 		}
 		return 15
-	case types.ClassDruid, types.ClassSage:
+	case types.ClassDruid:
 		if level >= 30 {
 			return 20
 		} else if level >= 10 {
 			return 15
 		}
 		return 10
-	case types.ClassVampire, types.ClassLich:
+	case types.ClassGhoul:
 		if level >= 21 {
 			return 20
 		} else if level >= 11 {
@@ -565,7 +568,7 @@ func spellManaCost(classIdx, level int) int {
 // Returns 0 for pure melee classes. Scales through level 100.
 func castSpellDamage(classIdx, casterLevel int) int {
 	switch classIdx {
-	case types.ClassMage, types.ClassWizard:
+	case types.ClassMage:
 		// magic missile → lightning bolt → fireball → acid blast (L30+)
 		//
 		// ROM C source uses level-scaled dice: magic missile = dice(level,4),
@@ -591,7 +594,7 @@ func castSpellDamage(classIdx, casterLevel int) int {
 		}
 		return Dice(casterLevel, 4) // magic missile: ROM dice(level,4)
 
-	case types.ClassCleric, types.ClassPriest:
+	case types.ClassCleric:
 		// cause light → cause serious → cause critical → harm
 		// No L75+ tier: harm (Dice(4,8)+level) is the ceiling.
 		// With mob sanctuary at L70+ (÷2), win rate targets ~60-70%.
@@ -604,7 +607,7 @@ func castSpellDamage(classIdx, casterLevel int) int {
 		}
 		return Dice(1, 8) + casterLevel/3
 
-	case types.ClassDruid, types.ClassSage:
+	case types.ClassDruid:
 		// faerie fire → call lightning → earthquake
 		// No L75+ tier: earthquake (Dice(4,8)+level) is the ceiling.
 		if casterLevel >= 50 {
@@ -618,7 +621,7 @@ func castSpellDamage(classIdx, casterLevel int) int {
 		}
 		return Dice(1, 4) + casterLevel/4
 
-	case types.ClassVampire, types.ClassLich:
+	case types.ClassGhoul:
 		// cause spells + drain/soul-rend
 		// No L75+ tier: drain (Dice(4,6)+level+level/3) is the ceiling.
 		if casterLevel >= 50 {
@@ -636,10 +639,10 @@ func castSpellDamage(classIdx, casterLevel int) int {
 // isCasterClass returns true for classes that use spells in combat.
 func isCasterClass(classIdx int) bool {
 	return castSpellDamage(classIdx, 1) > 0 ||
-		classIdx == types.ClassMage || classIdx == types.ClassWizard ||
-		classIdx == types.ClassCleric || classIdx == types.ClassPriest ||
-		classIdx == types.ClassDruid || classIdx == types.ClassSage ||
-		classIdx == types.ClassVampire || classIdx == types.ClassLich
+		classIdx == types.ClassMage ||
+		classIdx == types.ClassCleric ||
+		classIdx == types.ClassDruid ||
+		classIdx == types.ClassGhoul
 }
 
 // ── simulation core ───────────────────────────────────────────────────────────
@@ -773,7 +776,7 @@ func runSimWith(classIdx, raceIdx, level, n int, mobFn func(int) *types.Characte
 
 			// Thief opener: assassinate at L75+ (dagger, 75% mob max HP),
 			// regular backstab below L75 (any weapon, level-scaled multiplier).
-			if rounds == 1 && (classIdx == types.ClassThief || classIdx == types.ClassMercenary) &&
+			if rounds == 1 && (classIdx == types.ClassThief) &&
 				p.Fighting == m && IsAwake(p) {
 				var burstDam int
 				if level >= 75 {
@@ -794,7 +797,7 @@ func runSimWith(classIdx, raceIdx, level, n int, mobFn func(int) *types.Characte
 			// Thief circle: every 4th round (ROM skill — stab a distracted target).
 			// 2× weapon damage; available from round 4 to avoid stacking with backstab.
 			if rounds > 1 && rounds%4 == 0 &&
-				(classIdx == types.ClassThief || classIdx == types.ClassMercenary) &&
+				(classIdx == types.ClassThief) &&
 				m.Position > types.PosDead && p.Fighting == m && IsAwake(p) {
 				wNum, wSize := simWeaponDice(classIdx, level)
 				circleDam := Dice(wNum, wSize)*2 + p.DamRoll
@@ -809,7 +812,7 @@ func runSimWith(classIdx, raceIdx, level, n int, mobFn func(int) *types.Characte
 			// Off-hand accuracy = weapon skill / 2 (less accurate than main hand).
 			// Compensates for the lack of dual-wield and enhanced-dodge mechanics
 			// in this sim; rangers would normally win via twin weapons + better evasion.
-			if (classIdx == types.ClassRanger || classIdx == types.ClassStrider) &&
+			if (classIdx == types.ClassRanger) &&
 				m.Position > types.PosDead && p.Fighting == m && IsAwake(p) {
 				offSkill := weaponSkillForClass(classIdx, level) / 3
 				if Dice(1, 100) <= offSkill {
@@ -845,7 +848,7 @@ func runSimWith(classIdx, raceIdx, level, n int, mobFn func(int) *types.Characte
 						// Vampire feed: drain/life-tap heals a fraction of spell damage.
 						// ROM "feed" / vampiric touch — 1/12 of damage returned as HP.
 						// Low ratio keeps vampire mortal; pure healing would break balance.
-						if (classIdx == types.ClassVampire || classIdx == types.ClassLich) &&
+						if (classIdx == types.ClassGhoul) &&
 							p.Hit < p.MaxHit {
 							p.Hit += spellDam / 12
 							if p.Hit > p.MaxHit {
@@ -922,7 +925,7 @@ func runSimWith(classIdx, raceIdx, level, n int, mobFn func(int) *types.Characte
 			res.playerWins++
 		case rounds >= maxRounds:
 			res.draws++
-		// else: mob won (player was killed) — implicit, not incremented
+			// else: mob won (player was killed) — implicit, not incremented
 		}
 
 		p.Fighting = nil
@@ -949,7 +952,7 @@ func TestCombatSimByClass(t *testing.T) {
 		types.ClassThief,
 		types.ClassCleric,
 		types.ClassDruid,
-		types.ClassVampire,
+		types.ClassGhoul,
 		types.ClassMage,
 	}
 
@@ -1201,7 +1204,7 @@ func TestCombatSimDetailed(t *testing.T) {
 		for _, lv := range levels {
 			var spellName string
 			switch classIdx {
-			case types.ClassMage, types.ClassWizard:
+			case types.ClassMage:
 				if lv >= 22 {
 					spellName = "fireball (3d6+lv*2)"
 				} else if lv >= 13 {
@@ -1209,7 +1212,7 @@ func TestCombatSimDetailed(t *testing.T) {
 				} else {
 					spellName = "magic missile (1d4+lv)"
 				}
-			case types.ClassCleric, types.ClassPriest:
+			case types.ClassCleric:
 				if lv >= 45 {
 					spellName = "cause critical (3d8+lv)"
 				} else if lv >= 23 {
@@ -1221,7 +1224,7 @@ func TestCombatSimDetailed(t *testing.T) {
 			// Estimate avg damage
 			var avgDam float64
 			switch classIdx {
-			case types.ClassMage, types.ClassWizard:
+			case types.ClassMage:
 				if lv >= 22 {
 					avgDam = 10.5 + float64(lv)*2
 				} else if lv >= 13 {
@@ -1229,7 +1232,7 @@ func TestCombatSimDetailed(t *testing.T) {
 				} else {
 					avgDam = 2.5 + float64(lv)
 				}
-			case types.ClassCleric, types.ClassPriest:
+			case types.ClassCleric:
 				if lv >= 45 {
 					avgDam = 13.5 + float64(lv)
 				} else if lv >= 23 {
@@ -1276,7 +1279,7 @@ func TestCombatSimVsCasterMob(t *testing.T) {
 		types.ClassThief,
 		types.ClassCleric,
 		types.ClassDruid,
-		types.ClassVampire,
+		types.ClassGhoul,
 		types.ClassMage,
 	}
 

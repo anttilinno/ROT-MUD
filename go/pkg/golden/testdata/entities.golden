@@ -30,29 +30,23 @@ Class=thief        THAC0_00=20  THAC0_32=-4  HP=248  Mana=190  HitRoll=6   DamRo
 Class=warrior      THAC0_00=20  THAC0_32=-10 HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 60.0 Dam= 375
 Class=ranger       THAC0_00=20  THAC0_32=-6  HP=267  Mana=190  HitRoll=6   DamRoll=7   Hit%= 69.2 Dam= 439
 Class=druid        THAC0_00=20  THAC0_32=2   HP=210  Mana=190  HitRoll=6   DamRoll=5   Hit%= 43.3 Dam= 269
-Class=vampire      THAC0_00=20  THAC0_32=-3  HP=191  Mana=190  HitRoll=6   DamRoll=5   Hit%= 73.3 Dam= 372
-Class=wizard       THAC0_00=20  THAC0_32=4   HP=286  Mana=190  HitRoll=6   DamRoll=5   Hit%= 60.0 Dam= 308
-Class=priest       THAC0_00=20  THAC0_32=-1  HP=210  Mana=270  HitRoll=6   DamRoll=5   Hit%= 60.0 Dam= 369
-Class=mercenary    THAC0_00=20  THAC0_32=-6  HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 63.3 Dam= 383
-Class=gladiator    THAC0_00=20  THAC0_32=-14 HP=419  Mana=190  HitRoll=6   DamRoll=5   Hit%= 72.4 Dam= 446
-Class=strider      THAC0_00=20  THAC0_32=-8  HP=381  Mana=190  HitRoll=6   DamRoll=7   Hit%= 53.3 Dam= 388
-Class=sage         THAC0_00=20  THAC0_32=-1  HP=305  Mana=190  HitRoll=6   DamRoll=5   Hit%= 50.0 Dam= 325
-Class=lich         THAC0_00=20  THAC0_32=-3  HP=286  Mana=190  HitRoll=6   DamRoll=5   Hit%= 70.0 Dam= 376
+Class=ghoul        THAC0_00=20  THAC0_32=-3  HP=191  Mana=190  HitRoll=6   DamRoll=5   Hit%= 73.3 Dam= 372
+Class=demon        THAC0_00=20  THAC0_32=-10 HP=362  Mana=190  HitRoll=6   DamRoll=5   Hit%= 53.3 Dam= 347
 
 === SPELL EXECUTIONS (seed=42) ===
-Spell=acid blast         Lv=22  Class=mage       success=true  dHP=137   dMana=0    victimHp=1000->863
+Spell=acid blast         Lv=22  Class=mage       success=true  dHP=155   dMana=0    victimHp=1000->845
 Spell=bless              Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 Spell=cure light         Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
-Spell=fireball           Lv=22  Class=mage       success=true  dHP=47    dMana=0    victimHp=1000->953
+Spell=fireball           Lv=22  Class=mage       success=true  dHP=54    dMana=0    victimHp=1000->946
 Spell=heal               Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
-Spell=magic missile      Lv=10  Class=mage       success=true  dHP=14    dMana=0    victimHp=1000->986
+Spell=magic missile      Lv=10  Class=mage       success=true  dHP=11    dMana=0    victimHp=1000->989
 Spell=sanctuary          Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 
 === SKILL EXECUTIONS (seed=42) ===
 Backstab Lv=20  thief vs mob: victimHp=430->430 damage=0 fighting=true
 Kick Lv=20  warrior vs mob: victimHp=430->430 damage=0
-Defense Lv=20  warrior    vs thief     : dodged=25  parried=58  blocked=0   hit=17 
-Defense Lv=20  thief      vs warrior   : dodged=28  parried=37  blocked=0   hit=35 
+Defense Lv=20  warrior    vs thief     : dodged=27  parried=36  blocked=0   hit=37 
+Defense Lv=20  thief      vs warrior   : dodged=28  parried=46  blocked=0   hit=26 
 
 === MOB TEMPLATES (seed=42) ===
 MobImm   Lv=20  name=Mob        Imm=[fire,silver] Res=[charm] Vuln=[cold]

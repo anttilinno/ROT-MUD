@@ -306,7 +306,7 @@ func (h *LoginHandler) handleGetNewClass(session *Session, input string) bool {
 
 	// Find class by name prefix (only tier 1 classes)
 	classIndex := -1
-	for i := 0; i < types.ClassWizard; i++ { // Only tier 1 classes
+	for i := 0; i < types.ClassDemon; i++ { // Only tier 1 classes
 		class := types.GetClass(i)
 		if class != nil && strings.HasPrefix(strings.ToLower(class.Name), input) {
 			classIndex = i
@@ -651,27 +651,7 @@ func (h *LoginHandler) initializeNewCharacter(ch *types.Character) {
 	ch.Level = 1
 	ch.Exp = 0
 
-	// Get class info
-	class := types.GetClass(ch.Class)
-	if class == nil {
-		class = types.GetClass(types.ClassWarrior)
-	}
-
-	// Set HP based on class
-	ch.MaxHit = class.HPMax + ch.GetStat(types.StatCon)
-	ch.Hit = ch.MaxHit
-
-	// Set Mana based on class
-	if class.FreesMana {
-		ch.MaxMana = 100 + ch.GetStat(types.StatInt)*2
-	} else {
-		ch.MaxMana = 50
-	}
-	ch.Mana = ch.MaxMana
-
-	// Set Movement
-	ch.MaxMove = 100 + ch.GetStat(types.StatCon) + ch.GetStat(types.StatDex)
-	ch.Move = ch.MaxMove
+	ch.SetStartingVitals()
 
 	// Set armor
 	for i := 0; i < 4; i++ {
@@ -902,7 +882,7 @@ func (h *LoginHandler) sendClassMenu(session *Session) {
 	sb.WriteString("The following classes are available:\r\n\r\n")
 
 	count := 0
-	for i := 0; i < types.ClassWizard; i++ { // Only tier 1 classes
+	for i := 0; i < types.ClassDemon; i++ { // Only tier 1 classes
 		class := types.GetClass(i)
 		if class != nil {
 			name := fmt.Sprintf("%-12s", class.Name)
@@ -933,7 +913,7 @@ func (h *LoginHandler) sendClassHelp(session *Session, className string) {
 	}
 
 	// Fall back to basic class info from the class table
-	for i := 0; i < types.ClassWizard; i++ {
+	for i := 0; i < types.ClassDemon; i++ {
 		class := types.GetClass(i)
 		if class != nil && strings.HasPrefix(strings.ToLower(class.Name), strings.ToLower(className)) {
 			var sb strings.Builder
@@ -1185,10 +1165,7 @@ func (h *LoginHandler) sendSkillsTable(session *Session) {
 		"wands":   {1, 1, 12, 25, 20, 15, 15},
 	}
 
-	classIndex := ch.Class
-	if classIndex >= 7 {
-		classIndex = 0 // Default for tier 2 classes
-	}
+	classIndex := ch.SkillClass()
 
 	// Collect learned skills with their levels
 	type skillEntry struct {
@@ -1345,10 +1322,7 @@ func (h *LoginHandler) sendSpellsTable(session *Session) {
 		"word of recall":  {52, 36, 103, 103, 103, 46, 103},
 	}
 
-	classIndex := ch.Class
-	if classIndex >= 7 {
-		classIndex = 0 // Default for tier 2 classes
-	}
+	classIndex := ch.SkillClass()
 
 	// Collect learned spells with their levels
 	type spellEntry struct {
@@ -1597,7 +1571,7 @@ func (h *LoginHandler) giveDefaultGroup(ch *types.Character) {
 			"call lightning", "earthquake",
 			"polearm", // Primary weapon: polearm
 		},
-		types.ClassVampire: {
+		types.ClassGhoul: {
 			"backstab", "sneak", "hide", "dodge", "disarm",
 			"fast healing", "hand to hand", "shield block",
 			"detect invis", "detect hidden",

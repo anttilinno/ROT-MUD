@@ -3,7 +3,7 @@
 [[help]]
 keywords = ["classes", "class"]
 description = """
-Rivers of Time features 14 character classes divided into two tiers:
+Rivers of Time features character classes in two tiers:
 
 TIER 1 (Starting Classes):
   Mage      - Master of arcane magic, low HP, high mana
@@ -12,16 +12,10 @@ TIER 1 (Starting Classes):
   Warrior   - Combat master, highest HP and attacks
   Ranger    - Wilderness expert, nature magic
   Druid     - Nature priest, shapeshifting and healing
-  Vampire   - Undead predator, feeds on blood
+  Ghoul     - Blood-bound servant of the undead, feeds on blood
 
-TIER 2 (Remort Classes - requires reaching max level):
-  Wizard    - Enhanced mage with greater power
-  Priest    - Enhanced cleric with divine might
-  Mercenary - Enhanced thief, deadly assassin
-  Gladiator - Enhanced warrior, arena champion
-  Strider   - Enhanced ranger, master tracker
-  Sage      - Enhanced druid, ancient wisdom
-  Lich      - Enhanced vampire, undead sorcerer
+TIER 2 (Supernatural Classes - see 'help reroll'):
+  Demon     - Pact-bound fiend, buys powers with demonic power
 
 Use 'help <classname>' for details on each class.
 """
@@ -54,7 +48,7 @@ Weaknesses:
 Key Skills: scrolls, staves, wands, meditation
 Key Spells: magic missile, fireball, lightning bolt, enchant weapon
 """
-see_also = ["wizard", "classes"]
+see_also = ["reroll", "classes"]
 
 [[help]]
 keywords = ["cleric"]
@@ -83,7 +77,7 @@ Weaknesses:
 Key Skills: mace, flail, shield block, rescue
 Key Spells: cure light/serious/critical, heal, sanctuary, bless
 """
-see_also = ["priest", "classes"]
+see_also = ["reroll", "classes"]
 
 [[help]]
 keywords = ["thief"]
@@ -111,7 +105,7 @@ Weaknesses:
 
 Key Skills: backstab, sneak, hide, steal, pick lock, dodge, circle
 """
-see_also = ["mercenary", "classes"]
+see_also = ["reroll", "classes"]
 
 [[help]]
 keywords = ["warrior"]
@@ -139,7 +133,7 @@ Weaknesses:
 Key Skills: second/third/fourth/fifth attack, bash, berserk, rescue,
            enhanced damage, parry, shield block
 """
-see_also = ["gladiator", "classes"]
+see_also = ["reroll", "classes"]
 
 [[help]]
 keywords = ["ranger"]
@@ -168,7 +162,7 @@ Weaknesses:
 Key Skills: track, dual wield, enhanced damage
 Key Spells: call lightning, cure spells, pass door
 """
-see_also = ["strider", "classes"]
+see_also = ["reroll", "classes"]
 
 [[help]]
 keywords = ["druid"]
@@ -197,16 +191,16 @@ Weaknesses:
 Key Skills: meditation
 Key Spells: earthquake, call lightning, cure spells, control weather
 """
-see_also = ["sage", "classes"]
+see_also = ["reroll", "classes"]
 
 [[help]]
-keywords = ["vampire"]
+keywords = ["ghoul"]
 description = """
-VAMPIRE - Undead Predator
+GHOUL - Blood-Bound Servant
 
-Vampires are undead creatures that sustain themselves by feeding on
-the blood of the living. They possess dark powers but must regularly
-feed to maintain their strength.
+Ghouls are mortals bound to the undead by blood. They sustain
+themselves by feeding on the blood of the living and share many of
+their masters' dark powers and weaknesses.
 
 Prime Attribute: Constitution
 Hit Points: Low-Medium (6-8 per level)
@@ -227,170 +221,41 @@ Weaknesses:
 Key Skills: feed
 Key Spells: animate, energy drain, harm
 """
-see_also = ["lich", "classes"]
+see_also = ["reroll", "classes"]
 
 [[help]]
-keywords = ["wizard", "tier 2", "remort"]
+keywords = ["demon", "tier 2"]
 description = """
-WIZARD - Archmage (Tier 2 Class)
+DEMON - Pact-Bound Fiend (Tier 2 Class)
 
-Wizards are mages who have transcended mortality through remort,
-gaining vastly enhanced magical powers. They are the most powerful
-offensive spellcasters in existence.
-
-Prime Attribute: Intelligence
-Requirement: Remort from level 101
-
-Enhanced from Mage:
-  - Greater spell damage
-  - Larger mana pool
-  - Access to advanced spells
-  - Better combat THAC0
-"""
-see_also = ["mage", "classes", "remort"]
-
-[[help]]
-keywords = ["priest", "tier 2"]
-description = """
-PRIEST - Divine Champion (Tier 2 Class)
-
-Priests are clerics who have been elevated by the gods themselves.
-Their divine powers far exceed those of ordinary clerics, and they
-can perform miracles.
-
-Prime Attribute: Wisdom
-Requirement: Remort from level 101
-
-Enhanced from Cleric:
-  - More powerful healing
-  - Stronger protection spells
-  - Access to holy word
-  - Better combat ability
-"""
-see_also = ["cleric", "classes", "remort"]
-
-[[help]]
-keywords = ["mercenary", "tier 2"]
-description = """
-MERCENARY - Deadly Assassin (Tier 2 Class)
-
-Mercenaries are master assassins who kill for profit. Their skills
-far exceed those of common thieves, and they are among the deadliest
-combatants alive.
-
-Prime Attribute: Dexterity
-Requirement: Remort from level 101
-
-Enhanced from Thief:
-  - More devastating backstab
-  - Better combat abilities
-  - Enhanced stealth
-  - Poison mastery
-"""
-see_also = ["thief", "classes", "remort"]
-
-[[help]]
-keywords = ["gladiator", "tier 2"]
-description = """
-GLADIATOR - Arena Champion (Tier 2 Class)
-
-Gladiators are elite warriors who have survived countless battles
-in the arena. Their combat skills are legendary, and they can defeat
-almost any foe in single combat.
+Demons are heroes who sealed a pact with a demon lord. They restart
+at level 1 but keep every skill of their mortal class, and grow in
+power by earning demonic power and spending it on infernal gifts and
+demonic armour.
 
 Prime Attribute: Strength
-Requirement: Remort from level 101
+Requirement: Reroll at level 101, then complete the pact rite
 
-Enhanced from Warrior:
-  - Even more attacks
-  - Higher hit points
-  - Improved THAC0
-  - Legendary combat abilities
+The undead (heucuva), avians and pixies cannot make a demonic pact.
 """
-see_also = ["warrior", "classes", "remort"]
+see_also = ["reroll", "classes"]
 
 [[help]]
-keywords = ["strider", "tier 2"]
+keywords = ["reroll", "remort", "tier 2"]
 description = """
-STRIDER - Master Tracker (Tier 2 Class)
+REROLL - Ascending to Tier 2
 
-Striders are rangers who have become one with the wilderness. Their
-tracking abilities are supernatural, and they command powerful
-nature magic.
+At level 101 (Hero) you may type 'reroll confirm' to turn your back on
+mortal classes. Rerolling alone changes nothing; you must then complete
+the rite of a Tier 2 class. When the rite is complete:
 
-Prime Attribute: Intelligence
-Requirement: Remort from level 101
+- You become that class and restart at level 1
+- You keep every skill and spell your mortal class learned
+- Some races are barred from some rites
 
-Enhanced from Ranger:
-  - Perfect tracking
-  - Stronger nature magic
-  - Better combat skills
-  - Wilderness mastery
+Tier 2 classes:
+  Demon     - rite: a pact with a demon lord
+
+Rerolling cannot be undone.
 """
-see_also = ["ranger", "classes", "remort"]
-
-[[help]]
-keywords = ["sage", "tier 2"]
-description = """
-SAGE - Ancient Wisdom (Tier 2 Class)
-
-Sages are druids who have attained enlightenment through centuries
-of communion with nature. Their wisdom is boundless, and their
-powers are vast.
-
-Prime Attribute: Wisdom
-Requirement: Remort from level 101
-
-Enhanced from Druid:
-  - More powerful spells
-  - Greater healing
-  - Ancient knowledge
-  - Elemental mastery
-"""
-see_also = ["druid", "classes", "remort"]
-
-[[help]]
-keywords = ["lich", "tier 2"]
-description = """
-LICH - Undead Sorcerer (Tier 2 Class)
-
-Liches are vampires who have transcended undeath itself, becoming
-powerful undead sorcerers. They command dark magic of terrifying
-power.
-
-Prime Attribute: Constitution
-Requirement: Remort from level 101
-
-Enhanced from Vampire:
-  - Powerful dark magic
-  - Greater undead powers
-  - Necromancy mastery
-  - Near-immortality
-"""
-see_also = ["vampire", "classes", "remort"]
-
-[[help]]
-keywords = ["remort", "remorting"]
-description = """
-REMORT - Ascending to Tier 2
-
-When you reach level 101 (Hero level), you can choose to remort into
-a more powerful Tier 2 class. Remorting:
-
-- Resets your level to 1
-- Retains some of your power
-- Grants access to Tier 2 class abilities
-- Provides a permanent power boost
-
-Tier 1 -> Tier 2 progression:
-  Mage     -> Wizard
-  Cleric   -> Priest
-  Thief    -> Mercenary
-  Warrior  -> Gladiator
-  Ranger   -> Strider
-  Druid    -> Sage
-  Vampire  -> Lich
-
-To remort, seek out the Remort Master at the Temple.
-"""
-see_also = ["classes"]
+see_also = ["classes", "demon"]
