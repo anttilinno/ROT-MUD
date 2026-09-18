@@ -270,7 +270,7 @@ func TestCombatSimWorldGear(t *testing.T) {
 	table := func(title string, playerFn func(c, r, l int) *types.Character, mobs map[int]int) {
 		hdr := fmt.Sprintf("%-10s", title)
 		for _, lv := range worldSimLevels {
-			hdr += fmt.Sprintf("  Lv%-3d", lv)
+			hdr += fmt.Sprintf("  Lv%-6d", lv)
 		}
 		t.Log(hdr)
 		t.Log(strings.Repeat("-", len(hdr)))
@@ -278,7 +278,7 @@ func TestCombatSimWorldGear(t *testing.T) {
 			row := fmt.Sprintf("%-10s", types.ClassTable[ci].Name)
 			for _, lv := range worldSimLevels {
 				r := runSimFull(ci, types.RaceHuman, lv, n, playerFn, ws.mobFn(mobs[lv]))
-				row += fmt.Sprintf("  %4.0f%%", r.winPct())
+				row += fmt.Sprintf("  %3.0f%%/%2.0fs", r.winPct(), r.avgSeconds())
 			}
 			t.Log(row)
 		}

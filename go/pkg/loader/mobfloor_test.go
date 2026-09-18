@@ -12,7 +12,7 @@ func TestApplyMobFloor(t *testing.T) {
 	applyMobFloor(weak)
 	f := mobFloorAt(100)
 	avg := weak.Damage[0]*(weak.Damage[1]+1)/2 + weak.Damage[2]
-	if weak.MaxHit != f.hp || weak.Hit != f.hp || avg != f.dam || weak.HitRoll != f.hitroll || weak.Armor[0] != f.ac {
+	if hp := mobHPFloorAt(100); weak.MaxHit != hp || weak.Hit != hp || avg != f.dam || weak.HitRoll != f.hitroll || weak.Armor[0] != f.ac {
 		t.Fatalf("weak L100 mob not raised to floor: hp %d dam %d hit %d ac %d", weak.MaxHit, avg, weak.HitRoll, weak.Armor[0])
 	}
 
@@ -23,10 +23,10 @@ func TestApplyMobFloor(t *testing.T) {
 		t.Fatal("mobs above the floor must keep their own values")
 	}
 
-	low := types.NewNPC(3, "low", 59)
-	low.MaxHit = 10
+	low := types.NewNPC(3, "low", 20)
+	low.MaxHit, low.HitRoll = 10, 0
 	applyMobFloor(low)
-	if low.MaxHit != 10 {
-		t.Fatal("mobs below level 60 must not be floored")
+	if low.MaxHit != mobHPFloorAt(20) || low.HitRoll != 0 {
+		t.Fatalf("L20 mob: hp %d hitroll %d; want HP floor only", low.MaxHit, low.HitRoll)
 	}
 }
