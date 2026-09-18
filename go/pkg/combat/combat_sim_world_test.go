@@ -216,7 +216,12 @@ func (ws *worldSim) mobsAt(level int) []*loader.MobileData {
 			}
 		}
 		if len(out) > 0 {
-			sort.Slice(out, func(i, j int) bool { return mobThreat(out[i]) > mobThreat(out[j]) })
+			sort.Slice(out, func(i, j int) bool {
+				if ti, tj := mobThreat(out[i]), mobThreat(out[j]); ti != tj {
+					return ti > tj
+				}
+				return out[i].Vnum < out[j].Vnum // deterministic among equal threats
+			})
 			return out
 		}
 	}

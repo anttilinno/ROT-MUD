@@ -584,6 +584,7 @@ func (l *AreaLoader) loadObjects(objsPath string, world *World) error {
 
 		for i := range objsFile.Objects {
 			obj := &objsFile.Objects[i]
+			capGear(obj)
 			world.ObjTemplates[obj.Vnum] = obj
 		}
 	}
