@@ -231,6 +231,11 @@ func makeWeapon(classIdx, level int) *types.Object {
 	w.Values[0] = weaponTypeForClass(classIdx)
 	w.Values[1] = num
 	w.Values[2] = size
+	// Damage class matters now that mobs carry ROM imm/res/vuln flags.
+	w.Values[3] = int(map[int]types.DamageType{1: types.DamSlash, 2: types.DamPierce, 3: types.DamPierce, 4: types.DamBash}[w.Values[0]])
+	if w.Values[3] == 0 {
+		w.Values[3] = int(types.DamBash)
+	}
 	w.WearFlags.Set(types.WearWield)
 	w.WearLoc = types.WearLocWield
 	return w

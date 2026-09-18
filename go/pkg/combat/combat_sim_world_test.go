@@ -2,6 +2,7 @@ package combat
 
 import (
 	"fmt"
+	"slices"
 	"sort"
 	"strings"
 	"testing"
@@ -121,7 +122,9 @@ func newWorldSim(t *testing.T) *worldSim {
 	}
 	for v := range mobSeen {
 		m := world.GetMobTemplate(v)
-		if m == nil || m.Shop != nil || v >= 29600 && v <= 29699 {
+		// Skip shops, rite masters, and weapon-immune NPCs (ROT's deliberately
+		// unkillable mobs, e.g. Mr. Miyagi).
+		if m == nil || m.Shop != nil || v >= 29600 && v <= 29699 || slices.Contains(m.ImmFlags, "weapon") {
 			continue
 		}
 		skip := false
