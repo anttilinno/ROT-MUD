@@ -307,6 +307,11 @@ func (r *ResetSystem) CreateObjFromTemplate(vnum int) *types.Object {
 		obj.Values[2] = tmpl.Light.Duration
 	}
 
+	if tmpl.Portal != nil {
+		obj.Values[0] = tmpl.Portal.Charges  // uses remaining (-1 = infinite)
+		obj.Values[3] = tmpl.Portal.DestVnum // destination room vnum
+	}
+
 	// Parse affects (e.g., hitroll, damroll bonuses)
 	for _, affData := range tmpl.Affects {
 		aff := &types.Affect{

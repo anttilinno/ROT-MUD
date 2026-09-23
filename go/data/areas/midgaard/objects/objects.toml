@@ -1582,6 +1582,138 @@ cost = 700
 wear_flags = ["take"]
 
 [[objects]]
+vnum = 3170
+keywords = ["map", "world"]
+short_desc = "a map of the known world"
+long_desc = "A large, rolled up world map is here."
+item_type = "map"
+level = 0
+weight = 15
+cost = 2000
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3171
+keywords = ["map", "camelot"]
+short_desc = "a map of Camelot"
+long_desc = "A rolled up map is here."
+item_type = "map"
+level = 0
+weight = 5
+cost = 600
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3172
+keywords = ["map", "shire"]
+short_desc = "a map of the Shire"
+long_desc = "A rolled up map is here."
+item_type = "map"
+level = 0
+weight = 5
+cost = 500
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3173
+keywords = ["map", "ofcol"]
+short_desc = "a map of New Ofcol"
+long_desc = "A rolled up map is here."
+item_type = "map"
+level = 0
+weight = 5
+cost = 600
+wear_flags = ["take"]
+
+[[objects]]
+vnum = 3174
+keywords = ["map", "gnome", "village"]
+short_desc = "a map of the Gnome Village"
+long_desc = "A rolled up map is here."
+item_type = "map"
+level = 0
+weight = 5
+cost = 500
+wear_flags = ["take"]
+
+# Teleport runes sold by Lister. cost is auto-priced at load from the
+# destination area's danger (average mob level); the value below is a fallback.
+[[objects]]
+vnum = 3180
+keywords = ["rune", "teleport", "thalos"]
+short_desc = "a teleport rune to New Thalos"
+long_desc = "A glowing teleport rune lies here."
+item_type = "portal"
+level = 0
+weight = 1
+cost = 800
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+  [objects.portal]
+  dest_vnum = 9505
+  charges = 1
+
+[[objects]]
+vnum = 3181
+keywords = ["rune", "teleport", "camelot"]
+short_desc = "a teleport rune to Camelot"
+long_desc = "A glowing teleport rune lies here."
+item_type = "portal"
+level = 0
+weight = 1
+cost = 600
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+  [objects.portal]
+  dest_vnum = 3807
+  charges = 1
+
+[[objects]]
+vnum = 3182
+keywords = ["rune", "teleport", "shire"]
+short_desc = "a teleport rune to the Shire"
+long_desc = "A glowing teleport rune lies here."
+item_type = "portal"
+level = 0
+weight = 1
+cost = 500
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+  [objects.portal]
+  dest_vnum = 1103
+  charges = 1
+
+[[objects]]
+vnum = 3183
+keywords = ["rune", "teleport", "ofcol"]
+short_desc = "a teleport rune to New Ofcol"
+long_desc = "A glowing teleport rune lies here."
+item_type = "portal"
+level = 0
+weight = 1
+cost = 700
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+  [objects.portal]
+  dest_vnum = 669
+  charges = 1
+
+[[objects]]
+vnum = 3184
+keywords = ["rune", "teleport", "gnome"]
+short_desc = "a teleport rune to the Gnome Village"
+long_desc = "A glowing teleport rune lies here."
+item_type = "portal"
+level = 0
+weight = 1
+cost = 300
+wear_flags = ["take", "hold"]
+extra_flags = ["magic"]
+  [objects.portal]
+  dest_vnum = 1501
+  charges = 1
+
+[[objects]]
 vnum = 3200
 keywords = ["juke", "box", "music"]
 short_desc = "the juke"

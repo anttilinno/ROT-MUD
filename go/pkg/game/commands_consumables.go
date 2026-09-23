@@ -595,6 +595,69 @@ func (d *CommandDispatcher) doRecite(ch *types.Character, args string) {
 	ch.RemoveInventory(scroll)
 }
 
+// cmdUse activates a usable carried item. Currently handles teleport runes
+// (ItemTypePortal): it whisks the user to the room stored on the item, then
+// spends a charge — single-charge runes are consumed. Destination and charges
+// come from the object's value slots (Values[3] = dest vnum, Values[0] = charges).
+func (d *CommandDispatcher) cmdUse(ch *types.Character, args string) {
+	args = strings.TrimSpace(args)
+	if args == "" {
+		d.send(ch, "Use what?\r\n")
+		return
+	}
+
+	obj := d.findObjInInventory(ch, args)
+	if obj == nil {
+		d.send(ch, "You don't have that.\r\n")
+		return
+	}
+
+	if obj.ItemType != types.ItemTypePortal {
+		d.send(ch, "You can't use that.\r\n")
+		return
+	}
+
+	if ch.Level < obj.Level {
+		d.send(ch, "You can't fathom how to use it.\r\n")
+		return
+	}
+
+	destVnum := obj.Values[3]
+	destRoom := d.GameLoop.GetRoom(destVnum)
+	if destVnum <= 0 || destRoom == nil {
+		d.send(ch, fmt.Sprintf("%s fizzles and does nothing.\r\n", obj.ShortDesc))
+		return
+	}
+
+	if ch.InRoom != nil && ch.InRoom.Flags.Has(types.RoomNoRecall) {
+		d.send(ch, "Some force prevents the magic from taking hold.\r\n")
+		return
+	}
+
+	// Whisk the user away.
+	ActToRoom("$n is enveloped in a flash of light and vanishes.", ch, nil, nil, d.Output)
+	d.send(ch, fmt.Sprintf("You invoke %s and the world dissolves around you...\r\n", obj.ShortDesc))
+
+	oldRoom := ch.InRoom
+	if oldRoom != nil {
+		oldRoom.RemovePerson(ch)
+	}
+	ch.Fighting = nil
+	destRoom.AddPerson(ch)
+	ch.InRoom = destRoom
+	ActToRoom("$n arrives in a flash of light.", ch, nil, nil, d.Output)
+	d.cmdLook(ch, "")
+
+	// Spend a charge; consume single-use runes.
+	if obj.Values[0] > 0 {
+		obj.Values[0]--
+		if obj.Values[0] == 0 {
+			d.send(ch, fmt.Sprintf("%s crumbles to dust.\r\n", obj.ShortDesc))
+			ch.RemoveInventory(obj)
+		}
+	}
+}
+
 // doZap implements the zap command for wands
 func (d *CommandDispatcher) doZap(ch *types.Character, args string) {
 	// Find what to zap

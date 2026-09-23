@@ -1316,9 +1316,49 @@ half hidden by a stack of books, leads to a room in the back of the shop."""
     vnum = 3162
     inv_only = true
 
+    [[rooms.mob_resets.equips]]
+    vnum = 3170
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3171
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3172
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3173
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3174
+    inv_only = true
+
   [[rooms.mob_resets]]
   vnum = 3161
   max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3180
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3181
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3182
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3183
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3184
+    inv_only = true
 
 [[rooms]]
 vnum = 3161

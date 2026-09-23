@@ -240,7 +240,38 @@ func (l *AreaLoader) LoadAll() (*World, error) {
 	// fills the gap so existing keeper inventories actually become shoppable.
 	autoRegisterShops(world)
 
+	// Price teleport items by the danger of their destination area.
+	priceTeleportItems(world)
+
 	return world, nil
+}
+
+// priceTeleportItems sets the Cost of every portal/teleport object template from
+// the average mob level of its destination area, so far-off or dangerous
+// destinations cost more. Cost is in copper (base + level scaled).
+func priceTeleportItems(world *World) {
+	const base, perLevel = 50, 20
+	for _, tmpl := range world.ObjTemplates {
+		if tmpl.Portal == nil || tmpl.Portal.DestVnum <= 0 {
+			continue
+		}
+		room := world.Rooms[tmpl.Portal.DestVnum]
+		if room == nil || room.Area == nil {
+			continue
+		}
+		var total, n int
+		for v := room.Area.MinVnum; v <= room.Area.MaxVnum; v++ {
+			if m := world.MobTemplates[v]; m != nil {
+				total += m.Level
+				n++
+			}
+		}
+		avg := 0
+		if n > 0 {
+			avg = total / n
+		}
+		tmpl.Cost = base + avg*perLevel
+	}
 }
 
 // autoRegisterShops scans room mob_resets for inv_only equipment. Any mob
@@ -267,7 +298,15 @@ func autoRegisterShops(world *World) {
 			if tmpl == nil {
 				continue
 			}
-			world.Shops[mr.Vnum] = defaultShopFor(tmpl)
+			shop := defaultShopFor(tmpl)
+			// A keeper stocked with maps also buys maps back.
+			for _, eq := range mr.Equips {
+				if ot := world.ObjTemplates[eq.Vnum]; ot != nil && ot.ItemType == "map" {
+					shop.BuyTypes = append(shop.BuyTypes, "map")
+					break
+				}
+			}
+			world.Shops[mr.Vnum] = shop
 		}
 	}
 }

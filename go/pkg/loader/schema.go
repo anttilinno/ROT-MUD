@@ -192,6 +192,7 @@ type ObjectData struct {
 	Armor      *ArmorData      `toml:"armor"`
 	Container  *ContainerData  `toml:"container"`
 	Light      *LightData      `toml:"light"`
+	Portal     *PortalData     `toml:"portal"`
 	Affects    []AffectData    `toml:"affects"`
 	ExtraDescs []ExtraDescData `toml:"extra_descs"`
 }
@@ -220,6 +221,13 @@ type ContainerData struct {
 
 type LightData struct {
 	Duration int `toml:"duration"`
+}
+
+// PortalData configures a portal/teleport item. DestVnum is the destination
+// room; Charges is the number of uses (1 = single-use consumable, -1 = infinite).
+type PortalData struct {
+	DestVnum int `toml:"dest_vnum"`
+	Charges  int `toml:"charges"`
 }
 
 type AffectData struct {

@@ -30,23 +30,38 @@ func NewShopHandler(registry *ShopRegistry, world WorldInterface) *ShopHandler {
 	}
 }
 
-// findKeeperInRoom finds a shopkeeper in the character's room
+// keeperShop pairs a shopkeeper mob with its shop.
+type keeperShop struct {
+	keeper *types.Character
+	shop   *Shop
+}
+
+// findKeeperInRoom finds the first shopkeeper in the character's room.
 func (h *ShopHandler) findKeeperInRoom(ch *types.Character) (*types.Character, *Shop) {
-	if ch.InRoom == nil {
+	keepers := h.keepersInRoom(ch)
+	if len(keepers) == 0 {
 		return nil, nil
 	}
+	return keepers[0].keeper, keepers[0].shop
+}
 
+// keepersInRoom returns every shopkeeper present in the character's room, so a
+// single room can host more than one merchant (e.g. a map seller and a teleport
+// vendor) and buy/sell/list route to whichever keeper is relevant.
+func (h *ShopHandler) keepersInRoom(ch *types.Character) []keeperShop {
+	if ch.InRoom == nil {
+		return nil
+	}
+	var out []keeperShop
 	for _, mob := range ch.InRoom.People {
 		if mob == ch || !mob.IsNPC() {
 			continue
 		}
-
-		shop := h.Registry.GetByMob(mob)
-		if shop != nil {
-			return mob, shop
+		if shop := h.Registry.GetByMob(mob); shop != nil {
+			out = append(out, keeperShop{keeper: mob, shop: shop})
 		}
 	}
-	return nil, nil
+	return out
 }
 
 // sendToChar sends a message to a character
@@ -58,16 +73,9 @@ func (h *ShopHandler) sendToChar(ch *types.Character, format string, args ...int
 
 // DoBuy handles the 'buy' command
 func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
-	keeper, shop := h.findKeeperInRoom(ch)
-	if keeper == nil {
+	keepers := h.keepersInRoom(ch)
+	if len(keepers) == 0 {
 		h.sendToChar(ch, "You can't do that here.\r\n")
-		return
-	}
-
-	// Check if shop is open
-	hour := h.World.GetCurrentHour()
-	if !shop.IsOpen(hour) {
-		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keeper.ShortDesc)
 		return
 	}
 
@@ -76,17 +84,27 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 		return
 	}
 
-	// Find the item in keeper's inventory
+	// Find the (open) keeper that stocks the requested item.
+	hour := h.World.GetCurrentHour()
+	var shop *Shop
 	var obj *types.Object
-	for _, item := range keeper.Inventory {
-		if matchesKeyword(item.Name, argument) {
-			obj = item
+	for _, ks := range keepers {
+		if !ks.shop.IsOpen(hour) {
+			continue
+		}
+		for _, item := range ks.keeper.Inventory {
+			if matchesKeyword(item.Name, argument) {
+				shop, obj = ks.shop, item
+				break
+			}
+		}
+		if obj != nil {
 			break
 		}
 	}
 
 	if obj == nil {
-		h.sendToChar(ch, "%s says 'I don't have that item.'\r\n", keeper.ShortDesc)
+		h.sendToChar(ch, "%s says 'I don't have that item.'\r\n", keepers[0].keeper.ShortDesc)
 		return
 	}
 
@@ -145,18 +163,13 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 
 // DoSell handles the 'sell' command
 func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
-	keeper, shop := h.findKeeperInRoom(ch)
-	if keeper == nil {
+	keepers := h.keepersInRoom(ch)
+	if len(keepers) == 0 {
 		h.sendToChar(ch, "You can't do that here.\r\n")
 		return
 	}
 
-	// Check if shop is open
 	hour := h.World.GetCurrentHour()
-	if !shop.IsOpen(hour) {
-		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keeper.ShortDesc)
-		return
-	}
 
 	if argument == "" {
 		h.sendToChar(ch, "Sell what?\r\n")
@@ -185,9 +198,17 @@ func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
 		return
 	}
 
-	// Check if shop buys this type
-	if !shop.BuysType(obj.ItemType) {
-		h.sendToChar(ch, "%s says 'I don't buy that kind of thing.'\r\n", keeper.ShortDesc)
+	// Find an open keeper that buys this item type.
+	var keeper *types.Character
+	var shop *Shop
+	for _, ks := range keepers {
+		if ks.shop.IsOpen(hour) && ks.shop.BuysType(obj.ItemType) {
+			keeper, shop = ks.keeper, ks.shop
+			break
+		}
+	}
+	if keeper == nil {
+		h.sendToChar(ch, "%s says 'I don't buy that kind of thing.'\r\n", keepers[0].keeper.ShortDesc)
 		return
 	}
 
@@ -220,50 +241,58 @@ func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
 
 // DoList handles the 'list' command
 func (h *ShopHandler) DoList(ch *types.Character, argument string) {
-	keeper, shop := h.findKeeperInRoom(ch)
-	if keeper == nil {
+	keepers := h.keepersInRoom(ch)
+	if len(keepers) == 0 {
 		h.sendToChar(ch, "You can't do that here.\r\n")
 		return
 	}
 
-	// Check if shop is open
 	hour := h.World.GetCurrentHour()
-	if !shop.IsOpen(hour) {
-		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keeper.ShortDesc)
-		return
-	}
-
-	if len(keeper.Inventory) == 0 {
-		h.sendToChar(ch, "%s says 'I have nothing for sale right now.'\r\n", keeper.ShortDesc)
-		return
-	}
-
+	multi := len(keepers) > 1
 	var sb strings.Builder
-	sb.WriteString("[Lvl        Price Qty] Item\r\n")
+	listed := false
 
-	// Group items by vnum and count quantities
-	itemCounts := make(map[int]int)
-	itemObjects := make(map[int]*types.Object)
-	for _, obj := range keeper.Inventory {
-		itemCounts[obj.Vnum]++
-		if itemObjects[obj.Vnum] == nil {
-			itemObjects[obj.Vnum] = obj
-		}
-	}
-
-	for vnum, obj := range itemObjects {
-		price := shop.GetSellPrice(obj, ch)
-		qty := itemCounts[vnum]
-
-		// Filter by argument if provided
-		if argument != "" && !matchesKeyword(obj.Name, argument) {
+	for _, ks := range keepers {
+		if !ks.shop.IsOpen(hour) || len(ks.keeper.Inventory) == 0 {
 			continue
 		}
 
-		sb.WriteString(fmt.Sprintf("[%3d %12s %3d] %s\r\n",
-			obj.Level, types.FormatCoin(price), qty, obj.ShortDesc))
+		// Group items by vnum and count quantities for this keeper.
+		itemCounts := make(map[int]int)
+		itemObjects := make(map[int]*types.Object)
+		var order []int
+		for _, obj := range ks.keeper.Inventory {
+			if itemObjects[obj.Vnum] == nil {
+				itemObjects[obj.Vnum] = obj
+				order = append(order, obj.Vnum)
+			}
+			itemCounts[obj.Vnum]++
+		}
+
+		var body strings.Builder
+		for _, vnum := range order {
+			obj := itemObjects[vnum]
+			if argument != "" && !matchesKeyword(obj.Name, argument) {
+				continue
+			}
+			body.WriteString(fmt.Sprintf("[%3d %12s %3d] %s\r\n",
+				obj.Level, types.FormatCoin(ks.shop.GetSellPrice(obj, ch)), itemCounts[vnum], obj.ShortDesc))
+		}
+		if body.Len() == 0 {
+			continue
+		}
+		if multi {
+			sb.WriteString(fmt.Sprintf("%s offers:\r\n", ks.keeper.ShortDesc))
+		}
+		sb.WriteString("[Lvl        Price Qty] Item\r\n")
+		sb.WriteString(body.String())
+		listed = true
 	}
 
+	if !listed {
+		h.sendToChar(ch, "There is nothing for sale here right now.\r\n")
+		return
+	}
 	h.sendToChar(ch, "%s", sb.String())
 }
 

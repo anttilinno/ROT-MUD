@@ -1498,13 +1498,14 @@ alignment = 0
 
 [[mobiles]]
 vnum = 3161
-keywords = ["lister", "green", "tree", "snake"]
-short_desc = "Lister"
-long_desc = "A green tree snake is sitting here on a pile of books."
+keywords = ["lister", "black", "mage", "lister"]
+short_desc = "Lister the black mage"
+long_desc = "Lister, a black-robed mage, sits amid a clutter of glowing runes."
 description = """
-This is Melancholy's pet tree snake, Lister.  Something seems odd about his 
-jaw, almost as if he were smiling at you.  He's quite friendly, but don't
-get him drunk."""
+Lister is a gaunt mage wrapped in midnight-black robes, Melancholy's longtime
+associate.  Where she trades in maps, he deals in distance itself -- the runes
+scattered about him hum faintly, each one a single journey waiting to be spent.
+Type 'list' to see the teleport runes he offers."""
 level = 30
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
