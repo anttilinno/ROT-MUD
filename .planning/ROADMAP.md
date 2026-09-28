@@ -13,7 +13,7 @@ Transform the ROT-MUD entity systems (races, classes, skills, spells, mob templa
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Golden-Master Safety Net** - Capture current combat, spell, skill, and mob behavior in a deterministic parity suite before any migration starts
+- [x] **Phase 1: Golden-Master Safety Net** - Capture current combat, spell, skill, and mob behavior in a deterministic parity suite before any migration starts (completed 2026-04-17)
 - [x] **Phase 2: Trait Type System** - Typed trait structs, additive composition with per-axis caps, and a trait query API in pure Go (completed 2026-06-01)
 - [ ] **Phase 3: Race & Class Loaders** - Homogeneous-section TOML files for races and classes, read and batch-validated at startup
 - [ ] **Phase 4: Lua Scripting Host** - Sandboxed gopher-lua VM running five named hook events with hand-written Go API (parallelizable with Phase 3/5/6)
@@ -299,7 +299,7 @@ Open:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 13 -> 14 (15 and 16 are standalone and were taken out of order)
 
 **Parallelization opportunities** (parallelization=true in config):
 
@@ -313,7 +313,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Golden-Master Safety Net | 0/3 | Not started | - |
+| 1. Golden-Master Safety Net | 4/4 | Complete | 2026-04-17 |
 | 2. Trait Type System | 2/2 | Complete   | 2026-06-01 |
 | 3. Race & Class Loaders | 0/TBD | Not started | - |
 | 4. Lua Scripting Host | 0/TBD | Not started | - |
