@@ -79,6 +79,58 @@ const (
 )
 
 // DefaultSpells returns a registry populated with default spells
+// spellMinPosition lists spells castable below standing, from ROT's
+// skill_table min_position (spells not listed need POS_STANDING). The last
+// four are this port's own combat spells.
+var spellMinPosition = map[string]types.Position{
+	"acid blast":      types.PosFighting,
+	"blindness":       types.PosFighting,
+	"burning hands":   types.PosFighting,
+	"call lightning":  types.PosFighting,
+	"calm":            types.PosFighting,
+	"cause critical":  types.PosFighting,
+	"cause light":     types.PosFighting,
+	"cause serious":   types.PosFighting,
+	"chain lightning": types.PosFighting,
+	"chill touch":     types.PosFighting,
+	"colour spray":    types.PosFighting,
+	"cure blindness":  types.PosFighting,
+	"cure critical":   types.PosFighting,
+	"cure light":      types.PosFighting,
+	"cure serious":    types.PosFighting,
+	"curse":           types.PosFighting,
+	"demonfire":       types.PosFighting,
+	"dispel evil":     types.PosFighting,
+	"dispel good":     types.PosFighting,
+	"dispel magic":    types.PosFighting,
+	"earthquake":      types.PosFighting,
+	"empower":         types.PosResting,
+	"energy drain":    types.PosFighting,
+	"faerie fire":     types.PosFighting,
+	"fireball":        types.PosFighting,
+	"flamestrike":     types.PosFighting,
+	"gate":            types.PosFighting,
+	"general purpose": types.PosFighting,
+	"harm":            types.PosFighting,
+	"haste":           types.PosFighting,
+	"heal":            types.PosFighting,
+	"heat metal":      types.PosFighting,
+	"high explosive":  types.PosFighting,
+	"holy word":       types.PosFighting,
+	"lightning bolt":  types.PosFighting,
+	"magic missile":   types.PosFighting,
+	"poison":          types.PosFighting,
+	"ray of truth":    types.PosFighting,
+	"shocking grasp":  types.PosFighting,
+	"slow":            types.PosFighting,
+	"teleport":        types.PosFighting,
+	"word of recall":  types.PosResting,
+	"meteor swarm":    types.PosFighting,
+	"implode":         types.PosFighting,
+	"disintegrate":    types.PosFighting,
+	"unholy word":     types.PosFighting,
+}
+
 func DefaultSpells() *SpellRegistry {
 	r := NewSpellRegistry()
 
@@ -489,6 +541,11 @@ func DefaultSpells() *SpellRegistry {
 	r.Register(NewSpell("voodoo", SlotVoodoo, TargetIgnore, 50, spellVoodoo).
 		SetLevels(map[string]int{"mage": 102, "cleric": 102, "thief": 102, "warrior": 102, "necromancer": 25, "warlock": 20}))
 
+	for _, sp := range r.All() {
+		if pos, ok := spellMinPosition[sp.Name]; ok {
+			sp.MinPosition = pos
+		}
+	}
 	return r
 }
 

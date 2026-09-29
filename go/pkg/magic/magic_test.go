@@ -1,6 +1,7 @@
 package magic
 
 import (
+	"rotmud/pkg/combat"
 	"testing"
 
 	"rotmud/pkg/types"
@@ -678,5 +679,27 @@ func TestSpellDamageUsesCombatPath(t *testing.T) {
 	spellMagicMissile(caster, 20, victim) // 1d4+20, halved: 10-12
 	if lost := 1000 - victim.Hit; lost < 10 || lost > 12 {
 		t.Errorf("sanctuary victim lost %d HP, want 10-12", lost)
+	}
+}
+
+// Combat spells can be cast while fighting (ROM min_position POS_FIGHTING).
+func TestCastWhileFighting(t *testing.T) {
+	ms := NewMagicSystem()
+	caster := types.NewCharacter("Caster")
+	caster.Level, caster.Mana = 20, 100
+	caster.PCData = &types.PCData{Learned: map[string]int{"magic missile": 100}}
+	victim := types.NewNPC(1, "mob", 20)
+	victim.Hit, victim.MaxHit = 1000, 1000
+	room := types.NewRoom(1, "r", "r")
+	room.AddPerson(caster)
+	room.AddPerson(victim)
+	caster.InRoom, victim.InRoom = room, room
+	combat.SetFighting(caster, victim)
+	ms.Cast(caster, "magic missile", "", nil)
+	if victim.Hit == 1000 {
+		t.Error("magic missile did nothing while fighting")
+	}
+	if ms.Registry.FindByName("create food").MinPosition != types.PosStanding {
+		t.Error("create food should need standing")
 	}
 }
