@@ -47,8 +47,9 @@ func (c *CombatSystem) CheckDefenses(ch, victim *types.Character) DefenseResult 
 
 // checkParry checks if the victim parries the attack
 func (c *CombatSystem) checkParry(ch, victim *types.Character) bool {
-	// Need a weapon to parry
-	if victim.GetEquipment(types.WearLocWield) == nil {
+	// Unarmed: mobs parry at half chance, players can't (ROT).
+	unarmed := victim.GetEquipment(types.WearLocWield) == nil
+	if unarmed && !victim.IsNPC() {
 		return false
 	}
 
@@ -58,32 +59,19 @@ func (c *CombatSystem) checkParry(ch, victim *types.Character) bool {
 		return false
 	}
 
-	// Base chance from skill (0-100 skill -> 0-50% base)
+	// ROT check_parry: skill/2, plus the level gap either way.
 	chance := parrySkill / 2
-
-	// Dexterity modifier
-	chance += (victim.GetStat(types.StatDex) - 15) * 2
-
-	// Level difference matters
-	if ch.Level > victim.Level {
-		chance -= (ch.Level - victim.Level) * 2
+	if unarmed {
+		chance /= 2
 	}
+	chance += victim.Level - ch.Level
 
-	// Can't see attacker penalty
-	if !CanSee(victim, ch) {
+	if !CanSee(ch, victim) {
 		chance /= 2
 	}
 
-	// Cap at 60%
-	if chance > 60 {
-		chance = 60
-	}
-	if chance < 2 {
-		chance = 2
-	}
-
 	// Roll for parry
-	if NumberPercent() > chance {
+	if NumberPercent() >= chance {
 		return false
 	}
 
@@ -113,32 +101,15 @@ func (c *CombatSystem) checkDodge(ch, victim *types.Character) bool {
 		return false
 	}
 
-	// Base chance from skill (0-100 skill -> 0-50% base)
-	chance := dodgeSkill / 2
+	// ROT check_dodge: skill/2, plus the level gap either way.
+	chance := dodgeSkill/2 + victim.Level - ch.Level
 
-	// Dexterity is crucial for dodging
-	chance += (victim.GetStat(types.StatDex) - 15) * 3
-
-	// Level difference matters
-	if ch.Level > victim.Level {
-		chance -= (ch.Level - victim.Level) * 2
-	}
-
-	// Can't see attacker penalty
 	if !CanSee(victim, ch) {
 		chance /= 2
 	}
 
-	// Cap at 50%
-	if chance > 50 {
-		chance = 50
-	}
-	if chance < 2 {
-		chance = 2
-	}
-
 	// Roll for dodge
-	if NumberPercent() > chance {
+	if NumberPercent() >= chance {
 		return false
 	}
 
@@ -174,27 +145,11 @@ func (c *CombatSystem) checkShieldBlock(ch, victim *types.Character) bool {
 		return false
 	}
 
-	// Base chance from skill (0-100 skill -> 0-40% base)
-	chance := shieldSkill * 2 / 5
-
-	// Strength helps with shield blocking
-	chance += (victim.GetStat(types.StatStr) - 15) * 2
-
-	// Level difference matters
-	if ch.Level > victim.Level {
-		chance -= (ch.Level - victim.Level)
-	}
-
-	// Cap at 40%
-	if chance > 40 {
-		chance = 40
-	}
-	if chance < 2 {
-		chance = 2
-	}
+	// ROT check_shield_block: skill/5 + 3, plus the level gap either way.
+	chance := shieldSkill/5 + 3 + victim.Level - ch.Level
 
 	// Roll for block
-	if NumberPercent() > chance {
+	if NumberPercent() >= chance {
 		return false
 	}
 
