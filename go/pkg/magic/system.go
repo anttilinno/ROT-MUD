@@ -108,7 +108,7 @@ func (m *MagicSystem) Cast(caster *types.Character, spellName string, targetArg 
 	caster.Mana -= mana
 
 	// Add lag
-	caster.Wait += spell.Beats
+	combat.WaitState(caster, combat.BeatsToRounds(spell.Beats))
 
 	// Check spell proficiency - can fizzle based on skill level
 	// Cap at 99% so even masters have a 1% chance to fail (like rolling 1 on d20)

@@ -149,12 +149,6 @@ func (c *CombatSystem) OneHit(ch, victim *types.Character, secondary bool) Damag
 
 // MultiHit performs a round of attacks from ch against victim
 func (c *CombatSystem) MultiHit(ch, victim *types.Character) {
-	// Decrement wait/daze timers for NPCs
-	if ch.Descriptor == nil {
-		ch.Wait = Max(0, ch.Wait-3)
-		ch.Daze = Max(0, ch.Daze-3)
-	}
-
 	// Can't attack while stunned
 	if ch.Position < types.PosResting {
 		return

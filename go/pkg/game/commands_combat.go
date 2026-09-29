@@ -354,7 +354,7 @@ func (d *CommandDispatcher) cmdBash(ch *types.Character, args string) {
 		victim.Position = types.PosSitting
 
 		// Wait state for basher
-		ch.Wait = 2
+		combat.WaitState(ch, 2)
 	} else {
 		// Failure - basher falls down
 		d.send(ch, "Your bash misses and you fall down!\r\n")
@@ -423,7 +423,7 @@ func (d *CommandDispatcher) cmdKick(ch *types.Character, args string) {
 	}
 
 	// Wait state
-	ch.Wait = 1
+	combat.WaitState(ch, 1)
 }
 
 func (d *CommandDispatcher) cmdTrip(ch *types.Character, args string) {
@@ -490,11 +490,11 @@ func (d *CommandDispatcher) cmdTrip(ch *types.Character, args string) {
 		victim.Daze = 2
 
 		// Wait state
-		ch.Wait = 2
+		combat.WaitState(ch, 2)
 	} else {
 		d.send(ch, "You fail to trip them.\r\n")
 		ActToRoom("$n tries to trip $N but fails.", ch, victim, nil, d.Output)
-		ch.Wait = 1
+		combat.WaitState(ch, 1)
 	}
 }
 
@@ -549,7 +549,7 @@ func (d *CommandDispatcher) cmdDisarm(ch *types.Character, args string) {
 	}
 
 	// Wait state
-	ch.Wait = 2
+	combat.WaitState(ch, 2)
 }
 
 func (d *CommandDispatcher) cmdRescue(ch *types.Character, args string) {
@@ -604,7 +604,7 @@ func (d *CommandDispatcher) cmdRescue(ch *types.Character, args string) {
 		d.send(ch, "You fail to rescue them.\r\n")
 	}
 
-	ch.Wait = 2
+	combat.WaitState(ch, 2)
 }
 
 func (d *CommandDispatcher) cmdDirt(ch *types.Character, args string) {
@@ -738,7 +738,7 @@ func (d *CommandDispatcher) cmdDirt(ch *types.Character, args string) {
 		}
 	}
 
-	ch.Wait = 2
+	combat.WaitState(ch, 2)
 }
 
 func (d *CommandDispatcher) cmdGouge(ch *types.Character, args string) {
@@ -851,7 +851,7 @@ func (d *CommandDispatcher) cmdGouge(ch *types.Character, args string) {
 		}
 	}
 
-	ch.Wait = 2
+	combat.WaitState(ch, 2)
 }
 
 func (d *CommandDispatcher) cmdCircle(ch *types.Character, args string) {
@@ -935,7 +935,7 @@ func (d *CommandDispatcher) cmdCircle(ch *types.Character, args string) {
 		}
 	}
 
-	ch.Wait = 3
+	combat.WaitState(ch, 3)
 }
 
 func (d *CommandDispatcher) cmdBerserk(ch *types.Character, args string) {
@@ -1048,7 +1048,7 @@ func (d *CommandDispatcher) cmdBerserk(ch *types.Character, args string) {
 			d.Skills.CheckImprove(ch, "berserk", true, 2)
 		}
 
-		ch.Wait = 1
+		combat.WaitState(ch, 1)
 	} else {
 		// Failure
 		ch.Mana -= 25
@@ -1060,7 +1060,7 @@ func (d *CommandDispatcher) cmdBerserk(ch *types.Character, args string) {
 			d.Skills.CheckImprove(ch, "berserk", false, 2)
 		}
 
-		ch.Wait = 3
+		combat.WaitState(ch, 3)
 	}
 }
 
@@ -1119,7 +1119,7 @@ func (d *CommandDispatcher) cmdMurder(ch *types.Character, args string) {
 	}
 
 	// Wait state
-	ch.Wait = 1
+	combat.WaitState(ch, 1)
 
 	// Victim yells for help
 	var helpMsg string

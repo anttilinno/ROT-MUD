@@ -3,6 +3,7 @@ package game
 import (
 	"context"
 	"log/slog"
+	"slices"
 	"strings"
 	"sync"
 	"time"
@@ -47,6 +48,7 @@ type GameLoop struct {
 
 	// Channels
 	commands chan Command
+	lagged   []Command // player commands held while the player is lagged (ROM WAIT_STATE)
 	done     chan struct{}
 
 	// Callbacks for update events
@@ -159,6 +161,8 @@ func (g *GameLoop) pulse() {
 	if pulseNum%PulseViolence == 0 {
 		g.violenceUpdate()
 	}
+
+	g.runLagged()
 
 	// Mobile update (NPC AI) - every 4 pulses
 	if pulseNum%PulseMobile == 0 {
@@ -591,13 +595,52 @@ func (g *GameLoop) areaUpdate() {
 	}
 }
 
-// processCommand handles a single player command
+// processCommand runs a player command, or holds it while the player is
+// lagged or still has earlier commands held.
 func (g *GameLoop) processCommand(cmd Command) {
+	if ch := cmd.Character; ch != nil && (ch.Wait > 0 || slices.ContainsFunc(g.lagged, func(c Command) bool { return c.Character == ch })) {
+		g.lagged = append(g.lagged, cmd)
+		return
+	}
+	g.runCommand(cmd)
+}
+
+func (g *GameLoop) runCommand(cmd Command) {
 	if g.OnCommand != nil {
 		g.OnCommand(cmd)
 	}
+}
 
-	// TODO: Parse and execute the command
+// runLagged runs, per pulse, the oldest held command of each player whose lag
+// has worn off, and drops commands of players who have left the game.
+func (g *GameLoop) runLagged() {
+	if len(g.lagged) == 0 {
+		return
+	}
+	g.mu.RLock()
+	live := map[*types.Character]bool{}
+	for _, ch := range g.Characters {
+		live[ch] = true
+	}
+	g.mu.RUnlock()
+	seen := map[*types.Character]bool{}
+	var ready []Command
+	rest := g.lagged[:0]
+	for _, cmd := range g.lagged {
+		if !live[cmd.Character] {
+			continue
+		}
+		if !seen[cmd.Character] && cmd.Character.Wait == 0 {
+			ready = append(ready, cmd)
+		} else {
+			rest = append(rest, cmd)
+		}
+		seen[cmd.Character] = true
+	}
+	g.lagged = rest
+	for _, cmd := range ready {
+		g.runCommand(cmd)
+	}
 }
 
 // QueueCommand adds a command to the processing queue

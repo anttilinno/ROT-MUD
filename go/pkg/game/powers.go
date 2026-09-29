@@ -154,7 +154,7 @@ func (d *CommandDispatcher) powerBlast(name string) CommandHandler {
 			return
 		}
 		ch.Mana -= blastManaCost
-		ch.Wait += 12
+		combat.WaitState(ch, 1)
 		d.send(ch, blast.toChar+"\r\n")
 		ActToRoom(blast.toRoom, ch, nil, nil, d.Output)
 		// Copy: Damage can kill and remove people from the room.

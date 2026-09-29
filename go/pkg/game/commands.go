@@ -3007,7 +3007,7 @@ func (d *CommandDispatcher) cmdLore(ch *types.Character, args string) {
 	}
 
 	// Add lag
-	ch.Wait = 24
+	combat.WaitState(ch, 2)
 
 	// Roll for success
 	if combat.NumberPercent() > skillLevel {

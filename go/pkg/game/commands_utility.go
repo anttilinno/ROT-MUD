@@ -26,7 +26,7 @@ func (d *CommandDispatcher) cmdRecall(ch *types.Character, args string) {
 		// Success chance is skill% when fighting (higher skill = better chance)
 		if combat.NumberPercent() > skill {
 			d.send(ch, "You failed!\r\n")
-			ch.Wait = 4
+			combat.WaitState(ch, 1)
 			if d.Skills != nil {
 				d.Skills.CheckImprove(ch, "recall", false, 6)
 			}

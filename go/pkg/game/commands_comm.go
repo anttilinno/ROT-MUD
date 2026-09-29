@@ -3,6 +3,7 @@ package game
 import (
 	"fmt"
 	"math/rand"
+	"rotmud/pkg/combat"
 	"strings"
 
 	"rotmud/pkg/types"
@@ -35,7 +36,7 @@ func (d *CommandDispatcher) cmdShout(ch *types.Character, args string) {
 	ch.Mana -= manaCost
 
 	// Add lag
-	ch.Wait += 12 // 3 seconds
+	combat.WaitState(ch, 1)
 
 	d.send(ch, fmt.Sprintf("You shout '%s'\r\n", args))
 

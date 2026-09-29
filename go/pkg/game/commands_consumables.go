@@ -560,7 +560,7 @@ func (d *CommandDispatcher) doRecite(ch *types.Character, args string) {
 	d.send(ch, fmt.Sprintf("You recite %s.\r\n", scroll.ShortDesc))
 
 	// Add lag
-	ch.Wait += 6 // 2 * PULSE_VIOLENCE equivalent
+	combat.WaitState(ch, 2)
 
 	// Check skill - get scrolls skill level
 	skillLevel := 0
@@ -656,7 +656,7 @@ func (d *CommandDispatcher) doZap(ch *types.Character, args string) {
 	}
 
 	// Add lag
-	ch.Wait += 6
+	combat.WaitState(ch, 2)
 
 	// Check skill
 	skillLevel := 0
@@ -728,7 +728,7 @@ func (d *CommandDispatcher) doBrandish(ch *types.Character, args string) {
 	d.send(ch, fmt.Sprintf("You brandish %s.\r\n", staff.ShortDesc))
 
 	// Add lag
-	ch.Wait += 6
+	combat.WaitState(ch, 2)
 
 	// Check skill
 	skillLevel := 0
@@ -847,7 +847,7 @@ func (d *CommandDispatcher) doEnvenom(ch *types.Character, args string) {
 					d.Skills.CheckImprove(ch, "envenom", true, 4)
 				}
 			}
-			ch.Wait = 3
+			combat.WaitState(ch, 3)
 			return
 		}
 
@@ -858,7 +858,7 @@ func (d *CommandDispatcher) doEnvenom(ch *types.Character, args string) {
 				d.Skills.CheckImprove(ch, "envenom", false, 4)
 			}
 		}
-		ch.Wait = 3
+		combat.WaitState(ch, 3)
 		return
 	}
 
@@ -922,7 +922,7 @@ func (d *CommandDispatcher) doEnvenom(ch *types.Character, args string) {
 			if d.Skills != nil {
 				d.Skills.CheckImprove(ch, "envenom", true, 3)
 			}
-			ch.Wait = 3
+			combat.WaitState(ch, 3)
 			return
 		}
 
@@ -931,7 +931,7 @@ func (d *CommandDispatcher) doEnvenom(ch *types.Character, args string) {
 		if d.Skills != nil {
 			d.Skills.CheckImprove(ch, "envenom", false, 3)
 		}
-		ch.Wait = 3
+		combat.WaitState(ch, 3)
 		return
 	}
 

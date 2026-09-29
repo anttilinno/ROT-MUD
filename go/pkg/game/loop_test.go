@@ -1,6 +1,7 @@
 package game
 
 import (
+	"slices"
 	"testing"
 	"time"
 
@@ -197,4 +198,31 @@ func TestPulseTimingConstants(t *testing.T) {
 			t.Errorf("expected area reset every 120 pulses, got %d", PulseArea)
 		}
 	})
+}
+
+// A lagged player's commands wait out the lag and then run in order, one per pulse.
+func TestLaggedCommandsHeld(t *testing.T) {
+	loop := NewGameLoop()
+	ch := types.NewCharacter("Lagged")
+	loop.AddCharacter(ch)
+	var ran []string
+	loop.OnCommand = func(c Command) { ran = append(ran, c.Input) }
+
+	ch.Wait = 1
+	loop.processCommand(Command{Character: ch, Input: "a"})
+	loop.processCommand(Command{Character: ch, Input: "b"})
+	loop.pulse()
+	loop.pulse()
+	if len(ran) != 0 {
+		t.Fatalf("ran %v while lagged", ran)
+	}
+	loop.pulse() // violence pulse: lag wears off, then "a" runs
+	loop.pulse()
+	if want := []string{"a", "b"}; !slices.Equal(ran, want) {
+		t.Fatalf("ran %v, want %v", ran, want)
+	}
+	loop.processCommand(Command{Character: ch, Input: "c"})
+	if ran[len(ran)-1] != "c" {
+		t.Fatal("unlagged command with empty queue should run at once")
+	}
 }

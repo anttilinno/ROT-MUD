@@ -9,6 +9,20 @@ import (
 // Combat skill execution functions.
 // These are called when a player uses a combat skill like backstab, kick, etc.
 
+// Wait is counted in combat rounds: the game loop takes one off per violence
+// pulse and holds a player's commands while it is above zero. ROM counts lag
+// in pulses with 12 to a round; BeatsToRounds converts ROM beats.
+
+// WaitState lags ch for rounds combat rounds (ROM WAIT_STATE).
+func WaitState(ch *types.Character, rounds int) {
+	ch.Wait = max(ch.Wait, rounds)
+}
+
+// BeatsToRounds converts ROM beats (pulses, 12 per round) to rounds, min 1.
+func BeatsToRounds(beats int) int {
+	return max(1, (beats+6)/12)
+}
+
 // SkillResult contains the result of executing a combat skill
 type SkillResult struct {
 	Success bool   // Did the skill work?
@@ -61,7 +75,7 @@ func (c *CombatSystem) DoBackstab(ch, victim *types.Character) SkillResult {
 	}
 
 	// Add command lag (24 = 3 seconds roughly)
-	ch.Wait = 24
+	WaitState(ch, 2)
 
 	// Check for success
 	if NumberPercent() < skillLevel || !IsAwake(victim) {
@@ -173,7 +187,7 @@ func (c *CombatSystem) DoBash(ch, victim *types.Character) SkillResult {
 	chance += (ch.Level - victim.Level)
 
 	// Add lag
-	ch.Wait = 24
+	WaitState(ch, 2)
 
 	// Start combat if not already fighting
 	if ch.Fighting == nil {
@@ -208,7 +222,7 @@ func (c *CombatSystem) DoBash(ch, victim *types.Character) SkillResult {
 			c.Output(victim, fmt.Sprintf("%s falls flat on their face.\r\n", ch.Name))
 		}
 
-		ch.Wait = 36 // Extra lag on failure
+		WaitState(ch, 3) // Extra lag on failure
 		result.Success = false
 	}
 
@@ -244,7 +258,7 @@ func (c *CombatSystem) DoKick(ch, victim *types.Character) SkillResult {
 	}
 
 	// Add lag
-	ch.Wait = 12
+	WaitState(ch, 1)
 
 	// Roll for success
 	if NumberPercent() < skillLevel {
@@ -311,7 +325,7 @@ func (c *CombatSystem) DoTrip(ch, victim *types.Character) SkillResult {
 	if victim == ch {
 		result.Message = "You fall flat on your face!\r\n"
 		ch.Position = types.PosResting
-		ch.Wait = 24
+		WaitState(ch, 2)
 		return result
 	}
 
@@ -331,7 +345,7 @@ func (c *CombatSystem) DoTrip(ch, victim *types.Character) SkillResult {
 	chance += (ch.Level - victim.Level) * 2
 
 	// Add lag
-	ch.Wait = 16
+	WaitState(ch, 1)
 
 	// Start combat if not already fighting
 	if ch.Fighting == nil {
@@ -357,7 +371,7 @@ func (c *CombatSystem) DoTrip(ch, victim *types.Character) SkillResult {
 	} else {
 		// Failure
 		c.Damage(ch, victim, 0, types.DamBash, true)
-		ch.Wait = 24 // Extra lag
+		WaitState(ch, 2) // Extra lag
 		result.Success = false
 	}
 
@@ -424,7 +438,7 @@ func (c *CombatSystem) DoDisarm(ch, victim *types.Character) SkillResult {
 	chance /= 2
 
 	// Add lag
-	ch.Wait = 16
+	WaitState(ch, 1)
 
 	// Roll for success
 	if NumberPercent() < chance {
@@ -525,7 +539,7 @@ func (c *CombatSystem) DoStun(ch, victim *types.Character) SkillResult {
 	}
 
 	// Add lag
-	ch.Wait = 24
+	WaitState(ch, 2)
 
 	// Start combat if not already fighting
 	if ch.Fighting == nil {
@@ -556,7 +570,7 @@ func (c *CombatSystem) DoStun(ch, victim *types.Character) SkillResult {
 			c.Output(ch, "Your stunning blow misses its mark.\r\n")
 		}
 
-		ch.Wait = 32 // Extra lag on failure
+		WaitState(ch, 3) // Extra lag on failure
 		result.Success = false
 	}
 
@@ -604,7 +618,7 @@ func (c *CombatSystem) DoFeed(ch, victim *types.Character) SkillResult {
 	}
 
 	// Add lag
-	ch.Wait = 16
+	WaitState(ch, 1)
 
 	// Roll for success (skill/3 is harder than most attacks)
 	if NumberPercent() < skillLevel/3 || (skillLevel >= 2 && !IsAwake(victim)) {
@@ -706,7 +720,7 @@ func (c *CombatSystem) DoAssassinate(ch, victim *types.Character) SkillResult {
 	}
 
 	// Significant lag — lining up the lethal strike takes time
-	ch.Wait = 36
+	WaitState(ch, 3)
 
 	// Start combat
 	SetFighting(ch, victim)

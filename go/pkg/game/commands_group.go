@@ -2,6 +2,7 @@ package game
 
 import (
 	"fmt"
+	"rotmud/pkg/combat"
 	"strings"
 
 	"rotmud/pkg/types"
@@ -451,7 +452,7 @@ func (d *CommandDispatcher) cmdOrder(ch *types.Character, args string) {
 
 	if found {
 		// Add lag to the orderer
-		ch.Wait += 12 // PULSE_VIOLENCE equivalent
+		combat.WaitState(ch, 1)
 		d.send(ch, "Ok.\r\n")
 	} else {
 		d.send(ch, "You have no followers here.\r\n")
