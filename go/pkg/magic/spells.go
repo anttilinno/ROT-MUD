@@ -131,6 +131,25 @@ var spellMinPosition = map[string]types.Position{
 	"unholy word":     types.PosFighting,
 }
 
+// addLaterClassSpells gives ranger, druid and ghoul their spells. The
+// registry only had levels for the four base classes, so those classes could
+// cast nothing. Their levels come from ROT's table (AllSpells), which runs to
+// level 101; halving puts them on the registry's ROM scale (ROT acid blast 55
+// vs 30 here, fireball 45 vs 22). 102+ means cannot learn.
+func addLaterClassSpells(r *SpellRegistry) {
+	for _, d := range AllSpells {
+		sp := r.FindByName(d.Name)
+		if sp == nil {
+			continue
+		}
+		for _, class := range []int{types.ClassRanger, types.ClassDruid, types.ClassGhoul} {
+			if lv := d.Levels[class]; lv < 102 {
+				sp.Levels[types.ClassName(class)] = (lv + 1) / 2
+			}
+		}
+	}
+}
+
 func DefaultSpells() *SpellRegistry {
 	r := NewSpellRegistry()
 
@@ -546,6 +565,7 @@ func DefaultSpells() *SpellRegistry {
 			sp.MinPosition = pos
 		}
 	}
+	addLaterClassSpells(r)
 	return r
 }
 

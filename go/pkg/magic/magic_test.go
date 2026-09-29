@@ -703,3 +703,13 @@ func TestCastWhileFighting(t *testing.T) {
 		t.Error("create food should need standing")
 	}
 }
+
+func TestLaterClassSpellLevels(t *testing.T) {
+	r := DefaultSpells()
+	if got := r.FindByName("acid blast").GetClassLevel(types.ClassDruid); got != 23 {
+		t.Errorf("druid acid blast level = %d, want 23", got)
+	}
+	if got := r.FindByName("acid blast").GetClassLevel(types.ClassWarrior); got != 53 {
+		t.Errorf("warrior acid blast level = %d, want 53 (unchanged)", got)
+	}
+}
