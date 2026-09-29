@@ -47,13 +47,14 @@ func applyMobFloor(ch *types.Character) {
 }
 
 // mobHPFloor is the minimum mob HP at anchor levels, linear in between.
-// World mobs died in 1-13 s against geared players at L10-L60, far under the
-// 15-22 s fight target. The anchors are the median reachable mob's HP times a
-// multiplier fitted with the world combat sim so best-in-slot fights against
-// a median mob last about 15 s; from L60 they join the difficulty floor.
-// It is a floor, not a multiplier, so mobs that were already tough keep their
-// HP instead of compounding.
-var mobHPFloor = [][2]int{{1, 16}, {5, 40}, {10, 264}, {20, 762}, {30, 1100}, {40, 1380}, {50, 2012}, {60, 2222}, {100, 4500}}
+// From L30 the anchors are fitted with the world combat sim (real game code,
+// mob off flags) so a best-in-slot warrior needs about 20 s against the
+// middle third of reachable mobs at that level; casters take about 11-15 s.
+// L10 and L20 stay lower: fitting them to 20 s made low-level mages, thieves
+// and ghouls lose to median mobs (they run out of mana or HP first). L100
+// mobs are above the floor already. It is a floor, not a multiplier, so mobs
+// that were already tough keep their HP instead of compounding.
+var mobHPFloor = [][2]int{{1, 16}, {5, 40}, {10, 264}, {20, 762}, {30, 1680}, {40, 1680}, {50, 2436}, {60, 2580}, {75, 3291}, {100, 4500}}
 
 func mobHPFloorAt(level int) int {
 	if level <= mobHPFloor[0][0] {
