@@ -1,12 +1,12 @@
 package combatsim
 
-// Combat balance simulation — v2.
+// Combat balance simulation — v3.
 //
-// Models real class/race tables with:
-//   - Starter weapons that scale with level (class-appropriate type)
-//   - Caster classes deal spell damage each round (best available by level)
-//   - Class-based armor: warriors wear plate, mages wear robes
-//   - Mob HP scales quadratically so fights last 20-30 rounds
+// Fights run through the game's own code: MultiHit, the combat skills
+// (backstab, assassinate, circle), MagicSystem.Cast for player spells and the
+// AI specials (spec_cast_*) for mobs, with command lag honoured. The sim only
+// models what a character has: class/race tables, level-scaled weapons and
+// armour, and how well skills are learned (sim_class_test.go).
 //
 // Timing reference (from game/loop.go):
 //   PulsePerSecond = 4 (250ms/pulse), PulseViolence = 3
@@ -155,59 +155,6 @@ func weaponDice(classIdx, level int) (int, int) {
 	return num, size
 }
 
-// daggerDice returns (num, size) for the best dagger available at a given level.
-// Daggers cap at 7d6 (avg 24.5) — roughly 55% of a top-tier sword (10d8 avg 45).
-// Low/mid levels are closer to parity; the gap widens toward endgame.
-// The backstab/circle multipliers compensate for the sustained DPS deficit.
-func daggerDice(level int) (int, int) {
-	switch {
-	case level <= 10:
-		return 1, 6 // avg 3.5
-	case level <= 20:
-		return 2, 5 // avg 6
-	case level <= 30:
-		return 3, 5 // avg 9
-	case level <= 40:
-		return 3, 7 // avg 12
-	case level <= 50:
-		return 4, 6 // avg 14
-	case level <= 60:
-		return 5, 5 // avg 15
-	case level <= 75:
-		return 5, 6 // avg 17.5
-	case level <= 85:
-		return 6, 5 // avg 18
-	default: // L86+ — best-in-slot dagger cap
-		return 7, 6 // avg 24.5
-	}
-}
-
-// backstabMult returns the backstab damage multiplier at a given level.
-// Higher levels unlock bigger multipliers to compensate for dagger vs sword DPS gap.
-func backstabMult(level int) int {
-	switch {
-	case level >= 75:
-		return 7
-	case level >= 50:
-		return 6
-	case level >= 30:
-		return 5
-	case level >= 20:
-		return 4
-	case level >= 10:
-		return 3
-	default:
-		return 2
-	}
-}
-
-// simWeaponDice returns weapon dice for a class in the sim.
-// Thieves use full weapon dice for regular combat (backstab, circle, melee).
-// The dagger restriction only applies to assassinate (which uses daggerDice directly).
-func simWeaponDice(classIdx, level int) (int, int) {
-	return weaponDice(classIdx, level)
-}
-
 // weaponTypeForClass maps class to ROM weapon type (0=exotic,1=sword,2=dagger,3=spear,4=mace)
 func weaponTypeForClass(classIdx int) int {
 	switch classIdx {
@@ -227,7 +174,7 @@ func weaponTypeForClass(classIdx int) int {
 
 // makeWeapon creates a level-appropriate weapon for a class and equips it.
 func makeWeapon(classIdx, level int) *types.Object {
-	num, size := simWeaponDice(classIdx, level)
+	num, size := weaponDice(classIdx, level)
 	w := types.NewObject(1, "weapon", types.ItemTypeWeapon)
 	w.Values[0] = weaponTypeForClass(classIdx)
 	w.Values[1] = num
@@ -287,21 +234,12 @@ func makePlayer(classIdx, raceIdx, level int) *types.Character {
 	ch.HitRoll = level / 3
 	ch.DamRoll = level / 4
 
-	// Enhanced damage skill bonus (ROM: 'enhanced damage').
-	// Rangers and thieves train this to compensate for lower base HP vs warrior.
-	// Warriors already hit their win-rate target, so they don't need the boost here.
-	// Modelled as +level/8 DamRoll; represents ~75% skill proficiency.
-	// Second/third/etc. attacks are already gated by extraAttackSkillForClass.
-	// Ranger/strider get DamRoll bonus — compensates for lighter armor vs warrior.
-	// Thief/merc do NOT: backstab + circle provide their burst compensation.
-	switch classIdx {
-	case types.ClassRanger:
-		ch.DamRoll += level / 8
+	// Equip a class-appropriate weapon, and a second one for dual wielders.
+	ch.Equip(makeWeapon(classIdx, level), types.WearLocWield)
+	learnSkills(ch)
+	if classHasSkill(ch, "dual wield") {
+		ch.Equip(makeWeapon(classIdx, level), types.WearLocSecondary)
 	}
-
-	// Equip a class-appropriate weapon
-	weapon := makeWeapon(classIdx, level)
-	ch.Equip(weapon, types.WearLocWield)
 
 	ch.Position = types.PosStanding
 	return ch
@@ -384,6 +322,7 @@ func casterMobHP(level int) int {
 func makeCasterMob(level int) *types.Character {
 	mob := types.NewNPC(1, "Mob Mage", level)
 	mob.Act.Set(types.ActMage) // mage-type THAC0 (harder to hit with melee)
+	mob.Special = "spec_cast_mage"
 
 	mob.MaxHit = casterMobHP(level)
 	mob.Hit = mob.MaxHit
@@ -412,33 +351,6 @@ func makeCasterMob(level int) *types.Character {
 
 	mob.Position = types.PosStanding
 	return mob
-}
-
-// mobCastSpellDam returns direct spell damage dealt by a caster mob.
-// Bypasses physical defence (dodge/parry); magic resistance would reduce this
-// but is not yet simulated.
-//
-//	L10: avg  8.5  (1d6+lv/2 → 3.5+5)
-//	L30: avg 39    (2d8+lv   → 9+30)
-//	L60: avg 138   (4d8+lv*2 → 18+120)
-//	L100: avg 218  (4d8+lv*2 → 18+200) — everyone loses without MR
-func mobCastSpellDam(level int) int {
-	switch {
-	case level >= 75:
-		return combat.Dice(level/4, 8) + level*2 // arch-caster tier
-	case level >= 60:
-		return combat.Dice(5, 8) + level*2 // elder caster tier
-	case level >= 50:
-		return combat.Dice(4, 8) + level*2 // chain lightning / earthquake tier
-	case level >= 40:
-		return combat.Dice(3, 8) + level*2 // greater fireball tier
-	case level >= 22:
-		return combat.Dice(2, 8) + level // fireball tier
-	case level >= 13:
-		return combat.Dice(2, 6) + level // lightning bolt tier
-	default:
-		return combat.Dice(1, 6) + level/2 // magic missile tier
-	}
 }
 
 // weaponSkillForClass returns weapon proficiency for a class at a level.
@@ -533,122 +445,13 @@ func extraAttackSkillForClass(classIdx, level, tier int) int {
 	return s
 }
 
-// spellManaCost returns the mana cost of the best available spell.
-func spellManaCost(classIdx, level int) int {
-	switch classIdx {
-	case types.ClassMage:
-		if level >= 30 {
-			return 20 // acid blast
-		} else if level >= 22 {
-			return 25 // fireball
-		} else if level >= 13 {
-			return 20 // lightning bolt
-		}
-		return 15 // magic missile
-	case types.ClassCleric:
-		if level >= 45 {
-			return 20
-		} else if level >= 23 {
-			return 17
-		}
-		return 15
-	case types.ClassDruid:
-		if level >= 30 {
-			return 20
-		} else if level >= 10 {
-			return 15
-		}
-		return 10
-	case types.ClassGhoul:
-		if level >= 21 {
-			return 20
-		} else if level >= 11 {
-			return 17
-		}
-		return 15
-	}
-	return 0 // melee classes
-}
-
-// castSpellDamage returns the raw damage dealt by the caster's best offensive spell.
-// Returns 0 for pure melee classes. Scales through level 100.
-func castSpellDamage(classIdx, casterLevel int) int {
-	switch classIdx {
-	case types.ClassMage:
-		// magic missile → lightning bolt → fireball → acid blast (L30+)
-		//
-		// ROM C source uses level-scaled dice: magic missile = dice(level,4),
-		// lightning bolt = dice(level,6), fireball = dice(level,6)+40, etc.
-		// The original sim used flat low formulas (1d4+level, 2d6+level) which
-		// gave mage only warrior-level DPS at L10-20 — a "wuss" despite being
-		// the glass-cannon class. Level-scaled dice restore the proper cannon feel:
-		// mage wins BECAUSE it one-shots the mob faster than the mob kills it,
-		// not because it out-tanks the mob (which it can't at 172 HP vs 430 mob HP).
-		//
-		// Acid blast capped at L38 dice (was L35) to offset the steeper mob HP ramp
-		// at L81+ while keeping L100 mage in the 55-65% window with sanctuary.
-		if casterLevel >= 30 {
-			dl := casterLevel
-			if dl > 38 {
-				dl = 38
-			}
-			return combat.Dice(dl, 12) // acid blast, capped at L38 potency
-		} else if casterLevel >= 22 {
-			return combat.Dice(casterLevel, 6) + 40 // fireball: ROM dice(level,6)+40
-		} else if casterLevel >= 13 {
-			return combat.Dice(casterLevel, 6) + casterLevel // lightning bolt: ROM dice(level,6)+level
-		}
-		return combat.Dice(casterLevel, 4) // magic missile: ROM dice(level,4)
-
-	case types.ClassCleric:
-		// cause light → cause serious → cause critical → harm
-		// No L75+ tier: harm (combat.Dice(4,8)+level) is the ceiling.
-		// With mob sanctuary at L70+ (÷2), win rate targets ~60-70%.
-		if casterLevel >= 50 {
-			return combat.Dice(4, 8) + casterLevel // harm
-		} else if casterLevel >= 40 {
-			return combat.Dice(3, 8) + casterLevel // cause critical
-		} else if casterLevel >= 23 {
-			return combat.Dice(2, 8) + casterLevel/2
-		}
-		return combat.Dice(1, 8) + casterLevel/3
-
-	case types.ClassDruid:
-		// faerie fire → call lightning → earthquake
-		// No L75+ tier: earthquake (combat.Dice(4,8)+level) is the ceiling.
-		if casterLevel >= 50 {
-			return combat.Dice(4, 8) + casterLevel // earthquake tier
-		} else if casterLevel >= 40 {
-			return combat.Dice(3, 8) + casterLevel // intermediate (closes L40 gap)
-		} else if casterLevel >= 30 {
-			return combat.Dice(2, 8) + casterLevel
-		} else if casterLevel >= 10 {
-			return combat.Dice(1, 8) + casterLevel/2
-		}
-		return combat.Dice(1, 4) + casterLevel/4
-
-	case types.ClassGhoul:
-		// cause spells + drain/soul-rend
-		// No L75+ tier: drain (combat.Dice(4,6)+level+level/3) is the ceiling.
-		if casterLevel >= 50 {
-			return combat.Dice(4, 6) + casterLevel + casterLevel/3 // drain/soul-rend tier
-		} else if casterLevel >= 21 {
-			return combat.Dice(3, 6) + casterLevel
-		} else if casterLevel >= 11 {
-			return combat.Dice(2, 6) + casterLevel/2
-		}
-		return combat.Dice(1, 6) + casterLevel/3
-	}
-	return 0 // warrior, ranger, thief — no spells
-}
-
 // isCasterClass returns true for classes that use spells in combat.
 func isCasterClass(classIdx int) bool {
-	return castSpellDamage(classIdx, 1) > 0 ||
-		classIdx == types.ClassMage ||
-		classIdx == types.ClassCleric ||
-		classIdx == types.ClassDruid ||
-		classIdx == types.ClassGhoul
+	switch classIdx {
+	case types.ClassMage, types.ClassCleric, types.ClassDruid, types.ClassGhoul:
+		return true
+	}
+	return false
 }
 
 // ── simulation core ───────────────────────────────────────────────────────────
@@ -715,6 +518,9 @@ func runSimFull(classIdx, raceIdx, level, n int,
 	cs := combat.NewCombatSystem()
 	cs.Output = func(_ *types.Character, _ string) {}
 	cs.SkillGetter = func(ch *types.Character, skillName string) int {
+		if !ch.IsNPC() && !classHasSkill(ch, skillName) {
+			return 0
+		}
 		if ch.IsNPC() {
 			// Mobs have moderate combat skill — capped lower than players to
 			// prevent excessive dodge rate and extra attacks at high levels.
@@ -742,13 +548,14 @@ func runSimFull(classIdx, raceIdx, level, n int,
 		return weaponSkillForClass(ch.Class, ch.Level)
 	}
 
+	simMagic.Combat = cs
+
 	var res simResult
 	res.n = n
 
 	for i := 0; i < n; i++ {
 		p := playerFn(classIdx, raceIdx, level)
 		m := mobFn(level)
-		isMobCaster := m.Act.Has(types.ActMage) || m.Act.Has(types.ActCleric)
 
 		room := types.NewRoom(1, "Arena", "Arena.")
 		p.InRoom = room
@@ -761,23 +568,12 @@ func runSimFull(classIdx, raceIdx, level, n int,
 
 		const maxRounds = 200
 		rounds := 0
-		pMana := p.MaxMana
-		// L70+: guarantee casters enough mana for a full fight.
-		// Druid (ManaGain=0) and vampire (ManaGain=-30→0) only accumulate ~190 mana
-		// from the base formula, which runs out after ~9 casts. At high levels, real
-		// characters compensate with gear, mana regen, and items.
-		if isCasterClass(classIdx) && level >= 70 {
-			minMana := spellManaCost(classIdx, level) * 35
-			if pMana < minMana {
-				pMana = minMana
-			}
+		// L70+: guarantee casters enough mana for a full fight. Druid
+		// (ManaGain=0) and ghoul only accumulate ~190 mana from the base
+		// formula; real characters compensate with gear, regen and items.
+		if sp := bestSpell(p); sp != nil && level >= 70 {
+			p.Mana = max(p.Mana, sp.ManaCost*35)
 		}
-		// Caster mobs get enough mana to cast every round for a full fight.
-		// Without this, mana depletion causes erratic results (mob runs out at
-		// low levels where spell cost is high relative to the small mana pool).
-		// The smooth mobCastSpellDam formula already limits damage — mana is not
-		// the design constraint here.
-		mobMana := 9999
 
 		for rounds < maxRounds {
 			if p.Position <= types.PosDead || m.Position <= types.PosDead {
@@ -787,88 +583,13 @@ func runSimFull(classIdx, raceIdx, level, n int,
 
 			// ── Player attacks ────────────────────────────────────────────
 
-			// Thief opener: assassinate at L75+ (dagger, 75% mob max HP),
-			// regular backstab below L75 (any weapon, level-scaled multiplier).
-			if rounds == 1 && (classIdx == types.ClassThief) &&
-				p.Fighting == m && combat.IsAwake(p) {
-				var burstDam int
-				if level >= 75 {
-					// Assassinate: fixed 75% of mob max HP (dagger + poison coat)
-					burstDam = m.MaxHit * 3 / 4
-				} else {
-					// Regular backstab: weapon dice × level-scaled multiplier
-					wNum, wSize := simWeaponDice(classIdx, level)
-					burstDam = combat.Dice(wNum, wSize)*backstabMult(level) + p.DamRoll*2
-				}
-				if burstDam > 0 {
-					m.Hit -= burstDam
-					res.totalPDmg += burstDam
-					combat.UpdatePosition(m)
-				}
-			}
-
-			// Thief circle: every 4th round (ROM skill — stab a distracted target).
-			// 2× weapon damage; available from round 4 to avoid stacking with backstab.
-			if rounds > 1 && rounds%4 == 0 &&
-				(classIdx == types.ClassThief) &&
-				m.Position > types.PosDead && p.Fighting == m && combat.IsAwake(p) {
-				wNum, wSize := simWeaponDice(classIdx, level)
-				circleDam := combat.Dice(wNum, wSize)*2 + p.DamRoll
-				if circleDam > 0 {
-					m.Hit -= circleDam
-					res.totalPDmg += circleDam
-					combat.UpdatePosition(m)
-				}
-			}
-
-			// Ranger dual-wield: one off-hand weapon strike per round.
-			// Off-hand accuracy = weapon skill / 2 (less accurate than main hand).
-			// Compensates for the lack of dual-wield and enhanced-dodge mechanics
-			// in this sim; rangers would normally win via twin weapons + better evasion.
-			if (classIdx == types.ClassRanger) &&
-				m.Position > types.PosDead && p.Fighting == m && combat.IsAwake(p) {
-				offSkill := weaponSkillForClass(classIdx, level) / 3
-				if combat.Dice(1, 100) <= offSkill {
-					wNum, wSize := weaponDice(classIdx, level)
-					offDam := combat.Dice(wNum, wSize) + p.DamRoll/2
-					if offDam > 0 {
-						m.Hit -= offDam
-						res.totalPDmg += offDam
-						combat.UpdatePosition(m)
-					}
-				}
-			}
-
-			// Caster: cast best spell if fighting and conscious, then also melee.
-			// Guard prevents spell-casting after HandleDeath clears Fighting refs
-			// (otherwise a "dead" mage keeps blasting while the mob can't hit back).
-			if isCasterClass(classIdx) && p.Fighting == m && combat.IsAwake(p) {
-				cost := spellManaCost(classIdx, level)
-				if pMana >= cost {
-					pMana -= cost
-					spellDam := castSpellDamage(classIdx, level)
-					// High-level mobs (L70+) have sanctuary: halves all incoming spell damage.
-					// Models endgame mobs that buff before combat. Dispel magic removes it,
-					// but that's not simulated here — this is the worst-case / no-dispel scenario.
-					if m.Level >= 70 {
-						spellDam = (spellDam + 1) / 2
-					}
-					if spellDam > 0 {
-						m.Hit -= spellDam
-						res.totalPDmg += spellDam
-						combat.UpdatePosition(m)
-
-						// Vampire feed: drain/life-tap heals a fraction of spell damage.
-						// ROM "feed" / vampiric touch — 1/12 of damage returned as HP.
-						// Low ratio keeps vampire mortal; pure healing would break balance.
-						if (classIdx == types.ClassGhoul) &&
-							p.Hit < p.MaxHit {
-							p.Hit += spellDam / 12
-							if p.Hit > p.MaxHit {
-								p.Hit = p.MaxHit
-							}
-						}
-					}
+			// Lag wears off one round at a time, as in the game loop.
+			p.Wait = max(0, p.Wait-1)
+			if p.Wait == 0 && p.Fighting == m && combat.IsAwake(p) && m.Position > types.PosDead {
+				mBefore := m.Hit
+				classAction(cs, p, m)
+				if d := mBefore - m.Hit; d > 0 {
+					res.totalPDmg += d
 				}
 			}
 
@@ -889,17 +610,17 @@ func runSimFull(classIdx, raceIdx, level, n int,
 
 			// ── Mob attacks ───────────────────────────────────────────────
 
-			// Caster mobs cast a spell before melee — bypasses dodge/parry.
-			if isMobCaster && m.Fighting == p && combat.IsAwake(m) {
-				cost := spellManaCost(types.ClassMage, m.Level)
-				if mobMana >= cost {
-					mobMana -= cost
-					spellDam := mobCastSpellDam(m.Level)
-					if spellDam > 0 {
-						p.Hit -= spellDam
-						res.totalMDmg += spellDam
-						combat.UpdatePosition(p)
-					}
+			// Mob specials (spec_cast_* and the rest) run on the game's mobile
+			// pulse: 4 pulses against 3 per round, so 3 rounds in 4.
+			if rounds%4 != 0 && m.Fighting == p {
+				pBefore := p.Hit
+				simAI.ProcessMobile(m)
+				if m.Fighting != p { // player killed and revived by HandleDeath
+					res.totalMDmg += pBefore + 11
+					break
+				}
+				if d := pBefore - p.Hit; d > 0 {
+					res.totalMDmg += d
 				}
 			}
 
@@ -1211,51 +932,11 @@ func TestCombatSimDetailed(t *testing.T) {
 
 	if isCasterClass(classIdx) {
 		t.Log("")
-		t.Log("Spell damage (best available, no resistance):")
-		hdr3 := fmt.Sprintf("%-5s  %-20s  %-6s", "Lv", "Spell", "AvgDam")
-		t.Log(hdr3)
+		t.Log("Spell damage (best available, measured on an equal-level mob):")
+		t.Log(fmt.Sprintf("%-5s  %-20s  %-6s", "Lv", "Spell", "AvgDam"))
 		for _, lv := range levels {
-			var spellName string
-			switch classIdx {
-			case types.ClassMage:
-				if lv >= 22 {
-					spellName = "fireball (3d6+lv*2)"
-				} else if lv >= 13 {
-					spellName = "lightning bolt (2d6+lv)"
-				} else {
-					spellName = "magic missile (1d4+lv)"
-				}
-			case types.ClassCleric:
-				if lv >= 45 {
-					spellName = "cause critical (3d8+lv)"
-				} else if lv >= 23 {
-					spellName = "cause serious (2d8+lv/2)"
-				} else {
-					spellName = "cause light (1d8+lv/3)"
-				}
-			}
-			// Estimate avg damage
-			var avgDam float64
-			switch classIdx {
-			case types.ClassMage:
-				if lv >= 22 {
-					avgDam = 10.5 + float64(lv)*2
-				} else if lv >= 13 {
-					avgDam = 7.0 + float64(lv)
-				} else {
-					avgDam = 2.5 + float64(lv)
-				}
-			case types.ClassCleric:
-				if lv >= 45 {
-					avgDam = 13.5 + float64(lv)
-				} else if lv >= 23 {
-					avgDam = 9.0 + float64(lv)/2
-				} else {
-					avgDam = 4.5 + float64(lv)/3
-				}
-			}
-			if spellName != "" {
-				t.Logf("%-5d  %-20s  %6.1f", lv, spellName, avgDam)
+			if sp := bestSpell(makePlayer(classIdx, types.RaceHuman, lv)); sp != nil {
+				t.Logf("%-5d  %-20s  %6d", lv, sp.Name, spellAvgDamage(classIdx, lv, sp))
 			}
 		}
 	}
