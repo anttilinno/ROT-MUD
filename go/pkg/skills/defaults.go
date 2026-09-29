@@ -8,11 +8,70 @@ const (
 	Cleric  = types.ClassCleric
 	Thief   = types.ClassThief
 	Warrior = types.ClassWarrior
+	Ranger  = types.ClassRanger
+	Druid   = types.ClassDruid
+	Ghoul   = types.ClassGhoul
 )
+
+// laterClassLevels holds ranger, druid and ghoul skill levels (0 = can't
+// learn). They were only in the in-game skills listing, so the skill system
+// gave those classes 0% in every skill they had learned.
+var laterClassLevels = map[string][3]int{
+	"second attack":   {15, 20, 20},
+	"third attack":    {30, 0, 0},
+	"fourth attack":   {0, 0, 0},
+	"fifth attack":    {0, 0, 0},
+	"dual wield":      {20, 0, 0},
+	"dodge":           {10, 15, 10},
+	"parry":           {8, 15, 15},
+	"shield block":    {5, 10, 0},
+	"enhanced damage": {15, 0, 0},
+	"grip":            {0, 0, 0},
+	"kick":            {12, 15, 0},
+	"bash":            {0, 0, 0},
+	"trip":            {10, 0, 0},
+	"dirt kicking":    {5, 0, 0},
+	"disarm":          {15, 0, 0},
+	"gouge":           {0, 0, 0},
+	"stun":            {0, 0, 0},
+	"backstab":        {0, 0, 10},
+	"circle":          {0, 0, 0},
+	"berserk":         {0, 0, 0},
+	"rescue":          {10, 0, 0},
+	"hand to hand":    {15, 20, 15},
+	"sneak":           {10, 0, 5},
+	"hide":            {8, 0, 5},
+	"steal":           {0, 0, 0},
+	"pick lock":       {0, 0, 0},
+	"peek":            {0, 0, 0},
+	"envenom":         {15, 0, 0},
+	"track":           {10, 0, 0},
+	"sword":           {1, 10, 5},
+	"dagger":          {5, 5, 1},
+	"spear":           {1, 0, 0},
+	"mace":            {10, 0, 0},
+	"axe":             {5, 0, 0},
+	"flail":           {0, 0, 0},
+	"whip":            {0, 0, 0},
+	"polearm":         {0, 1, 0},
+	"meditation":      {0, 10, 0},
+	"fast healing":    {10, 15, 10},
+	"haggle":          {10, 15, 0},
+	"lore":            {5, 5, 0},
+	"recall":          {1, 1, 1},
+	"scrolls":         {15, 10, 10},
+	"staves":          {20, 15, 15},
+	"wands":           {20, 15, 15},
+}
+
+// laterClassRatingFrom is the base class whose practice rating each later
+// class borrows.
+var laterClassRatingFrom = [3]int{Warrior, Cleric, Thief}
 
 // DefaultSkills returns a registry populated with default skills
 func DefaultSkills() *SkillRegistry {
 	r := NewSkillRegistry()
+	defer addLaterClasses(r)
 
 	// === Combat Skills ===
 
@@ -320,4 +379,23 @@ func DefaultSkills() *SkillRegistry {
 		SetClassLevel(Warrior, 25, 8))
 
 	return r
+}
+
+func addLaterClasses(r *SkillRegistry) {
+	for name, levels := range laterClassLevels {
+		sk := r.FindByName(name)
+		if sk == nil {
+			continue
+		}
+		for i, class := range []int{Ranger, Druid, Ghoul} {
+			if levels[i] == 0 {
+				continue
+			}
+			rating := sk.GetRating(laterClassRatingFrom[i])
+			if rating == 0 {
+				rating = 5
+			}
+			sk.SetClassLevel(class, levels[i], rating)
+		}
+	}
 }

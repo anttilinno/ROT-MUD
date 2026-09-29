@@ -660,3 +660,17 @@ func BenchmarkSkillRegistryFindByIndex(b *testing.B) {
 		r.FindByIndex(10)
 	}
 }
+func TestLaterClassSkillLevels(t *testing.T) {
+	r := DefaultSkills()
+	for name := range laterClassLevels {
+		if r.FindByName(name) == nil {
+			t.Errorf("laterClassLevels names unknown skill %q", name)
+		}
+	}
+	if got := r.FindByName("dodge").GetLevel(Ranger); got != 10 {
+		t.Errorf("ranger dodge level = %d, want 10", got)
+	}
+	if got := r.FindByName("backstab").GetLevel(Ghoul); got != 10 {
+		t.Errorf("ghoul backstab level = %d, want 10", got)
+	}
+}

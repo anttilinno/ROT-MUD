@@ -4,6 +4,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"rotmud/pkg/skills"
 	"strings"
 	"unicode"
 
@@ -1110,60 +1111,7 @@ func (h *LoginHandler) sendSkillsTable(session *Session) {
 		return
 	}
 
-	// Skill data: skill name -> level required per class (mage, cleric, thief, warrior, ranger, druid, vampire)
-	// 0 means cannot learn
-	skillLevels := map[string][7]int{
-		// Combat skills
-		"second attack":   {30, 24, 12, 5, 15, 20, 20},
-		"third attack":    {0, 0, 0, 25, 30, 0, 0},
-		"fourth attack":   {0, 0, 0, 35, 0, 0, 0},
-		"fifth attack":    {0, 0, 0, 45, 0, 0, 0},
-		"dual wield":      {0, 0, 15, 20, 20, 0, 0},
-		"dodge":           {20, 22, 1, 13, 10, 15, 10},
-		"parry":           {22, 20, 13, 1, 8, 15, 15},
-		"shield block":    {0, 10, 0, 1, 5, 10, 0},
-		"enhanced damage": {0, 30, 25, 1, 15, 0, 0},
-		"grip":            {0, 0, 0, 15, 0, 0, 0},
-		"kick":            {0, 12, 14, 8, 12, 15, 0},
-		"bash":            {0, 0, 0, 1, 0, 0, 0},
-		"trip":            {0, 0, 1, 15, 10, 0, 0},
-		"dirt kicking":    {0, 0, 3, 3, 5, 0, 0},
-		"disarm":          {0, 0, 12, 11, 15, 0, 0},
-		"gouge":           {0, 0, 10, 0, 0, 0, 0},
-		"stun":            {0, 0, 0, 20, 0, 0, 0},
-		"backstab":        {0, 0, 1, 0, 0, 0, 10},
-		"circle":          {0, 0, 15, 0, 0, 0, 0},
-		"berserk":         {0, 0, 0, 18, 0, 0, 0},
-		"rescue":          {0, 12, 0, 1, 10, 0, 0},
-		"hand to hand":    {25, 10, 15, 6, 15, 20, 15},
-		// Thief skills
-		"sneak":     {0, 0, 4, 0, 10, 0, 5},
-		"hide":      {0, 0, 1, 0, 8, 0, 5},
-		"steal":     {0, 0, 5, 0, 0, 0, 0},
-		"pick lock": {0, 0, 7, 0, 0, 0, 0},
-		"peek":      {0, 0, 1, 0, 0, 0, 0},
-		"envenom":   {0, 0, 10, 0, 15, 0, 0},
-		"track":     {0, 0, 20, 0, 10, 0, 0},
-		// Weapon skills
-		"sword":   {20, 15, 6, 1, 1, 10, 5},
-		"dagger":  {1, 10, 1, 5, 5, 5, 1},
-		"spear":   {0, 15, 0, 5, 1, 0, 0},
-		"mace":    {0, 1, 15, 6, 10, 0, 0},
-		"axe":     {0, 0, 0, 1, 5, 0, 0},
-		"flail":   {0, 1, 0, 10, 0, 0, 0},
-		"whip":    {0, 0, 10, 0, 0, 0, 0},
-		"polearm": {0, 0, 0, 10, 0, 1, 0},
-		// Utility skills
-		"meditation":   {6, 6, 0, 0, 0, 10, 0},
-		"fast healing": {15, 9, 16, 6, 10, 15, 10},
-		"haggle":       {15, 15, 1, 18, 10, 15, 0},
-		"lore":         {0, 0, 6, 15, 5, 5, 0}, // Casters use identify spell instead
-		"recall":       {1, 1, 1, 1, 1, 1, 1},
-		// Magic item skills
-		"scrolls": {1, 1, 10, 20, 15, 10, 10},
-		"staves":  {1, 1, 15, 25, 20, 15, 15},
-		"wands":   {1, 1, 12, 25, 20, 15, 15},
-	}
+	reg := skills.DefaultSkills()
 
 	classIndex := ch.SkillClass()
 
@@ -1175,8 +1123,8 @@ func (h *LoginHandler) sendSkillsTable(session *Session) {
 	var learned []skillEntry
 
 	for name := range ch.PCData.Learned {
-		if levels, ok := skillLevels[name]; ok {
-			level := levels[classIndex]
+		if sk := reg.FindByName(name); sk != nil {
+			level := sk.GetLevel(classIndex)
 			if level > 0 && level <= 101 {
 				learned = append(learned, skillEntry{name, level})
 			}
