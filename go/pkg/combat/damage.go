@@ -17,6 +17,16 @@ type DamageResult struct {
 // Damage inflicts damage on a victim
 // Returns true if the victim survives
 func (c *CombatSystem) Damage(ch, victim *types.Character, dam int, damType types.DamageType, showMessage bool) DamageResult {
+	return c.damage(ch, victim, dam, damType, showMessage, true)
+}
+
+// SpellDamage is Damage for spells: no parry, dodge or shield block, and no
+// message (the spell system sends its own).
+func (c *CombatSystem) SpellDamage(ch, victim *types.Character, dam int, damType types.DamageType) DamageResult {
+	return c.damage(ch, victim, dam, damType, false, false)
+}
+
+func (c *CombatSystem) damage(ch, victim *types.Character, dam int, damType types.DamageType, showMessage, defend bool) DamageResult {
 	result := DamageResult{}
 
 	// Already dead
@@ -46,7 +56,7 @@ func (c *CombatSystem) Damage(ch, victim *types.Character, dam int, damType type
 	}
 
 	// Check defensive skills (parry, dodge, shield block) for melee attacks
-	if dam > 0 && ch != victim {
+	if defend && dam > 0 && ch != victim {
 		defense := c.CheckDefenses(ch, victim)
 		if defense != DefenseNone {
 			// Attack was defended

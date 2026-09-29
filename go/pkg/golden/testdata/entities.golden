@@ -39,10 +39,10 @@ Class=highlander   THAC0_00=20  THAC0_32=-12 HP=343  Mana=190  HitRoll=6   DamRo
 Class=angel        THAC0_00=20  THAC0_32=-8  HP=324  Mana=390  HitRoll=6   DamRoll=5   Hit%= 46.7 Dam= 314
 
 === SPELL EXECUTIONS (seed=42) ===
-Spell=acid blast         Lv=22  Class=mage       success=true  dHP=120   dMana=0    victimHp=1000->880
+Spell=acid blast         Lv=22  Class=mage       success=true  dHP=77    dMana=0    victimHp=1000->923
 Spell=bless              Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 Spell=cure light         Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
-Spell=fireball           Lv=22  Class=mage       success=true  dHP=55    dMana=0    victimHp=1000->945
+Spell=fireball           Lv=22  Class=mage       success=true  dHP=45    dMana=0    victimHp=1000->955
 Spell=heal               Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 Spell=magic missile      Lv=10  Class=mage       success=true  dHP=12    dMana=0    victimHp=1000->988
 Spell=sanctuary          Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000

@@ -192,6 +192,7 @@ func New(logger *slog.Logger) *Server {
 	// Wire up skills system in game loop for passive regen bonuses
 	s.GameLoop.Skills = s.Dispatcher.Skills
 	s.GameLoop.Combat = s.Dispatcher.Combat
+	s.Dispatcher.Magic.Combat = s.Dispatcher.Combat
 
 	// Wire up area reset system - use the game's ResetSystem, not our own
 	// The ResetSystem is already wired in GameLoop.Resets, so we don't need OnAreaReset

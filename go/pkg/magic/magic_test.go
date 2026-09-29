@@ -497,7 +497,7 @@ func TestDamageSpells(t *testing.T) {
 		victim.Hit = 100
 		victim.MaxHit = 100
 
-		success := spellMagicMissile(nil, 10, victim)
+		success := spellMagicMissile(types.NewCharacter("Caster"), 10, victim)
 		if !success {
 			t.Error("magic missile should succeed")
 		}
@@ -512,7 +512,7 @@ func TestDamageSpells(t *testing.T) {
 		victim.Hit = 100
 		victim.MaxHit = 100
 
-		success := spellFireball(nil, 20, victim)
+		success := spellFireball(types.NewCharacter("Caster"), 20, victim)
 		if !success {
 			t.Error("fireball should succeed")
 		}
@@ -527,7 +527,7 @@ func TestDamageSpells(t *testing.T) {
 		victim.Hit = 100
 		victim.MaxHit = 100
 
-		success := spellLightningBolt(nil, 15, victim)
+		success := spellLightningBolt(types.NewCharacter("Caster"), 15, victim)
 		if !success {
 			t.Error("lightning bolt should succeed")
 		}
@@ -659,4 +659,24 @@ func TestConjureSpell(t *testing.T) {
 			t.Error("immortal should be able to conjure without demon stone")
 		}
 	})
+}
+
+// Spell damage goes through the combat damage path: a killing spell leaves the
+// victim dead (not fighting on at negative HP) and sanctuary halves damage.
+func TestSpellDamageUsesCombatPath(t *testing.T) {
+	caster := types.NewCharacter("Caster")
+	victim := types.NewNPC(1, "mob", 10)
+	victim.Hit, victim.MaxHit = 5, 100
+	spellMagicMissile(caster, 10, victim)
+	if victim.Position != types.PosDead {
+		t.Errorf("victim at %d HP has position %v, want dead", victim.Hit, victim.Position)
+	}
+
+	victim = types.NewNPC(1, "mob", 10)
+	victim.Hit, victim.MaxHit = 1000, 1000
+	victim.AffectedBy.Set(types.AffSanctuary)
+	spellMagicMissile(caster, 20, victim) // 1d4+20, halved: 10-12
+	if lost := 1000 - victim.Hit; lost < 10 || lost > 12 {
+		t.Errorf("sanctuary victim lost %d HP, want 10-12", lost)
+	}
 }

@@ -3,6 +3,7 @@ package magic
 import (
 	"rotmud/pkg/combat"
 	"rotmud/pkg/types"
+	"slices"
 )
 
 // Spell slot numbers (for identifying spells in objects, etc.)
@@ -506,7 +507,7 @@ func spellMagicMissile(caster *types.Character, level int, target interface{}) b
 	}
 
 	// Magic missile always hits (no save)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamEnergy)
 
 	return true
 }
@@ -524,9 +525,8 @@ func spellFireball(caster *types.Character, level int, target interface{}) bool 
 	}
 
 	// Fire damage - check resistance
-	dam = checkDamageResist(victim, dam, types.DamFire)
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamFire)
 	return true
 }
 
@@ -543,9 +543,8 @@ func spellLightningBolt(caster *types.Character, level int, target interface{}) 
 	}
 
 	// Lightning damage - check resistance
-	dam = checkDamageResist(victim, dam, types.DamLightning)
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamLightning)
 	return true
 }
 
@@ -848,18 +847,16 @@ func spellSleep(caster *types.Character, level int, target interface{}) bool {
 // === Helper Functions ===
 
 // checkDamageResist applies damage resistance/vulnerability
-func checkDamageResist(ch *types.Character, dam int, damType types.DamageType) int {
-	// Check immunity
-	immune := combat.CheckImmune(ch, damType)
-	switch immune {
-	case combat.ImmImmune:
-		return 0
-	case combat.ImmResistant:
-		return dam / 2
-	case combat.ImmVulnerable:
-		return dam * 3 / 2
-	}
-	return dam
+// castingCombat is the combat system of the MagicSystem casting right now.
+// ponytail: package state because SpellFunc takes no system handle; the game
+// loop is single-threaded. Thread it through SpellFunc if spells ever run
+// concurrently.
+var castingCombat = combat.NewCombatSystem()
+
+// spellDamage deals spell damage through the combat damage path (ROM damage()
+// for a spell: immunity, sanctuary, damage curve, death; no parry or dodge).
+func spellDamage(caster, victim *types.Character, dam int, damType types.DamageType) {
+	castingCombat.SpellDamage(caster, victim, dam, damType)
 }
 
 func min(a, b int) int {
@@ -1214,7 +1211,7 @@ func spellCauseLight(caster *types.Character, level int, target interface{}) boo
 		dam = 1
 	}
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamHarm)
 	return true
 }
 
@@ -1231,7 +1228,7 @@ func spellCauseSerious(caster *types.Character, level int, target interface{}) b
 		dam = 1
 	}
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamHarm)
 	return true
 }
 
@@ -1248,7 +1245,7 @@ func spellCauseCritical(caster *types.Character, level int, target interface{}) 
 		dam = 1
 	}
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamHarm)
 	return true
 }
 
@@ -1265,7 +1262,7 @@ func spellChillTouch(caster *types.Character, level int, target interface{}) boo
 		dam = 1
 	}
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamCold)
 
 	// 10% chance to reduce strength
 	if combat.NumberPercent() < 10 {
@@ -1289,7 +1286,7 @@ func spellBurningHands(caster *types.Character, level int, target interface{}) b
 		dam = 1
 	}
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamFire)
 	return true
 }
 
@@ -1329,9 +1326,7 @@ func spellShockingGrasp(caster *types.Character, level int, target interface{}) 
 	if dam < 1 {
 		dam = 1
 	}
-
-	dam = checkDamageResist(victim, dam, types.DamLightning)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamLightning)
 	return true
 }
 
@@ -1588,7 +1583,7 @@ func spellEarthquake(caster *types.Character, level int, target interface{}) boo
 	dam := level + combat.Dice(2, 8)
 
 	// Damage all characters in room except caster
-	for _, victim := range caster.InRoom.People {
+	for _, victim := range slices.Clone(caster.InRoom.People) {
 		if victim == caster {
 			continue
 		}
@@ -1597,10 +1592,7 @@ func spellEarthquake(caster *types.Character, level int, target interface{}) boo
 			continue
 		}
 
-		victim.Hit -= dam
-		if victim.Hit <= 0 {
-			victim.Hit = -10 // Mark as dead
-		}
+		spellDamage(caster, victim, dam, types.DamBash)
 	}
 
 	return true
@@ -1617,7 +1609,7 @@ func spellCallLightning(caster *types.Character, level int, target interface{}) 
 	dam := combat.Dice(level/2, 8)
 
 	// Damage all characters in room except caster
-	for _, victim := range caster.InRoom.People {
+	for _, victim := range slices.Clone(caster.InRoom.People) {
 		if victim == caster {
 			continue
 		}
@@ -1626,10 +1618,7 @@ func spellCallLightning(caster *types.Character, level int, target interface{}) 
 			continue
 		}
 
-		victim.Hit -= dam
-		if victim.Hit <= 0 {
-			victim.Hit = -10 // Mark as dead
-		}
+		spellDamage(caster, victim, dam, types.DamLightning)
 	}
 
 	return true
@@ -1649,9 +1638,7 @@ func spellAcidBlast(caster *types.Character, level int, target interface{}) bool
 	if dam < 1 {
 		dam = 1
 	}
-
-	dam = checkDamageResist(victim, dam, types.DamAcid)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamAcid)
 	return true
 }
 
@@ -1668,7 +1655,7 @@ func spellColourSpray(caster *types.Character, level int, target interface{}) bo
 		dam = 1
 	}
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamLight)
 	return true
 }
 
@@ -1684,9 +1671,7 @@ func spellDemonfire(caster *types.Character, level int, target interface{}) bool
 	if dam < 1 {
 		dam = 1
 	}
-
-	dam = checkDamageResist(victim, dam, types.DamNegative)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamNegative)
 	return true
 }
 
@@ -1702,9 +1687,7 @@ func spellEnergyDrain(caster *types.Character, level int, target interface{}) bo
 	if dam < 1 {
 		dam = 1
 	}
-
-	dam = checkDamageResist(victim, dam, types.DamNegative)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamNegative)
 
 	// Caster absorbs the drained energy
 	if dam > 0 && caster.Hit < caster.MaxHit {
@@ -1729,9 +1712,7 @@ func spellFlamestrike(caster *types.Character, level int, target interface{}) bo
 	if dam < 1 {
 		dam = 1
 	}
-
-	dam = checkDamageResist(victim, dam, types.DamFire)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamFire)
 	return true
 }
 
@@ -1741,7 +1722,7 @@ func spellChainLightning(caster *types.Character, level int, target interface{})
 	dam := combat.Dice(level, 6)
 
 	// Damage all characters in room except caster
-	for _, victim := range caster.InRoom.People {
+	for _, victim := range slices.Clone(caster.InRoom.People) {
 		if victim == caster {
 			continue
 		}
@@ -1750,10 +1731,7 @@ func spellChainLightning(caster *types.Character, level int, target interface{})
 			continue
 		}
 
-		victim.Hit -= dam
-		if victim.Hit <= 0 {
-			victim.Hit = -10 // Mark as dead
-		}
+		spellDamage(caster, victim, dam, types.DamLightning)
 	}
 
 	return true
@@ -2151,9 +2129,7 @@ func spellDispelEvil(caster *types.Character, level int, target interface{}) boo
 			dam = rolled
 		}
 	}
-
-	dam = checkDamageResist(victim, dam, types.DamHoly)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamHoly)
 	return true
 }
 
@@ -2178,9 +2154,7 @@ func spellDispelGood(caster *types.Character, level int, target interface{}) boo
 			dam = rolled
 		}
 	}
-
-	dam = checkDamageResist(victim, dam, types.DamNegative)
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamNegative)
 	return true
 }
 
@@ -2212,7 +2186,7 @@ func spellHarm(caster *types.Character, level int, target interface{}) bool {
 		dam = 100
 	}
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamHarm)
 	return true
 }
 
@@ -2253,7 +2227,7 @@ func spellRayOfTruth(caster *types.Character, level int, target interface{}) boo
 	dam = (dam * align * align) / 1000000
 
 	if dam > 0 {
-		victim.Hit -= dam
+		spellDamage(caster, victim, dam, types.DamHoly)
 	}
 
 	// Also blinds the target (handled by setting AffBlind)
@@ -2759,7 +2733,7 @@ func spellAcidBreath(caster *types.Character, level int, target interface{}) boo
 	}
 
 	dam := combat.Dice(10, 16) + level
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamAcid)
 	return true
 }
 
@@ -2770,7 +2744,7 @@ func spellFireBreath(caster *types.Character, level int, target interface{}) boo
 	}
 
 	dam := combat.Dice(11, 20) + level
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamFire)
 	return true
 }
 
@@ -2781,18 +2755,18 @@ func spellFrostBreath(caster *types.Character, level int, target interface{}) bo
 	}
 
 	dam := combat.Dice(8, 12) + level
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamCold)
 	return true
 }
 
 func spellGasBreath(caster *types.Character, level int, target interface{}) bool {
 	// Area effect gas attack
-	for _, victim := range caster.InRoom.People {
+	for _, victim := range slices.Clone(caster.InRoom.People) {
 		if victim == caster {
 			continue
 		}
 		dam := combat.Dice(6, 10) + level/2
-		victim.Hit -= dam
+		spellDamage(caster, victim, dam, types.DamPoison)
 	}
 	return true
 }
@@ -2804,7 +2778,7 @@ func spellLightningBreath(caster *types.Character, level int, target interface{}
 	}
 
 	dam := combat.Dice(10, 14) + level
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamLightning)
 	return true
 }
 
@@ -2815,15 +2789,12 @@ func spellMeteorSwarm(caster *types.Character, level int, target interface{}) bo
 	dam := combat.Dice(40, 10) + level*2
 
 	// Massive damage to all in room
-	for _, victim := range caster.InRoom.People {
+	for _, victim := range slices.Clone(caster.InRoom.People) {
 		if victim == caster {
 			continue
 		}
 
-		victim.Hit -= dam
-		if victim.Hit <= 0 {
-			victim.Hit = -10
-		}
+		spellDamage(caster, victim, dam, types.DamFire)
 	}
 
 	return true
@@ -2837,7 +2808,7 @@ func spellImplode(caster *types.Character, level int, target interface{}) bool {
 	}
 
 	dam := combat.Dice(20, 10) + level*2
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamEnergy)
 	return true
 }
 
@@ -2849,22 +2820,21 @@ func spellDisintegrate(caster *types.Character, level int, target interface{}) b
 	}
 
 	dam := combat.Dice(30, 10) + level*3
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamEnergy)
 	return true
 }
 
 // Holy Word - Cleric ultimate area spell
 func spellHolyWord(caster *types.Character, level int, target interface{}) bool {
 	// Original: dice(level, 6) to evil targets; dice(level, 4) heals good allies.
-	for _, victim := range caster.InRoom.People {
+	for _, victim := range slices.Clone(caster.InRoom.People) {
 		if victim == caster {
 			continue
 		}
 
 		if victim.Alignment < -350 { // Evil
 			dam := combat.Dice(level, 6)
-			dam = checkDamageResist(victim, dam, types.DamHoly)
-			victim.Hit -= dam
+			spellDamage(caster, victim, dam, types.DamHoly)
 		} else if victim.Alignment > 350 { // Good — healed
 			heal := combat.Dice(level, 4)
 			victim.Hit += heal
@@ -2880,14 +2850,14 @@ func spellHolyWord(caster *types.Character, level int, target interface{}) bool 
 // Unholy Word - Cleric ultimate area spell
 func spellUnholyWord(caster *types.Character, level int, target interface{}) bool {
 	// Damage good creatures, heal evil ones
-	for _, victim := range caster.InRoom.People {
+	for _, victim := range slices.Clone(caster.InRoom.People) {
 		if victim == caster {
 			continue
 		}
 
 		if victim.Alignment > 0 { // Good
 			dam := combat.Dice(20, 10) + level*2
-			victim.Hit -= dam
+			spellDamage(caster, victim, dam, types.DamNegative)
 		} else if victim.Alignment < 0 { // Evil
 			heal := combat.Dice(10, 10) + level
 			victim.Hit += heal
@@ -2992,7 +2962,7 @@ func spellHeatMetal(caster *types.Character, level int, target interface{}) bool
 	}
 
 	if dam > 0 {
-		victim.Hit -= dam
+		spellDamage(caster, victim, dam, types.DamFire)
 	}
 
 	return dam > 0
@@ -3031,9 +3001,8 @@ func spellGeneralPurpose(caster *types.Character, level int, target interface{})
 	}
 
 	// Pierce damage
-	dam = checkDamageResist(victim, dam, types.DamPierce)
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamPierce)
 	return true
 }
 
@@ -3053,9 +3022,8 @@ func spellHighExplosive(caster *types.Character, level int, target interface{}) 
 	}
 
 	// Pierce damage
-	dam = checkDamageResist(victim, dam, types.DamPierce)
 
-	victim.Hit -= dam
+	spellDamage(caster, victim, dam, types.DamPierce)
 	return true
 }
 

@@ -52,6 +52,7 @@ type IdentifyOutputFunc func(ch *types.Character, obj *types.Object)
 // MagicSystem manages spell casting and effects
 type MagicSystem struct {
 	Registry        *SpellRegistry
+	Combat          *combat.CombatSystem // Applies spell damage and deaths; nil uses a bare system
 	Output          func(ch *types.Character, msg string)
 	ObjectFinder    ObjectFinderFunc    // For locate object spell
 	ObjectToRoom    ObjectToRoomFunc    // For create food/spring spells
@@ -139,7 +140,7 @@ func (m *MagicSystem) Cast(caster *types.Character, spellName string, targetArg 
 	}
 
 	// Cast the spell
-	success := spell.Func(caster, caster.Level, target)
+	success := m.runSpell(spell, caster, caster.Level, target)
 
 	// Chance to improve spell proficiency on success
 	if success && m.CheckImprove != nil {
@@ -809,7 +810,7 @@ func (m *MagicSystem) ObjectCast(spellSlot int, level int, caster *types.Charact
 	}
 
 	// Cast the spell
-	success := spell.Func(caster, level, target)
+	success := m.runSpell(spell, caster, level, target)
 
 	// Generate messages for successful casts
 	if success && victim != nil && victim != caster {
@@ -830,4 +831,14 @@ func (m *MagicSystem) ObjectCast(spellSlot int, level int, caster *types.Charact
 	}
 
 	return success
+}
+
+// runSpell runs a spell function with this system's combat system applying damage.
+func (m *MagicSystem) runSpell(spell *Spell, caster *types.Character, level int, target interface{}) bool {
+	if m.Combat != nil {
+		prev := castingCombat
+		castingCombat = m.Combat
+		defer func() { castingCombat = prev }()
+	}
+	return spell.Func(caster, level, target)
 }
