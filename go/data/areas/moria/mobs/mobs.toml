@@ -497,7 +497,7 @@ size = "large"
 race = "troll"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
+affected_by = ["detect_hidden", "infrared", "regeneration"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -887,7 +887,7 @@ size = "huge"
 race = "troll"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
+affected_by = ["detect_hidden", "infrared", "regeneration"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -977,7 +977,7 @@ size = "large"
 race = "troll"
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
+affected_by = ["detect_hidden", "infrared", "regeneration"]
 alignment = 0
 
   [mobiles.hit_dice]

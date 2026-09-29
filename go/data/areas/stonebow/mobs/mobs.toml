@@ -1107,7 +1107,7 @@ vuln_flags = ["weapon", "pierce", "slash", "fire", "cold", "lightning", "acid"]
 race = "troll"
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area", "warrior", "no_purge"]
-affected_by = ["detect_hidden", "infrared", "sneak", "haste"]
+affected_by = ["detect_hidden", "infrared", "sneak", "haste", "regeneration"]
 alignment = 0
 
   [mobiles.hit_dice]

@@ -1613,7 +1613,7 @@ size = "small"
 race = "water fowl"
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align"]
-affected_by = ["flying"]
+affected_by = ["flying", "swim"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1644,7 +1644,7 @@ size = "tiny"
 race = "water fowl"
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align"]
-affected_by = ["flying"]
+affected_by = ["flying", "swim"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1703,7 +1703,7 @@ size = "small"
 race = "water fowl"
 sex = "either"
 act_flags = ["npc", "stay_area", "no_align"]
-affected_by = ["flying"]
+affected_by = ["flying", "swim"]
 alignment = 0
 
   [mobiles.hit_dice]

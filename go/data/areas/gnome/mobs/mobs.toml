@@ -179,7 +179,7 @@ vuln_flags = ["fire", "acid"]
 race = "troll"
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_hidden", "infrared"]
+affected_by = ["detect_hidden", "infrared", "regeneration"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -312,7 +312,7 @@ vuln_flags = ["fire", "acid"]
 race = "troll"
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
-affected_by = ["detect_hidden", "infrared"]
+affected_by = ["detect_hidden", "infrared", "regeneration"]
 alignment = 0
 
   [mobiles.hit_dice]

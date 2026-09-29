@@ -312,7 +312,7 @@ res_flags = ["drowning"]
 race = "water fowl"
 sex = "none"
 act_flags = ["npc", "sentinel"]
-affected_by = ["flying"]
+affected_by = ["flying", "swim"]
 alignment = 0
 special = "spec_breath_acid"
 
@@ -340,7 +340,7 @@ res_flags = ["drowning"]
 race = "water fowl"
 sex = "none"
 act_flags = ["npc", "stay_area"]
-affected_by = ["flying"]
+affected_by = ["flying", "swim"]
 alignment = 0
 
   [mobiles.hit_dice]

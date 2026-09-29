@@ -59,6 +59,7 @@ import can be re-run or audited:
 python3 tools/rot-import/import_mobs.py /tmp/rotc/rot/area go/data/areas           # dry run: match report
 python3 tools/rot-import/import_mobs.py /tmp/rotc/rot/area go/data/areas --write   # write fields
 python3 tools/rot-import/import_act.py  /tmp/rotc/rot/area go/data/areas           # act class flags
+python3 tools/rot-import/import_race.py /tmp/rotc/rot/src  go/data/areas           # race_table flags (idempotent)
 ```
 
 Mobs are matched by vnum and short description; `chess1.are`, `guard.are` and
