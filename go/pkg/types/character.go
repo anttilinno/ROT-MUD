@@ -44,6 +44,7 @@ type Character struct {
 	// Combat
 	HitRoll  int        // Bonus to hit
 	DamRoll  int        // Bonus to damage
+	Saves    int        // Saving throw modifier from affects (ROM saving_throw; negative is better)
 	Armor    [4]int     // AC by type (pierce, bash, slash, exotic)
 	Wimpy    int        // HP threshold for auto-flee
 	Position Position   // Current position

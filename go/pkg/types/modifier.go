@@ -28,6 +28,8 @@ func (ch *Character) Modify(af *Affect, sign int) {
 		ch.HitRoll += mod
 	case ApplyDamroll:
 		ch.DamRoll += mod
+	case ApplySaves:
+		ch.Saves += mod
 	}
 }
 

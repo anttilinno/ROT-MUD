@@ -583,8 +583,7 @@ func spellMagicMissile(caster *types.Character, level int, target interface{}) b
 		dam = 1
 	}
 
-	// Magic missile always hits (no save)
-	spellDamage(caster, victim, dam, types.DamEnergy)
+	spellDamageSave(caster, victim, level, dam, types.DamEnergy)
 
 	return true
 }
@@ -603,7 +602,7 @@ func spellFireball(caster *types.Character, level int, target interface{}) bool 
 
 	// Fire damage - check resistance
 
-	spellDamage(caster, victim, dam, types.DamFire)
+	spellDamageSave(caster, victim, level, dam, types.DamFire)
 	return true
 }
 
@@ -621,7 +620,7 @@ func spellLightningBolt(caster *types.Character, level int, target interface{}) 
 
 	// Lightning damage - check resistance
 
-	spellDamage(caster, victim, dam, types.DamLightning)
+	spellDamageSave(caster, victim, level, dam, types.DamLightning)
 	return true
 }
 
@@ -934,6 +933,15 @@ var castingCombat = combat.NewCombatSystem()
 // for a spell: immunity, sanctuary, damage curve, death; no parry or dodge).
 func spellDamage(caster, victim *types.Character, dam int, damType types.DamageType) {
 	castingCombat.SpellDamage(caster, victim, dam, damType)
+}
+
+// spellDamageSave is spellDamage halved when the victim saves (ROM's
+// "if (saves_spell(...)) dam /= 2").
+func spellDamageSave(caster, victim *types.Character, level, dam int, damType types.DamageType) {
+	if combat.SavesSpell(level, victim, damType) {
+		dam /= 2
+	}
+	spellDamage(caster, victim, dam, damType)
 }
 
 func min(a, b int) int {
@@ -1339,7 +1347,7 @@ func spellChillTouch(caster *types.Character, level int, target interface{}) boo
 		dam = 1
 	}
 
-	spellDamage(caster, victim, dam, types.DamCold)
+	spellDamageSave(caster, victim, level, dam, types.DamCold)
 
 	// 10% chance to reduce strength
 	if combat.NumberPercent() < 10 {
@@ -1363,7 +1371,7 @@ func spellBurningHands(caster *types.Character, level int, target interface{}) b
 		dam = 1
 	}
 
-	spellDamage(caster, victim, dam, types.DamFire)
+	spellDamageSave(caster, victim, level, dam, types.DamFire)
 	return true
 }
 
@@ -1403,7 +1411,7 @@ func spellShockingGrasp(caster *types.Character, level int, target interface{}) 
 	if dam < 1 {
 		dam = 1
 	}
-	spellDamage(caster, victim, dam, types.DamLightning)
+	spellDamageSave(caster, victim, level, dam, types.DamLightning)
 	return true
 }
 
@@ -1695,7 +1703,7 @@ func spellCallLightning(caster *types.Character, level int, target interface{}) 
 			continue
 		}
 
-		spellDamage(caster, victim, dam, types.DamLightning)
+		spellDamageSave(caster, victim, level, dam, types.DamLightning)
 	}
 
 	return true
@@ -1715,7 +1723,7 @@ func spellAcidBlast(caster *types.Character, level int, target interface{}) bool
 	if dam < 1 {
 		dam = 1
 	}
-	spellDamage(caster, victim, dam, types.DamAcid)
+	spellDamageSave(caster, victim, level, dam, types.DamAcid)
 	return true
 }
 
@@ -1732,7 +1740,7 @@ func spellColourSpray(caster *types.Character, level int, target interface{}) bo
 		dam = 1
 	}
 
-	spellDamage(caster, victim, dam, types.DamLight)
+	spellDamageSave(caster, victim, level, dam, types.DamLight)
 	return true
 }
 
@@ -1748,7 +1756,7 @@ func spellDemonfire(caster *types.Character, level int, target interface{}) bool
 	if dam < 1 {
 		dam = 1
 	}
-	spellDamage(caster, victim, dam, types.DamNegative)
+	spellDamageSave(caster, victim, level, dam, types.DamNegative)
 	return true
 }
 
@@ -1764,7 +1772,7 @@ func spellEnergyDrain(caster *types.Character, level int, target interface{}) bo
 	if dam < 1 {
 		dam = 1
 	}
-	spellDamage(caster, victim, dam, types.DamNegative)
+	spellDamageSave(caster, victim, level, dam, types.DamNegative)
 
 	// Caster absorbs the drained energy
 	if dam > 0 && caster.Hit < caster.MaxHit {
@@ -1789,7 +1797,7 @@ func spellFlamestrike(caster *types.Character, level int, target interface{}) bo
 	if dam < 1 {
 		dam = 1
 	}
-	spellDamage(caster, victim, dam, types.DamFire)
+	spellDamageSave(caster, victim, level, dam, types.DamFire)
 	return true
 }
 
@@ -1808,7 +1816,7 @@ func spellChainLightning(caster *types.Character, level int, target interface{})
 			continue
 		}
 
-		spellDamage(caster, victim, dam, types.DamLightning)
+		spellDamageSave(caster, victim, level, dam, types.DamLightning)
 	}
 
 	return true
@@ -2206,7 +2214,7 @@ func spellDispelEvil(caster *types.Character, level int, target interface{}) boo
 			dam = rolled
 		}
 	}
-	spellDamage(caster, victim, dam, types.DamHoly)
+	spellDamageSave(caster, victim, level, dam, types.DamHoly)
 	return true
 }
 
@@ -2231,7 +2239,7 @@ func spellDispelGood(caster *types.Character, level int, target interface{}) boo
 			dam = rolled
 		}
 	}
-	spellDamage(caster, victim, dam, types.DamNegative)
+	spellDamageSave(caster, victim, level, dam, types.DamNegative)
 	return true
 }
 
@@ -2810,7 +2818,7 @@ func spellAcidBreath(caster *types.Character, level int, target interface{}) boo
 	}
 
 	dam := combat.Dice(10, 16) + level
-	spellDamage(caster, victim, dam, types.DamAcid)
+	spellDamageSave(caster, victim, level, dam, types.DamAcid)
 	return true
 }
 
@@ -2821,7 +2829,7 @@ func spellFireBreath(caster *types.Character, level int, target interface{}) boo
 	}
 
 	dam := combat.Dice(11, 20) + level
-	spellDamage(caster, victim, dam, types.DamFire)
+	spellDamageSave(caster, victim, level, dam, types.DamFire)
 	return true
 }
 
@@ -2832,7 +2840,7 @@ func spellFrostBreath(caster *types.Character, level int, target interface{}) bo
 	}
 
 	dam := combat.Dice(8, 12) + level
-	spellDamage(caster, victim, dam, types.DamCold)
+	spellDamageSave(caster, victim, level, dam, types.DamCold)
 	return true
 }
 
@@ -2843,7 +2851,7 @@ func spellGasBreath(caster *types.Character, level int, target interface{}) bool
 			continue
 		}
 		dam := combat.Dice(6, 10) + level/2
-		spellDamage(caster, victim, dam, types.DamPoison)
+		spellDamageSave(caster, victim, level, dam, types.DamPoison)
 	}
 	return true
 }
@@ -2855,7 +2863,7 @@ func spellLightningBreath(caster *types.Character, level int, target interface{}
 	}
 
 	dam := combat.Dice(10, 14) + level
-	spellDamage(caster, victim, dam, types.DamLightning)
+	spellDamageSave(caster, victim, level, dam, types.DamLightning)
 	return true
 }
 
@@ -2871,7 +2879,7 @@ func spellMeteorSwarm(caster *types.Character, level int, target interface{}) bo
 			continue
 		}
 
-		spellDamage(caster, victim, dam, types.DamFire)
+		spellDamageSave(caster, victim, level, dam, types.DamFire)
 	}
 
 	return true
@@ -2885,7 +2893,7 @@ func spellImplode(caster *types.Character, level int, target interface{}) bool {
 	}
 
 	dam := combat.Dice(20, 10) + level*2
-	spellDamage(caster, victim, dam, types.DamEnergy)
+	spellDamageSave(caster, victim, level, dam, types.DamEnergy)
 	return true
 }
 
@@ -2897,7 +2905,7 @@ func spellDisintegrate(caster *types.Character, level int, target interface{}) b
 	}
 
 	dam := combat.Dice(30, 10) + level*3
-	spellDamage(caster, victim, dam, types.DamEnergy)
+	spellDamageSave(caster, victim, level, dam, types.DamEnergy)
 	return true
 }
 

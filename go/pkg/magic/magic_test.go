@@ -676,9 +676,9 @@ func TestSpellDamageUsesCombatPath(t *testing.T) {
 	victim = types.NewNPC(1, "mob", 10)
 	victim.Hit, victim.MaxHit = 1000, 1000
 	victim.AffectedBy.Set(types.AffSanctuary)
-	spellMagicMissile(caster, 20, victim) // 1d4+20, halved: 10-12
-	if lost := 1000 - victim.Hit; lost < 10 || lost > 12 {
-		t.Errorf("sanctuary victim lost %d HP, want 10-12", lost)
+	spellDamage(caster, victim, 20, types.DamEnergy)
+	if lost := 1000 - victim.Hit; lost != 10 {
+		t.Errorf("sanctuary victim lost %d HP, want 10", lost)
 	}
 }
 
@@ -719,5 +719,22 @@ func TestUnlearnableSpellStaysUnlearnable(t *testing.T) {
 	warrior.Class, warrior.Level, warrior.Mana = types.ClassWarrior, 90, 1000
 	if DefaultSpells().FindByName("acid blast").CanCast(warrior) {
 		t.Error("a level 90 warrior can cast acid blast (ROM level 53 = cannot learn)")
+	}
+}
+
+func TestSavesSpell(t *testing.T) {
+	victim := types.NewNPC(1, "mob", 20)
+	saved := 0
+	for i := 0; i < 2000; i++ {
+		if combat.SavesSpell(20, victim, types.DamEnergy) {
+			saved++
+		}
+	}
+	if saved < 900 || saved > 1100 {
+		t.Errorf("equal-level save rate %d/2000, want about half", saved)
+	}
+	victim.Imm.Set(types.ImmEnergy)
+	if !combat.SavesSpell(20, victim, types.DamEnergy) {
+		t.Error("immune victim should always save")
 	}
 }

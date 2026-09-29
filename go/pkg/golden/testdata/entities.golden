@@ -42,9 +42,9 @@ Class=angel        THAC0_00=20  THAC0_32=-8  HP=324  Mana=390  HitRoll=6   DamRo
 Spell=acid blast         Lv=22  Class=mage       success=true  dHP=77    dMana=0    victimHp=1000->923
 Spell=bless              Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 Spell=cure light         Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
-Spell=fireball           Lv=22  Class=mage       success=true  dHP=45    dMana=0    victimHp=1000->955
+Spell=fireball           Lv=22  Class=mage       success=true  dHP=44    dMana=0    victimHp=1000->956
 Spell=heal               Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
-Spell=magic missile      Lv=10  Class=mage       success=true  dHP=12    dMana=0    victimHp=1000->988
+Spell=magic missile      Lv=10  Class=mage       success=true  dHP=5     dMana=0    victimHp=1000->995
 Spell=sanctuary          Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 
 === SKILL EXECUTIONS (seed=42) ===
@@ -55,5 +55,5 @@ Defense Lv=20  thief      vs warrior   : dodged=29  parried=52  blocked=0   hit=
 
 === MOB TEMPLATES (seed=42) ===
 MobImm   Lv=20  name=Mob        Imm=[fire,silver] Res=[charm] Vuln=[cold]
-MobAggro Lv=20  name=AggroMob   Act=aggressive aggroFired=true  victim=AggroTarget
-MobCast  Lv=22  name=CasterMob  Special=spec_cast_mage fighting=true  spellAttempted=acid blast      castFired=true  victimHp=1000->999
+MobAggro Lv=20  name=AggroMob   Act=aggressive aggroFired=false victim=-
+MobCast  Lv=22  name=CasterMob  Special=spec_cast_mage fighting=true  spellAttempted=none            castFired=false victimHp=1000->1000

@@ -347,6 +347,26 @@ var immBits = map[types.DamageType]types.ImmFlags{
 // pierce and slash, IMM/RES/VULN_MAGIC cover every other type, and a
 // type-specific bit overrides the umbrella (a vulnerability downgrades an
 // umbrella immunity or resistance by one step).
+// SavesSpell reports whether victim resists a spell of the given level (ROM
+// saves_spell): 50% at equal level, 5% per level of difference, better with
+// negative Saves, clamped to 5-95%.
+func SavesSpell(level int, victim *types.Character, damType types.DamageType) bool {
+	save := 50 + (victim.Level-level)*5 - victim.Saves*2
+	if victim.IsAffected(types.AffBerserk) {
+		save += victim.Level / 2
+	}
+	switch CheckImmune(victim, damType) {
+	case ImmImmune:
+		return true
+	case ImmResistant:
+		save += 2
+	case ImmVulnerable:
+		save -= 2
+	}
+	save = max(5, min(save, 95))
+	return NumberPercent() < save
+}
+
 func CheckImmune(victim *types.Character, damType types.DamageType) ImmunityResult {
 	if damType == types.DamNone {
 		return ImmNormal
