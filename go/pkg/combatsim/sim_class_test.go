@@ -52,6 +52,20 @@ func learnSkills(ch *types.Character) {
 	}
 }
 
+// selfBuffs are the defensive spells a player casts before a fight.
+var selfBuffs = []string{"armor", "bless", "shield", "stone skin", "sanctuary"}
+
+// preBuff casts each self-buff p's class knows, retrying a fizzle twice, as a
+// player would before engaging, then rests.
+func preBuff(p *types.Character) {
+	for _, name := range selfBuffs {
+		for try := 0; try < 3 && classCanCast(p, name) && !p.Affected.HasType(name); try++ {
+			simMagic.Cast(p, name, "", nil)
+		}
+	}
+	p.Mana = p.MaxMana // buffs outlast a rest back to full mana
+}
+
 // opener is the player's first move before the fight starts.
 func opener(cs *combat.CombatSystem, p, m *types.Character) {
 	if p.Class != types.ClassThief {

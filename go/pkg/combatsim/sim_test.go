@@ -467,6 +467,8 @@ type simResult struct {
 	totalPMiss  int
 	totalMHits  int
 	totalMMiss  int
+	hpLeft      float64 // sum of the player's HP% left after each win
+	playerMaxHP int     // sum of the player's max HP over all fights
 }
 
 func (r *simResult) winPct() float64 { return 100 * float64(r.playerWins) / float64(r.n) }
@@ -474,6 +476,23 @@ func (r *simResult) avgRounds() float64 {
 	return float64(r.totalRounds) / float64(r.n)
 }
 func (r *simResult) avgSeconds() float64 { return roundsToSeconds(r.avgRounds()) }
+
+// hpLeftPct is the player's average HP% left after a win.
+func (r *simResult) hpLeftPct() float64 {
+	if r.playerWins == 0 {
+		return 0
+	}
+	return r.hpLeft / float64(r.playerWins)
+}
+
+// mobKillSecs is how long the mob would need to kill the player from full HP:
+// the reaction window.
+func (r *simResult) mobKillSecs() float64 {
+	if r.mDPS() == 0 {
+		return 999
+	}
+	return roundsToSeconds(float64(r.playerMaxHP) / float64(r.n) / r.mDPS())
+}
 func (r *simResult) pHitPct() float64 {
 	t := r.totalPHits + r.totalPMiss
 	if t == 0 {
@@ -549,6 +568,8 @@ func runSimFull(classIdx, raceIdx, level, n int,
 
 	for i := 0; i < n; i++ {
 		p := playerFn(classIdx, raceIdx, level)
+		res.playerMaxHP += p.MaxHit
+		preBuff(p)
 		m := mobFn(level)
 
 		room := types.NewRoom(1, "Arena", "Arena.")
@@ -651,6 +672,7 @@ func runSimFull(classIdx, raceIdx, level, n int,
 		switch {
 		case m.Hit <= 0:
 			res.playerWins++
+			res.hpLeft += 100 * float64(max(p.Hit, 0)) / float64(p.MaxHit)
 		case rounds >= maxRounds:
 			res.draws++
 			// else: mob won (player was killed) — implicit, not incremented

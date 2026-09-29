@@ -267,7 +267,7 @@ func TestCombatSimWorldGear(t *testing.T) {
 	}
 	t.Log("")
 
-	table := func(title string, playerFn func(c, r, l int) *types.Character, mobs map[int]int) {
+	table := func(title string, playerFn func(c, r, l int) *types.Character, mobs map[int]int, cell func(r simResult) string) {
 		hdr := fmt.Sprintf("%-10s", title)
 		for _, lv := range worldSimLevels {
 			hdr += fmt.Sprintf("  Lv%-6d", lv)
@@ -277,15 +277,22 @@ func TestCombatSimWorldGear(t *testing.T) {
 		for _, ci := range worldSimClasses {
 			row := fmt.Sprintf("%-10s", types.ClassTable[ci].Name)
 			for _, lv := range worldSimLevels {
-				r := runSimFull(ci, types.RaceHuman, lv, n, playerFn, ws.mobFn(mobs[lv]))
-				row += fmt.Sprintf("  %3.0f%%/%2.0fs", r.winPct(), r.avgSeconds())
+				row += "  " + cell(runSimFull(ci, types.RaceHuman, lv, n, playerFn, ws.mobFn(mobs[lv])))
 			}
 			t.Log(row)
 		}
 		t.Log("")
 	}
-	table("SimGear vs toughest", makePlayer, toughest)
-	table("RealGear vs toughest", ws.geared, toughest)
-	table("SimGear vs median", makePlayer, median)
-	table("RealGear vs median", ws.geared, median)
+	winSecs := func(r simResult) string { return fmt.Sprintf("%3.0f%%/%2.0fs", r.winPct(), r.avgSeconds()) }
+	// HP% left after a win / seconds the mob needs to kill the player from full.
+	danger := func(r simResult) string { return fmt.Sprintf("%3.0f%%/%3.0fs", r.hpLeftPct(), r.mobKillSecs()) }
+	table("SimGear vs toughest", makePlayer, toughest, winSecs)
+	table("RealGear vs toughest", ws.geared, toughest, winSecs)
+	table("SimGear vs median", makePlayer, median, winSecs)
+	table("RealGear vs median", ws.geared, median, winSecs)
+	t.Log("Reaction window: HP% left after a win / seconds for the mob to kill the player from full.")
+	t.Log("Targets: median 40-70% left; toughest kill time about the fight length; nothing under 10 s.")
+	t.Log("")
+	table("Danger vs median", ws.geared, median, danger)
+	table("Danger vs toughest", ws.geared, toughest, danger)
 }
