@@ -738,3 +738,20 @@ func TestSavesSpell(t *testing.T) {
 		t.Error("immune victim should always save")
 	}
 }
+
+func TestDispelMobSanctuaryFlag(t *testing.T) {
+	caster := types.NewCharacter("Caster")
+	caster.Level = 30
+	gone := 0
+	for i := 0; i < 1000; i++ {
+		mob := types.NewNPC(1, "mob", 30)
+		mob.AffectedBy.Set(types.AffSanctuary)
+		spellDispelMagic(caster, 30, mob)
+		if !mob.IsAffected(types.AffSanctuary) {
+			gone++
+		}
+	}
+	if gone < 180 || gone > 320 {
+		t.Errorf("built-in sanctuary dispelled %d/1000 times, want about 250", gone)
+	}
+}

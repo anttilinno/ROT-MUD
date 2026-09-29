@@ -1223,6 +1223,14 @@ func spellDispelMagic(caster *types.Character, level int, target interface{}) bo
 		}
 	}
 
+	// A mob's built-in sanctuary (area flag, no affect) is dispellable too, at
+	// ROM saves_dispel odds for a permanent effect: 25% at equal level.
+	if victim.AffectedBy.Has(types.AffSanctuary) && !victim.Affected.HasType("sanctuary") &&
+		combat.NumberPercent() >= max(5, min(95, 50+(victim.Level+5-level)*5)) {
+		victim.AffectedBy.Remove(types.AffSanctuary)
+		dispelled = true
+	}
+
 	return dispelled
 }
 
