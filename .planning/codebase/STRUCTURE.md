@@ -145,7 +145,7 @@ ROT-MUD/
 - `go/pkg/ai/specials.go`: NPC special functions and behaviors
 
 **Testing:**
-- `go/pkg/combat/combat_sim_test.go`: Combat system testing and balancing (44KB)
+- `go/pkg/combatsim/sim_test.go`: Combat system testing and balancing (44KB)
 - `go/pkg/game/commands_test.go`: Command dispatcher tests
 - Various `*_test.go` files throughout `pkg/`
 

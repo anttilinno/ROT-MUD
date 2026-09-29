@@ -1,8 +1,8 @@
-package combat
+package combatsim
 
 // Combat sim regression assertions.
 //
-// These tests pin the current behaviour of the simulations in combat_sim_test.go
+// These tests pin the current behaviour of the simulations in sim_test.go
 // and fail on drift outside snapshot tolerances. They also add a new mob variant
 // that starts with the sanctuary affect — modelling a buffed mob that casters
 // can dispel and melee classes cannot, then asserting per-class outcomes.
@@ -17,11 +17,12 @@ package combat
 // error at p=0.5 is ~1.5pp, so ±10pp easily absorbs run-to-run noise.
 //
 // Run:
-//   go test ./pkg/combat/ -run TestCombatSimAssert -v
-//   go test ./pkg/combat/ -run TestCombatSimVsSanctuaryMob -v
+//   go test ./pkg/combatsim -run TestCombatSimAssert -v
+//   go test ./pkg/combatsim -run TestCombatSimVsSanctuaryMob -v
 
 import (
 	"fmt"
+	"rotmud/pkg/combat"
 	"strings"
 	"testing"
 
@@ -310,7 +311,7 @@ func dispelChance(casterLevel, buffLevel int) int {
 // Dispel attempt happens before the player's other actions each round so a
 // successful dispel benefits that same round's damage.
 func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
-	cs := NewCombatSystem()
+	cs := combat.NewCombatSystem()
 	cs.Output = func(_ *types.Character, _ string) {}
 	cs.SkillGetter = func(ch *types.Character, skillName string) int {
 		if ch.IsNPC() {
@@ -354,8 +355,8 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 		room.AddPerson(p)
 		room.AddPerson(m)
 
-		SetFighting(p, m)
-		SetFighting(m, p)
+		combat.SetFighting(p, m)
+		combat.SetFighting(m, p)
 
 		const maxRounds = 200
 		rounds := 0
@@ -388,7 +389,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 			// Dispel attempt (caster classes only)
 			if mobSanc && canDispel && pMana >= dispelManaCost {
 				pMana -= dispelManaCost
-				if Dice(1, 100) < dispelChance(level, level) {
+				if combat.Dice(1, 100) < dispelChance(level, level) {
 					mobSanc = false
 					m.AffectedBy.Remove(types.AffSanctuary)
 				}
@@ -396,42 +397,42 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 
 			// Thief opener
 			if rounds == 1 && (classIdx == types.ClassThief) &&
-				p.Fighting == m && IsAwake(p) {
+				p.Fighting == m && combat.IsAwake(p) {
 				var burst int
 				if level >= 75 {
 					burst = m.MaxHit * 3 / 4
 				} else {
 					wn, ws := simWeaponDice(classIdx, level)
-					burst = Dice(wn, ws)*backstabMult(level) + p.DamRoll*2
+					burst = combat.Dice(wn, ws)*backstabMult(level) + p.DamRoll*2
 				}
 				res.totalPDmg += applyMobDmg(burst)
-				UpdatePosition(m)
+				combat.UpdatePosition(m)
 			}
 
 			// Thief circle
 			if rounds > 1 && rounds%4 == 0 &&
 				(classIdx == types.ClassThief) &&
-				m.Position > types.PosDead && p.Fighting == m && IsAwake(p) {
+				m.Position > types.PosDead && p.Fighting == m && combat.IsAwake(p) {
 				wn, ws := simWeaponDice(classIdx, level)
-				circle := Dice(wn, ws)*2 + p.DamRoll
+				circle := combat.Dice(wn, ws)*2 + p.DamRoll
 				res.totalPDmg += applyMobDmg(circle)
-				UpdatePosition(m)
+				combat.UpdatePosition(m)
 			}
 
 			// Ranger dual-wield
 			if (classIdx == types.ClassRanger) &&
-				m.Position > types.PosDead && p.Fighting == m && IsAwake(p) {
+				m.Position > types.PosDead && p.Fighting == m && combat.IsAwake(p) {
 				offSkill := weaponSkillForClass(classIdx, level) / 3
-				if Dice(1, 100) <= offSkill {
+				if combat.Dice(1, 100) <= offSkill {
 					wn, ws := weaponDice(classIdx, level)
-					off := Dice(wn, ws) + p.DamRoll/2
+					off := combat.Dice(wn, ws) + p.DamRoll/2
 					res.totalPDmg += applyMobDmg(off)
-					UpdatePosition(m)
+					combat.UpdatePosition(m)
 				}
 			}
 
 			// Caster spell
-			if isCasterClass(classIdx) && p.Fighting == m && IsAwake(p) {
+			if isCasterClass(classIdx) && p.Fighting == m && combat.IsAwake(p) {
 				cost := spellManaCost(classIdx, level)
 				if pMana >= cost {
 					pMana -= cost
@@ -444,7 +445,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 					}
 					dealt := applyMobDmg(sd)
 					res.totalPDmg += dealt
-					UpdatePosition(m)
+					combat.UpdatePosition(m)
 					if (classIdx == types.ClassGhoul) &&
 						p.Hit < p.MaxHit {
 						p.Hit += dealt / 12
@@ -456,7 +457,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 			}
 
 			// Melee — uses cs.MultiHit; halve the realised dmg if sanctuary up
-			if m.Position > types.PosDead && p.Fighting == m && IsAwake(p) {
+			if m.Position > types.PosDead && p.Fighting == m && combat.IsAwake(p) {
 				mHPBefore := m.Hit
 				cs.MultiHit(p, m)
 				raw := mHPBefore - m.Hit
@@ -475,7 +476,7 @@ func runSimVsSanctuary(classIdx, raceIdx, level, n int) simResult {
 			}
 
 			// Mob attacks (no special abilities; standard warrior melee)
-			if m.Fighting == p && IsAwake(m) {
+			if m.Fighting == p && combat.IsAwake(m) {
 				pBefore := p.Hit
 				cs.MultiHit(m, p)
 				if m.Hit > 0 && m.Fighting != p {
@@ -570,7 +571,7 @@ var simSnapSanctuaryMob = map[int][]simSnapCell{
 //     at equal level) — they pay 15-30 mana for the dispel.
 //   - Vampire has dispel-magic in ROM, so it benefits too. Lich likewise.
 //
-// Run:  go test ./pkg/combat/ -run TestCombatSimVsSanctuaryMob -v
+// Run:  go test ./pkg/combatsim -run TestCombatSimVsSanctuaryMob -v
 func TestCombatSimVsSanctuaryMob(t *testing.T) {
 	const raceIdx = types.RaceHuman
 	const n = 1000

@@ -42,7 +42,7 @@ go/pkg/
 ├── combat/
 │   ├── combat.go
 │   ├── combat_test.go           # Unit tests for combat system
-│   ├── combat_sim_test.go        # Simulation/benchmarking tests
+│   ├── combatsim/sim_test.go        # Simulation/benchmarking tests
 │   └── hit.go
 ├── types/
 │   ├── character.go
@@ -367,7 +367,7 @@ func TestSystemLoadDir(t *testing.T) {
 ## Test File Coverage
 
 **Current test files (26 total):**
-- `combat/`: combat_test.go, combat_sim_test.go
+- `combat/`: combat_test.go, combatsim/sim_test.go
 - `types/`: affect_test.go, character_test.go, descriptor_test.go, flags_test.go, object_test.go, room_test.go
 - `game/`: act_test.go, commands_test.go, handler_test.go, loop_test.go, mobprogs_test.go, notes_test.go, pets_test.go, stacking_test.go
 - `loader/`: loader_test.go, integration_test.go

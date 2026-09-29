@@ -279,7 +279,7 @@ Plans:
 
 **Goal**: Mobs, gear and fights behave like ROM and hit the 15-22 s fight target, verified by simulation against real world data
 **Depends on**: None
-**Reference**: `go/pkg/combat/combat_sim_world_test.go` (world sim), `docs/REFERENCES.md` (re-import tools)
+**Reference**: `go/pkg/combatsim/sim_world_test.go` (world sim), `docs/REFERENCES.md` (re-import tools)
 **Status**: Mob/gear pass landed 2026-09-18 on branch `feat/tier2-godwars`
 
 Done:

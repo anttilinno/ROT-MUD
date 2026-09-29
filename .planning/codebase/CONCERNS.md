@@ -43,8 +43,8 @@
 - Fix approach: Implement spell registry pattern; move spell implementations to separate files or generated from data
 
 **Combat Simulation Test as Tuning Tool:**
-- Issue: `go/pkg/combat/combat_sim_test.go` is a 100+ line combat balancing simulation, not a traditional test
-- Files: `go/pkg/combat/combat_sim_test.go:1-35` (comments indicate manual tuning state)
+- Issue: `go/pkg/combatsim/sim_test.go` is a 100+ line combat balancing simulation, not a traditional test
+- Files: `go/pkg/combatsim/sim_test.go:1-35` (comments indicate manual tuning state)
 - Impact: Not integrated into CI pipeline; manual testing burden; combat balance is not validated automatically
 - Fix approach: Move to separate benchmarking/balance validation tool; integrate with performance testing suite
 
@@ -145,7 +145,7 @@
 **Combat Damage Calculation:**
 - Files: `go/pkg/combat/hit.go:9-150+`, `go/pkg/combat/damage.go`, `go/pkg/magic/spells.go` (damage calculations)
 - Why fragile: Multiple damage paths (weapon, spell, special attack) with overlapping responsibility; damage types and resistances scattered across codebase
-- Safe modification: All damage changes must be tested with combat_sim_test.go across all class/race combinations; changes to spell damage require rebalancing
+- Safe modification: All damage changes must be tested with combatsim/sim_test.go across all class/race combinations; changes to spell damage require rebalancing
 - Test coverage: Combat sim covers balance but not all spell interactions; no regression tests for specific damage formulas
 
 **Player Persistence:**
