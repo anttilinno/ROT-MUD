@@ -15,9 +15,10 @@ import (
 // a level) is modelled here.
 
 var (
-	simSkills = skills.DefaultSkills()
-	simMagic  = magic.NewMagicSystem()
-	simAI     = &ai.AISystem{Registry: ai.NewSpecialRegistry(), Magic: simMagic}
+	simSkills   = skills.DefaultSkills()
+	simSkillSys = &skills.SkillSystem{Registry: simSkills}
+	simMagic    = magic.NewMagicSystem()
+	simAI       = &ai.AISystem{Registry: ai.NewSpecialRegistry(), Magic: simMagic}
 	// measureMagic casts bestSpell's test spells, apart from the fight in progress.
 	measureMagic = magic.NewMagicSystem()
 )

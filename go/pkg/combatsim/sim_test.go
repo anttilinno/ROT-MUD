@@ -522,13 +522,7 @@ func runSimFull(classIdx, raceIdx, level, n int,
 			return 0
 		}
 		if ch.IsNPC() {
-			// Mobs have moderate combat skill — capped lower than players to
-			// prevent excessive dodge rate and extra attacks at high levels.
-			s := 20 + ch.Level*2
-			if s > 80 {
-				s = 80
-			}
-			return s
+			return simSkillSys.GetSkill(ch, skillName) // the game's mob skills
 		}
 		// Route skill-specific lookups to class-appropriate functions.
 		switch skillName {

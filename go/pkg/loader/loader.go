@@ -5,7 +5,6 @@ import (
 	"math/rand"
 	"os"
 	"path/filepath"
-	"slices"
 	"strings"
 
 	"github.com/pelletier/go-toml/v2"
@@ -825,7 +824,8 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 		ch.Armor[types.ACExotic] = interpolate(tmpl.Level, 100, 0)
 	}
 
-	setMobStats(ch, slices.Contains(tmpl.OffFlags, "fast"))
+	ch.Off = parseOffFlags(tmpl.OffFlags)
+	setMobStats(ch, ch.Off.Has(types.OffFast))
 	applyMobFloor(ch)
 
 	// Set default position
@@ -885,6 +885,21 @@ var immFlagNames = map[string]types.ImmFlags{
 	"negative": types.ImmNegative, "holy": types.ImmHoly, "energy": types.ImmEnergy,
 	"mental": types.ImmMental, "disease": types.ImmDisease, "drowning": types.ImmDrowning,
 	"light": types.ImmLight, "sound": types.ImmSound, "silver": types.ImmSilver,
+}
+
+var offFlagNames = map[string]types.OffFlags{
+	"area_attack": types.OffAreaAttack, "backstab": types.OffBackstab, "bash": types.OffBash,
+	"berserk": types.OffBerserk, "disarm": types.OffDisarm, "dodge": types.OffDodge,
+	"fade": types.OffFade, "fast": types.OffFast, "kick": types.OffKick, "kick_dirt": types.OffKickDirt,
+	"parry": types.OffParry, "rescue": types.OffRescue, "tail": types.OffTail, "trip": types.OffTrip,
+	"crush": types.OffCrush,
+}
+
+func parseOffFlags(names []string) (flags types.OffFlags) {
+	for _, n := range names {
+		flags.Set(offFlagNames[strings.ToLower(n)])
+	}
+	return flags
 }
 
 func parseImmFlags(names []string) (flags types.ImmFlags) {

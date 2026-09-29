@@ -341,9 +341,13 @@ func TestSkillSystemGetSkillNPC(t *testing.T) {
 		Name:  "Guard",
 		Level: 20,
 		Act:   types.ActNPC | types.ActWarrior,
+		Off:   types.OffDodge | types.OffParry,
 	}
 
-	// NPCs get level-based skills
+	// NPCs get level-based skills; dodge and parry need the off flag (ROT)
+	if sys.GetSkill(&types.Character{Level: 20, Act: types.ActNPC | types.ActWarrior}, "dodge") != 0 {
+		t.Error("NPC without OFF_DODGE should not dodge")
+	}
 	dodge := sys.GetSkill(npc, "dodge")
 	if dodge != npc.Level {
 		t.Errorf("expected NPC dodge = level (%d), got %d", npc.Level, dodge)

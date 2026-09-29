@@ -71,49 +71,77 @@ func (s *SkillSystem) GetSkillByIndex(ch *types.Character, sn int) int {
 
 // getNPCSkill calculates skill level for NPCs
 func (s *SkillSystem) getNPCSkill(ch *types.Character, skill *Skill) int {
-	// Spells: NPCs get level-based spell ability
+	// ROT get_skill for mobiles: class act flags and off_flags decide what a
+	// mob can do, level decides how well.
+	lv := ch.Level
+	act, off := ch.Act.Has, ch.Off.Has
 	if skill.Type == TypeSpell {
-		return 40 + ch.Level
+		return 40 + lv
 	}
-
-	// Combat skills based on mob flags
 	switch skill.Name {
+	case "sneak", "hide":
+		return lv + 20
 	case "dodge":
-		if ch.Act.Has(types.ActWarrior) || ch.Act.Has(types.ActThief) {
-			return ch.Level
+		if off(types.OffDodge) {
+			return lv
 		}
 	case "parry":
-		if ch.Act.Has(types.ActWarrior) {
-			return ch.Level
+		if off(types.OffParry) {
+			return lv
 		}
 	case "shield block":
-		return 10 + ch.Level
+		return 10 + lv
 	case "second attack":
-		if ch.Act.Has(types.ActWarrior) || ch.Act.Has(types.ActThief) {
-			return 10 + 3*(ch.Level/2)
+		if act(types.ActWarrior) || act(types.ActThief) || act(types.ActRanger) || act(types.ActDruid) {
+			return 10 + 3*(lv/2)
 		}
 	case "third attack":
-		if ch.Act.Has(types.ActWarrior) {
-			return 2*ch.Level - 40
+		if act(types.ActWarrior) {
+			return max(0, 2*lv-40)
 		}
 	case "hand to hand":
-		return 40 + ch.Level
-	case "kick":
-		return 10 + 3*(ch.Level/2)
+		return 40 + lv
+	case "trip":
+		if off(types.OffTrip) {
+			return 10 + 3*(lv/2)
+		}
 	case "bash":
-		if ch.Act.Has(types.ActWarrior) {
-			return 10 + 3*(ch.Level/2)
+		if off(types.OffBash) {
+			return 10 + 3*(lv/2)
 		}
+	case "stun":
+		if off(types.OffBash) && act(types.ActWarrior) {
+			return lv / 2
+		}
+	case "disarm":
+		if off(types.OffDisarm) || act(types.ActWarrior) || act(types.ActThief) || act(types.ActVampire) {
+			return 20 + 3*(lv/2)
+		}
+	case "berserk":
+		if off(types.OffBerserk) {
+			return 3 * (lv / 2)
+		}
+	case "kick":
+		return 10 + 3*(lv/2)
 	case "backstab":
-		if ch.Act.Has(types.ActThief) {
-			return 20 + 3*(ch.Level/2)
+		if act(types.ActThief) || act(types.ActRanger) || act(types.ActVampire) {
+			return 20 + lv
 		}
-	case "sneak", "hide":
-		if ch.Act.Has(types.ActThief) {
-			return ch.Level + 20
+	case "dual wield":
+		if act(types.ActThief) || act(types.ActRanger) || act(types.ActWarrior) {
+			return 20 + lv
 		}
+	case "circle":
+		if act(types.ActThief) {
+			return 10 + lv
+		}
+	case "rescue":
+		return lv / 4
+	case "recall":
+		return 40 + lv/2
+	case "sword", "dagger", "spear", "mace", "axe", "flail", "whip", "polearm":
+		return 40 + 5*(lv/2)/2
 	}
-
 	return 0
 }
 

@@ -1,6 +1,7 @@
 package combat
 
 import (
+	"slices"
 	"strings"
 
 	"rotmud/pkg/types"
@@ -151,6 +152,10 @@ func (c *CombatSystem) OneHit(ch, victim *types.Character, secondary bool) Damag
 func (c *CombatSystem) MultiHit(ch, victim *types.Character) {
 	// Can't attack while stunned
 	if ch.Position < types.PosResting {
+		return
+	}
+	if ch.IsNPC() {
+		c.mobHit(ch, victim)
 		return
 	}
 
@@ -319,5 +324,86 @@ func (c *CombatSystem) getWeaponTypeName(wield *types.Object) string {
 		return "polearm"
 	default:
 		return "sword"
+	}
+}
+
+// mobHit is ROT's mob_hit: a mob's round, driven by its act and off flags
+// (ROM off_flags) rather than learned skills.
+func (c *CombatSystem) mobHit(ch, victim *types.Character) {
+	c.OneHit(ch, victim, false)
+	if ch.Fighting != victim {
+		return
+	}
+
+	// Area attack: a swing at everyone else fighting the mob.
+	if ch.Off.Has(types.OffAreaAttack) && ch.InRoom != nil {
+		for _, vch := range slices.Clone(ch.InRoom.People) {
+			if vch != victim && vch.Fighting == ch {
+				c.OneHit(ch, vch, false)
+			}
+		}
+		if ch.Fighting != victim {
+			return
+		}
+	}
+
+	if ch.GetEquipment(types.WearLocSecondary) != nil {
+		if NumberPercent() < c.GetSkill(ch, "dual wield")/3*2+33 {
+			c.OneHit(ch, victim, true)
+		}
+		if ch.Fighting != victim {
+			return
+		}
+	}
+
+	fast := ch.Off.Has(types.OffFast)
+	if ch.IsAffected(types.AffHaste) || fast && !ch.IsAffected(types.AffSlow) {
+		c.OneHit(ch, victim, false)
+		if ch.Fighting != victim {
+			return
+		}
+	}
+
+	// Extra attacks chain: each is only tried if the one before landed its roll.
+	slowed := ch.IsAffected(types.AffSlow) && !fast
+	for i, name := range []string{"second attack", "third attack", "fourth attack", "fifth attack"} {
+		chance := c.GetSkill(ch, name) / 2
+		if slowed {
+			chance = [4]int{chance / 2, chance / 2, chance / 3, 0}[i]
+		}
+		if NumberPercent() >= chance {
+			break
+		}
+		c.OneHit(ch, victim, false)
+		if ch.Fighting != victim {
+			return
+		}
+	}
+
+	if ch.Wait > 0 {
+		return
+	}
+	// One off-flag move a round, picked at random.
+	// ponytail: berserk, dirt kicking and backstab moves live in pkg/game
+	// commands, not here; ROT leaves tail and crush empty. Add them with a
+	// combat-package version of those skills.
+	switch NumberRange(0, 8) {
+	case 0:
+		if ch.Off.Has(types.OffBash) {
+			c.DoBash(ch, victim)
+		}
+	case 2:
+		if ch.Off.Has(types.OffDisarm) || ch.GetEquipment(types.WearLocWield) != nil &&
+			(ch.Act.Has(types.ActWarrior) || ch.Act.Has(types.ActVampire) || ch.Act.Has(types.ActThief)) {
+			c.DoDisarm(ch, victim)
+		}
+	case 3:
+		if ch.Off.Has(types.OffKick) {
+			c.DoKick(ch, victim)
+		}
+	case 6:
+		if ch.Off.Has(types.OffTrip) {
+			c.DoTrip(ch, victim)
+		}
 	}
 }

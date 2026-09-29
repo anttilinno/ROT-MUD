@@ -28,6 +28,7 @@ type Character struct {
 	Imm        ImmFlags    // Immunities
 	Res        ImmFlags    // Resistances
 	Vuln       ImmFlags    // Vulnerabilities
+	Off        OffFlags    // Mob offensive abilities (ROM off_flags)
 
 	// Vital stats
 	Hit     int // Current HP
