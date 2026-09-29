@@ -48,12 +48,12 @@ Spell=magic missile      Lv=10  Class=mage       success=true  dHP=12    dMana=0
 Spell=sanctuary          Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 
 === SKILL EXECUTIONS (seed=42) ===
-Backstab Lv=20  thief vs mob: victimHp=430->430 damage=0 fighting=true
+Backstab Lv=20  thief vs mob: victimHp=430->430 damage=0 fighting=false
 Kick Lv=20  warrior vs mob: victimHp=430->430 damage=0
-Defense Lv=20  warrior    vs thief     : dodged=25  parried=48  blocked=0   hit=27 
-Defense Lv=20  thief      vs warrior   : dodged=29  parried=51  blocked=0   hit=20 
+Defense Lv=20  warrior    vs thief     : dodged=24  parried=48  blocked=0   hit=28 
+Defense Lv=20  thief      vs warrior   : dodged=29  parried=52  blocked=0   hit=19 
 
 === MOB TEMPLATES (seed=42) ===
 MobImm   Lv=20  name=Mob        Imm=[fire,silver] Res=[charm] Vuln=[cold]
-MobAggro Lv=20  name=AggroMob   Act=aggressive aggroFired=false victim=-
-MobCast  Lv=22  name=CasterMob  Special=spec_cast_mage fighting=true  spellAttempted=none            castFired=false victimHp=1000->1000
+MobAggro Lv=20  name=AggroMob   Act=aggressive aggroFired=true  victim=AggroTarget
+MobCast  Lv=22  name=CasterMob  Special=spec_cast_mage fighting=true  spellAttempted=acid blast      castFired=true  victimHp=1000->999

@@ -183,63 +183,16 @@ func (d *CommandDispatcher) cmdBackstab(ch *types.Character, args string) {
 		return
 	}
 
-	if ch.Fighting != nil {
-		d.send(ch, "You're too busy fighting!\r\n")
+	if d.Combat == nil {
 		return
 	}
-
-	// Need a piercing weapon
-	wield := ch.GetEquipment(types.WearLocWield)
-	if wield == nil || wield.ItemType != types.ItemTypeWeapon {
-		d.send(ch, "You need to wield a weapon to backstab.\r\n")
+	result := d.Combat.DoBackstab(ch, victim)
+	if result.Message != "" {
+		d.send(ch, result.Message)
 		return
 	}
-
-	// Check for piercing damage type
-	if wield.DamageType() != types.DamPierce {
-		d.send(ch, "You need a piercing weapon to backstab.\r\n")
-		return
-	}
-
-	// Check if victim is fighting
-	if victim.Fighting != nil {
-		d.send(ch, "You can't backstab someone who is fighting.\r\n")
-		return
-	}
-
-	// Perform backstab
-	if d.Combat != nil {
-		// Calculate backstab chance (simplified - based on level and dex)
-		chance := 50 + ch.Level + (ch.GetStat(types.StatDex)-15)*3
-
-		if combat.NumberPercent() < chance {
-			// Hit! Calculate damage multiplier
-			multiplier := 2 + ch.Level/10
-			if multiplier > 5 {
-				multiplier = 5
-			}
-
-			// Get base weapon damage
-			baseDam := combat.Dice(wield.DiceNumber(), wield.DiceSize())
-			dam := baseDam * multiplier
-
-			// Add damroll
-			dam += combat.GetDamroll(ch)
-
-			d.send(ch, fmt.Sprintf("You backstab %s!\r\n", victim.Name))
-			ActToRoom("$n backstabs $N!", ch, victim, nil, d.Output)
-
-			// Apply damage
-			d.Combat.Damage(ch, victim, dam, types.DamPierce, true)
-		} else {
-			// Miss
-			d.send(ch, fmt.Sprintf("You fail to backstab %s.\r\n", victim.Name))
-			ActToRoom("$n tries to backstab $N but misses.", ch, victim, nil, d.Output)
-
-			// Start combat on miss
-			combat.SetFighting(ch, victim)
-			d.Combat.MultiHit(ch, victim)
-		}
+	if d.Skills != nil {
+		d.Skills.CheckImprove(ch, "backstab", result.Success, 1)
 	}
 }
 
@@ -855,87 +808,17 @@ func (d *CommandDispatcher) cmdGouge(ch *types.Character, args string) {
 }
 
 func (d *CommandDispatcher) cmdCircle(ch *types.Character, args string) {
-	// Get skill level
-	skillLevel := 0
-	if !ch.IsNPC() && ch.PCData != nil && ch.PCData.Learned != nil {
-		skillLevel = ch.PCData.Learned["circle"]
-	}
-	if ch.IsNPC() {
-		skillLevel = 75
-	}
-
-	if skillLevel <= 0 {
-		d.send(ch, "Circle? What's that?\r\n")
+	if d.Combat == nil {
 		return
 	}
-
-	victim := ch.Fighting
-	if victim == nil {
-		d.send(ch, "You aren't fighting anyone.\r\n")
+	result := d.Combat.DoCircle(ch)
+	if result.Message != "" {
+		d.send(ch, result.Message)
 		return
 	}
-
-	// Need a weapon
-	wield := ch.GetEquipment(types.WearLocWield)
-	if wield == nil {
-		d.send(ch, "You need to wield a primary weapon to circle.\r\n")
-		return
+	if d.Skills != nil {
+		d.Skills.CheckImprove(ch, "circle", result.Success, 1)
 	}
-
-	// Victim can't be too hurt (they become too suspicious)
-	if victim.Hit < victim.MaxHit/6 {
-		d.send(ch, fmt.Sprintf("%s is hurt and suspicious... you can't sneak around.\r\n", victim.Name))
-		return
-	}
-
-	if ch.Daze > 0 {
-		d.send(ch, "You're still a little woozy.\r\n")
-		return
-	}
-
-	// Calculate chance
-	chance := skillLevel
-	if !combat.IsAwake(victim) {
-		chance = 100 // Automatic success vs sleeping target
-	}
-
-	if combat.NumberPercent() < chance {
-		// Success!
-		d.send(ch, fmt.Sprintf("You circle around %s!\r\n", victim.Name))
-		d.send(victim, fmt.Sprintf("%s circles around behind you!\r\n", ch.Name))
-		ActToNotVict("$n circles around behind $N!", ch, victim, nil, d.Output)
-
-		// Perform a backstab-like attack
-		if d.Combat != nil {
-			// Calculate damage multiplier (less than backstab)
-			multiplier := 1 + ch.Level/15
-			if multiplier > 3 {
-				multiplier = 3
-			}
-
-			// Get base weapon damage
-			baseDam := combat.Dice(wield.DiceNumber(), wield.DiceSize())
-			dam := baseDam * multiplier
-			dam += combat.GetDamroll(ch)
-
-			d.Combat.Damage(ch, victim, dam, wield.DamageType(), true)
-		}
-
-		if d.Skills != nil {
-			d.Skills.CheckImprove(ch, "circle", true, 1)
-		}
-	} else {
-		// Failure
-		d.send(ch, fmt.Sprintf("%s circles with you, blocking your attempt.\r\n", victim.Name))
-		d.send(victim, fmt.Sprintf("%s tries to circle around you.\r\n", ch.Name))
-		ActToNotVict("$n tries to circle around $N.", ch, victim, nil, d.Output)
-
-		if d.Skills != nil {
-			d.Skills.CheckImprove(ch, "circle", false, 1)
-		}
-	}
-
-	combat.WaitState(ch, 3)
 }
 
 func (d *CommandDispatcher) cmdBerserk(ch *types.Character, args string) {

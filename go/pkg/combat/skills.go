@@ -34,10 +34,14 @@ type SkillResult struct {
 func (c *CombatSystem) DoBackstab(ch, victim *types.Character) SkillResult {
 	result := SkillResult{}
 
-	// Must have a weapon
+	// Must have a piercing weapon
 	weapon := ch.GetEquipment(types.WearLocWield)
-	if weapon == nil {
+	if weapon == nil || weapon.ItemType != types.ItemTypeWeapon {
 		result.Message = "You need to wield a weapon to backstab.\r\n"
+		return result
+	}
+	if weapon.DamageType() != types.DamPierce {
+		result.Message = "You need a piercing weapon to backstab.\r\n"
 		return result
 	}
 
@@ -56,6 +60,11 @@ func (c *CombatSystem) DoBackstab(ch, victim *types.Character) SkillResult {
 	// Check safety
 	if IsSafe(ch, victim) {
 		result.Message = "You cannot attack them.\r\n"
+		return result
+	}
+
+	if victim.Fighting != nil {
+		result.Message = "You can't backstab someone who is fighting.\r\n"
 		return result
 	}
 
@@ -649,6 +658,63 @@ func (c *CombatSystem) DoFeed(ch, victim *types.Character) SkillResult {
 	}
 
 	return result
+}
+
+// DoCircle stabs the current opponent from behind mid-fight: weapon damage
+// times 1 + level/15 (max 3), lag 3 rounds.
+func (c *CombatSystem) DoCircle(ch *types.Character) SkillResult {
+	result := SkillResult{}
+	skillLevel := 75
+	if !ch.IsNPC() {
+		skillLevel = 0
+		if ch.PCData != nil {
+			skillLevel = ch.PCData.Learned["circle"]
+		}
+	}
+	if skillLevel <= 0 {
+		result.Message = "Circle? What's that?\r\n"
+		return result
+	}
+	victim := ch.Fighting
+	if victim == nil {
+		result.Message = "You aren't fighting anyone.\r\n"
+		return result
+	}
+	wield := ch.GetEquipment(types.WearLocWield)
+	if wield == nil {
+		result.Message = "You need to wield a primary weapon to circle.\r\n"
+		return result
+	}
+	// Victim can't be too hurt (they become too suspicious)
+	if victim.Hit < victim.MaxHit/6 {
+		result.Message = fmt.Sprintf("%s is hurt and suspicious... you can't sneak around.\r\n", victim.Name)
+		return result
+	}
+	if ch.Daze > 0 {
+		result.Message = "You're still a little woozy.\r\n"
+		return result
+	}
+
+	WaitState(ch, 3)
+	if NumberPercent() >= skillLevel && IsAwake(victim) {
+		c.output(ch, fmt.Sprintf("%s circles with you, blocking your attempt.\r\n", victim.Name))
+		c.output(victim, fmt.Sprintf("%s tries to circle around you.\r\n", ch.Name))
+		return result
+	}
+	c.output(ch, fmt.Sprintf("You circle around %s!\r\n", victim.Name))
+	c.output(victim, fmt.Sprintf("%s circles around behind you!\r\n", ch.Name))
+	multiplier := min(1+ch.Level/15, 3)
+	dam := Dice(wield.DiceNumber(), wield.DiceSize())*multiplier + GetDamroll(ch)
+	c.Damage(ch, victim, dam, wield.DamageType(), true)
+	result.Success = true
+	result.Damage = dam
+	return result
+}
+
+func (c *CombatSystem) output(ch *types.Character, msg string) {
+	if c.Output != nil {
+		c.Output(ch, msg)
+	}
 }
 
 // DoAssassinate executes an assassinate attack — precision strike with a venom-coated blade.
