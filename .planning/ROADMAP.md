@@ -27,7 +27,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 12: Extensibility Proof** - New race (Lizardman) added by data file only, zero Go diff, with Lua behavior hook
 - [ ] **Phase 13: Economic Overhaul** - Add durability/repair, smith custom crafting, identify fees, and bank fees so the economy has real coin sinks; rebalance mob drops to a stable source/sink ratio (see `.planning/ECONOMY.md` for sub-phase detail)
 - [x] **Phase 15: Tier-2 GodWars Classes** - Reroll + per-class rites into six supernatural classes with bought powers, demonic armour and a Hall of Rites (see `.planning/TIER2-GODWARS.md`) (completed 2026-09-18)
-- [ ] **Phase 16: Combat & Mob Balance** - Restore mob data lost in conversion, ROM mob spawning, stat consistency, gear caps and mob difficulty floors, measured with the world-data combat sim — *mob/gear pass landed 2026-09-18; class balance open*
+- [x] **Phase 16: Combat & Mob Balance** - Restore mob data lost in conversion, ROM mob spawning, stat consistency, gear caps and mob difficulty floors, measured with the world-data combat sim that runs the game's own code (completed 2026-09-29)
 - [ ] **Phase 14: LLM-Driven NPCs** - Local-LLM-backed dialog for shopkeepers/smiths/sages (Tier 1) and plan-once tactical combat for area bosses (Tier 2), with first-class scripted fallback, circuit breaker, and feature flag (see `.planning/LLM-NPC.md` for sub-phase detail) — *N1+N2 exploratory spike landed 2026-06-03 (`pkg/llm`, Otho live); not yet a formally planned/verified phase*
 
 ## Phase Details
@@ -273,28 +273,36 @@ Plans:
   3. 12-slot demonic armour in 5 tiers forged at the demon lord (`demonarmour`), set bonus from worn gear, spell-fizzle, sacrifice refund
   4. Kill faucet: tier-2 players earn the victim's level in class currency (`Combat.OnKill` wired)
 
-**Open**: skill tables for ranger/druid/ghoul origins; tier-2 in the combat sim; deferred GodWars pieces (hierarchy, weaponform, mutations)
+**Open**: tier-2 in the combat sim; deferred GodWars pieces (hierarchy, weaponform, mutations)
 
 ### Phase 16: Combat & Mob Balance
 
 **Goal**: Mobs, gear and fights behave like ROM and hit the 15-22 s fight target, verified by simulation against real world data
 **Depends on**: None
 **Reference**: `go/pkg/combatsim/sim_world_test.go` (world sim), `docs/REFERENCES.md` (re-import tools)
-**Status**: Mob/gear pass landed 2026-09-18 on branch `feat/tier2-godwars`
+**Status**: Complete 2026-09-29 on branch `feat/tier2-godwars`
 
 Done:
 
   1. Mob data lost in the .are→TOML conversion (hitroll, AC, damage type, off/imm/res/vuln, size, race, ranger/druid/vampire act flags) re-imported for 1341 mobs; spawn follows ROM `create_mobile` (stats, AC); `CheckImmune` follows ROM (weapon/magic umbrella flags)
   2. Stat consistency: one regen per tick, affects tick once, armour AC applies, item and spell modifiers applied exactly once on every path, saves store base stats and dispel spells on quit
   3. Level 60+ item bonuses capped per item; mob HP floor at every level; damage/hitroll/AC floor from L60
-  4. World sim: best-in-slot vs median mob lasts 11-26 s at L10-L60 for every class except mage and thief
+  4. The combat sim (`pkg/combatsim`) runs the game's own code: MultiHit, DoBackstab/DoAssassinate/DoCircle, MagicSystem.Cast, the AI specials and command lag. The 4-8 s mage, the one-shot thief and the 2-5 s Ramses were sim artefacts; fixing the sim exposed the game bugs below
+  5. Game fixes found on the way: command lag enforced (Wait held input nowhere); spells castable while fighting (ROM min_position; nothing could be cast in combat); spell damage through the combat damage path (sanctuary, damage curve, death); saving throws (ROM saves_spell, ApplySaves); ranger/druid/ghoul skill and spell levels (they had 0% in every skill and no spells); ROM "53 = can't learn" spells no longer open up past level 52; dispel magic strips a mob's built-in sanctuary
+  6. Mobs fight by their off flags (ROT mob_hit: fast, chained extra attacks, area attack, bash/disarm/kick/trip) with ROT get_skill mob skills; race_table flags merged into mob data (`tools/rot-import/import_race.py`)
+  7. Mob HP floor refitted on the real-code sim from L30: best-in-slot warrior ~20 s against the middle third of mobs, casters 11-15 s
 
-Open:
+Decided:
 
-  1. Mage kills everything in 4-8 s up to L60; thief backstab one-shots from L75
-  2. Best-in-slot still beats the toughest mob at every level from L60; consider a per-character total gear cap
-  3. The sim's caster-mob model (L75 median Ramses kills everyone in 2-5 s) needs checking against real spec_cast behaviour
-  4. Mob race-table flags (`const.c race_table`) not imported; `OffFlags` not used by combat
+  - No per-character total gear cap. From L60 best-in-slot beats the toughest same-level mob in 13-38 s; a same-level mob a fully geared player can beat is ROM's design (harder content is higher level or grouped). Revisit if L60+ progression feels flat in play
+  - Casters out-damage melee about 2:1 from L30 (acid blast is ROT's `dice(level,12)` with save for half). Left as ROT's glass-cannon shape rather than nerfing spells below ROT
+
+Follow-ups (not blocking):
+
+  1. Player extra attacks use the port's own unchained chances (second /2, third /3, fourth /4, fifth /5); ROT chains them at /2 each
+  2. Mob berserk, dirt-kick and backstab moves: those skills exist only as player commands in `pkg/game`, and game bash/kick/trip/disarm commands duplicate `combat.Do*`
+  3. L1 melee fights run ~36 s; at L10-L30 the toughest mob still beats casters, thieves and ghouls
+  4. Skill listings filter at level 51, so skills learned later (assassinate at 75) are hidden
 
 ## Progress
 
@@ -328,4 +336,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 | 13. Economic Overhaul | 0/TBD | Not started | - |
 | 14. LLM-Driven NPCs | 0/TBD | Spike (N1+N2 landed) | - |
 | 15. Tier-2 GodWars Classes | T0–T4 | Complete | 2026-09-18 |
-| 16. Combat & Mob Balance | mob/gear pass | In progress | - |
+| 16. Combat & Mob Balance | mob/gear + class pass | Complete | 2026-09-29 |

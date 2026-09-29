@@ -62,7 +62,6 @@ Optional features for future implementation:
 ### Tier-2 follow-ups
 Tier 2 (reroll + GodWars-style supernatural classes) is implemented — see
 `.planning/TIER2-GODWARS.md`. Still open:
-- Skill tables for tier-2 characters whose origin is ranger, druid or ghoul
 - Deferred GodWars pieces: demon-lord/champion hierarchy, weaponform, head/tail mutations, imp/eyespy/firewall
 - Tier-2 in the combat simulator (origin class + powers + demonic gear)
 
