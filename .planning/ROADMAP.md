@@ -291,6 +291,7 @@ Done:
   5. Game fixes found on the way: command lag enforced (Wait held input nowhere); spells castable while fighting (ROM min_position; nothing could be cast in combat); spell damage through the combat damage path (sanctuary, damage curve, death); saving throws (ROM saves_spell, ApplySaves); ranger/druid/ghoul skill and spell levels (they had 0% in every skill and no spells); ROM "53 = can't learn" spells no longer open up past level 52; dispel magic strips a mob's built-in sanctuary
   6. Mobs fight by their off flags (ROT mob_hit: fast, chained extra attacks, area attack, bash/disarm/kick/trip) with ROT get_skill mob skills; race_table flags merged into mob data (`tools/rot-import/import_race.py`)
   7. Mob HP floor refitted on the real-code sim from L30: best-in-slot warrior ~20 s against the middle third of mobs, casters 11-15 s
+  8. Reaction window (2026-09-29): parry/dodge/shield block follow ROT (geared players had stopped 64-81% of mob swings); mob hitroll floor so ~50% of swings land on a mage; mob damage per round between a floor (mid-level mob needs ~30 s to kill a mage/ghoul from full) and a ceiling (toughest mob needs 12 s+ for anyone). Sim reports HP left and time-to-death; sim players pre-buff
 
 Decided:
 
@@ -303,6 +304,9 @@ Follow-ups (not blocking):
   2. Mob berserk, dirt-kick and backstab moves: those skills exist only as player commands in `pkg/game`, and game bash/kick/trip/disarm commands duplicate `combat.Do*`
   3. L1 melee fights run ~36 s; at L10-L30 the toughest mob still beats casters, thieves and ghouls
   4. Skill listings filter at level 51, so skills learned later (assassinate at 75) are hidden
+  5. Mob spells sit outside the damage ceiling: the L20 Watcher (spec_cast_mage, acid blast) kills a mage in ~8 s
+  6. Tuned for fragile classes: warriors and sanctuary clerics/druids end median fights at 60-88% HP. More tension for them needs class-side changes (caster HP/AC, sanctuary strength)
+  7. At L10-L30 thieves, ghouls and mages kill slowly (fights 15-26 s), so they end fights low even against gentle mobs
 
 ## Progress
 
