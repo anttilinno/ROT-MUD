@@ -709,7 +709,15 @@ func TestLaterClassSpellLevels(t *testing.T) {
 	if got := r.FindByName("acid blast").GetClassLevel(types.ClassDruid); got != 23 {
 		t.Errorf("druid acid blast level = %d, want 23", got)
 	}
-	if got := r.FindByName("acid blast").GetClassLevel(types.ClassWarrior); got != 53 {
-		t.Errorf("warrior acid blast level = %d, want 53 (unchanged)", got)
+	if got := r.FindByName("acid blast").GetClassLevel(types.ClassWarrior); got != 0 {
+		t.Errorf("warrior acid blast level = %d, want 0 (cannot learn)", got)
+	}
+}
+
+func TestUnlearnableSpellStaysUnlearnable(t *testing.T) {
+	warrior := types.NewCharacter("W")
+	warrior.Class, warrior.Level, warrior.Mana = types.ClassWarrior, 90, 1000
+	if DefaultSpells().FindByName("acid blast").CanCast(warrior) {
+		t.Error("a level 90 warrior can cast acid blast (ROM level 53 = cannot learn)")
 	}
 }

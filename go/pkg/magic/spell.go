@@ -106,14 +106,19 @@ func (s *Spell) CanCast(ch *types.Character) bool {
 }
 
 // GetClassLevel returns the level requirement for a class index
+// Levels above MaxSpellLevel (ROM's 53 and up) mean the class can't learn
+// the spell; ROM capped players at 51, but here they level on to 101.
 func (s *Spell) GetClassLevel(classIndex int) int {
 	// Map class index to name and look up
 	className := types.ClassName(classIndex)
-	if reqLevel, ok := s.Levels[className]; ok {
+	if reqLevel, ok := s.Levels[className]; ok && reqLevel <= MaxSpellLevel {
 		return reqLevel
 	}
 	return 0 // Can't cast
 }
+
+// MaxSpellLevel is the highest level a spell can be learned at (ROM LEVEL_HERO).
+const MaxSpellLevel = 51
 
 // GetManaCost returns the mana cost adjusted for level
 func (s *Spell) GetManaCost(ch *types.Character, level int) int {
