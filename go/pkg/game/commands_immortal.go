@@ -1076,112 +1076,13 @@ func (d *CommandDispatcher) cmdSwitch(ch *types.Character, args string) {
 
 // createObjectFromTemplate creates an object from a template
 func (d *CommandDispatcher) createObjectFromTemplate(tmpl *loader.ObjectData, level int) *types.Object {
-	if tmpl == nil {
+	if tmpl == nil || d.GameLoop == nil || d.GameLoop.Resets == nil {
 		return nil
 	}
-
-	// Parse item type
-	itemType := types.ItemTypeTrash
-	switch strings.ToLower(tmpl.ItemType) {
-	case "weapon":
-		itemType = types.ItemTypeWeapon
-	case "armor":
-		itemType = types.ItemTypeArmor
-	case "scroll":
-		itemType = types.ItemTypeScroll
-	case "wand":
-		itemType = types.ItemTypeWand
-	case "staff":
-		itemType = types.ItemTypeStaff
-	case "potion":
-		itemType = types.ItemTypePotion
-	case "container":
-		itemType = types.ItemTypeContainer
-	case "key":
-		itemType = types.ItemTypeKey
-	case "food":
-		itemType = types.ItemTypeFood
-	case "money":
-		itemType = types.ItemTypeMoney
-	case "light":
-		itemType = types.ItemTypeLight
-	case "fountain":
-		itemType = types.ItemTypeFountain
-	case "drink":
-		itemType = types.ItemTypeDrinkCon
-	case "pill":
-		itemType = types.ItemTypePill
-	case "treasure":
-		itemType = types.ItemTypeTreasure
+	obj := d.GameLoop.Resets.CreateObjFromTemplate(tmpl.Vnum)
+	if obj != nil {
+		obj.Level = level
 	}
-
-	obj := types.NewObject(tmpl.Vnum, tmpl.ShortDesc, itemType)
-	obj.Name = strings.Join(tmpl.Keywords, " ")
-	obj.LongDesc = tmpl.LongDesc
-	obj.Level = level
-	obj.Weight = tmpl.Weight
-	obj.Cost = tmpl.Cost
-
-	// Copy wear flags
-	for _, flag := range tmpl.WearFlags {
-		switch strings.ToLower(flag) {
-		case "take":
-			obj.WearFlags.Set(types.WearTake)
-		case "wield":
-			obj.WearFlags.Set(types.WearWield)
-		case "hold":
-			obj.WearFlags.Set(types.WearHold)
-		case "body":
-			obj.WearFlags.Set(types.WearBody)
-		case "head":
-			obj.WearFlags.Set(types.WearHead)
-		case "legs":
-			obj.WearFlags.Set(types.WearLegs)
-		case "feet":
-			obj.WearFlags.Set(types.WearFeet)
-		case "hands":
-			obj.WearFlags.Set(types.WearHands)
-		case "arms":
-			obj.WearFlags.Set(types.WearArms)
-		case "shield":
-			obj.WearFlags.Set(types.WearShield)
-		case "about":
-			obj.WearFlags.Set(types.WearAbout)
-		case "waist":
-			obj.WearFlags.Set(types.WearWaist)
-		case "wrist":
-			obj.WearFlags.Set(types.WearWrist)
-		case "finger":
-			obj.WearFlags.Set(types.WearFinger)
-		case "neck":
-			obj.WearFlags.Set(types.WearNeck)
-		}
-	}
-
-	// Parse extra flags
-	for _, flag := range tmpl.ExtraFlags {
-		switch strings.ToLower(flag) {
-		case "glow":
-			obj.ExtraFlags.Set(types.ItemGlow)
-		case "hum":
-			obj.ExtraFlags.Set(types.ItemHum)
-		case "magic":
-			obj.ExtraFlags.Set(types.ItemMagic)
-		case "bless":
-			obj.ExtraFlags.Set(types.ItemBless)
-		case "nodrop":
-			obj.ExtraFlags.Set(types.ItemNoDrop)
-		case "noremove":
-			obj.ExtraFlags.Set(types.ItemNoRemove)
-		}
-	}
-
-	// Weapon-specific values
-	if tmpl.Weapon != nil {
-		obj.Values[1] = tmpl.Weapon.DiceNumber
-		obj.Values[2] = tmpl.Weapon.DiceSize
-	}
-
 	return obj
 }
 
