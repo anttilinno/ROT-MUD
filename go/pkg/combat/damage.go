@@ -495,6 +495,7 @@ func (c *CombatSystem) makeCorpse(ch *types.Character) *types.Object {
 	if ch.Coin > 0 {
 		coinObj := types.NewObject(0, fmt.Sprintf("%s in coins", types.FormatCoin(ch.Coin)), types.ItemTypeMoney)
 		coinObj.Name = "coins money"
+		coinObj.WearFlags.Set(types.WearTake) // pick-up-able once dropped
 		coinObj.Cost = int(ch.Coin)
 		corpse.AddContent(coinObj)
 		ch.Coin = 0

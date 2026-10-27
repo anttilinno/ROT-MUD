@@ -683,6 +683,7 @@ func (h *LoginHandler) initializeNewCharacter(ch *types.Character) {
 	}
 
 	ch.Prompt = game.DefaultPrompt
+	ch.Comm.Set(types.CommCombine) // ROM default: stack identical items in lists
 
 	// Set base hitroll/damroll based on class
 	// Warriors get better base combat stats

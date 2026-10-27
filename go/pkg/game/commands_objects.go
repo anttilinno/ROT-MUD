@@ -51,6 +51,16 @@ func removeObjectAffects(ch *types.Character, obj *types.Object) {
 
 // Object manipulation commands: get, drop, give, put, sacrifice
 
+// getObjToChar gives a picked-up object to ch. Money goes straight into the
+// purse and the coin object is discarded, as ROM's get_obj does.
+func getObjToChar(ch *types.Character, obj *types.Object) {
+	if obj.ItemType == types.ItemTypeMoney {
+		ch.Coin += int64(obj.Cost)
+		return
+	}
+	ObjToChar(obj, ch)
+}
+
 func (d *CommandDispatcher) cmdGet(ch *types.Character, args string) {
 	if args == "" {
 		d.send(ch, "Get what?\r\n")
@@ -123,7 +133,7 @@ func (d *CommandDispatcher) cmdGet(ch *types.Character, args string) {
 	// Check weight/carry limits would go here
 	// For now, just pick it up
 	ObjFromRoom(obj)
-	ObjToChar(obj, ch)
+	getObjToChar(ch, obj)
 
 	d.send(ch, fmt.Sprintf("You get %s.\r\n", obj.ShortDesc))
 	ActToRoom("$n gets $p.", ch, nil, obj, d.Output)
@@ -150,7 +160,7 @@ func (d *CommandDispatcher) getQuantity(ch *types.Character, itemName string, co
 		}
 
 		ObjFromRoom(obj)
-		ObjToChar(obj, ch)
+		getObjToChar(ch, obj)
 		d.checkQuestItemGet(ch, obj)
 		gotten++
 		lastObj = obj
@@ -215,7 +225,7 @@ func (d *CommandDispatcher) getQuantityFromContainer(ch *types.Character, itemNa
 
 	for _, obj := range matches {
 		container.RemoveContent(obj)
-		ObjToChar(obj, ch)
+		getObjToChar(ch, obj)
 		d.checkQuestItemGet(ch, obj)
 		gotten++
 		lastObj = obj
@@ -249,7 +259,7 @@ func (d *CommandDispatcher) getAll(ch *types.Character, filter string) {
 		}
 
 		ObjFromRoom(obj)
-		ObjToChar(obj, ch)
+		getObjToChar(ch, obj)
 		d.send(ch, fmt.Sprintf("You get %s.\r\n", obj.ShortDesc))
 		ActToRoom("$n gets $p.", ch, nil, obj, d.Output)
 		d.checkQuestItemGet(ch, obj)
@@ -323,15 +333,7 @@ func (d *CommandDispatcher) getFromContainer(ch *types.Character, itemName, cont
 
 	container.RemoveContent(obj)
 
-	// If looting money from own corpse, add directly to coin purse
-	if obj.ItemType == types.ItemTypeMoney && container.ItemType == types.ItemTypeCorpsePC && container.Owner == ch.Name {
-		ch.Coin += int64(obj.Cost)
-		d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
-		ActToRoom("$n gets $p from $P.", ch, nil, obj, d.Output)
-		return
-	}
-
-	ObjToChar(obj, ch)
+	getObjToChar(ch, obj)
 
 	d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
 	ActToRoom("$n gets $p from $P.", ch, nil, obj, d.Output)
@@ -343,9 +345,6 @@ func (d *CommandDispatcher) getAllFromContainer(ch *types.Character, container *
 	contents := make([]*types.Object, len(container.Contents))
 	copy(contents, container.Contents)
 
-	// Check if this is the player's own corpse
-	isOwnCorpse := container.ItemType == types.ItemTypeCorpsePC && container.Owner == ch.Name
-
 	for _, obj := range contents {
 		if filter != "" && !nameMatches(obj.Name, filter) {
 			continue
@@ -353,15 +352,7 @@ func (d *CommandDispatcher) getAllFromContainer(ch *types.Character, container *
 
 		container.RemoveContent(obj)
 
-		// If looting money from own corpse, add directly to coin purse
-		if obj.ItemType == types.ItemTypeMoney && isOwnCorpse {
-			ch.Coin += int64(obj.Cost)
-			d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
-			found = true
-			continue
-		}
-
-		ObjToChar(obj, ch)
+		getObjToChar(ch, obj)
 		d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
 		d.checkQuestItemGet(ch, obj)
 		found = true
