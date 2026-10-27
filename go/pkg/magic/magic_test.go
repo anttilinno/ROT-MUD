@@ -650,3 +650,29 @@ func TestConjureSpell(t *testing.T) {
 		}
 	})
 }
+
+// Thieves get a small utility spell list (shadowcraft, beguiling).
+func TestThiefSpellLevels(t *testing.T) {
+	reg := DefaultSpells()
+	th := types.NewCharacter("Test")
+	th.Class = types.ClassThief
+	th.Position = types.PosStanding
+	th.Mana = 100
+	for name, lv := range map[string]int{"detect magic": 6, "invisibility": 15, "pass door": 30, "charm person": 35} {
+		sp := reg.FindByName(name)
+		if sp == nil {
+			t.Fatalf("%s not registered", name)
+		}
+		th.Level = lv - 1
+		if sp.CanCast(th) {
+			t.Errorf("thief cast %s below level %d", name, lv)
+		}
+		th.Level = lv
+		if !sp.CanCast(th) {
+			t.Errorf("thief can't cast %s at level %d", name, lv)
+		}
+	}
+	if reg.FindByName("fireball").GetClassLevel(types.ClassThief) < 53 {
+		t.Error("thieves should not get fireball")
+	}
+}

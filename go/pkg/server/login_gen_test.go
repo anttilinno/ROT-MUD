@@ -45,3 +45,16 @@ func TestGroupHint(t *testing.T) {
 		t.Errorf("steal is in no group, got %q", got)
 	}
 }
+
+func TestThiefCreationSpellGroups(t *testing.T) {
+	h := &LoginHandler{}
+	ch := types.NewCharacter("Test")
+	ch.Class = types.ClassThief
+	found := map[string]bool{}
+	for _, g := range h.getAvailableGroups(ch) {
+		found[g.Name] = true
+	}
+	if !found["shadowcraft"] || !found["beguiling"] {
+		t.Errorf("thief groups = %v, want shadowcraft and beguiling", found)
+	}
+}

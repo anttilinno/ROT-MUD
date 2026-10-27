@@ -825,6 +825,8 @@ func (d *CommandDispatcher) getAvailableGroups(ch *types.Character) []SkillGroup
 		},
 		types.ClassThief: {
 			{"stealth", 6, []string{"sneak", "hide", "backstab", "circle"}},
+			{"shadowcraft", 6, []string{"detect magic", "detect hidden", "detect invis", "invisibility", "pass door"}},
+			{"beguiling", 6, []string{"sleep", "charm person"}},
 		},
 		types.ClassMage: {
 			{"attack", 3, []string{"magic missile", "burning hands", "chill touch", "colour spray"}},

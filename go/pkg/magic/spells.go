@@ -27,6 +27,7 @@ const (
 	SlotDetectInvis    = 17
 	SlotInvisibility   = 18
 	SlotSleep          = 19
+	SlotCharmPerson    = 530 // not a ROM slot number; 7 is taken by heal here
 	SlotRefresh        = 20
 	SlotCureBlindness  = 21
 	SlotCurePoison     = 22
@@ -145,12 +146,12 @@ func DefaultSpells() *SpellRegistry {
 		SetMessages("Your muscles surge with heightened power!", "Your muscles surge with heightened power!"))
 
 	r.Register(NewSpell("detect invis", SlotDetectInvis, TargetCharSelf, 5, spellDetectInvis).
-		SetLevels(map[string]int{"mage": 3, "cleric": 8, "thief": 53, "warrior": 53}).
+		SetLevels(map[string]int{"mage": 3, "cleric": 8, "thief": 12, "warrior": 53}).
 		SetWearOff("You no longer see invisible objects.").
 		SetMessages("Your eyes tingle.", "Your eyes tingle."))
 
 	r.Register(NewSpell("invisibility", SlotInvisibility, TargetCharDefense, 5, spellInvisibility).
-		SetLevels(map[string]int{"mage": 5, "cleric": 53, "thief": 53, "warrior": 53}).
+		SetLevels(map[string]int{"mage": 5, "cleric": 53, "thief": 15, "warrior": 53}).
 		SetWearOff("You are no longer invisible.").
 		SetMessages("You fade out of existence.", "You fade out of existence."))
 
@@ -172,8 +173,12 @@ func DefaultSpells() *SpellRegistry {
 		SetLevels(map[string]int{"mage": 23, "cleric": 30, "thief": 53, "warrior": 53}).
 		SetWearOff("You feel yourself speed up."))
 
+	r.Register(NewSpell("charm person", SlotCharmPerson, TargetCharOffense, 5, spellCharmPerson).
+		SetLevels(map[string]int{"mage": 20, "cleric": 53, "thief": 35, "warrior": 53}).
+		SetWearOff("You feel more self-confident."))
+
 	r.Register(NewSpell("sleep", SlotSleep, TargetCharOffense, 15, spellSleep).
-		SetLevels(map[string]int{"mage": 10, "cleric": 53, "thief": 53, "warrior": 53}).
+		SetLevels(map[string]int{"mage": 10, "cleric": 53, "thief": 20, "warrior": 53}).
 		SetWearOff("You feel well rested."))
 
 	// === Cure Spells ===
@@ -203,12 +208,12 @@ func DefaultSpells() *SpellRegistry {
 		SetMessages("Your eyes tingle.", "Your eyes tingle."))
 
 	r.Register(NewSpell("detect hidden", SlotDetectHidden, TargetCharSelf, 5, spellDetectHidden).
-		SetLevels(map[string]int{"mage": 15, "cleric": 11, "thief": 53, "warrior": 53}).
+		SetLevels(map[string]int{"mage": 15, "cleric": 11, "thief": 8, "warrior": 53}).
 		SetWearOff("You feel less aware of your surroundings.").
 		SetMessages("Your awareness improves.", "Your awareness improves."))
 
 	r.Register(NewSpell("detect magic", SlotDetectMagic, TargetCharSelf, 5, spellDetectMagic).
-		SetLevels(map[string]int{"mage": 2, "cleric": 6, "thief": 53, "warrior": 53}).
+		SetLevels(map[string]int{"mage": 2, "cleric": 6, "thief": 6, "warrior": 53}).
 		SetWearOff("The detect magic wears off.").
 		SetMessages("Your eyes tingle.", "Your eyes tingle."))
 
@@ -228,7 +233,7 @@ func DefaultSpells() *SpellRegistry {
 		SetMessages("Your feet rise off the ground.", "Your feet rise off the ground."))
 
 	r.Register(NewSpell("pass door", SlotPassDoor, TargetCharSelf, 20, spellPassDoor).
-		SetLevels(map[string]int{"mage": 24, "cleric": 32, "thief": 53, "warrior": 53}).
+		SetLevels(map[string]int{"mage": 24, "cleric": 32, "thief": 30, "warrior": 53}).
 		SetWearOff("You feel solid again.").
 		SetMessages("You turn translucent.", "You turn translucent."))
 
