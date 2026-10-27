@@ -405,6 +405,17 @@ func (ch *Character) CarryWeight() int {
 	return total
 }
 
+// MaxCarryCount is the most items a character can carry.
+func (ch *Character) MaxCarryCount() int {
+	return 100 + ch.GetStat(StatDex)
+}
+
+// MaxCarryWeight is the most a character can carry, in the same tenths of a
+// pound as object weights (score shows both divided by 10).
+func (ch *Character) MaxCarryWeight() int {
+	return (ch.GetStat(StatStr)*10 + ch.Level*5) * 10
+}
+
 // CarryCount returns the number of items being carried
 func (ch *Character) CarryCount() int {
 	count := len(ch.Inventory)

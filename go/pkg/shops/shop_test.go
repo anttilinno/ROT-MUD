@@ -334,43 +334,20 @@ func TestMatchesKeyword(t *testing.T) {
 	}
 }
 
-func TestCarryFunctions(t *testing.T) {
-	ch := &types.Character{
-		Name:  "Test",
-		Level: 10,
-	}
+func TestCarryLimits(t *testing.T) {
+	ch := &types.Character{Name: "Test", Level: 10}
 	ch.PermStats[types.StatStr] = 18
 	ch.PermStats[types.StatDex] = 16
 
-	// Max carry weight = 50 + 18*10 + 10*5 = 280
-	maxWeight := maxCarryWeight(ch)
-	if maxWeight != 280 {
-		t.Errorf("expected maxCarryWeight 280, got %d", maxWeight)
+	// Weights are tenths of a pound: (18*10 + 10*5) lbs = 2300 tenths
+	if got := ch.MaxCarryWeight(); got != 2300 {
+		t.Errorf("MaxCarryWeight = %d, want 2300", got)
 	}
-
-	// Max carry count = 15 + 16/2 + 10/3 = 15 + 8 + 3 = 26
-	maxCount := maxCarryCount(ch)
-	if maxCount != 26 {
-		t.Errorf("expected maxCarryCount 26, got %d", maxCount)
+	if got := ch.MaxCarryCount(); got != 116 {
+		t.Errorf("MaxCarryCount = %d, want 116", got)
 	}
-
-	// Empty inventory
-	if getCarryCount(ch) != 0 {
-		t.Error("expected 0 items in empty inventory")
-	}
-	if getCarryWeight(ch) != 0 {
-		t.Error("expected 0 weight for empty inventory")
-	}
-
-	// Add some items
-	ch.Inventory = []*types.Object{
-		{Weight: 5},
-		{Weight: 10},
-	}
-	if getCarryCount(ch) != 2 {
-		t.Errorf("expected 2 items, got %d", getCarryCount(ch))
-	}
-	if getCarryWeight(ch) != 15 {
-		t.Errorf("expected weight 15, got %d", getCarryWeight(ch))
+	ch.Inventory = []*types.Object{{Weight: 5}, {Weight: 10}}
+	if ch.CarryCount() != 2 || ch.CarryWeight() != 15 {
+		t.Errorf("carrying %d items / %d weight, want 2 / 15", ch.CarryCount(), ch.CarryWeight())
 	}
 }

@@ -139,13 +139,13 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 	}
 
 	// Check weight
-	if getCarryWeight(ch)+obj.Weight > maxCarryWeight(ch) {
+	if ch.CarryWeight()+obj.TotalWeight() > ch.MaxCarryWeight() {
 		h.sendToChar(ch, "You can't carry that much weight.\r\n")
 		return
 	}
 
 	// Check item count
-	if getCarryCount(ch) >= maxCarryCount(ch) {
+	if ch.CarryCount() >= ch.MaxCarryCount() {
 		h.sendToChar(ch, "You can't carry that many items.\r\n")
 		return
 	}
@@ -383,31 +383,3 @@ func matchesKeyword(keywords, target string) bool {
 	return true
 }
 
-func getCarryWeight(ch *types.Character) int {
-	total := 0
-	for _, obj := range ch.Inventory {
-		total += obj.TotalWeight()
-	}
-	for _, obj := range ch.Equipment {
-		if obj != nil {
-			total += obj.TotalWeight()
-		}
-	}
-	return total
-}
-
-func maxCarryWeight(ch *types.Character) int {
-	// Base on strength
-	str := ch.GetStat(types.StatStr)
-	return 50 + str*10 + ch.Level*5
-}
-
-func getCarryCount(ch *types.Character) int {
-	return len(ch.Inventory)
-}
-
-func maxCarryCount(ch *types.Character) int {
-	// Base on dexterity
-	dex := ch.GetStat(types.StatDex)
-	return 15 + dex/2 + ch.Level/3
-}

@@ -2478,25 +2478,8 @@ func (d *CommandDispatcher) cmdScore(ch *types.Character, args string) {
 		ch.Practice, ch.Train))
 
 	// Carry weight/items
-	itemCount := len(ch.Inventory)
-	for _, obj := range ch.Equipment {
-		if obj != nil {
-			itemCount++
-		}
-	}
-	carryWeight := 0
-	for _, obj := range ch.Inventory {
-		carryWeight += obj.Weight
-	}
-	for _, obj := range ch.Equipment {
-		if obj != nil {
-			carryWeight += obj.Weight
-		}
-	}
-	maxItems := 100 + ch.GetStat(types.StatDex)
-	maxWeight := ch.GetStat(types.StatStr)*10 + ch.Level*5
 	d.send(ch, fmt.Sprintf("You are carrying %d/%d items with weight %d/%d lbs.\r\n",
-		itemCount, maxItems, carryWeight/10, maxWeight))
+		ch.CarryCount(), ch.MaxCarryCount(), ch.CarryWeight()/10, ch.MaxCarryWeight()/10))
 
 	// Stats (perm and current)
 	d.send(ch, fmt.Sprintf("Str: %d(%d)  Int: %d(%d)  Wis: %d(%d)  Dex: %d(%d)  Con: %d(%d)\r\n",
