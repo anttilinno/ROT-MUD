@@ -96,3 +96,27 @@ func TestUseRuneEndsCombat(t *testing.T) {
 		t.Errorf("user still fighting: pos=%v", ch.Position)
 	}
 }
+
+func TestUseRuneByTwoWords(t *testing.T) {
+	d := NewCommandDispatcher()
+	d.Output = func(ch *types.Character, msg string) {}
+	d.GameLoop = NewGameLoop()
+	here := types.NewRoom(100, "Start", "x")
+	shire := types.NewRoom(1103, "Shire", "x")
+	d.GameLoop.Rooms[100], d.GameLoop.Rooms[1103] = here, shire
+	ch := types.NewCharacter("Test")
+	CharToRoom(ch, here)
+	for _, r := range []struct {
+		name string
+		dest int
+	}{{"rune teleport camelot", 3807}, {"rune teleport shire", 1103}} {
+		o := types.NewObject(1, "a rune", types.ItemTypePortal)
+		o.Name, o.Values[0], o.Values[3] = r.name, 1, r.dest
+		ch.Inventory = append(ch.Inventory, o)
+	}
+
+	d.cmdUse(ch, "rune shire")
+	if ch.InRoom != shire {
+		t.Fatalf("used the wrong rune; in %v", ch.InRoom.Name)
+	}
+}

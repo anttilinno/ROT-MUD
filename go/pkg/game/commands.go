@@ -5712,7 +5712,7 @@ func (d *CommandDispatcher) getWearLocationName(loc types.WearLocation) string {
 
 func (d *CommandDispatcher) findObjInInventory(ch *types.Character, name string) *types.Object {
 	for _, obj := range ch.Inventory {
-		if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(name)) {
+		if nameMatches(obj.Name, name) {
 			return obj
 		}
 	}
@@ -5721,7 +5721,7 @@ func (d *CommandDispatcher) findObjInInventory(ch *types.Character, name string)
 
 func (d *CommandDispatcher) findObjInRoom(room *types.Room, name string) *types.Object {
 	for _, obj := range room.Objects {
-		if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(name)) {
+		if nameMatches(obj.Name, name) {
 			return obj
 		}
 	}

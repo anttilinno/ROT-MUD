@@ -321,6 +321,8 @@ func TestMatchesKeyword(t *testing.T) {
 		{"sword long steel", "SWORD", true}, // Case insensitive
 		{"sword long steel", "", false},
 		{"", "sword", false},
+		{"rune teleport shire", "rune shire", true}, // every word must match
+		{"rune teleport shire", "rune camelot", false},
 	}
 
 	for _, tc := range tests {

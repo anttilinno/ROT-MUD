@@ -121,7 +121,11 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 	}
 
 	if obj == nil {
-		h.sendToChar(ch, "%s says 'I don't have that item.'\r\n", keepers[0].keeper.ShortDesc)
+		if len(keepers) > 1 {
+			h.sendToChar(ch, "Nobody here sells that.\r\n")
+		} else {
+			h.sendToChar(ch, "%s says 'I don't have that item.'\r\n", keepers[0].keeper.ShortDesc)
+		}
 		return
 	}
 
@@ -355,17 +359,28 @@ func (h *ShopHandler) DoValue(ch *types.Character, argument string) {
 
 // Helper functions
 
+// matchesKeyword reports whether every word of target is a prefix of one of
+// the item's keywords, as ROM's is_name does ("rune shire" matches
+// "rune teleport shire").
 func matchesKeyword(keywords, target string) bool {
-	if target == "" {
+	words := strings.Fields(strings.ToLower(target))
+	if len(words) == 0 {
 		return false
 	}
-	target = strings.ToLower(target)
-	for _, kw := range strings.Fields(strings.ToLower(keywords)) {
-		if strings.HasPrefix(kw, target) {
-			return true
+	kws := strings.Fields(strings.ToLower(keywords))
+	for _, w := range words {
+		found := false
+		for _, kw := range kws {
+			if strings.HasPrefix(kw, w) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
 		}
 	}
-	return false
+	return true
 }
 
 func getCarryWeight(ch *types.Character) int {

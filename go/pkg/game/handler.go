@@ -290,7 +290,25 @@ func nameMatches(fullName, search string) bool {
 		}
 	}
 
-	return false
+	// Several words ("rune shire"): each must prefix a keyword, as ROM's
+	// is_name does.
+	words := strings.Fields(search)
+	if len(words) < 2 {
+		return false
+	}
+	for _, w := range words {
+		found := false
+		for _, kw := range strings.Fields(fullName) {
+			if strings.HasPrefix(kw, w) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
+		}
+	}
+	return true
 }
 
 // keywordsMatch checks if any keyword in the description matches
