@@ -138,6 +138,20 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Error("expected the aggressive monster (3704) to have wealth 10")
 		}
 
+		// Midgaard is the starter town: its shops stock nothing above level 10
+		for _, room := range world.Rooms {
+			if room.Area == nil || room.Area.Name != "Midgaard" {
+				continue
+			}
+			for _, mr := range room.MobResets {
+				for _, eq := range mr.Equips {
+					if ot := world.GetObjTemplate(eq.Vnum); eq.InvOnly && ot != nil && ot.Level > 10 {
+						t.Errorf("Midgaard keeper %d stocks %q (level %d)", mr.Vnum, ot.ShortDesc, ot.Level)
+					}
+				}
+			}
+		}
+
 		// Weapons carry their class and damage type (restored from ROT area files)
 		dagger := world.GetObjTemplate(3701)
 		if dagger == nil || dagger.Weapon == nil {

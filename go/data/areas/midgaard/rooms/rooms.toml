@@ -2813,18 +2813,6 @@ description = "There is a small note on the counter."
   max = 1
 
     [[rooms.mob_resets.equips]]
-    vnum = 3389
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3390
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3391
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3392
     inv_only = true
 
@@ -3893,10 +3881,6 @@ A small note hangs on the wall."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3042
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3383
     inv_only = true
 
@@ -3932,15 +3916,7 @@ You are inside the weapon shop.  There is a small note on the counter."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3022
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3023
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3024
     inv_only = true
 
     [[rooms.mob_resets.equips]]
@@ -3953,10 +3929,6 @@ You are inside the weapon shop.  There is a small note on the counter."""
 
     [[rooms.mob_resets.equips]]
     vnum = 3027
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3028
     inv_only = true
 
     [[rooms.mob_resets.equips]]
@@ -4272,34 +4244,6 @@ On the wall is a small note."""
 
     [[rooms.mob_resets.equips]]
     vnum = 3077
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3110
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3111
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3112
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3113
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3114
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3115
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3116
     inv_only = true
 
     [[rooms.mob_resets.equips]]
@@ -4727,23 +4671,7 @@ sorts and sizes."""
   max = 1
 
     [[rooms.mob_resets.equips]]
-    vnum = 3040
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3041
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3039
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3042
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3043
     inv_only = true
 
     [[rooms.mob_resets.equips]]
@@ -5359,18 +5287,6 @@ Judging from the furnishings, he's been made very wealthy by his trade."""
   max = 5
 
     [[rooms.mob_resets.equips]]
-    vnum = 3080
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3081
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3082
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3083
     inv_only = true
 
@@ -5383,23 +5299,11 @@ Judging from the furnishings, he's been made very wealthy by his trade."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3086
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3087
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3088
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3089
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3090
     inv_only = true
 
     [[rooms.mob_resets.equips]]
