@@ -133,8 +133,8 @@ func (d *CommandDispatcher) findTrainer(ch *types.Character) *types.Character {
 	}
 
 	for _, mob := range ch.InRoom.People {
-		// Both trainers and guildmasters (practicers) can train stats
-		if mob.IsNPC() && (mob.Act.Has(types.ActTrain) || mob.Act.Has(types.ActPractice)) {
+		// Only trainers train stats; guildmasters (ActPractice) teach skills
+		if mob.IsNPC() && mob.Act.Has(types.ActTrain) {
 			return mob
 		}
 	}
