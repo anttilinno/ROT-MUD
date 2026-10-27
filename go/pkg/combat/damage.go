@@ -380,14 +380,6 @@ func (c *CombatSystem) findRecallRoom(ch *types.Character) *types.Room {
 		return nil
 	}
 
-	// Check player's personal recall point first
-	if ch.PCData != nil && ch.PCData.Recall != 0 {
-		room := c.RoomFinder(ch.PCData.Recall)
-		if room != nil {
-			return room
-		}
-	}
-
 	// Try default temple
 	room := c.RoomFinder(RoomVnumTemple)
 	if room != nil {

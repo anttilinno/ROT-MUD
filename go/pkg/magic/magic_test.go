@@ -468,16 +468,6 @@ func TestDispelMagic(t *testing.T) {
 	}
 }
 
-func TestWordOfRecall(t *testing.T) {
-	ch := types.NewCharacter("Test")
-
-	// Word of recall just returns true (movement handled elsewhere)
-	success := spellWordOfRecall(ch, 30, ch)
-	if !success {
-		t.Error("word of recall should succeed")
-	}
-}
-
 func TestPassDoorSpell(t *testing.T) {
 	ch := types.NewCharacter("Test")
 

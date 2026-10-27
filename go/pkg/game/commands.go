@@ -1671,6 +1671,13 @@ func NewCommandDispatcher() *CommandDispatcher {
 		d.Skills.CheckImprove(ch, skillName, success, multiplier)
 	}
 
+	// Wire up magic system to move characters (word of recall, teleport...)
+	d.Magic.CharacterToRoom = func(ch *types.Character, room *types.Room) {
+		CharFromRoom(ch)
+		CharToRoom(ch, room)
+		d.cmdLook(ch, "auto")
+	}
+
 	// Wire up magic system to find objects in inventory (for identify spell)
 	d.Magic.InvObjectFinder = func(ch *types.Character, name string) *types.Object {
 		return FindObjInInventory(ch, name)
@@ -1836,6 +1843,7 @@ func (d *CommandDispatcher) registerBasicCommands() {
 
 	// Utility commands
 	d.Registry.Register("recall", d.cmdRecall, types.PosStanding, 0)
+	d.Registry.Register("bind", d.cmdBind, types.PosStanding, 0)
 	d.Registry.Register("scan", d.cmdScan, types.PosResting, 0)
 	d.Registry.Register("visible", d.cmdVisible, types.PosSleeping, 0)
 	d.Registry.Register("exits", d.cmdExits, types.PosResting, 0)

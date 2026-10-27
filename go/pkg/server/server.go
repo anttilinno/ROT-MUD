@@ -227,11 +227,6 @@ func New(logger *slog.Logger) *Server {
 		}
 	}
 
-	// Wire up character movement for teleport/summon/gate spells
-	s.Dispatcher.Magic.CharacterToRoom = func(ch *types.Character, room *types.Room) {
-		game.CharToRoom(ch, room)
-	}
-
 	// Wire up room finder for teleport/summon/gate spells
 	s.Dispatcher.Magic.RoomFinder = func(vnum int) *types.Room {
 		if s.World != nil {

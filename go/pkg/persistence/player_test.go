@@ -68,6 +68,7 @@ func TestPlayerLoad(t *testing.T) {
 		original.PermStats[types.StatDex] = 17
 		original.PermStats[types.StatCon] = 19
 		original.Comm.Set(types.CommCombine)
+		original.PCData = &types.PCData{Password: "x", Recall: 5000}
 		original.Comm.Set(types.CommBrief)
 
 		err := p.SavePlayer(original)
@@ -105,6 +106,9 @@ func TestPlayerLoad(t *testing.T) {
 		}
 		if !loaded.Comm.Has(types.CommCombine) || !loaded.Comm.Has(types.CommBrief) {
 			t.Errorf("expected combine and brief to survive save/load, got %v", loaded.Comm)
+		}
+		if loaded.PCData == nil || loaded.PCData.Recall != 5000 {
+			t.Error("expected bound recall room 5000 to survive save/load")
 		}
 	})
 }

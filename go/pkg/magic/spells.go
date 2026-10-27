@@ -1144,11 +1144,10 @@ func spellDispelMagic(caster *types.Character, level int, target interface{}) bo
 	return dispelled
 }
 
+// spellWordOfRecall is replaced by MagicSystem.spellWordOfRecall in
+// NewMagicSystem; this stub only keeps DefaultSpells self-contained.
 func spellWordOfRecall(caster *types.Character, level int, target interface{}) bool {
-	// Word of recall teleports to temple (vnum 3001)
-	// The actual movement is handled by the spell system output
-	// This spell just succeeds - movement is handled by MagicSystem.Cast
-	return true
+	return false
 }
 
 func spellCalm(caster *types.Character, level int, target interface{}) bool {
