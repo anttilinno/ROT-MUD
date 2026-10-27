@@ -15,6 +15,12 @@ description = """
 A standard weapon in Mega-City One.  It uses general
 purpose ammunition."""
 
+  [objects.magic]
+  level = 20
+  max_charges = 10
+  charges = 10
+  spells = ["general purpose"]
+
 [[objects]]
 vnum = 8001
 keywords = ["knee", "pads"]
@@ -54,6 +60,10 @@ keywords = ["stooky", "gland"]
 description = """
 Stooky glands are known for the restorative properties."""
 
+  [objects.magic]
+  level = 20
+  spells = ["cure poison", "heal"]
+
 [[objects]]
 vnum = 8003
 keywords = ["lawgiver"]
@@ -71,6 +81,12 @@ description = """
 The standard weapon for the city's Judges.  It uses general
 high explosive ammunition."""
 
+  [objects.magic]
+  level = 30
+  max_charges = 10
+  charges = 10
+  spells = ["high explosive"]
+
 [[objects]]
 vnum = 8004
 keywords = ["safe"]
@@ -87,6 +103,12 @@ keywords = ["safe"]
 description = """
 This safe looks like not even a Sov-Cit Nuke could open it.
 You better find the code box."""
+
+  [objects.container]
+  capacity = 1005
+  flags = ["closeable", "closed", "locked"]
+  key = 8005
+  max_weight = 200
 
 [[objects]]
 vnum = 8005

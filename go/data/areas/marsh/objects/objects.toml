@@ -118,6 +118,10 @@ keywords = ["potion"]
 description = """
 It looks really disgusting and doesn't smell very nice either."""
 
+  [objects.magic]
+  level = 43
+  spells = ["cure critical"]
+
 [[objects]]
 vnum = 8308
 keywords = ["claymore", "rusty", "sword"]

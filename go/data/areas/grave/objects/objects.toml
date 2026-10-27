@@ -15,6 +15,9 @@ description = """
 It is a rather old-looking three-armed candlestick made from pewter.  Its
 candles are a yellowish white colour."""
 
+  [objects.light]
+  duration = 24
+
 [[objects]]
 vnum = 3601
 keywords = ["brandy", "bottle"]
@@ -33,6 +36,12 @@ The bottle is a special 'Dragon Blood' brandy bottle.  Its neck is shaped
 like a small dragon's head.  Bottles like these are often worth a small
 amount money, even when empty."""
 
+  [objects.drink]
+  capacity = 32
+  current = 32
+  liquid = "whisky"
+  poisoned = false
+
 [[objects]]
 vnum = 3602
 keywords = ["brandy", "bottle"]
@@ -50,6 +59,12 @@ description = """
 The bottle is a special 'Dragon Blood' brandy bottle.  Its neck is shaped
 like a small dragon's head.  Bottles like these are often worth some money,
 even when empty."""
+
+  [objects.drink]
+  capacity = 32
+  current = 0
+  liquid = "whisky"
+  poisoned = false
 
 [[objects]]
 vnum = 3603

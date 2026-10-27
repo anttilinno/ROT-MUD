@@ -83,6 +83,12 @@ It is fashioned from stones of various sizes that have been stacked on top of
 each other and fastened with mortar.  Its chimney is constructed likewise and
 leads the smoke out through the low cabin ceiling."""
 
+  [objects.container]
+  capacity = 200
+  flags = []
+  key = 0
+  max_weight = 200
+
 [[objects]]
 vnum = 6005
 keywords = ["chest"]
@@ -99,6 +105,12 @@ keywords = ["chest"]
 description = """
 It is a robust chest made from short, heavy planks that have been fastened
 together with tenons.  It is equipped with a simple brass lock."""
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed", "locked"]
+  key = 6006
+  max_weight = 20
 
 [[objects]]
 vnum = 6006
@@ -132,6 +144,9 @@ keywords = ["coins"]
 description = """
 The coins seem to be gold.  They are obviously valuable."""
 
+  [objects.money]
+  amount = 189
+
 [[objects]]
 vnum = 6010
 keywords = ["blackberries"]
@@ -147,6 +162,11 @@ wear_flags = ["take"]
 keywords = ["blackberries"]
 description = """
 They look very tasty indeed."""
+
+  [objects.food]
+  full = 3
+  hunger = 3
+  poisoned = false
 
 [[objects]]
 vnum = 6011
@@ -164,6 +184,11 @@ keywords = ["mushroom"]
 description = """
 It is a tasty little thing."""
 
+  [objects.food]
+  full = 6
+  hunger = 6
+  poisoned = false
+
 [[objects]]
 vnum = 6013
 keywords = ["water", "barrel"]
@@ -174,6 +199,12 @@ level = 0
 weight = 200
 cost = 20
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 256
+  current = 256
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 6102
@@ -198,6 +229,12 @@ This enormous tree must be a thousand years old.  Its rough bark looks grey
 and pale and is decorated with scratches and claw marks.  On its west side is a
 small opening just above ground level."""
 
+  [objects.container]
+  capacity = 1000
+  flags = []
+  key = 0
+  max_weight = 400
+
 [[objects]]
 vnum = 6103
 keywords = ["branch"]
@@ -208,6 +245,9 @@ level = 0
 weight = 200
 cost = 0
 wear_flags = ["take", "hold"]
+
+  [objects.light]
+  duration = 25
 
 [[objects]]
 vnum = 6104
@@ -259,6 +299,11 @@ It is a large, brown boletus that must weigh nearly five pounds.  The top
 surface is covered in a thin layer of transparent slime that emits a weak,
 musty smell.  Not the most delicious thing you have seen."""
 
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
+
 [[objects]]
 vnum = 6107
 keywords = ["toadstool"]
@@ -277,6 +322,11 @@ It is a large, brown boletus that must weigh nearly five pounds.  It has small
 white spots and the top surface is covered in a thin layer of transparent slime
 that emits a weak, musty smell.  Not the most delicious thing you have seen."""
 
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = true
+
 [[objects]]
 vnum = 6110
 keywords = ["potion", "yellow"]
@@ -293,6 +343,10 @@ extra_flags = ["magic"]
 keywords = ["potion", "yellow"]
 description = """
 It has a deep yellow colour and and a strong spicy smell."""
+
+  [objects.magic]
+  level = 15
+  spells = ["giant strength"]
 
 [[objects]]
 vnum = 6111

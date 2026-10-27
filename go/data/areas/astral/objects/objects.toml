@@ -50,6 +50,10 @@ keywords = ["scroll", "violet"]
 description = """
 The scroll is written on soft violet parchment that has a pleasing smell to it."""
 
+  [objects.magic]
+  level = 15
+  spells = ["armor", "bless", "shield"]
+
 [[objects]]
 vnum = 7702
 keywords = ["tablet", "scroll", "black"]
@@ -68,6 +72,10 @@ description = """
 The tablet is an unreflective black rectangular piece of stone, with strange
 writings etched deep into its surface."""
 
+  [objects.magic]
+  level = 30
+  spells = ["summon", "charm person"]
+
 [[objects]]
 vnum = 7703
 keywords = ["scroll", "githyanki"]
@@ -83,6 +91,10 @@ wear_flags = ["take"]
 keywords = ["scroll", "githyanki"]
 description = """
 The scroll has writings on it that you cannot comprehend."""
+
+  [objects.magic]
+  level = 24
+  spells = ["lightning bolt", "lightning bolt"]
 
 [[objects]]
 vnum = 7704
@@ -114,6 +126,12 @@ victims, and other things too horrible to describe.
 Stenciled in the center is an unpronounceable name which it would behoove you
 not to utter aloud."""
 
+  [objects.magic]
+  level = 25
+  max_charges = 5
+  charges = 5
+  spells = ["energy drain"]
+
 [[objects]]
 vnum = 7705
 keywords = ["talisman", "devilish"]
@@ -138,6 +156,12 @@ seems to pulse with a life of its own, and you feel uncomfortable being anywhere
 near it.
 
 Engraved in the center is one word.  Merely reading the word induces fright."""
+
+  [objects.magic]
+  level = 25
+  max_charges = 5
+  charges = 5
+  spells = ["flamestrike"]
 
 [[objects]]
 vnum = 7706
@@ -403,6 +427,9 @@ description = """
 This stone burns with an flame that emits great heat, yet it can be held with
 ease.  The flame creates a light that allows you to see for miles."""
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 7714
 keywords = ["powder", "astral"]
@@ -570,6 +597,10 @@ keywords = ["potion", "violet"]
 description = """
 The violet fluid inside shifts and swirls."""
 
+  [objects.magic]
+  level = 18
+  spells = ["invisibility", "protection evil", "detect evil"]
+
 [[objects]]
 vnum = 7721
 keywords = ["potion", "vial", "murky"]
@@ -585,6 +616,10 @@ wear_flags = ["take"]
 keywords = ["potion", "vial", "murky"]
 description = """
 The murky liquid inside this vial looks a lot like sewer water."""
+
+  [objects.magic]
+  level = 15
+  spells = ["blindness", "shield"]
 
 [[objects]]
 vnum = 7722
@@ -602,6 +637,10 @@ keywords = ["potion", "silvery"]
 description = """
 The octagonal vial contains a silvery-colored liquid that shimmers in the light."""
 
+  [objects.magic]
+  level = 20
+  spells = ["detect invis", "detect magic", "detect poison"]
+
 [[objects]]
 vnum = 7723
 keywords = ["mint", "chocolate"]
@@ -618,6 +657,10 @@ keywords = ["mint", "chocolate"]
 description = """
 This mint is made from the finest of chocolates, surrounding a cool peppermint
 interior that must be savored, not swallowed."""
+
+  [objects.magic]
+  level = 35
+  spells = ["refresh", "heal"]
 
 [[objects]]
 vnum = 7724
@@ -652,3 +695,6 @@ wear_flags = ["take"]
 keywords = ["pouch", "rotting"]
 description = """
 You think you see glints of metal through the holes..."""
+
+  [objects.money]
+  amount = 100

@@ -141,6 +141,10 @@ cost = 1490
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 14
+  spells = ["cure critical", "invisibility", "word of recall"]
+
 [[objects]]
 vnum = 7205
 keywords = ["key", "black"]
@@ -207,6 +211,9 @@ description = """
 The small stick does not look interesting at all.  But just as you are going
 to throw it away you notice some small letters."""
 
+  [objects.light]
+  duration = 120
+
 [[objects]]
 vnum = 7209
 keywords = ["boots", "muddy"]
@@ -244,6 +251,9 @@ wear_flags = ["take"]
 keywords = ["treasure"]
 description = """
 This looks like a whole lot of coins."""
+
+  [objects.money]
+  amount = 700
 
 [[objects]]
 vnum = 7211
@@ -537,6 +547,9 @@ keywords = ["treasure"]
 description = """
 Looks like a LOT of coins."""
 
+  [objects.money]
+  amount = 1600
+
 [[objects]]
 vnum = 7299
 keywords = ["sword", "short"]
@@ -570,6 +583,12 @@ weight = 20
 cost = 100
 wear_flags = ["take", "about"]
 
+  [objects.container]
+  capacity = 60
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 6
+
 [[objects]]
 vnum = 7301
 keywords = ["beltpouch", "pouch"]
@@ -580,6 +599,12 @@ level = 0
 weight = 10
 cost = 20
 wear_flags = ["take", "waist"]
+
+  [objects.container]
+  capacity = 5
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 1
 
 [[objects]]
 vnum = 7303
@@ -600,6 +625,12 @@ extra_flags = ["magic", "anti_good"]
   [[objects.affects]]
   location = "int"
   modifier = 2
+
+  [objects.magic]
+  level = 13
+  max_charges = 10
+  charges = 10
+  spells = ["sanctuary"]
 
 [[objects]]
 vnum = 7304

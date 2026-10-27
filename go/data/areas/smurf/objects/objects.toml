@@ -9,6 +9,10 @@ weight = 20
 cost = 180
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 8
+  spells = ["change sex"]
+
 [[objects]]
 vnum = 101
 keywords = ["glasses"]
@@ -90,6 +94,10 @@ weight = 20
 cost = 160
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 6
+  spells = ["armor", "cure blindness"]
+
 [[objects]]
 vnum = 106
 keywords = ["wand"]
@@ -100,6 +108,12 @@ level = 5
 weight = 20
 cost = 540
 wear_flags = ["take", "hold"]
+
+  [objects.magic]
+  level = 5
+  max_charges = 1
+  charges = 1
+  spells = ["burning hands"]
 
 [[objects]]
 vnum = 107
@@ -121,6 +135,12 @@ item_type = "fountain"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.drink]
+  capacity = 50
+  current = 50
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 109
@@ -144,4 +164,3 @@ weight = 1
 cost = 10
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "melt_drop"]
-

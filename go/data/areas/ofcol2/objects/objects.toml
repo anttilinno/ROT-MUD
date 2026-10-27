@@ -58,6 +58,11 @@ weight = 100
 cost = 50
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
+
 [[objects]]
 vnum = 603
 keywords = ["side", "meat", "pork"]
@@ -68,6 +73,11 @@ level = 0
 weight = 100
 cost = 42
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 23
+  hunger = 23
+  poisoned = false
 
 [[objects]]
 vnum = 604
@@ -80,6 +90,11 @@ weight = 120
 cost = 21
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 30
+  hunger = 30
+  poisoned = false
+
 [[objects]]
 vnum = 605
 keywords = ["meat", "chicken"]
@@ -90,6 +105,11 @@ level = 0
 weight = 50
 cost = 10
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 16
+  hunger = 16
+  poisoned = false
 
 [[objects]]
 vnum = 606
@@ -144,6 +164,11 @@ weight = 20
 cost = 2
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
+
 [[objects]]
 vnum = 610
 keywords = ["lettuce"]
@@ -154,6 +179,11 @@ level = 0
 weight = 20
 cost = 2
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
 
 [[objects]]
 vnum = 611
@@ -166,6 +196,12 @@ weight = 50
 cost = 3
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 20
+  current = 20
+  liquid = "milk"
+  poisoned = false
+
 [[objects]]
 vnum = 612
 keywords = ["apple"]
@@ -177,6 +213,11 @@ weight = 10
 cost = 1
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 8
+  hunger = 8
+  poisoned = false
+
 [[objects]]
 vnum = 613
 keywords = ["corn"]
@@ -187,6 +228,11 @@ level = 0
 weight = 10
 cost = 3
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 8
+  hunger = 8
+  poisoned = false
 
 [[objects]]
 vnum = 614
@@ -1022,6 +1068,12 @@ weight = 10
 cost = 12
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 2
+  current = 2
+  liquid = "whisky"
+  poisoned = false
+
 [[objects]]
 vnum = 649
 keywords = ["ale", "quart"]
@@ -1033,6 +1085,12 @@ weight = 20
 cost = 10
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 32
+  current = 32
+  liquid = "ale"
+  poisoned = false
+
 [[objects]]
 vnum = 650
 keywords = ["port", "brew", "quart"]
@@ -1043,6 +1101,12 @@ level = 0
 weight = 20
 cost = 18
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 32
+  current = 32
+  liquid = "dark ale"
+  poisoned = false
 
 [[objects]]
 vnum = 651
@@ -1356,6 +1420,12 @@ extra_flags = ["magic", "anti_evil", "anti_neutral"]
   location = "int"
   modifier = 1
 
+  [objects.magic]
+  level = 14
+  max_charges = 4
+  charges = 4
+  spells = ["heal"]
+
 [[objects]]
 vnum = 664
 keywords = ["robe", "golden"]
@@ -1424,6 +1494,12 @@ level = 0
 weight = 100
 cost = 100
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 100
+  flags = []
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 668

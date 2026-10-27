@@ -119,6 +119,11 @@ weight = 20
 cost = 0
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 25
+  hunger = 25
+  poisoned = false
+
 [[objects]]
 vnum = 6645
 keywords = ["steak", "rotten"]
@@ -129,6 +134,11 @@ level = 0
 weight = 20
 cost = 0
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 4
+  hunger = 4
+  poisoned = true
 
 [[objects]]
 vnum = 6646
@@ -146,6 +156,10 @@ keywords = ["potion"]
 description = """
 It's a tight-stoppered glass bottle with a thick amber liquid inside. It
 tastes kind of like whiskey."""
+
+  [objects.magic]
+  level = 5
+  spells = ["cure light", "armor"]
 
 [[objects]]
 vnum = 6647

@@ -141,6 +141,10 @@ keywords = ["bottle", "fluid"]
 description = """
 The bottle is dusty and the fluid has a strange sickly-sweet smell to it."""
 
+  [objects.magic]
+  level = 5
+  spells = ["poison"]
+
 [[objects]]
 vnum = 8706
 keywords = ["jar", "formaldehyde"]
@@ -156,6 +160,10 @@ wear_flags = ["take"]
 keywords = ["jar", "formaldehyde"]
 description = """
 The jar is sticky and smells really bad."""
+
+  [objects.magic]
+  level = 10
+  spells = ["cure light"]
 
 [[objects]]
 vnum = 8707
@@ -181,6 +189,9 @@ extra_flags = ["glow", "magic"]
 keywords = ["ball", "fire"]
 description = """
 The ball of fire is hot to the touch and very very bright."""
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 8708
@@ -251,6 +262,12 @@ the mighty pharoahs, painted in gold and studded with precious gems.
 
 You see a small keyhole in the side of the sarcophagus."""
 
+  [objects.container]
+  capacity = 500
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 8709
+  max_weight = 500
+
 [[objects]]
 vnum = 8711
 keywords = ["dust"]
@@ -311,6 +328,12 @@ description = """
 The lamp is quite old and tarnished.  You rub at it to get some of the
 grime off, but it doesn't seem like anybody is home."""
 
+  [objects.magic]
+  level = 25
+  max_charges = 5
+  charges = 5
+  spells = ["fly"]
+
 [[objects]]
 vnum = 8714
 keywords = ["ankh"]
@@ -358,6 +381,10 @@ description = """
 The book has well-worn pages, containing many befuddling riddles
 to surprise, confuse, and amuse you.  You find yourself bewildered
 by its contents and put it down to sort your head out."""
+
+  [objects.magic]
+  level = 21
+  spells = ["identify", "know alignment", "faerie fog"]
 
 [[objects]]
 vnum = 8716
@@ -430,6 +457,9 @@ description = """
 The treasure is incredibly large, filled with gold coins and valuables, more
 wealth than you could ever possibly imagine accumulated in one place."""
 
+  [objects.money]
+  amount = 4150
+
 [[objects]]
 vnum = 8719
 keywords = ["pile", "sand"]
@@ -445,6 +475,9 @@ wear_flags = ["take"]
 keywords = ["pile", "sand"]
 description = """
 You think you see some coins and valuables glinting amongst the grains of sand."""
+
+  [objects.money]
+  amount = 129
 
 [[objects]]
 vnum = 8720
@@ -503,6 +536,10 @@ description = """
 The elixir is deceptively small.  Something tells you that its
 contents are truly quite potent.  Perhaps too potent for ordinary
 mortals to attempt to consume."""
+
+  [objects.magic]
+  level = 30
+  spells = ["giant strength", "stone skin", "sanctuary"]
 
 [[objects]]
 vnum = 8722
@@ -587,6 +624,12 @@ description = """
 This small brass shaft is a holy weapon used by the ancient people of
 this land to defend against the deadliest of foes.  It shines with the
 brilliant blazing light of the sun."""
+
+  [objects.magic]
+  level = 35
+  max_charges = 25
+  charges = 25
+  spells = ["harm"]
 
 [[objects]]
 vnum = 8725

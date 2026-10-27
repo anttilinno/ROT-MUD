@@ -87,6 +87,12 @@ cost = 2200
 wear_flags = ["take", "hold"]
 extra_flags = ["hum"]
 
+  [objects.magic]
+  level = 11
+  max_charges = 2
+  charges = 2
+  spells = ["colour spray"]
+
 [[objects]]
 vnum = 2106
 keywords = ["stiletto"]
@@ -148,6 +154,12 @@ weight = 10
 cost = 1910
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 20
+  max_charges = 10
+  charges = 10
+  spells = ["blindness"]
 
 [[objects]]
 vnum = 2109

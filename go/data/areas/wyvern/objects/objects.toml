@@ -236,6 +236,10 @@ cost = 320
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 9
+  spells = ["cure blindness", "cure critical"]
+
 [[objects]]
 vnum = 1651
 keywords = ["bronze", "chest"]
@@ -247,6 +251,12 @@ weight = 100
 cost = 100
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 30
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 1652
 keywords = ["ale", "barrel"]
@@ -257,6 +267,12 @@ level = 0
 weight = 80
 cost = 10
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 150
+  current = 2
+  liquid = "ale"
+  poisoned = false
 
 [[objects]]
 vnum = 1691

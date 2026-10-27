@@ -9,6 +9,9 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 1
+
 [[objects]]
 vnum = 2
 keywords = ["coin", "gold", "gcash"]
@@ -19,6 +22,9 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 100
 
 [[objects]]
 vnum = 3
@@ -31,6 +37,9 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 0
+
 [[objects]]
 vnum = 4
 keywords = ["coins", "silver", "gcash"]
@@ -41,6 +50,9 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 0
 
 [[objects]]
 vnum = 5
@@ -53,6 +65,9 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 0
+
 [[objects]]
 vnum = 6
 keywords = ["coins", "platinum", "gcash"]
@@ -64,6 +79,9 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 0
+
 [[objects]]
 vnum = 7
 keywords = ["coins", "platinum", "gcash"]
@@ -74,6 +92,9 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 0
 
 [[objects]]
 vnum = 10
@@ -120,6 +141,11 @@ weight = 20
 cost = 0
 wear_flags = ["take", "hold"]
 
+  [objects.food]
+  full = 16
+  hunger = 16
+  poisoned = false
+
 [[objects]]
 vnum = 14
 keywords = ["%s", "arm"]
@@ -130,6 +156,11 @@ level = 0
 weight = 50
 cost = 0
 wear_flags = ["take", "hold"]
+
+  [objects.food]
+  full = 20
+  hunger = 20
+  poisoned = false
 
 [[objects]]
 vnum = 15
@@ -142,6 +173,11 @@ weight = 50
 cost = 0
 wear_flags = ["take", "hold"]
 
+  [objects.food]
+  full = 20
+  hunger = 20
+  poisoned = false
+
 [[objects]]
 vnum = 16
 keywords = ["%s", "guts", "entrails"]
@@ -152,6 +188,11 @@ level = 0
 weight = 20
 cost = 0
 wear_flags = ["take", "hold"]
+
+  [objects.food]
+  full = 5
+  hunger = 5
+  poisoned = true
 
 [[objects]]
 vnum = 17
@@ -164,6 +205,11 @@ weight = 20
 cost = 0
 wear_flags = ["take", "hold"]
 
+  [objects.food]
+  full = 10
+  hunger = 10
+  poisoned = false
+
 [[objects]]
 vnum = 18
 keywords = ["pool", "blood"]
@@ -175,6 +221,12 @@ weight = 0
 cost = 0
 extra_flags = ["rot_death", "melt_drop"]
 
+  [objects.drink]
+  capacity = 1
+  current = 1
+  liquid = "blood"
+  poisoned = false
+
 [[objects]]
 vnum = 20
 keywords = ["mushroom"]
@@ -185,6 +237,11 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 8
+  hunger = 8
+  poisoned = false
 
 [[objects]]
 vnum = 21
@@ -198,6 +255,9 @@ cost = 0
 wear_flags = ["take"]
 extra_flags = ["glow"]
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 22
 keywords = ["spring"]
@@ -208,6 +268,12 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["magic"]
+
+  [objects.drink]
+  capacity = 100000
+  current = 100000
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 23
@@ -221,6 +287,12 @@ cost = 0
 wear_flags = ["take", "float"]
 extra_flags = ["magic", "noremove", "rot_death", "had_timer"]
 
+  [objects.container]
+  capacity = 0
+  flags = []
+  key = 0
+  max_weight = 0
+
 [[objects]]
 vnum = 25
 keywords = ["gate", "portal"]
@@ -231,6 +303,10 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["magic", "nopurge", "melt_drop"]
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 0
 
 [[objects]]
 vnum = 50
@@ -243,6 +319,10 @@ weight = 1
 cost = 0
 wear_flags = ["take"]
 extra_flags = ["glow", "magic", "nodrop", "melt_drop"]
+
+  [objects.magic]
+  level = 110
+  spells = ["quest pill"]
 
 [[objects]]
 vnum = 51
@@ -294,3 +374,9 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 5

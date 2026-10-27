@@ -411,6 +411,9 @@ keywords = ["banner"]
 description = """
 This is the official Merc war banner to see you through the darkest realm!"""
 
+  [objects.light]
+  duration = 200
+
 [[objects]]
 vnum = 3717
 keywords = ["spear", "sub", "merc"]

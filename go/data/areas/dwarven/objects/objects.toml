@@ -54,6 +54,12 @@ weight = 10
 cost = 4800
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 4
+  max_charges = 10
+  charges = 10
+  spells = ["cure critical"]
+
 [[objects]]
 vnum = 6507
 keywords = ["stick"]
@@ -64,6 +70,9 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take", "hold"]
+
+  [objects.light]
+  duration = 50
 
 [[objects]]
 vnum = 6508
@@ -256,6 +265,10 @@ description = """
 They are in a circular container, and there are numbers corresponding
 to the day that they are to be taken.  You can tell they haven't been
 used for a while."""
+
+  [objects.magic]
+  level = 20
+  spells = ["change sex"]
 
 [[objects]]
 vnum = 6520

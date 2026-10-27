@@ -9,6 +9,12 @@ weight = 160
 cost = 75
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 300
+  current = 300
+  liquid = "beer"
+  poisoned = false
+
 [[objects]]
 vnum = 3001
 keywords = ["bottle", "beer"]
@@ -19,6 +25,12 @@ level = 0
 weight = 10
 cost = 5
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 16
+  current = 16
+  liquid = "beer"
+  poisoned = false
 
 [[objects]]
 vnum = 3002
@@ -31,6 +43,12 @@ weight = 20
 cost = 6
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 16
+  current = 16
+  liquid = "ale"
+  poisoned = false
+
 [[objects]]
 vnum = 3003
 keywords = ["bottle", "firebreather"]
@@ -42,6 +60,12 @@ weight = 10
 cost = 25
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 12
+  current = 12
+  liquid = "firebreather"
+  poisoned = false
+
 [[objects]]
 vnum = 3004
 keywords = ["bottle", "local"]
@@ -52,6 +76,12 @@ level = 0
 weight = 10
 cost = 11
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 12
+  current = 12
+  liquid = "local specialty"
+  poisoned = false
 
 [[objects]]
 vnum = 3005
@@ -90,6 +120,11 @@ weight = 20
 cost = 0
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 45
+  hunger = 45
+  poisoned = false
+
 [[objects]]
 vnum = 3009
 keywords = ["potpie", "pot", "pie"]
@@ -100,6 +135,11 @@ level = 0
 weight = 20
 cost = 22
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 20
+  hunger = 40
+  poisoned = false
 
 [[objects]]
 vnum = 3010
@@ -117,6 +157,12 @@ keywords = ["pit"]
 description = """
 This is where you put money and items to help other travelers."""
 
+  [objects.container]
+  capacity = 10000
+  flags = []
+  key = 0
+  max_weight = 10000
+
 [[objects]]
 vnum = 3011
 keywords = ["bread"]
@@ -127,6 +173,11 @@ level = 0
 weight = 10
 cost = 9
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 18
+  hunger = 12
+  poisoned = false
 
 [[objects]]
 vnum = 3012
@@ -139,6 +190,11 @@ weight = 10
 cost = 16
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 4
+  hunger = 8
+  poisoned = false
+
 [[objects]]
 vnum = 3013
 keywords = ["cookies"]
@@ -150,6 +206,11 @@ weight = 10
 cost = 11
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 8
+  hunger = 10
+  poisoned = false
+
 [[objects]]
 vnum = 3014
 keywords = ["danish", "blueberry"]
@@ -160,6 +221,11 @@ level = 0
 weight = 10
 cost = 5
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 8
+  hunger = 6
+  poisoned = false
 
 [[objects]]
 vnum = 3020
@@ -360,6 +426,9 @@ weight = 30
 cost = 4
 wear_flags = ["take"]
 
+  [objects.light]
+  duration = 50
+
 [[objects]]
 vnum = 3031
 keywords = ["lantern"]
@@ -383,6 +452,9 @@ It is a large and robust but somewhat battered oil lantern made from brass,
 equipped with a handle to make it handy and a hood to protect its flame.
 Some letters have been scratched on its bottom."""
 
+  [objects.light]
+  duration = 250
+
 [[objects]]
 vnum = 3032
 keywords = ["bag"]
@@ -394,6 +466,12 @@ weight = 10
 cost = 9
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 5
+
 [[objects]]
 vnum = 3033
 keywords = ["box"]
@@ -404,6 +482,12 @@ level = 0
 weight = 10
 cost = 30
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 10
+  flags = []
+  key = 0
+  max_weight = 5
 
 [[objects]]
 vnum = 3039
@@ -421,6 +505,10 @@ extra_flags = ["magic"]
 keywords = ["scroll"]
 description = """
 Use this scroll to remove magical curses."""
+
+  [objects.magic]
+  level = 15
+  spells = ["cancellation"]
 
 [[objects]]
 vnum = 3040
@@ -445,6 +533,10 @@ The scroll has a magic formula drawn upon it:
       ?
       *"""
 
+  [objects.magic]
+  level = 12
+  spells = ["identify"]
+
 [[objects]]
 vnum = 3041
 keywords = ["potion", "yellow"]
@@ -462,6 +554,10 @@ keywords = ["potion", "yellow"]
 description = """
 The potion has a small label 'Detect The Invisible'."""
 
+  [objects.magic]
+  level = 12
+  spells = ["detect invis"]
+
 [[objects]]
 vnum = 3042
 keywords = ["scroll", "recall"]
@@ -478,6 +574,10 @@ extra_flags = ["magic"]
 keywords = ["scroll"]
 description = """
 The scroll has written a formula of 'Word of Recall' upon it."""
+
+  [objects.magic]
+  level = 20
+  spells = ["word of recall"]
 
 [[objects]]
 vnum = 3043
@@ -520,6 +620,12 @@ extra_flags = ["magic"]
 keywords = ["wand"]
 description = """
 It has a little note that says 'point this end at target'."""
+
+  [objects.magic]
+  level = 4
+  max_charges = 10
+  charges = 10
+  spells = ["magic missile"]
 
 [[objects]]
 vnum = 3045
@@ -973,6 +1079,10 @@ cost = 800
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 20
+  spells = ["heal"]
+
 [[objects]]
 vnum = 3081
 keywords = ["potion", "sanct", "sanctuary"]
@@ -984,6 +1094,10 @@ weight = 10
 cost = 800
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 20
+  spells = ["sanctuary"]
 
 [[objects]]
 vnum = 3082
@@ -997,6 +1111,10 @@ cost = 1800
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "hum", "magic", "bless"]
 
+  [objects.magic]
+  level = 35
+  spells = ["sanctuary", "stone skin", "armor"]
+
 [[objects]]
 vnum = 3083
 keywords = ["potion", "cure", "light"]
@@ -1008,6 +1126,10 @@ weight = 10
 cost = 150
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 5
+  spells = ["cure light"]
 
 [[objects]]
 vnum = 3084
@@ -1021,6 +1143,10 @@ cost = 220
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["cure serious"]
+
 [[objects]]
 vnum = 3085
 keywords = ["potion", "cure", "critical", "critic"]
@@ -1032,6 +1158,10 @@ weight = 10
 cost = 390
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 15
+  spells = ["cure critical"]
 
 [[objects]]
 vnum = 3086
@@ -1045,6 +1175,10 @@ cost = 550
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 14
+  spells = ["cure poison", "cure light", "cure disease"]
+
 [[objects]]
 vnum = 3087
 keywords = ["potion", "cure", "blindness"]
@@ -1056,6 +1190,10 @@ weight = 10
 cost = 230
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 13
+  spells = ["cure blindness"]
 
 [[objects]]
 vnum = 3088
@@ -1069,6 +1207,10 @@ cost = 720
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic", "bless"]
 
+  [objects.magic]
+  level = 20
+  spells = ["bless", "protection evil", "remove curse"]
+
 [[objects]]
 vnum = 3089
 keywords = ["potion", "armor"]
@@ -1080,6 +1222,10 @@ weight = 10
 cost = 200
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["armor"]
 
 [[objects]]
 vnum = 3090
@@ -1093,6 +1239,10 @@ cost = 830
 wear_flags = ["take", "hold"]
 extra_flags = ["hum", "magic"]
 
+  [objects.magic]
+  level = 35
+  spells = ["cancellation"]
+
 [[objects]]
 vnum = 3091
 keywords = ["potion", "fly", "flying"]
@@ -1105,6 +1255,10 @@ cost = 250
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 9
+  spells = ["fly"]
+
 [[objects]]
 vnum = 3092
 keywords = ["potion", "true", "sight"]
@@ -1116,6 +1270,10 @@ weight = 10
 cost = 290
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["detect invis", "detect magic", "detect hidden"]
 
 [[objects]]
 vnum = 3097
@@ -1150,6 +1308,12 @@ keywords = ["cup"]
 description = """
 It is a small simple cup."""
 
+  [objects.drink]
+  capacity = 6
+  current = 6
+  liquid = "tea"
+  poisoned = false
+
 [[objects]]
 vnum = 3101
 keywords = ["coffee", "cup"]
@@ -1166,6 +1330,12 @@ keywords = ["cup"]
 description = """
 It is a small simple cup."""
 
+  [objects.drink]
+  capacity = 6
+  current = 6
+  liquid = "coffee"
+  poisoned = false
+
 [[objects]]
 vnum = 3102
 keywords = ["water", "cup"]
@@ -1181,6 +1351,12 @@ wear_flags = ["take"]
 keywords = ["cup"]
 description = """
 It is a large simple cup."""
+
+  [objects.drink]
+  capacity = 10
+  current = 10
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 3105
@@ -1474,6 +1650,12 @@ keywords = ["desk"]
 description = """
 The desk looks very sparse, there is a drawer on the left side."""
 
+  [objects.container]
+  capacity = 34
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 3122
+  max_weight = 20
+
 [[objects]]
 vnum = 3131
 keywords = ["safe"]
@@ -1488,6 +1670,12 @@ cost = 0
 keywords = ["safe"]
 description = """
 The safe is very heavy."""
+
+  [objects.container]
+  capacity = 34
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 3123
+  max_weight = 20
 
 [[objects]]
 vnum = 3132
@@ -1504,6 +1692,9 @@ wear_flags = ["take"]
 keywords = ["silver"]
 description = """
 Looks like at least a thousand coins."""
+
+  [objects.money]
+  amount = 1000
 
 [[objects]]
 vnum = 3133
@@ -1555,6 +1746,12 @@ keywords = ["fountain"]
 description = """
 It is very nice.  Made from fine white marble."""
 
+  [objects.drink]
+  capacity = 0
+  current = 0
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 3136
 keywords = ["coins"]
@@ -1565,6 +1762,9 @@ level = 0
 weight = 0
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 20
 
 [[objects]]
 vnum = 3137
@@ -1592,6 +1792,12 @@ level = 0
 weight = 40
 cost = 24
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 64
+  current = 64
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 3139
@@ -1657,6 +1863,12 @@ keywords = ["coffee"]
 description = """
 It's a nice flavorful blend, just right for late-night mudding sessions."""
 
+  [objects.drink]
+  capacity = 6
+  current = 6
+  liquid = "coffee"
+  poisoned = false
+
 [[objects]]
 vnum = 3151
 keywords = ["soup", "bowl"]
@@ -1672,6 +1884,11 @@ wear_flags = ["take"]
 keywords = ["soup"]
 description = """
 This looks like just the thing for a cold!"""
+
+  [objects.food]
+  full = 4
+  hunger = 8
+  poisoned = false
 
 [[objects]]
 vnum = 3152
@@ -1690,6 +1907,11 @@ description = """
 This is Kate's special stew, guaranteed to keep hunger pangs away for many
 hours.  Care for a bite?"""
 
+  [objects.food]
+  full = 25
+  hunger = 25
+  poisoned = false
+
 [[objects]]
 vnum = 3153
 keywords = ["biscuit"]
@@ -1705,6 +1927,11 @@ wear_flags = ["take"]
 keywords = ["biscuit"]
 description = """
 A nice, soft biscuit with just enough butter.  Better buy two."""
+
+  [objects.food]
+  full = 4
+  hunger = 3
+  poisoned = false
 
 [[objects]]
 vnum = 3154
@@ -1722,6 +1949,12 @@ keywords = ["beer", "bottle"]
 description = """
 It's a fine beer for serious drinkers, complete with the famous horse head
 logo.  Worth every penny."""
+
+  [objects.drink]
+  capacity = 16
+  current = 16
+  liquid = "beer"
+  poisoned = false
 
 [[objects]]
 vnum = 3161
@@ -2310,6 +2543,12 @@ weight = 40
 cost = 3
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 64
+  current = 64
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 3240
 keywords = ["scroll", "identify"]
@@ -2333,6 +2572,10 @@ The scroll has a magic formula drawn upon it:
       ?
       *"""
 
+  [objects.magic]
+  level = 12
+  spells = ["identify"]
+
 [[objects]]
 vnum = 3241
 keywords = ["potion", "yellow"]
@@ -2349,6 +2592,10 @@ extra_flags = ["magic"]
 keywords = ["potion", "yellow"]
 description = """
 The potion has a small label 'Detect The Invisible'."""
+
+  [objects.magic]
+  level = 12
+  spells = ["detect invis"]
 
 [[objects]]
 vnum = 3242
@@ -2367,6 +2614,10 @@ keywords = ["scroll"]
 description = """
 The scroll has written a formula of 'Word of Recall' upon it."""
 
+  [objects.magic]
+  level = 20
+  spells = ["word of recall"]
+
 [[objects]]
 vnum = 3280
 keywords = ["potion", "heal", "healing"]
@@ -2378,6 +2629,10 @@ weight = 10
 cost = 800
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 20
+  spells = ["heal"]
 
 [[objects]]
 vnum = 3281
@@ -2391,6 +2646,10 @@ cost = 800
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 20
+  spells = ["sanctuary"]
+
 [[objects]]
 vnum = 3282
 keywords = ["potion", "divine"]
@@ -2402,6 +2661,10 @@ weight = 10
 cost = 1800
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "hum", "magic", "bless"]
+
+  [objects.magic]
+  level = 35
+  spells = ["sanctuary", "stone skin", "armor"]
 
 [[objects]]
 vnum = 3283
@@ -2415,6 +2678,10 @@ cost = 150
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 5
+  spells = ["cure light"]
+
 [[objects]]
 vnum = 3284
 keywords = ["potion", "cure", "serious"]
@@ -2426,6 +2693,10 @@ weight = 10
 cost = 220
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["cure serious"]
 
 [[objects]]
 vnum = 3285
@@ -2439,6 +2710,10 @@ cost = 390
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 15
+  spells = ["cure critical"]
+
 [[objects]]
 vnum = 3286
 keywords = ["potion", "antidote", "bottle"]
@@ -2450,6 +2725,10 @@ weight = 10
 cost = 550
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 14
+  spells = ["cure poison", "cure light", "cure disease"]
 
 [[objects]]
 vnum = 3287
@@ -2463,6 +2742,10 @@ cost = 230
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 13
+  spells = ["cure blindness"]
+
 [[objects]]
 vnum = 3288
 keywords = ["vial", "holy", "water"]
@@ -2474,6 +2757,10 @@ weight = 10
 cost = 720
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic", "bless"]
+
+  [objects.magic]
+  level = 20
+  spells = ["bless", "protection evil", "remove curse"]
 
 [[objects]]
 vnum = 3289
@@ -2487,6 +2774,10 @@ cost = 200
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["armor"]
+
 [[objects]]
 vnum = 3290
 keywords = ["potion", "negation"]
@@ -2498,6 +2789,10 @@ weight = 10
 cost = 830
 wear_flags = ["take", "hold"]
 extra_flags = ["hum", "magic"]
+
+  [objects.magic]
+  level = 35
+  spells = ["cancellation"]
 
 [[objects]]
 vnum = 3291
@@ -2511,6 +2806,10 @@ cost = 250
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 9
+  spells = ["fly"]
+
 [[objects]]
 vnum = 3292
 keywords = ["potion", "true", "sight"]
@@ -2522,6 +2821,10 @@ weight = 10
 cost = 290
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["detect invis", "detect magic", "detect hidden"]
 
 [[objects]]
 vnum = 3349
@@ -2947,6 +3250,9 @@ keywords = ["banner"]
 description = """
 This is the official Merc war banner to see you through the darkest realm!"""
 
+  [objects.light]
+  duration = 500
+
 [[objects]]
 vnum = 3371
 keywords = ["ring", "diamond", "wedding"]
@@ -3117,6 +3423,12 @@ weight = 10
 cost = 25
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 12
+  current = 12
+  liquid = "blood"
+  poisoned = false
+
 [[objects]]
 vnum = 3382
 keywords = ["glass", "red", "wine"]
@@ -3127,6 +3439,12 @@ level = 0
 weight = 10
 cost = 15
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 4
+  current = 4
+  liquid = "red wine"
+  poisoned = false
 
 [[objects]]
 vnum = 3383
@@ -3139,6 +3457,12 @@ weight = 0
 cost = 1
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.container]
+  capacity = 40
+  flags = []
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 3384
@@ -3187,6 +3511,12 @@ weight = 0
 cost = 1
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.container]
+  capacity = 2
+  flags = []
+  key = 0
+  max_weight = 1
 
 [[objects]]
 vnum = 3388

@@ -131,6 +131,12 @@ keywords = ["cloak", "pitch", "black"]
 description = """
 It appears to have pockets inside it."""
 
+  [objects.container]
+  capacity = 150
+  flags = []
+  key = 0
+  max_weight = 30
+
 [[objects]]
 vnum = 2306
 keywords = ["neckguard", "neck", "guard", "black", "plate"]
@@ -483,6 +489,12 @@ keywords = ["girdle", "pouches", "many"]
 description = """
 It appears to be full of tiny pockets."""
 
+  [objects.container]
+  capacity = 500
+  flags = []
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 2320
 keywords = ["robe", "heavy", "woolen"]
@@ -532,6 +544,10 @@ wear_flags = ["take", "hold"]
 keywords = ["manual", "arts", "healing", "book"]
 description = """
 It appears to be a book of anatomy and medicine."""
+
+  [objects.magic]
+  level = 30
+  spells = ["cure light", "cure light", "cure light"]
 
 [[objects]]
 vnum = 2323
@@ -726,6 +742,12 @@ keywords = ["horn", "life"]
 description = """
 The horn is capped at both ends with gold. Unreadable runes are scrawled on it."""
 
+  [objects.magic]
+  level = 30
+  max_charges = 8
+  charges = 8
+  spells = ["cure light"]
+
 [[objects]]
 vnum = 2332
 keywords = ["belt", "life"]
@@ -806,6 +828,12 @@ extra_flags = ["magic"]
 keywords = ["pack", "leather", "small"]
 description = """
 It looks pretty big on the inside."""
+
+  [objects.container]
+  capacity = 200
+  flags = []
+  key = 0
+  max_weight = 20
 
 [[objects]]
 vnum = 2336
@@ -1130,6 +1158,12 @@ weight = 30
 cost = 2600
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 20
+  max_charges = 5
+  charges = 5
+  spells = ["heat metal"]
 
 [[objects]]
 vnum = 2350
@@ -1697,6 +1731,12 @@ keywords = ["ring", "key", "multi", "colored", "multi-colored"]
 description = """
 It has several keys of different colors on it."""
 
+  [objects.container]
+  capacity = 10
+  flags = []
+  key = 0
+  max_weight = 2
+
 [[objects]]
 vnum = 2383
 keywords = ["maul", "huge", "wooden"]
@@ -1726,6 +1766,10 @@ cost = 800
 wear_flags = ["take"]
 extra_flags = ["glow", "magic", "inventory"]
 
+  [objects.magic]
+  level = 20
+  spells = ["heal"]
+
 [[objects]]
 vnum = 2385
 keywords = ["pouch", "belt"]
@@ -1736,6 +1780,12 @@ level = 0
 weight = 50
 cost = 20
 wear_flags = ["take", "waist"]
+
+  [objects.container]
+  capacity = 15
+  flags = []
+  key = 0
+  max_weight = 2
 
 [[objects]]
 vnum = 2386

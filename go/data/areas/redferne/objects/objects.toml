@@ -19,6 +19,9 @@ keywords = ["treasure"]
 description = """
 Looks like a LOT of coins.  One of them has writing on it."""
 
+  [objects.money]
+  amount = -100
+
 [[objects]]
 vnum = 7910
 keywords = ["chest"]
@@ -35,6 +38,12 @@ keywords = ["chest"]
 description = """
 It is a robust chest made from short, heavy planks that have been fastened
 together with tenons.  It is equipped with a simple brass lock."""
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 7911
+  max_weight = 20
 
 [[objects]]
 vnum = 7911

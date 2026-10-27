@@ -47,6 +47,9 @@ weight = 5000
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 500
+
 [[objects]]
 vnum = 4003
 keywords = ["dagger", "rusty"]
@@ -165,6 +168,10 @@ keywords = ["potion", "purple"]
 description = """
 It looks rather strange!"""
 
+  [objects.magic]
+  level = 13
+  spells = ["cure blindness", "sanctuary"]
+
 [[objects]]
 vnum = 4051
 keywords = ["helmet", "metal"]
@@ -202,6 +209,11 @@ wear_flags = ["take"]
 keywords = ["mushroom"]
 description = """
 Let's put it this way - I wouldn't eat it !"""
+
+  [objects.food]
+  full = 2
+  hunger = 2
+  poisoned = true
 
 [[objects]]
 vnum = 4053
@@ -460,6 +472,10 @@ keywords = ["scroll"]
 description = """
 It looks informative."""
 
+  [objects.magic]
+  level = 10
+  spells = ["identify"]
+
 [[objects]]
 vnum = 4103
 keywords = ["slime", "mold"]
@@ -477,6 +493,11 @@ keywords = ["slime", "mold"]
 description = """
 It wasn't meant to be food, - Certainly not for humans."""
 
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
+
 [[objects]]
 vnum = 4104
 keywords = ["slime", "mold"]
@@ -493,6 +514,11 @@ extra_flags = ["rot_death"]
 keywords = ["slime", "mold"]
 description = """
 It wasn't meant to be food, - Certainly not for humans."""
+
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = true
 
 [[objects]]
 vnum = 4105
@@ -538,6 +564,10 @@ keywords = ["potion", "black"]
 description = """
 It looks healthy."""
 
+  [objects.magic]
+  level = 9
+  spells = ["cure critical"]
+
 [[objects]]
 vnum = 4151
 keywords = ["staff", "oak"]
@@ -563,6 +593,12 @@ The runes says : Funthark."""
 keywords = ["staff", "oak"]
 description = """
 You see it has some sort of runes on it."""
+
+  [objects.magic]
+  level = 15
+  max_charges = 4
+  charges = 2
+  spells = ["harm"]
 
 [[objects]]
 vnum = 4152

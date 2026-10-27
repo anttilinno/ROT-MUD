@@ -13,6 +13,12 @@ keywords = ["closet"]
 description = """
 It is large, yet gracefully made, obviously of Scandinavian design."""
 
+  [objects.container]
+  capacity = 100
+  flags = ["closeable"]
+  key = 0
+  max_weight = 100
+
 [[objects]]
 vnum = 8902
 keywords = ["jar"]
@@ -23,6 +29,12 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 5
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 5
 
 [[objects]]
 vnum = 8903
@@ -44,6 +56,11 @@ description = """
       *      *       *
     *        *         *"""
 
+  [objects.food]
+  full = -2
+  hunger = -2
+  poisoned = false
+
 [[objects]]
 vnum = 8904
 keywords = ["kernel", "kernels"]
@@ -59,6 +76,11 @@ wear_flags = ["take", "hold"]
 keywords = ["kernel", "kernels"]
 description = """
 Look fairly dull..."""
+
+  [objects.food]
+  full = 1
+  hunger = 1
+  poisoned = false
 
 [[objects]]
 vnum = 8905
@@ -168,6 +190,10 @@ weight = 10
 cost = 270
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 15
+  spells = ["bless"]
+
 [[objects]]
 vnum = 8914
 keywords = ["purplish", "herbs"]
@@ -178,6 +204,10 @@ level = 0
 weight = 10
 cost = 250
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 15
+  spells = ["change sex"]
 
 [[objects]]
 vnum = 8915
@@ -190,6 +220,10 @@ weight = 10
 cost = 178
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 5
+  spells = ["blindness"]
+
 [[objects]]
 vnum = 8916
 keywords = ["grayish", "herbs"]
@@ -200,6 +234,10 @@ level = 9
 weight = 10
 cost = 360
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 5
+  spells = ["giant strength", "poison"]
 
 [[objects]]
 vnum = 8917
@@ -212,6 +250,10 @@ weight = 10
 cost = 250
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 15
+  spells = ["detect magic"]
+
 [[objects]]
 vnum = 8918
 keywords = ["orangish", "herbs"]
@@ -223,6 +265,10 @@ weight = 10
 cost = 150
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 5
+  spells = ["cure light"]
+
 [[objects]]
 vnum = 8919
 keywords = ["pinkish", "herbs"]
@@ -233,3 +279,7 @@ level = 11
 weight = 10
 cost = 430
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 5
+  spells = ["cure poison", "poison"]

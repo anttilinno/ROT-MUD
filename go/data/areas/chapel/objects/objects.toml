@@ -15,6 +15,9 @@ description = """
 It is a rather old-looking three-armed candlestick made from pewter.  Its
 candles are a yellowish white colour."""
 
+  [objects.light]
+  duration = 24
+
 [[objects]]
 vnum = 3402
 keywords = ["tickler"]
@@ -122,6 +125,12 @@ description = """
 ACK! It's half eaten away ... yet it is whole ... in fact I think it can be
 opened and closed ... is there something in its teeth!?!?!? ACK you do it!"""
 
+  [objects.container]
+  capacity = 3
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 3
+
 [[objects]]
 vnum = 3413
 keywords = ["ring", "black", "marble"]
@@ -195,6 +204,12 @@ description = """
 A well crafted, if dusty and ancient, home for the afterworld, it seems
 to be able to be opened but needs a key."""
 
+  [objects.container]
+  capacity = 400
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 3416
+  max_weight = 400
+
 [[objects]]
 vnum = 3416
 keywords = ["iron", "heavy", "key"]
@@ -228,6 +243,12 @@ description = """
 A nice leather wineflask that has somehow survived the ages in a coffin.
 The wine should be nicely aged."""
 
+  [objects.drink]
+  capacity = 30
+  current = 30
+  liquid = "red wine"
+  poisoned = false
+
 [[objects]]
 vnum = 3418
 keywords = ["coins"]
@@ -238,6 +259,9 @@ level = 0
 weight = 500
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 1200
 
 [[objects]]
 vnum = 3419
@@ -271,6 +295,12 @@ extra_flags = ["dark"]
 keywords = ["rathcor"]
 description = """
 Ah HA!  A hidden compartment!"""
+
+  [objects.container]
+  capacity = 10
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 3421
@@ -311,6 +341,11 @@ keywords = ["slime", "piece"]
 description = """
 ICK! This is a piece of slug-like brownish green slime...
 Blech!"""
+
+  [objects.food]
+  full = 15
+  hunger = 15
+  poisoned = false
 
 [[objects]]
 vnum = 3423
@@ -353,6 +388,10 @@ unreadable but the scroll has a seal on it with a grey :
     88
     88"""
 
+  [objects.magic]
+  level = 15
+  spells = ["colour spray", "create food", "magic missile"]
+
 [[objects]]
 vnum = 3425
 keywords = ["auburn", "orb"]
@@ -370,6 +409,12 @@ keywords = ["auburn", "orb"]
 description = """
 You gaze into the orb and are almost lost in the swirling mists of color
 inside of this rare and beautiful object."""
+
+  [objects.magic]
+  level = 10
+  max_charges = 2
+  charges = 2
+  spells = ["charm person"]
 
 [[objects]]
 vnum = 3426

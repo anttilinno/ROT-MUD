@@ -54,6 +54,10 @@ description = """
 Written on the seal of the bottle is a glyph. You believe that the glyph
 stands for "POISON""""
 
+  [objects.magic]
+  level = 10
+  spells = ["bless", "cure critical", "cure poison", "heal"]
+
 [[objects]]
 vnum = 14504
 keywords = ["water", "walking", "boots", "elven"]
@@ -81,6 +85,12 @@ weight = 30
 cost = 90
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 20
+  current = 20
+  liquid = "local specialty"
+  poisoned = false
+
 [[objects]]
 vnum = 14506
 keywords = ["everlasting", "lantern", "dwarven"]
@@ -92,6 +102,9 @@ weight = 50
 cost = 150
 wear_flags = ["take"]
 
+  [objects.light]
+  duration = 99
+
 [[objects]]
 vnum = 14507
 keywords = ["dwarven", "adventurer", "bread"]
@@ -102,6 +115,11 @@ level = 1
 weight = 1
 cost = 50
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 48
+  hunger = 20
+  poisoned = false
 
 [[objects]]
 vnum = 14508
@@ -115,6 +133,12 @@ cost = 1200
 wear_flags = ["take", "wrist"]
 extra_flags = ["magic"]
 
+  [objects.container]
+  capacity = 100
+  flags = []
+  key = 0
+  max_weight = 20
+
 [[objects]]
 vnum = 14509
 keywords = ["magical", "emergency", "wafer"]
@@ -126,6 +150,10 @@ weight = 1
 cost = 1000
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 15
+  spells = ["teleport", "teleport", "teleport", "teleport"]
 
 [[objects]]
 vnum = 14510
@@ -183,6 +211,12 @@ weight = 1
 cost = 30
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 15
+  current = 15
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 14514
 keywords = ["head", "madboy"]
@@ -193,6 +227,9 @@ level = 7
 weight = 10
 cost = 200
 wear_flags = ["take", "hold"]
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 14515
@@ -335,6 +372,10 @@ cost = 5313
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 20
+  spells = ["earthquake", "earthquake", "earthquake", "earthquake"]
+
 [[objects]]
 vnum = 14521
 keywords = ["watcher", "cape", "black"]
@@ -418,6 +459,12 @@ weight = 10
 cost = 40
 wear_flags = ["take", "hold"]
 
+  [objects.container]
+  capacity = 50
+  flags = ["closeable"]
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 14525
 keywords = ["chair", "woven"]
@@ -438,6 +485,11 @@ level = 15
 weight = 50
 cost = 200
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 24
+  hunger = 12
+  poisoned = false
 
 [[objects]]
 vnum = 14527
@@ -466,6 +518,12 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["magic"]
+
+  [objects.drink]
+  capacity = 100000
+  current = 100000
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 14529
@@ -535,6 +593,12 @@ weight = 50
 cost = 4000
 wear_flags = ["take", "hold"]
 
+  [objects.container]
+  capacity = 1000
+  flags = ["closeable"]
+  key = 0
+  max_weight = 200
+
 [[objects]]
 vnum = 14534
 keywords = ["chest"]
@@ -545,6 +609,12 @@ level = 0
 weight = 50
 cost = 50
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 150
+  flags = []
+  key = 0
+  max_weight = 100
 
 [[objects]]
 vnum = 14535

@@ -48,6 +48,12 @@ cost = 2000
 wear_flags = ["take", "hold"]
 extra_flags = ["invis", "magic"]
 
+  [objects.magic]
+  level = 20
+  max_charges = 2
+  charges = 2
+  spells = ["earthquake"]
+
 [[objects]]
 vnum = 5304
 keywords = ["scroll", "magic"]
@@ -60,6 +66,10 @@ cost = 1420
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 30
+  spells = ["enchant weapon"]
+
 [[objects]]
 vnum = 5305
 keywords = ["scroll", "bound"]
@@ -71,6 +81,10 @@ weight = 150
 cost = 800
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 30
+  spells = ["detect evil", "detect invis", "detect magic"]
 
 [[objects]]
 vnum = 5306
@@ -89,6 +103,12 @@ You see the most beautiful fountain in the world.  The white marble glistens
 as sunlight hits its wet surfaces.  Fish swim around in the inner fountain, and
 an exterior fountain is reserved just for drinking."""
 
+  [objects.drink]
+  capacity = 10
+  current = 10
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 5307
 keywords = ["desk"]
@@ -104,6 +124,12 @@ keywords = ["desk"]
 description = """
 The sea shell desk here is just gorgeous.  The creamy white of the table
 surface makes you dream of being in a pool swimming among mermaids."""
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed", "locked"]
+  key = 5224
+  max_weight = 100
 
 [[objects]]
 vnum = 5308
@@ -122,6 +148,12 @@ A cabinet made of oak and mahogany, this piece of woodmanship is just splendid
 to view.  The wood is varnished with a very strong stain that looks as if it
 would last longer than the cabinet itself."""
 
+  [objects.container]
+  capacity = 500
+  flags = ["closeable", "closed", "locked"]
+  key = 5226
+  max_weight = 100
+
 [[objects]]
 vnum = 5309
 keywords = ["mandolin"]
@@ -133,6 +165,12 @@ weight = 200
 cost = 2800
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 18
+  max_charges = 5
+  charges = 5
+  spells = ["cure critical"]
 
 [[objects]]
 vnum = 5310
@@ -150,6 +188,12 @@ extra_flags = ["magic"]
   location = "dex"
   modifier = -2
 
+  [objects.magic]
+  level = 30
+  max_charges = 1
+  charges = 1
+  spells = ["call lightning"]
+
 [[objects]]
 vnum = 5311
 keywords = ["flute", "silver"]
@@ -166,6 +210,12 @@ extra_flags = ["glow", "magic"]
   location = "dex"
   modifier = -2
 
+  [objects.magic]
+  level = 30
+  max_charges = 1
+  charges = 1
+  spells = ["charm person"]
+
 [[objects]]
 vnum = 5312
 keywords = ["potion", "green"]
@@ -176,6 +226,10 @@ level = 49
 weight = 50
 cost = 3000
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 20
+  spells = ["gas breath"]
 
 [[objects]]
 vnum = 5313
@@ -188,6 +242,10 @@ weight = 10
 cost = 270
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 15
+  spells = ["bless"]
+
 [[objects]]
 vnum = 5314
 keywords = ["purplish", "herbs"]
@@ -198,6 +256,10 @@ level = 0
 weight = 10
 cost = 250
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 15
+  spells = ["change sex"]
 
 [[objects]]
 vnum = 5315
@@ -210,6 +272,10 @@ weight = 10
 cost = 360
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 5
+  spells = ["giant strength", "poison"]
+
 [[objects]]
 vnum = 5316
 keywords = ["orangish", "herbs"]
@@ -220,6 +286,10 @@ level = 0
 weight = 10
 cost = 150
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 5
+  spells = ["cure light"]
 
 [[objects]]
 vnum = 5317
@@ -582,6 +652,9 @@ extra_flags = ["glow", "magic"]
 keywords = ["banner"]
 description = """
 This is the official Merc war banner to see you through the darkest realm!"""
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 5332

@@ -9,6 +9,12 @@ weight = 500
 cost = 1
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 30
+  flags = []
+  key = 0
+  max_weight = 30
+
 [[objects]]
 vnum = 2801
 keywords = ["pile", "rotting", "heap", "bed"]
@@ -18,6 +24,12 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.container]
+  capacity = 30
+  flags = []
+  key = 0
+  max_weight = 30
 
 [[objects]]
 vnum = 2802

@@ -14,6 +14,11 @@ keywords = ["herbs", "herb", "timian"]
 description = """
 This herb smells rather spicy; maybe you should try it?"""
 
+  [objects.food]
+  full = 1
+  hunger = 1
+  poisoned = false
+
 [[objects]]
 vnum = 301
 keywords = ["herbs", "herb", "gyvel"]
@@ -29,6 +34,11 @@ wear_flags = ["take"]
 keywords = ["herbs", "herb", "gyvel"]
 description = """
 This herb smells rather special, but is it poisonous?"""
+
+  [objects.food]
+  full = 1
+  hunger = 1
+  poisoned = false
 
 [[objects]]
 vnum = 302
@@ -47,6 +57,11 @@ description = """
 This plant has dark green juicy leaves.
 You notice some small white thorns on it."""
 
+  [objects.food]
+  full = 1
+  hunger = 1
+  poisoned = true
+
 [[objects]]
 vnum = 303
 keywords = ["blood", "jar"]
@@ -63,6 +78,12 @@ keywords = ["blood", "jar"]
 description = """
 The jar is made of dry clay, covered with markings suggesting its
 occult origin."""
+
+  [objects.drink]
+  capacity = 2
+  current = 2
+  liquid = "blood"
+  poisoned = false
 
 [[objects]]
 vnum = 304
@@ -140,6 +161,11 @@ Well the rabbit looks rather dead.
 You guess that this once was a ferocious rabbit who's life now has
 changed to that of a tasty wabbit woast."""
 
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
+
 [[objects]]
 vnum = 310
 keywords = ["template", "scroll"]
@@ -160,6 +186,10 @@ centuries old.
 Inscripted upon is the words 'Ep ep fi'hur G'harne
                              G'harne fhtagn Shudde-M'ell hyas Negg'h'
 And beneath the inscription you see horrifying death scenes depicted."""
+
+  [objects.magic]
+  level = 15
+  spells = ["sleep", "blindness", "fireball"]
 
 [[objects]]
 vnum = 311
@@ -186,6 +216,10 @@ As you examine the potion more, you notice the oddities of this
 potion. When you look through it you notice strange things...
 The clear potion is certainly not of this world."""
 
+  [objects.magic]
+  level = 20
+  spells = ["detect evil", "detect invis", "detect magic"]
+
 [[objects]]
 vnum = 312
 keywords = ["scroll", "jhyfrdow"]
@@ -210,3 +244,7 @@ description = """
 The scroll is titled 'jhyfrdow' and looks very old.
 As you examine it closer you notice primitive drawings of
 men doing some kind of a ritual."""
+
+  [objects.magic]
+  level = 18
+  spells = ["protection evil"]

@@ -285,6 +285,12 @@ weight = 70
 cost = 74600
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 46
+  max_charges = 10
+  charges = 10
+  spells = ["general purpose"]
+
 [[objects]]
 vnum = 10413
 keywords = ["circular", "saw"]
@@ -323,6 +329,12 @@ cost = 5000
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
 
+  [objects.magic]
+  level = 48
+  max_charges = 10
+  charges = 10
+  spells = ["sleep"]
+
 [[objects]]
 vnum = 10415
 keywords = ["bloody", "black", "talon"]
@@ -357,6 +369,10 @@ weight = 10
 cost = 1170
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 50
+  spells = ["teleport", "remove curse", "refresh"]
+
 [[objects]]
 vnum = 10417
 keywords = ["hell", "hound", "teeth"]
@@ -389,6 +405,10 @@ level = 15
 weight = 10
 cost = 970
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 47
+  spells = ["create spring", "faerie fog"]
 
 [[objects]]
 vnum = 10419
@@ -441,6 +461,11 @@ weight = 20
 cost = 20
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 30
+  hunger = 30
+  poisoned = false
+
 [[objects]]
 vnum = 10422
 keywords = ["blueprint"]
@@ -451,6 +476,11 @@ level = 0
 weight = 10
 cost = 100
 wear_flags = ["take", "hold"]
+
+  [objects.food]
+  full = 31
+  hunger = 31
+  poisoned = false
 
 [[objects]]
 vnum = 10423
@@ -506,6 +536,12 @@ level = 23
 weight = 20
 cost = 5300
 wear_flags = ["take", "hold"]
+
+  [objects.magic]
+  level = 53
+  max_charges = 10
+  charges = 10
+  spells = ["cure poison"]
 
 [[objects]]
 vnum = 10426
@@ -604,6 +640,10 @@ weight = 10
 cost = 2400
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 51
+  spells = ["cure blindness", "detect evil", "shield"]
+
 [[objects]]
 vnum = 10431
 keywords = ["ionic", "torque", "wrench"]
@@ -657,6 +697,12 @@ cost = 16600
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 50
+  charges = 50
+  spells = ["summon"]
+
 [[objects]]
 vnum = 10434
 keywords = ["figurine", "dark", "horse", "nightmare"]
@@ -668,6 +714,12 @@ weight = 30
 cost = 18900
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 54
+  max_charges = 50
+  charges = 50
+  spells = ["teleport"]
 
 [[objects]]
 vnum = 10435
@@ -681,6 +733,12 @@ cost = 3900
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["weaken"]
+
 [[objects]]
 vnum = 10436
 keywords = ["figurine", "red", "dragon"]
@@ -692,6 +750,12 @@ weight = 30
 cost = 11000
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["mass invis"]
 
 [[objects]]
 vnum = 10437
@@ -705,6 +769,12 @@ cost = 17600
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["acid blast"]
+
 [[objects]]
 vnum = 10438
 keywords = ["figurine", "green", "dragon"]
@@ -717,6 +787,12 @@ cost = 37800
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["gas breath"]
+
 [[objects]]
 vnum = 10439
 keywords = ["figurine", "blue", "dragon"]
@@ -728,6 +804,12 @@ weight = 30
 cost = 1840
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["faerie fire"]
 
 [[objects]]
 vnum = 10440
@@ -744,6 +826,12 @@ extra_flags = ["glow"]
   [[objects.affects]]
   location = "con"
   modifier = 1
+
+  [objects.magic]
+  level = 52
+  max_charges = 10
+  charges = 10
+  spells = ["remove curse"]
 
 [[objects]]
 vnum = 10441
@@ -807,6 +895,10 @@ level = 27
 weight = 10
 cost = 1520
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 54
+  spells = ["pass door", "refresh"]
 
 [[objects]]
 vnum = 10444

@@ -354,6 +354,12 @@ cost = 5500
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
 
+  [objects.magic]
+  level = 25
+  max_charges = 10
+  charges = 10
+  spells = ["dispel magic"]
+
 [[objects]]
 vnum = 2244
 keywords = ["staff", "silver"]
@@ -366,6 +372,12 @@ cost = 11700
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 25
+  max_charges = 20
+  charges = 20
+  spells = ["faerie fog"]
+
 [[objects]]
 vnum = 2245
 keywords = ["staff", "dragon"]
@@ -377,6 +389,12 @@ weight = 50
 cost = 10200
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 25
+  max_charges = 10
+  charges = 10
+  spells = ["call lightning"]
 
 [[objects]]
 vnum = 2246
@@ -408,6 +426,12 @@ cost = 5300
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "anti_good"]
 
+  [objects.magic]
+  level = 30
+  max_charges = 3
+  charges = 3
+  spells = ["energy drain"]
+
 [[objects]]
 vnum = 2251
 keywords = ["potion", "cyan"]
@@ -418,6 +442,10 @@ level = 17
 weight = 10
 cost = 1060
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 30
+  spells = ["blindness", "harm"]
 
 [[objects]]
 vnum = 2252
@@ -430,6 +458,10 @@ weight = 10
 cost = 600
 wear_flags = ["take"]
 extra_flags = ["nodrop"]
+
+  [objects.magic]
+  level = 30
+  spells = ["cure critical", "protection evil"]
 
 [[objects]]
 vnum = 2254
@@ -510,6 +542,10 @@ weight = 10
 cost = 1960
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 30
+  spells = ["armor", "protection evil", "shield"]
 
 [[objects]]
 vnum = 2271
@@ -682,4 +718,3 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
-

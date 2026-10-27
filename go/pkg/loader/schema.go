@@ -195,6 +195,10 @@ type ObjectData struct {
 	Container  *ContainerData  `toml:"container"`
 	Light      *LightData      `toml:"light"`
 	Portal     *PortalData     `toml:"portal"`
+	Magic      *MagicData      `toml:"magic"` // potion, scroll, pill, wand, staff
+	Drink      *DrinkData      `toml:"drink"` // drink containers and fountains
+	Food       *FoodData       `toml:"food"`
+	Money      *MoneyData      `toml:"money"`
 	Affects    []AffectData    `toml:"affects"`
 	ExtraDescs []ExtraDescData `toml:"extra_descs"`
 }
@@ -304,4 +308,32 @@ func (f *ForgeConfig) Tier(name string) *ForgeTier {
 		}
 	}
 	return nil
+}
+
+// MagicData holds the spells of a potion, scroll, pill, wand or staff.
+type MagicData struct {
+	Level      int      `toml:"level"`       // casting level
+	MaxCharges int      `toml:"max_charges"` // wand/staff
+	Charges    int      `toml:"charges"`     // wand/staff
+	Spells     []string `toml:"spells"`      // spell names
+}
+
+// DrinkData holds a drink container's or fountain's liquid.
+type DrinkData struct {
+	Capacity int    `toml:"capacity"`
+	Current  int    `toml:"current"`
+	Liquid   string `toml:"liquid"`
+	Poisoned bool   `toml:"poisoned"`
+}
+
+// FoodData holds how filling a food item is.
+type FoodData struct {
+	Full     int  `toml:"full"`   // hours of fullness
+	Hunger   int  `toml:"hunger"` // hours of hunger relief
+	Poisoned bool `toml:"poisoned"`
+}
+
+// MoneyData is a pile of coins.
+type MoneyData struct {
+	Amount int `toml:"amount"` // copper
 }

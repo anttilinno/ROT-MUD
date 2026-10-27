@@ -18,6 +18,10 @@ seem to twist and change even as you look at them.  A large gap is visible in
 the western face of the object, shifting occasionally with the movement of
 the bones."""
 
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11613
+
 [[objects]]
 vnum = 11601
 keywords = ["mirror", "pool", "water"]
@@ -38,6 +42,10 @@ you reflection seems to twist and darken.  Grinning, it beckons, and you feel
 drawn towards the pool.  The pool ripples and clears, and your reflection
 returns to normal.  Or did it ever really change.. ?"""
 
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11650
+
 [[objects]]
 vnum = 11602
 keywords = ["shadow", "shadows"]
@@ -52,6 +60,10 @@ cost = 0
 keywords = ["shadow", "shadows"]
 description = """
 The shadows seem to beckon.."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11672
 
 [[objects]]
 vnum = 11603
@@ -70,6 +82,10 @@ The face has been carved twisted and waving, as if reflected in a bent
 mirror.  The open mouth reveals a gaping, toothless void.  The stone tongue
 hangs slightly out of the mouth like a ramp."""
 
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11647
+
 [[objects]]
 vnum = 11604
 keywords = ["dark", "pool", "water"]
@@ -87,6 +103,10 @@ Streamers of light flicker within the still, dark waters.  As you watch,
 they appear to wrap around your reflection, dissolving it for a moment
 into glitters of light.  Something about the pool is both frightening
 and appealing.."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11616
 
 [[objects]]
 vnum = 11605
@@ -121,6 +141,10 @@ keywords = ["darkness"]
 description = """
 The darkness seems almost tangible.  As you concentrate on it, it seems
 to pull you towards it.."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11672
 
 [[objects]]
 vnum = 11607
@@ -208,6 +232,10 @@ A huge white oak looms here.  As you gaze at it, a rectangular area in this
 face of the tree -- about the height of a man -- shimmers momentarily, as
 if not entirely there."""
 
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11633
+
 [[objects]]
 vnum = 11612
 keywords = ["black", "oak", "tree"]
@@ -223,6 +251,10 @@ keywords = ["black", "oak", "tree"]
 description = """
 A large gap opens into the base of the black oak, slightly charred as if
 burned by fire."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11667
 
 [[objects]]
 vnum = 11613
@@ -389,6 +421,10 @@ weight = 10
 cost = 1000
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
+
+  [objects.magic]
+  level = 80
+  spells = ["change sex", "heal", "bless"]
 
 [[objects]]
 vnum = 11620
@@ -672,6 +708,10 @@ extra_flags = ["hum"]
   location = "con"
   modifier = -4
 
+  [objects.magic]
+  level = 70
+  spells = ["colour spray", "curse", "charm person", "poison"]
+
 [[objects]]
 vnum = 11628
 keywords = ["sparkling", "wand"]
@@ -683,6 +723,12 @@ weight = 10
 cost = 3250
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "invis"]
+
+  [objects.magic]
+  level = 69
+  max_charges = 12
+  charges = 12
+  spells = ["colour spray"]
 
 [[objects]]
 vnum = 11629
@@ -1116,6 +1162,10 @@ weight = 10
 cost = 500
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 55
+  spells = ["haste"]
+
 [[objects]]
 vnum = 11646
 keywords = ["weeping", "angel", "white"]
@@ -1319,6 +1369,9 @@ extra_flags = ["glow", "evil"]
   location = "damroll"
   modifier = 5
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 11652
 keywords = ["nightmare", "breath", "dark", "cloud"]
@@ -1473,6 +1526,12 @@ level = 55
 weight = 0
 cost = 9540
 wear_flags = ["take", "hold"]
+
+  [objects.container]
+  capacity = 350
+  flags = []
+  key = 0
+  max_weight = 40
 
 [[objects]]
 vnum = 11658
@@ -1675,6 +1734,9 @@ extra_flags = ["glow", "dark", "anti_good"]
   [[objects.affects]]
   location = "damroll"
   modifier = 5
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 11664
@@ -2011,6 +2073,12 @@ extra_flags = ["hum", "dark", "invis"]
   location = "damroll"
   modifier = 5
 
+  [objects.container]
+  capacity = 200
+  flags = []
+  key = 0
+  max_weight = 20
+
 [[objects]]
 vnum = 11675
 keywords = ["ice", "candle"]
@@ -2034,6 +2102,9 @@ extra_flags = ["glow", "invis"]
   [[objects.affects]]
   location = "damroll"
   modifier = 5
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 11676
@@ -2457,6 +2528,9 @@ extra_flags = ["glow", "hum"]
   location = "damroll"
   modifier = 6
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 11690
 keywords = ["energy", "mail", "chainmail", "chain"]
@@ -2602,6 +2676,9 @@ extra_flags = ["glow", "dark", "invis"]
   location = "damroll"
   modifier = 4
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 11695
 keywords = ["shadowy", "handprints", "prints"]
@@ -2654,6 +2731,10 @@ level = 0
 weight = 0
 cost = 0
 
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11646
+
 [[objects]]
 vnum = 11698
 keywords = ["rip", "void"]
@@ -2664,6 +2745,10 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["glow"]
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11612
 
 [[objects]]
 vnum = 11699
@@ -2676,3 +2761,7 @@ weight = 0
 cost = 0
 wear_flags = ["take", "hold"]
 extra_flags = ["hum"]
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 2

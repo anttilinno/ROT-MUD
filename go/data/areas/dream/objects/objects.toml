@@ -87,3 +87,9 @@ keywords = ["stick", "staff"]
 description = """
 Made from the wood of a Yule Tree, this staff is about one meter long and
 highly polished.  It looks more like a ritual device than a weapon."""
+
+  [objects.magic]
+  level = 10
+  max_charges = 4
+  charges = 4
+  spells = ["protection evil"]

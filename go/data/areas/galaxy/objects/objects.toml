@@ -87,6 +87,12 @@ cost = 4300
 wear_flags = ["take", "hold"]
 extra_flags = ["hum", "magic", "nodrop"]
 
+  [objects.magic]
+  level = 15
+  max_charges = 5
+  charges = 5
+  spells = ["call lightning"]
+
 [[objects]]
 vnum = 9306
 keywords = ["fleece", "aries"]
@@ -359,6 +365,12 @@ keywords = ["arrow"]
 description = """
 It's an arrow of lightning; it will never miss any target."""
 
+  [objects.magic]
+  level = 10
+  max_charges = 10
+  charges = 10
+  spells = ["lightning bolt"]
+
 [[objects]]
 vnum = 9316
 keywords = ["bow", "sagittarius"]
@@ -439,6 +451,12 @@ keywords = ["vessel"]
 description = """
 This vessel has been carried by the Water Bearer ever since she came to the
 Zodiac."""
+
+  [objects.magic]
+  level = 10
+  max_charges = 10
+  charges = 10
+  spells = ["create spring"]
 
 [[objects]]
 vnum = 9319
@@ -522,6 +540,9 @@ extra_flags = ["glow", "hum", "invis", "magic", "anti_evil"]
 keywords = ["sceptre"]
 description = """
 You'd better give it back, or the king of the Universe will punish you."""
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 9322

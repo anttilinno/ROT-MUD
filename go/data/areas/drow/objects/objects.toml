@@ -257,6 +257,12 @@ cost = 1550
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  max_charges = 3
+  charges = 3
+  spells = ["lightning bolt"]
+
 [[objects]]
 vnum = 5111
 keywords = ["helmet", "helm"]
@@ -342,4 +348,3 @@ extra_flags = ["nodrop"]
   [[objects.affects]]
   location = "ac"
   modifier = -2
-

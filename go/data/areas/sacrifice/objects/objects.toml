@@ -48,3 +48,6 @@ description = """
 Some letters have been scratched into the back.
                 WSES
                 WSWS"""
+
+  [objects.light]
+  duration = 999

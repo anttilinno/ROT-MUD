@@ -231,6 +231,10 @@ cost = 880
 wear_flags = ["take"]
 extra_flags = ["invis", "magic"]
 
+  [objects.magic]
+  level = 16
+  spells = ["blindness", "sanctuary", "giant strength"]
+
 [[objects]]
 vnum = 5211
 keywords = ["potion", "orange"]
@@ -242,6 +246,10 @@ weight = 100
 cost = 400
 wear_flags = ["take"]
 extra_flags = ["invis", "magic"]
+
+  [objects.magic]
+  level = 20
+  spells = ["detect hidden"]
 
 [[objects]]
 vnum = 5214
@@ -255,6 +263,9 @@ cost = 50
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.light]
+  duration = 72
+
 [[objects]]
 vnum = 5215
 keywords = ["scroll", "tattered"]
@@ -267,6 +278,10 @@ cost = 1280
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 24
+  spells = ["enchant weapon"]
+
 [[objects]]
 vnum = 5216
 keywords = ["scroll", "bound"]
@@ -278,6 +293,10 @@ weight = 150
 cost = 500
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 15
+  spells = ["detect evil", "detect invis", "detect magic"]
 
 [[objects]]
 vnum = 5217
@@ -294,6 +313,12 @@ extra_flags = ["glow", "magic"]
   [[objects.affects]]
   location = "dex"
   modifier = -2
+
+  [objects.magic]
+  level = 17
+  max_charges = 1
+  charges = 1
+  spells = ["charm person"]
 
 [[objects]]
 vnum = 5218
@@ -326,6 +351,11 @@ weight = 200
 cost = 0
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
+
 [[objects]]
 vnum = 5220
 keywords = ["fountain", "water"]
@@ -335,6 +365,12 @@ item_type = "fountain"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.drink]
+  capacity = 10
+  current = 10
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 5221
@@ -427,6 +463,12 @@ level = 0
 weight = 0
 cost = 0
 
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed", "locked"]
+  key = 5224
+  max_weight = 100
+
 [[objects]]
 vnum = 5226
 keywords = ["seal", "ivory"]
@@ -448,6 +490,12 @@ level = 0
 weight = 0
 cost = 0
 
+  [objects.container]
+  capacity = 500
+  flags = ["closeable", "closed", "locked"]
+  key = 5226
+  max_weight = 100
+
 [[objects]]
 vnum = 5228
 keywords = ["arm", "rotted"]
@@ -458,6 +506,11 @@ level = 0
 weight = 200
 cost = 0
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 50
+  hunger = 50
+  poisoned = true
 
 [[objects]]
 vnum = 5230
@@ -626,6 +679,12 @@ cost = 2500
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 13
+  max_charges = 3
+  charges = 3
+  spells = ["cure critical"]
+
 [[objects]]
 vnum = 5251
 keywords = ["harp", "golden"]
@@ -641,6 +700,12 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "dex"
   modifier = -2
+
+  [objects.magic]
+  level = 18
+  max_charges = 1
+  charges = 1
+  spells = ["call lightning"]
 
 [[objects]]
 vnum = 5252
@@ -667,4 +732,3 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
-

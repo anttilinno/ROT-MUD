@@ -125,6 +125,12 @@ cost = 5800
 wear_flags = ["take", "hold"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
+  [objects.magic]
+  level = 30
+  max_charges = 3
+  charges = 3
+  spells = ["sanctuary"]
+
 [[objects]]
 vnum = 906
 keywords = ["trident", "poseidon"]
@@ -208,6 +214,10 @@ weight = 10
 cost = 1130
 wear_flags = ["take"]
 extra_flags = ["invis", "magic", "anti_evil"]
+
+  [objects.magic]
+  level = 30
+  spells = ["dispel evil", "heal"]
 
 [[objects]]
 vnum = 910
@@ -296,6 +306,11 @@ weight = 10
 cost = 100
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
+
 [[objects]]
 vnum = 915
 keywords = ["fan"]
@@ -340,6 +355,10 @@ weight = 10
 cost = 340
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 24
+  spells = ["cure light"]
+
 [[objects]]
 vnum = 919
 keywords = ["pear"]
@@ -350,6 +369,10 @@ level = 11
 weight = 10
 cost = 530
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 24
+  spells = ["cure poison"]
 
 [[objects]]
 vnum = 920
@@ -362,6 +385,10 @@ weight = 10
 cost = 340
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 24
+  spells = ["armor"]
+
 [[objects]]
 vnum = 921
 keywords = ["kiwi"]
@@ -372,6 +399,10 @@ level = 11
 weight = 10
 cost = 530
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 24
+  spells = ["cure poison"]
 
 [[objects]]
 vnum = 922
@@ -461,6 +492,10 @@ level = 23
 weight = 10
 cost = 810
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 12
+  spells = ["sanctuary", "giant strength", "armor"]
 
 [[objects]]
 vnum = 927

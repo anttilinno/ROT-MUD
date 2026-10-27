@@ -14,6 +14,9 @@ extra_flags = ["magic"]
   location = "wis"
   modifier = 1
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 1101
 keywords = ["sting"]
@@ -68,6 +71,11 @@ level = 0
 weight = 10
 cost = 15
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 30
+  hunger = 24
+  poisoned = false
 
 [[objects]]
 vnum = 1104
@@ -200,6 +208,11 @@ weight = 10
 cost = 2
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
+
 [[objects]]
 vnum = 1111
 keywords = ["bag"]
@@ -211,6 +224,12 @@ weight = 10
 cost = 11
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 5
+
 [[objects]]
 vnum = 1112
 keywords = ["lantern"]
@@ -221,6 +240,9 @@ level = 0
 weight = 40
 cost = 60
 wear_flags = ["take"]
+
+  [objects.light]
+  duration = 200
 
 [[objects]]
 vnum = 1113

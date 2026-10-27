@@ -242,6 +242,11 @@ cost = 500
 wear_flags = ["take", "waist"]
 extra_flags = ["inventory", "had_timer"]
 
+  [objects.food]
+  full = 5
+  hunger = 8
+  poisoned = false
+
 [[objects]]
 vnum = 13019
 keywords = ["white", "silk", "veil"]
