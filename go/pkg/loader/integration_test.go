@@ -112,6 +112,15 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Errorf("expected character special 'spec_cast_adept', got '%s'", adeptChar.Special)
 		}
 
+		// Mob templates without an ac table get the level-based default AC
+		monster := world.CreateMobFromTemplate(3704) // the aggressive monster, level 1
+		if monster == nil {
+			t.Fatal("failed to create aggressive monster from template")
+		}
+		if monster.Armor[0] != 85 {
+			t.Errorf("expected default mob AC 85 at level 1, got %v", monster.Armor)
+		}
+
 		// Check Temple Square room (3005) has obj_resets for fountain
 		templeSquare := world.GetRoom(3005)
 		if templeSquare == nil {

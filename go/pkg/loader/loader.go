@@ -740,6 +740,15 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	ch.Coin = mobCoinDrop(tmpl)
 	ch.HitRoll = tmpl.Hitroll
 
+	// Armor: template AC when given, else a level-based default. Without this
+	// mobs sat at AC 0 and low-level players needed a natural 19 to hit.
+	ch.Armor = tmpl.AC
+	if tmpl.AC == [4]int{} {
+		for i := range ch.Armor {
+			ch.Armor[i] = defaultMobAC(tmpl.Level)
+		}
+	}
+
 	// Parse sex
 	switch strings.ToLower(tmpl.Sex) {
 	case "male":
@@ -1333,4 +1342,10 @@ func formatExitFlags(flags types.ExitFlags) []string {
 		result = append(result, "pickproof")
 	}
 	return result
+}
+
+// defaultMobAC is the AC for a mob whose template sets none. It matches the
+// mob AC the combat simulation is tuned against (pkg/golden makeMob).
+func defaultMobAC(level int) int {
+	return max(90-level*5, -150)
 }
