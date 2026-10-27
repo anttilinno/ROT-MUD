@@ -64,6 +64,28 @@ func (h *ShopHandler) keepersInRoom(ch *types.Character) []keeperShop {
 	return out
 }
 
+// openKeepers returns the keepers in the room whose shop is open now. When
+// there are none it tells ch why (no shop here, or every keeper is closed)
+// and returns nil.
+func (h *ShopHandler) openKeepers(ch *types.Character) []keeperShop {
+	keepers := h.keepersInRoom(ch)
+	if len(keepers) == 0 {
+		h.sendToChar(ch, "You can't do that here.\r\n")
+		return nil
+	}
+	hour := h.World.GetCurrentHour()
+	var open []keeperShop
+	for _, ks := range keepers {
+		if ks.shop.IsOpen(hour) {
+			open = append(open, ks)
+		}
+	}
+	if len(open) == 0 {
+		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keepers[0].keeper.ShortDesc)
+	}
+	return open
+}
+
 // sendToChar sends a message to a character
 func (h *ShopHandler) sendToChar(ch *types.Character, format string, args ...interface{}) {
 	if h.Output != nil {
@@ -73,9 +95,8 @@ func (h *ShopHandler) sendToChar(ch *types.Character, format string, args ...int
 
 // DoBuy handles the 'buy' command
 func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
-	keepers := h.keepersInRoom(ch)
-	if len(keepers) == 0 {
-		h.sendToChar(ch, "You can't do that here.\r\n")
+	keepers := h.openKeepers(ch)
+	if keepers == nil {
 		return
 	}
 
@@ -84,14 +105,10 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 		return
 	}
 
-	// Find the (open) keeper that stocks the requested item.
-	hour := h.World.GetCurrentHour()
+	// Find the keeper that stocks the requested item.
 	var shop *Shop
 	var obj *types.Object
 	for _, ks := range keepers {
-		if !ks.shop.IsOpen(hour) {
-			continue
-		}
 		for _, item := range ks.keeper.Inventory {
 			if matchesKeyword(item.Name, argument) {
 				shop, obj = ks.shop, item
@@ -163,13 +180,10 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 
 // DoSell handles the 'sell' command
 func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
-	keepers := h.keepersInRoom(ch)
-	if len(keepers) == 0 {
-		h.sendToChar(ch, "You can't do that here.\r\n")
+	keepers := h.openKeepers(ch)
+	if keepers == nil {
 		return
 	}
-
-	hour := h.World.GetCurrentHour()
 
 	if argument == "" {
 		h.sendToChar(ch, "Sell what?\r\n")
@@ -202,7 +216,7 @@ func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
 	var keeper *types.Character
 	var shop *Shop
 	for _, ks := range keepers {
-		if ks.shop.IsOpen(hour) && ks.shop.BuysType(obj.ItemType) {
+		if ks.shop.BuysType(obj.ItemType) {
 			keeper, shop = ks.keeper, ks.shop
 			break
 		}
@@ -241,19 +255,17 @@ func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
 
 // DoList handles the 'list' command
 func (h *ShopHandler) DoList(ch *types.Character, argument string) {
-	keepers := h.keepersInRoom(ch)
-	if len(keepers) == 0 {
-		h.sendToChar(ch, "You can't do that here.\r\n")
+	keepers := h.openKeepers(ch)
+	if keepers == nil {
 		return
 	}
 
-	hour := h.World.GetCurrentHour()
 	multi := len(keepers) > 1
 	var sb strings.Builder
 	listed := false
 
 	for _, ks := range keepers {
-		if !ks.shop.IsOpen(hour) || len(ks.keeper.Inventory) == 0 {
+		if len(ks.keeper.Inventory) == 0 {
 			continue
 		}
 

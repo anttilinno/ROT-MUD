@@ -638,13 +638,9 @@ func (d *CommandDispatcher) cmdUse(ch *types.Character, args string) {
 	ActToRoom("$n is enveloped in a flash of light and vanishes.", ch, nil, nil, d.Output)
 	d.send(ch, fmt.Sprintf("You invoke %s and the world dissolves around you...\r\n", obj.ShortDesc))
 
-	oldRoom := ch.InRoom
-	if oldRoom != nil {
-		oldRoom.RemovePerson(ch)
-	}
-	ch.Fighting = nil
-	destRoom.AddPerson(ch)
-	ch.InRoom = destRoom
+	combat.StopFighting(ch, true)
+	CharFromRoom(ch)
+	CharToRoom(ch, destRoom)
 	ActToRoom("$n arrives in a flash of light.", ch, nil, nil, d.Output)
 	d.cmdLook(ch, "")
 

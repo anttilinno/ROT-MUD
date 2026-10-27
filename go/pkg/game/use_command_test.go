@@ -60,3 +60,39 @@ func TestUseNonPortalRejected(t *testing.T) {
 		t.Errorf("expected rejection for non-portal, got %q", *out)
 	}
 }
+
+func TestUseRuneEndsCombat(t *testing.T) {
+	d := NewCommandDispatcher()
+	d.Output = func(ch *types.Character, msg string) {}
+	d.GameLoop = NewGameLoop()
+
+	here := types.NewRoom(100, "Start", "Here.")
+	dest := types.NewRoom(200, "Dest", "There.")
+	d.GameLoop.Rooms[100] = here
+	d.GameLoop.Rooms[200] = dest
+
+	ch := types.NewCharacter("Aldor")
+	mob := types.NewCharacter("goblin")
+	CharToRoom(ch, here)
+	CharToRoom(mob, here)
+	ch.Fighting, ch.Position = mob, types.PosFighting
+	mob.Fighting, mob.Position = ch, types.PosFighting
+
+	rune := types.NewObject(3180, "a rune", types.ItemTypePortal)
+	rune.Name = "rune"
+	rune.Values[0] = 1
+	rune.Values[3] = 200
+	ch.Inventory = append(ch.Inventory, rune)
+
+	d.cmdUse(ch, "rune")
+
+	if ch.InRoom != dest {
+		t.Fatalf("expected to be in dest room")
+	}
+	if mob.Fighting != nil || mob.Position != types.PosStanding {
+		t.Errorf("opponent still fighting: fighting=%v pos=%v", mob.Fighting, mob.Position)
+	}
+	if ch.Fighting != nil || ch.Position != types.PosStanding {
+		t.Errorf("user still fighting: pos=%v", ch.Position)
+	}
+}
