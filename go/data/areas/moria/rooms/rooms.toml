@@ -784,6 +784,19 @@ the wall there is an inscription."""
     vnum = 4150
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+It says:
+
+    Year 631 after the destruction of the dwarven realm.
+
+  We found the sword of the dwarven king, but it was guarded
+by a large green dragon. All but two died immediately as the
+dragon breathed poison gas; we are also going to die soon.
+
+       Trather and Oralane"""
+
 [[rooms]]
 vnum = 4161
 name = "The wet tunnel"
@@ -1280,6 +1293,30 @@ the north marking the entrance to a cave (or a grave :-)."""
   direction = "south"
   to_vnum = 4001
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says:
+
+        /---------------------\\
+        | The Mines of Moria! |
+        |                     |
+        | Four levels.        |
+        |                     |
+        | Watch for mages!    |
+        |                     |
+        \\---------------------/
+                 | |
+                 | |
+                 | |
+                 | |
+                 | |"""
+
+[[rooms.extra_descs]]
+keywords = ["bushes"]
+description = """
+Small crippled bushes desperately trying to grow south."""
+
 [[rooms]]
 vnum = 4010
 name = "The cave"
@@ -1301,6 +1338,13 @@ To the north a small tunnel continues into the mountain."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 4002
+
+[[rooms.extra_descs]]
+keywords = ["tombstone"]
+description = """
+The stone is inscribed with the unfortunate player's famous last words:
+
+  "What are you worrying about, it is just a small harmless snake""""
 
 [[rooms]]
 vnum = 4011
@@ -1475,6 +1519,11 @@ notice a large pile of bones in the corner."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 4014
+
+[[rooms.extra_descs]]
+keywords = ["pile", "bones"]
+description = """
+Some of the bones are human!"""
 
 [[rooms]]
 vnum = 4019
@@ -1776,6 +1825,11 @@ the south. In the mountain there is a cave."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 4029
+
+[[rooms.extra_descs]]
+keywords = ["cave"]
+description = """
+Well it doesn't look nice, but it's the only way out."""
 
 [[rooms]]
 vnum = 4032
@@ -2528,4 +2582,3 @@ or try your luck and leave down into the unknown!"""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 4171
-

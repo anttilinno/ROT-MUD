@@ -166,6 +166,15 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Error("expected the Elven Merchant (14502) to spawn protected")
 		}
 
+		// Extra descriptions restored from ROT: the Shire sign and mud
+		// school's wall sign
+		if sign := world.GetObjTemplate(1102); sign == nil || len(sign.ExtraDescs) == 0 {
+			t.Error("expected the Shire sign (1102) to have its text")
+		}
+		if r := world.GetRoom(3701); r == nil || len(r.ExtraDescriptions) == 0 {
+			t.Error("expected mud school room 3701 to have its sign and plaque")
+		}
+
 		// Weapons carry their class and damage type (restored from ROT area files)
 		dagger := world.GetObjTemplate(3701)
 		if dagger == nil || dagger.Weapon == nil {

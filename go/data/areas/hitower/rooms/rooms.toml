@@ -833,6 +833,11 @@ faint magical glow which provides enough light to see by."""
   flags = ["door", "closed"]
   to_vnum = 1331
 
+[[rooms.extra_descs]]
+keywords = ["walls", "wall"]
+description = """
+The walls shed a warm light"""
+
 [[rooms]]
 vnum = 1335
 name = "Guardians chamber"
@@ -881,6 +886,11 @@ unused.
   direction = "west"
   flags = ["door", "closed"]
   to_vnum = 1331
+
+[[rooms.extra_descs]]
+keywords = ["mirror"]
+description = """
+Why, someone seems to be looking back at you from the other side!"""
 
 [[rooms]]
 vnum = 1337
@@ -981,6 +991,13 @@ and a pleasant breeze. Through it, the surrounding country side can be seen.
   [[rooms.exits]]
   direction = "west"
   to_vnum = 1340
+
+[[rooms.extra_descs]]
+keywords = ["window", "east"]
+description = """
+Stretching out as far as the eye can see is a canopy of dark tree tops
+which can only be the Haon-Dor-Dark Forest. A faint light in the distance
+to the northeast marks what is probably the city of midgaard."""
 
 [[rooms]]
 vnum = 1342
@@ -4055,6 +4072,11 @@ from a single enormous emerald."""
     vnum = 1339
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["throne"]
+description = """
+The giant emerald is flawless, and must be incredibly valuable."""
+
 [[rooms]]
 vnum = 1478
 name = "A dressing room"
@@ -4187,4 +4209,3 @@ on a desk."""
   [[rooms.obj_resets]]
   vnum = 1402
   max = 1
-

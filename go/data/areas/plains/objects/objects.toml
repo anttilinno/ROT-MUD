@@ -9,6 +9,11 @@ weight = 10
 cost = 10
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["herbs", "herb", "timian"]
+description = """
+This herb smells rather spicy; maybe you should try it?"""
+
 [[objects]]
 vnum = 301
 keywords = ["herbs", "herb", "gyvel"]
@@ -19,6 +24,11 @@ level = 0
 weight = 10
 cost = 10
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["herbs", "herb", "gyvel"]
+description = """
+This herb smells rather special, but is it poisonous?"""
 
 [[objects]]
 vnum = 302
@@ -31,6 +41,12 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["plant", "ivy"]
+description = """
+This plant has dark green juicy leaves.
+You notice some small white thorns on it."""
+
 [[objects]]
 vnum = 303
 keywords = ["blood", "jar"]
@@ -41,6 +57,12 @@ level = 0
 weight = 20
 cost = 20
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["blood", "jar"]
+description = """
+The jar is made of dry clay, covered with markings suggesting its
+occult origin."""
 
 [[objects]]
 vnum = 304
@@ -53,6 +75,12 @@ weight = 10
 cost = 0
 wear_flags = ["take", "head", "hold"]
 extra_flags = ["anti_evil"]
+
+[[objects.extra_descs]]
+keywords = ["wild", "flowers"]
+description = """
+These wild flowers are really pretty.
+Just like the flowers you would wear in your hair."""
 
 [[objects]]
 vnum = 307
@@ -70,6 +98,13 @@ extra_flags = ["magic", "nodrop"]
   location = "saves"
   modifier = 5
 
+[[objects.extra_descs]]
+keywords = ["amulet"]
+description = """
+Judging from the signs inscripted in the amulet, you gather it must
+have belonged to a druid.  It is weird looking with symbols from nature
+dominating it."""
+
 [[objects]]
 vnum = 308
 keywords = ["staff", "stick"]
@@ -81,6 +116,12 @@ weight = 40
 cost = 10
 wear_flags = ["take", "hold"]
 
+[[objects.extra_descs]]
+keywords = ["staff", "stick"]
+description = """
+Then staff is about 5 ft long, engraved with mythical signs and figures.
+Otherwise the staff seems of no real interest."""
+
 [[objects]]
 vnum = 309
 keywords = ["rabbit", "roast", "wabbit"]
@@ -91,6 +132,13 @@ level = 0
 weight = 50
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["roast", "rabbit", "wabbit"]
+description = """
+Well the rabbit looks rather dead.
+You guess that this once was a ferocious rabbit who's life now has
+changed to that of a tasty wabbit woast."""
 
 [[objects]]
 vnum = 310
@@ -104,6 +152,15 @@ cost = 1870
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["template", "scroll", "metal"]
+description = """
+The template is made of an exotic green metal and looks
+centuries old.
+Inscripted upon is the words 'Ep ep fi'hur G'harne
+                             G'harne fhtagn Shudde-M'ell hyas Negg'h'
+And beneath the inscription you see horrifying death scenes depicted."""
+
 [[objects]]
 vnum = 311
 keywords = ["potion", "clear"]
@@ -116,6 +173,19 @@ cost = 300
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["leather"]
+description = """
+The leather wrapped around the potion is old and decayed, originating
+from an, to you, unknown creature."""
+
+[[objects.extra_descs]]
+keywords = ["potion", "clear"]
+description = """
+As you examine the potion more, you notice the oddities of this
+potion. When you look through it you notice strange things...
+The clear potion is certainly not of this world."""
+
 [[objects]]
 vnum = 312
 keywords = ["scroll", "jhyfrdow"]
@@ -127,3 +197,16 @@ weight = 10
 cost = 640
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["ritual", "men", "drawings"]
+description = """
+The drawing pictures people gathered round giant stone formations,
+worshipping a giant worm like creature.
+It seems they are sacrificing some of their own species."""
+
+[[objects.extra_descs]]
+keywords = ["scroll", "jhyfrdow"]
+description = """
+The scroll is titled 'jhyfrdow' and looks very old.
+As you examine it closer you notice primitive drawings of
+men doing some kind of a ritual."""

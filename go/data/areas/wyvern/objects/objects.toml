@@ -181,6 +181,11 @@ extra_flags = ["glow", "magic"]
   location = "wis"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["helm"]
+description = """
+This elegant helm is plated in mithril and silver."""
+
 [[objects]]
 vnum = 1615
 keywords = ["bracer"]
@@ -280,6 +285,11 @@ extra_flags = ["glow", "magic"]
   location = "ac"
   modifier = -3
 
+[[objects.extra_descs]]
+keywords = ["strange", "key"]
+description = """
+This key is of an unusual shape ... must go to an unusual lock!"""
+
 [[objects]]
 vnum = 1701
 keywords = ["short", "bow"]
@@ -296,6 +306,11 @@ wear_flags = ["take", "wield"]
   damage_type = "pierce"
   dice_number = 2
   dice_size = 4
+
+[[objects.extra_descs]]
+keywords = ["short", "bow"]
+description = """
+It looks like the bows used by rustin hunters."""
 
 [[objects]]
 vnum = 1702
@@ -399,4 +414,3 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "mana"
   modifier = 5
-

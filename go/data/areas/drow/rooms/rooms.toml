@@ -645,6 +645,16 @@ gate lies open to the west allowing entrance into the city."""
   flags = ["door", "closed"]
   to_vnum = 5270
 
+[[rooms.extra_descs]]
+keywords = ["hole"]
+description = """
+A small hole that looks to have been sealed at one time."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+A large adamantite gate with giant spider shaped emblems stands here."""
+
 [[rooms]]
 vnum = 5101
 name = "City street"
@@ -1118,4 +1128,3 @@ adamantite."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 5126
-

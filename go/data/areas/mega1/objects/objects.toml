@@ -9,6 +9,12 @@ weight = 20
 cost = 48900
 wear_flags = ["take", "hold"]
 
+[[objects.extra_descs]]
+keywords = ["spit", "gun"]
+description = """
+A standard weapon in Mega-City One.  It uses general
+purpose ammunition."""
+
 [[objects]]
 vnum = 8001
 keywords = ["knee", "pads"]
@@ -26,6 +32,12 @@ wear_flags = ["take", "legs"]
   ac_slash = 4
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["knee", "pads"]
+description = """
+It is a set of Grak Brothers knee pads.  They are currently
+popular with the juve and punk gangs."""
+
 [[objects]]
 vnum = 8002
 keywords = ["stooky", "gland"]
@@ -36,6 +48,11 @@ level = 25
 weight = 10
 cost = 1000
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["stooky", "gland"]
+description = """
+Stooky glands are known for the restorative properties."""
 
 [[objects]]
 vnum = 8003
@@ -48,6 +65,12 @@ weight = 20
 cost = 58000
 wear_flags = ["take", "hold"]
 
+[[objects.extra_descs]]
+keywords = ["lawgiver", "gun"]
+description = """
+The standard weapon for the city's Judges.  It uses general
+high explosive ammunition."""
+
 [[objects]]
 vnum = 8004
 keywords = ["safe"]
@@ -58,6 +81,12 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["hum"]
+
+[[objects.extra_descs]]
+keywords = ["safe"]
+description = """
+This safe looks like not even a Sov-Cit Nuke could open it.
+You better find the code box."""
 
 [[objects]]
 vnum = 8005
@@ -70,6 +99,11 @@ weight = 10
 cost = 0
 wear_flags = ["take", "hold"]
 extra_flags = ["hum"]
+
+[[objects.extra_descs]]
+keywords = ["code", "box"]
+description = """
+The box looks like some kind of access device."""
 
 [[objects]]
 vnum = 8006
@@ -92,6 +126,12 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "damroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["bashball", "bat"]
+description = """
+This is the same type of bat used by the little spuggers
+to play bashball."""
 
 [[objects]]
 vnum = 8007
@@ -127,6 +167,12 @@ extra_flags = ["glow", "hum", "invis"]
   location = "hitroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["vibroblade"]
+description = """
+Obviously of alien manufacture, this blade enhances fighting
+and survival skills."""
+
 [[objects]]
 vnum = 8008
 keywords = ["vacuum", "cleaner", "two-handed"]
@@ -146,6 +192,12 @@ extra_flags = ["hum"]
   dice_number = 4
   dice_size = 4
 
+[[objects.extra_descs]]
+keywords = ["vacuum", "cleaner"]
+description = """
+This vacuum looks well built and will last you many years of
+cleaning pleasure."""
+
 [[objects]]
 vnum = 8009
 keywords = ["knife"]
@@ -162,6 +214,11 @@ wear_flags = ["take", "wield"]
   damage_type = "slash"
   dice_number = 2
   dice_size = 4
+
+[[objects.extra_descs]]
+keywords = ["knife"]
+description = """
+It is a knife. 'Nuff said. (Marvel joke)."""
 
 [[objects]]
 vnum = 8010
@@ -184,6 +241,11 @@ wear_flags = ["take", "wield"]
   location = "int"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["noodle"]
+description = """
+It looks like a noodle freshly made at the Olive Garden."""
+
 [[objects]]
 vnum = 8011
 keywords = ["judge", "club"]
@@ -205,6 +267,12 @@ wear_flags = ["take", "wield"]
   location = "damroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["judge", "club"]
+description = """
+It is a standard Justice Hall issue club.  Many a Perp's
+head has been bashed with this baby."""
+
 [[objects]]
 vnum = 8012
 keywords = ["vault", "key"]
@@ -217,6 +285,11 @@ cost = 0
 wear_flags = ["take", "hold"]
 extra_flags = ["hum"]
 
+[[objects.extra_descs]]
+keywords = ["vault", "key"]
+description = """
+The key looks like it could be useful."""
+
 [[objects]]
 vnum = 8013
 keywords = ["key", "card"]
@@ -227,6 +300,11 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take", "hold"]
+
+[[objects.extra_descs]]
+keywords = ["key", "card"]
+description = """
+It looks like it fits a slot somewhere."""
 
 [[objects]]
 vnum = 8014
@@ -248,6 +326,12 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "damroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["judge", "club"]
+description = """
+It is a head judge Justice Hall issue club.  Many a Perp's
+head has been bashed with this baby."""
 
 [[objects]]
 vnum = 8015
@@ -284,4 +368,3 @@ wear_flags = ["take", "wield"]
   flags = ["shocking"]
   dice_number = 2
   dice_size = 11
-

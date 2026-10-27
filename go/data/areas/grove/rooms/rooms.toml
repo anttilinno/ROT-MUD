@@ -103,6 +103,11 @@ on one of the trees."""
   vnum = 8907
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["tablet"]
+description = """
+This zone has been populated by Merc.  1993"""
+
 [[rooms]]
 vnum = 8904
 name = "The holy grove"
@@ -238,6 +243,14 @@ area through the trees, while paths lead away north and west."""
   vnum = 8908
   max = 9
 
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house."""
+
 [[rooms]]
 vnum = 8907
 name = "The holy grove"
@@ -256,6 +269,14 @@ really matter to you."""
   [[rooms.exits]]
   direction = "east"
   to_vnum = 8908
+
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house."""
 
 [[rooms]]
 vnum = 8908
@@ -282,6 +303,15 @@ patterns of the clouds as they gently drift across the sky."""
   direction = "west"
   to_vnum = 8907
 
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house. There is a terrace in front of the house,
+next to the low wing, which is almost completely windows."""
+
 [[rooms]]
 vnum = 8909
 name = "The croquet lawn"
@@ -302,6 +332,14 @@ noon."""
   flags = ["door", "closed"]
   to_vnum = 8910
 
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house."""
+
 [[rooms]]
 vnum = 8910
 name = "The foyer"
@@ -321,6 +359,15 @@ wall."""
   direction = "south"
   flags = ["door", "closed"]
   to_vnum = 8911
+
+[[rooms.extra_descs]]
+keywords = ["painting", "paintings"]
+description = """
+They are strange indeed, works of breathtaking precision depicting obviously
+impossible motifs, like a sky filled with headless men, all dressed in some
+black costume (including hats), or a lady standing, blue from the waist up, or
+some pieces of plankwood that seems to be melting away like snow, or a night
+sky with a dove-shaped hole of bright day sky in the middle."""
 
 [[rooms]]
 vnum = 8911
@@ -552,6 +599,21 @@ west there is a wide double door opening out onto the sunlit terrace."""
     vnum = 8916
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["painting", "paintings"]
+description = """
+There are many, many beautiful paintings of famous dragons of history and
+literature. There is a big one of Smaug, a group picture of Cuspidorian Toxic
+Dragons, a rather fearsome picture of Norse Chaos incarnate, a grainy black-
+and-white photograph of Vorgulremik the Steel Dragon, a romantic picture of
+Dalvenjah the Mindijaran and Allan the man become dragon. There are three
+empty frames labeled 'The Chimerical', 'The Mythical' and 'The Hypothetical',
+A panoramic picture of Strabo flying between the worlds dominate one wall,
+while a dragons-eye view of Pern (with dragons in the foreground, of course)
+fills another. There even are a few rare medieval renditions of the great
+beast of the Revelation. Over the head of the table hangs a rather modest
+portrait of a silver Dragon, sparkling with blue lightening, looking amused."""
+
 [[rooms]]
 vnum = 8919
 name = "The terrace"
@@ -625,4 +687,3 @@ that you are being torn to nothing, atom by atom, falling and falling
 and falling ...
 ...
 ."""
-

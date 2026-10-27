@@ -31,6 +31,11 @@ wear_flags = ["take", "neck"]
   location = "ac"
   modifier = -10
 
+[[objects.extra_descs]]
+keywords = ["necklace", "elven"]
+description = """
+Engraved on the back are the words: "Protect that which is important""""
+
 [[objects]]
 vnum = 14503
 keywords = ["potion", "elven"]
@@ -42,6 +47,12 @@ weight = 300
 cost = 2000
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["potion"]
+description = """
+Written on the seal of the bottle is a glyph. You believe that the glyph
+stands for "POISON""""
 
 [[objects]]
 vnum = 14504
@@ -127,6 +138,11 @@ weight = 10
 cost = 500
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map"]
+description = """
+The golden talent a large is at tree step then twenty plus twenty step south."""
+
 [[objects]]
 vnum = 14511
 keywords = ["candlestick"]
@@ -149,6 +165,12 @@ level = 0
 weight = 1
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["note", "quest"]
+description = """
+Find what is missing and tell someone on the wizlist what is missing and who
+has it.  DO NOT TELL ANYONE ELSE!!"""
 
 [[objects]]
 vnum = 14513
@@ -242,6 +264,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "wis"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["helmet"]
+description = """
+You see an Island Helmet.  Imprinted on the side is: Gapcio Industries"""
+
 [[objects]]
 vnum = 14518
 keywords = ["shield", "island"]
@@ -259,6 +286,11 @@ extra_flags = ["magic"]
   ac_bash = 6
   ac_slash = 6
   ac_exotic = 1
+
+[[objects.extra_descs]]
+keywords = ["shield", "island"]
+description = """
+You see an Island Shield.  Imprinted on the side is: Gapcio Industries"""
 
 [[objects]]
 vnum = 14519
@@ -285,6 +317,11 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 5
+
+[[objects.extra_descs]]
+keywords = ["island", "mace"]
+description = """
+You see a island mace.  Imprinted on the side is: Gapcio Industries"""
 
 [[objects]]
 vnum = 14520
@@ -460,6 +497,17 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["portrait"]
+description = """
+This portrait is of a sandy haired woman with penetrating wise eyes.
+The upturned lips signifies the possession of secret knowledge."""
+
+[[objects.extra_descs]]
+keywords = ["secret", "knowledge"]
+description = """
+This portrait is of Siren, the Goddess of the Mist."""
+
 [[objects]]
 vnum = 14532
 keywords = ["toy", "bow"]
@@ -587,4 +635,3 @@ extra_flags = ["glow", "magic"]
   [[objects.affects]]
   location = "con"
   modifier = 4
-

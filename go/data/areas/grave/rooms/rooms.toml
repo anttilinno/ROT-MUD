@@ -127,6 +127,12 @@ the graveyard.  An old tomb is here."""
   vnum = 3604
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3607
 name = "In a dusty Tomb"
@@ -165,6 +171,12 @@ the graveyard.  The path leads north and west.  An old tomb is here."""
   flags = ["door", "closed"]
   to_vnum = 3609
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3609
 name = "In a dusty Tomb"
@@ -202,6 +214,12 @@ the graveyard.  The path leads east and south.  An old tomb is here."""
   direction = "down"
   flags = ["door", "closed"]
   to_vnum = 3611
+
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
 
 [[rooms]]
 vnum = 3611
@@ -307,6 +325,12 @@ the graveyard.  The path leads south and west.  An old tomb is here."""
   flags = ["door", "closed"]
   to_vnum = 3615
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3615
 name = "In a dusty Tomb"
@@ -344,6 +368,12 @@ the graveyard.  The path leads north and south.  An old tomb is here."""
   direction = "down"
   flags = ["door", "closed"]
   to_vnum = 3617
+
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
 
 [[rooms]]
 vnum = 3617
@@ -387,6 +417,12 @@ the graveyard.  The path leads north and east.  An old tomb is here."""
   flags = ["door", "closed"]
   to_vnum = 3619
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3619
 name = "In a dusty Tomb"
@@ -428,6 +464,12 @@ the graveyard.  The path leads north and west.  An old tomb is here."""
   [[rooms.mob_resets]]
   vnum = 3605
   max = 3
+
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
 
 [[rooms]]
 vnum = 3639
@@ -471,6 +513,12 @@ the graveyard.  The path leads north and south.  An old tomb is here."""
   vnum = 3604
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3641
 name = "In a dusty Tomb"
@@ -508,6 +556,12 @@ the graveyard.  The path leads east and south.  An old tomb is here."""
   direction = "down"
   flags = ["door", "closed"]
   to_vnum = 3643
+
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
 
 [[rooms]]
 vnum = 3643
@@ -551,6 +605,12 @@ the graveyard.  The path leads north and west.  An old tomb is here."""
   vnum = 3605
   max = 3
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3645
 name = "In a dusty Tomb"
@@ -593,6 +653,12 @@ the graveyard.  The path leads south and west.  An old tomb is here."""
   flags = ["door", "closed"]
   to_vnum = 3647
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3647
 name = "In a dusty Tomb"
@@ -630,6 +696,12 @@ the graveyard.  The path leads north and east.  An old tomb is here."""
   direction = "down"
   flags = ["door", "closed"]
   to_vnum = 3649
+
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
 
 [[rooms]]
 vnum = 3649
@@ -669,6 +741,12 @@ the graveyard.  The path leads south and west.  An old tomb is here."""
   flags = ["door", "closed"]
   to_vnum = 3651
 
+[[rooms.extra_descs]]
+keywords = ["tomb", "stone"]
+description = """
+It is a large rectangular slab of dark grey stone that has been placed face
+up in the ground.  The name has been erased by the ravages of time."""
+
 [[rooms]]
 vnum = 3651
 name = "In a dusty Tomb"
@@ -685,4 +763,3 @@ The only exit appears to be up."""
   [[rooms.mob_resets]]
   vnum = 3605
   max = 3
-

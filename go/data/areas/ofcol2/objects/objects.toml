@@ -15,6 +15,12 @@ wear_flags = ["take", "wield"]
   dice_number = 1
   dice_size = 8
 
+[[objects.extra_descs]]
+keywords = ["handaxe", "hand", "axe"]
+description = """
+You see a finely made axe.  Iron, with a nice wooden shaft, this axe can
+withstand years of use."""
+
 [[objects]]
 vnum = 601
 keywords = ["meat", "cleaver"]
@@ -35,6 +41,11 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "damroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["meat", "cleaver"]
+description = """
+This meat cleaver is made of good steel."""
 
 [[objects]]
 vnum = 602
@@ -1457,4 +1468,3 @@ extra_flags = ["magic", "anti_evil"]
   [[objects.affects]]
   location = "damroll"
   modifier = 3
-

@@ -9,6 +9,11 @@ weight = 750
 cost = 400
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["raft"]
+description = """
+The raft looks very primitive."""
+
 [[objects]]
 vnum = 13501
 keywords = ["canoe"]
@@ -19,6 +24,11 @@ level = 0
 weight = 320
 cost = 900
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["canoe"]
+description = """
+The canoe is fairly light."""
 
 [[objects]]
 vnum = 13502
@@ -32,3 +42,9 @@ cost = 100
 wear_flags = ["take"]
 extra_flags = ["glow"]
 
+[[objects.extra_descs]]
+keywords = ["compass"]
+description = """
+Some letters have been scratched into the back.
+                WSES
+                WSWS"""

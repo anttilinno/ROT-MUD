@@ -15,6 +15,12 @@ temple spire is only a few meters below you."""
   direction = "down"
   to_vnum = 1036
 
+[[rooms.extra_descs]]
+keywords = ["rainbow"]
+description = """
+The rainbow softly glows with beams of light, in colours that defie
+description."""
+
 [[rooms]]
 vnum = 7701
 name = "On the Rainbow"
@@ -31,6 +37,12 @@ of Midgaard, which is now quite far away."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 7700
+
+[[rooms.extra_descs]]
+keywords = ["rainbow"]
+description = """
+The rainbow softly glows with beams of light, in colours that defie
+description."""
 
 [[rooms]]
 vnum = 7702
@@ -49,6 +61,12 @@ land surrounding it.  It seems to be miles below you."""
   direction = "down"
   to_vnum = 7701
 
+[[rooms.extra_descs]]
+keywords = ["rainbow"]
+description = """
+The rainbow softly glows with beams of light, in colours that
+defie description."""
+
 [[rooms]]
 vnum = 7703
 name = "On the Rainbow"
@@ -64,6 +82,12 @@ light.  The rainbow extends above and below you as far as you can see."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 7702
+
+[[rooms.extra_descs]]
+keywords = ["rainbow"]
+description = """
+The rainbow brightly glows with beams of light, in colours that defie any
+description."""
 
 [[rooms]]
 vnum = 7704
@@ -82,6 +106,24 @@ starlike motes of dust.  Ahead of you is a bridge."""
   direction = "down"
   to_vnum = 7703
 
+[[rooms.extra_descs]]
+keywords = ["bridge"]
+description = """
+The colors of the rainbow seem to converge into a glowing bridge that leads
+to a massive white gate."""
+
+[[rooms.extra_descs]]
+keywords = ["motes", "star", "stars", "dust"]
+description = """
+The star-like motes dance before your eyes.  They are incredibly beautiful yet
+intangible -- your hand passes right through them."""
+
+[[rooms.extra_descs]]
+keywords = ["rainbow"]
+description = """
+The rainbow brilliantly glows with beams of blinding light, in colours that
+sweep together and merge before your eyes."""
+
 [[rooms]]
 vnum = 7705
 name = "The Glowing Bridge at the Rainbow's End"
@@ -99,6 +141,29 @@ glow interrupted only by the passing of starlike dust motes before your eyes."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 7704
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+The gate towers tens of feet above your heads.  Beyond it is a field of utter
+blackness, from which the motes of light seem to issue forth."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge"]
+description = """
+The bridge glows with an unearthly light."""
+
+[[rooms.extra_descs]]
+keywords = ["motes", "star", "stars", "dust"]
+description = """
+The star-like motes dance before your eyes.  They are incredibly beautiful yet
+intangible -- your hand passes right through them."""
+
+[[rooms.extra_descs]]
+keywords = ["rainbow"]
+description = """
+The rainbow seems to be forming directly from the light of the bridge.  It
+drops out of sight below you."""
 
 [[rooms]]
 vnum = 7706
@@ -125,6 +190,24 @@ stars, and occasional flashes of of light."""
     [[rooms.mob_resets.equips]]
     vnum = 7700
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+The plaque reads:
+
+Let this gate stand to protect mortal man for all time against the perils of
+the outer planes of existence and the creatures fair and foul that dwell within.
+
+(The Astral Plane and Githyanki Keep were written by Andersen.)"""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+You see a huge, glowing gate wrought from an incredibly hard translucent
+material.  Each of the intricately carved bars of this mighty gate are about
+as thick as a man's wrist, rising from the floor to a height of forty feet.
+A plaque is inset into the wall next to one side of the gate."""
 
 [[rooms]]
 vnum = 7707
@@ -162,6 +245,13 @@ through the gate to the south."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 7712
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+>From here the pearly-coloured gate seems very small and insubstantial.  Through
+its bars you can see the Astral Guardian, protecting your world from the perils
+of this plane of existence."""
 
 [[rooms]]
 vnum = 7708
@@ -1666,6 +1756,11 @@ leading into the keep hewn from stone."""
   direction = "down"
   to_vnum = 7745
 
+[[rooms.extra_descs]]
+keywords = ["steel"]
+description = """
+The door is made from a set of rusting steel plates set deep into the stone."""
+
 [[rooms]]
 vnum = 7751
 name = "A guard station"
@@ -1715,6 +1810,16 @@ of the keep.
     vnum = 7715
     wear_loc = "body"
 
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is made from a set of iron plates set deep into the stone."""
+
+[[rooms.extra_descs]]
+keywords = ["steel"]
+description = """
+The door is made from a set of rusting steel plates set deep into the stone."""
+
 [[rooms]]
 vnum = 7752
 name = "A grey road"
@@ -1733,6 +1838,11 @@ would commonly associate with a normal city.
   direction = "east"
   flags = ["door", "closed"]
   to_vnum = 7751
+
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is made from a set of iron plates set deep into the stone."""
 
 [[rooms]]
 vnum = 7753
@@ -1770,6 +1880,16 @@ and west lead into stone buildings."""
     [[rooms.mob_resets.equips]]
     vnum = 7706
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is fashioned from many iron plates and set deep into the stone wall."""
+
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
 
 [[rooms]]
 vnum = 7754
@@ -1833,6 +1953,13 @@ massive building and a pair of large doors."""
     vnum = 7717
     wear_loc = "arms"
 
+[[rooms.extra_descs]]
+keywords = ["doors", "metal"]
+description = """
+The doors are formed from a silvery substance that feels very hard yet almost
+slippery to the touch.  They are covered in images in bas-relief, depicting
+scenes of combat between humans and strange tentacle-mouthed humanoids."""
+
 [[rooms]]
 vnum = 7756
 name = "A grey road"
@@ -1856,6 +1983,11 @@ leads into a tall stone building."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 7755
+
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
 
 [[rooms]]
 vnum = 7757
@@ -1881,6 +2013,11 @@ to the north leads into a tall stone building."""
   direction = "west"
   to_vnum = 7756
 
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
+
 [[rooms]]
 vnum = 7758
 name = "A grey road"
@@ -1904,6 +2041,11 @@ door in a large stone building."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 7759
+
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is made from many hammered iron plates, set deep into the stone wall."""
 
 [[rooms]]
 vnum = 7759
@@ -1955,6 +2097,11 @@ the east is a door in a large stone building."""
   direction = "west"
   to_vnum = 7761
 
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is made from many hammered iron plates, set deep into the stone wall."""
+
 [[rooms]]
 vnum = 7761
 name = "A grey road"
@@ -1979,6 +2126,16 @@ A door to the north leads into a small stone building."""
   direction = "west"
   flags = ["door", "closed"]
   to_vnum = 7751
+
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is made from a set of iron plates set deep into the stone."""
+
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
 
 [[rooms]]
 vnum = 7762
@@ -2015,6 +2172,11 @@ burn dimly in sconces here and there."""
     vnum = 7722
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
+
 [[rooms]]
 vnum = 7763
 name = "A small building"
@@ -2050,6 +2212,11 @@ burn dimly in sconces here and there."""
     vnum = 7722
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
+
 [[rooms]]
 vnum = 7764
 name = "A large dwelling"
@@ -2076,6 +2243,11 @@ are charcoal stencils of pentagrams and various other ominous sigils."""
     [[rooms.mob_resets.equips]]
     vnum = 7703
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
 
 [[rooms]]
 vnum = 7765
@@ -2121,6 +2293,11 @@ doorway to the north.  An iron door stands to the west."""
     vnum = 7715
     wear_loc = "body"
 
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is made from many hammered iron plates, set deep into the stone wall."""
+
 [[rooms]]
 vnum = 7766
 name = "The Forge"
@@ -2144,6 +2321,12 @@ quenching hot metal.
   [[rooms.exits]]
   direction = "south"
   to_vnum = 7765
+
+[[rooms.extra_descs]]
+keywords = ["door", "furnace"]
+description = """
+The entire furnace is glowing white-hot to the touch.
+The furnace door looks too hot to even attempt to open."""
 
 [[rooms]]
 vnum = 7767
@@ -2188,6 +2371,11 @@ doorway to the south.  An iron door stands to the west."""
     [[rooms.mob_resets.equips]]
     vnum = 7715
     wear_loc = "body"
+
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is made from many hammered iron plates, set deep into the stone wall."""
 
 [[rooms]]
 vnum = 7768
@@ -2288,6 +2476,11 @@ of taking prisoners, and those that they do capture do not last long.
     vnum = 7715
     wear_loc = "body"
 
+[[rooms.extra_descs]]
+keywords = ["door", "iron"]
+description = """
+The door is fashioned from many iron plates and set deep into the stone wall."""
+
 [[rooms]]
 vnum = 7770
 name = "The cellblock"
@@ -2312,6 +2505,12 @@ to have been used recently.
   flags = ["door", "closed"]
   to_vnum = 7772
 
+[[rooms.extra_descs]]
+keywords = ["door", "cell"]
+description = """
+The cell door is wooden and about 4' high, with a slot in the bottom to pass
+food underneath to the prisoner."""
+
 [[rooms]]
 vnum = 7771
 name = "A cramped cell"
@@ -2329,6 +2528,12 @@ You are in a tiny, cold, dank cell.
   vnum = 7717
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["door", "cell"]
+description = """
+The cell door is wooden and about 4' high, with a slot in the bottom to pass
+food underneath to the prisoner."""
+
 [[rooms]]
 vnum = 7772
 name = "A tiny cell"
@@ -2345,6 +2550,12 @@ You are in a cold, dank, cramped cell.
   [[rooms.mob_resets]]
   vnum = 7716
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["door", "cell"]
+description = """
+The cell door is wooden and about 4' high, with a slot in the bottom to pass
+food underneath to the prisoner."""
 
 [[rooms]]
 vnum = 7773
@@ -2372,6 +2583,11 @@ are charcoal stencils of pentagrams and various other ominous sigils."""
     [[rooms.mob_resets.equips]]
     vnum = 7703
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["door", "wooden"]
+description = """
+The door is thick, made from a knotted and twisted greyish wood."""
 
 [[rooms]]
 vnum = 7774
@@ -2417,6 +2633,23 @@ to the south."""
     vnum = 7703
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["doors", "metal"]
+description = """
+The doors are formed from a silvery substance that feels very hard yet almost
+slippery to the touch.  They are covered in images in bas-relief, depicting
+scenes of combat between humans and strange tentacle-mouthed humanoids."""
+
+[[rooms.extra_descs]]
+keywords = ["weapons"]
+description = """
+Massive pole arms, spears, mighty swords, all kinds of death-dealing devices."""
+
+[[rooms.extra_descs]]
+keywords = ["armor", "suits"]
+description = """
+The suits of armor are very intricately and ornately fashioned splint mail."""
+
 [[rooms]]
 vnum = 7775
 name = "North End of the Hall"
@@ -2436,6 +2669,21 @@ room to the north."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 7774
+
+[[rooms.extra_descs]]
+keywords = ["arch", "archway", "door"]
+description = """
+The archway is shrouded in a strange black mist that obscures your vision."""
+
+[[rooms.extra_descs]]
+keywords = ["weapons"]
+description = """
+Massive pole arms, spears, mighty swords, all kinds of death-dealing devices."""
+
+[[rooms.extra_descs]]
+keywords = ["armor", "suits"]
+description = """
+The suits of armor are very intricately and ornately fashioned splint mail."""
 
 [[rooms]]
 vnum = 7776
@@ -2503,6 +2751,11 @@ of a series of steps."""
     vnum = 7718
     wear_loc = "hands"
 
+[[rooms.extra_descs]]
+keywords = ["arch", "archway", "door"]
+description = """
+The archway is shrouded in a strange black mist that obscures your vision."""
+
 [[rooms]]
 vnum = 7777
 name = "Before the Altar"
@@ -2538,6 +2791,21 @@ by the horrible presence which stands before you."""
     vnum = 7702
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["hole", "holes"]
+description = """
+The holes have passed countless amounts of blood down below the altar."""
+
+[[rooms.extra_descs]]
+keywords = ["blood", "bloodstains", "stains"]
+description = """
+The stains of blood run down off the altar towards your feet, oozing quietly."""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+The altar is a huge sacrificial altar covered in bloodstains."""
+
 [[rooms]]
 vnum = 7778
 name = "A Gateway to the Underworld"
@@ -2557,6 +2825,18 @@ and long-dead beings."""
   flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 7779
   key = 7724
+
+[[rooms.extra_descs]]
+keywords = ["field", "gateway"]
+description = """
+The field pulses and feeds on the blood dripping from above.
+
+A tangible wave of hatred washes over you, striking fear into your very soul."""
+
+[[rooms.extra_descs]]
+keywords = ["blood"]
+description = """
+The blood drips from above your head and falls through the field..."""
 
 [[rooms]]
 vnum = 7779
@@ -2583,4 +2863,3 @@ begins to coalesce before you."""
     [[rooms.mob_resets.equips]]
     vnum = 7725
     inv_only = true
-

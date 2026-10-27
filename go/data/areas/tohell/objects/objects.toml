@@ -111,6 +111,20 @@ extra_flags = ["hum", "invis", "magic", "nodrop", "noremove"]
   location = "hit"
   modifier = 50
 
+[[objects.extra_descs]]
+keywords = ["sword"]
+description = """
+The blade of the sword is a full meter long and straight as an arrow, with
+lightly-fluted sides.  Both edges are keened down to perfect lines, invisibly
+sharp.  Perfection like this could have only been forged by a god.  The black
+hilt is contrasted only by the faint symbol of a white arrow.
+Upon the blade is engraved a poem:
+
+                      Farslayer howls across the world
+                      For thy heart, for thy heart, who hast wronged me!
+                      Vengeance is his who casts the blade
+                      Yet he will in the end no triumph see."""
+
 [[objects]]
 vnum = 10405
 keywords = ["angel's", "skull"]
@@ -927,6 +941,13 @@ cost = 5000
 wear_flags = ["take", "hold"]
 extra_flags = ["melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["fire", "opal", "gem"]
+description = """
+The fire opal is a nicely-polished round gem, with orange, gold, and red
+mixed together like the heart of flame.  You can almost feel the hellfire
+from whence it came."""
+
 [[objects]]
 vnum = 10450
 keywords = ["hellstone", "hell", "stone"]
@@ -939,3 +960,9 @@ cost = 10000
 wear_flags = ["take", "hold"]
 extra_flags = ["evil", "melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["hellstone", "hell", "stone"]
+description = """
+The hellstones are mined from the deepest pits of Hell at the cost of the
+blood, sweat, and pain of hundreds of damned souls.  You feel vaguely ill
+as you gaze into its lustrous black heart."""

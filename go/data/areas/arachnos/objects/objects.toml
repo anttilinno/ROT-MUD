@@ -73,3 +73,7 @@ cost = 700
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["potion", "blue"]
+description = """
+It has a nice sky blue colour and a smell like peppermint."""

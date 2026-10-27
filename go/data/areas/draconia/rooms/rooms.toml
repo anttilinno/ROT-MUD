@@ -24,6 +24,11 @@ it is raining.  You think it might be a good idea to turn back into the grove.""
     vnum = 2231
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+The gate is tall and secure.  Whoever built it values privacy."""
+
 [[rooms]]
 vnum = 2202
 name = "The Foyer"
@@ -44,6 +49,12 @@ quickly look away."""
   [[rooms.mob_resets]]
   vnum = 2200
   max = 12
+
+[[rooms.extra_descs]]
+keywords = ["painting"]
+description = """
+This painting depicts the grisly death of a foolish human.  You hope you do
+not share his fate."""
 
 [[rooms]]
 vnum = 2203
@@ -126,6 +137,16 @@ You trudge down the hallway.  You notice doors to the east and west."""
     vnum = 2200
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+It says "STORAGE""""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says "NURSERY" in bold letters."""
+
 [[rooms]]
 vnum = 2205
 name = "Nursery"
@@ -182,6 +203,11 @@ This room is covered with dust, it looks as if no one has been here in ages."""
   vnum = 2200
   max = 12
 
+[[rooms.extra_descs]]
+keywords = ["dust"]
+description = """
+As you look closely at the dust, you notice the outline of a trapdoor!"""
+
 [[rooms]]
 vnum = 2207
 name = "End of the Hallway"
@@ -205,6 +231,14 @@ You see a sign at the base of the staircase."""
   [[rooms.mob_resets]]
   vnum = 2227
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+    This area is kind of tough.  You probably shouldn't go up these stairs
+    alone if you are under 18th level, or at all if you under 14th level.
+    Have fun! -- Wench"""
 
 [[rooms]]
 vnum = 2208
@@ -715,6 +749,11 @@ strange coffin lying against the wall."""
     vnum = 2271
     wear_loc = "hands"
 
+[[rooms.extra_descs]]
+keywords = ["coffin"]
+description = """
+A coffin lies a against the east wall.  It is closed."""
+
 [[rooms]]
 vnum = 2223
 name = "Entrance to the Great Hall"
@@ -845,6 +884,12 @@ of dragons.  You see a sign on the door."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 2224
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Congratulations on making it this far!  Watch out, it gets a little
+    nasty here... :) - Wench"""
 
 [[rooms]]
 vnum = 2230
@@ -1062,6 +1107,21 @@ path leads up the mountain.  The small opening is back to the north."""
   vnum = 2200
   max = 12
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+         This is a bottomless pit cleverly disguised as a well.  People have
+fallen in and never been heard from again.  Trust me, you don't want to go
+down there.
+                        The All Powerful Well Keeper"""
+
+[[rooms.extra_descs]]
+keywords = ["well"]
+description = """
+You peer over the side of the well.  It looks VERY, VERY deep.  It appears
+to be ENDLESS."""
+
 [[rooms]]
 vnum = 2240
 name = "A path"
@@ -1142,6 +1202,11 @@ fairy tales.  Well, if you're scared, you can always go down the mountain."""
   direction = "down"
   to_vnum = 2242
 
+[[rooms.extra_descs]]
+keywords = ["door", "platinum"]
+description = """
+A huge platinum door separates you from harm"""
+
 [[rooms]]
 vnum = 2244
 name = "Well"
@@ -1158,4 +1223,3 @@ O
    I warned you!  You have fallen into the bottomless pit.  You life flashes
 right before your eyes.  Pretty pathetic isn't it?  Next time you'll know
 to listen to the God of Laughs."""
-

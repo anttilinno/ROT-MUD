@@ -18,6 +18,17 @@ A small sign is posted here."""
   direction = "south"
   to_vnum = 2301
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+[]================================[]
+     |      BEWARE!      | Hope you   |
+     |   Travellers are  | enjoy it!  |
+     |  advised to stay  | <------->  |
+     |   in groups for   |  Skurge    |
+     |      safety.      | Ragnarok   |
+    []================================[]"""
+
 [[rooms]]
 vnum = 2301
 name = "The dark woods"
@@ -59,6 +70,11 @@ Something has been scrawled in the dirt in blood here."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 2303
+
+[[rooms.extra_descs]]
+keywords = ["blood", "dirt", "scrawl"]
+description = """
+BeWAre tHe SwAmP oGreS......"""
 
 [[rooms]]
 vnum = 2303
@@ -385,6 +401,11 @@ towards the west."""
   vnum = 2302
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["pile"]
+description = """
+It appears to be some sort of nest......"""
+
 [[rooms]]
 vnum = 2317
 name = "The hills overlooking the shore"
@@ -577,6 +598,17 @@ There are small inscriptions on the rock at the base of the portal."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 2323
+
+[[rooms.extra_descs]]
+keywords = ["portal", "blue"]
+description = """
+You see a swirling blue portal of light. You think you can see glimpses of
+something moving on the "other side"."""
+
+[[rooms.extra_descs]]
+keywords = ["small", "inscriptions", "inscription"]
+description = """
+"Enter all ye who wish to join the Brotherhood!""""
 
 [[rooms]]
 vnum = 2325
@@ -1630,6 +1662,13 @@ face."""
     vnum = 2365
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["gate", "gates", "ice", "huge"]
+description = """
+The gates to the city are made almost completely of ice. Looking closely, you
+can see intricate carvings in the gates. They appear to be of creatures that
+are half man and half bull."""
+
 [[rooms]]
 vnum = 2363
 name = "The city streets of Mahn-Tor"
@@ -1757,6 +1796,16 @@ A small sign hangs outside the tavern."""
     vnum = 2365
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["sign", "small"]
+description = """
+[]=============[]
+ |   The Inn   |
+ |    of the   |
+ |    Broken   |
+ |     Horn    |
+[]=============[]"""
+
 [[rooms]]
 vnum = 2367
 name = "The Square of Mahn-Tor"
@@ -1808,6 +1857,14 @@ A small sign hangs outside the store."""
     [[rooms.mob_resets.equips]]
     vnum = 2368
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+[]=========[]
+ |  Equip  |
+ |   Shop  |
+[]=========[]"""
 
 [[rooms]]
 vnum = 2368
@@ -1943,6 +2000,11 @@ east."""
     vnum = 2304
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["red"]
+description = """
+It looks like it leads back to the hall."""
+
 [[rooms]]
 vnum = 2373
 name = "Darkoth's Dark Study"
@@ -1981,6 +2043,11 @@ is used for unholy purposes. A black door leads east."""
     [[rooms.mob_resets.equips]]
     vnum = 2309
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["black"]
+description = """
+It looks like it leads back to the hall."""
 
 [[rooms]]
 vnum = 2374
@@ -2024,6 +2091,11 @@ lives here. A white door leads east."""
     [[rooms.mob_resets.equips]]
     vnum = 2314
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["white"]
+description = """
+It looks like it leads out to the hall."""
 
 [[rooms]]
 vnum = 2375
@@ -2360,6 +2432,11 @@ The hall leads south and west into other parts of the keep."""
     vnum = 2376
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["throne", "huge", "gold", "golden"]
+description = """
+The golden throne is huge. It takes up the whole wall........."""
+
 [[rooms]]
 vnum = 2384
 name = "The Great Hall"
@@ -2457,6 +2534,16 @@ door is to the west. To the east, you see a heavy stone door."""
     vnum = 2359
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["huge", "stone"]
+description = """
+A very formidable looking door."""
+
+[[rooms.extra_descs]]
+keywords = ["gold"]
+description = """
+Looks like the back of a secret door of sorts."""
+
 [[rooms]]
 vnum = 2386
 name = "Entry to the Royal Chambers"
@@ -2480,6 +2567,11 @@ huge stone door stands in the west wall."""
   flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2385
   key = 2359
+
+[[rooms.extra_descs]]
+keywords = ["door", "huge", "stone"]
+description = """
+A huge stone door......."""
 
 [[rooms]]
 vnum = 2387
@@ -2545,6 +2637,16 @@ itself leads south and north."""
   to_vnum = 2372
   key = 2351
 
+[[rooms.extra_descs]]
+keywords = ["yellow"]
+description = """
+You see a yellow door. It has the name "Sumaron" written on it."""
+
+[[rooms.extra_descs]]
+keywords = ["red"]
+description = """
+You see a red door. It has the name "Gorak" written on it."""
+
 [[rooms]]
 vnum = 2389
 name = "The guarded hall"
@@ -2573,6 +2675,16 @@ black door. The hall itself leads north and south."""
   flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2373
   key = 2352
+
+[[rooms.extra_descs]]
+keywords = ["maroon"]
+description = """
+You see a maroon door here. It has the name "Amyrok" written on it."""
+
+[[rooms.extra_descs]]
+keywords = ["black"]
+description = """
+You see a black door. It has the name "Darkoth" inscribed on it."""
 
 [[rooms]]
 vnum = 2390
@@ -2612,6 +2724,11 @@ A yellow door leads west."""
     [[rooms.mob_resets.equips]]
     vnum = 2324
     wear_loc = "neck2"
+
+[[rooms.extra_descs]]
+keywords = ["yellow"]
+description = """
+It looks like it leads back to the hall."""
 
 [[rooms]]
 vnum = 2391
@@ -2653,6 +2770,11 @@ maroon door leads west."""
     vnum = 2319
     wear_loc = "waist"
 
+[[rooms.extra_descs]]
+keywords = ["maroon"]
+description = """
+It looks like it leads back to the hall."""
+
 [[rooms]]
 vnum = 2392
 name = "The guarded hall"
@@ -2682,6 +2804,16 @@ south."""
   flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2374
   key = 2353
+
+[[rooms.extra_descs]]
+keywords = ["green"]
+description = """
+You see a green door here. It has the name "Nasturn" written on it."""
+
+[[rooms.extra_descs]]
+keywords = ["white"]
+description = """
+You see a white door here. It has the name "Tyrgoth" inscribed on it."""
 
 [[rooms]]
 vnum = 2393
@@ -2758,6 +2890,11 @@ indoor garden. A green door leads west."""
     [[rooms.mob_resets.equips]]
     vnum = 2329
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["green"]
+description = """
+It looks like it leads back to the hall."""
 
 [[rooms]]
 vnum = 2395
@@ -2851,6 +2988,16 @@ itself leads north back along the rows of doors."""
   to_vnum = 2399
   key = 2354
 
+[[rooms.extra_descs]]
+keywords = ["grey"]
+description = """
+You see a grey door here. It has the name "Dorgar" written on it."""
+
+[[rooms.extra_descs]]
+keywords = ["brown"]
+description = """
+You see a brown door here. It has the name "Belrak" written on it."""
+
 [[rooms]]
 vnum = 2398
 name = "Dorgar's Dismal Domicile"
@@ -2889,6 +3036,11 @@ nothing has ever entered this room and ever left again. A grey door leads west."
     [[rooms.mob_resets.equips]]
     vnum = 2339
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["grey"]
+description = """
+It looks like it leads back to the hall."""
 
 [[rooms]]
 vnum = 2399
@@ -2929,3 +3081,7 @@ appears as though a woodsman of some sorts lives here. A brown door leads east."
     vnum = 2334
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["brown"]
+description = """
+It looks like it leads to the hall."""

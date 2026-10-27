@@ -322,6 +322,11 @@ wear_flags = ["take", "legs"]
   ac_slash = 4
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["pants", "black", "leather"]
+description = """
+They're worn, but they look suprisingly tough."""
+
 [[objects]]
 vnum = 2118
 keywords = ["switchblade", "knife"]
@@ -364,3 +369,7 @@ wear_flags = ["take", "wield"]
   location = "hitroll"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["bottle", "broken"]
+description = """
+It appears to be a broken wine bottle, but what do you know about brewing?"""

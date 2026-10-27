@@ -2035,3 +2035,19 @@ is here with a sign that reads "{BBert's Boats{x".
     vnum = 13502
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+               NO FISHING"""
+
+[[rooms.extra_descs]]
+keywords = ["brass", "plaque"]
+description = """
++-------------------+
+| +---------------+ |
+| | SACRIFICE.ARE | |
+| |      by       | |
+| |   Vengeance   | |
+| +---------------+ |
++--Realms-Of-Thoth--+"""

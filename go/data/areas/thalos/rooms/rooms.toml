@@ -1324,6 +1324,13 @@ for so long.  There is a small plaque on the stones."""
     vnum = 5202
     wear_loc = "hands"
 
+[[rooms.extra_descs]]
+keywords = ["sign", "plaque"]
+description = """
+This extension to Thalos, along with the dwarf forest, is made by Hatchet for
+any Merc Mud.
+copyright 1992"""
+
 [[rooms]]
 vnum = 5255
 name = "A back alley"
@@ -1586,6 +1593,12 @@ vomit."""
   direction = "south"
   to_vnum = 5269
 
+[[rooms.extra_descs]]
+keywords = ["skeleton", "skeletons"]
+description = """
+Something is strange about these skeletons.  Upon further investigation, these
+skeletons appear illusionary."""
+
 [[rooms]]
 vnum = 5269
 name = "A small ugly cave"
@@ -1602,6 +1615,19 @@ Some writings are on this wall."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 5270
+
+[[rooms.extra_descs]]
+keywords = ["skeleton", "skeletons"]
+description = """
+Something is strange about these skeletons.  Upon further investigation, these
+skeletons appear illusionary."""
+
+[[rooms.extra_descs]]
+keywords = ["writings", "writing", "words"]
+description = """
+This cave along with the valley and dwarf forest is made by Hatchet for any
+Merc Mud.
+copyright 1992"""
 
 [[rooms]]
 vnum = 5270
@@ -1635,6 +1661,13 @@ one back up north.  All around you, you see skeletons."""
     [[rooms.mob_resets.equips]]
     vnum = 5100
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["skeleton", "skeletons"]
+description = """
+Something is strange about these skeletons.  Upon further investigation, these
+skeletons appear illusionary.  In fact, through the skeletons, you see a
+secret door!!"""
 
 [[rooms]]
 vnum = 5271
@@ -1828,4 +1861,3 @@ The trail leads north."""
   [[rooms.exits]]
   direction = "north"
   to_vnum = 5279
-

@@ -72,6 +72,13 @@ extra_flags = ["hum", "bless"]
   dice_number = 4
   dice_size = 10
 
+[[objects.extra_descs]]
+keywords = ["scimitar", "blade"]
+description = """
+It is quite heavy.  The blade is made of some metal that you can't even
+spell.  The edge of the blade looks as if it could cut through anything
+or anyone."""
+
 [[objects]]
 vnum = 3006
 keywords = ["stone"]
@@ -104,6 +111,11 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["nopurge"]
+
+[[objects.extra_descs]]
+keywords = ["pit"]
+description = """
+This is where you put money and items to help other travelers."""
 
 [[objects]]
 vnum = 3011
@@ -359,6 +371,18 @@ weight = 40
 cost = 75
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["letters"]
+description = """
+They say, "Use 'hold lantern' to activate.""""
+
+[[objects.extra_descs]]
+keywords = ["lantern"]
+description = """
+It is a large and robust but somewhat battered oil lantern made from brass,
+equipped with a handle to make it handy and a hood to protect its flame.
+Some letters have been scratched on its bottom."""
+
 [[objects]]
 vnum = 3032
 keywords = ["bag"]
@@ -393,6 +417,11 @@ cost = 1190
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["scroll"]
+description = """
+Use this scroll to remove magical curses."""
+
 [[objects]]
 vnum = 3040
 keywords = ["scroll", "identify"]
@@ -404,6 +433,17 @@ weight = 10
 cost = 890
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["scroll", "identify"]
+description = """
+The scroll has a magic formula drawn upon it:
+     ???
+    ?   ?
+       ?
+      ?
+      ?
+      *"""
 
 [[objects]]
 vnum = 3041
@@ -417,6 +457,11 @@ cost = 220
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["potion", "yellow"]
+description = """
+The potion has a small label 'Detect The Invisible'."""
+
 [[objects]]
 vnum = 3042
 keywords = ["scroll", "recall"]
@@ -428,6 +473,11 @@ weight = 20
 cost = 2900
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["scroll"]
+description = """
+The scroll has written a formula of 'Word of Recall' upon it."""
 
 [[objects]]
 vnum = 3043
@@ -449,6 +499,11 @@ extra_flags = ["magic"]
   location = "ac"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["ring"]
+description = """
+It's a silver ring set with a gleaming moonstone."""
+
 [[objects]]
 vnum = 3044
 keywords = ["wand", "magic", "missile", "missiles"]
@@ -460,6 +515,11 @@ weight = 10
 cost = 320
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["wand"]
+description = """
+It has a little note that says 'point this end at target'."""
 
 [[objects]]
 vnum = 3045
@@ -523,6 +583,11 @@ weight = 750
 cost = 400
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["raft"]
+description = """
+The raft looks very primitive."""
+
 [[objects]]
 vnum = 3051
 keywords = ["canoe"]
@@ -533,6 +598,11 @@ level = 0
 weight = 320
 cost = 900
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["canoe"]
+description = """
+The canoe is fairly light."""
 
 [[objects]]
 vnum = 3052
@@ -1075,6 +1145,11 @@ weight = 10
 cost = 8
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["cup"]
+description = """
+It is a small simple cup."""
+
 [[objects]]
 vnum = 3101
 keywords = ["coffee", "cup"]
@@ -1086,6 +1161,11 @@ weight = 10
 cost = 6
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["cup"]
+description = """
+It is a small simple cup."""
+
 [[objects]]
 vnum = 3102
 keywords = ["water", "cup"]
@@ -1096,6 +1176,11 @@ level = 0
 weight = 10
 cost = 1
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["cup"]
+description = """
+It is a large simple cup."""
 
 [[objects]]
 vnum = 3105
@@ -1278,6 +1363,11 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["key", "iron"]
+description = """
+The iron key is not special."""
+
 [[objects]]
 vnum = 3121
 keywords = ["key", "rusty"]
@@ -1288,6 +1378,11 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["key", "rusty"]
+description = """
+The key is a fairly large rusty key.  You notice some fresh dirt on it."""
 
 [[objects]]
 vnum = 3122
@@ -1300,6 +1395,11 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["key", "wooden"]
+description = """
+The wooden key is not special."""
+
 [[objects]]
 vnum = 3123
 keywords = ["key", "brass"]
@@ -1310,6 +1410,11 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["key", "brass"]
+description = """
+The brass key is small and looks like it fits a very complicated lock."""
 
 [[objects]]
 vnum = 3124
@@ -1328,6 +1433,15 @@ wear_flags = ["take", "wield"]
   flags = ["sharp"]
   dice_number = 2
   dice_size = 12
+
+[[objects.extra_descs]]
+keywords = ["sword", "long"]
+description = """
+This is the ceremonial sword of the Mayor of Midgaard.
+A
+13 20
+A
+12 20"""
 
 [[objects]]
 vnum = 3129
@@ -1350,6 +1464,16 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["drawer"]
+description = """
+You notice a keyhole in the drawer."""
+
+[[objects.extra_descs]]
+keywords = ["desk"]
+description = """
+The desk looks very sparse, there is a drawer on the left side."""
+
 [[objects]]
 vnum = 3131
 keywords = ["safe"]
@@ -1359,6 +1483,11 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["safe"]
+description = """
+The safe is very heavy."""
 
 [[objects]]
 vnum = 3132
@@ -1371,6 +1500,11 @@ weight = 0
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["silver"]
+description = """
+Looks like at least a thousand coins."""
+
 [[objects]]
 vnum = 3133
 keywords = ["city", "key"]
@@ -1382,6 +1516,13 @@ weight = 250
 cost = 100
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["city", "key"]
+description = """
+It is probably the biggest key you have seen in your life. It is made from
+polished gold and has various patterns on it along with the Midgaard Coat of
+Arms."""
+
 [[objects]]
 vnum = 3134
 keywords = ["bench"]
@@ -1392,6 +1533,13 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["bench"]
+description = """
+It is a quite heavy but very comfortable bench.  It is placed with its front
+towards the river so you can sit and watch the river and the houses on the
+other side."""
+
 [[objects]]
 vnum = 3135
 keywords = ["fountain", "water"]
@@ -1401,6 +1549,11 @@ item_type = "fountain"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["fountain"]
+description = """
+It is very nice.  Made from fine white marble."""
 
 [[objects]]
 vnum = 3136
@@ -1424,6 +1577,11 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["key", "steel"]
+description = """
+A key of this size must fit a very strong lock."""
+
 [[objects]]
 vnum = 3138
 keywords = ["skin", "water", "buffalo"]
@@ -1445,6 +1603,20 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["letter", "resignation"]
+description = """
+The letter is written in a bold and feminine Carolinian hand.
+
+    To whom it may concern,
+
+        Merc Industries has installed a new no-rent save and quit
+        system.  Apparently one can now save and quit at any time
+        from anywhere inside a town or out.  My services here are
+        no longer required.
+
+    Diana the Receptionist"""
+
 [[objects]]
 vnum = 3140
 keywords = ["notice", "liquidation", "bank"]
@@ -1454,6 +1626,20 @@ item_type = "furniture"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["notice", "liquidation", "bank"]
+description = """
+The letter is written in a reserved and dignified Spencer hand.
+
+    To whom it may concern,
+
+        Merc Industries has charmed your money.  Apparently one's
+        gold will remain close, even beyond death. We are closing
+        down our offices and ATM machines.  Our services here are
+        no longer required.
+
+    Midgaard City Bank"""
 
 [[objects]]
 vnum = 3150
@@ -1466,6 +1652,11 @@ weight = 10
 cost = 12
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["coffee"]
+description = """
+It's a nice flavorful blend, just right for late-night mudding sessions."""
+
 [[objects]]
 vnum = 3151
 keywords = ["soup", "bowl"]
@@ -1476,6 +1667,11 @@ level = 0
 weight = 20
 cost = 10
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["soup"]
+description = """
+This looks like just the thing for a cold!"""
 
 [[objects]]
 vnum = 3152
@@ -1488,6 +1684,12 @@ weight = 30
 cost = 14
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["stew", "bowl"]
+description = """
+This is Kate's special stew, guaranteed to keep hunger pangs away for many
+hours.  Care for a bite?"""
+
 [[objects]]
 vnum = 3153
 keywords = ["biscuit"]
@@ -1499,6 +1701,11 @@ weight = 10
 cost = 5
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["biscuit"]
+description = """
+A nice, soft biscuit with just enough butter.  Better buy two."""
+
 [[objects]]
 vnum = 3154
 keywords = ["beer", "bottle", "killian", "irish", "red"]
@@ -1509,6 +1716,12 @@ level = 0
 weight = 20
 cost = 20
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["beer", "bottle"]
+description = """
+It's a fine beer for serious drinkers, complete with the famous horse head
+logo.  Worth every penny."""
 
 [[objects]]
 vnum = 3161
@@ -1532,6 +1745,51 @@ weight = 10
 cost = 500
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map", "midgaard"]
+description = """
+.
+                        * * * MIDGAARD * * *
+                         = = ========== = =
+
+                                     Rainbow Bridge (Asgard and Valhalla)
+                                    /
+          North            Temple Altar   Mud School <--- ** NEWBIES **
+            |   /Up        (Healer, Pit)      |           ** GO HERE **
+            | /                  |       /Entrance to
+     West---+---East             |     /  Mud School
+          / |                 Temple of       |
+    Down/   |                Thoth/Belan    Arena
+          South               (Recall)
+                                 |    In the Air     Defunct Reception
+                                 |   /             /
+                  Cleric         | /       Grunting
+       Northern   Guild----Temple Square---Boar Inn---Bar    Northern
+       Midgaard              (Fountain)        \\Vampire      Midgaard
+     (Clan Road) Magic           |                Guild     (Clan Road)
+           |     Shop   Bakery   |    Grocer                    |
+           |       |      |      |       |      Weaponsmith     |
+To    <---West---Main-Street---Market----Main-Street-+--------East--->Cross
+Shire,    Gate     |      |    Square    |           |        Gate    Roads
+Forest of  |     Mage  Armoury   |     Jeweler    Warrior       |
+Haon-Dor   |     Guild           |                 Guild     Wall Road
+          Wall                   |                              |
+          Road  Leather  Map     |    Ranger   Pet   Apothecary |
+           |     Shop    Shop    |    Guild    Shop  (Potions)  |
+           |      |       |    Common   |       |       |       |
+          Wall---Poor-Alley----Square---Dark-Alley------+-----Wall--Druid
+          Road    |       |      |      |       |       |     Road  Guild
+           |   Temple   Grubby   |   Thieves  Levee   Warehouse |
+           |  Of Stupid  Inn     |    Guild   (Boats) (Sailor)  |
+           |                    Dump            |               |
+          Wall  Mob      Sewers/ |              |    Grebe's  Wall
+          Road--Factory          |              |    Tavern---Road
+           |                   South         Midgaard           |         To the
+         Bridge                Bridge         River---------> Bridge <--> Sands
+           |                     |                              |           of
+        Southern              Southern                       Southern     Sorrow
+        Midgaard              Midgaard                       Midgaard"""
+
 [[objects]]
 vnum = 3163
 keywords = ["map", "thera"]
@@ -1542,6 +1800,44 @@ level = 0
 weight = 5
 cost = 700
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["map", "thera"]
+description = """
+.
+               {B* * * {RWestern Thera  {B* * *{x
+.               {B= = ================ = ={x
+
+                                  {GSacrifice{W--{GDrakyri{x
+         {GMirkwood                      {W|{x
+                 {W\\             {GOlympus {W|        {GNew{x
+{GMage              Elven_Valley    {W|    |{GOfcol{W--{GOfcol{x
+{GTower                         {W\\   |    |  |{x
+  {W|    {GDragon   Divided_Souls  Plains{W--+--+{x
+  {W|   / {GTower  {W/                  |       |{x
+{GShadow        {W/               {GNorthern  Stones_of{x
+{GGrove{W---{GGalaxy                Midgaard   G'harne{x
+  {W|           {GTitan     Shire     {W|{x
+   {W\\  {GArachnos {W| {GCamelot {W| {GAsgard {W| {GIn_the_Air{x
+     {W\\   |     |    |    |      \\ | /{x
+      {GForest_Of{W+----+----+----{BMidgaard{W-------------{GCross{W--->{REastern{x
+      {GHaon_Dor                {W/ | | | \\            {GRoads     {RThera{x
+     {W/     |       {GMob Factory  {W| | |  {GMachine{x
+  {GOld    Troll                 {W/  | |  {GDreams{x
+ {GMarsh    Den             Sewer   {W|  \\{x
+                                  {W|    \\{GMidgaard{x
+         {GRedferne's{W---{GChain{W---{GSouthern    River{x
+         {GResidence            Midgaard         {W\\{x
+             {W|                  / | \\           {GSands_of{x
+           {GClouds      Gang_Land  {W| {GGraveyard   Sorrow{W----{GPyramid{x
+          {G(Harpies)               {W|      \\            \\{x
+                  {GStonebow{W--{GMiden'nir   Church    Mega-City{x
+                      {GDale  (Goblins)  Catacombs     One{x
+
+This map shows just about all the major areas in West Thera.  This map is
+NOT drawn to scale, some of the directions were changed to make everything fit.
+This map shows the GENERAL location of an area with respect to the other areas.
+Type "areas" for a complete list with suggested levels and the authors."""
 
 [[objects]]
 vnum = 3164
@@ -1554,6 +1850,50 @@ weight = 10
 cost = 1000
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map", "southern", "midgaard"]
+description = """
+.
+                         * * * SOUTHERN MIDGAARD * * *
+                          = = =================== = =
+
+ West                          South             Kate's                   East
+Bridge                         Bridge            Diner                   Bridge
+  |                              |                 |                       |
+Northwest                        |              Austral                Northeast
+Concourse---Promenade--------Promenade----------Square-----------------Concourse
+    |           |                |                 |                       |
+    |           |                |                 |          Fountain     |
+    |           |                |              Emerald           |        |
+Concourse     Park              Park-----Park     Ave----Penny--Penny--Concourse
+    |         Road            Entrance   Cafe      |     Lane   Lane       |
+    |           |                |              Emerald                    |
+    |           |                |                Ave                      |
+    |           |                |                 |                       |
+    |  Guard  Park     Park     The      Park   Emerald   Town             |
+    |   HQ----Road---Entrance---Park---Entrance---Ave-----Hall             |
+    |           |                                  |                       |
+    |         Park              Emerald---------Emerald--------------Gang  |
+    |         Road                Ave             Ave                |  |  |
+    |           |                  |                                 |  |  |
+    |         Park----------------Road----------Park            Elm--Land  |
+    |         Road             /Crossing        Road           Street      |
+    |                     Chain    |              |              |         |
+Concourse                /         |            Park----Elm-----Elm----Concourse
+    |       (Redferne's, Harpies)  |            Road   Street  Street      |
+    |                              |              |              |         |
+    |                Emerald--Emerald            Park        Graveyard     |
+    |                  Ave      Ave             Road    (Church Catacombs) |
+    |                   |                         |                        |
+    |                Emerald                    Park                       |
+    |                  Ave                      Road                       |
+    |                   |                         |                        |
+Concourse-----------Concourse------Inside-----Concourse----------------Concourse
+                                 South Gate
+                                     |
+                                 Miden'Nir
+                                 (Goblins)"""
+
 [[objects]]
 vnum = 3165
 keywords = ["map", "dwarven", "kingdom", "dwarf"]
@@ -1564,6 +1904,47 @@ level = 0
 weight = 10
 cost = 750
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["map", "dwarven", "kingdom", "dwarf"]
+description = """
+.
+                         * * * The Dwarven Kingdom * * *
+                          = = ===================== = =
+
+                    Dwarven
+                    Hospital
+                       |                                              *Path to
+         North of---Path by---Path by---Barracks     Guard--Door to----Castle
+          Shops     Hospital  Barracks  Entrance     House  Kingdom  Strangelove
+Granite     |                              |                   |
+Head's---Path North                      First               Narrow
+Bakery    of Shop                       Barracks              Path
+            |                              |                   |
+         Hide and    Turn               Back of     Bend in--Narrow
+        Tooth Shop--in Road             Barracks     Path     Path
+                       |                    \\         |
+                    Path to               Dwarven   Narrow
+                    Village              Catacombs   Path
+                       |                              |
+             Store  *Inside    Entrance     Top of   Dark   *Mine
+             Room---Entrance--To Mountain--Mountain--Path--Entrance
+                \\                             |                 \\
+               Wine                        Middle of          Dwarven
+              Cellar                       Mountain            Mines
+                  \\                            |
+                Dwarven                    Base of
+               Catacombs    Moria          Mountain           North
+                              |               |           Up\\   |
+                              |            Path to            \\ |
+                            Plains--Hills--Dwarven      West----+----East
+                              |            Kingdom              | \\
+                              |               |                 |   \\Down
+              Midgaard <----Cross          Dwarven            South
+                            Roads          Drop-off
+                                          (Day-Care)
+
+*key required"""
 
 [[objects]]
 vnum = 3166
@@ -1576,6 +1957,41 @@ weight = 10
 cost = 1500
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map", "moria", "first"]
+description = """
+* * * MORIA - Map 1 * * *                                           To Mahn-Tor
+ = = =============== = =                                                 |
+Talk about a mess!                                                   Foothills
+                                                                         |
+This is as far as our courageous, noble, brave           Light Cave    Valley
+and apparently quite deceased cartographers                   |           |
+could get.  Perhaps more maps could be found             Smelly Tunnel  Cave
+in the depths of Moria itself.                                |           |
+                                                  Cave---Many Tunnels---Tunnel
+                                                    |         |           |
+         West End--Large Cave--East End           Cave      Tunnel      *Hole
+            |          |                            |         |        (Map 2)
+            |        Tunnel---------Tunnel--------Tunnel----Tunnel
+            |                                       |
+ *Hole----Damp----Damp  Tunnel--Tunnel--Tunnel    Tunnel
+(Map 3)  Tunnel  Tunnel   |               |         |
+                   |      |            (*Map 3)  The Cave
+                   |      |                         |
+                   |    Tunnel--Light--Maze      End of
+                   |            Cave    |        The Path
+                   |                  Light         |
+                   |                  Cave      The Hills--> Dwarven Kingdom
+                   |                    |           |
+                 Tunnel----Tunnel-----Light     The Plains
+                                      Cave          |
+                                                 The Lane
+                                                    |
+                                      Midgaard <--Cross--> Eastern Road
+                                                  Roads
+                                                    |
+                                               Dwarf Forest"""
+
 [[objects]]
 vnum = 3167
 keywords = ["map", "new", "thalos"]
@@ -1586,6 +2002,63 @@ level = 0
 weight = 10
 cost = 2500
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["map", "new", "thalos"]
+description = """
+.
+           * * * **************** New Thalos ***************** * * *
+                   "Not Thalos or Old Thalos but New Thalos"
+            = = =============================================== = =
+
+                                   Plains
+                                     |
+Northwest--West Casbah-------------North-----------------Casbah--------Northeast
+  Tower     |                       Gate                    |            Tower
+          Alley                      |                      |              |
+            |    Guard            Sultan's                  |  Library----Kali
+          Alley  House              Walk                    |             Row
+                   |                 |      Dancing         |              |
+     Sultan's----Grand----Palace--Sultan's--Daemon          |   Dance-----Kali
+      Palace    Entrance   Gate     Walk      Inn           |   Hall      Row
+                   |                 |                      |
+                 Guard               |         Bowyer--Guildsman's--Mason's
+                 House               |         Guild       Row      Guild
+ High                                |                      |
+Priest                               |         Weaver--Guildsman's--Craftsman
+Chamber  Altar                    Sultan's     Guild       Row        Guild
+  |        |                        Walk                    |
+Inside--Inside--Donation             |         Tanner--Guildsman's--Museum
+Temple  Temple    Room               |         Guild       Row      of the
+  |        |                         |                      |       Greater
+Cleric     |                         |                 Guildsman's---Gods
+Guild     /                          |                     Row
+        /                            |                      |
+     Temple             Ahkeem's  Sultan's  Vera's     Guildsman's         Mage
+     Gates                Stuff     Walk   Veggies         Row             Tower
+       |     Alley--Alley    |       |       |              |                |
+     Temple    |           Market--Market--Market           | Witch's  Magic |
+     Square  Alley   Bank--Square  Square  Square--Butchery |  Brew    Shop  |
+       |       |             |       |       |              |    |      |    |
+West--West---West---West---Market--Center--Market---East--East--East--East--East
+Gate  Main   Main   Main   Square  Square  Square   Main  Main  Main  Main  Gate
+  |    |       |             |       |       |              |    |
+  |  Repair  Alley  Store--Market--Market--Market--Abdul's  | Mercenary--Thieves
+  |   Shop     |           Square  Square  Sqaure   Armor   |   Guild     Guild
+  |          Alley--Alley    |       |       |             Alley
+Warrior's                  Bread   Medina  Igor's  Leather  |           Smuggler
+  Guild                    Stand     |    Weapons   Shop---Alley--Alley---Inn
+                                   Medina                        /
+      Warehouse    Shipwright        |     Forge  Stables      /    Cass's  Dump
+       |     |          |          Common    |       |        |       |      |
+       +-----West Ishtar Drive-----Square----+---East Ishtar Drive----+------+
+                        |            |
+                    Boat Ramp        |
+                        |          South
+===================Ishtar River====Bridge======================> To Dragon Sea
+                                     |
+                                   South
+                                   Gate"""
 
 [[objects]]
 vnum = 3168
@@ -1598,6 +2071,45 @@ weight = 10
 cost = 2000
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map", "olympus"]
+description = """
+.
+                               *****OLYMPUS*****
+                               =================
+
+                                   Bedroom
+                                      |
+                                   Northern
+                                     Hall
+                        Western       |         Eastern
+              Bedroom----Hall----Second Floor----Hall----Bedroom
+                                /     |
+                         Stairway  Southern
+                             |       Hall                    North
+                        Throne Room   |                        |  /Up
+                             |      Bedroom                    |/
+                             |                          West---+---East
+                  Kitchen    |     Stable                     /|
+                     |       |       |                  Down/  |
+        Guest     Western  Castle  Eastern   Guest           South
+       Quarters----Wing----Entry----Wing----Quarters
+                     |       |       |
+                  Storage   Z|    Storage
+                   Room     e|S    Room   Smithy
+                            u|t             |
+                            s+--Ares Street-+--Weapon
+                    Mystery  |              |   Shop
+                    Shop-----+           Armoury
+                             |
+                   Residence-+-Residence
+                             |
+                     Bakery--+
+                             |
+                       **Entrance**
+                            /
+                      Mountain"""
+
 [[objects]]
 vnum = 3169
 keywords = ["map", "thera"]
@@ -1608,6 +2120,42 @@ level = 0
 weight = 5
 cost = 700
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["map", "thera"]
+description = """
+.
+               {B* * * {REastern Thera  {B* * *{x
+.               {B= = ================ = ={x
+
+           {GMoria{x
+             {W|    {GDwarven{W--{GMines{x
+             {W+----{GKingdom{W\\{x
+             {W|       |    \\{GCatacombs{x
+             {W|   {GDay-Care{x
+             {W|             {GVoid{W---{GOld{x
+             {W|   {GNirvana{W__   |   {GThalos{x
+             {W|            \\{GHoly{x
+             {W|     {GSmurf   Grove                      Pirate{x
+             {W|    {GVillage    {W|                         {GShip{x
+             {W|       |       |                          |{x
+{RWestern{W<---{GCross{W---{GEastern_Road{W----{GCheck{W---{GNew_Thalos{W---+-{GDark{x
+ {RThera     {GRoads             {W|     {GPoint               Continent{x
+             {W|       {GGnome_Village{x
+             {W|{x
+{GRuins_of{W---{GDwarf{W---{GFrigid_Waste{x
+ {GThalos    Forest         {W|{x
+                {W\\      {GKeep_of{x
+        {GDrow{W---{GWyvern   Mahn-tor{x
+        {GCity   Tower{x
+                 {W|{x
+               {GElemental{W--{GAarakocan{x
+                {GCanyon      City{x
+
+This map shows just about all the major areas in East Thera.  This map is
+NOT drawn to scale, some of the directions were changed to make everything fit.
+This map shows the GENERAL location of an area with respect to the other areas.
+Type "areas" for a complete list with suggested levels and the authors."""
 
 [[objects]]
 vnum = 3170
@@ -1774,6 +2322,17 @@ cost = 890
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["scroll", "identify"]
+description = """
+The scroll has a magic formula drawn upon it:
+     ???
+    ?   ?
+       ?
+      ?
+      ?
+      *"""
+
 [[objects]]
 vnum = 3241
 keywords = ["potion", "yellow"]
@@ -1786,6 +2345,11 @@ cost = 220
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["potion", "yellow"]
+description = """
+The potion has a small label 'Detect The Invisible'."""
+
 [[objects]]
 vnum = 3242
 keywords = ["scroll", "recall"]
@@ -1797,6 +2361,11 @@ weight = 20
 cost = 2900
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["scroll"]
+description = """
+The scroll has written a formula of 'Word of Recall' upon it."""
 
 [[objects]]
 vnum = 3280
@@ -1979,6 +2548,11 @@ wear_flags = ["take", "wield"]
   location = "hitroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["long", "sword"]
+description = """
+It looks exceptionally sharp and well-balanced. Maybe you should keep it."""
+
 [[objects]]
 vnum = 3350
 keywords = ["sword", "standard", "merc"]
@@ -2004,6 +2578,12 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["sword"]
+description = """
+You see a sword of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3351
@@ -2031,6 +2611,12 @@ extra_flags = ["magic"]
   location = "hitroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["dagger"]
+description = """
+You see a dagger of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3352
 keywords = ["mace", "standard", "merc"]
@@ -2057,6 +2643,12 @@ extra_flags = ["magic"]
   location = "hitroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["mace"]
+description = """
+You see a mace of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3353
 keywords = ["vest", "standard", "merc"]
@@ -2073,6 +2665,12 @@ wear_flags = ["take", "body"]
   ac_bash = 4
   ac_slash = 3
   ac_exotic = 1
+
+[[objects.extra_descs]]
+keywords = ["vest"]
+description = """
+You see a vest of great craftsmanship.  Stamped on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3354
@@ -2091,6 +2689,12 @@ wear_flags = ["take", "shield"]
   ac_slash = 4
   ac_exotic = 2
 
+[[objects.extra_descs]]
+keywords = ["shield"]
+description = """
+You see a shield of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3355
 keywords = ["cloak", "standard", "merc"]
@@ -2107,6 +2711,12 @@ wear_flags = ["take", "neck"]
   ac_bash = 5
   ac_slash = 4
   ac_exotic = 1
+
+[[objects.extra_descs]]
+keywords = ["cloak"]
+description = """
+You see a cloak of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3356
@@ -2125,6 +2735,12 @@ wear_flags = ["take", "head"]
   ac_slash = 3
   ac_exotic = 1
 
+[[objects.extra_descs]]
+keywords = ["helmet"]
+description = """
+You see a helmet of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3357
 keywords = ["leggings", "standard", "merc"]
@@ -2141,6 +2757,12 @@ wear_flags = ["take", "legs"]
   ac_bash = 4
   ac_slash = 3
   ac_exotic = 1
+
+[[objects.extra_descs]]
+keywords = ["leggings"]
+description = """
+You see leggings of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3358
@@ -2159,6 +2781,12 @@ wear_flags = ["take", "feet"]
   ac_slash = 3
   ac_exotic = 1
 
+[[objects.extra_descs]]
+keywords = ["boots"]
+description = """
+You see boots of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3359
 keywords = ["gloves", "standard", "merc"]
@@ -2175,6 +2803,12 @@ wear_flags = ["take", "hands"]
   ac_bash = 4
   ac_slash = 3
   ac_exotic = 1
+
+[[objects.extra_descs]]
+keywords = ["gloves"]
+description = """
+You see gloves of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3360
@@ -2193,6 +2827,12 @@ wear_flags = ["take", "arms"]
   ac_slash = 3
   ac_exotic = 1
 
+[[objects.extra_descs]]
+keywords = ["sleeves"]
+description = """
+You see sleeves of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3361
 keywords = ["cape", "standard", "merc"]
@@ -2209,6 +2849,12 @@ wear_flags = ["take", "about"]
   ac_bash = 4
   ac_slash = 3
   ac_exotic = 1
+
+[[objects.extra_descs]]
+keywords = ["cape"]
+description = """
+You see a cape of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3362
@@ -2227,6 +2873,12 @@ wear_flags = ["take", "waist"]
   ac_slash = 3
   ac_exotic = 1
 
+[[objects.extra_descs]]
+keywords = ["belt", "standard", "merc"]
+description = """
+You see a bronze belt of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3363
 keywords = ["bracer", "standard", "merc"]
@@ -2243,6 +2895,12 @@ wear_flags = ["take", "wrist"]
   ac_bash = 4
   ac_slash = 4
   ac_exotic = 1
+
+[[objects.extra_descs]]
+keywords = ["bracer"]
+description = """
+You see a bracer of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3364
@@ -2284,6 +2942,11 @@ extra_flags = ["glow", "magic"]
   location = "saves"
   modifier = -1
 
+[[objects.extra_descs]]
+keywords = ["banner"]
+description = """
+This is the official Merc war banner to see you through the darkest realm!"""
+
 [[objects]]
 vnum = 3371
 keywords = ["ring", "diamond", "wedding"]
@@ -2300,6 +2963,12 @@ extra_flags = ["bless"]
   location = "saves"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["ring", "diamond", "wedding"]
+description = """
+A slender gold band set with a marquise-cut four carat blue-white solitaire.
+Inscribed on the inside of the band is: 'Your loving husband, House'."""
+
 [[objects]]
 vnum = 3372
 keywords = ["band", "gold", "wedding"]
@@ -2315,6 +2984,11 @@ extra_flags = ["bless"]
   [[objects.affects]]
   location = "saves"
   modifier = -2
+
+[[objects.extra_descs]]
+keywords = ["band", "gold", "wedding"]
+description = """
+A wide, plain circle of gold inscribed: 'Your loving wife, Vanya'."""
 
 [[objects]]
 vnum = 3373
@@ -2407,6 +3081,13 @@ extra_flags = ["hum", "bless"]
   dice_number = 4
   dice_size = 10
 
+[[objects.extra_descs]]
+keywords = ["scimitar", "blade"]
+description = """
+It is quite heavy.  The blade is made of some metal that you can't even
+spell.  The edge of the blade looks as if it could cut through anything
+or anyone."""
+
 [[objects]]
 vnum = 3380
 keywords = ["sign"]
@@ -2416,6 +3097,14 @@ item_type = "furniture"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+
+        {BYou may now use the {Rdonate{x command to send donations{x
+        {Bdirectly to the donation pit from anywhere in the realm.{x"""
 
 [[objects]]
 vnum = 3381
@@ -2650,4 +3339,3 @@ wear_flags = ["take", "body"]
   ac_bash = 4
   ac_slash = 3
   ac_exotic = 1
-

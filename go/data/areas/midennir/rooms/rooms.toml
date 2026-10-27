@@ -110,6 +110,16 @@ treetops. The sprawl of Midgaard lies north of here."""
   direction = "west"
   to_vnum = 3570
 
+[[rooms.extra_descs]]
+keywords = ["credits", "credit", "author"]
+description = """
++-------------------------------------------------+
+| This area originally written for Copper II DIKU |
+|   by ?                                          |
+| Modifications and alterations for MERCmud DIKU  |
+|   by VampLestat                        1 JAN 93 |
++-------------------------------------------------+"""
+
 [[rooms]]
 vnum = 3506
 name = "The Miden'nir"
@@ -502,6 +512,14 @@ look ok."""
   vnum = 3500
   max = 2
 
+[[rooms.extra_descs]]
+keywords = ["carcass", "body", "corpse", "carcasses", "bodies", "corpses"]
+description = """
+The corpses looked as if they have been pierced by a large, jagged
+spear. The damage these people sustained is simply amazing. Worse, the
+lips on the bodies are a light shade of blue, hinting at poison in
+their systems."""
+
 [[rooms]]
 vnum = 3522
 name = "Deep in the Forest of Miden'nir"
@@ -801,6 +819,12 @@ and leaves thrown into a pile here, probably serving as a bed."""
   direction = "west"
   to_vnum = 3553
 
+[[rooms.extra_descs]]
+keywords = ["twigs", "leaves", "bead"]
+description = """
+The twigs and leaves have all been piled together as a makeshift bed for
+some small humanoid."""
+
 [[rooms]]
 vnum = 3555
 name = "A Tunnel in the Mountains"
@@ -902,6 +926,22 @@ return to the forest."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 3574
+
+[[rooms.extra_descs]]
+keywords = ["credits", "credit", "author"]
+description = """
++-------------------------------------------------+
+| This zone originally written for Copper II DIKU |
+|   by ?                                          |
+| Modification and alterations for MERCmud DIKU   |
+|   by VampLestat                        1 JAN 93 |
++-------------------------------------------------+"""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+   The Woodsman"""
 
 [[rooms]]
 vnum = 3571
@@ -1153,4 +1193,3 @@ end right here.  The horsemen must be nearby."""
     [[rooms.mob_resets.equips]]
     vnum = 3022
     wear_loc = "wield"
-

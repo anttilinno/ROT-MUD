@@ -543,6 +543,12 @@ comes in from a hole in the ceiling."""
   vnum = 2003
   max = 2
 
+[[rooms.extra_descs]]
+keywords = ["cross", "paint", "floor"]
+description = """
+The cross is a Templar's cross. It seems to have had a fresh coat of
+paint recently."""
+
 [[rooms]]
 vnum = 2003
 name = "Weapon training area"
@@ -827,6 +833,13 @@ lying around. An escape passage leads west."""
   direction = "west"
   to_vnum = 2069
 
+[[rooms.extra_descs]]
+keywords = ["papers", "documents", "secrets"]
+description = """
+It seems that the loot comes from raids on the towns in the surrounding
+areas above ground.  From the documents it seems that the pages and
+trainees are kidnapped from the villages too!"""
+
 [[rooms]]
 vnum = 2014
 name = "N/S hallway"
@@ -995,6 +1008,12 @@ elegant knight hangs on the wall."""
     [[rooms.mob_resets.equips]]
     vnum = 2009
     wear_loc = "body"
+
+[[rooms.extra_descs]]
+keywords = ["painting", "elegant", "knight"]
+description = """
+Something oddly familiar about the knight.  He carries a glowing sword
+with a silvery blade."""
 
 [[rooms]]
 vnum = 2019
@@ -1654,6 +1673,11 @@ beautiful swirls.  It causes a hot wind to flow west."""
     vnum = 2015
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["hole", "height", "waterfall", "cascade"]
+description = """
+The hole is much too high up for you to reach."""
+
 [[rooms]]
 vnum = 2044
 name = "Huge multicolored tunnel"
@@ -1702,6 +1726,11 @@ sort of basement."""
   direction = "down"
   to_vnum = 2052
 
+[[rooms.extra_descs]]
+keywords = ["stairs", "basement"]
+description = """
+Surprisingly the stairs look sturdy enough."""
+
 [[rooms]]
 vnum = 2047
 name = "Fresh graves"
@@ -1730,4 +1759,3 @@ further to the south."""
   [[rooms.mob_resets]]
   vnum = 2011
   max = 4
-

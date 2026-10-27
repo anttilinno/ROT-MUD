@@ -46,6 +46,18 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to the Shire.  As you enter the Shire from Haon-Dor you come under
+the jurisdiction of the Thain, the peacekeeper of the Shire.  Consequently,
+by entering these lands you agree to obey our laws.  If you break these laws,
+you will be severely punished.  We do not like riff raff in our peaceful
+town.
+
+					The Thain
+					Peacekeeper of the Shire"""
+
 [[objects]]
 vnum = 1103
 keywords = ["pipeweed", "bread"]
@@ -323,4 +335,3 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["nonmetal", "melt_drop"]
-

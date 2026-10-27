@@ -236,6 +236,14 @@ door."""
   vnum = 9001
   max = 9
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+                     WARNING
+Only those brave of heart and high of level should
+enter the Tower of Nirvana."""
+
 [[rooms]]
 vnum = 9013
 name = "At the door to the Tower of Nirvana"
@@ -260,6 +268,14 @@ east.  There is a sign on the door."""
   [[rooms.mob_resets]]
   vnum = 9000
   max = 10
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+                  WARNING!
+Only those brave of heart and high of level
+should attempt to enter the Tower of Nirvana."""
 
 [[rooms]]
 vnum = 9014
@@ -1132,4 +1148,3 @@ description = "Exits lead off in all of the cardinal directions"
   [[rooms.exits]]
   direction = "west"
   to_vnum = 9058
-

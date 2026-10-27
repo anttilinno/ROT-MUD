@@ -15,6 +15,11 @@ many layers of a spider web.  Another silky strand continues to the north."""
   direction = "south"
   to_vnum = 6133
 
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
+
 [[rooms]]
 vnum = 6201
 name = "On the spider web"
@@ -28,6 +33,11 @@ many layers of a spider web."""
   direction = "north"
   to_vnum = 6134
 
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
+
 [[rooms]]
 vnum = 6202
 name = "On the spider web"
@@ -40,6 +50,11 @@ many layers of a spider web."""
   [[rooms.exits]]
   direction = "east"
   to_vnum = 6134
+
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
 
 [[rooms]]
 vnum = 6203
@@ -57,6 +72,11 @@ off into the northern direction."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 6200
+
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
 
 [[rooms]]
 vnum = 6301
@@ -861,6 +881,11 @@ soul escapes.  The room is undecorated."""
   vnum = 6313
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["chair"]
+description = """
+An ordinary chair, well used, glued to the ground by spiderweb."""
+
 [[rooms]]
 vnum = 6368
 name = "Realm of the Hopeless"
@@ -1070,4 +1095,3 @@ to her beautiful silken body."""
     [[rooms.mob_resets.equips]]
     vnum = 6304
     inv_only = true
-

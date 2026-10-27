@@ -332,6 +332,58 @@ three gallows, with rotting human tissue hanging from the ropes.
   direction = "west"
   to_vnum = 318
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says:
+
+  Loyal citizens of Midgaard.  These are the earthly remains of the
+  three heretics 'Tabor', 'Wyatt' and 'Funky' of this world.
+  Having forged themselves to immortality, they called upon themselves
+  the anger of the implementators.
+                Let this be a lesson to all .....
+
+                                    -- the Powers that Be."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says:
+
+  Loyal citizens of Midgaard.  These are the earthly remains of the
+  three heretics 'Tabor', 'Wyatt' and 'Funky' of this world.
+  Having forged themselves to immortality, they called upon themselves
+  the anger of the implementators.
+                Let this be a lesson to all .....
+
+                                    -- the Powers that Be."""
+
+[[rooms.extra_descs]]
+keywords = ["corpse", "funky"]
+description = """
+Though the vultures and parasites have wreaked havoc on this corpse,
+you can still make out the recognizable features of the legendary
+Funky."""
+
+[[rooms.extra_descs]]
+keywords = ["tabor", "wyatt"]
+description = """
+Nothing is left of this corpse but a few strands of skin still clinging
+to the rope, and a few scattered bones on the ground."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says:
+
+  Loyal citizens of Midgaard.  These are the earthly remains of the
+  three heretics 'Tabor', 'Wyatt' and 'Funky' of this world.
+  Having forged themselves to immortality, they called upon themselves
+  the anger of the implementators.
+                Let this be a lesson to all .....
+
+                                    -- the Powers that Be."""
+
 [[rooms]]
 vnum = 316
 name = "Grassy plains"
@@ -557,6 +609,17 @@ grow here."""
   vnum = 309
   max = 10
 
+[[rooms.extra_descs]]
+keywords = ["pine", "tree", "trees", "pines"]
+description = """
+The all too quiet trees suggest that something roams these woods."""
+
+[[rooms.extra_descs]]
+keywords = ["mountains"]
+description = """
+The mountains seems dark and all most alive, as they contrast against
+the sky."""
+
 [[rooms]]
 vnum = 325
 name = "The steep foothills"
@@ -597,6 +660,12 @@ A dock extends out over the water to the north."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 325
+
+[[rooms.extra_descs]]
+keywords = ["pool"]
+description = """
+The pool is crystal clear, but as you look into it you notice that
+you can't see the bottom of it ... it must be pretty deep."""
 
 [[rooms]]
 vnum = 327
@@ -671,6 +740,11 @@ plains and foothills. There is a small fireplace here."""
   vnum = 309
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+The hermit cooks here."""
+
 [[rooms]]
 vnum = 332
 name = "The ancient path"
@@ -740,6 +814,12 @@ along the side of the path."""
   direction = "east"
   to_vnum = 336
 
+[[rooms.extra_descs]]
+keywords = ["markers"]
+description = """
+The markers seems like normal stones, but the way they are
+arranged makes you think there is something special about them."""
+
 [[rooms]]
 vnum = 336
 name = "The wooden bridge"
@@ -755,6 +835,13 @@ It is made of a wood you haven't seen before."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 335
+
+[[rooms.extra_descs]]
+keywords = ["rock", "formation", "formations"]
+description = """
+The rock formations are made of 7 huge, monolith like stones, placed
+in a symbolic circle.
+You notice it's possible to enter the ring."""
 
 [[rooms]]
 vnum = 337
@@ -773,6 +860,12 @@ You feel impressed with the awesome sight."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 336
+
+[[rooms.extra_descs]]
+keywords = ["rock", "formation", "formations"]
+description = """
+The rock formations are made of seven huge monolith placed in a circle.
+You notice it's possible to enter the ring."""
 
 [[rooms]]
 vnum = 338
@@ -813,6 +906,27 @@ altar shows no sign of such. West of here is the ancient path."""
   direction = "down"
   to_vnum = 340
 
+[[rooms.extra_descs]]
+keywords = ["death", "rituals", "worms", "engraving", "picture"]
+description = """
+The pictures are depicting evil rituals.
+You see druids pouring blood over herbs on an altar like this one.
+There are people calling giant worms into existence with dark spells."""
+
+[[rooms.extra_descs]]
+keywords = ["altar", "sacrifice"]
+description = """
+You move closer to examine the sacrifice altar of G'harne.
+The altar is about 3 feet high, 10 feet long and 4 feet wide.
+It has engraved pictures of death rituals and horrifying worms."""
+
+[[rooms.extra_descs]]
+keywords = ["stones", "g'harne", "monolith"]
+description = """
+The stones of G'harne tower fifteen feet over you.
+The giant stones are made of a material you haven't seen before.
+It resembles black marble, but somehow feels different."""
+
 [[rooms]]
 vnum = 340
 name = "Dark smelly tunnels"
@@ -834,6 +948,13 @@ stench.  You might be able to force your way up into fresh air from here."""
   [[rooms.exits]]
   direction = "up"
   to_vnum = 339
+
+[[rooms.extra_descs]]
+keywords = ["meat", "rotting", "slime", "substance"]
+description = """
+You try to examine the substance closer, but must refrain from this
+as all you really want to do is puke.
+You puke."""
 
 [[rooms]]
 vnum = 341
@@ -864,6 +985,13 @@ meat like substance, fills the air with an unbearable stench."""
   direction = "west"
   to_vnum = 343
 
+[[rooms.extra_descs]]
+keywords = ["meat", "rotting", "slime", "substance"]
+description = """
+You try to examine the substance closer, but must refrain from this
+as all you really want to do is puke.
+You puke."""
+
 [[rooms]]
 vnum = 343
 name = "Dark smelly tunnels"
@@ -880,6 +1008,11 @@ slime and other undeterminable substances ..."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 344
+
+[[rooms.extra_descs]]
+keywords = ["slime", "substance"]
+description = """
+BWADR! ..."""
 
 [[rooms]]
 vnum = 344
@@ -906,6 +1039,11 @@ Disgusting slime and gore are also very dominant in your view of this room."""
     vnum = 311
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["slime", "gore"]
+description = """
+You puke."""
+
 [[rooms]]
 vnum = 345
 name = "Steep slope"
@@ -919,4 +1057,3 @@ You hit your head HARD.
 You die.
 
 You've fallen, and you can't get up!"""
-

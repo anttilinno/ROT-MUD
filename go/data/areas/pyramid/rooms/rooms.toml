@@ -22,6 +22,11 @@ Rising out of the sand to the east you see a mighty pyramid."""
   direction = "west"
   to_vnum = 5057
 
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+The massive pyramid rises out of the sand, a monument to long-dead pharoahs."""
+
 [[rooms]]
 vnum = 8701
 name = "At the Base of the Pyramid"
@@ -39,6 +44,11 @@ to climb it."""
   [[rooms.exits]]
   direction = "up"
   to_vnum = 8702
+
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
 
 [[rooms]]
 vnum = 8702
@@ -69,6 +79,11 @@ walls of the pyramid are quite steep."""
   vnum = 8700
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
+
 [[rooms]]
 vnum = 8703
 name = "Climbing the Great Pyramid"
@@ -98,6 +113,11 @@ are having trouble keeping from sliding down into the sands below."""
   vnum = 8701
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
+
 [[rooms]]
 vnum = 8704
 name = "Climbing the Great Pyramid"
@@ -122,6 +142,11 @@ are having trouble keeping from sliding down into the sands below."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 8707
+
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
 
 [[rooms]]
 vnum = 8705
@@ -152,6 +177,11 @@ top from here."""
   [[rooms.mob_resets]]
   vnum = 8700
   max = 6
+
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
 
 [[rooms]]
 vnum = 8706
@@ -188,6 +218,19 @@ cardinal directions.
   vnum = 8702
   max = 3
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+The plaque reads:
+This area (Great Pyramid) written by Andersen."""
+
+[[rooms.extra_descs]]
+keywords = ["stones"]
+description = """
+As you look closer you can make out a crack in the center of the stones
+beneath your feet.  With some effort you might be able to lift that
+section up and get inside!"""
+
 [[rooms]]
 vnum = 8707
 name = "Climbing the Great Pyramid"
@@ -219,6 +262,13 @@ stones of the ceiling."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 8709
+
+[[rooms.extra_descs]]
+keywords = ["stones"]
+description = """
+As you look closer you can make out a crack in the center of the stones
+above your head.  With some effort you might be able to lift that
+section up and get outside!"""
 
 [[rooms]]
 vnum = 8709
@@ -267,6 +317,20 @@ inscriptions."""
     [[rooms.mob_resets.equips]]
     vnum = 8701
     wear_loc = "about"
+
+[[rooms.extra_descs]]
+keywords = ["sigils", "hieroglyphs", "inscriptions", "writing"]
+description = """
+You cannot understand the strange glyphs that cover the door, but most of
+them seem to depict scenes of fire and massive creatures of apparently
+tremendous strength.  You have a feeling that the glyphs are serving as a
+warning."""
+
+[[rooms.extra_descs]]
+keywords = ["door", "stone"]
+description = """
+The stone door is covered in strange inscriptions and hieroglyphs that warn
+you not to proceed any further."""
 
 [[rooms]]
 vnum = 8710
@@ -426,6 +490,17 @@ small rocky crevasse."""
   direction = "south"
   to_vnum = 8719
 
+[[rooms.extra_descs]]
+keywords = ["bones"]
+description = """
+The bones have whitened and cracked in the dry air, apparently the remains
+of adventurers, thieves, and creatures that did not survive the fall."""
+
+[[rooms.extra_descs]]
+keywords = ["u", "up"]
+description = """
+The hole looks far too slippery to climb back up."""
+
 [[rooms]]
 vnum = 8718
 name = "Under the Hole"
@@ -438,6 +513,17 @@ small rocky crevasse."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 8719
+
+[[rooms.extra_descs]]
+keywords = ["bones"]
+description = """
+The bones have whitened and cracked in the dry air, apparently the remains
+of adventurers, thieves, and creatures that did not survive the fall."""
+
+[[rooms.extra_descs]]
+keywords = ["u", "up"]
+description = """
+The hole looks far too slippery to climb back up."""
 
 [[rooms]]
 vnum = 8719
@@ -464,6 +550,11 @@ see the flickering light of a fire, and the crevasse proceeds downward."""
   vnum = 8723
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["rough"]
+description = """
+As you look through the rough terrain, your eyes catch a small glint of light!"""
+
 [[rooms]]
 vnum = 8720
 name = "A Small Fire"
@@ -477,6 +568,17 @@ Standing here is a strange-looking old man, who stares at you balefully."""
   [[rooms.exits]]
   direction = "north"
   to_vnum = 8719
+
+[[rooms.extra_descs]]
+keywords = ["man", "old"]
+description = """
+The old man looks like he has been trapped down here far too long, and
+has begun to lose his mind.  He moves about slowly, cackling to himself.
+
+He turns to you and shouts, 'nope measse!  nope measse!', then turns
+back and stares into the fire.
+
+'What a strange person,' you think to yourself."""
 
 [[rooms]]
 vnum = 8721
@@ -514,6 +616,25 @@ source is too dim to see exactly what it is."""
   direction = "up"
   to_vnum = 8721
 
+[[rooms.extra_descs]]
+keywords = ["tiger", "head", "animal", "sesame"]
+description = """
+You are now certain that the wind is the cold breath of some unearthly
+giant animal, whose voice rumbles lowly on the breeze, and whose
+massive jaws could easily swallow you whole.
+
+You move closer for a better look, when suddenly a pair of eyes flashes.
+A cold voice echoes: 'SEEK YE THE DIAMOND... IN THE ROUGH...'
+
+... Then all is silent."""
+
+[[rooms.extra_descs]]
+keywords = ["black", "shape"]
+description = """
+Wind howls about your ears like the roar of a tiger.  As your eyes
+adjust to the light the shape to the south almost seems to take the
+form of a massive animal head."""
+
 [[rooms]]
 vnum = 8723
 name = "The Vault of the Lamp"
@@ -543,6 +664,16 @@ on all sides."""
     [[rooms.mob_resets.equips]]
     vnum = 8713
     wear_loc = "hold"
+
+[[rooms.extra_descs]]
+keywords = ["treasure", "gold", "coins", "valuables"]
+description = """
+You reach for some of the tasty goodies, when you hear a loud rumbling
+sound and see a bright flash of light...
+
+Then the words: 'TAKE ONLY THE LAMP... TOUCH NOTHING ELSE.'
+
+... All is silent once again."""
 
 [[rooms]]
 vnum = 8724
@@ -645,6 +776,25 @@ except a large stone coffin that leans against the western wall."""
     vnum = 3351
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["man", "garments", "pharoah"]
+description = """
+As you look closer at the figure sculpted into the stone coffin you notice a
+small marking carved into its chest.  It looks like a scarab or small beetle
+would fit into the small space, if properly sized.
+
+Hmm."""
+
+[[rooms.extra_descs]]
+keywords = ["coffin", "lid"]
+description = """
+The coffin is sculpted into the form of a man, standing several heads above
+you, and clad in the garments of pharoahs.  It has apparently been untouched
+by the ravages of time and the activities of looters.  Several markings on the
+side indicate spots where unsuccessful attempts were made to open the coffin.
+
+You can't see any way to open it."""
+
 [[rooms]]
 vnum = 8727
 name = "A Stairway"
@@ -662,6 +812,17 @@ of dust.  Some inscriptions are carved into the wall here."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 8728
+
+[[rooms.extra_descs]]
+keywords = ["coffin", "lid"]
+description = """
+On this side the coffin lid is smooth featureless stone."""
+
+[[rooms.extra_descs]]
+keywords = ["inscriptions"]
+description = """
+You blow dust away from the inscriptions to read:
+'Beware the curse of the mummy.'"""
 
 [[rooms]]
 vnum = 8728
@@ -697,6 +858,12 @@ and ceiling of this small landing are covered with strange hieroglyphics."""
   direction = "up"
   to_vnum = 8728
 
+[[rooms.extra_descs]]
+keywords = ["walls", "floor", "ceiling", "hieroglyphics"]
+description = """
+The hieroglyphics are covered with a thick layer of dust.  You clear the
+dust away with your hand, and find that you cannot comprehend them."""
+
 [[rooms]]
 vnum = 8730
 name = "The Ancient Hall"
@@ -721,6 +888,11 @@ peculiar pictorial form of written language that you don't understand.
   vnum = 8728
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["writings", "glyphs", "sigils", "hieroglyphics", "symbols"]
+description = """
+You don't understand the meaning of these symbols."""
+
 [[rooms]]
 vnum = 8731
 name = "A Raised Dais"
@@ -738,6 +910,14 @@ A low pedestal rests here.  You see something written into the face of it."""
   direction = "down"
   flags = ["door", "closed"]
   to_vnum = 8732
+
+[[rooms.extra_descs]]
+keywords = ["pedestal", "writings"]
+description = """
+The writings are covered in sand and worn nearly away by the passage
+of time: 'I am Ramses the Damned, once counselor and aide to the mightiest
+of pharoahs and queens of this land.  Much time has passed since I last
+walked the earth.  Disturb my rest at your peril.'"""
 
 [[rooms]]
 vnum = 8732
@@ -848,6 +1028,11 @@ southern wall, continuing onward to the east and west as well."""
     [[rooms.mob_resets.equips]]
     vnum = 3351
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["s", "south", "hole"]
+description = """
+The hole is low, at the floor of the southern wall."""
 
 [[rooms]]
 vnum = 8736
@@ -1069,6 +1254,12 @@ of others in the dust."""
     vnum = 8702
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["cracks"]
+description = """
+The cracks look like you might be able to pull away some pieces of
+the floor, perhaps even fit your body through the space you make."""
+
 [[rooms]]
 vnum = 8744
 name = "The Tomb Entrance"
@@ -1088,6 +1279,18 @@ final resting place of the mighty pharoahs of this land."""
   direction = "up"
   flags = ["door", "closed"]
   to_vnum = 8743
+
+[[rooms.extra_descs]]
+keywords = ["hieroglyphics", "carvings"]
+description = """
+The markings indicate that this tomb is indeed the tomb of the greatest
+pharoahs of the ancient civilization that built this massive pyramid."""
+
+[[rooms.extra_descs]]
+keywords = ["tomb"]
+description = """
+The tomb looks like it has stood for many years, much like the pyramid
+which encloses it.  It is covered in small hieroglyphics."""
 
 [[rooms]]
 vnum = 8745
@@ -1127,6 +1330,12 @@ lie before your feet."""
   [[rooms.obj_resets]]
   vnum = 8710
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["treasures"]
+description = """
+The treasures are dusty and fragile, but still seem quite valuable.
+You decide not to take them out of respect for the ancient dead."""
 
 [[rooms]]
 vnum = 8746
@@ -1252,6 +1461,17 @@ they appear to have been used recently."""
     vnum = 8714
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["bricks"]
+description = """
+The small golden bricks are very smooth and also quite soft."""
+
+[[rooms.extra_descs]]
+keywords = ["rug", "rugs", "tapestry", "tapestries"]
+description = """
+The rugs and tapestries are very fine and worn with age, their colors
+now faded.  They depict scenes of life in an ancient desert city."""
+
 [[rooms]]
 vnum = 8751
 name = "An Arched Hall"
@@ -1299,6 +1519,12 @@ the light from your light source so perfectly that they seem to shine."""
     vnum = 8715
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["particles", "glass"]
+description = """
+The glassy particles reflect and refract your light source in a myriad
+of dazzling colours that dance across your eyes and make you giggle."""
+
 [[rooms]]
 vnum = 8753
 name = "A Massive Sand Dune"
@@ -1317,6 +1543,11 @@ storm howls and bites at your face even here."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 8754
+
+[[rooms.extra_descs]]
+keywords = ["sand", "dune", "sandstorm"]
+description = """
+The sand is very white, and very sandy.  There sure is a lot of it."""
 
 [[rooms]]
 vnum = 8754
@@ -1347,6 +1578,12 @@ you and choking you.  You have lost all sense of direction."""
   vnum = 8708
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
+
 [[rooms]]
 vnum = 8755
 name = "A Swirling Sandstorm"
@@ -1375,6 +1612,12 @@ you and choking you.  You have lost all sense of direction."""
   [[rooms.mob_resets]]
   vnum = 8708
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
 
 [[rooms]]
 vnum = 8756
@@ -1405,6 +1648,12 @@ you and choking you.  You have lost all sense of direction."""
   vnum = 8708
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
+
 [[rooms]]
 vnum = 8757
 name = "A Swirling Sandstorm"
@@ -1434,6 +1683,12 @@ you and choking you.  You have lost all sense of direction."""
   vnum = 8708
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
+
 [[rooms]]
 vnum = 8758
 name = "A Massive Sand Dune"
@@ -1462,6 +1717,23 @@ every other direction."""
     [[rooms.mob_resets.equips]]
     vnum = 8717
     wear_loc = "hold"
+
+[[rooms.extra_descs]]
+keywords = ["hieroglyphics", "symbols"]
+description = """
+Like most of the ancient hieroglyphics of this land, the symbols are
+totally incomprehensible to you.  Perhaps the Sphinx has the answer
+to this ancient riddle."""
+
+[[rooms.extra_descs]]
+keywords = ["riddle"]
+description = """
+A vision forms before your eyes, in glowing hieroglyphic symbols."""
+
+[[rooms.extra_descs]]
+keywords = ["sand", "dune"]
+description = """
+The sand is very white, and very sandy.  There sure is a lot of it."""
 
 [[rooms]]
 vnum = 8759
@@ -1495,4 +1767,3 @@ the small sandy slope down which you slid."""
   [[rooms.obj_resets]]
   vnum = 8727
   max = 1
-

@@ -9,3 +9,7 @@ weight = 80
 cost = 0
 wear_flags = ["take", "head"]
 
+[[objects.extra_descs]]
+keywords = ["rose"]
+description = """
+It's a beautiful red rose, with a soft and romantic fragrance."""

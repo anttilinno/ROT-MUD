@@ -20,6 +20,12 @@ extra_flags = ["had_timer"]
   location = "hitroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["mace"]
+description = """
+You see a mace of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3701
 keywords = ["dagger", "sub", "merc"]
@@ -41,6 +47,12 @@ extra_flags = ["had_timer"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["dagger"]
+description = """
+You see a dagger of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3702
@@ -64,6 +76,12 @@ extra_flags = ["had_timer"]
   location = "hitroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["sword"]
+description = """
+You see a sword of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3703
 keywords = ["vest", "sub", "merc"]
@@ -81,6 +99,12 @@ extra_flags = ["had_timer"]
   ac_bash = 1
   ac_slash = 1
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["vest"]
+description = """
+You see a vest of great but cheap craftsmanship.  Stamped on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3704
@@ -100,6 +124,12 @@ extra_flags = ["had_timer"]
   ac_slash = 1
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["shield"]
+description = """
+You see a shield of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3705
 keywords = ["cloak", "sub", "merc"]
@@ -117,6 +147,12 @@ extra_flags = ["had_timer"]
   ac_bash = 1
   ac_slash = 1
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["cloak"]
+description = """
+You see a cloak of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3706
@@ -136,6 +172,12 @@ extra_flags = ["had_timer"]
   ac_slash = 1
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["helmet"]
+description = """
+You see a helmet of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3707
 keywords = ["leggings", "sub", "merc"]
@@ -153,6 +195,12 @@ extra_flags = ["had_timer"]
   ac_bash = 1
   ac_slash = 1
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["leggings"]
+description = """
+You see leggings of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3708
@@ -172,6 +220,12 @@ extra_flags = ["had_timer"]
   ac_slash = 1
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["boots"]
+description = """
+You see boots of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3709
 keywords = ["gloves", "sub", "merc"]
@@ -189,6 +243,12 @@ extra_flags = ["had_timer"]
   ac_bash = 1
   ac_slash = 1
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["gloves"]
+description = """
+You see gloves of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3710
@@ -208,6 +268,12 @@ extra_flags = ["had_timer"]
   ac_slash = 1
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["sleeves"]
+description = """
+You see sleeves of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3711
 keywords = ["cape", "sub", "merc"]
@@ -225,6 +291,12 @@ extra_flags = ["had_timer"]
   ac_bash = 1
   ac_slash = 1
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["cape"]
+description = """
+You see a cape of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3712
@@ -244,6 +316,12 @@ extra_flags = ["had_timer"]
   ac_slash = 1
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["belt"]
+description = """
+You see a belt of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3713
 keywords = ["bracer", "sub", "merc"]
@@ -261,6 +339,12 @@ extra_flags = ["had_timer"]
   ac_bash = 1
   ac_slash = 1
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["bracer"]
+description = """
+You see a bracer of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3714
@@ -294,6 +378,14 @@ extra_flags = ["magic", "had_timer"]
   location = "con"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["diploma"]
+description = """
+This document shows that you have graduated from Mud School.
+It also has magical effects on your abilities if you hold it!
+
+Merc Industries"""
+
 [[objects]]
 vnum = 3716
 keywords = ["banner", "war", "merc"]
@@ -313,6 +405,11 @@ extra_flags = ["glow", "magic"]
   [[objects.affects]]
   location = "saves"
   modifier = -1
+
+[[objects.extra_descs]]
+keywords = ["banner"]
+description = """
+This is the official Merc war banner to see you through the darkest realm!"""
 
 [[objects]]
 vnum = 3717
@@ -335,6 +432,12 @@ extra_flags = ["had_timer"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["spear"]
+description = """
+You see a spear of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3718
@@ -363,6 +466,12 @@ extra_flags = ["had_timer"]
   location = "damroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["staff"]
+description = """
+You see a staff of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3719
 keywords = ["axe", "sub", "merc"]
@@ -384,6 +493,12 @@ extra_flags = ["had_timer"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["axe"]
+description = """
+You see an axe of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3720
@@ -407,6 +522,12 @@ extra_flags = ["had_timer"]
   location = "damroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["flail"]
+description = """
+You see a flail of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 3721
 keywords = ["whip", "sub", "merc"]
@@ -428,6 +549,12 @@ extra_flags = ["had_timer"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["whip"]
+description = """
+You see a whip of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 3722
@@ -452,3 +579,8 @@ extra_flags = ["had_timer"]
   location = "damroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["glaive"]
+description = """
+You see a glaive of great but cheap craftsmanship.  Imprinted on the side is:
+Merc Industries"""

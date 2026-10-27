@@ -40,6 +40,12 @@ wear_flags = ["take", "about"]
   location = "str"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["troll", "skin"]
+description = """
+This is the skin from a huge (and dead) beast.  It looks bad, smells bad,
+and feels bad."""
+
 [[objects]]
 vnum = 2803
 keywords = ["ring", "opal"]
@@ -55,6 +61,11 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "damroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["ring", "opal"]
+description = """
+It is a full circle of opal, smooth and simple."""
 
 [[objects]]
 vnum = 2804
@@ -73,6 +84,11 @@ extra_flags = ["magic"]
   ac_bash = 6
   ac_slash = 6
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["leather", "belt"]
+description = """
+This old, smelly belt looks like it is barely better than rotting cloth."""
 
 [[objects]]
 vnum = 2805
@@ -99,3 +115,8 @@ wear_flags = ["take", "wield"]
   location = "damroll"
   modifier = -1
 
+[[objects.extra_descs]]
+keywords = ["bone"]
+description = """
+This piece of bone looks sturdy enough to be used as a weapon, but you
+wouldn't want to entrust your life to it."""

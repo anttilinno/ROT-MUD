@@ -138,6 +138,11 @@ extra_flags = ["glow", "magic", "nodrop"]
   location = "mana"
   modifier = 30
 
+[[objects.extra_descs]]
+keywords = ["ring", "piety"]
+description = """
+The ring has an almost holy aura around it..."""
+
 [[objects]]
 vnum = 3840
 keywords = ["broad", "royal", "sword"]
@@ -163,6 +168,11 @@ extra_flags = ["magic", "bless", "anti_evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["royal", "broad", "sword"]
+description = """
+This sword is one which is not attained easily.  It is given only to those who have proven their worth and their loyalty to King Arthur."""
 
 [[objects]]
 vnum = 3841
@@ -220,6 +230,12 @@ extra_flags = ["glow", "magic", "bless", "anti_evil"]
   location = "hitroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["Lancelot's", "Lance"]
+description = """
+This lance is very well crafted with the crest of Lancelot's family pounded
+into the handle."""
+
 [[objects]]
 vnum = 3843
 keywords = ["belt", "chastity"]
@@ -241,6 +257,11 @@ extra_flags = ["glow", "magic", "bless", "anti_evil", "noremove"]
   [[objects.affects]]
   location = "mana"
   modifier = 15
+
+[[objects.extra_descs]]
+keywords = ["Belt", "of", "Chastity"]
+description = """
+This belt was given to Lancelot by one of his many "damsels in distress" saved.  I wonder why?..."""
 
 [[objects]]
 vnum = 3844
@@ -368,6 +389,11 @@ extra_flags = ["glow", "magic", "bless", "anti_evil"]
   location = "damroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["holy", "mace"]
+description = """
+This mace has been through many battles.  From the wear it seems to have taken, you can surmise that its previous owner has used it well--and often!"""
+
 [[objects]]
 vnum = 3860
 keywords = ["bastard", "royal", "sword"]
@@ -397,6 +423,11 @@ extra_flags = ["glow", "magic", "bless", "anti_evil"]
   [[objects.affects]]
   location = "str"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["royal", "bastard", "sword"]
+description = """
+This adamanite blade is one of the most finely crafted weapons you have come across in your travels.  It seems clear that it was built with the utmost care, and with one focus in mind--the demise of one's opponent."""
 
 [[objects]]
 vnum = 3865
@@ -480,6 +511,11 @@ extra_flags = ["glow", "magic", "bless", "anti_evil", "anti_neutral"]
   location = "hitroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["sword", "excalibur"]
+description = """
+The legendary Excalibur is even more beautiful than the rumors had let on.  It's no wonder King Arthur guarded it so closely."""
+
 [[objects]]
 vnum = 3871
 keywords = ["plate", "chestplate", "justice"]
@@ -501,6 +537,11 @@ extra_flags = ["magic", "bless", "anti_evil"]
   [[objects.affects]]
   location = "str"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["plate", "chestplate", "justice"]
+description = """
+A beautiful piece of armor sits here.  Surprisingly, there isn't even a scratch on it.  Either King Arthur never pushed it to its limits, or the plate is indeed of the finest quality."""
 
 [[objects]]
 vnum = 3872
@@ -527,4 +568,3 @@ extra_flags = ["magic", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 3
-

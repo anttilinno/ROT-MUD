@@ -218,6 +218,12 @@ Road continues to to the south and west."""
   vnum = 108
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["smurfy", "well"]
+description = """
+A small well is here.  Just the right size if you're a smurf.  But big
+enough for you to get some water from.  I'm sure the smurfs wont mind."""
+
 [[rooms]]
 vnum = 110
 name = "Smurfy Road"
@@ -669,4 +675,3 @@ have little smurfs running around.  The only exit is to the east."""
     [[rooms.mob_resets.equips]]
     vnum = 107
     inv_only = true
-

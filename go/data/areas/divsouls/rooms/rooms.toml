@@ -23,6 +23,30 @@ A brass plaque rests against the hedges at the edge of the path."""
   direction = "west"
   to_vnum = 9304
 
+[[rooms.extra_descs]]
+keywords = ["well"]
+description = """
+A large granite well is visible to the east."""
+
+[[rooms.extra_descs]]
+keywords = ["brass", "plaque"]
+description = """
+It reads:
+
+Remember:
+  Life consists of a balance of forces, and nothing can exist without contrast.
+
+  Where there is light, there is shadow                   {B+++++{x
+  Where there is friendship, there is loneliness         {B+{W+    {B+{x
+  Where there is joy, there is pain                     {B+{W+   +  {B+{x
+  Where there is hope, there is despair                {B+{W+++      {B+{x
+  Where there is life, there is death.                 {B+{W+++++    {B+{x
+                                                       {B+{W++ +++   {B+{x
+  Be careful.                                           {B+{W+++++  {B+{x
+                                                         {B+{W+++  {B+{x
+--                                                        {B+++++{x
+  {GDivided Souls written by Ydri.  3/96{x"""
+
 [[rooms]]
 vnum = 11601
 name = "Between the Hedges"
@@ -251,6 +275,17 @@ The dirt path continues west and east around the gazebo."""
     vnum = 11645
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["marble", "fountain", "hippos"]
+description = """
+Though seemingly innocent, a shadow of depravity hangs about the white
+fountain.. or maybe it's just your imagination."""
+
+[[rooms.extra_descs]]
+keywords = ["white", "gazebo"]
+description = """
+Some vague forms are visible within the gazebo to the south."""
+
 [[rooms]]
 vnum = 11608
 name = "Garden Path"
@@ -405,6 +440,11 @@ center of the ground."""
   vnum = 11600
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["ladder"]
+description = """
+A bone ladder leads into the hole in the floor."""
+
 [[rooms]]
 vnum = 11614
 name = "Hole"
@@ -432,6 +472,12 @@ Go down if you dare.."""
     [[rooms.mob_resets.equips]]
     vnum = 11639
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["multicolored", "void"]
+description = """
+A mass of multiple color churns and spins below.  Your guts twist, and you
+are forced to look away."""
 
 [[rooms]]
 vnum = 11615
@@ -505,6 +551,39 @@ Two low marbles pedestals, grey and white, stand on either side of the tome."""
   vnum = 11604
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["granite", "tome"]
+description = """
+An open book has been sculpted from polished granite.  A paragraph on the
+lefthand page catches your eye:
+
+".. From our wisdom
+    to know
+    From our mistakes
+    to grow..
+
+    .. that each generation shall be better, stronger, wiser
+    than the one before.."
+
+A crack runs across the edge of the page where weather has broken the granite."""
+
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestals"]
+description = """
+Square marble pedestals are set into the redwood.  The white is slightly larger
+than the grey.  Indentations mark the centers of both."""
+
+[[rooms.extra_descs]]
+keywords = ["grey"]
+description = """
+The grey pedestal looks shiny and new, marked only by foot-shaped indentations
+in the center."""
+
+[[rooms.extra_descs]]
+keywords = ["white"]
+description = """
+A crack runs down the edge of the white pedestal."""
+
 [[rooms]]
 vnum = 11618
 name = "Base of a Large Tree"
@@ -528,6 +607,11 @@ northwest, its lower branches shading a large section of the path."""
   [[rooms.mob_resets]]
   vnum = 11648
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["oak", "tree", "branches"]
+description = """
+The huge oak rises skyward.  Its lower branches appear sturdy and climbable."""
 
 [[rooms]]
 vnum = 11619
@@ -591,6 +675,12 @@ of an enormous birdfeeder is visible along the branch to the west."""
   direction = "down"
   to_vnum = 11618
 
+[[rooms.extra_descs]]
+keywords = ["birdfeeder"]
+description = """
+An opening in the near face looks large enough to enter.. though one might
+wonder what kind of bird would need a birdfeeder this big.."""
+
 [[rooms]]
 vnum = 11621
 name = "Inside the Birdfeeder"
@@ -621,6 +711,17 @@ tan and grey egg-shaped spheres.  Between the spheres are clusters of birdseed."
     vnum = 11626
     wear_loc = "float"
 
+[[rooms.extra_descs]]
+keywords = ["tan", "grey", "spheres"]
+description = """
+Closer up, these appear to be huge seed pods, oversized versions of the
+birdseed clustered at their bases."""
+
+[[rooms.extra_descs]]
+keywords = ["birdseed"]
+description = """
+Little piles of birdseed litter wooden floor."""
+
 [[rooms]]
 vnum = 11622
 name = "Stone Well"
@@ -640,6 +741,12 @@ a stone well rises from the turf."""
   [[rooms.mob_resets]]
   vnum = 11602
   max = 6
+
+[[rooms.extra_descs]]
+keywords = ["stone", "well"]
+description = """
+Blocks of smooth grey stone have been fitted and mortared together to form
+a wide well.  A ladder attached to one stone side descends into the darkness."""
 
 [[rooms]]
 vnum = 11623
@@ -662,6 +769,12 @@ ladder ascends to the top of the well."""
     [[rooms.mob_resets.equips]]
     vnum = 11646
     wear_loc = "float"
+
+[[rooms.extra_descs]]
+keywords = ["skeleton"]
+description = """
+It looks as though something (someone?) has fallen into the well.  The bones
+are strangely clean and gleam a coldly in the light."""
 
 [[rooms]]
 vnum = 11624
@@ -740,6 +853,18 @@ lake continues south."""
   vnum = 11617
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["bushes"]
+description = """
+Two large bushes grow out of the boulders to the west.  There appears to be
+an opening behind them."""
+
+[[rooms.extra_descs]]
+keywords = ["boulders", "stones"]
+description = """
+Large white-streaked grey boulders dot the lake floor.  An opening between
+the boulders is visible to the south."""
+
 [[rooms]]
 vnum = 11627
 name = "Mossy Cave"
@@ -758,6 +883,11 @@ from the rest of the lake."""
   [[rooms.mob_resets]]
   vnum = 11618
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["bushes"]
+description = """
+Large bushes shield the cave from the misty lake to the east."""
 
 [[rooms]]
 vnum = 11628
@@ -816,6 +946,14 @@ path leads back into the lake."""
   [[rooms.mob_resets]]
   vnum = 11620
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestal", "depression"]
+description = """
+A round pedestal of white marble is set into a depression in the center of the
+pool.  Patches of grey-green moss cling to the white stone.  Marks in the
+center of the pedestal indicate that something has recently stood on the
+pedestal."""
 
 [[rooms]]
 vnum = 11631
@@ -1337,6 +1475,20 @@ north wall."""
   vnum = 11627
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["grey", "tome", "book"]
+description = """
+Splashes of blood dot the worn vellum pages.  A paragraph on the right hand
+page catches your eye:
+
+"Cycle of hate
+ That I shall make it
+ Cycle of hate
+ That you shall break it..
+
+  .. Else my guilt shall be your pain
+     and my payment your pennance.""""
+
 [[rooms]]
 vnum = 11652
 name = "Dining Hall"
@@ -1368,6 +1520,20 @@ Foul odors and smoke drift into the room from the doorway to the north."""
     [[rooms.mob_resets.equips]]
     vnum = 11667
     wear_loc = "shield"
+
+[[rooms.extra_descs]]
+keywords = ["stone", "table"]
+description = """
+A table made of solid granite.  The rotting remains of what must have been
+a meal are scattered across the bloody table top."""
+
+[[rooms.extra_descs]]
+keywords = ["rotting", "half-eaten", "carcasses"]
+description = """
+The carcasses appear to have been half-raw when eaten.  The remains of some
+sort of slimy stuffing oozes from the uneaten cavities.  While most of the
+meal is unrecognizable you notice some humanoid bones, still trailing white
+tendons, among the remains."""
 
 [[rooms]]
 vnum = 11653
@@ -1481,6 +1647,12 @@ ceiling.  An oaken door opens into the west wall."""
   vnum = 11625
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["utensils", "objects"]
+description = """
+Just some more blood-drenched mops and such..  All those sacrifices must
+be messy.  Just be glad you're not the janitor."""
+
 [[rooms]]
 vnum = 11657
 name = "Narrow Crawlspace"
@@ -1577,6 +1749,12 @@ scattered brush.  The path branches west and north here."""
   vnum = 11640
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["dark", "shapes"]
+description = """
+They seem to appear out of the corner of your vision, but when you turn to
+look, they are gone."""
+
 [[rooms]]
 vnum = 11661
 name = "Sheltered valley"
@@ -1671,6 +1849,12 @@ grey shrubs grow from between huge, stacked boulders."""
   [[rooms.exits]]
   direction = "east"
   to_vnum = 11662
+
+[[rooms.extra_descs]]
+keywords = ["boulder", "boulders", "stone", "huge", "rock", "face", "shrubs"]
+description = """
+One of the boulders near the bottom appears to be slightly separate from the
+others."""
 
 [[rooms]]
 vnum = 11666
@@ -1792,6 +1976,11 @@ tunnel to the west to a tall white throne in the center of the globe."""
   vnum = 11609
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["silk", "carpet"]
+description = """
+Though floating without any visible supports, it appears to be quite sturdy."""
+
 [[rooms]]
 vnum = 11670
 name = "Tunnel of Darkness"
@@ -1823,6 +2012,12 @@ greyish glow."""
   [[rooms.obj_resets]]
   vnum = 11610
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["blood", "red", "carpet"]
+description = """
+A silk carpet the color of blood runs from the base of the throne to the
+tunnel to the east."""
 
 [[rooms]]
 vnum = 11672
@@ -1922,6 +2117,13 @@ to the north."""
     vnum = 11695
     wear_loc = "hands"
 
+[[rooms.extra_descs]]
+keywords = ["large", "pine", "tree"]
+description = """
+You notice a thin crack, barely visible against the rough tree bark,
+outlining a rectangular area in the face of the large pine to the north.
+The lower branches of the pine appear climbable."""
+
 [[rooms]]
 vnum = 11675
 name = "Birdnest"
@@ -2001,6 +2203,11 @@ an impressive oak tree rises from the pines to the south."""
     vnum = 11672
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["huge", "oak", "stump"]
+description = """
+Scratches and light footprints mark the earth around the stump."""
+
 [[rooms]]
 vnum = 11678
 name = "Quiet tunnel"
@@ -2071,6 +2278,19 @@ the chamber to the west."""
     vnum = 11675
     wear_loc = "light"
 
+[[rooms.extra_descs]]
+keywords = ["semicircular", "stone", "table"]
+description = """
+A huge semicircular table made of dark grey stone.  Closer inspection
+reveals a dark opening beneath the round base of the table."""
+
+[[rooms.extra_descs]]
+keywords = ["white", "grey", "black", "chair"]
+description = """
+Three large chairs of white, grey, and black oak line are set along the
+inside edge of the table.  Engraved in the back of each chair, you notice
+the insignia of a diving hawk."""
+
 [[rooms]]
 vnum = 11680
 name = "Shadowy Lair"
@@ -2089,6 +2309,12 @@ corner to form a large nest."""
   vnum = 11663
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["leaves", "vines", "nest"]
+description = """
+Glossy dark green scales glint from within the leaves and vines at the
+base of the nest."""
+
 [[rooms]]
 vnum = 11681
 name = "Inside the Tree Base"
@@ -2105,6 +2331,12 @@ visible far above."""
   [[rooms.exits]]
   direction = "up"
   to_vnum = 11682
+
+[[rooms.extra_descs]]
+keywords = ["wooden", "platform"]
+description = """
+A wooden platform cuts across the space above.  An opening to one side of
+the platform allows entrance to those who can reach it.."""
 
 [[rooms]]
 vnum = 11682
@@ -2168,6 +2400,16 @@ into the void to the north.  The brick road continues west to a crossroads."""
   direction = "west"
   to_vnum = 11686
 
+[[rooms.extra_descs]]
+keywords = ["ribbon", "white", "light"]
+description = """
+Though apparently made solely of light, it looks sturdy enough to walk on."""
+
+[[rooms.extra_descs]]
+keywords = ["white", "outhouse"]
+description = """
+A neat white outhouse stands to the east."""
+
 [[rooms]]
 vnum = 11684
 name = "Ribbon of Light"
@@ -2216,6 +2458,17 @@ the east."""
   [[rooms.obj_resets]]
   vnum = 11697
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["ribbon", "white", "light"]
+description = """
+Though apparently made solely of white light, the ribbon appears sturdy
+enough to walk on."""
+
+[[rooms.extra_descs]]
+keywords = ["rip"]
+description = """
+A rip in the fabric of the void shimmers overhead."""
 
 [[rooms]]
 vnum = 11686
@@ -2549,4 +2802,3 @@ vnum = 11699
 name = "Temple of Unbelief"
 sector = "inside"
 description = "Seeing is believing.."
-

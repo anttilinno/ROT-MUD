@@ -51,6 +51,11 @@ extra_flags = ["anti_good"]
   location = "damroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["horns", "horn"]
+description = """
+These horns appear to be made of adamantite."""
+
 [[objects]]
 vnum = 8303
 keywords = ["chain", "mail", "chainmail"]
@@ -108,6 +113,11 @@ cost = 690
 wear_flags = ["take"]
 extra_flags = ["glow", "hum"]
 
+[[objects.extra_descs]]
+keywords = ["potion"]
+description = """
+It looks really disgusting and doesn't smell very nice either."""
+
 [[objects]]
 vnum = 8308
 keywords = ["claymore", "rusty", "sword"]
@@ -125,4 +135,3 @@ wear_flags = ["take", "wield"]
   flags = ["two_hands"]
   dice_number = 4
   dice_size = 7
-

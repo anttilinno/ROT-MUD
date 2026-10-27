@@ -15,6 +15,18 @@ with activity lies to the north.
   direction = "south"
   to_vnum = 3503
 
+[[rooms.extra_descs]]
+keywords = ["sign", "big", "fanatics"]
+description = """
+Loosely based on a tower in Final Fantasy III, the Fanatics' Tower is my first
+work in area building.  This tower is 13 stories tall (averaging 6 rooms wide),
+and contains a total of 100 all original rooms.  The first story starts with
+level 75 mobs, and their level inicreases slightly as you go up.  Each story
+has a "boss" mobile with some pretty nice weapons.  The final boss gives you
+a very special prize if beaten.
+
+{&-{$Artema{&-{0 the {8Dragon {4ArchMage{0."""
+
 [[rooms]]
 vnum = 19901
 name = "Entrance to the Fanatics' Tower"
@@ -32,6 +44,29 @@ Some guys are sitting off to the left whispering."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 19900
+
+[[rooms.extra_descs]]
+keywords = ["door", "big"]
+description = """
+This door isn't much to look at."""
+
+[[rooms.extra_descs]]
+keywords = ["robed", "men"]
+description = """
+These guys are like zombies, walking around in circles chanting something you
+can't make out.  You better walk around them."""
+
+[[rooms.extra_descs]]
+keywords = ["fanatics'", "tower"]
+description = """
+This thing is huge, at least 100 total rooms.  You will come across some very
+powerful enemies on your trek to the top."""
+
+[[rooms.extra_descs]]
+keywords = ["guys"]
+description = """
+These guys are over in the corner discussing the untilmate treasure to be found
+at the top of the tower.  One offers to tell you a secret for 10000 gold.  Heh"""
 
 [[rooms]]
 vnum = 19902
@@ -458,6 +493,11 @@ Edgar's corpse is rotting in the corner."""
   vnum = 19933
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["corpse"]
+description = """
+King Edgar died here long ago, all that is left is some bones."""
+
 [[rooms]]
 vnum = 19919
 name = "Fanatics' Tower:  Floor 3"
@@ -762,6 +802,12 @@ The corpse of Realm is here."""
   vnum = 19934
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["corpse"]
+description = """
+You wonder how Realm could have gotten this far!  But she just couldn't
+make it to the top..."""
+
 [[rooms]]
 vnum = 19930
 name = "Fanatics' Tower:  Floor 4"
@@ -920,6 +966,12 @@ Gau's corpse is here, being weeped over by all small animals."""
   [[rooms.mob_resets]]
   vnum = 19935
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["corpse"]
+description = """
+Gau's corpse is here, all the small animals that pass by stay, and weep for
+a few minutes at his passing.  He died happy."""
 
 [[rooms]]
 vnum = 19936
@@ -1234,6 +1286,12 @@ Setzer's corpse is here, slowly rotting."""
   [[rooms.mob_resets]]
   vnum = 19936
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["corpse"]
+description = """
+For all his life, Setzer has been playing with aces; not too long ago
+he drew a joker."""
 
 [[rooms]]
 vnum = 19947
@@ -1637,6 +1695,11 @@ Mog's frail little corpse is here."""
   [[rooms.mob_resets]]
   vnum = 19938
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["corpse"]
+description = """
+Mog danced his last dance in this spot not too long ago."""
 
 [[rooms]]
 vnum = 19962
@@ -2604,6 +2667,12 @@ ledge... Dare you risk the jump?"""
   direction = "down"
   to_vnum = 19999
 
+[[rooms.extra_descs]]
+keywords = ["waterfall", "icewine"]
+description = """
+Icewine is bubbling over the edge here!  You can't get close enough
+to drink any unless you jump!"""
+
 [[rooms]]
 vnum = 19999
 name = "Cliff looking over all of Lestat's Realm"
@@ -2665,4 +2734,3 @@ a ({3Magical{0) high."""
   [[rooms.obj_resets]]
   vnum = 19900
   max = 1
-

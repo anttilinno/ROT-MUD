@@ -44,6 +44,30 @@ wall."""
   vnum = 3700
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Equipment check time!  Type 'EQUIPMENT' to see your current equipment.  Right
+now, you have just a vest, a shield, and a weapon.  As you go through Mud
+School you will acquire a complete set of equipment.
+
+To pick up items on the ground as you see them, type 'GET item'.
+To wear a piece of armor, type 'WEAR item'.
+To hold a light source, type 'HOLD item'.
+To wield a weapon, type 'WIELD weapon'.
+To wield a second weapon, type 'SECOND weapon'.
+To wear, hold, and wield everything you have, type 'WEAR ALL'.
+To stop using a piece of equipment, type 'REMOVE item'.
+Finally, to see the items in your inventory, type 'INVENTORY'.
+
+When you are ready to continue, go west."""
+
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This zone (Mud School) is created by Hatchet for any Merc Mud.
+Copyright 1992, 1993."""
+
 [[rooms]]
 vnum = 3702
 name = "The Center Room"
@@ -77,6 +101,21 @@ sign on the wall.  Exits lead in ALL directions."""
   direction = "down"
   to_vnum = 3707
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+This is the direction practicing room.  The directions you can go in any
+room are: north, south, east, west, up, or down.  Of course, not all rooms
+have all exits available.
+
+To see the obvious exits in a room, type 'EXITS'.
+
+Sometimes doors are closed, or locked, or secret.  Then you have to notice
+clues in the room description, or try going into that direction and seeing
+if you bump into a door.
+
+Try going into each direction from here.  When you are done, go NORTH."""
+
 [[rooms]]
 vnum = 3703
 name = "A Room in Mud School"
@@ -94,6 +133,13 @@ sign on the wall.  Exits lead north and south."""
   direction = "south"
   to_vnum = 3702
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Since you are here, let us have another lesson.  You can see the statistics on
+yourself by typing 'SCORE'.  Do that right now.  At higher levels, 'SCORE'
+gives you more information."""
+
 [[rooms]]
 vnum = 3704
 name = "A Room in Mud School"
@@ -106,6 +152,11 @@ sign on the wall.  The only exit is east."""
   [[rooms.exits]]
   direction = "east"
   to_vnum = 3702
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Just go east to the central room."""
 
 [[rooms]]
 vnum = 3705
@@ -120,6 +171,11 @@ sign on the wall.  The only exit is north."""
   direction = "north"
   to_vnum = 3702
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Just go north to the central room."""
+
 [[rooms]]
 vnum = 3707
 name = "A Room in Mud School"
@@ -133,6 +189,11 @@ sign on the wall.  The only exit is up."""
   direction = "up"
   to_vnum = 3702
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Just go up to the central room."""
+
 [[rooms]]
 vnum = 3708
 name = "A Room in Mud School"
@@ -145,6 +206,11 @@ sign on the wall.  The only exit is down."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 3702
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Just go down to the central room."""
 
 [[rooms]]
 vnum = 3709
@@ -163,6 +229,26 @@ sign on the wall.  Exits reach west and down."""
   direction = "down"
   to_vnum = 3710
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to combat training.
+
+The first lesson is knowing whom to fight.  Use the command 'CONSIDER' to
+consider killing a monster.  Avoid fighting monsters that will kill you
+easily.
+
+The second lesson is running away.  There is a monster in the room down.
+He is too strong for you to kill, but he won't kill you.  So go 'DOWN' from
+here, then 'CONSIDER' him, then 'KILL' him.  After a while, type 'FLEE' to
+escape from him.
+
+You can also set your character to flee automatically with the 'WIMPY' command.
+Type 'HELP WIMPY' to find out more about 'WIMPY'.
+
+After you flee, you will be back in this room.  When you are ready to go on
+to the next station, go 'WEST'."""
+
 [[rooms]]
 vnum = 3710
 name = "The Blob Cage"
@@ -178,6 +264,12 @@ You see a sign here.  The only exit is up."""
   [[rooms.mob_resets]]
   vnum = 3701
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Remember, don't fight the blob to the finish!  Just type 'KILL BLOB', then
+when you are fighting, type 'FLEE', until you flee and are out of here."""
 
 [[rooms]]
 vnum = 3711
@@ -195,6 +287,13 @@ sign on the wall."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 3712
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to the next station.  Here, you will actually fight real monsters,
+without fleeing!  Kill every mob, since they hold some equipment you need.
+To start, go down."""
 
 [[rooms]]
 vnum = 3712
@@ -229,6 +328,25 @@ Exits lead into the cardinal directions plus down."""
   vnum = 3707
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to the cage room.  The adepts of mud school have captured some
+monsters for you to kill.  In the four cages are four monsters of various
+types.  Kill them all!
+
+After you kill each monster, get all of the equipment from their corpses
+with the command 'GET ALL CORPSE'.  You can then use the command 'WEAR ALL'
+to wear your newly won equipment.
+
+When you are done with the corpse, 'SACRIFICE CORPSE' to give it to your God.
+God will reward you for this.
+
+Between combat, you may need to rest or sleep to regenerate hit points.
+You can 'REST' to regenerate hit points, or you can 'SLEEP'.  'SLEEP' will
+refresh you faster than 'REST', but you will be less aware of your
+surroundings."""
+
 [[rooms]]
 vnum = 3713
 name = "A Cage"
@@ -252,6 +370,12 @@ in the upkeep here!  There is a sign on the wall.  The only exit is south."""
     [[rooms.mob_resets.equips]]
     vnum = 3712
     wear_loc = "waist"
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+There is an aggressive monster in this room.  Kill him and get out of here
+fast!  Remember to loot and sacrifice the corpse."""
 
 [[rooms]]
 vnum = 3714
@@ -277,6 +401,12 @@ in the upkeep here!  There is a sign on the wall.  The only exit is east."""
     vnum = 3713
     wear_loc = "wrist_l"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+There is a wimpy, aggressive monster in this room.  Kill him and get out of
+here fast!  Remember to loot and sacrifice the corpse."""
+
 [[rooms]]
 vnum = 3715
 name = "A Cage"
@@ -300,6 +430,12 @@ in the upkeep here!  There is a sign on the wall.  The only exit is north."""
     [[rooms.mob_resets.equips]]
     vnum = 3711
     wear_loc = "about"
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+There is a wimpy monster in this room.  Kill him and get out of here fast!
+Remember to loot and sacrifice the corpse."""
 
 [[rooms]]
 vnum = 3716
@@ -325,6 +461,12 @@ in the upkeep here!  There is a sign on the wall.  The only exit is west."""
     vnum = 3705
     wear_loc = "neck2"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+There is a monster in this room.  Kill him and get out of here fast!
+Remember to loot and sacrifice the corpse."""
+
 [[rooms]]
 vnum = 3717
 name = "A Room in Mud School"
@@ -346,6 +488,19 @@ sign on the wall.  Find your own exit here."""
   [[rooms.exits]]
   direction = "up"
   to_vnum = 3712
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+By now, you must be hungry and thirsty.  Time to buy groceries!
+To the south is a store.  Inside the store, you can use these commands:
+
+    BUY    Buy an item
+    LIST   List what is for sale
+
+After buying some food and drink, you can 'EAT' and 'DRINK' it.
+
+After that, find the next exit yourself."""
 
 [[rooms]]
 vnum = 3718
@@ -372,6 +527,17 @@ course, there is a sign on the wall.  The only exit is north."""
     vnum = 3031
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+
+   Buy   - Buy something from the storekeeper.
+   List  - The storekeeper will tell you what's for sale.
+   Value - The storekeeper will tell you how much he will give to you for
+           that item.
+   Sell  - Sell that item to the storekeeper."""
+
 [[rooms]]
 vnum = 3719
 name = "A Room in Mud School"
@@ -395,6 +561,16 @@ sign on the wall.  The exits are north and west, with a door to the east."""
   direction = "west"
   flags = ["door", "closed"]
   to_vnum = 3717
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+North of you is a dark room.  I hope you still have the lantern!  If not,
+you have to back to the store and buy one.
+
+In the room is a monster with a key that you need.  After killing the
+monster and getting the key, come back here, UNLOCK E, OPEN E,
+and continue east."""
 
 [[rooms]]
 vnum = 3720
@@ -455,6 +631,20 @@ The only exit is on the other side of the gate north of you."""
   [[rooms.mob_resets]]
   vnum = 3708
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+You have graduated from Mud School!  Take your diploma...if you can.
+Go 'NORTH' from here to visit our arena.  There are plenty of low-level
+monsters, but DON'T attack other players.
+
+If you want to go directly back to the temple at any time, type 'RECALL'.
+
+If you need more help during the game, type 'HELP'.  If you see something
+wrong or have comments, use 'BUG', 'IDEA', or 'TYPO' to report them.
+
+May your visit here be ... mercenary."""
 
 [[rooms]]
 vnum = 3722
@@ -809,6 +999,13 @@ being watched by some divine being.  There is a BIG SIGN here."""
   [[rooms.mob_resets]]
   vnum = 3709
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Those with high bravery or low senses of cautiousness might wish to go below
+to the Dungeon.  However, know that there are aggressive monsters down there,
+and there is no quick escape back out of here when you are in the dungeon."""
 
 [[rooms]]
 vnum = 3735
@@ -1339,6 +1536,17 @@ There is a sign on the wall (type 'LOOK SIGN' to read it)."""
   direction = "west"
   to_vnum = 3758
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+To find out your attributes, type 'score'.  You can improve your attributes
+in Furey's Training Room to the west.  You can practice your skills and spells
+in Zump's Guild Room to the east.  You can continue through mud school by
+going north.
+
+If you are a new character, you should go 'WEST' from here, train your
+abilities, and then come back here and go 'NORTH'."""
+
 [[rooms]]
 vnum = 3758
 name = "Furey's Training Room"
@@ -1355,6 +1563,15 @@ and sweat.  There is a sign on the wall."""
   [[rooms.mob_resets]]
   vnum = 3718
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to Furey's Training Room.  Here you can train your attributes.  To
+train an attribute, you need enough practices.  To find out how many practice
+sessions you have, type 'train' while you are in this room.  To train for a
+specific attribute, type 'train <attr>' where attr is the first 3 letters of
+the attribute you want increased.  Type 'help train' for more information."""
 
 [[rooms]]
 vnum = 3759
@@ -1373,6 +1590,16 @@ sweat and an aura of magic.  There is a sign on the wall."""
   vnum = 3719
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to Zump's Guild Room.  Here you will learn your skills and spells.
+To find out what skills and spells you can practice and how many practice
+sessions you have, type 'practice'.  To practice the specific skill, type
+'practice <skill>', where 'skill' is the skill or spell you wish to practice.
+Practicing increases the amount you know of that skill or spell, up to a
+certain maximum.  When you have practiced all you wish to practice, go west."""
+
 [[rooms]]
 vnum = 3760
 name = "A Safe Room"
@@ -1384,4 +1611,3 @@ You can rest here, and go up to go back to the Temple of Midgaard."""
   [[rooms.exits]]
   direction = "up"
   to_vnum = 3001
-

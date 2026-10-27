@@ -2291,6 +2291,13 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 			return
 		}
 
+		// Extra descriptions on carried, worn or nearby objects (signs,
+		// inscriptions), as ROM's do_look checks before object names.
+		if text, ok := objExtraDesc(ch, args); ok {
+			d.send(ch, strings.TrimRight(text, "\r\n")+"\r\n")
+			return
+		}
+
 		// Try to look at an object in inventory or room
 		obj := FindObjOnChar(ch, args)
 		if obj == nil {
@@ -2312,6 +2319,12 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 		}
 		if dir, ok := directions[strings.ToLower(args)]; ok {
 			d.lookInDirection(ch, dir)
+			return
+		}
+
+		// Room extra descriptions (plaques, paintings, the view)
+		if ed := findExtraDesc(room.ExtraDescriptions, args); ed != nil {
+			d.send(ch, strings.TrimRight(ed.Description, "\r\n")+"\r\n")
 			return
 		}
 
@@ -2936,37 +2949,44 @@ func (d *CommandDispatcher) cmdReport(ch *types.Character, args string) {
 		ch.Hit, ch.MaxHit, ch.Mana, ch.MaxMana, ch.Move, ch.MaxMove))
 }
 
+// findExtraDesc returns the extra description whose keywords match name.
+func findExtraDesc(eds []*types.ExtraDescription, name string) *types.ExtraDescription {
+	for _, ed := range eds {
+		if nameMatches(strings.Join(ed.Keywords, " "), name) {
+			return ed
+		}
+	}
+	return nil
+}
+
+// objExtraDesc finds an extra description matching name on an object ch
+// carries, wears, or sees in the room.
+func objExtraDesc(ch *types.Character, name string) (string, bool) {
+	objs := append([]*types.Object{}, ch.Inventory...)
+	for _, obj := range ch.Equipment {
+		if obj != nil {
+			objs = append(objs, obj)
+		}
+	}
+	if ch.InRoom != nil {
+		objs = append(objs, ch.InRoom.Objects...)
+	}
+	for _, obj := range objs {
+		if ed := findExtraDesc(obj.ExtraDescriptions, name); ed != nil {
+			return ed.Description, true
+		}
+	}
+	return "", false
+}
+
 func (d *CommandDispatcher) cmdExamine(ch *types.Character, args string) {
 	if args == "" {
 		d.send(ch, "Examine what?\r\n")
 		return
 	}
-
-	// Look for object in inventory first
-	for _, obj := range ch.Inventory {
-		if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(args)) {
-			d.send(ch, fmt.Sprintf("You examine %s:\r\n", obj.ShortDesc))
-			if obj.LongDesc != "" {
-				d.send(ch, obj.LongDesc+"\r\n")
-			}
-			return
-		}
-	}
-
-	// Look for object in room
-	if ch.InRoom != nil {
-		for _, obj := range ch.InRoom.Objects {
-			if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(args)) {
-				d.send(ch, fmt.Sprintf("You examine %s:\r\n", obj.ShortDesc))
-				if obj.LongDesc != "" {
-					d.send(ch, obj.LongDesc+"\r\n")
-				}
-				return
-			}
-		}
-	}
-
-	d.send(ch, "You don't see that here.\r\n")
+	// ROM's do_examine starts with do_look; look already shows extra
+	// descriptions and container contents.
+	d.doLook(ch, args)
 }
 
 func (d *CommandDispatcher) cmdLore(ch *types.Character, args string) {

@@ -868,6 +868,12 @@ hope to again.  A picture of a familiar temple hangs on the east wall."""
   vnum = 9107
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["picture"]
+description = """
+The picture is in on the east wall.  It is very complex in detail, and you
+almost see people walking around the temple in the picture."""
+
 [[rooms]]
 vnum = 9142
 name = "Suspicious little raincloud."
@@ -1776,4 +1782,3 @@ at the rock, vainly trying to get a precious hold and save your
 worthless hide.  Next time, heed your conscience.
 
 You've fallen, and you can't get up!!!"""
-

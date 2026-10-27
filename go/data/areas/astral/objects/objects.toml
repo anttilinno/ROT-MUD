@@ -28,6 +28,11 @@ extra_flags = ["anti_good", "anti_evil"]
   location = "dex"
   modifier = -1
 
+[[objects.extra_descs]]
+keywords = ["hammer", "sledge", "grey"]
+description = """
+This massive hammer is incredibly hard, heavy, and utterly grey and featureless."""
+
 [[objects]]
 vnum = 7701
 keywords = ["scroll", "violet"]
@@ -39,6 +44,11 @@ weight = 10
 cost = 1510
 wear_flags = ["take"]
 extra_flags = ["bless"]
+
+[[objects.extra_descs]]
+keywords = ["scroll", "violet"]
+description = """
+The scroll is written on soft violet parchment that has a pleasing smell to it."""
 
 [[objects]]
 vnum = 7702
@@ -52,6 +62,12 @@ cost = 2100
 wear_flags = ["take"]
 extra_flags = ["evil"]
 
+[[objects.extra_descs]]
+keywords = ["tablet", "scroll", "black"]
+description = """
+The tablet is an unreflective black rectangular piece of stone, with strange
+writings etched deep into its surface."""
+
 [[objects]]
 vnum = 7703
 keywords = ["scroll", "githyanki"]
@@ -62,6 +78,11 @@ level = 13
 weight = 10
 cost = 1240
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["scroll", "githyanki"]
+description = """
+The scroll has writings on it that you cannot comprehend."""
 
 [[objects]]
 vnum = 7704
@@ -83,6 +104,16 @@ extra_flags = ["evil", "nodrop"]
   location = "int"
   modifier = -1
 
+[[objects.extra_descs]]
+keywords = ["amulet", "demon"]
+description = """
+The amulet is a small circular object made from some bizarre metallic alloy.
+It is inscribed with various symbols and raised images of snakes, tortured
+victims, and other things too horrible to describe.
+
+Stenciled in the center is an unpronounceable name which it would behoove you
+not to utter aloud."""
+
 [[objects]]
 vnum = 7705
 keywords = ["talisman", "devilish"]
@@ -98,6 +129,15 @@ extra_flags = ["evil", "nodrop"]
   [[objects.affects]]
   location = "hit"
   modifier = -10
+
+[[objects.extra_descs]]
+keywords = ["talisman", "devilish"]
+description = """
+The talisman is a red circular stone object hanging from a metallic chain.  It
+seems to pulse with a life of its own, and you feel uncomfortable being anywhere
+near it.
+
+Engraved in the center is one word.  Merely reading the word induces fright."""
 
 [[objects]]
 vnum = 7706
@@ -124,6 +164,13 @@ wear_flags = ["take", "wield"]
   location = "hitroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["knife", "silvery"]
+description = """
+The knife is forged from a strange silvery metal the likes of which you have
+never seen in your own world.  It is incredibly sharp and hard, yet feels almost
+fluid to the touch."""
+
 [[objects]]
 vnum = 7707
 keywords = ["dagger", "silvery"]
@@ -148,6 +195,13 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["dagger", "silvery"]
+description = """
+The dagger is forged from a strange silvery metal the likes of which you have
+never seen in your own world.  It is incredibly sharp and hard, yet feels almost
+fluid to the touch."""
 
 [[objects]]
 vnum = 7708
@@ -178,6 +232,13 @@ wear_flags = ["take", "wield"]
   location = "dex"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["sword", "thin"]
+description = """
+The sword is forged from a strange silvery metal.  It barely measures an inch
+across at its widest point, yet it is totally inflexible and razor-sharp.  It
+could probably cut through stone."""
+
 [[objects]]
 vnum = 7709
 keywords = ["sword", "thin", "two", "two-handed"]
@@ -203,6 +264,13 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["sword", "thin", "two", "two-handed"]
+description = """
+The sword is forged from a strange silvery metal.  It barely measures two inches
+across at its widest point, yet it is totally inflexible and razor sharp.  It
+could probably cut through stone."""
 
 [[objects]]
 vnum = 7710
@@ -231,6 +299,13 @@ extra_flags = ["glow"]
   location = "dex"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["sword", "silvery"]
+description = """
+The sword is forged from a strange silvery metal the likes of which you have
+never seen in your own world.  It is incredibly sharp and hard, yet feels almost
+fluid to the touch."""
+
 [[objects]]
 vnum = 7711
 keywords = ["flail", "barbed", "iron"]
@@ -252,6 +327,13 @@ extra_flags = ["hum", "evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 3
+
+[[objects.extra_descs]]
+keywords = ["flail", "barbed", "iron"]
+description = """
+This hideous weapon has claimed many lives.  You can tell from the bloodstains
+dried into the iron and from the residue of flesh that hangs from the many
+barbs on it."""
 
 [[objects]]
 vnum = 7712
@@ -288,6 +370,14 @@ extra_flags = ["evil", "nodrop", "noremove"]
   location = "str"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["sword", "gith"]
+description = """
+The blade of this sword is a featureless gray.  As you touch it you feel an
+evil presence reaching out to consume your soul.
+
+Maybe picking it up wasn't such a good idea."""
+
 [[objects]]
 vnum = 7713
 keywords = ["stone", "flame"]
@@ -307,6 +397,12 @@ wear_flags = ["take", "hold"]
   location = "ac"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["stone", "flame"]
+description = """
+This stone burns with an flame that emits great heat, yet it can be held with
+ease.  The flame creates a light that allows you to see for miles."""
+
 [[objects]]
 vnum = 7714
 keywords = ["powder", "astral"]
@@ -317,6 +413,11 @@ level = 0
 weight = 10
 cost = 100
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["powder", "astral"]
+description = """
+You see the residue of the astral plane."""
 
 [[objects]]
 vnum = 7715
@@ -335,6 +436,12 @@ wear_flags = ["take", "body"]
   ac_slash = 6
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["vest", "splint"]
+description = """
+This splint mail has been expertly and ornately fashioned from the highest
+quality of steels."""
+
 [[objects]]
 vnum = 7716
 keywords = ["skirt", "splint"]
@@ -352,6 +459,12 @@ wear_flags = ["take", "legs"]
   ac_slash = 7
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["skirt", "splint"]
+description = """
+This splint mail has been expertly and ornately fashioned from the highest
+quality of steels."""
+
 [[objects]]
 vnum = 7717
 keywords = ["sleeves", "splint"]
@@ -368,6 +481,12 @@ wear_flags = ["take", "arms"]
   ac_bash = 7
   ac_slash = 7
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["sleeves", "splint"]
+description = """
+This splint mail has been expertly and ornately fashioned from the highest
+quality of steels."""
 
 [[objects]]
 vnum = 7718
@@ -398,6 +517,12 @@ wear_flags = ["take", "hands"]
   location = "str"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["gauntlets", "ornate"]
+description = """
+These gauntlets have been expertly and ornately fashioned from the highest
+quality of steels."""
+
 [[objects]]
 vnum = 7719
 keywords = ["vest", "cracked", "leather"]
@@ -423,6 +548,12 @@ wear_flags = ["take", "body"]
   location = "ac"
   modifier = -6
 
+[[objects.extra_descs]]
+keywords = ["vest", "cracked", "leather"]
+description = """
+The ancient vest is barely intact.  All of the leather has cracked and dried
+to a husk.  It is covered with stains, burns, scorch marks, and blood."""
+
 [[objects]]
 vnum = 7720
 keywords = ["potion", "violet"]
@@ -433,6 +564,11 @@ level = 3
 weight = 20
 cost = 320
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["potion", "violet"]
+description = """
+The violet fluid inside shifts and swirls."""
 
 [[objects]]
 vnum = 7721
@@ -445,6 +581,11 @@ weight = 10
 cost = 760
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["potion", "vial", "murky"]
+description = """
+The murky liquid inside this vial looks a lot like sewer water."""
+
 [[objects]]
 vnum = 7722
 keywords = ["potion", "silvery"]
@@ -456,6 +597,11 @@ weight = 20
 cost = 320
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["potion", "silvery"]
+description = """
+The octagonal vial contains a silvery-colored liquid that shimmers in the light."""
+
 [[objects]]
 vnum = 7723
 keywords = ["mint", "chocolate"]
@@ -466,6 +612,12 @@ level = 21
 weight = 0
 cost = 990
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["mint", "chocolate"]
+description = """
+This mint is made from the finest of chocolates, surrounding a cool peppermint
+interior that must be savored, not swallowed."""
 
 [[objects]]
 vnum = 7724
@@ -479,6 +631,12 @@ cost = 0
 wear_flags = ["take", "hold"]
 extra_flags = ["invis"]
 
+[[objects.extra_descs]]
+keywords = ["pentagram"]
+description = """
+The pentagram is a small circular hoop that surrounds a five-pointed star.
+Inscribed on its exterior loop are markings in an alien tongue."""
+
 [[objects]]
 vnum = 7725
 keywords = ["pouch", "rotting"]
@@ -490,3 +648,7 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["pouch", "rotting"]
+description = """
+You think you see glints of metal through the holes..."""

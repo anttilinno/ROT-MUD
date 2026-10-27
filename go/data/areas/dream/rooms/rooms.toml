@@ -947,6 +947,11 @@ You may recall now if you like."""
   vnum = 8601
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["dancer", "dancers"]
+description = """
+The dancers have been here all night and intend to dance until dawn."""
+
 [[rooms]]
 vnum = 8634
 name = "A Small Hall"
@@ -983,6 +988,11 @@ You may recall now if you like."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 8637
+
+[[rooms.extra_descs]]
+keywords = ["shack"]
+description = """
+The shack looks hand-made by an amateur."""
 
 [[rooms]]
 vnum = 8637
@@ -1050,4 +1060,3 @@ same obsidian color as the ground and you can't find a horizon."""
   [[rooms.mob_resets]]
   vnum = 8600
   max = 1
-

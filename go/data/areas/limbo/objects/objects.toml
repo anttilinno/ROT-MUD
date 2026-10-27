@@ -278,6 +278,12 @@ weight = 1
 cost = 1
 extra_flags = ["nopurge", "nonmetal", "melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["chain"]
+description = """
+The chain reaches the clouds high above you, the bottom link is mangled,
+and almost scrapes the ground."""
+
 [[objects]]
 vnum = 54
 keywords = ["bag"]
@@ -288,4 +294,3 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
-

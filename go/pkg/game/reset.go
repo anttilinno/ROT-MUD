@@ -325,6 +325,12 @@ func (r *ResetSystem) CreateObjFromTemplate(vnum int) *types.Object {
 		obj.Values[3] = tmpl.Portal.DestVnum // destination room vnum
 	}
 
+	for _, ed := range tmpl.ExtraDescs {
+		obj.ExtraDescriptions = append(obj.ExtraDescriptions, &types.ExtraDescription{
+			Keywords: ed.Keywords, Description: ed.Description,
+		})
+	}
+
 	// Parse affects (e.g., hitroll, damroll bonuses)
 	for _, affData := range tmpl.Affects {
 		aff := &types.Affect{

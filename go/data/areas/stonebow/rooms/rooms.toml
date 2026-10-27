@@ -39,6 +39,39 @@ and there is a staircase leading down."""
   vnum = 13008
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["long", "marble", "counter"]
+description = """
+The counter is clean and smooth.  There is a vase of roses on one end;
+bouquets of daisies and small corsages are arranged on the other.  Long,
+wispy ferns trail over the edge."""
+
+[[rooms.extra_descs]]
+keywords = ["vase", "roses"]
+description = """
+A glass vase is filled with beautiful red roses."""
+
+[[rooms.extra_descs]]
+keywords = ["wispy", "ferns"]
+description = """
+Long, delicate ferns trail gently over your shoulders."""
+
+[[rooms.extra_descs]]
+keywords = ["container", "bouquets"]
+description = """
+Mixed bouquets of bright, beautiful flowers are tied with colorful
+ribbons."""
+
+[[rooms.extra_descs]]
+keywords = ["corsages"]
+description = """
+Small, colorful flowers are tied together into corsages."""
+
+[[rooms.extra_descs]]
+keywords = ["daisies"]
+description = """
+Immaculate, cheerful daisies are caught up into bouquets."""
+
 [[rooms]]
 vnum = 13001
 name = "A stone vault"
@@ -54,6 +87,88 @@ and lilacs; garlands, baby's breath, and broad-leaved laurels..."""
   direction = "east"
   flags = ["door"]
   to_vnum = 13000
+
+[[rooms.extra_descs]]
+keywords = ["Roses"]
+description = """
+Long-stemmed, dusky red roses."""
+
+[[rooms.extra_descs]]
+keywords = ["Tulips"]
+description = """
+A large vase is filled with varicolored tulips."""
+
+[[rooms.extra_descs]]
+keywords = ["Violets"]
+description = """
+Rich, deep purple violets are being grown in pots here."""
+
+[[rooms.extra_descs]]
+keywords = ["Daffodils"]
+description = """
+Bright, cheerful daffodils are here in a vase."""
+
+[[rooms.extra_descs]]
+keywords = ["Jasmine"]
+description = """
+Sweet, fragrant jasmine blossoms are here in a clay vase."""
+
+[[rooms.extra_descs]]
+keywords = ["Hyacinths"]
+description = """
+Pink, white, and blue hyacinths fill the air with sweet fragrance from
+their heavy clusters."""
+
+[[rooms.extra_descs]]
+keywords = ["Magnolias"]
+description = """
+Giant, fragrant magnolias nearly overpower the tiny room with their
+perfume."""
+
+[[rooms.extra_descs]]
+keywords = ["Irises"]
+description = """
+Long-stemmed, brilliant irises are gathered here in a jar."""
+
+[[rooms.extra_descs]]
+keywords = ["Peonies"]
+description = """
+Blood-red, brilliant peonies from Eriana's personal garden are here,
+glowing softly."""
+
+[[rooms.extra_descs]]
+keywords = ["Fern"]
+description = """
+Long, lacy fern fronds are here, scattered on the table, waiting to be
+tied into bouquets."""
+
+[[rooms.extra_descs]]
+keywords = ["Heather"]
+description = """
+Pink and purple fronds rest here in vases."""
+
+[[rooms.extra_descs]]
+keywords = ["Lilacs"]
+description = """
+Pink, purple, and white clusters of fragrant lilacs brighten the room."""
+
+[[rooms.extra_descs]]
+keywords = ["Garlands"]
+description = """
+Fresh and dried flower garlands, formed into circlets for any fair
+maiden's hair, hang from pegs."""
+
+[[rooms.extra_descs]]
+keywords = ["Baby's", "breath"]
+description = """
+Tiny clusters of delicate baby's breath are tied together to add color
+to bouquets."""
+
+[[rooms.extra_descs]]
+keywords = ["Laurel"]
+description = """
+Broad-leaf, shining laurels are braided into ropes and twisted into
+garlands."""
 
 [[rooms]]
 vnum = 13002
@@ -125,6 +240,24 @@ the counter."""
   [[rooms.mob_resets]]
   vnum = 13005
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["A", "long", "glass", "counter", "lined", "with", "blue", "gems", "and", "stones."]
+description = """
+Fiery sapphires, paua shells, turquoise, and varicolored amethysts catch
+the light and seem to alight with an inner glow from beneath the glass."""
+
+[[rooms.extra_descs]]
+keywords = ["A", "case", "with", "red", "gems"]
+description = """
+Blazing, fiery rubies, topazes, firegems, and mysterious stones of
+unknown make glitter and glow here."""
+
+[[rooms.extra_descs]]
+keywords = ["A", "case", "of", "green", "gems"]
+description = """
+Beautiful, deep-green emeralds, cool jades, passionate Moongems,
+dragons' tears, and a number of rare green gems are here."""
 
 [[rooms]]
 vnum = 13006
@@ -220,6 +353,22 @@ are bright, gaudy, shocking Hawaiian-print shirts, pants, and shorts."""
     vnum = 13009
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["vertical", "rack"]
+description = """
+A vertical rack of tattered, worn, and grungy clothes."""
+
+[[rooms.extra_descs]]
+keywords = ["tailored", "rack"]
+description = """
+A rack of well-tailored men's suits and tuxedos."""
+
+[[rooms.extra_descs]]
+keywords = ["shelf"]
+description = """
+A shelf of gaudy Hawaiian-print shirts in every imaginable color
+<and a NUMBER you'd rather not!>."""
+
 [[rooms]]
 vnum = 13010
 name = "The men's dressing room"
@@ -312,6 +461,27 @@ street outside."""
     [[rooms.mob_resets.equips]]
     vnum = 13003
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["long", "rack", "east"]
+description = """
+A long horizontal rack of white and off-white wedding gowns."""
+
+[[rooms.extra_descs]]
+keywords = ["wooden", "shelves"]
+description = """
+A set of wooden shelves containing petticoats, hoopskirts, and various
+lingerie."""
+
+[[rooms.extra_descs]]
+keywords = ["long", "rack", "west"]
+description = """
+A rack of sequined formals in various colors."""
+
+[[rooms.extra_descs]]
+keywords = ["veil", "rack"]
+description = """
+A tall rack containing veils in various lengths and shades."""
 
 [[rooms]]
 vnum = 13014
@@ -620,6 +790,16 @@ are heaped into the book return bin."""
   direction = "west"
   to_vnum = 13169
 
+[[rooms.extra_descs]]
+keywords = ["shelf", "shelves"]
+description = """
+You see a copy of PlayDragon Magazine."""
+
+[[rooms.extra_descs]]
+keywords = ["playdragon"]
+description = """
+Naughty!"""
+
 [[rooms]]
 vnum = 13030
 name = "We Be Weddings"
@@ -642,6 +822,11 @@ sunflower is displayed prominently in front of the podium."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13143
+
+[[rooms.extra_descs]]
+keywords = ["sunflower"]
+description = """
+A huge sunflower sits here...but it appears to be...PLASTIC??"""
 
 [[rooms]]
 vnum = 13031
@@ -784,6 +969,31 @@ vestibule, and one west into the sister-sanctuary."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 13036
+
+[[rooms.extra_descs]]
+keywords = ["Vengeance", "north"]
+description = """
+A stained glass window depicting His Benevolence holding a dragon's head
+in one hand, and a staff in the other."""
+
+[[rooms.extra_descs]]
+keywords = ["Eriana", "south"]
+description = """
+An elaborately-tiled stained glass window showing the wife of His
+Benevolence with one hand atop the head of a white tiger, the other
+poised above the head of an injured man."""
+
+[[rooms.extra_descs]]
+keywords = ["Felix", "east"]
+description = """
+A colorful window showing a pose of the deity Felix, a White Raven
+perched atop his left arm, his other atop the hilt of a sword."""
+
+[[rooms.extra_descs]]
+keywords = ["Tim", "west"]
+description = """
+Another stained-glass panel depicts the deity Tim, the Enchanter,
+holding a long-toothed rabbit in one arm, and a skull in the other..."""
 
 [[rooms]]
 vnum = 13036
@@ -971,6 +1181,18 @@ There are hidden exits to the east and to the south."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13045
+
+[[rooms.extra_descs]]
+keywords = ["statue", "Eriana"]
+description = """
+A three-foot-high statue of Eriana, the Goddess of Life.  Her hands are
+outstretched as though welcoming someone to her."""
+
+[[rooms.extra_descs]]
+keywords = ["Inscription"]
+description = """
+"Seek Peace, and welcome here; find rest, and food, and sanctuary from thy
+burdens; All are welcome in the Gardens of the Goddess.""""
 
 [[rooms]]
 vnum = 13044
@@ -1161,6 +1383,32 @@ tall, narrow chiffarobe.  The only exit is west."""
   direction = "west"
   to_vnum = 13050
 
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matching mithril brush and mirror set on top
+of the dresser."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
+
 [[rooms]]
 vnum = 13052
 name = "An inn room"
@@ -1178,6 +1426,32 @@ tall, narrow chiffarobe.  The only exit is east."""
   [[rooms.exits]]
   direction = "east"
   to_vnum = 13050
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matching mithril brush and mirror set on top
+of the dresser."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
 
 [[rooms]]
 vnum = 13053
@@ -1220,6 +1494,32 @@ tall, narrow chiffarobe.  The only exit is west."""
   direction = "west"
   to_vnum = 13050
 
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matching mithril brush and mirror set on top
+of the dresser."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
+
 [[rooms]]
 vnum = 13055
 name = "An inn room"
@@ -1237,6 +1537,31 @@ tall, narrow chiffarobe.  The only exit is east."""
   [[rooms.exits]]
   direction = "east"
   to_vnum = 13050
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matched mithril brush and mirror set here."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
 
 [[rooms]]
 vnum = 13056
@@ -1530,6 +1855,21 @@ exits are north into the carriage house, and south to the street."""
   vnum = 13021
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["Stall"]
+description = """
+A plain, wooden stall for cornering horses.  There is straw on the floor here."""
+
+[[rooms.extra_descs]]
+keywords = ["anvil"]
+description = """
+A large iron anvil, used for pounding heated iron."""
+
+[[rooms.extra_descs]]
+keywords = ["Furnace"]
+description = """
+A roaring furnace used to heat iron for smelting and forging."""
+
 [[rooms]]
 vnum = 13069
 name = "The convent gardens"
@@ -1549,6 +1889,28 @@ north, deeper into the garden, and south to the street."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13140
+
+[[rooms.extra_descs]]
+keywords = ["corn", "stalk"]
+description = """
+Neat rows of tall, rigid corn, their silken tassels spilling like golden
+hair down the sharp leaves."""
+
+[[rooms.extra_descs]]
+keywords = ["thick", "pole", "beans"]
+description = """
+Tall, heavy poles of cedarwood support the heavy beans."""
+
+[[rooms.extra_descs]]
+keywords = ["stake", "tomatoes"]
+description = """
+Tall, strong stakes of tomatoes plants are pendulous with deep-red fruit."""
+
+[[rooms.extra_descs]]
+keywords = ["slender", "pole", "peas"]
+description = """
+Slender poles of curling pea plants are here; the pods themselves are
+large and heavy, ready to be picked."""
 
 [[rooms]]
 vnum = 13070
@@ -1686,6 +2048,17 @@ office, and south to the street."""
   direction = "south"
   to_vnum = 13142
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to the DragonCove Inn! Please knock on door for assistance."""
+
+[[rooms.extra_descs]]
+keywords = ["couch", "sofa"]
+description = """
+A large, stylish sofa, comfortably padded.  It is covered in deep blue
+linen, and trimmed with rosewood accents."""
+
 [[rooms]]
 vnum = 13076
 name = "The office"
@@ -1778,6 +2151,18 @@ is a dressing screen opposite it.  The only exit is south."""
   direction = "south"
   to_vnum = 13078
 
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+Logs crackle merrily in this large fireplace.  It is accented with silver
+log holders and a matching silver fireplace set."""
+
+[[rooms.extra_descs]]
+keywords = ["settee", "couch"]
+description = """
+Covered in burgundy fabric, this settee adds a touch of elegance to the
+suite."""
+
 [[rooms]]
 vnum = 13080
 name = "Room 1"
@@ -1792,6 +2177,17 @@ The only exit is south."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13077
+
+[[rooms.extra_descs]]
+keywords = ["dressing", "screen"]
+description = """
+A shoulder-high rosewood and lace-panel dressing screen."""
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+A small, comfortable bed, piled high with feather beds and rich quilts.
+The frame is rosewood polished to a high gloss."""
 
 [[rooms]]
 vnum = 13081
@@ -1836,6 +2232,17 @@ southwest corner.  The only exit is south."""
   direction = "south"
   to_vnum = 13077
 
+[[rooms.extra_descs]]
+keywords = ["dressing", "screen"]
+description = """
+A shoulder-high rosewood and lace-panel dressing screen."""
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+A small, comfortable bed, piled high with feather beds and rich quilts.
+The frame is rosewood polished to a high gloss."""
+
 [[rooms]]
 vnum = 13083
 name = "Room 3"
@@ -1850,6 +2257,17 @@ corner.  The only exit is north."""
   [[rooms.exits]]
   direction = "north"
   to_vnum = 13081
+
+[[rooms.extra_descs]]
+keywords = ["dressing", "screen"]
+description = """
+A shoulder-high rosewood and lace-panel dressing screen."""
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+A small, comfortable bed, piled high with feather beds and rich quilts.
+The frame is rosewood polished to a high gloss."""
 
 [[rooms]]
 vnum = 13084
@@ -1891,6 +2309,18 @@ it.  There is a dressing screen opposite it.  The only exit is north."""
   direction = "north"
   to_vnum = 13084
 
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+Logs crackle merrily in this large fireplace.  It is accented with silver
+log holders and a matching silver fireplace set."""
+
+[[rooms.extra_descs]]
+keywords = ["settee", "couch"]
+description = """
+Covered in deep red fabric, this settee adds a touch of elegance to the
+suite."""
+
 [[rooms]]
 vnum = 13086
 name = "Suite 3"
@@ -1907,6 +2337,18 @@ is a dressing screen opposite the settee.  The only exit is south."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13084
+
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+Logs crackle merrily in this large fireplace.  It is accented with silver
+log holders and a matching silver fireplace set."""
+
+[[rooms.extra_descs]]
+keywords = ["settee", "couch"]
+description = """
+Covered in burgundy fabric, this settee adds a touch of elegance to the
+suite."""
 
 [[rooms]]
 vnum = 13087
@@ -2801,6 +3243,24 @@ the bridge.  There is a large wooden sign on the right tower."""
   vnum = 13022
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["A", "large", "wooden", "sign"]
+description = """
+WELCOME To StoneBow Dale! Please observe all rules; this is a quiet town
+and a honeymoon haven; let's keep it that way! -The Mayor"""
+
+[[rooms.extra_descs]]
+keywords = ["right", "keep", "guard", "tower"]
+description = """
+A tall, grey tower made of large boulders.  There is an arched window
+opening near the top, from which a guard peers at you questioningly."""
+
+[[rooms.extra_descs]]
+keywords = ["left", "guard", "tower"]
+description = """
+A tall, grey tower made of large boulders.  There is a wooden door here
+that opens into the tower."""
+
 [[rooms]]
 vnum = 13135
 name = "A cobblestone road"
@@ -2827,6 +3287,17 @@ door to the west."""
   [[rooms.mob_resets]]
   vnum = 13011
   max = 16
+
+[[rooms.extra_descs]]
+keywords = ["A", "sign"]
+description = """
+DragonCove Road North"""
+
+[[rooms.extra_descs]]
+keywords = ["A", "large", "building"]
+description = """
+The building is of stone-and-mortar construction.  An old, faded sign
+reads "The Monastery"."""
 
 [[rooms]]
 vnum = 13136
@@ -2924,6 +3395,21 @@ here, pointing in every direction."""
   [[rooms.mob_resets]]
   vnum = 13014
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+The figure of Eriana stands barefoot, her hand atop the head of a
+massive tiger; the other hand holds a pitcher, from which water pours
+into the fountain."""
+
+[[rooms.extra_descs]]
+keywords = ["Sign", "post"]
+description = """
+This signpost points in the four major directions.  The arrow north
+indicates that DragonCove Road north lies in that direction; to the
+south is DragonCove Road south.  East is Nightbane Avenue east; west
+is the western portion of that street."""
 
 [[rooms]]
 vnum = 13139
@@ -3272,6 +3758,23 @@ here."""
   [[rooms.mob_resets]]
   vnum = 13025
   max = 6
+
+[[rooms.extra_descs]]
+keywords = ["Signpost"]
+description = """
+This sign points in each of the four directions: North DragonCove &
+South DragonCove lie north and south, respectively; and East and West
+Redfern lie in their respective directions"""
+
+[[rooms.extra_descs]]
+keywords = ["blue", "crystal"]
+description = """
+This crystal is a complete mystery; it stands about eight feet tall,
+and is made of some completely clear crystal of unknown origin or
+purpose.  Roughly marquis-shaped, it balances on one point, its other
+pointed skyward.  Lights dance within the depths of the glass, bursting
+into a myriad of colors deep within, and radiate outward, causing the
+crystal to appear surrounded by some mystical aura It hums faintly."""
 
 [[rooms]]
 vnum = 13151
@@ -4181,4 +4684,3 @@ Nightbane Avenue."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13190
-

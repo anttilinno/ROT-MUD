@@ -130,6 +130,12 @@ concourse becomes wall road.  The Concourse continues south along the wall."""
   direction = "west"
   to_vnum = 3103
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
 [[rooms]]
 vnum = 3105
 name = "Park Entrance"
@@ -366,6 +372,13 @@ notice a sign on the door.  The park entrance is to the east."""
     vnum = 3363
     wear_loc = "wrist_r"
 
+[[rooms.extra_descs]]
+keywords = ["building", "door", "sign"]
+description = """
+The sign on the door says:-
+
+                 Cityguard Head Quarters"""
+
 [[rooms]]
 vnum = 3112
 name = "Western Park Entrance"
@@ -600,6 +613,18 @@ A road sign is here."""
   vnum = 3144
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign points in all directions:
+
+   North - Emerald Avenue.
+   East  - Park Road.
+   South - Emerald Avenue.
+   West  - Park Road.
+
+Someone had added something with red paint, but it's been crossed out."""
+
 [[rooms]]
 vnum = 3121
 name = "Emerald Avenue"
@@ -679,6 +704,26 @@ street ends to the north near a run-down neighborhood."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 3123
+
+[[rooms.extra_descs]]
+keywords = ["elm", "tree"]
+description = """
+The fresh young leaves of the elm tree wave gently in the wind."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says :-
+
+                          Graveyard of Midgaard
+
+    Many brave adventurers have found their final resting place here.
+          Please show respect and do not desecrate their tombs."""
+
+[[rooms.extra_descs]]
+keywords = ["grate", "grating"]
+description = """
+Looks heavy.  A small sign is hanging on it."""
 
 [[rooms]]
 vnum = 3125
@@ -1027,6 +1072,12 @@ raised slightly."""
     vnum = 3350
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["chair", "armchair"]
+description = """
+This chair is really a masterpiece.  A chair where one can sit as comfortably
+as in a bed.  All lecture halls should be equipped with these things."""
+
 [[rooms]]
 vnum = 3139
 name = "Penny Lane"
@@ -1158,6 +1209,11 @@ Arms is hanging on the north wall and a heavy steel door is to the south."""
   vnum = 3131
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["arms"]
+description = """
+Although a bit dusty the Coat of Arms is an excellent piece of work."""
+
 [[rooms]]
 vnum = 3143
 name = "The Jail"
@@ -1171,6 +1227,12 @@ to the touch.  A heavy steel door is to the north."""
   flags = ["door", "closed", "locked"]
   to_vnum = 3142
   key = 3137
+
+[[rooms.extra_descs]]
+keywords = ["wall", "walls"]
+description = """
+The walls are marked with lots of scratches.  Some of them spell sentences
+like "JAIL IS BETTER THAN SQL" and "BIGFOOTDAMOOSE IS ALIVE"."""
 
 [[rooms]]
 vnum = 3144
@@ -1255,6 +1317,15 @@ Pull up a chair, perhaps play a game, and take time out to talk."""
   [[rooms.obj_resets]]
   vnum = 3200
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["window", "landing"]
+description = """
+You can see a rickety bridge to your northwest, leading back into
+Central Midgaard.  A rustic dock connects the Diner with the Midgaard
+River, and a boat or two floats lazily past.  Across the river you can see
+the Levee and the Guild of Thieves, but they seem very far away from all
+of this..."""
 
 [[rooms]]
 vnum = 3160
@@ -1360,6 +1431,17 @@ half hidden by a stack of books, leads to a room in the back of the shop."""
     vnum = 3184
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["window"]
+description = """
+You peer out the window and see a cityguard beating up an old lady."""
+
+[[rooms.extra_descs]]
+keywords = ["bookcase"]
+description = """
+You see many cartographer journals and topographical studies.  You also see
+quite a few tomes written by someone named "Anson MacDonald"."""
+
 [[rooms]]
 vnum = 3161
 name = "Melancholy's Room"
@@ -1382,6 +1464,12 @@ that, the room is quite bare."""
   direction = "up"
   to_vnum = 1219
 
+[[rooms.extra_descs]]
+keywords = ["chest"]
+description = """
+This chest is firmly locked, and the device by which it opens is beyond your
+reckoning."""
+
 [[rooms]]
 vnum = 3170
 name = "Temple Of Stupid"
@@ -1402,6 +1490,11 @@ realize that you've entered the Temple of Stupid."""
   direction = "up"
   to_vnum = 1219
 
+[[rooms.extra_descs]]
+keywords = ["puddle", "puddles"]
+description = """
+The puddles on the floor are filthy and exude a foul stench."""
+
 [[rooms]]
 vnum = 3200
 name = "Under the Bridge"
@@ -1418,6 +1511,12 @@ part of the city wall."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 9772
+
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  Looks pretty solid."""
 
 [[rooms]]
 vnum = 3201
@@ -1598,6 +1697,13 @@ loops around the inside of the city walls."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 3104
+
+[[rooms.extra_descs]]
+keywords = ["opening", "bars", "river"]
+description = """
+Hmm...some of the bars have been ripped out of the wall.  Enough to pass a
+good sized raft or canoe, or perhaps even a barge.  You wonder what sort of
+beast had the strength to do this."""
 
 [[rooms]]
 vnum = 3254
@@ -2194,6 +2300,17 @@ A smallish sign hangs on the wall, lettered in common."""
   vnum = 3162
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tapestries", "walls"]
+description = """
+You think about peeking behind the tapestries, but think better of it."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Give me your coins, and I shall change them for you, taking but 1 in 20 for
+my fee.  --- Otho the Changer"""
+
 [[rooms]]
 vnum = 3352
 name = "Grebe's Tavern"
@@ -2213,6 +2330,16 @@ you search vainly for a clean table to sit at, and then give up."""
   [[rooms.obj_resets]]
   vnum = 3200
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["wall", "walls"]
+description = """
+Bare, except for the holes."""
+
+[[rooms.extra_descs]]
+keywords = ["table", "tables"]
+description = """
+You find a table that's relatively vomit-free."""
 
 [[rooms]]
 vnum = 3355
@@ -2289,6 +2416,11 @@ A sign is on the wall."""
   direction = "north"
   to_vnum = 3355
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says: Don't forget our dinner menu."""
+
 [[rooms]]
 vnum = 3358
 name = "The Bar"
@@ -2304,6 +2436,11 @@ inviting glances your way."""
   [[rooms.exits]]
   direction = "north"
   to_vnum = 3356
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says: Don't forget our dinner menu."""
 
 [[rooms]]
 vnum = 3359
@@ -2341,6 +2478,12 @@ who wish to be.........For a price.
   vnum = 3165
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Made of pure gold, the altar shines with an unearthly beauty.
+Ancient runes cover it's surface."""
+
 [[rooms]]
 vnum = 3361
 name = "In Belan's Chapel"
@@ -2358,6 +2501,12 @@ radiating from a large black altar in the center of the room."""
   [[rooms.mob_resets]]
   vnum = 3164
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+The altar appears to have been carved from a single piece of obsidian.
+Dark red stains cover it's surface."""
 
 [[rooms]]
 vnum = 3362
@@ -2418,6 +2567,15 @@ SCHOOL.  (type 'up' to go to MUD SCHOOL.)  A small plaque is on this wall."""
     vnum = 3005
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This entire world has been integrated, modified, debugged, and enhanced by
+Hatchet, Kahn, and Furey of MERC Industries to be run by any MERC Mud.
+1992 December 17
+ROM enhancements by Alander.
+ROT enhancements by Vengeance."""
+
 [[rooms]]
 vnum = 3366
 name = "By the Temple Altar"
@@ -2440,6 +2598,19 @@ seen a rainbow."""
   [[rooms.mob_resets]]
   vnum = 3167
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["statue", "Belan", "god"]
+description = """
+The statue represents the Great God Belan, holding a staff.  He has long, black
+hair and beard and a menacing look on his face.  His staff is topped by a
+painted cube, the 6 faces of which represent the 6 aspects of his power."""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Even though the altar is more than ten feet long it appears to be made from a
+single block of flawless black obsidian."""
 
 [[rooms]]
 vnum = 3367
@@ -2523,6 +2694,16 @@ wall."""
     [[rooms.mob_resets.equips]]
     vnum = 3022
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
 
 [[rooms]]
 vnum = 3370
@@ -2611,6 +2792,16 @@ on the wall."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
+
 [[rooms]]
 vnum = 3373
 name = "Ranger's Study"
@@ -2689,6 +2880,16 @@ on the wall."""
     [[rooms.mob_resets.equips]]
     vnum = 3381
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
 
 [[rooms]]
 vnum = 3376
@@ -2824,6 +3025,17 @@ description = "There is a small note on the counter."
     vnum = 3394
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
+
 [[rooms]]
 vnum = 3381
 name = "Mercy's Counter"
@@ -2845,6 +3057,17 @@ description = "There is a small note on the counter."
     [[rooms.mob_resets.equips]]
     vnum = 3396
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
 
 [[rooms]]
 vnum = 2901
@@ -3568,6 +3791,15 @@ SCHOOL.  (type 'up' to go to MUD SCHOOL.)  A small plaque is on this wall."""
     vnum = 3379
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This entire world has been integrated, modified, debugged, and enhanced by
+Hatchet, Kahn, and Furey of MERC Industries to be run by any MERC Mud.
+1992 December 17
+ROM enhancements by Alander.
+ROT enhancements by Vengeance."""
+
 [[rooms]]
 vnum = 3002
 name = "Cleric's Inner Sanctum"
@@ -3625,6 +3857,16 @@ furniture is set all around the room.  A small sign is hanging on the wall."""
   [[rooms.obj_resets]]
   vnum = 3200
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
 
 [[rooms]]
 vnum = 3004
@@ -3774,6 +4016,22 @@ A small sign with big letters is fastened to the bar."""
   vnum = 3200
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["writing", "carving", "carvings", "symbols", "symbol"]
+description = """
+Although it is very hard to understand, you think it looks a lot like beer,
+poems about beer, and small beer-mugs."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the Grunting Boar Inn.
+
+   Buy  - Buy something (drinkable) from the bartender.
+   List - The bartender will show you all the different drinks and
+          specialties, and tell the price of each."""
+
 [[rooms]]
 vnum = 3008
 name = "The Defunct Reception"
@@ -3836,6 +4094,25 @@ A small sign is on the counter."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Free instructions provided by the store:
+
+   Buy  - Will buy you some bread or pastry.
+   List - The baker will kindly tell you the price and sort of the bread in
+          his bakery."""
+
+[[rooms.extra_descs]]
+keywords = ["danish", "pastry"]
+description = """
+You see that this is truly delicious pastry.  Must be made by a Dane from
+Denmark (which surely is not the capital of Sweden!).  Former ruler of
+Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
+Iceland, Estonia etc. etc.
+   The sight of those large, wholesome chokoladeboller makes your mouth water
+and your soul sing."""
+
 [[rooms]]
 vnum = 3010
 name = "The General Store"
@@ -3892,6 +4169,17 @@ A small note hangs on the wall."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
+
 [[rooms]]
 vnum = 3011
 name = "The Weapon Shop"
@@ -3938,6 +4226,17 @@ You are inside the weapon shop.  There is a small note on the counter."""
     [[rooms.mob_resets.equips]]
     vnum = 3022
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
 
 [[rooms]]
 vnum = 3012
@@ -4047,6 +4346,11 @@ common square, east and westbound is the main street."""
     [[rooms.mob_resets.equips]]
     vnum = 3356
     wear_loc = "head"
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+What you see is the Midgaard Worm, stretching around the Palace of Midgaard."""
 
 [[rooms]]
 vnum = 3015
@@ -4257,6 +4561,19 @@ On the wall is a small note."""
     [[rooms.mob_resets.equips]]
     vnum = 3022
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+You can use these commands for trading:
+
+  value <item>     To get the price of an item in your possession.
+  sell <item>      To sell something.
+  buy <item>       To buy something (provided that the shop has it in store).
+  list             Gives you a listing of the shop's inventory.
+
+        WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
+                             NO HAGGLING"""
 
 [[rooms]]
 vnum = 3021
@@ -4471,6 +4788,11 @@ continues east."""
   vnum = 3066
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["guild"]
+description = """
+It is the thieves guild, don't enter if you care about your health or money."""
+
 [[rooms]]
 vnum = 3027
 name = "Entrance Hall to the Guild of Thieves"
@@ -4566,6 +4888,11 @@ the west is the entrance hall.
   vnum = 3200
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["furniture"]
+description = """
+As you look at the furniture, the chair you sit on disappears."""
+
 [[rooms]]
 vnum = 3029
 name = "The Secret Yard"
@@ -4624,6 +4951,22 @@ various sorts and sizes.  There is a sign on the wall."""
   vnum = 3008
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+
+  Use 'List' to see the available pets.
+  Use 'Buy <pet> <name>' to buy yourself a pet and name it.
+
+  You can use 'order <pet> <instructions>' to order your pets around.
+  If you abuse your pet, it will no longer regard you as its master.
+  If you have several pets you may use 'order all <instructions>'
+
+ Regards,
+
+   The Shopkeeper"""
+
 [[rooms]]
 vnum = 3032
 name = "Pet Shop Store"
@@ -4678,6 +5021,22 @@ sorts and sizes."""
     vnum = 3044
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["scrolls"]
+description = """
+Each scroll is stored in a leather tube that protects it from moist."""
+
+[[rooms.extra_descs]]
+keywords = ["books"]
+description = """
+Most of them appear to be very old and dusty."""
+
+[[rooms.extra_descs]]
+keywords = ["jars", "bottles"]
+description = """
+Some of them are transparent enabling you to see that some contain colored
+powders while others contain body parts of various animals."""
+
 [[rooms]]
 vnum = 3034
 name = "The Jeweller's Shop"
@@ -4723,6 +5082,27 @@ A small sign with golden letters stands on the desk."""
     [[rooms.mob_resets.equips]]
     vnum = 3373
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The golden letters say :-
+
+    Use 'list' to see what is in store,
+        'buy <item>' to buy an item,
+        'sell <item>' to sell an item and
+        'value <item>' to make the jeweller evaluate an item."""
+
+[[rooms.extra_descs]]
+keywords = ["desk"]
+description = """
+Your face is reflected in its surface."""
+
+[[rooms.extra_descs]]
+keywords = ["oil", "lamps"]
+description = """
+They are made from polished gold and looks as if they are securely fastened
+to the smooth stone walls."""
 
 [[rooms]]
 vnum = 3035
@@ -4803,6 +5183,33 @@ A wooden sign is hanging above the fireplace."""
     vnum = 3054
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The wooden sign says :-
+
+    Use 'list' to see what is in store,
+        'buy <item>' to buy an item,
+        'sell <item>' to sell an item and
+        'value <item>' to make the leather worker evaluate an item."""
+
+[[rooms.extra_descs]]
+keywords = ["pot"]
+description = """
+Several large pieces of leather hide are boiling in the iron pot."""
+
+[[rooms.extra_descs]]
+keywords = ["table"]
+description = """
+It is made from solid oak but appears to be very used.  Its surface is
+covered in marks and scratches.  A large burning candle stands directly on
+the table surface, tallow flowing down its sides."""
+
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+It is a rather large fireplace made from heavy granite rocks."""
+
 [[rooms]]
 vnum = 3040
 name = "Inside the West Gate of Midgaard"
@@ -4877,6 +5284,31 @@ east and Wall Road leads both north and south from here."""
     [[rooms.mob_resets.equips]]
     vnum = 3362
     wear_loc = "waist"
+
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
 
 [[rooms]]
 vnum = 3041
@@ -4954,6 +5386,31 @@ the city wall."""
     vnum = 3354
     wear_loc = "shield"
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
+
 [[rooms]]
 vnum = 3042
 name = "Wall Road"
@@ -4973,6 +5430,12 @@ south and the city gate is just north of here.  A gatehouse is to the west."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 2901
+
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
 
 [[rooms]]
 vnum = 3043
@@ -4994,6 +5457,17 @@ Some letters have been written on the wall here."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 3047
+
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["letters"]
+description = """
+It says 'Who watches the watchmen?'"""
 
 [[rooms]]
 vnum = 3044
@@ -5094,6 +5568,12 @@ it must be the Mob Factory!"""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 3051
+
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
 
 [[rooms]]
 vnum = 3048
@@ -5198,6 +5678,23 @@ opening in the wall ten feet below the bridge."""
   direction = "south"
   to_vnum = 3100
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["opening"]
+description = """
+You cannot really see it from here as it is somewhere beneath your feet."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar, just like the wall."""
+
 [[rooms]]
 vnum = 3052
 name = "Outside the West Gate of Midgaard"
@@ -5221,6 +5718,31 @@ wall."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 6000
+
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
 
 [[rooms]]
 vnum = 3053
@@ -5246,6 +5768,31 @@ the city wall."""
   to_vnum = 3041
   key = 3133
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
+
 [[rooms]]
 vnum = 3054
 name = "By the Temple Altar"
@@ -5268,6 +5815,19 @@ seen a rainbow."""
   [[rooms.mob_resets]]
   vnum = 3012
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["statue", "Thoth", "king", "god"]
+description = """
+The statue represents the Great God Thoth, holding a pen.  He has the head of
+an ibis and a kindly look on his face.  His pen is topped by a painted
+cube, the 6 faces of which represent the 6 aspects of his power."""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Even though the altar is more than ten feet long it appears to be made from a
+single block of white virgin marble."""
 
 [[rooms]]
 vnum = 3056
@@ -5328,4 +5888,3 @@ WOW you can fly!  You are floating in the air above Temple Square of Midgaard.""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 3005
-

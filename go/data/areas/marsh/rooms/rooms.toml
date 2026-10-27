@@ -15,6 +15,12 @@ here, torn apart both by battle and the elements."""
   direction = "south"
   to_vnum = 8302
 
+[[rooms.extra_descs]]
+keywords = ["swamp"]
+description = """
+The swamp to the south even reaches as far as this point ... it makes the
+ground and air about you moist and fetid."""
+
 [[rooms]]
 vnum = 8302
 name = "Swamp's Edge"
@@ -70,6 +76,17 @@ distance.  And feel fear creep into your heart."""
   [[rooms.mob_resets]]
   vnum = 8303
   max = 3
+
+[[rooms.extra_descs]]
+keywords = ["pieces"]
+description = """
+You see severed limbs and spongy intestines."""
+
+[[rooms.extra_descs]]
+keywords = ["humanoid", "corpse"]
+description = """
+He looks mangled and shredded.  You see one large gash mark that looks
+like it came from the claw of some huge beast."""
 
 [[rooms]]
 vnum = 8304
@@ -146,6 +163,11 @@ have you for a feast."""
   vnum = 8314
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["beasts"]
+description = """
+You see a large creature, possibly a demon, flapping heavily above you."""
+
 [[rooms]]
 vnum = 8306
 name = "An Oozing Bog"
@@ -179,6 +201,11 @@ boots.  Better stop and check for leeches when you get out of here."""
   vnum = 8314
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["limb"]
+description = """
+The limb looks like it is attached to a trap door in the ground."""
+
 [[rooms]]
 vnum = 8307
 name = "Swamp Thing's Lair"
@@ -210,6 +237,12 @@ the overwhelming stench of putrid flesh."""
     [[rooms.mob_resets.equips]]
     vnum = 8301
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["corpses"]
+description = """
+You notice a note on one of the corpses reading:  'Best ye forget the temple,
+it is not for the likes of you...'"""
 
 [[rooms]]
 vnum = 8308
@@ -243,6 +276,16 @@ be taunting you towards the pool."""
   [[rooms.mob_resets]]
   vnum = 8314
   max = 6
+
+[[rooms.extra_descs]]
+keywords = ["quicksand"]
+description = """
+It looks deadly to the foolish."""
+
+[[rooms.extra_descs]]
+keywords = ["lights"]
+description = """
+From the stories you have heard, you recognize them as will-o-wisps."""
 
 [[rooms]]
 vnum = 8309
@@ -281,6 +324,11 @@ you with a cold sweat and fear in your heart."""
     vnum = 8301
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["pond"]
+description = """
+It looks ALIVE ..."""
+
 [[rooms]]
 vnum = 8310
 name = "Gloomy Path Through the Marsh."
@@ -318,6 +366,27 @@ huge fortress, half buried in the marsh."""
     [[rooms.mob_resets.equips]]
     vnum = 8302
     wear_loc = "head"
+
+[[rooms.extra_descs]]
+keywords = ["vegetation"]
+description = """
+It looks sentient."""
+
+[[rooms.extra_descs]]
+keywords = ["fortress"]
+description = """
+It is surrounded by walls nearly 20 meters high.  In a tall tower on the
+northeast side, a window glows blue with magical energy."""
+
+[[rooms.extra_descs]]
+keywords = ["beast"]
+description = """
+It looks to be a demon of some foul breed."""
+
+[[rooms.extra_descs]]
+keywords = ["clouds"]
+description = """
+The clouds look dark and foreboding."""
 
 [[rooms]]
 vnum = 8311
@@ -379,6 +448,11 @@ of tumescent vegetables, evil-smelling fruit trees, and malignant ferns."""
     vnum = 8307
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["plant", "plants"]
+description = """
+They look rather violent, and snap at you when you come near."""
+
 [[rooms]]
 vnum = 8313
 name = "By the Monolith."
@@ -420,6 +494,12 @@ strange, almost unearthly light that enters through the clouds above."""
     vnum = 8307
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["monolith"]
+description = """
+This huge monolith resembles nothing you have ever seen before.
+You have a strong feeling not to go within."""
+
 [[rooms]]
 vnum = 8314
 name = "Murky Bog."
@@ -440,6 +520,11 @@ echoing as if from a great distance."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 8313
+
+[[rooms.extra_descs]]
+keywords = ["monolith"]
+description = """
+This is a huge obsidian stone block stuck in the marsh."""
 
 [[rooms]]
 vnum = 8315
@@ -488,6 +573,12 @@ you.  You are not alone."""
   direction = "west"
   to_vnum = 8317
 
+[[rooms.extra_descs]]
+keywords = ["north"]
+description = """
+The way to the north seems to be impassable, due to the rough water and
+strange wild life."""
+
 [[rooms]]
 vnum = 8317
 name = "Beach"
@@ -503,6 +594,11 @@ lies an evil fortress.  You see figures walking along the battlements."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 8318
+
+[[rooms.extra_descs]]
+keywords = ["fortress"]
+description = """
+It is hewn of black stone and heavily fortified."""
 
 [[rooms]]
 vnum = 8318
@@ -524,4 +620,3 @@ and you decide not to continue onward."""
   [[rooms.mob_resets]]
   vnum = 8321
   max = 2
-

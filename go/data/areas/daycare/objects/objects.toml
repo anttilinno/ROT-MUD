@@ -15,6 +15,11 @@ wear_flags = ["take", "wield"]
   dice_number = 1
   dice_size = 5
 
+[[objects.extra_descs]]
+keywords = ["axe", "toy"]
+description = """
+A small label says 'made in Taiwan'."""
+
 [[objects]]
 vnum = 6601
 keywords = ["ring", "pink", "ice"]
@@ -34,6 +39,12 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "str"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["ring", "pink", "ice"]
+description = """
+How strange...it's made of ice, but it doesn't melt. It feels pleasantly
+cool to the touch."""
 
 [[objects]]
 vnum = 6621
@@ -61,6 +72,11 @@ extra_flags = ["magic"]
   location = "wis"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["robe", "linen"]
+description = """
+It radiates an aura of peace and wisdom.  The perfect garb for a teacher."""
+
 [[objects]]
 vnum = 6622
 keywords = ["broom"]
@@ -86,6 +102,11 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "ac"
   modifier = -1
+
+[[objects.extra_descs]]
+keywords = ["broom"]
+description = """
+It's worn and tired, probably from swatting too many children."""
 
 [[objects]]
 vnum = 6644
@@ -120,6 +141,12 @@ weight = 10
 cost = 150
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["potion"]
+description = """
+It's a tight-stoppered glass bottle with a thick amber liquid inside. It
+tastes kind of like whiskey."""
+
 [[objects]]
 vnum = 6647
 keywords = ["gun", "toy"]
@@ -142,3 +169,8 @@ wear_flags = ["take", "wield"]
   location = "ac"
   modifier = -1
 
+[[objects.extra_descs]]
+keywords = ["gun", "toy"]
+description = """
+It's just a toy...but the point looks kind of sharp.
+You'll put your eye out, kid!"""

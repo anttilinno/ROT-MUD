@@ -16,6 +16,20 @@ There is a bronze plaque above the archway."""
   direction = "west"
   to_vnum = 10402
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+***************
+Descent to Hell
+***************
+
+You just GO TO HELL!!!!
+*chuckle*
+
+Made for levels 59-100
+
+Brought to you by Strahd"""
+
 [[rooms]]
 vnum = 10402
 name = "Ancient Room"
@@ -78,6 +92,13 @@ You see a large gateway to the west."""
   flags = ["door", "closed"]
   to_vnum = 10405
 
+[[rooms.extra_descs]]
+keywords = ["gates"]
+description = """
+These black iron gates are covered with grotesque faces and other
+creatures in various poses and acts of violence and lust. The gates
+make your blood run cold..."""
+
 [[rooms]]
 vnum = 10405
 name = "Gateway to Hell"
@@ -120,6 +141,13 @@ A large black iron gates tower over you to the east."""
     [[rooms.mob_resets.equips]]
     vnum = 10401
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["gates"]
+description = """
+These black iron gates are covered with grotesque faces and other
+creatures in various poses and acts of violence and lust. The gates
+seem to make your blood run cold..."""
 
 [[rooms]]
 vnum = 10406
@@ -580,6 +608,11 @@ A ticket dispenser is bolted to the wall."""
   vnum = 10418
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["dispenser"]
+description = """
+This is one of those red ticket dispensers that never seem to work right."""
+
 [[rooms]]
 vnum = 10424
 name = "Room of Lost Souls"
@@ -605,6 +638,11 @@ A ticket dispenser is bolted to the wall."""
   [[rooms.mob_resets]]
   vnum = 10418
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["dispenser"]
+description = """
+This is one of those red ticket dispensers that never seem to work right."""
 
 [[rooms]]
 vnum = 10425
@@ -2290,6 +2328,15 @@ You see a blackened hall to the east."""
   vnum = 10446
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["poster"]
+description = """
+Don't go to heaven....They're boring....
+
+***GO TO HELL!!!****
+
+You'll be damned if you don't  ;)"""
+
 [[rooms]]
 vnum = 10496
 name = "Blackened Hall"
@@ -2428,6 +2475,18 @@ There is a sign posted next to the stairs."""
     [[rooms.mob_resets.equips]]
     vnum = 10446
     wear_loc = "head"
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+****ATTENTION***
+The Abyss is CLOSED for construction.
+
+We will open for your painful pleasures
+
+soon....
+
+-Strahd-"""
 
 [[rooms]]
 vnum = 10501
@@ -3429,4 +3488,3 @@ seems to dance and wiggle as you move about."""
     [[rooms.mob_resets.equips]]
     vnum = 10418
     inv_only = true
-

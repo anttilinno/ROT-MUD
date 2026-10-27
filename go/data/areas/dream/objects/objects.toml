@@ -15,6 +15,18 @@ wear_flags = ["take", "legs"]
   ac_slash = 3
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["motto"]
+description = """
+'Time on the ground is time wasted.'"""
+
+[[objects.extra_descs]]
+keywords = ["bells", "morris"]
+description = """
+These are a set of sturdy leather leggings with small brass bells sewn on.
+They look like the leggings worn by Morris dancers.  There is a motto tooled
+into the leather."""
+
 [[objects]]
 vnum = 8601
 keywords = ["handkerchief", "hankie", "kerchief", "morris"]
@@ -31,6 +43,11 @@ wear_flags = ["take", "wrist"]
   ac_bash = 3
   ac_slash = 3
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["handkerchief", "hankie", "kerchief"]
+description = """
+This is a fine linen handkerchief used for ritual Morris dances."""
 
 [[objects]]
 vnum = 8602
@@ -49,6 +66,11 @@ wear_flags = ["take", "waist"]
   ac_slash = 3
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["sash"]
+description = """
+This is a fine linen sash used for ritual Morris dances."""
+
 [[objects]]
 vnum = 8603
 keywords = ["staff", "morris"]
@@ -60,3 +82,8 @@ weight = 50
 cost = 1460
 wear_flags = ["take", "hold"]
 
+[[objects.extra_descs]]
+keywords = ["stick", "staff"]
+description = """
+Made from the wood of a Yule Tree, this staff is about one meter long and
+highly polished.  It looks more like a ritual device than a weapon."""

@@ -17,6 +17,21 @@ high above the land beyond the beach.
   direction = "west"
   to_vnum = 9797
 
+[[rooms.extra_descs]]
+keywords = ["small", "tablet"]
+description = """
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++                                                                  +
++            This area has been converted and adapted by           +
++                             Gapcio                               +
++                                                                  +
++                               &                                  +
++                                                                  +
++    modified, debugged (?:) slightly enhanced and balanced by     +
++                             jaceks                               +
++                                                          july'96 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"""
+
 [[rooms]]
 vnum = 14502
 name = "Approaching land"
@@ -1364,6 +1379,12 @@ a tiny, hand written sign attached to the gate."""
   flags = ["door", "closed"]
   to_vnum = 14566
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+BEWARE.  This gate is to remain closed at all times.  The evil must be
+controlled.  The evil must be contained."""
+
 [[rooms]]
 vnum = 14566
 name = "Other side of the gate"
@@ -1859,6 +1880,14 @@ mud patch with scores of tracks."""
   direction = "east"
   to_vnum = 14587
 
+[[rooms.extra_descs]]
+keywords = ["tracks", "track"]
+description = """
+The tracks you see are well defined and
+were obviously made by an unshod foot.
+The toes are extremely long and end with
+curved talons."""
+
 [[rooms]]
 vnum = 14589
 name = "Outside the West Tower"
@@ -2045,4 +2074,3 @@ hole but upon closer inspection it is obviously the work of man."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 14598
-

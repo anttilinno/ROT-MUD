@@ -238,6 +238,13 @@ just a myth, but here he is ... you wonder who else lives in this castle."""
     vnum = 909
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["throne"]
+description = """
+This huge golden throne looks as if it has been here for ages.  As you study it
+carefully, you notice that it is not firmly attached to the floor ... perhaps
+you could slide it?"""
+
 [[rooms]]
 vnum = 911
 name = "Western Wing"
@@ -1229,4 +1236,3 @@ A voice whispers, 'before the time has passed, enjoy your life.'"""
   [[rooms.mob_resets]]
   vnum = 913
   max = 5
-

@@ -1054,6 +1054,11 @@ cost = 2800
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+[[objects.extra_descs]]
+keywords = ["wand"]
+description = """
+You see a small engraved storm cloud at the base of this wand."""
+
 [[objects]]
 vnum = 9580
 keywords = ["wand", "detect", "invis"]
@@ -1065,6 +1070,11 @@ weight = 10
 cost = 580
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["wand"]
+description = """
+You see a shape slowly fading into exsistance at the base of this wand."""
 
 [[objects]]
 vnum = 9581
@@ -1142,6 +1152,11 @@ extra_flags = ["hum"]
   damage_type = "pierce"
   dice_number = 3
   dice_size = 4
+
+[[objects.extra_descs]]
+keywords = ["fountain", "pen"]
+description = """
+Well, then pen IS mightier than the sword..."""
 
 [[objects]]
 vnum = 9586
@@ -1430,3 +1445,8 @@ cost = 1000
 wear_flags = ["take", "hold"]
 extra_flags = ["melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["pearl"]
+description = """
+It's a nicely-formed pearl, should be worth a fair amount at the jewellers.
+You look around to see if there are any others nearby."""

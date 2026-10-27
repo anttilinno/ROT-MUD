@@ -51,6 +51,11 @@ spaced widely apart in places, you can't seem to see what lays beyond."""
   vnum = 11788
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["gates", "mithril", "silvery"]
+description = """
+As you glance at the gates, the pattern seems to writhe and shift."""
+
 [[rooms]]
 vnum = 11703
 name = "Shimmering Pathway"
@@ -217,6 +222,15 @@ glimmers above the doorway."""
     [[rooms.mob_resets.equips]]
     vnum = 11796
     wear_loc = "wrist_r"
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+The inscription reads:
+
+                  - Myr'vale Noriva -
+
+                         {G-(+)-{x"""
 
 [[rooms]]
 vnum = 11708
@@ -525,6 +539,14 @@ of a circle bisected by a cross."""
   vnum = 11707
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["crests"]
+description = """
+The crests represent the six drakyri houses.  The crests of the major
+houses mark the six western chairs:  She'valen Deriki, Treniste, and
+Reykaris.  The six eastern chairs bear the minor house crests of
+She'valen Myrxes, Xaek, and Noriva."""
+
 [[rooms]]
 vnum = 11717
 name = "Hidden lane"
@@ -585,6 +607,13 @@ by 7 dark stone chairs, each inscribed with a different symbol."""
   vnum = 11708
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["dark", "chairs", "stone", "symbol", "symbols"]
+description = """
+Carved into the back of each of six of the chairs is a symbol:
+flame, shield, claw, shadow, fist, and hand.  Engraved in the
+seventh chair is the whirling blade insignia of the Laerkai Master."""
+
 [[rooms]]
 vnum = 11719
 name = "Blue stone courtyard"
@@ -609,6 +638,18 @@ symbol above the archway."""
   [[rooms.obj_resets]]
   vnum = 11700
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["glittering", "silver", "symbol"]
+description = """
+Silver, inlayed in the dark marble wall, forms the inscription:
+
+                       chain my body
+              but you will never enslave my mind
+
+                          {B((+*+)){x
+
+                      She'vale Deriki"""
 
 [[rooms]]
 vnum = 11720
@@ -660,6 +701,13 @@ is an enormous crystal chandelier."""
   direction = "east"
   to_vnum = 11720
 
+[[rooms.extra_descs]]
+keywords = ["crystal", "chandelier"]
+description = """
+The chandelier is intricately wrought, delicate despite its enormity.
+Suspended from the ceiling, it gives the appearance of some huge,
+fragile snowflake frozen in mid-fall."""
+
 [[rooms]]
 vnum = 11722
 name = "Dining Hall"
@@ -687,6 +735,12 @@ above the table, encasing the entire top."""
   [[rooms.mob_resets]]
   vnum = 11711
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["faint", "shimmer"]
+description = """
+It appears to be some sort of magical curtain which serves to both
+preserve the food and protect it from uninvited guests."""
 
 [[rooms]]
 vnum = 11723
@@ -786,6 +840,12 @@ A spiral stairwell winds into the light above."""
     vnum = 11722
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["crates", "boxes"]
+description = """
+A faint shimmer above the shelves betrays the presence of a protective
+curtain."""
+
 [[rooms]]
 vnum = 11727
 name = "Magic Workroom"
@@ -830,6 +890,16 @@ half-written documents."""
   [[rooms.mob_resets]]
   vnum = 11711
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["tomes", "parchment", "shelves", "shelf"]
+description = """
+A magical barrier shocks you as you reach towards the shelves."""
+
+[[rooms.extra_descs]]
+keywords = ["implements", "documents"]
+description = """
+It appears that some sort of arcane studies are in progress here."""
 
 [[rooms]]
 vnum = 11728
@@ -887,6 +957,15 @@ the length of the north and east walls."""
   vnum = 11712
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["stone", "shelves"]
+description = """
+A continues stone shelf is carved at about waist height from the north
+and east walls.  Strange implements are lined up on the shelf,
+accompanied by thick tomes.  Glancing at the title of one, you can
+make out the words 'summoning' and 'outer planes'.
+A magic curtain glimmers above the shelf, barely visible in the darkness."""
+
 [[rooms]]
 vnum = 11730
 name = "Mirrored Hallway"
@@ -926,6 +1005,12 @@ portion of the hall, leading up and down."""
   direction = "down"
   to_vnum = 11725
 
+[[rooms.extra_descs]]
+keywords = ["mirror", "mirrors"]
+description = """
+Warped glass mirrors line the walls of the hallway, reflecting strange,
+twisted images of yourself back at you."""
+
 [[rooms]]
 vnum = 11731
 name = "Emerald Suite"
@@ -949,6 +1034,13 @@ silver is visible above the door to the east."""
     vnum = 11718
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The silver lettering reads:
+
+                She'vale Deriki Nalyss Ira'deia"""
+
 [[rooms]]
 vnum = 11732
 name = "Amethyst Suite"
@@ -971,6 +1063,13 @@ in the wood above the northern door."""
     [[rooms.mob_resets.equips]]
     vnum = 11720
     wear_loc = "body"
+
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The inscription reads:
+
+                She'vale Deriki Ykandres Ira'deian"""
 
 [[rooms]]
 vnum = 11733
@@ -996,6 +1095,13 @@ against the redwood framing the doorway to the west."""
     vnum = 11719
     wear_loc = "float"
 
+[[rooms.extra_descs]]
+keywords = ["silver", "lettering"]
+description = """
+The silver letters form the words:
+
+                She'vale Deriki Daeman Ira'deian"""
+
 [[rooms]]
 vnum = 11734
 name = "Ruby Suite"
@@ -1018,6 +1124,13 @@ doorway to the south, a silver inscription gleams against the wood."""
     [[rooms.mob_resets.equips]]
     vnum = 11717
     wear_loc = "arms"
+
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The inscription reads:
+
+                She'vale Deriki Tyrena Na'deia"""
 
 [[rooms]]
 vnum = 11735
@@ -1053,6 +1166,17 @@ the dark marble ceiling."""
     [[rooms.mob_resets.equips]]
     vnum = 11721
     wear_loc = "head"
+
+[[rooms.extra_descs]]
+keywords = ["diamond", "lettering", "inscription"]
+description = """
+Glittering diamond picks out an inscription against the dark stone:
+
+                She'vale Deriki Lechandre Deia
+
+                          {B((+*+)){x
+
+                She'vale Deriki Noriek Deiayan"""
 
 [[rooms]]
 vnum = 11736
@@ -1100,6 +1224,20 @@ An archway opens north, and a hallway leads into the house to the west."""
     vnum = 11734
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["golden", "crest"]
+description = """
+Sculpted gold forms the symbol:
+
+                           {Y((-*-)){x"""
+
+[[rooms.extra_descs]]
+keywords = ["silvery", "lettering"]
+description = """
+The lettering reads:
+
+                    - She'vale Treniste -"""
+
 [[rooms]]
 vnum = 11737
 name = "Art Gallery"
@@ -1122,6 +1260,18 @@ support larger sculptures in the center of the floor."""
     vnum = 11727
     wear_loc = "legs"
 
+[[rooms.extra_descs]]
+keywords = ["figurines", "sculptures"]
+description = """
+Figurines and larger sculptures, intricately carved from precious metals,
+stones, and rare woods, grace the niches and pedestals."""
+
+[[rooms.extra_descs]]
+keywords = ["portraits"]
+description = """
+The portraits depict everthing from battle scenes to flowers, all painted
+by the hands of master artists and probably worth a fortune."""
+
 [[rooms]]
 vnum = 11738
 name = "White Hallway"
@@ -1143,6 +1293,11 @@ and south, and the hallway continues west."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 11740
+
+[[rooms.extra_descs]]
+keywords = ["woven", "tapestries", "tapestry"]
+description = """
+The tapestries depict slender winged figures engaged in battle."""
 
 [[rooms]]
 vnum = 11739
@@ -1343,6 +1498,15 @@ inscription is engraved in the center of the door."""
     vnum = 11729
     wear_loc = "wrist_r"
 
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+The inscription reads:
+
+              She'vale Treniste Lyrene Na'deia
+
+                    (heir to Treniste)"""
+
 [[rooms]]
 vnum = 11747
 name = "Wide Hallway"
@@ -1397,6 +1561,25 @@ door is a short inscription."""
     vnum = 11732
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["ashwood", "door", "inscription"]
+description = """
+Inscribed in the ashwood door to the east are the words:
+
+              She'vale Treniste Josreke Ira'deian"""
+
+[[rooms.extra_descs]]
+keywords = ["tapestries", "tapestry", "heroes"]
+description = """
+The warriors all appear to be of slender elven build.  All winged, some
+of the warriors battle in midair."""
+
+[[rooms.extra_descs]]
+keywords = ["collection", "masks"]
+description = """
+Strange masks, carved mostly of dark wood and painted a variety of
+colors."""
+
 [[rooms]]
 vnum = 11749
 name = "Dark Oak Panelled Bedroom"
@@ -1425,6 +1608,24 @@ to the south."""
     vnum = 11734
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["collection", "swords"]
+description = """
+The swords all appear finely tempered mithril or silver, each bearing
+a different design as well as the Treniste crest."""
+
+[[rooms.extra_descs]]
+keywords = ["crest"]
+description = """
+{Y((-*-)){x"""
+
+[[rooms.extra_descs]]
+keywords = ["oaken", "dark", "door", "inscription"]
+description = """
+Inscribed in the dark oaken door to the south are the words:
+
+               She'vale Treniste Rodwen Ira'deia"""
+
 [[rooms]]
 vnum = 11750
 name = "Marble Sitting Room"
@@ -1449,6 +1650,11 @@ the east, and a pair of golden doors opens north."""
   direction = "south"
   flags = ["door", "closed"]
   to_vnum = 11745
+
+[[rooms.extra_descs]]
+keywords = ["glass", "tunnel"]
+description = """
+The tunnel crosses above ground to the white tower to the east."""
 
 [[rooms]]
 vnum = 11751
@@ -1477,6 +1683,24 @@ inscription across the center of the doors."""
     [[rooms.mob_resets.equips]]
     vnum = 11724
     wear_loc = "body"
+
+[[rooms.extra_descs]]
+keywords = ["double", "golden", "doors", "ornate", "letters", "inscription"]
+description = """
+An inscription in the golden doors to the south reads:
+
+              She'vale Treniste Dosandre Deian
+
+                          {Y((-*-)){x
+
+              She'vale Treniste Denylis Deiayan"""
+
+[[rooms.extra_descs]]
+keywords = ["gold", "design", "north"]
+description = """
+The design depicts a winged woman garbed in white wielding a blade in
+one hand and holding a set of scales in the other.  The face, intricately
+carven, is elven in shape."""
 
 [[rooms]]
 vnum = 11752
@@ -1516,6 +1740,15 @@ stone manor."""
   direction = "west"
   to_vnum = 11711
 
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The inscription reads:
+
+                            {D->*<-{x
+
+                    - She'vale Reykaris -"""
+
 [[rooms]]
 vnum = 11754
 name = "Black Marble Entryway"
@@ -1541,6 +1774,13 @@ carved into the stone above the archway."""
     [[rooms.mob_resets.equips]]
     vnum = 11750
     wear_loc = "neck1"
+
+[[rooms.extra_descs]]
+keywords = ["symbol"]
+description = """
+Cut into the dark stone, the symbol reads:
+
+                           {D->*<-{x"""
 
 [[rooms]]
 vnum = 11755
@@ -1610,6 +1850,14 @@ designed to display some large object."""
     vnum = 11750
     wear_loc = "neck1"
 
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestal"]
+description = """
+A low, wide pedestal carved of black marble.  Scratches and worn patches
+mar the polished top of the pedestal.  Strangely, along the sides, you
+notice offwhite streaks of what appears to be wax and darker splotches
+of something very like dried blood.."""
+
 [[rooms]]
 vnum = 11758
 name = "Dark niche"
@@ -1630,6 +1878,14 @@ designed to display some large object."""
     [[rooms.mob_resets.equips]]
     vnum = 11750
     wear_loc = "neck1"
+
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestal"]
+description = """
+A low, wide pedestal carved of black marble.  Scratches and worn patches
+mar the polished top of the pedestal.  Strangely, along the sides, you
+notice offwhite streaks of what appears to be wax and darker splotches
+of something very like dried blood.."""
 
 [[rooms]]
 vnum = 11759
@@ -1661,6 +1917,21 @@ designed to display some large object."""
     [[rooms.mob_resets.equips]]
     vnum = 11701
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestal"]
+description = """
+A low, wide pedestal carved of black marble.  Scratches and worn patches
+mar the polished top of the pedestal.  Strangely, along the sides, you
+notice offwhite streaks of what appears to be wax and darker splotches
+of something very like dried blood..  A crack runs down the eastern
+side of the pedestal."""
+
+[[rooms.extra_descs]]
+keywords = ["crack"]
+description = """
+Peering through the crack, you can make out a small carved slot, faintly
+resembling a keyhole."""
 
 [[rooms]]
 vnum = 11760
@@ -1730,6 +2001,19 @@ trails of blood streaking the floor between the doors and the altar."""
     [[rooms.mob_resets.equips]]
     vnum = 11751
     wear_loc = "arms"
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Strange runes are engraved in the sides and face of the altar.  The
+top of the altar is permanently stained with ingrained blood, and fresher
+blood dribbles in streaks down the sides."""
+
+[[rooms.extra_descs]]
+keywords = ["pentagram"]
+description = """
+A huge pentagram etched into the floor of the room.  Strange glyphs and
+runes have been carved in the spaces between the defining lines."""
 
 [[rooms]]
 vnum = 11762
@@ -1812,6 +2096,19 @@ glitters reddish in the light."""
     vnum = 11746
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["candle", "blood", "red"]
+description = """
+A single blood red candle balances on a nightstand in the center of the
+room."""
+
+[[rooms.extra_descs]]
+keywords = ["golden", "lettering"]
+description = """
+Lettering above the doorway reads:
+
+                  She'vale Reykaris Sorina Ira'deia"""
+
 [[rooms]]
 vnum = 11765
 name = "Black oak bedroom"
@@ -1838,6 +2135,18 @@ from above the tall oak door to the south."""
     [[rooms.mob_resets.equips]]
     vnum = 11748
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["golden", "inscription"]
+description = """
+A golden inscription above the door reads:
+
+                  She'vale Reykaris Loryn Ira'deia"""
+
+[[rooms.extra_descs]]
+keywords = ["braces", "throwing", "daggers", "collection"]
+description = """
+The daggers appear finely tempered and quite lethal.."""
 
 [[rooms]]
 vnum = 11766
@@ -1873,6 +2182,19 @@ skull, surrounded by gold lettering."""
     vnum = 11740
     wear_loc = "float"
 
+[[rooms.extra_descs]]
+keywords = ["humanoid", "skull"]
+description = """
+The skull gleams whitely against the dark marble archway, its mouth
+seemingly fixed in a permanent feral grin."""
+
+[[rooms.extra_descs]]
+keywords = ["gold", "lettering"]
+description = """
+The lettering reads:
+
+   She'vale Reykaris Rachal Deia  {D->*<-{x  She'vale Reykaris Toryan Deiayan"""
+
 [[rooms]]
 vnum = 11767
 name = "Ash bedroom"
@@ -1897,6 +2219,24 @@ is a short inscription in gold."""
     vnum = 11749
     wear_loc = "arms"
 
+[[rooms.extra_descs]]
+keywords = ["humanoid", "skull"]
+description = """
+A reddish light glows from within the skull, beaming eerily from the emtpy
+eye sockets and lipless mouth to bathe the room in a dim, bloody glow."""
+
+[[rooms.extra_descs]]
+keywords = ["strange", "figures"]
+description = """
+Intricately carved, the figures depict weird, hellish creatures."""
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+The inscription above the door reads:
+
+                  She'vale Reykaris Chake Ira'deian"""
+
 [[rooms]]
 vnum = 11768
 name = "Charred mahogany bedroom"
@@ -1920,6 +2260,13 @@ mahogany door to the south, somewhow untouched the heat."""
     [[rooms.mob_resets.equips]]
     vnum = 11744
     wear_loc = "wrist_r"
+
+[[rooms.extra_descs]]
+keywords = ["gold", "lettering"]
+description = """
+Inscribed above the doorway are the words:
+
+                  She'vale Reykaris Kranali Na'deian"""
 
 [[rooms]]
 vnum = 11769
@@ -1957,6 +2304,21 @@ an inscription carved into the stone archway framing the doorway."""
     vnum = 11743
     wear_loc = "about"
 
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+Above the dark doorway is the inscription:
+
+ She'vale Reykaris Rachal Deia
+                                {D->*<-{x
+                                       She'vale Reykaris Toryan Deiayan"""
+
+[[rooms.extra_descs]]
+keywords = ["humanoid", "skeletons"]
+description = """
+You notice bones rising from the shoulder blades, probably to support
+wings."""
+
 [[rooms]]
 vnum = 11770
 name = "Quiet foyer"
@@ -1984,6 +2346,19 @@ entrance door to the west."""
   direction = "west"
   flags = ["door", "closed"]
   to_vnum = 11717
+
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+Twining around the archway is an inscription:
+
+                       Myr'vale Myrxes
+
+                 swift      {W-=+)>{x      silent
+
+                          ..or dead
+
+                   - flight of the dagger -"""
 
 [[rooms]]
 vnum = 11771
@@ -2065,6 +2440,14 @@ for knives, line the upper northern wall."""
     vnum = 11760
     wear_loc = "neck1"
 
+[[rooms.extra_descs]]
+keywords = ["wooden", "targets", "target"]
+description = """
+Thick slices of wood have been affixed to the stone walls.  Deep gouge
+marks indicate that they have been used for some sort of target
+practice.  An unsettling number of the marks are very close to the target
+centers."""
+
 [[rooms]]
 vnum = 11775
 name = "Dark cavern"
@@ -2102,6 +2485,11 @@ a hawk, and a dagger among them."""
     [[rooms.mob_resets.equips]]
     vnum = 11759
     wear_loc = "wrist_r"
+
+[[rooms.extra_descs]]
+keywords = ["design"]
+description = """
+You try to follow the design with your eyes, but it eludes you."""
 
 [[rooms]]
 vnum = 11776
@@ -2174,6 +2562,26 @@ Resting on a low table in the center of the room is a glass case containing
     [[rooms.mob_resets.equips]]
     vnum = 11761
     wear_loc = "legs"
+
+[[rooms.extra_descs]]
+keywords = ["dagger"]
+description = """
+An engraving of a thrown dagger arcs across the northern wall.
+Carved along the hilt of the dagger are the words:
+
+                    Myr'vale Myrxes Dyraena Na'deia"""
+
+[[rooms.extra_descs]]
+keywords = ["glass", "case", "daggers"]
+description = """
+You see three daggers, covered by a low glass case.  The central dagger is
+thin with a narrow hilt, probably for throwing.  It gleams the silver-blue
+of finely tempered mithril.  The crest of Myrxes is engraved in the center
+of the hilt.  The eastern dagger is longer and formed of carved onyx.
+An engraved black panther stalks along the length of the blade.  Honed
+steel forms the third blade, longer than the other two, almost a shortsword.
+Carved above the dark grip is a striking lynx.  The shimmer of some sort
+of protective magic shield surrounds the case and supporting table."""
 
 [[rooms]]
 vnum = 11778
@@ -2266,6 +2674,17 @@ in the darkness, muffles all sound to mere whispers."""
     [[rooms.mob_resets.equips]]
     vnum = 11766
     wear_loc = "hands"
+
+[[rooms.extra_descs]]
+keywords = ["hawk", "hawks", "south", "s"]
+description = """
+Beneath the engraved hawks, you notice an inscription in the dark stone:
+
+                  Myr'vale Myrxes Jaena Deia
+
+                            {W-=+)>{x
+
+                 Myr'vale Myrxes Neraikis Deiayan"""
 
 [[rooms]]
 vnum = 11780
@@ -2472,6 +2891,13 @@ in the room."""
     vnum = 11772
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["inscription", "bronze"]
+description = """
+The inscription reads:
+
+                  Myr'vale Xaek Rakael Sequas"""
+
 [[rooms]]
 vnum = 11786
 name = "First Commander's Office"
@@ -2495,6 +2921,13 @@ an inscription in burnished bronze."""
     vnum = 11771
     wear_loc = "legs"
 
+[[rooms.extra_descs]]
+keywords = ["inscription", "bronze"]
+description = """
+The inscription reads:
+
+                  Myr'vale Xaek Nyxil Sh'aya"""
+
 [[rooms]]
 vnum = 11787
 name = "Third Commander's Office"
@@ -2516,6 +2949,13 @@ the north.  Engraved above the door is an inscription in bronze."""
     [[rooms.mob_resets.equips]]
     vnum = 11773
     wear_loc = "hold"
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "bronze"]
+description = """
+The inscription reads:
+
+                  Myr'vale Xaek Yeven Treye"""
 
 [[rooms]]
 vnum = 11788
@@ -2544,6 +2984,14 @@ carved into the stone."""
   [[rooms.mob_resets]]
   vnum = 11759
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["crest"]
+description = """
+The crest of house Xaek is engraved in the granite doors, surrounded
+by an inscription:
+
+   Myr'vale Xaek Dyana Deia    {w][+][{x    Myr'vale Xaek Ryke Deiayan"""
 
 [[rooms]]
 vnum = 11789
@@ -2579,6 +3027,19 @@ granite doors in the south wall."""
     [[rooms.mob_resets.equips]]
     vnum = 11770
     wear_loc = "shield"
+
+[[rooms.extra_descs]]
+keywords = ["lion", "engraving"]
+description = """
+The intricate engraving reveals lithe, powerful muscles and a proud
+feline head.  Beneath the engraving, you notice the inscription:
+
+                 - Myr'vale  Xaek -
+
+            Strength    {w][+][{x    Power
+
+                        Wrath
+                     of the Lion"""
 
 [[rooms]]
 vnum = 11790
@@ -2791,6 +3252,23 @@ the door to the south."""
     vnum = 11783
     wear_loc = "neck2"
 
+[[rooms.extra_descs]]
+keywords = ["candle", "white"]
+description = """
+A tall white candle glows brightly."""
+
+[[rooms.extra_descs]]
+keywords = ["depiction", "hand"]
+description = """
+Beneath the hand is the crest of house Noriva."""
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "golden"]
+description = """
+The inscription reads:
+
+                 Myr'vale Noriva Dryna Ira'deia"""
+
 [[rooms]]
 vnum = 11797
 name = "Teak Panelled Bedroom"
@@ -2812,6 +3290,18 @@ Beneath the leaf, you notice an inscription in gold."""
     [[rooms.mob_resets.equips]]
     vnum = 11782
     wear_loc = "hands"
+
+[[rooms.extra_descs]]
+keywords = ["leaf"]
+description = """
+A strange five-pointed leaf is carved in the golden wood above the doorway."""
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+The inscription reads:
+
+                 Myr'vale Noriva Yllyra Na'deia"""
 
 [[rooms]]
 vnum = 11798
@@ -2837,6 +3327,11 @@ the doorway, you notice a short inscription in gold."""
     vnum = 11784
     wear_loc = "feet"
 
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+Myr'vale Noriva Voryl Ira'deian"""
+
 [[rooms]]
 vnum = 11799
 name = "Sunlit Bedchamber"
@@ -2856,3 +3351,8 @@ Double white oaken doors open onto the stairwell to the floor below."""
   vnum = 11771
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["engraving", "bear"]
+description = """
+The engraving depicts a huge, shaggy bear, an epitome of strength
+and health."""

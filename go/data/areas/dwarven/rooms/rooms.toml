@@ -173,6 +173,11 @@ south and to the east."""
   direction = "south"
   to_vnum = 6504
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+They hang over the road in the most ominous of ways."""
+
 [[rooms]]
 vnum = 6507
 name = "Narrow path"
@@ -570,6 +575,11 @@ to the castle.  There are nude posters covering the walls."""
   direction = "east"
   to_vnum = 6509
 
+[[rooms.extra_descs]]
+keywords = ["poster"]
+description = """
+There is a wall poster of a nude Minne Pearl."""
+
 [[rooms]]
 vnum = 6523
 name = "First Barrack room"
@@ -684,6 +694,11 @@ probable that not many people have been in here for many months."""
   direction = "down"
   flags = ["door", "closed"]
   to_vnum = 6527
+
+[[rooms.extra_descs]]
+keywords = ["floor", "dust"]
+description = """
+After blowing all the dust off the floor, you notice a trapdoor!"""
 
 [[rooms]]
 vnum = 6527
@@ -1257,4 +1272,3 @@ The dwarven kingdom lies to the east."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 4000
-

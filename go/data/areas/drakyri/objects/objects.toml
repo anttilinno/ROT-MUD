@@ -8,6 +8,17 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["blue", "marble", "fountain"]
+description = """
+Blue marble, so dark as to appear black in patches where shadows have
+fallen over the stone, has been sculpted into the form of a tall
+sorceress, hands raised in the act of casting a spell.  Crystalline
+water splashes from the sorceress' open palm, sparkling like colour
+spray in the light.  The narrow face and chiseled cheekbones appear
+elven, but twin wings rise from the shoulderblades, sculpted feathers
+cascading over the sorceress' back like a cloak."""
+
 [[objects]]
 vnum = 11701
 keywords = ["black", "marble", "key"]
@@ -41,6 +52,14 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["lapis", "statue"]
+description = """
+A statue of lapis lazuli rests here, glowing deep blue in the candlelight.
+The carved form depicts a kneeling drakyri dressed long flowing robes.
+His hands are cupped before him, as if in supplication.  Nestled between
+the hands is a carved bowl filled with cloudy white liquid."""
+
 [[objects]]
 vnum = 11704
 keywords = ["pool", "water", "mirror"]
@@ -50,6 +69,15 @@ item_type = "portal"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["pool", "water", "mirror"]
+description = """
+Though the water in the pool is exceptionally clear, you cannot see the
+bottom.  As you gaze into the pool, a fine boned elven face appears next
+to your own and seems to smile mysteriously up at you.  The water
+ripples and clears, leaving only your reflection.. or perhaps the vision
+was just your imagination?  The water sparkles in the light."""
 
 [[objects]]
 vnum = 11705
@@ -74,6 +102,22 @@ weight = 0
 cost = 0
 extra_flags = ["hum"]
 
+[[objects.extra_descs]]
+keywords = ["counter", "black", "stone"]
+description = """
+The counter seems to stand on nothing at all.  Your reflection in
+the polished stone counter top seems slightly transparent."""
+
+[[objects.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+
+You know me !
+
+Type list to list items.
+Type buy to buy something."""
+
 [[objects]]
 vnum = 11707
 keywords = ["shimmering", "curtain", "light"]
@@ -85,6 +129,11 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+[[objects.extra_descs]]
+keywords = ["shimmering", "curtain", "light"]
+description = """
+Peering through the curtain, you see a grove of trees."""
+
 [[objects]]
 vnum = 11708
 keywords = ["table", "stone"]
@@ -94,6 +143,13 @@ item_type = "portal"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["table", "stone"]
+description = """
+Engraved across the center of the table are the words:
+
+               D'lan Treviki Drakyri Laerkai"""
 
 [[objects]]
 vnum = 11709
@@ -129,6 +185,13 @@ extra_flags = ["glow", "bless"]
   location = "damroll"
   modifier = 7
 
+[[objects.extra_descs]]
+keywords = ["mithril", "((+*+))", "torque", "deriki"]
+description = """
+An inscription along the edge reads:
+
+               Sh'evale Deriki Lechandre Deia"""
+
 [[objects]]
 vnum = 11710
 keywords = ["shimmering", "blue", "robe"]
@@ -154,6 +217,13 @@ extra_flags = ["glow"]
   [[objects.affects]]
   location = "mana"
   modifier = 130
+
+[[objects.extra_descs]]
+keywords = ["shimmering", "blue", "robe"]
+description = """
+An inscription along the edge reads:
+
+               Sh'evale Deriki Lechandre Deia"""
 
 [[objects]]
 vnum = 11711
@@ -209,6 +279,13 @@ extra_flags = ["hum"]
   location = "hitroll"
   modifier = 10
 
+[[objects.extra_descs]]
+keywords = ["engraved", "((+*+))", "ring", "deriki"]
+description = """
+An inscription along the inside of the band reads:
+
+               She'vale Deriki Noriek Deiayan"""
+
 [[objects]]
 vnum = 11713
 keywords = ["((+*+))", "crest", "deriki"]
@@ -246,6 +323,13 @@ extra_flags = ["glow"]
   [[objects.affects]]
   location = "ac"
   modifier = -10
+
+[[objects.extra_descs]]
+keywords = ["((+*+))", "crest", "deriki"]
+description = """
+An inscription along the inside of the band reads:
+
+               She'vale Deriki Noriek Deiayan"""
 
 [[objects]]
 vnum = 11714
@@ -1438,6 +1522,12 @@ extra_flags = ["hum", "evil", "magic", "nodrop", "noremove"]
   location = "damroll"
   modifier = 6
 
+[[objects.extra_descs]]
+keywords = ["runes"]
+description = """
+The runes are in no language that you recognize.  As you gaze at them,
+they shimmer, and you feel the urge to wear this collar.."""
+
 [[objects]]
 vnum = 11751
 keywords = ["demon's", "wings", "demon", "black"]
@@ -1521,6 +1611,13 @@ extra_flags = ["dark", "invis", "bless"]
   [[objects.affects]]
   location = "damroll"
   modifier = 6
+
+[[objects.extra_descs]]
+keywords = ["onyx", "-=+)>", "earring", "myrxes"]
+description = """
+Below the Myrxes crest is the inscription:
+
+                   Myr'vale Myxes Jaena Deia"""
 
 [[objects]]
 vnum = 11753
@@ -2762,6 +2859,21 @@ extra_flags = ["hum", "bless"]
   location = "damroll"
   modifier = 16
 
+[[objects.extra_descs]]
+keywords = ["laerkai", "power", "presense"]
+description = """
+As you focus on the presense, a thundering voice booms through your
+skull:
+
+	          Forged in Fury,
+                  Tempered with Justice,
+	          Sharpened by Pain,
+	          Silenced in Stealth,
+	          Strengthened by Might,
+	          And bound in Life.
+
+	       D'lan Treviki Drakyri Laerkai"""
+
 [[objects]]
 vnum = 11792
 keywords = ["honed", "shortsword", "zedraikis"]
@@ -2788,6 +2900,17 @@ extra_flags = ["hum", "dark", "bless"]
   [[objects.affects]]
   location = "damroll"
   modifier = 50
+
+[[objects.extra_descs]]
+keywords = ["honed", "shortsword", "zedraikis"]
+description = """
+A wickedly sharp silvery blue blade gleams above a black wrapped leather
+hilt.  An inscription in the face of the blade reads:
+
+              A whisper of mithril
+	      Cleaving all in its path
+	      With the fury of fire
+              And Zedraikis' wrath!"""
 
 [[objects]]
 vnum = 11793
@@ -2836,6 +2959,11 @@ extra_flags = ["glow", "invis", "bless", "anti_good", "anti_evil"]
   [[objects.affects]]
   location = "damroll"
   modifier = 12
+
+[[objects.extra_descs]]
+keywords = ["flame", "balance", "silver"]
+description = """
+The flame flickers blindingly, and you are forced to look away."""
 
 [[objects]]
 vnum = 11794
@@ -2984,4 +3112,3 @@ weight = 10
 cost = 300
 wear_flags = ["take"]
 extra_flags = ["hum"]
-

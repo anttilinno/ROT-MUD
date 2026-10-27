@@ -22,6 +22,12 @@ very big lives here.  A small plaque is on the wall."""
   vnum = 2805
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This zone (trollden) is created by MERC for any MERC Mud.
+copyright 1992"""
+
 [[rooms]]
 vnum = 2802
 name = "Troll's Larder"
@@ -55,6 +61,11 @@ worms, and maggots."""
   [[rooms.mob_resets]]
   vnum = 2807
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["Half-eaten", "body", "rotting", "corpse"]
+description = """
+YUCK!  You find worms crawling in and out this poor unfortunate former human."""
 
 [[rooms]]
 vnum = 2803
@@ -137,6 +148,12 @@ its chest ripped out.  The predator seems disinterested in it."""
   vnum = 2800
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["arm", "rotting"]
+description = """
+This reminds you of what a baby would do to its formula during dinnertime,
+plastering it on the wall."""
+
 [[rooms]]
 vnum = 2805
 name = "Troll's Bedroom"
@@ -167,4 +184,3 @@ flattened by something."""
   [[rooms.obj_resets]]
   vnum = 2801
   max = 1
-

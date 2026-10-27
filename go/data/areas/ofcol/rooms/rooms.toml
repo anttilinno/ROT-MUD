@@ -177,3 +177,22 @@ You notice that there are no exits from this room."""
   vnum = 350
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["friend", "friends"]
+description = """
+The list include such prominent names as : God, Lottie, Kurgan,
+Ezzard, Mike, Sprocket and Stormbringer."""
+
+[[rooms.extra_descs]]
+keywords = ["foe", "foes", "enemies"]
+description = """
+There is only one picture yet... Dim.
+It pictures him hanging from a gallow, north of the town.
+It has the letters R.I.P. inscripted underneath."""
+
+[[rooms.extra_descs]]
+keywords = ["pictures", "picture", "decoration"]
+description = """
+These pictures show the friend's and foe's of Ravan.
+They are easy to separate, as most of the foe's have the letters
+R.I.P. inscripted underneath them."""

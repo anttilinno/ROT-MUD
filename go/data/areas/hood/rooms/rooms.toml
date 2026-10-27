@@ -884,6 +884,12 @@ from here.  Or you can enter "no man's land" south from here."""
   direction = "west"
   to_vnum = 2128
 
+[[rooms.extra_descs]]
+keywords = ["window"]
+description = """
+Looking through the window, you see a gang leader plotting the demise of
+the ogres."""
+
 [[rooms]]
 vnum = 2130
 name = "Yellow Dragon Road"
@@ -2203,4 +2209,3 @@ street to the west."""
     [[rooms.mob_resets.equips]]
     vnum = 2102
     wear_loc = "body"
-

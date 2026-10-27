@@ -125,6 +125,13 @@ on the archway."""
     vnum = 5318
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["plaque", "sign"]
+description = """
+This zone has been heavily modified by Kahn and Hatchet of MERC Industries
+and integrated by Kahn of MERC Industries.
+copyright 1993"""
+
 [[rooms]]
 vnum = 5301
 name = "Main Street"
@@ -2276,6 +2283,15 @@ area through the trees, while paths lead away north and west."""
     vnum = 5315
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["foundation"]
+description = """
+The foundation looks like it is for a sprawling, two-story affair with three
+wings.  On the ground is some building material, marble would do, if marble
+changed color slowly, continuously, through the entire spectrum.  There are
+also large panes of glass stacked over near one of the corners of the
+foundation."""
+
 [[rooms]]
 vnum = 5372
 name = "The holy grove"
@@ -2307,6 +2323,15 @@ really matter to you."""
   vnum = 5326
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["foundation", "construction"]
+description = """
+The foundation looks like it is for a sprawling, two-story affair with three
+wings.  On the ground is some building material, marble would do, if marble
+changed color slowly, continuously, through the entire spectrum.  There are
+also large panes of glass stacked over near one of the corners of the
+foundation."""
+
 [[rooms]]
 vnum = 5373
 name = "The sunny field"
@@ -2332,6 +2357,15 @@ patterns of the clouds as they gently drift across the sky."""
   vnum = 5325
   max = 3
 
+[[rooms.extra_descs]]
+keywords = ["dome", "construction", "structure", "east", "e"]
+description = """
+The foundation looks like it is for a sprawling, two-story affair with three
+wings.  On the ground is some building material, marble would do, if marble
+changed color slowly, continuously, through the entire spectrum.  There are
+also large panes of glass stacked over near one of the corners of the
+foundation."""
+
 [[rooms]]
 vnum = 5374
 name = "The croquet lawn"
@@ -2354,6 +2388,15 @@ sunny summers after-noon."""
     [[rooms.mob_resets.equips]]
     vnum = 5314
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["dome", "construction", "south", "s"]
+description = """
+The foundation looks like it is for a sprawling, two-story affair with three
+wings.  On the ground is some building material, marble would do, if marble
+changed color slowly, continuously, through the entire spectrum.  There are
+also large panes of glass stacked over near one of the corners of the
+foundation."""
 
 [[rooms]]
 vnum = 5375
@@ -2510,6 +2553,13 @@ mound upon which the temple is built and ends on the temple square below.
   direction = "south"
   to_vnum = 5380
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This entire world has been integrated, modified, debugged, and enhanced by
+Hatchet, Kahn, and Furey of MERC Industries to be run by any MERC Mud.
+1992 December 17"""
+
 [[rooms]]
 vnum = 5380
 name = "The Temple Square"
@@ -2573,6 +2623,12 @@ east is the main street."""
     [[rooms.mob_resets.equips]]
     vnum = 3355
     wear_loc = "neck2"
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+What you see is an uncompleted statue of what you think is the Midgaard
+mascot."""
 
 [[rooms]]
 vnum = 5382
@@ -2653,6 +2709,31 @@ Main Street leads west from here."""
     vnum = 3354
     wear_loc = "shield"
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
+
 [[rooms]]
 vnum = 5385
 name = "Outside the East Gate of Midgaard"
@@ -2672,6 +2753,31 @@ plains stretch out in the distance."""
   to_vnum = 5384
   key = 3133
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
+
 [[rooms]]
 vnum = 5386
 name = "By the Temple Altar"
@@ -2685,3 +2791,16 @@ behind it is a ten foot tall sitting statue of Odin, the King of the Gods."""
   direction = "south"
   to_vnum = 5379
 
+[[rooms.extra_descs]]
+keywords = ["statue", "odin", "king", "god"]
+description = """
+The statue represents the one-eyed Odin sitting on a his throne.  He has
+long, grey hair and beard and a strict look on his face.  On top of the
+throne, just above his shoulders, his two ravens Hugin and Munin are sitting
+and at his feet are his wolves Gere and Freke."""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Even though the altar is more than ten feet long it appears to be made from a
+single block of white virgin marble."""

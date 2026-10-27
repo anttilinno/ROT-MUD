@@ -39,6 +39,31 @@ tavern of the Dancing Daemon Inn, and your future adventures in New Thalos."""
   vnum = 9504
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["4.picture"]
+description = """
+You see a picture of Loki... at least you think it's Loki.
+He seems to be hiding from the camera."""
+
+[[rooms.extra_descs]]
+keywords = ["3.picture"]
+description = """
+You see a picture of Hammor on the front porch of the Danjerhaus,
+drinking a guinness stout and petting Big Guy the Cat."""
+
+[[rooms.extra_descs]]
+keywords = ["2.picture"]
+description = """
+You see a picture of Shark standing behind his desk screaming at a newbie.
+Through a window in the back you see a large aquarium. The newbie seems to
+be cowering in fear."""
+
+[[rooms.extra_descs]]
+keywords = ["1.1picture"]
+description = """
+You see a picture of Felix here, standing before the arena.
+He seems to be doing a body count."""
+
 [[rooms]]
 vnum = 9502
 name = "The Dancing Daemon Inn"
@@ -79,6 +104,12 @@ The only obvious exit is to the north."""
   [[rooms.obj_resets]]
   vnum = 3200
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["bar"]
+description = """
+The bar looks slightly out of place and you can only assume the powerful
+magic of the bartender allows it to revolve."""
 
 [[rooms]]
 vnum = 9503
@@ -201,6 +232,13 @@ of the square. The square extends in every direction."""
   [[rooms.obj_resets]]
   vnum = 9601
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+Before you is a statue of the Mighty Beholder!
+A great beast with multiple eyes and wicked... wicked... um.... eyes...
+The Mighty Beholder is in Excellent condition."""
 
 [[rooms]]
 vnum = 9507
@@ -933,6 +971,13 @@ ith the smell of gold and riches.  On the wall of the store is a poster."""
   direction = "west"
   to_vnum = 9525
 
+[[rooms.extra_descs]]
+keywords = ["poster"]
+description = """
+A wealthy man in red robes is smiling at you.  The caption reads:
+
+THE SULTAN REMINDS YOU TO PAY YOUR TAXES!"""
+
 [[rooms]]
 vnum = 9527
 name = "East Main Street"
@@ -983,6 +1028,13 @@ across the junction."""
   [[rooms.mob_resets]]
   vnum = 9568
   max = 15
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+NO LOITERING!
+
+(by order of the Sultan of New Thalos)"""
 
 [[rooms]]
 vnum = 9529
@@ -1349,6 +1401,20 @@ notice a small sign hanging over the dump."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 9541
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+==========================================================================
+                       THE DUMP OF NEW THALOS
+
+
+                              -----
+
+  Enter at your own risk.
+       -the management
+
+========================================================================="""
 
 [[rooms]]
 vnum = 9543
@@ -1975,6 +2041,11 @@ You notice a fair amount of footprints to the east."""
   vnum = 9543
   max = 13
 
+[[rooms.extra_descs]]
+keywords = ["footprint"]
+description = """
+Kind of looks like a yeti has been here....  Hmmmm."""
+
 [[rooms]]
 vnum = 9570
 name = "Alley"
@@ -2008,6 +2079,12 @@ in need of repair.  In the road is a small pothole."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 9525
+
+[[rooms.extra_descs]]
+keywords = ["pothole"]
+description = """
+Why are you looking in a pothole??????
+You poor or something?"""
 
 [[rooms]]
 vnum = 9572
@@ -2336,6 +2413,12 @@ description = "The small passage continues west and east from here."
   direction = "west"
   to_vnum = 9589
 
+[[rooms.extra_descs]]
+keywords = ["boulder"]
+description = """
+A huge boulder stands here. In its center someone has carved out a
+perfect round hole."""
+
 [[rooms]]
 vnum = 9591
 name = "Dark Passage"
@@ -2354,6 +2437,14 @@ trap door in the ceiling. The passage continues west from here."""
   flags = ["door"]
   to_vnum = 9670
 
+[[rooms.extra_descs]]
+keywords = ["fire"]
+description = """
+Moving closer you see this fire is actually FROZEN in place. The
+flames still radiate heat, but are not actually burning. Looking
+around you notice a small hole about the size of a piece of charcoal
+at the base of the flames."""
+
 [[rooms]]
 vnum = 9592
 name = "Underground"
@@ -2367,6 +2458,12 @@ description = "The small passage continues west and east."
   [[rooms.exits]]
   direction = "west"
   to_vnum = 9582
+
+[[rooms.extra_descs]]
+keywords = ["cloud"]
+description = """
+Peering into the misty cloud the form a huge conch shell seems to fade
+in and out. Perhaps this is somehow the entrance to the next challenge"""
 
 [[rooms]]
 vnum = 9593
@@ -2613,6 +2710,12 @@ Loki, the highest god in all the lands."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 9609
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+Looking up the huge statue you see Loki calmly gazing out across his
+lands.  He seems pleased."""
 
 [[rooms]]
 vnum = 9606
@@ -2884,6 +2987,16 @@ the wall."""
     vnum = 9546
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note", "sign"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth to Ahkeem
+SELL : sells an item to Akheem for a generous sum
+BUY : Akheem's FAVORITE command lets you have an item for his low low price.
+
+                                       """
+
 [[rooms]]
 vnum = 9615
 name = "Vera's Veggies"
@@ -2926,6 +3039,16 @@ There is a large poster, behind the counter, taped to the wall."""
     [[rooms.mob_resets.equips]]
     vnum = 9556
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["note", "poster"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth to Vera
+SELL : sells an item to Vera for a generous sum
+BUY : Vera's FAVORITE command lets you have an item for her low low price.
+
+                                        NEWBEE INTRUCTOR COMITEE"""
 
 [[rooms]]
 vnum = 9616
@@ -3101,6 +3224,21 @@ blood, there is a barely readable sign."""
     vnum = 9561
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["vat"]
+description = """
+You think you hear noises from the vat....nah."""
+
+[[rooms.extra_descs]]
+keywords = ["note", "sign"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth
+SELL : sells an item to Butch for a generous sum
+BUY : Butch's FAVORITE command lets you have an item for his low low price.
+
+                                        NEWBEE INTRUCTOR COMMITEE"""
+
 [[rooms]]
 vnum = 9623
 name = "The Witch's Brew"
@@ -3144,6 +3282,14 @@ your entrance.  An ornately lettered sign floats above your head."""
     vnum = 9570
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note", "sign"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth to Elvira
+SELL : sells an item to Elvira for a generous sum
+BUY : Elvira's FAVORITE command lets you have an item for her low low price."""
+
 [[rooms]]
 vnum = 9624
 name = "Braheem's Magic Shop"
@@ -3184,6 +3330,15 @@ small sign on the wall."""
     [[rooms.mob_resets.equips]]
     vnum = 9578
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to Braheem's.
+LIST -Shows you all of my wonderful creations.
+VAL  -Shows what an item might be worth to me.
+SELL -Allows you to rid yourself of excessive magic items.
+BUY  -Allows you to rid youself of excessive cash."""
 
 [[rooms]]
 vnum = 9625
@@ -3331,6 +3486,14 @@ A note on the wall beckons newbies."""
     [[rooms.mob_resets.equips]]
     vnum = 9515
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth to Abdul
+SELL : sells an item to Abdul for a generous sum
+BUY : Abdul's FAVORITE command lets you have an item for his low low price."""
 
 [[rooms]]
 vnum = 9630
@@ -3550,6 +3713,16 @@ A note catches your eye."""
     vnum = 9503
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth to Igor
+SELL : sells an item to Igor for a generous sum
+BUY : Igor's FAVORITE command lets you have an item for his low low price.
+
+                                        NEWBEE INTRUCTOR COMITEE"""
+
 [[rooms]]
 vnum = 9637
 name = "Ye Old Leather Shoppe"
@@ -3615,6 +3788,14 @@ some detail work on custom ordered jackets.  There is a note on the counter."""
     vnum = 9522
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth
+SELL : sells an item for a generous sum
+BUY :  buy an item for an outrageous price."""
+
 [[rooms]]
 vnum = 9638
 name = "Smuggler's Inn"
@@ -3649,6 +3830,12 @@ to the wall by a knife, awaits your inspection."""
   [[rooms.obj_resets]]
   vnum = 3200
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+LIST : gives you a list of items for sale.
+BUY :  buy something drinkable."""
 
 [[rooms]]
 vnum = 9639
@@ -3734,6 +3921,15 @@ fish.  There is a large poster stapled to the counter."""
     vnum = 3060
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note", "poster"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much an item is worth to the shipwright
+SELL : sells an item to the shipwright for a generous sum
+BUY : The shipwright's FAVORITE command lets you have an item for his low low pr
+ice."""
+
 [[rooms]]
 vnum = 9643
 name = "Drafting Room"
@@ -3777,6 +3973,14 @@ letters have been burned into the wooden wall."""
     [[rooms.mob_resets.equips]]
     vnum = 9587
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["letters", "wall"]
+description = """
+LIST : gives you a list of items for sale.
+VALUE : tells you how much the blacksmith will give you for his merchandise
+SELL : sells an item to the blacksmith
+BUY : buy an item from the blacksmith for a fair price"""
 
 [[rooms]]
 vnum = 9645
@@ -3949,6 +4153,15 @@ drink.  There is still a banner on the wall."""
   [[rooms.exits]]
   direction = "east"
   to_vnum = 9556
+
+[[rooms.extra_descs]]
+keywords = ["banner"]
+description = """
+========================================================================
+
+		H A P P Y   B I R T H D A Y   T O   U S
+
+========================================================================"""
 
 [[rooms]]
 vnum = 9653
@@ -4161,6 +4374,11 @@ the shapes they need.  You notice a small message on a wall."""
   direction = "east"
   to_vnum = 9562
 
+[[rooms.extra_descs]]
+keywords = ["message"]
+description = """
+I hate being a Tanner"""
+
 [[rooms]]
 vnum = 9665
 name = "Hall"
@@ -4178,6 +4396,14 @@ golden plaque above the door."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 9674
+
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+The Holy Shrine of Allah
+
+
+                           (remember Allah is a god, I wouldn't attack him)"""
 
 [[rooms]]
 vnum = 9666
@@ -4418,6 +4644,17 @@ hallway."""
   direction = "north"
   to_vnum = 9677
 
+[[rooms.extra_descs]]
+keywords = ["window"]
+description = """
+Looking out this window you can see the grounds of the palace that
+seperate the walls of the palace from the building itself."""
+
+[[rooms.extra_descs]]
+keywords = ["mirror"]
+description = """
+You see a the fighting image of some armor clad humanoid wielding a weapon."""
+
 [[rooms]]
 vnum = 9677
 name = "Hall"
@@ -4464,6 +4701,28 @@ A path leads out into the hallway and west towards the gazebo."""
   vnum = 9585
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+=========================================================================
+=========================================================================
+||                                                                     ||
+||                                                                     ||
+||                                                                     ||
+||                                                                     ||
+||        Welcome to my humble garden. I have created this             ||
+||        tiny bit of paradise for the pleasure of my people.          ||
+||        Take only pictures... Leave only footprints...               ||
+||                                                                     ||
+||                                                                     ||
+||                                                                     ||
+||                                 The Sultan                          ||
+||                                                                     ||
+||                                                                     ||
+||                                                                     ||
+=========================================================================
+========================================================================="""
+
 [[rooms]]
 vnum = 9679
 name = "Hall"
@@ -4486,6 +4745,16 @@ with a plaque mounted over it."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 9684
+
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+ART EXHIBIT
+                                of
+                            NEW THALOS
+
+
+                               -management is not responsible for lost items."""
 
 [[rooms]]
 vnum = 9680
@@ -6216,4 +6485,3 @@ its meal the large sting ray attacks!"""
     [[rooms.mob_resets.equips]]
     vnum = 9602
     inv_only = true
-

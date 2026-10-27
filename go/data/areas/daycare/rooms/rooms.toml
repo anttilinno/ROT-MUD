@@ -15,6 +15,11 @@ annoying little brats.  You have the urge to leave.  There is a sign here."""
   flags = ["door"]
   to_vnum = 6602
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+This is an area for newbies, so have fun.  -- Sandman"""
+
 [[rooms]]
 vnum = 6602
 name = "Day Care Center"
@@ -463,6 +468,12 @@ better read it!"""
     vnum = 3023
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+If you are not level 6 or above, then don't go south!!!!  It is a dangerous
+area, but congrats for getting this far - Sandman"""
+
 [[rooms]]
 vnum = 6626
 name = "Messy Kitchen"
@@ -490,4 +501,3 @@ dragon (actually an overgrown brat with a Halloween mask)."""
   [[rooms.mob_resets]]
   vnum = 6608
   max = 1
-

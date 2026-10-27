@@ -22,6 +22,13 @@ extra_flags = ["glow", "invis"]
   location = "hit"
   modifier = 20
 
+[[objects.extra_descs]]
+keywords = ["amulet", "captain"]
+description = """
+It is a small coin shaped amulet hung on a thin gold chain.  On the
+face of the amulet is a picture of a dagger pointing down at a set
+of skull and crossbones."""
+
 [[objects]]
 vnum = 16001
 keywords = ["key", "long", "wooden"]
@@ -64,6 +71,11 @@ item_type = "container"
 level = 1
 weight = 3
 cost = 500
+
+[[objects.extra_descs]]
+keywords = ["log", "captain"]
+description = """
+It is a very old book which the captain uses to keep track of his journeys."""
 
 [[objects]]
 vnum = 16005
@@ -610,6 +622,16 @@ extra_flags = ["glow", "invis", "magic", "bless", "anti_evil"]
   location = "damroll"
   modifier = 3
 
+[[objects.extra_descs]]
+keywords = ["charm", "good", "luck"]
+description = """
+On it is written :
+
+       Straighten your chin up and smile a bright smile,
+       The GODS are on your side thru each and every trial.
+       Don't worry about your troubles or even of your woes.
+       Because the GODS wish you the best of luck in everything you do!"""
+
 [[objects]]
 vnum = 16026
 keywords = ["foot", "lucky", "rabbit"]
@@ -652,6 +674,12 @@ weight = 10
 cost = 500
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "hum"]
+
+[[objects.extra_descs]]
+keywords = ["flag", "pirates"]
+description = """
+there is a picture of a dagger pointed down upon a white set of skull and
+crossbones.  In small leters you see : Amos Trask, The Dagger of the Sea!"""
 
 [[objects]]
 vnum = 16029
@@ -1179,4 +1207,3 @@ item_type = "key"
 level = 0
 weight = 1
 cost = 0
-

@@ -393,6 +393,12 @@ carved into the wall."""
   vnum = 9224
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["marble", "throne"]
+description = """
+The ruler notices your stare, and doesn't like it one bit!  The whole
+earth seems to shake with his emotion."""
+
 [[rooms]]
 vnum = 9228
 name = "By the River"
@@ -1239,6 +1245,11 @@ this tunnel is quite fierce, it seems as if it's forced."""
   vnum = 9224
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["portal"]
+description = """
+Through the portal you see nothing but sky."""
+
 [[rooms]]
 vnum = 9260
 name = "Air Chamber"
@@ -1279,6 +1290,12 @@ A tunnel leads west."""
   [[rooms.mob_resets]]
   vnum = 9225
   max = 15
+
+[[rooms.extra_descs]]
+keywords = ["throne", "clouds"]
+description = """
+Although the cloud throne appears solid enough to sit on, I wouldn't try
+it if I were you!"""
 
 [[rooms]]
 vnum = 9201
@@ -1358,6 +1375,18 @@ east around the mountain."""
     [[rooms.mob_resets.equips]]
     vnum = 9231
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["bodies", "body", "dead"]
+description = """
+They look as if their necks have been broken and their flesh, chewed."""
+
+[[rooms.extra_descs]]
+keywords = ["heaps", "stones", "tombs"]
+description = """
+You are sure glad that YOU aren't under one of those piles!
+Many of the tombstones have the same name on them, 'Raff'.  He must come
+here a lot."""
 
 [[rooms]]
 vnum = 9204
@@ -1729,4 +1758,3 @@ things going on about.  The canyon floor extends in all directions."""
   [[rooms.mob_resets]]
   vnum = 9203
   max = 15
-

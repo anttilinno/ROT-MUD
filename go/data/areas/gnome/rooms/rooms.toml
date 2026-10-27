@@ -90,6 +90,12 @@ north and south, while the path continues east.  There is a sign here."""
   direction = "west"
   to_vnum = 1503
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Warning:  The area to the east was written mostly by Vougon
+                    (giggle)    - Sandman"""
+
 [[rooms]]
 vnum = 1505
 name = "A Road in the Village"
@@ -366,6 +372,11 @@ other two sides by a small stream.  The water looks mighty cold."""
   direction = "west"
   to_vnum = 1518
 
+[[rooms.extra_descs]]
+keywords = ["stream"]
+description = """
+The stream is pretty small, but it looks too cold to swim."""
+
 [[rooms]]
 vnum = 1518
 name = "Path by a Stream"
@@ -386,6 +397,16 @@ and a small hut is to the west."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 1519
+
+[[rooms.extra_descs]]
+keywords = ["hut"]
+description = """
+The hut looks well built, but it seems to have taken some damage."""
+
+[[rooms.extra_descs]]
+keywords = ["stream"]
+description = """
+The stream is pretty small, but it looks too cold to swim."""
 
 [[rooms]]
 vnum = 1519
@@ -415,6 +436,13 @@ see a skeleton in the corner."""
     [[rooms.mob_resets.equips]]
     vnum = 1507
     wear_loc = "neck1"
+
+[[rooms.extra_descs]]
+keywords = ["skeleton"]
+description = """
+The skeleton still has a little flesh clinging to it and it is definitely
+humanoid.  The skull has been cracked open, but it is otherwise undamaged,
+except by time."""
 
 [[rooms]]
 vnum = 1520
@@ -527,6 +555,11 @@ is a large house, and to the west is a fortress."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 1527
+
+[[rooms.extra_descs]]
+keywords = ["fortress"]
+description = """
+The fortress is a large gnome stronghold to defend the city."""
 
 [[rooms]]
 vnum = 1527
@@ -761,6 +794,12 @@ The machines look unused, but could still work."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 1537
+
+[[rooms.extra_descs]]
+keywords = ["machine"]
+description = """
+The machine consists of a large rack with winches on each end.  You can
+almost feel them pulling your arms out of their sockets."""
 
 [[rooms]]
 vnum = 1539
@@ -1888,4 +1927,3 @@ description = "You are in a hole."
   [[rooms.mob_resets]]
   vnum = 1520
   max = 6
-

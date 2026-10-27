@@ -446,6 +446,11 @@ with a sign next to the door."""
   direction = "south"
   to_vnum = 8017
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Throt and Gleep's Megger Store est. 2107"""
+
 [[rooms]]
 vnum = 8017
 name = "Threep Lane"
@@ -659,6 +664,11 @@ There is also a sign next to the slot."""
   flags = ["door", "closed"]
   to_vnum = 8016
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+To open insert card."""
+
 [[rooms]]
 vnum = 8027
 name = "Stockroom of Throt & Gleep's Megger Store"
@@ -691,6 +701,12 @@ south and large vault door is to the north."""
     vnum = 8012
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["vault", "door"]
+description = """
+This vault seems impervious to breaking.  There is a keyhole in the lock
+however."""
+
 [[rooms]]
 vnum = 8028
 name = "Throt & Gleep's Vault"
@@ -718,4 +734,3 @@ description = "The vault is musty with a slight smell of ozone in the air."
   [[rooms.obj_resets]]
   vnum = 8004
   max = 1
-

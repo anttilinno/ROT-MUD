@@ -16,6 +16,12 @@ dock."""
   direction = "south"
   to_vnum = 9780
 
+[[rooms.extra_descs]]
+keywords = ["ship"]
+description = """
+It is a huge ship belonging to the royal family.  On its side is painted in
+big bold letters : THE ROYAL EAGLE."""
+
 [[rooms]]
 vnum = 16001
 name = "Along the Pier"
@@ -553,6 +559,19 @@ weather must have really worn this ship out."""
   direction = "west"
   to_vnum = 16016
 
+[[rooms.extra_descs]]
+keywords = ["crevice"]
+description = """
+Upon closer inspection, you see that the crevice is as high and thin as a
+coin slot.  You also notice a small symbol carved into the wood just above
+the slot."""
+
+[[rooms.extra_descs]]
+keywords = ["symbol"]
+description = """
+This is so small, you can barely see it.  It seems to show a picture of
+a dagger pointed down at a set of skull and crossbones."""
+
 [[rooms]]
 vnum = 16018
 name = "Main Deck of the Royal Eagle"
@@ -593,6 +612,11 @@ think to yourself, "Geez, this ship sure needs some repairs!""""
     [[rooms.mob_resets.equips]]
     vnum = 16040
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["floorboard", "floor"]
+description = """
+It seems to squeak.  It could be a door of some kind."""
 
 [[rooms]]
 vnum = 16019
@@ -1717,6 +1741,14 @@ busy at work.  The only exit is south of course."""
     [[rooms.mob_resets.equips]]
     vnum = 16009
     wear_loc = "body"
+
+[[rooms.extra_descs]]
+keywords = ["blood", "sea"]
+description = """
+The sea is so vast, it covers the expanse of the horizon from east to west.
+The water in the sea is deep red in color thus begetting it its name.  The
+color is supposedly caused by an enourmous underwater whirlpool which
+stirs the ocean dirt up making the water reddish."""
 
 [[rooms]]
 vnum = 16053
@@ -2953,4 +2985,3 @@ all of a sudden you loose all sense of direction...
   [[rooms.exits]]
   direction = "down"
   to_vnum = 3365
-

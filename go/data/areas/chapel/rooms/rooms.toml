@@ -29,6 +29,16 @@ do not let much light through.  A few rows of worn wooden benches stand here."""
   vnum = 3400
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["benches", "rows"]
+description = """
+The benches are not of the comfortable kind."""
+
+[[rooms.extra_descs]]
+keywords = ["glass", "windows"]
+description = """
+The windows must be meant to be dark.  At least they are completely clean."""
+
 [[rooms]]
 vnum = 3408
 name = "Stairwell into Darkness"
@@ -73,6 +83,13 @@ A bloodied corpse of an acolyte is lying here ..."""
   [[rooms.mob_resets]]
   vnum = 3402
   max = 10
+
+[[rooms.extra_descs]]
+keywords = ["corpse", "corpses"]
+description = """
+Mauled and torn apart ... throats were ripped out and guts spilled on the
+floor ... you slip and land, planting yourself firmly in the slick wetness
+and splattering yourself with offal."""
 
 [[rooms]]
 vnum = 3410
@@ -136,6 +153,17 @@ blood stains, but their color seems a little wrong."""
   flags = ["door", "closed"]
   to_vnum = 3413
 
+[[rooms.extra_descs]]
+keywords = ["door", "writing"]
+description = """
+Above the door is some strange writing!  It is worn with age, but it refers
+to an ancient ruler named 'Shohan'."""
+
+[[rooms.extra_descs]]
+keywords = ["stain", "stains"]
+description = """
+That's odd ... they seem a little GREEN."""
+
 [[rooms]]
 vnum = 3413
 name = "The Shrine of Shohan"
@@ -193,6 +221,13 @@ doorway has been hewn to the east."""
   vnum = 3401
   max = 7
 
+[[rooms.extra_descs]]
+keywords = ["coffin", "sarcophagus"]
+description = """
+Now destroyed ... there is writing on it: 'All hail the new king; we serve
+the Roch'tar, the Undying One!  Those who decline his worship shall be
+slaughtered!'"""
+
 [[rooms]]
 vnum = 3415
 name = "The Lower Chambers and Tombs of the Undead"
@@ -228,6 +263,12 @@ The passage slopes upward here and also continues to the north."""
   direction = "up"
   flags = ["door"]
   to_vnum = 3418
+
+[[rooms.extra_descs]]
+keywords = ["walls"]
+description = """
+Something BIG must have done this job!  There are traces of BLOOD in the
+claw marks."""
 
 [[rooms]]
 vnum = 3417
@@ -279,6 +320,30 @@ leading down.  The Ghost of Cristis the Kind stands here."""
     [[rooms.mob_resets.equips]]
     vnum = 3422
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["ghost", "cristis"]
+description = """
+His rest has been disturbed by evil creatures who have invaded his domain
+and grave.  He holds up a parchment for you to read:
+
+     Hello stranger and last hope for Midgaard and this tomb!
+   This is a plea for aid by a man long since dead from this Earth.
+     The forces of evil have taken control of this tomb and the
+   Kings of old need your aid to free us and deliver us to peace
+   once again.  I think that I alone have been able to appear and
+   communicate with the mortal world.
+     Roch'tar, the reincarnate Vampire, now rules these tombs.
+   You must find and defeat him and his minions!
+     May God bless you on your Quest!"""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+It stands 2 feet high with the remnants of candle-wax on top.  There is
+an inscription on the side:  'Praise the almighty Cristis the bringer of
+good and justice to the world.  He who fought the evilest finally is at
+peace.  May the Gods remember him forever ...'"""
 
 [[rooms]]
 vnum = 3419
@@ -339,6 +404,43 @@ doors lead off to the south and a large stone staircase leads up."""
   flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3405
   key = 3410
+
+[[rooms.extra_descs]]
+keywords = ["letters", "graffiti"]
+description = """
+'Beware here all of man, because past here lies only death.'
+
+    Insho'rkthon brsskra-lehsn Roch'tar
+
+Beneath, there are two criss-crossing scratchmarks in an X formation that
+look like someone (or something) raked their claws across the wood."""
+
+[[rooms.extra_descs]]
+keywords = ["oak"]
+description = """
+They're HUGE!  They are at least 12 feet tall and about 10 feet wide.
+If not for one thing they would be perfectly preserved.  There appears
+to be some letters crudely scratched into the wood."""
+
+[[rooms.extra_descs]]
+keywords = ["staircase", "stairs"]
+description = """
+Though quite cracked they do look very stable."""
+
+[[rooms.extra_descs]]
+keywords = ["tapestry", "tapestries"]
+description = """
+The tapestries were woven into beautiful and exciting scenes of battles
+long ago.  One on the left your shows the historic battle between Jubal the
+Benevolent and Hroth Kragen's forces that eventually Jubal's army won (of
+course)."""
+
+[[rooms.extra_descs]]
+keywords = ["stone", "door", "trapdoor"]
+description = """
+It's rather small and looks quite heavy but maybe with some kind of leverage
+you could move it.  It has a queerly shaped hole that looks big enough
+for an equally queerly shaped pole to fit inside.  If only you had it!"""
 
 [[rooms]]
 vnum = 3422
@@ -894,6 +996,12 @@ blood of beasts and humans alike."""
   vnum = 3420
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["painting", "paintings", "mural"]
+description = """
+There is a tiny painting of a vault in this mural ... and it seems to be a
+reflected picture of the vault ... the word in tiny print is 'rathcor'."""
+
 [[rooms]]
 vnum = 3449
 name = "The Lower Chambers and Tombs of the Undead"
@@ -1268,6 +1376,11 @@ north into the catacombs and further south as long as you can see."""
     vnum = 3402
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["etchings"]
+description = """
+Beautiful yet disturbing, they urge you to move onward."""
+
 [[rooms]]
 vnum = 3466
 name = "The Gilded Hallway"
@@ -1293,6 +1406,11 @@ flickers off the walls showing you exits north and south."""
     vnum = 3403
     wear_loc = "body"
 
+[[rooms.extra_descs]]
+keywords = ["etchings"]
+description = """
+Beautiful yet disturbing, they urge you to move onward."""
+
 [[rooms]]
 vnum = 3467
 name = "The Gilded Hallway"
@@ -1309,6 +1427,11 @@ flickers off the walls showing you exits north and south."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 3468
+
+[[rooms.extra_descs]]
+keywords = ["etchings"]
+description = """
+Beautiful yet disturbing, they urge you to move onward."""
 
 [[rooms]]
 vnum = 3468
@@ -1339,6 +1462,11 @@ flickers off the walls showing you exits north and south."""
   vnum = 3415
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["etchings"]
+description = """
+Beautiful yet disturbing, they urge you to move onward."""
+
 [[rooms]]
 vnum = 3469
 name = "The Gilded Hallway"
@@ -1352,6 +1480,11 @@ flickers off the walls showing you exits north."""
   direction = "north"
   to_vnum = 3468
 
+[[rooms.extra_descs]]
+keywords = ["etchings"]
+description = """
+Beautiful yet disturbing, they urge you to move onward."""
+
 [[rooms]]
 vnum = 3470
 name = "A Secret Passageway"
@@ -1361,6 +1494,11 @@ description = "A secret passage!  You wonder where it may lead!"
   [[rooms.exits]]
   direction = "south"
   to_vnum = 3471
+
+[[rooms.extra_descs]]
+keywords = ["east", "secret", "door"]
+description = """
+The door closed on you so softly that you didn't even notice!"""
 
 [[rooms]]
 vnum = 3471
@@ -1423,4 +1561,3 @@ up out of the coffin, or you can wait for here the real occupant to join you."""
   flags = ["door", "closed", "locked"]
   to_vnum = 3460
   key = 3419
-

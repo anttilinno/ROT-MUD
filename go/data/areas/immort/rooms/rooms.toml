@@ -114,6 +114,12 @@ fields of Earth, looking fragile and far away, but full of hope.  A sense of
 wistful regret touches you, as you think about what might have been, and what
 will be."""
 
+[[rooms.extra_descs]]
+keywords = ["crater", "mare", "imbrium"]
+description = """
+A small shipping tag is pinned to the ground with a worn hunting knife.
+Upon it is a dedication to Robert Anson Heinlein, the father of the future."""
+
 [[rooms]]
 vnum = 1207
 name = "The Satin Memorial Reading Room"
@@ -132,6 +138,138 @@ from one angle, or the wine-dark sea from another."""
   direction = "south"
   flags = ["door", "closed"]
   to_vnum = 1217
+
+[[rooms.extra_descs]]
+keywords = ["rose", "rose-brambled", "balcony", "railing"]
+description = """
+Climbing white roses have swarmed over the original marble to obscure
+it almost completely.  The air is sweet not with roses, though,
+but with Satin's sandalwood perfume."""
+
+[[rooms.extra_descs]]
+keywords = ["rosewood", "chair"]
+description = """
+It looks comfortable, and the cushions are ivory velvet."""
+
+[[rooms.extra_descs]]
+keywords = ["stark", "black", "mountains", "wine", "wine-dark", "dark", "sea"]
+description = """
+The ocean is constantly smashing up against the cliffs and rending
+huge slabs from it.  The beach is scarcely a beach at all, more a
+collection of rough flakes varying in size from a small car to a
+small fist.  As the water comes up over the rocks and ebbs back
+down, it filters through the spaces and makes an unnerving rattling
+sound."""
+
+[[rooms.extra_descs]]
+keywords = ["print", "out", "print-out", "creased", "well", "poem"]
+description = """
+This page has been read over so many times that you can barely discern
+the words, and in fact with much poring only the following becomes
+clear:
+        'I know that I am studly - Heck, I'm sexy, cute and cuddly
+         And I know that I'm extremely modest too.'"""
+
+[[rooms.extra_descs]]
+keywords = ["yeats"]
+description = """
+The page it is flipped open to reads:
+
+A sudden blow: the great wings beating still
+Above the staggering girl, her thighs carressed
+By the dark webs, her nape caught in his bill,
+he holds her helpless breast upon his breast.
+How can those terrified vague fingers push
+The feathered glory from her loosening thighs?
+And how can body, laid in that white rush,
+But feel that strange heart beating where it lies?
+A shudder in the loins engenders there
+The broken wall, the burning roof and tower
+And Agammemnon dead.  Being so caught up,
+So mastered by this brute blood of the air,
+Did she put on his knowledge with his power
+Before his indifferent beak could let her drop?"""
+
+[[rooms.extra_descs]]
+keywords = ["chandler"]
+description = """
+She has just started the Lady in the Lake:
+
+Gillerain Regal, the Champagne of Perfumes.  It was definitely
+the stuff to get.  One drop of that in the hollow of your
+throat and the matched pink pearls started falling off you like
+summer rain."""
+
+[[rooms.extra_descs]]
+keywords = ["barrie"]
+description = """
+A copy of Peter Pan is opened near the end:
+
+What sort of form was Hook showing?  Misguided man though he
+was, we may be glad, without sympathising with him, that in
+the end he stayed true to the traditions of his race.  The
+other boys were flying about him now, flouting, scornful; and
+as he staggered about the deck striking at them impotently, his
+mind was no longer with them; it was slouching in the playing
+fields of long ago, or being sent up for good, or watching
+the wall-game from a famous wall.  And his shoes were right,
+and his waistcoat was right, and his tie was right, and his
+socks were right.
+
+James Hook, thou not wholly unheroic figure, farewell."""
+
+[[rooms.extra_descs]]
+keywords = ["tennyson"]
+description = """
+.       "My mariners
+         Souls that have toiled, and wrought, and thought with me -
+         The ever with a frolic welcome took
+         The thunder and the sunshine, and opposed
+         Free hearts, free foreheads - you and I are old;
+         Old age hath yet his honour and the toil
+         Death closes all; but something ere the end,
+         Some work of noble note, may yet be done,
+         Not unbecoming of men that strove with the gods.
+         The lights begin to twinkle from the rocks;
+         The long day wanes; the slow moon climbs; the deep
+         Moans round with many voices.""""
+
+[[rooms.extra_descs]]
+keywords = ["battered", "paperback", "de", "Laclos"]
+description = """
+.       'One is very soon bored of everything, my angel; it is a law
+        of nature.  It is not my fault.
+        If, that is to say, that I am bored with an adventure that has
+        claimed my attentions for four mortal months, it is not my fault.
+        If, that is to say, my love is equal to your virtue - and that
+        is certainly saying a great deal - it is not surprising that
+        one should come to the end at the same time as the other.  It
+        is not my fault.
+        A woman that I love madly now insists that I give you up for
+        her.  It is not my fault.
+        I quite realize that this is the perfect opportunity to accuse
+        me of perjury: but if, where nature has gifted men with no
+        more than constancy, she has given women obstinacy, it is
+        not my fault.
+        Believe this, you should take another lover, even as I take
+        another mistress.  This is good, very good advice: if you
+        find it bad, it is not my fault.
+        Good-bye, my angel.  I took you with pleasure, I leave you
+        without regret.  I shall come back perhaps.  Such is life.
+        It is not my fault."""
+
+[[rooms.extra_descs]]
+keywords = ["dusty", "leather", "bound", "leather-bound", "Donne"]
+description = """
+.       `Cruel and sudden, hast thou since
+        Purpled thy nail in blood of innocence?
+        Wherein could this flea guilty be,
+        Except in the drop it sucked from thee?
+        Yet thou trimph'st and say'st that thou
+        Find'st not thyself, nor me the weaker now;
+          'Tis true, then learn how false fears be:
+          Just so much honour when thou yield'st to me
+          Will waste as this flea's death took life from thee.'"""
 
 [[rooms]]
 vnum = 1208
@@ -169,6 +307,17 @@ are east."""
   flags = ["door", "closed"]
   to_vnum = 1203
 
+[[rooms.extra_descs]]
+keywords = ["tools", "scrolls", "braziers", "components"]
+description = """
+It's all worth a fortune, but you'd better not touch it.  Alander keeps
+inventory and holds grudges."""
+
+[[rooms.extra_descs]]
+keywords = ["clutter", "mess"]
+description = """
+You notice Jimmy Hoffa's ring."""
+
 [[rooms]]
 vnum = 1210
 name = "The Office of Vengeance"
@@ -205,6 +354,28 @@ corner, you notice a statue."""
   direction = "down"
   to_vnum = 3365
 
+[[rooms.extra_descs]]
+keywords = ["desk"]
+description = """
+This desk is much larger than anyone could possibly need.  At one end you
+notice a large, disorderly mass of papers; it must be all his immortal
+paperwork.  At the other end is a magnificent wooden inlaid board with
+handcrafted ebony and hardwood pieces."""
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+You recognize this as a statue of Robert James Fischer, one of the most
+creative, if not eccentric, players of all time.  The inscription on the
+base reads, "I like the moment when I crush a man's ego.""""
+
+[[rooms.extra_descs]]
+keywords = ["bookshelf"]
+description = """
+This is the most amazing collection of chess books you have ever seen.
+Everything from Damiano's manuscripts, to a complete collection of the
+Encyclopedia of Chess Openings, to the latest Imformants are all here."""
+
 [[rooms]]
 vnum = 1211
 name = "Arena of Judgement"
@@ -221,6 +392,13 @@ of veinous marble.  A bloodstone seat awaits the true paragon of Romanity."""
   direction = "south"
   flags = ["door", "closed"]
   to_vnum = 1218
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+A statue of Pontius Pilate is here.  On it's face is the expression of some
+age old contemplation.  Standing at the statues bronzy feet is a Blood red
+shield that glimmers like a pool of blood."""
 
 [[rooms]]
 vnum = 1212
@@ -246,6 +424,18 @@ tear savagely at your fragile body."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 1212
+
+[[rooms.extra_descs]]
+keywords = ["sky", "wind", "winds"]
+description = """
+Cold winds plunge ceaselessly at you from the dark, cloudless sky."""
+
+[[rooms.extra_descs]]
+keywords = ["floor"]
+description = """
+The stone floor is the same shade of grey as the sky and is completely plain
+and unscratched.  It is probably too hard for anything to leave as much as a
+scratch on it."""
 
 [[rooms]]
 vnum = 1213
@@ -391,6 +581,12 @@ sort of exit above you, but you do not know where it leads..."""
   direction = "up"
   to_vnum = 2
 
+[[rooms.extra_descs]]
+keywords = ["statue", "odin"]
+description = """
+The statue of Odin has been exquisitely crafted.  It is of white marble
+with black and gold veins.  It looks to be of magical origin."""
+
 [[rooms]]
 vnum = 1219
 name = "Valhalla"
@@ -437,6 +633,12 @@ that the heavens were saved for the gods personal pleasures."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 1215
+
+[[rooms.extra_descs]]
+keywords = ["clouds"]
+description = """
+The clouds are beautiful.  There are shades of gray, pink and purple swirled
+into the blue sky."""
 
 [[rooms]]
 vnum = 1221
@@ -491,6 +693,19 @@ you inquisitively, yet unafraid.
   vnum = 1201
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trunk"]
+description = """
+The tree trunk is covered in moss and ivy...and strongly resembles a
+throne or large seat."""
+
+[[rooms.extra_descs]]
+keywords = ["banner", "sign"]
+description = """
+The banner reads:
+
+                        Speak, Friend, and Enter"""
+
 [[rooms]]
 vnum = 1223
 name = "Entrance to Hall of Knights"
@@ -523,4 +738,3 @@ enough to seat 60 people, but oddly, you see no chairs."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 1223
-
