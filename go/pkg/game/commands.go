@@ -2877,9 +2877,11 @@ func (d *CommandDispatcher) cmdCompare(ch *types.Character, args string) {
 
 	var obj2 *types.Object
 	if arg2 == "" {
-		// Compare to equipped item of same type
+		// Compare to the equipped item of the same type worn in the same slot
+		// (shared wear flag other than take), as ROM's do_compare does.
+		slots := obj1.WearFlags &^ types.WearTake
 		for _, equipped := range ch.Equipment {
-			if equipped != nil && equipped.ItemType == obj1.ItemType {
+			if equipped != nil && equipped.ItemType == obj1.ItemType && equipped.WearFlags&slots != 0 {
 				obj2 = equipped
 				break
 			}
