@@ -7,6 +7,7 @@ import (
 	"strings"
 	"unicode"
 
+	"rotmud/pkg/game"
 	"rotmud/pkg/help"
 	"rotmud/pkg/persistence"
 	"rotmud/pkg/types"
@@ -677,6 +678,8 @@ func (h *LoginHandler) initializeNewCharacter(ch *types.Character) {
 	for i := 0; i < 4; i++ {
 		ch.Armor[i] = 100
 	}
+
+	ch.Prompt = game.DefaultPrompt
 
 	// Set base hitroll/damroll based on class
 	// Warriors get better base combat stats
