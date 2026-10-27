@@ -129,6 +129,15 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Error("expected room 3719 east door to start locked")
 		}
 
+		// Mob wealth restored from ROT: the blob carries nothing, the
+		// aggressive monster 10 copper (purse 5-15).
+		if blob := world.GetMobTemplate(3701); blob == nil || mobCoinDrop(blob) != 0 {
+			t.Error("expected the blob (3701) to carry no coins")
+		}
+		if m := world.GetMobTemplate(3704); m == nil || m.Gold == nil || *m.Gold != 10 {
+			t.Error("expected the aggressive monster (3704) to have wealth 10")
+		}
+
 		// Weapons carry their class and damage type (restored from ROT area files)
 		dagger := world.GetObjTemplate(3701)
 		if dagger == nil || dagger.Weapon == nil {

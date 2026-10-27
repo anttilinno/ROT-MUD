@@ -8,6 +8,7 @@ The Knight is standing here, smiling at you. He is dressed all in
 white, blue and silver. He looks VERY strong, as he stands here, ready to
 help the innocent."""
 level = 57
+gold = 0
 sex = "male"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["detect_invis"]
@@ -31,6 +32,7 @@ short_desc = "the Greater God John"
 long_desc = "The Greater God John is on the phone lambasting a real estate agent for mispelling his name."
 description = "Boy, is he upset!"
 level = 1
+gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0

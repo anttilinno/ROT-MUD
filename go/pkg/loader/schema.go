@@ -138,7 +138,7 @@ type MobileData struct {
 	DamageType  string    `toml:"damage_type"`
 	AC          [4]int    `toml:"ac"`
 	Hitroll     int       `toml:"hitroll"`
-	Gold        int       `toml:"gold"`
+	Gold        *int      `toml:"gold"` // wealth in copper; nil = level-based fallback
 	StartPos    string    `toml:"start_pos"`
 	DefaultPos  string    `toml:"default_pos"`
 	Special     string    `toml:"special"` // Special behavior function name (e.g. "spec_cast_mage")

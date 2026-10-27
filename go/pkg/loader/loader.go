@@ -13,33 +13,19 @@ import (
 
 // mobCoinDrop computes the copper-piece purse a mob carries.
 //
-//	If the TOML 'gold' field is set, treat its number as copper (historical
-//	"gold" data is now reinterpreted under the new currency model) and
-//	randomise ±50%.
+//	The TOML 'gold' field is the mob's wealth in copper, restored from the
+//	ROT area files (ROT counted it in silver; reading it as copper keeps
+//	purses small). 0 means the mob carries nothing. The purse is the wealth
+//	randomised ±50%.
 //
-//	If unset (the common case — most legacy mob files have no gold field),
-//	fall back to a level-scaled curve: lv * 10 copper, then randomise ±50%.
-//	Linear scaling keeps the medieval feel intact at endgame; most player
-//	income should come from looted gear sold to shops, not mob purses.
-//
-//	Casters (ActMage / ActCleric) carry 25% more, plain warriors 33% less
-//	(common bandits, not wealthy).
-//
-//	Indicative median purses:
-//	  L1   ~1c       (a single copper)
-//	  L10  ~1s       (a coin or two)
-//	  L20  ~2s       (half a day's wage)
-//	  L50  ~5s       (a respectable purse)
-//	  L100 ~1g       (a heroic haul)
+//	Mobs with no 'gold' field (new content) fall back to level × 10 copper,
+//	casters 25% more, plain warriors 33% less.
 func mobCoinDrop(tmpl *MobileData) int64 {
 	var base int64
-	if tmpl.Gold > 0 {
-		base = int64(tmpl.Gold)
+	if tmpl.Gold != nil {
+		base = int64(*tmpl.Gold)
 	} else {
 		base = int64(tmpl.Level) * 10
-	}
-	// Class adjustments — only when using the level-scaled fallback.
-	if tmpl.Gold == 0 {
 		for _, f := range tmpl.ActFlags {
 			switch strings.ToLower(f) {
 			case "mage", "cleric":

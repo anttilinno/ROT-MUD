@@ -7,6 +7,7 @@ description = """
 Brown bones with tufts of clothing still hanging from them.  This
 skeleton looks very mindless but still dangerous ..."""
 level = 1
+gold = 0
 sex = "male"
 act_flags = ["npc", "aggressive"]
 alignment = 0
@@ -32,6 +33,7 @@ His body is totally white and slowly rotting away.  Each Zombie looks
 quite different from the next because they were, of course, once alive and
 human."""
 level = 8
+gold = 2
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -57,6 +59,7 @@ description = """
 The ghoul no longer resembles the adventurer he once was.  Nonetheless
 he looks like he hasn't forgot his fighting skills."""
 level = 12
+gold = 7
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis"]
@@ -83,6 +86,7 @@ The wraith no longer has a material form.  He is wearing a tattered
 black robe which hides all but the darkness of his face and the glimmer
 in his eyes."""
 level = 23
+gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -108,6 +112,7 @@ description = """
 The guardian vampire looks quite EVIL.  Just by looking at him the hair on your
 arms raises. He looks mighty tough to be just a minor minion."""
 level = 55
+gold = 750
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -134,6 +139,7 @@ Obviously a goodly man, you feel closer to God just by gazing upon this man.
 Dressed in white, fine white hair, and a soft slightly wrinkled face ...
 this man has a sacred beauty.  You see a halo around his head."""
 level = 30
+gold = 20
 sex = "male"
 act_flags = ["npc", "sentinel", "undead", "cleric"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -162,6 +168,7 @@ sets of articulate limbs, body a sort of convoluted ellipsoid, covered with
 multitudes of very small antennae, where a head would ordinarily be.  These
 beings sometimes walk on all their legs and sometimes on the hind pair only."""
 level = 24
+gold = 32
 sex = "none"
 act_flags = ["npc", "aggressive"]
 alignment = 0
@@ -188,6 +195,7 @@ ugly prehensile paws, and a barbed tail that lashes disquietingly.  And worst
 of all, it makes absolutely no sound or speech and smiles not at all because
 it has no face, only a suggestive blackness where a face ought to be ..."""
 level = 19
+gold = 7
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["sneak", "hide"]
@@ -216,6 +224,7 @@ umbrella-like wings.  Their forms continually shift and change, twitching
 and writhing, so it is hard to look at them.  They speak in great harsh
 voices.  A hunting horror is HUGE, normally around 40 feet long."""
 level = 40
+gold = 100
 sex = "none"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -239,6 +248,7 @@ short_desc = "some cave weeds"
 long_desc = "Some weeds are creeping across the floor."
 description = "Just some unpleasant looking vine-like growths ..."
 level = 12
+gold = 4
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "sneak", "hide"]
@@ -264,6 +274,7 @@ What an ugly fiend! He is about 6'6'' and has mostly greenish skin with
 bright red hair. Half his face is burnt off and he has a perpetual smile.
 He is called up from his service in hell in order to aid the Undying One."""
 level = 40
+gold = 111
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis"]
@@ -292,6 +303,7 @@ small room.  It has a pair of tremendous claws that it uses to rip and tear.
 It has dog-like face except ... different.  Bright glowing eyes and a grimace
 lead you to believe that he knew that you were coming."""
 level = 33
+gold = 78
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
@@ -322,6 +334,7 @@ softly into the air:
     anyone that can hear. The peace of the grave
     calls me but I am blocked from its quiet."""
 level = 39
+gold = 2
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -346,6 +359,7 @@ long_desc = "A rock slug is slowly creeping along, leaving a slime trail behind 
 description = """
 It is a large brownish slug.  Got any salt?  Didn't think so ..."""
 level = 5
+gold = 0
 sex = "none"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -378,6 +392,7 @@ Would you like hot or cold tea?  Yes the weather is ...'
 
 And on he babbles ..."""
 level = 9
+gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["blind"]
@@ -406,6 +421,7 @@ she took a nasty fall.  Her one damaged eye hangs on its own.  She smiles
 insanely at you thru a broken jaw and missing teeth.  One hand of hers is
 resting on the shoulder of the etcher ... her husband."""
 level = 13
+gold = 6
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["hide"]
@@ -430,6 +446,7 @@ long_desc = "A half-decomposed body is lying in the corner here."
 description = """
 YUK! It's ugly, disgusting ... it smells ... it also moves a bit!"""
 level = 11
+gold = 4
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
 alignment = 0

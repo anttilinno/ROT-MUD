@@ -5,6 +5,7 @@ short_desc = "a bat"
 long_desc = "A bat flaps wildly at you!"
 description = "Your typical smelly, blind flying mammal."
 level = 10
+gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_hidden", "flying", "dark_vision"]
@@ -27,6 +28,7 @@ short_desc = "a templar page"
 long_desc = "A templar page in training is here looking mildly confused."
 description = "He has lost his family and everything of his former life."
 level = 14
+gold = 30
 sex = "male"
 act_flags = ["npc", "wimpy"]
 alignment = 0
@@ -52,6 +54,7 @@ He just hopes he doesn't get killed in the process.  He carries only
 essential exploration gear; if there IS anything down here, he
 probably won't last long."""
 level = 15
+gold = 40
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy"]
 affected_by = ["detect_hidden"]
@@ -76,6 +79,7 @@ description = """
 Working for an evil necromancer isn't the greatest thing in the world.
 They seem like little more than zombie servants themselves."""
 level = 18
+gold = 5
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
 alignment = 0
@@ -97,6 +101,7 @@ short_desc = "some mist"
 long_desc = "Some mist swirls about you here ... it seems ALIVE!"
 description = "In fact it IS alive in a magical sort of sense."
 level = 19
+gold = 10
 sex = "none"
 act_flags = ["npc"]
 affected_by = ["sneak", "pass_door"]
@@ -118,6 +123,7 @@ keywords = ["oldstyle"]
 short_desc = "It"
 long_desc = ""
 level = 19
+gold = 50
 sex = "none"
 act_flags = ["npc", "aggressive"]
 alignment = 0
@@ -141,6 +147,7 @@ description = """
 Even though he has died in the physical sense of the word, the battle
 continues for him in his charmed state."""
 level = 21
+gold = 55
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
 alignment = 0
@@ -168,6 +175,7 @@ A templar peers closely at you.
 A templar tells you, "You are an evil force trying to spread your ways!".
 A templar tells you, "You must die for your sin!"."""
 level = 24
+gold = 25
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
 alignment = 0
@@ -190,6 +198,7 @@ long_desc = "A mysterious ghostly wraith forms before your eyes."
 description = """
 Hard to tell much about the mysterious form even upon further inspection."""
 level = 23
+gold = 30
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
 affected_by = ["detect_hidden", "pass_door"]
@@ -213,6 +222,7 @@ short_desc = "the templar officer"
 long_desc = "A templar officer keeps an eye on things here."
 description = "A templar officer tells you \"Better move along evil one!\""
 level = 25
+gold = 30
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis"]
@@ -235,6 +245,7 @@ short_desc = "zombie"
 long_desc = "A blank-faced zombie mage joins the battle."
 description = "He seems to lack real interest in what he is doing."
 level = 25
+gold = 27
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "mage"]
 alignment = 0
@@ -257,6 +268,7 @@ short_desc = "the shadow"
 long_desc = "Eerie shadows fill the room."
 description = "Looks vaguely you-shaped."
 level = 28
+gold = 40
 sex = "none"
 act_flags = ["npc"]
 affected_by = ["detect_hidden", "sneak", "pass_door"]
@@ -279,6 +291,7 @@ short_desc = "The vampire"
 long_desc = "A bat flaps wildly at you!"
 description = "A rather LARGE \"bat\" ..."
 level = 29
+gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_hidden", "flying", "dark_vision"]
@@ -304,6 +317,7 @@ description = """
 Though he seems absorbed in his work, you'd bet he'd take the time out
 to kill you to get a fresh corpse!"""
 level = 29
+gold = 55
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -328,6 +342,7 @@ description = """
 A slight, tolerant smile comes briefly across his face.  In the blink
 of an eye he seems stern again."""
 level = 32
+gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -351,6 +366,7 @@ long_desc = "The light shines off a beautiful but dangerous dragon lurking here.
 description = """
 The spray of colored light bouncing off his scales is almost blinding."""
 level = 39
+gold = 1500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -374,6 +390,7 @@ short_desc = "The DarkenBeast"
 long_desc = "You hear and smell the presence of the darkenbeast."
 description = "You see nothing more than the sense of darkness and evil."
 level = 47
+gold = 1000
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0

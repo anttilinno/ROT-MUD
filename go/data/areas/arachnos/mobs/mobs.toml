@@ -7,6 +7,7 @@ description = """
 He looks freshly hatched and sprightly.  His young fangs are just
 growing in as of late."""
 level = 9
+gold = 5
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area"]
 affected_by = ["detect_invis"]
@@ -29,6 +30,7 @@ short_desc = "Yevaud"
 long_desc = "Yevaud the Usurper of Midgaard is here, grinning evilly at you."
 description = "Old, scaly, but still with a lot of bite in him left."
 level = 48
+gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -52,6 +54,7 @@ short_desc = "the Wolf Spider"
 long_desc = "The Wolf Spider is here, licking its bloody fangs."
 description = "The Wolf Spider is hairy, very hairy."
 level = 11
+gold = 62
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -73,6 +76,7 @@ short_desc = "the orc"
 long_desc = "The orc is stuck in the web and he can't get out."
 description = "You notice an evil look in his eyes."
 level = 9
+gold = 5
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
@@ -95,6 +99,7 @@ short_desc = "the Queen Wasp"
 long_desc = "The Queen Wasp is here, thinking that you would make a tasty offering\nto her master."
 description = "You notice a glazed look in her eyes."
 level = 24
+gold = 75
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -116,6 +121,7 @@ short_desc = "the drone spider"
 long_desc = "The drone spider walks around doing her master's bidding."
 description = "An ordinary drone spider."
 level = 12
+gold = 10
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -137,6 +143,7 @@ short_desc = "the ethereal spider"
 long_desc = "The ethereal spider strides here, traveling to different worlds."
 description = "She winks in and out."
 level = 19
+gold = 62
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -159,6 +166,7 @@ long_desc = "The slave works here relentlessly."
 description = """
 The slave does not mind you, but will fight like a warrior if attacked."""
 level = 16
+gold = 25
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
 alignment = 0
@@ -182,6 +190,7 @@ description = """
 Demoniac in nature, but more mischievous.  He twiddles his thumbs
 and creates a magical treasure!"""
 level = 19
+gold = 50
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy"]
 affected_by = ["detect_invis", "sneak"]
@@ -204,6 +213,7 @@ short_desc = "the Bird Spider"
 long_desc = "The Bird Spider snaps its powerful jaws."
 description = "The Bird Spider has very powerful jaws."
 level = 28
+gold = 87
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -227,6 +237,7 @@ description = """
 A dishevelled veteran warrior in disguise is what he is, but he
 means well."""
 level = 14
+gold = 37
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["detect_invis"]
@@ -249,6 +260,7 @@ short_desc = "the Donjonkeeper"
 long_desc = "The Donjonkeeper eyes you and wonders how pure your soul is."
 description = "He delves deeper into you as you stare at him."
 level = 50
+gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["detect_invis"]
@@ -271,6 +283,7 @@ short_desc = "The guardian"
 long_desc = "The guardian is obviously not doing his job."
 description = "He looks like a lazy bum who sleeps half the time."
 level = 34
+gold = 80
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["sneak"]
@@ -297,6 +310,7 @@ into being one of her many slaves.  She does not possess the venomous
 fangs of normal spiders, but then, as you realize, she does not need
 them."""
 level = 51
+gold = 500
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
@@ -322,6 +336,7 @@ description = """
 She is the last bastion of good in this realm.  Her mission is to
 someday free the slaves of the Empress."""
 level = 51
+gold = 750
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["detect_invis"]
@@ -344,6 +359,7 @@ short_desc = "the young dragon wormkin"
 long_desc = "A wormkin with no teeth plays here."
 description = "Rather small, you almost feel sad in killing it."
 level = 19
+gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -368,6 +384,7 @@ long_desc = "A wormkin that has grown a bit stares at you inquisitively."
 description = """
 A medium-sized dragon--seems it hasn't killed anything yet by itself."""
 level = 25
+gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -394,6 +411,7 @@ This disgusting creature is at the size of a human crawling on all four.  It
 has eight hairy legs that gives it a tremendous speed on almost any surface and
 sharp poisonous fangs to paralyze or kill its prey."""
 level = 15
+gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area"]
 alignment = 0
@@ -419,6 +437,7 @@ This disgusting creature is at the size of a small elephant.  It has eight
 huge, hairy legs that would give it a tremendous speed on almost any surface
 if it wasn't so immensely fat.  Its large, bulbous eyes stare back at you."""
 level = 30
+gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_invis"]

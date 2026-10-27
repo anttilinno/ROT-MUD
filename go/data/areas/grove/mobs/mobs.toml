@@ -8,6 +8,7 @@ He is a very old man, dressed in an old robe; but from the glint in his
 clear blue eyes you can see that He is aware of the world, and wise to its
 traps and pitfalls."""
 level = 40
+gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
 affected_by = ["detect_invis"]
@@ -34,6 +35,7 @@ She is a very old woman, dressed in an old gown; but from the glint in her
 clear blue eyes you can see that She is aware of the world, and wise to its
 traps and pitfalls."""
 level = 40
+gold = 2
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
 affected_by = ["detect_invis"]
@@ -59,6 +61,7 @@ description = """
 He looks ageless, as do all druids.  His grey beard contrasts strongly with
 his lack of wrinkles."""
 level = 26
+gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
 alignment = 0
@@ -82,6 +85,7 @@ long_desc = "An elder druidess stands here, watching the local fauna and feeding
 description = """
 She looks ageless, as do all druids.  She smiles a beautiful smile at you."""
 level = 25
+gold = 2
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
 alignment = 0
@@ -106,6 +110,7 @@ description = """
 This peaceful creature looks at you with big dark eyes.  Her nose twitches as
 she sniffs at you, but she goes back to chewing some grass."""
 level = 10
+gold = 0
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy"]
 alignment = 0
@@ -129,6 +134,7 @@ description = """
 The deer looks angered at your intrusion.  He butts his head against you, 
 albeit ineffectively."""
 level = 12
+gold = 0
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy"]
 alignment = 0
@@ -151,6 +157,7 @@ long_desc = "A large deer stag is here, protecting his territory."
 description = """
 He eyes you with contained anger.  You'd better leave him alone!"""
 level = 15
+gold = 0
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
 alignment = 0
@@ -173,6 +180,7 @@ long_desc = "A small bunny is here, poking from bush to bush."
 description = """
 This bunny looks so adorable, you wished you had one just like this!"""
 level = 3
+gold = 0
 sex = "none"
 act_flags = ["npc", "stay_area", "wimpy"]
 alignment = 0
@@ -194,6 +202,7 @@ short_desc = "a harmless snake"
 long_desc = "A small snake slithers between the grass."
 description = "Upon careful inspection, you are sure it is NOT a cobra!"
 level = 8
+gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area", "wimpy"]
 affected_by = ["sneak"]
@@ -218,6 +227,7 @@ long_desc = "A druid is here in meditation."
 description = """
 He doesn't like you bothering him, but is too polite to ask you to leave."""
 level = 20
+gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
 affected_by = ["detect_invis"]
@@ -242,6 +252,7 @@ long_desc = "A druidess is here, peering at you."
 description = """
 She wonders why you are staring at her, and how you got in here."""
 level = 19
+gold = 2
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
 affected_by = ["detect_invis"]

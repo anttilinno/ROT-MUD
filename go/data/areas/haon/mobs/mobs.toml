@@ -8,6 +8,7 @@ He is six feet tall and looks quite strong, muscles bulging under his heavy,
 chequered shirt.  His features are worn with hard work and his expression is
 one of a peaceful man leading a simple life."""
 level = 12
+gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area"]
 alignment = 0
@@ -31,6 +32,7 @@ description = """
 The bear is a big, brown, furry animal with very large claws and very sharp
 teeth.  It doesn't resemble those cute little thingies from toy shops at all."""
 level = 16
+gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -55,6 +57,7 @@ This small, furry creature with long ears and big feet has been attacked by
 the dreaded rabbit rabies, a horrible disease that turns helpless and innocent
 rabbits into ferocious and bloodthirsty monsters."""
 level = 5
+gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -78,6 +81,7 @@ description = """
 She is a graceful creature on long, slender legs, and with large, brown eyes
 looking back at you with an air of watchful interest."""
 level = 3
+gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "pet"]
 affected_by = ["detect_invis"]
@@ -101,6 +105,7 @@ long_desc = "A brown fox is here, looking for some rabbits to chew up."
 description = """
 It is a large fox with beautiful, red-brown fur and a long, thick brush."""
 level = 4
+gold = 0
 sex = "none"
 act_flags = ["npc", "stay_area"]
 affected_by = ["dark_vision"]
@@ -125,6 +130,7 @@ description = """
 It is an exceptionally large wolf with thick, black fur.  Saliva is dripping
 quickly from its long, white fangs.  It looks quite dangerous and very angry."""
 level = 9
+gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -148,6 +154,7 @@ description = """
 It is an exceptionally large wolf with thick, black fur.  Saliva is dripping
 quickly from its long, white fangs.  It looks quite dangerous and very angry."""
 level = 9
+gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0
@@ -170,6 +177,7 @@ long_desc = "A large, grey wolf is here, glaring hungrily at you."
 description = """
 The large, grey wolf eyes you with interest while licking its lips."""
 level = 5
+gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
@@ -193,6 +201,7 @@ long_desc = "A large, black wolf is here, glaring hungrily at you."
 description = """
 The large, black wolf eyes you with interest while licking its lips."""
 level = 6
+gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
@@ -219,6 +228,7 @@ colossal body.  Numerous holes in its heavy wings tell of many fights as does
 the nicks in the horns on its head.  It smells as disgusting as only dragons
 do."""
 level = 49
+gold = 2500
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -245,6 +255,7 @@ This little fellow is only three foot tall with wild matted brown hair and long
 tangled brown beard.  He wears ragged brown and green clothing and looks as if
 he is having great fun."""
 level = 20
+gold = 50
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy"]
 affected_by = ["detect_invis", "sneak"]
@@ -269,6 +280,7 @@ description = """
 The druid looks quite old.  You would think him venerable, but you know
 he would be a tough foe."""
 level = 34
+gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "cleric"]
 affected_by = ["detect_invis"]

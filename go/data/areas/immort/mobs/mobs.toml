@@ -9,6 +9,7 @@ his unsleeping gaze over the Rainbow bridge.  His trusty Gjallor-horn never
 leaves his side, and shall remain unwinded until the dread ship Naglfar sails
 towards Valhalla on the dawn of Ragnarok."""
 level = 107
+gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden", "infrared", "dark_vision"]
@@ -34,6 +35,7 @@ Snowy white fur gleams softly in the light.  You feel the urge to pet
 it.. but as you reach out your hand, the slitted green eyes snap open
 and the cat hisses warningly."""
 level = 72
+gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["sneak", "dark_vision"]

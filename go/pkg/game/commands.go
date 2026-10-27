@@ -5523,7 +5523,6 @@ func (d *CommandDispatcher) cmdLoad(ch *types.Character, args string) {
 			MaxMana:   mobTemplate.ManaDice.Number*mobTemplate.ManaDice.Size + mobTemplate.ManaDice.Bonus,
 			Move:      100,
 			MaxMove:   100,
-			Coin:      int64(mobTemplate.Gold),
 			Alignment: mobTemplate.Alignment,
 			Position:  types.PosStanding,
 			InRoom:    ch.InRoom,

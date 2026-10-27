@@ -7,6 +7,7 @@ description = """
 It's a cute little multi-colored dragon...about 2 foot long.
 It gracefully dances around your head."""
 level = 9
+gold = 1
 sex = "none"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_magic", "infrared", "flying"]
@@ -32,6 +33,7 @@ description = """
 Golden maned and black all over.  It's quite a beautiful creature if not
 for the fact it is hungry and is attacking you!"""
 level = 16
+gold = 25
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 alignment = 0

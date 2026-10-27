@@ -10,6 +10,7 @@ commanding rowdy pirate crews.  He has a tough, weather-worn face and
 a stern complextion.  He must have been BAD to get into such a command
 so don't mess with him!"""
 level = 60
+gold = 4922
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -38,6 +39,7 @@ those maps.  Yet, he still seems ready to react to anything quickly
 and defend himself if necessary.  He tells you to leave his equipment
 alone!"""
 level = 50
+gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_evil", "detect_invis", "detect_magic", "infrared"]
@@ -65,6 +67,7 @@ the captain all day and is now relieved to have his break.  He seems
 to have an air of command around him which must explain why he got
 his position on the ship as a First Mate."""
 level = 50
+gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -92,6 +95,7 @@ constantly keeps an eye on the big cauldron in the center of the room.
 It looks like he mixes whatever leftovers he has into the cauldron and
 calls it food.  For some strange reason, you loose your appetite."""
 level = 45
+gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "infrared"]
@@ -117,6 +121,7 @@ You barely notice him in the dim light.  He is very lithe and subtle in
 his movements.  He looks trained to kill in a single blow, so don't get
 on his bad side!"""
 level = 55
+gold = 2000
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "hide"]
@@ -142,6 +147,7 @@ The pirate looks quite at peace.  The harsh lines of trouble are gone
 from his face, taken away by the sandman.  I bet he would be VERY
 upset if you woke him up, so step lightly."""
 level = 38
+gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared", "sleep"]
@@ -167,6 +173,7 @@ The pirate looks quite frustrated.  He doesn't seem to be going anywhere
 in his argument with his parrot.  You wonder who has higher intellect ...
 the bird or the pirate?"""
 level = 45
+gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
 affected_by = ["infrared"]
@@ -191,6 +198,7 @@ description = """
 His face is red and his ears almost seem to be blowing steam!  What did
 you do to make him so mad?"""
 level = 45
+gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
@@ -216,6 +224,7 @@ He sways left and right as he walks.  The pirate is constantly plugging
 his mouth with a bottle of beer.  As he swears, drool comes spitting
 out of his mouth. Yuk!"""
 level = 45
+gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
@@ -240,6 +249,7 @@ description = """
 He has been standing out in the sun for hours doing nothing but getting
 a really bad tan.  He sure could use a friend to talk to."""
 level = 47
+gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -264,6 +274,7 @@ description = """
 He looks like the quiet type.  But don't let looks decieve you, he could
 be very deadly in combat."""
 level = 47
+gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -289,6 +300,7 @@ He looks like a very hardworking man.  His energy seems inexhaustible.
 When you try to talk to him, he gruffly says,"Work! Work! Work! That's
 all we do everyday! WORK!""""
 level = 35
+gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
 affected_by = ["infrared"]
@@ -312,6 +324,7 @@ long_desc = "The sailor is standing here enjoying the sea breeze."
 description = """
 He looks like a happy-go-lucky man who takes things as they come."""
 level = 35
+gold = 200
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
 affected_by = ["infrared"]
@@ -335,6 +348,7 @@ long_desc = "A seafaring rat is scurrying around scavenging for food."
 description = """
 This is the BIGGEST rat you've ever seen!  He has razor sharp teeth!"""
 level = 35
+gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
 affected_by = ["infrared", "plague"]
@@ -358,6 +372,7 @@ long_desc = "A lookout has been posted here to search for signs of danger."
 description = """
 He peers intently in all directions and keeps an eye on the weather."""
 level = 50
+gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
@@ -381,6 +396,7 @@ long_desc = "She sells seashells by the seashore."
 description = """
 She is a pretty young girl standing behind the counter watching the shop."""
 level = 60
+gold = 3473
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -407,6 +423,7 @@ agility.  He must keep fit by practicing his karate.  He loves to work
 with bonsai in the garden.  Mr. Myagi is a warm friendly person, so
 if you have any troubles, tell him and he will help you."""
 level = 60
+gold = 3927
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden"]

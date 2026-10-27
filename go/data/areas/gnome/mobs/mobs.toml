@@ -7,6 +7,7 @@ description = """
 The little tyke looks so innocent playing with his boomerang that you 
 just want to pick him up and hug him."""
 level = 6
+gold = 2
 sex = "male"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -30,6 +31,7 @@ description = """
 The woman is short and gnarled, but acts like a woman several times her beauty.
 She's starting to look pretty attractive to you ..."""
 level = 10
+gold = 25
 sex = "female"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -53,6 +55,7 @@ description = """
 This is a prime example of a gnome.  He looks short and weak, but at the
 same time an intelligent creature who could outsmart you."""
 level = 11
+gold = 22
 sex = "male"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -76,6 +79,7 @@ description = """
 You see a gnome who is lost deep into some invention that he is about
 to make.  His hair is white, but he looks fairly strong."""
 level = 13
+gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "mage"]
 alignment = 0
@@ -100,6 +104,7 @@ description = """
 This is a well trained gnome.  He might not have a lot of strength but
 he makes up for it with his weapons skill."""
 level = 15
+gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -123,6 +128,7 @@ description = """
 The Chief looks like he could whap you hard.  He looks not only powerful
 but wise and resourceful.  You better not mess with him."""
 level = 30
+gold = 400
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
 alignment = 0
@@ -147,6 +153,7 @@ description = """
 The small troll is a short and stocky beast with a human-like face
 but with the eyes and fangs of a wild beast."""
 level = 16
+gold = 40
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_hidden", "infrared"]
@@ -169,6 +176,7 @@ short_desc = "a field mouse"
 long_desc = "A small mouse runs across your foot."
 description = "The Mouse is a cute little creature."
 level = 1
+gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "pet"]
 alignment = 0
@@ -190,6 +198,7 @@ short_desc = "a rat"
 long_desc = "A small rat shrieks and runs around."
 description = "The rat is a little evil creature that deserves death."
 level = 4
+gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -212,6 +221,7 @@ short_desc = "a large rat"
 long_desc = "A large rat runs up to you and nibbles on your boots."
 description = "You have the urge to kill this vile creature."
 level = 7
+gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -234,6 +244,7 @@ short_desc = "a giant rat"
 long_desc = "A giant rat growls at you and prepares to attack."
 description = "This rat has grown up to be the size of an average dog."
 level = 11
+gold = 1
 sex = "male"
 act_flags = ["npc", "scavenger"]
 alignment = 0
@@ -258,6 +269,7 @@ description = """
 You see before you a huge mass of living flesh.  You cringe in fear as
 he lifts his powerful arm to bludgeon you."""
 level = 28
+gold = 450
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_hidden", "infrared"]
@@ -281,6 +293,7 @@ long_desc = "A black bat hangs from the ceiling."
 description = """
 The bat is a grotesque little creature with large wings and fangs."""
 level = 10
+gold = 0
 sex = "none"
 act_flags = ["npc"]
 affected_by = ["flying", "dark_vision"]
@@ -306,6 +319,7 @@ description = """
 This is a creature which has passed away long ago.  His body has been
 pulled out of its resting place by some evil force."""
 level = 13
+gold = 34
 sex = "none"
 act_flags = ["npc"]
 alignment = 0
@@ -330,6 +344,7 @@ description = """
 You see a huge flame which resembles the shape of a bat.  The creature
 hangs from the ceiling and bites at you."""
 level = 24
+gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "flying", "dark_vision"]
@@ -355,6 +370,7 @@ description = """
 This is an extra large, extra ugly goblin like creature.  He grins evilly
 as he attempts to brain you."""
 level = 11
+gold = 37
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -378,6 +394,7 @@ description = """
 This is just a low life hobgoblin, who couldn't make it to the ranks
 of the elite guards.  He looks pissed."""
 level = 6
+gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 alignment = 0
@@ -401,6 +418,7 @@ description = """
 This is one of the elite hobgoblin guards.  He stands tall for his short
 stature.  He grins a toothy grin as he prepares to attack."""
 level = 13
+gold = 30
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0
@@ -424,6 +442,7 @@ description = """
 The king is a silly looking hobgoblin whose muscles bulge out of his robes,
 destroying the sophisticated effect he was trying to create."""
 level = 23
+gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 alignment = 0
@@ -446,6 +465,7 @@ short_desc = "a hobgoblin miner"
 long_desc = "A hobgoblin miner stands here looking for gold."
 description = "The miner is totally covered in dust."
 level = 10
+gold = 35
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0
@@ -469,6 +489,7 @@ description = """
 The hobgoblin treasurer is an old goblin with glasses.  It appears that he
 can only see a couple feet in front of him."""
 level = 20
+gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0
@@ -490,6 +511,7 @@ short_desc = "a gnome prisoner"
 long_desc = "A gnome prisoner is here resting in the straw."
 description = "The prisoner is just barely alive."
 level = 6
+gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0
@@ -511,6 +533,7 @@ short_desc = "a human prisoner"
 long_desc = "A human prisoner is here resting in the straw."
 description = "The prisoner is just barely alive."
 level = 6
+gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0
@@ -534,6 +557,7 @@ description = """
 The hermit crab is about 5 feet high and looks mad that you had the nerve
 to wake it up."""
 level = 10
+gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 alignment = 0
@@ -557,6 +581,7 @@ description = """
 The cook is a dirty and fat hobgoblin.  He burps as he stirs up something
 in a pot."""
 level = 14
+gold = 130
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 alignment = 0

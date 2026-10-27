@@ -5,6 +5,7 @@ short_desc = "the keeper"
 long_desc = "The keeper of the Morris equipment is here."
 description = "Her job is to set the level for this equipment."
 level = 15
+gold = 5
 sex = "female"
 act_flags = ["npc"]
 alignment = 0

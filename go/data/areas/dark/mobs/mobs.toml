@@ -7,6 +7,7 @@ description = """
 This BIG monkey must weigh at least 200 pounds. It is covered with black
 fur and has the ugliest teeth you have ever seen."""
 level = 10
+gold = 0
 sex = "female"
 act_flags = ["npc", "aggressive"]
 alignment = 0
@@ -30,6 +31,7 @@ description = """
 This Elf does not appear to be very prosperous. His violet eyes look you
 over as he tries to decide if you are a client or a salesman."""
 level = 12
+gold = 300000
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["infrared"]
@@ -53,6 +55,7 @@ long_desc = "The Dwarven Merchant greets you, \"Welcome!\""
 description = """
 This merchant has the Eye of the Tiger. "Welcome my friend," he says."""
 level = 12
+gold = 300000
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["infrared"]
@@ -77,6 +80,7 @@ description = """
 This man is only four feet tall but has a powerful body.  His arms reach
 almost to his calves."""
 level = 12
+gold = 300000
 sex = "either"
 act_flags = ["npc", "stay_area", "wimpy"]
 alignment = 0
@@ -99,6 +103,7 @@ long_desc = "A large Human Merchant stands ready to sell you."
 description = """
 Many of the merchants you have seen throughout your life resemble this man."""
 level = 5
+gold = 300000
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
 alignment = 0
@@ -122,6 +127,7 @@ description = """
 This adventurer is a largish, oafish, boy with the largest ego you've ever
 seen.  His ego is writing checks his character will never be able to cash."""
 level = 7
+gold = 140
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy", "thief"]
 alignment = 0
@@ -145,6 +151,7 @@ description = """
 This soldier has an alert look about him.  With his pointed beard and
 sharp sword the security he provides comes mostly from his presence."""
 level = 15
+gold = 2200
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -168,6 +175,7 @@ description = """
 This soldier greets you with a bared blade. I don't think you'll be
 sneaking up on him."""
 level = 15
+gold = 1530
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -190,6 +198,7 @@ long_desc = "This Sleepy Soldier doesn't see you."
 description = """
 Without looking in his eye you have no idea how tough he would be."""
 level = 17
+gold = 2502
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0
@@ -213,6 +222,7 @@ description = """
 This female Watcher is one of those cultist who protect the rest of the
 world from those they determine are evil."""
 level = 20
+gold = 3200
 sex = "female"
 act_flags = ["npc", "sentinel", "warrior"]
 affected_by = ["infrared"]
@@ -236,6 +246,7 @@ short_desc = "the fat pig"
 long_desc = "A fat pig is rooting around for food."
 description = "This fat pig is very hungry. He eats just about ANYTHING."
 level = 5
+gold = 35
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 affected_by = ["detect_good"]
@@ -260,6 +271,7 @@ description = """
 The dog looks back at you.  After a few moments it sits up..
 puts a cigar in it's mouth, lights it, and asks, "So..what's up bub?""""
 level = 7
+gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["detect_hidden"]
@@ -284,6 +296,7 @@ description = """
 This chicken is so skinny it WOULDN'T provide enough meat for a soup.
         ************ IT ESCAPE FROM KFC BAR !!! *************"""
 level = 35
+gold = 5000
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area", "practice", "cleric", "mage", "warrior"]
 affected_by = ["flying"]
@@ -308,6 +321,7 @@ description = """
 This guy looks like an advertisement for a wilderness clothing company.
 >From his buckskins to his fur cap he fits the part."""
 level = 5
+gold = 181
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
 alignment = 0
@@ -331,6 +345,7 @@ description = """
 She appears to be distracted by some inner thought. Although she seems
 to be in good health, her eyes are puffy and red."""
 level = 8
+gold = 223
 sex = "female"
 act_flags = ["npc", "scavenger", "thief"]
 alignment = 0
@@ -353,6 +368,7 @@ long_desc = "An Elven Man is here, looking for something."
 description = """
 The Elven Man looks at you intently before continuing on his way."""
 level = 13
+gold = 513
 sex = "male"
 act_flags = ["npc", "sentinel", "practice", "mage"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "dark_vision"]
@@ -375,6 +391,7 @@ short_desc = "the Elven Woman"
 long_desc = "A beautiful Elven Woman paces back and forth before you."
 description = "Looking into her eyes causes you great fear."
 level = 16
+gold = 300
 sex = "female"
 act_flags = ["npc", "sentinel", "practice", "mage"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "dark_vision"]
@@ -397,6 +414,7 @@ short_desc = "the Dwarven Woman"
 long_desc = "The Dwarven Woman is smacking her fist in her hand."
 description = "Stand back!  She's about to blow!!!"
 level = 16
+gold = 122
 sex = "female"
 act_flags = ["npc", "sentinel", "practice", "warrior"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -419,6 +437,7 @@ short_desc = "the Dwarven Man"
 long_desc = "A large Dwarven Man walks by you."
 description = "He looks back at you, then dismisses you as unimportant."
 level = 19
+gold = 444
 sex = "male"
 act_flags = ["npc", "sentinel", "practice", "warrior"]
 affected_by = ["detect_invis", "detect_hidden"]
@@ -445,6 +464,7 @@ about 250 pounds his bite will be worse than you would think. He is lightly
 armed and armored, doesn't wear boots, and has claws and talons with which
 to fight."""
 level = 12
+gold = 123
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["infrared"]
