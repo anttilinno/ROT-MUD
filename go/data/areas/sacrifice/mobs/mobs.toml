@@ -23,6 +23,13 @@ alignment = 0
   size = 8
   bonus = 32
 
+  [mobiles.shop]
+  buy_types = ["light", "boat"]
+  profit_buy = 120
+  profit_sell = 90
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 13501
 keywords = ["sea", "serpent"]
@@ -47,4 +54,3 @@ special = "spec_breath_any"
   number = 2
   size = 8
   bonus = 5
-

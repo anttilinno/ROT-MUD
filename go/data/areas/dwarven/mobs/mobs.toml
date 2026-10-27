@@ -89,6 +89,13 @@ alignment = 0
   size = 7
   bonus = 11
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 150
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 6504
 keywords = ["oldstyle", "baker"]
@@ -110,6 +117,13 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 150
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 6505
@@ -402,4 +416,3 @@ alignment = 0
   number = 2
   size = 6
   bonus = 3
-

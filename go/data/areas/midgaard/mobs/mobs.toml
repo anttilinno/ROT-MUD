@@ -25,6 +25,13 @@ special = "spec_cast_mage"
   size = 8
   bonus = 32
 
+  [mobiles.shop]
+  buy_types = ["scroll", "wand", "staff", "potion"]
+  profit_buy = 105
+  profit_sell = 15
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3001
 keywords = ["baker"]
@@ -49,6 +56,13 @@ alignment = 0
   size = 8
   bonus = 20
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3002
 keywords = ["grocer"]
@@ -71,6 +85,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 20
+
+  [mobiles.shop]
+  buy_types = ["light", "treasure", "trash", "container", "food"]
+  profit_buy = 150
+  profit_sell = 40
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3003
@@ -95,6 +116,13 @@ alignment = 0
   size = 8
   bonus = 32
 
+  [mobiles.shop]
+  buy_types = ["weapon"]
+  profit_buy = 120
+  profit_sell = 40
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3004
 keywords = ["armourer", "armorer"]
@@ -118,6 +146,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 32
+
+  [mobiles.shop]
+  buy_types = ["armor"]
+  profit_buy = 100
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3005
@@ -166,6 +201,13 @@ alignment = 0
   size = 8
   bonus = 32
 
+  [mobiles.shop]
+  buy_types = ["boat"]
+  profit_buy = 120
+  profit_sell = 90
+  open_hour = 6
+  close_hour = 23
+
 [[mobiles]]
 vnum = 3007
 keywords = ["sailor"]
@@ -210,6 +252,13 @@ alignment = 0
   size = 8
   bonus = 20
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 100
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3009
 keywords = ["jeweller"]
@@ -232,6 +281,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 22
+
+  [mobiles.shop]
+  buy_types = ["treasure", "gem", "jewelry"]
+  profit_buy = 110
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3010
@@ -256,6 +312,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 20
+
+  [mobiles.shop]
+  buy_types = ["armor"]
+  profit_buy = 110
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3011
@@ -638,6 +701,13 @@ alignment = 0
   size = 8
   bonus = 18
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3041
 keywords = ["waiter"]
@@ -683,6 +753,13 @@ special = "spec_cast_mage"
   size = 8
   bonus = 18
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 100
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3043
 keywords = ["waiter"]
@@ -705,6 +782,13 @@ special = "spec_cast_cleric"
   size = 8
   bonus = 18
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3044
 keywords = ["waiter"]
@@ -726,6 +810,13 @@ alignment = 0
   size = 8
   bonus = 18
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 170
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3045
 keywords = ["waiter"]
@@ -746,6 +837,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 18
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 150
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3046
@@ -770,6 +868,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 18
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 100
+  profit_sell = 90
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3060
@@ -1023,6 +1128,13 @@ alignment = 0
   number = 10
   size = 10
   bonus = 10
+
+  [mobiles.shop]
+  buy_types = ["potion"]
+  profit_buy = 1000
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3071
@@ -1281,6 +1393,13 @@ special = "spec_cast_cleric"
   size = 8
   bonus = 12
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 90
+  open_hour = 6
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3120
 keywords = ["sexton"]
@@ -1537,6 +1656,13 @@ alignment = 0
   size = 8
   bonus = 10
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 100
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3160
 keywords = ["Melancholy"]
@@ -1562,6 +1688,13 @@ alignment = 0
   number = 5
   size = 6
   bonus = 20
+
+  [mobiles.shop]
+  buy_types = ["map"]
+  profit_buy = 100
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3161
@@ -1589,6 +1722,14 @@ alignment = 0
   number = 4
   size = 6
   bonus = 4
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 100
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 
 [[mobiles]]
 vnum = 3162
@@ -1861,6 +2002,13 @@ alignment = 0
   size = 8
   bonus = 18
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3172
 keywords = ["waitress"]
@@ -1881,6 +2029,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 18
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 120
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3173
@@ -1903,6 +2058,13 @@ special = "spec_cast_undead"
   number = 1
   size = 8
   bonus = 18
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 115
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3174
@@ -1972,6 +2134,13 @@ alignment = 0
   size = 8
   bonus = 32
 
+  [mobiles.shop]
+  buy_types = ["weapon", "armor"]
+  profit_buy = 100
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 3177
 keywords = ["mercy"]
@@ -1993,6 +2162,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 32
+
+  [mobiles.shop]
+  buy_types = ["armor", "potion", "clothing", "jewelry"]
+  profit_buy = 100
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 3178
@@ -2172,4 +2348,3 @@ special = "spec_guard"
   number = 2
   size = 4
   bonus = 4
-

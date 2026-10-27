@@ -222,11 +222,6 @@ func (l *AreaLoader) LoadAll() (*World, error) {
 	// Resolve room exits
 	l.resolveExits(world)
 
-	// Auto-register shops for any keeper mob that carries inv_only items.
-	// Historic .are conversions don't include [mobiles.shop] sections; this
-	// fills the gap so existing keeper inventories actually become shoppable.
-	autoRegisterShops(world)
-
 	// Price teleport items by the danger of their destination area.
 	priceTeleportItems(world)
 
@@ -268,83 +263,6 @@ func priceTeleportItems(world *World) {
 			avg = total / n
 		}
 		tmpl.Cost = base + avg*perLevel
-	}
-}
-
-// autoRegisterShops scans room mob_resets for inv_only equipment. Any mob
-// vnum that gets stocked this way and lacks an explicit [mobiles.shop]
-// section is registered with a default ShopData derived from the keeper's
-// name (smart per-keyword BuyTypes filter, otherwise general store).
-func autoRegisterShops(world *World) {
-	for _, room := range world.Rooms {
-		for _, mr := range room.MobResets {
-			if world.Shops[mr.Vnum] != nil {
-				continue // explicit shop config already present
-			}
-			hasInvOnly := false
-			for _, eq := range mr.Equips {
-				if eq.InvOnly {
-					hasInvOnly = true
-					break
-				}
-			}
-			if !hasInvOnly {
-				continue
-			}
-			tmpl := world.MobTemplates[mr.Vnum]
-			if tmpl == nil {
-				continue
-			}
-			shop := defaultShopFor(tmpl)
-			// A keeper stocked with maps also buys maps back.
-			for _, eq := range mr.Equips {
-				if ot := world.ObjTemplates[eq.Vnum]; ot != nil && ot.ItemType == "map" {
-					shop.BuyTypes = append(shop.BuyTypes, "map")
-					break
-				}
-			}
-			world.Shops[mr.Vnum] = shop
-		}
-	}
-}
-
-// defaultShopFor constructs a ShopData for a keeper mob based on the
-// keeper's short description and keywords. Margins favor the shop on both
-// sides (player buys at 120% cost, sells at 50% cost) — typical small-town
-// merchant exploiting adventurers' need for cash.
-func defaultShopFor(tmpl *MobileData) *ShopData {
-	desc := strings.ToLower(tmpl.ShortDesc + " " + strings.Join(tmpl.Keywords, " "))
-	contains := func(s string) bool { return strings.Contains(desc, s) }
-
-	var buy []string
-	switch {
-	case contains("alchem"), contains("apothec"), contains("potion"):
-		buy = []string{"potion", "pill"}
-	case contains("scribe"), contains("scroll"):
-		buy = []string{"scroll"}
-	case contains("wand"), contains("staff"), contains("mage"):
-		buy = []string{"wand", "staff", "scroll", "potion"}
-	case contains("smith"), contains("blacksmith"), contains("weaponsmith"):
-		buy = []string{"weapon", "armor"}
-	case contains("armorer"), contains("armourer"), contains("armor"):
-		buy = []string{"armor"}
-	case contains("baker"), contains("grocer"), contains("butcher"):
-		buy = []string{"food", "drink"}
-	case contains("tavern"), contains("barkeep"), contains("innkeeper"):
-		buy = []string{"drink", "food"}
-	case contains("light"), contains("lantern"), contains("candle"):
-		buy = []string{"light"}
-	default:
-		// General store — buys most adventurer detritus
-		buy = []string{"armor", "weapon", "treasure", "light", "food", "drink", "potion", "scroll", "wand", "staff", "clothing"}
-	}
-
-	return &ShopData{
-		BuyTypes:   buy,
-		ProfitBuy:  50,  // shop pays 50% of base cost when buying from player
-		ProfitSell: 120, // player pays 120% of base cost when buying from shop
-		OpenHour:   0,
-		CloseHour:  24,
 	}
 }
 

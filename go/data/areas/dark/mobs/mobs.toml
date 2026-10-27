@@ -47,6 +47,13 @@ alignment = 0
   size = 10
   bonus = 3
 
+  [mobiles.shop]
+  buy_types = ["treasure", "armor", "potion", "boat"]
+  profit_buy = 50
+  profit_sell = 150
+  open_hour = 8
+  close_hour = 22
+
 [[mobiles]]
 vnum = 14503
 keywords = ["merchant", "dwarven"]
@@ -70,6 +77,13 @@ alignment = 0
   number = 1
   size = 10
   bonus = 3
+
+  [mobiles.shop]
+  buy_types = ["drink", "light", "food"]
+  profit_buy = 50
+  profit_sell = 175
+  open_hour = 8
+  close_hour = 21
 
 [[mobiles]]
 vnum = 14504
@@ -95,6 +109,13 @@ alignment = 0
   size = 10
   bonus = 3
 
+  [mobiles.shop]
+  buy_types = ["container", "pill"]
+  profit_buy = 25
+  profit_sell = 175
+  open_hour = 9
+  close_hour = 19
+
 [[mobiles]]
 vnum = 14505
 keywords = ["merchant", "human"]
@@ -117,6 +138,13 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.shop]
+  buy_types = ["treasure", "drink"]
+  profit_buy = 50
+  profit_sell = 175
+  open_hour = 8
+  close_hour = 22
 
 [[mobiles]]
 vnum = 14506
@@ -479,4 +507,3 @@ alignment = 0
   number = 1
   size = 10
   bonus = 3
-

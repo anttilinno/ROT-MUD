@@ -145,6 +145,13 @@ alignment = 0
   size = 10
   bonus = 7
 
+  [mobiles.shop]
+  buy_types = ["drink", "food"]
+  profit_buy = 210
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 1306
 keywords = ["oldstyle", "tatorious", "wizard"]
@@ -168,6 +175,13 @@ special = "spec_cast_mage"
   number = 4
   size = 4
   bonus = 6
+
+  [mobiles.shop]
+  buy_types = ["scroll", "wand", "staff", "potion"]
+  profit_buy = 250
+  profit_sell = 30
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 1307
@@ -1602,4 +1616,3 @@ special = "spec_cast_mage"
   number = 1
   size = 12
   bonus = 3
-

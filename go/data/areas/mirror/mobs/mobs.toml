@@ -271,6 +271,13 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 120
+  profit_sell = 90
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 5311
 keywords = ["oldstyle", "george", "butcher"]
@@ -295,6 +302,13 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.shop]
+  buy_types = ["weapon", "drink", "food"]
+  profit_buy = 110
+  profit_sell = 90
+  open_hour = 6
+  close_hour = 21
+
 [[mobiles]]
 vnum = 5312
 keywords = ["oldstyle", "farmer", "betty"]
@@ -316,6 +330,13 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.shop]
+  buy_types = ["food"]
+  profit_buy = 110
+  profit_sell = 90
+  open_hour = 7
+  close_hour = 20
 
 [[mobiles]]
 vnum = 5313
@@ -341,6 +362,13 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.shop]
+  buy_types = ["weapon", "armor"]
+  profit_buy = 130
+  profit_sell = 70
+  open_hour = 5
+  close_hour = 22
+
 [[mobiles]]
 vnum = 5314
 keywords = ["oldstyle", "ben", "smith"]
@@ -362,6 +390,13 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.shop]
+  buy_types = ["light", "treasure", "furniture", "trash", "boat"]
+  profit_buy = 135
+  profit_sell = 65
+  open_hour = 8
+  close_hour = 19
 
 [[mobiles]]
 vnum = 5315
@@ -431,6 +466,13 @@ special = "spec_cast_mage"
   number = 5
   size = 4
   bonus = 7
+
+  [mobiles.shop]
+  buy_types = ["scroll", "wand", "staff", "potion"]
+  profit_buy = 120
+  profit_sell = 50
+  open_hour = 9
+  close_hour = 18
 
 [[mobiles]]
 vnum = 5318
@@ -837,4 +879,3 @@ special = "spec_guard"
   number = 2
   size = 6
   bonus = 3
-

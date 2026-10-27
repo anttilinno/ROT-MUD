@@ -148,6 +148,13 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.shop]
+  buy_types = ["light", "potion", "clothing", "food"]
+  profit_buy = 120
+  profit_sell = 60
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 308
 keywords = ["oldstyle", "keeper", "innkeeper"]
@@ -172,6 +179,13 @@ alignment = 0
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 309
@@ -221,4 +235,3 @@ special = "spec_cast_mage"
   number = 1
   size = 8
   bonus = 1
-

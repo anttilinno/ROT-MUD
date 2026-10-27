@@ -412,6 +412,13 @@ alignment = 0
   size = 10
   bonus = 25
 
+  [mobiles.shop]
+  buy_types = ["scroll", "wand", "treasure", "armor", "food"]
+  profit_buy = 120
+  profit_sell = 80
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 16100
 keywords = ["Mr.", "Miyagi"]
@@ -439,4 +446,3 @@ special = "spec_cast_adept"
   number = 5
   size = 10
   bonus = 25
-

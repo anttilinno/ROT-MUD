@@ -389,6 +389,13 @@ alignment = 0
   size = 8
   bonus = 19
 
+  [mobiles.shop]
+  buy_types = ["light", "treasure", "trash", "container", "food"]
+  profit_buy = 120
+  profit_sell = 80
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 916
 keywords = ["oldstyle", "alchemist"]
@@ -669,4 +676,3 @@ special = "spec_cast_mage"
   number = 2
   size = 7
   bonus = 5
-

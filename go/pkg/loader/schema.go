@@ -138,7 +138,7 @@ type MobileData struct {
 	DamageType  string    `toml:"damage_type"`
 	AC          [4]int    `toml:"ac"`
 	Hitroll     int       `toml:"hitroll"`
-	Gold        *int      `toml:"gold"` // wealth in copper; nil = level-based fallback
+	Gold        *int      `toml:"gold"`        // wealth in copper; nil = level-based fallback
 	ForgeTiers  []string  `toml:"forge_tiers"` // weapon tiers this smith forges (data/forge.toml)
 	Inn         bool      `toml:"inn"`         // innkeeper: rents rooms (`rent`)
 	StartPos    string    `toml:"start_pos"`

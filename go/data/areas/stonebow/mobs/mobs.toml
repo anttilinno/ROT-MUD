@@ -23,6 +23,13 @@ alignment = 0
   size = 10
   bonus = 7
 
+  [mobiles.shop]
+  buy_types = ["clothing"]
+  profit_buy = 105
+  profit_sell = 15
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 13001
 keywords = ["serge", "tailor"]
@@ -72,6 +79,13 @@ alignment = 0
   size = 8
   bonus = 32
 
+  [mobiles.shop]
+  buy_types = ["clothing"]
+  profit_buy = 101
+  profit_sell = 75
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 13003
 keywords = ["Higgins", "haberdasher"]
@@ -97,6 +111,13 @@ alignment = 0
   number = 5
   size = 8
   bonus = 19
+
+  [mobiles.shop]
+  buy_types = ["clothing"]
+  profit_buy = 105
+  profit_sell = 15
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 13004
@@ -125,6 +146,13 @@ alignment = 0
   size = 8
   bonus = 19
 
+  [mobiles.shop]
+  buy_types = ["clothing"]
+  profit_buy = 145
+  profit_sell = 5
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 13005
 keywords = ["thurston", "howell", "jeweler"]
@@ -150,6 +178,13 @@ alignment = 0
   size = 10
   bonus = 7
 
+  [mobiles.shop]
+  buy_types = ["gem", "jewelry"]
+  profit_buy = 195
+  profit_sell = 1
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 13006
 keywords = ["joel", "robinson", "florist"]
@@ -173,6 +208,13 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.shop]
+  buy_types = ["treasure"]
+  profit_buy = 100
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 13007
@@ -634,6 +676,13 @@ alignment = 0
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.shop]
+  buy_types = ["clothing"]
+  profit_buy = 101
+  profit_sell = 75
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 13025
@@ -1454,4 +1503,3 @@ alignment = 0
   number = 4
   size = 4
   bonus = 5
-

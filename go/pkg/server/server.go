@@ -1583,6 +1583,10 @@ var shopItemTypeMap = map[string]int{
 	"boat":      int(types.ItemTypeBoat),
 	"fountain":  int(types.ItemTypeFountain),
 	"pill":      int(types.ItemTypePill),
+	"map":       int(types.ItemTypeMap),
+	"portal":    int(types.ItemTypePortal),
+	"gem":       int(types.ItemTypeGem),
+	"jewelry":   int(types.ItemTypeJewelry),
 }
 
 // buildShopHandler converts the auto-registered loader shop data into a

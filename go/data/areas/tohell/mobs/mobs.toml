@@ -1298,6 +1298,13 @@ alignment = 0
   size = 8
   bonus = 20
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 75
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 10452
 keywords = ["oldstyle", "maintenance", "worker"]
@@ -1370,6 +1377,13 @@ alignment = 0
   number = 7
   size = 6
   bonus = 22
+
+  [mobiles.shop]
+  buy_types = ["scroll", "wand", "staff", "potion"]
+  profit_buy = 225
+  profit_sell = 15
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 10455
@@ -1791,4 +1805,3 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
-

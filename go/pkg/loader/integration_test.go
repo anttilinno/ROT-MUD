@@ -175,6 +175,19 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Error("expected mud school room 3701 to have its sign and plaque")
 		}
 
+		// Shops come from ROT's #SHOPS only: the Shire blacksmith buys arms,
+		// and mobs that merely carry items (the Great Red Dragon) are not
+		// shops and can be fought
+		if sh := world.GetShop(1120); sh == nil || len(sh.BuyTypes) != 2 {
+			t.Errorf("expected the Shire blacksmith (1120) to buy weapons and armor, got %+v", sh)
+		}
+		if world.GetShop(2221) != nil {
+			t.Error("the Great Red Dragon (2221) must not be a shop")
+		}
+		if d := world.CreateMobFromTemplate(2221); d == nil || d.Act.Has(types.ActProtected) {
+			t.Error("the Great Red Dragon must be attackable")
+		}
+
 		// Weapons carry their class and damage type (restored from ROT area files)
 		dagger := world.GetObjTemplate(3701)
 		if dagger == nil || dagger.Weapon == nil {

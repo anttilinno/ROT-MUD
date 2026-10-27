@@ -145,6 +145,13 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 90
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9506
 keywords = ["oldstyle", "john", "brother", "singer", "lead"]
@@ -260,6 +267,13 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 90
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9511
 keywords = ["oldstyle", "shopkeeper"]
@@ -282,6 +296,13 @@ alignment = 0
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.shop]
+  buy_types = ["light", "treasure", "furniture", "trash", "container"]
+  profit_buy = 200
+  profit_sell = 100
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 9512
@@ -334,6 +355,13 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.shop]
+  buy_types = ["treasure", "clothing", "armor"]
+  profit_buy = 200
+  profit_sell = 40
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9514
 keywords = ["oldstyle", "vera"]
@@ -356,6 +384,13 @@ alignment = 0
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 150
+  profit_sell = 40
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 9515
@@ -382,6 +417,13 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 100
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9516
 keywords = ["oldstyle", "abdul", "armorer"]
@@ -406,6 +448,13 @@ alignment = 0
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.shop]
+  buy_types = ["armor", "clothing"]
+  profit_buy = 150
+  profit_sell = 10
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 9517
@@ -432,6 +481,13 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.shop]
+  buy_types = ["weapon"]
+  profit_buy = 130
+  profit_sell = 10
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9518
 keywords = ["oldstyle", "cassandra"]
@@ -457,6 +513,13 @@ alignment = 0
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 150
+  profit_sell = 40
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 9519
@@ -1571,6 +1634,13 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.shop]
+  buy_types = ["boat"]
+  profit_buy = 131
+  profit_sell = 86
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9566
 keywords = ["oldstyle", "blacksmith"]
@@ -1594,6 +1664,13 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 250
+  profit_sell = 50
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 9567
@@ -1903,6 +1980,13 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.shop]
+  buy_types = ["potion"]
+  profit_buy = 187
+  profit_sell = 25
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9580
 keywords = ["oldstyle", "braheem"]
@@ -1924,6 +2008,13 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.shop]
+  buy_types = ["scroll", "wand", "staff"]
+  profit_buy = 170
+  profit_sell = 30
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 9581
@@ -1999,6 +2090,13 @@ alignment = 0
   size = 8
   bonus = 5
 
+  [mobiles.shop]
+  buy_types = []
+  profit_buy = 110
+  profit_sell = 90
+  open_hour = 0
+  close_hour = 24
+
 [[mobiles]]
 vnum = 9584
 keywords = ["oldstyle", "stitch"]
@@ -2023,6 +2121,13 @@ alignment = 0
   number = 2
   size = 8
   bonus = 5
+
+  [mobiles.shop]
+  buy_types = ["armor", "clothing"]
+  profit_buy = 105
+  profit_sell = 15
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 9585
@@ -2353,4 +2458,3 @@ special = "spec_cast_undead"
   number = 4
   size = 4
   bonus = 5
-
