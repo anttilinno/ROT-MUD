@@ -346,9 +346,9 @@ stretch on endlessly to the south, hiding treasure and adventure."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 9513
   key = 9501
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 9547
@@ -416,9 +416,9 @@ wilderness to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 9511
   key = 9501
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 9562
@@ -721,9 +721,9 @@ stretches out east and west. To the north lay wilderness of the desert."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 9667
   key = 9501
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -791,9 +791,9 @@ Sorrow to your west. To the south lies the entrance of the warrior's guild."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 9669
   key = 9501
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 9562
@@ -1060,9 +1060,9 @@ entrance to the mages' guild."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 9668
   key = 9501
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1722,8 +1722,8 @@ description = "The alley ends here."
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 9575
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9560
@@ -1989,8 +1989,8 @@ appearent on the ground."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 9578
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9571
@@ -2058,8 +2058,8 @@ The alley ends here as do the footprints you had noticed earlier."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 9581
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9575
@@ -2075,8 +2075,8 @@ glint of light from above and the passage continues south."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 9559
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9576
@@ -2128,8 +2128,8 @@ glint of light from above."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 9570
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9579
@@ -2176,8 +2176,8 @@ of the city above you."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 9574
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9582
@@ -2351,8 +2351,8 @@ trap door in the ceiling. The passage continues west from here."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 9670
   flags = ["door"]
+  to_vnum = 9670
 
 [[rooms]]
 vnum = 9592
@@ -2394,34 +2394,34 @@ hang large tapestries paying homage to their leader Conner MacCleod."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9599
   flags = ["door"]
+  to_vnum = 9599
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 9596
   flags = ["door"]
+  to_vnum = 9596
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6100
   key = 7901
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 9597
   flags = ["door"]
+  to_vnum = 9597
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 9595
   flags = ["door"]
+  to_vnum = 9595
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 9598
   flags = ["door"]
+  to_vnum = 9598
 
 [[rooms]]
 vnum = 9595
@@ -2436,8 +2436,8 @@ head of the Demi-Lich."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 9594
   flags = ["door"]
+  to_vnum = 9594
 
 [[rooms]]
 vnum = 9596
@@ -2453,8 +2453,8 @@ of Kalas stares past you into emptiness."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 9594
   flags = ["door"]
+  to_vnum = 9594
 
 [[rooms]]
 vnum = 9597
@@ -2478,8 +2478,8 @@ If I have to explain, you wouldn't understand."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 9594
   flags = ["door"]
+  to_vnum = 9594
 
 [[rooms]]
 vnum = 9598
@@ -2495,8 +2495,8 @@ place in this happy-go-lucky room is mounted head of Crimson Death."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 9594
   flags = ["door"]
+  to_vnum = 9594
 
 [[rooms]]
 vnum = 9599
@@ -2509,8 +2509,8 @@ drafting table."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9594
   flags = ["door"]
+  to_vnum = 9594
 
   [[rooms.mob_resets]]
   vnum = 9569
@@ -2570,8 +2570,8 @@ into the the Nectar."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 9579
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -2975,8 +2975,8 @@ studies."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 9624
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -3349,8 +3349,8 @@ room can be seen to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 9632
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -3381,8 +3381,8 @@ guarding the entrance from 'outsiders' stands as you walk in."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 9630
   flags = ["door"]
+  to_vnum = 9630
 
   [[rooms.mob_resets]]
   vnum = 9544
@@ -3422,8 +3422,8 @@ his iron clad comrades, who you assume to be your master."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 9573
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -3486,9 +3486,9 @@ A note catches your eye."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9750
   key = 9591
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9533
@@ -3831,8 +3831,8 @@ invisible. A small staircase leads back up to the unicorn."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 9589
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -3909,9 +3909,9 @@ numerous halls of the palace begin and the gate lies to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 9658
   key = 9500
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -3960,9 +3960,9 @@ pretty bad and should be put away safely for a while."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 9544
   key = 9593
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 9654
@@ -4050,9 +4050,9 @@ to the east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 9650
   key = 9500
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 9659
@@ -4097,8 +4097,8 @@ to the dining hall is west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 9663
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -4139,8 +4139,8 @@ entrance give access to the kitchen and the hall continues west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 9661
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -4172,8 +4172,8 @@ golden plaque above the door."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9666
   flags = ["door"]
+  to_vnum = 9666
 
   [[rooms.exits]]
   direction = "west"
@@ -4191,8 +4191,8 @@ almighty being."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9665
   flags = ["door"]
+  to_vnum = 9665
 
   [[rooms.mob_resets]]
   vnum = 9555
@@ -4257,9 +4257,9 @@ in that direction and the road to Midgaard lies west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 9523
   key = 9501
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -4319,8 +4319,8 @@ large double doors to the south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9671
   flags = ["door"]
+  to_vnum = 9671
 
   [[rooms.exits]]
   direction = "west"
@@ -4368,8 +4368,8 @@ continue east, west and south. There is a large iron door to the north."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9675
   flags = ["door"]
+  to_vnum = 9675
 
   [[rooms.exits]]
   direction = "east"
@@ -4395,13 +4395,13 @@ returns you to the hallway."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9674
   flags = ["door"]
+  to_vnum = 9674
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 9691
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9676
@@ -4433,8 +4433,8 @@ the land."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9676
   flags = ["door"]
+  to_vnum = 9676
 
   [[rooms.exits]]
   direction = "west"
@@ -4476,8 +4476,8 @@ with a plaque mounted over it."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9680
   flags = ["door"]
+  to_vnum = 9680
 
   [[rooms.exits]]
   direction = "east"
@@ -4501,8 +4501,8 @@ eyes, however, are pulled towards a painting that dominates the far wall."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9679
   flags = ["door"]
+  to_vnum = 9679
 
   [[rooms.mob_resets]]
   vnum = 9588
@@ -4539,14 +4539,14 @@ is east except for the doors in the southern and western walls."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9681
   flags = ["door"]
+  to_vnum = 9681
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 9687
   key = 9601
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9561
@@ -4583,8 +4583,8 @@ walls here, one to the north, another to the west."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9685
   flags = ["door"]
+  to_vnum = 9685
 
   [[rooms.exits]]
   direction = "east"
@@ -4592,8 +4592,8 @@ walls here, one to the north, another to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 9689
   flags = ["door"]
+  to_vnum = 9689
 
 [[rooms]]
 vnum = 9685
@@ -4606,8 +4606,8 @@ palace grounds with special permission. The only exit is to the south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9684
   flags = ["door"]
+  to_vnum = 9684
 
 [[rooms]]
 vnum = 9686
@@ -4636,8 +4636,8 @@ unfortunate for you that only the Sultan is allowed in here."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9688
   flags = ["door"]
+  to_vnum = 9688
 
   [[rooms.exits]]
   direction = "east"
@@ -4731,19 +4731,19 @@ upon a mable dias. The Sultan is not a man to be trifled with."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 9690
   key = 9600
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 9684
   flags = ["door"]
+  to_vnum = 9684
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 9688
   flags = ["door"]
+  to_vnum = 9688
 
   [[rooms.mob_resets]]
   vnum = 9550
@@ -4779,13 +4779,13 @@ stone on the east wall, and the steel grating opens up above."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 9692
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 9675
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 9552
@@ -4805,9 +4805,9 @@ south. The tunnel continues east."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9697
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -4815,14 +4815,14 @@ south. The tunnel continues east."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9701
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 9691
-  flags = ["door"]
 
 [[rooms]]
 vnum = 9693
@@ -4834,9 +4834,9 @@ south. The tunnel continues east and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9698
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -4844,9 +4844,9 @@ south. The tunnel continues east and west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9702
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -4862,9 +4862,9 @@ south. The tunnel continues east and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9699
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -4872,9 +4872,9 @@ south. The tunnel continues east and west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9703
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -4891,21 +4891,21 @@ stone to the east."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9700
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 9696
   key = 9500
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9704
   key = 9593
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -4923,9 +4923,9 @@ you notice a pair of small red eyes peering at you from the darkness."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 9695
   key = 9500
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9587
@@ -4943,9 +4943,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9692
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9575
@@ -4959,9 +4959,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9693
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9574
@@ -4975,9 +4975,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9694
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9572
@@ -5007,9 +5007,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9695
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9570
@@ -5023,9 +5023,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9692
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9577
@@ -5039,9 +5039,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9693
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9576
@@ -5055,9 +5055,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9694
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9573
@@ -5071,9 +5071,9 @@ description = "You are in a cold, cramped chamber with only one exit."
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9695
   key = 9593
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9571
@@ -5535,9 +5535,9 @@ description = ""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9636
   key = 9591
-  flags = ["closed"]
 
   [[rooms.obj_resets]]
   vnum = 9598
@@ -5602,8 +5602,8 @@ into the Lodge."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 9574
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 9593
@@ -5669,8 +5669,8 @@ into the floral room."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 9570
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 9594
@@ -5733,8 +5733,8 @@ obvious exit is back through the doorway into the alcove."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 9567
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 9595
@@ -6187,9 +6187,9 @@ that direction."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 9799
   key = 1
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -6206,8 +6206,8 @@ its meal the large sting ray attacks!"""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 9798
   flags = ["door"]
+  to_vnum = 9798
 
   [[rooms.mob_resets]]
   vnum = 9591

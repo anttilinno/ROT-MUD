@@ -284,14 +284,14 @@ in the centre of the room."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 3111
   flags = ["door"]
+  to_vnum = 3111
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3142
   key = 3120
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3111
@@ -315,8 +315,8 @@ notice a sign on the door.  The park entrance is to the east."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 3110
   flags = ["door"]
+  to_vnum = 3110
 
   [[rooms.mob_resets]]
   vnum = 3060
@@ -672,9 +672,9 @@ street ends to the north near a run-down neighborhood."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3600
   key = 3121
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1092,15 +1092,15 @@ Arms is hanging on the north wall and a heavy steel door is to the south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3110
   key = 3120
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3143
   key = 3137
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3140
@@ -1168,9 +1168,9 @@ to the touch.  A heavy steel door is to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3142
   key = 3137
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3144
@@ -1272,9 +1272,9 @@ half hidden by a stack of books, leads to a room in the back of the shop."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3161
   key = 3161
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1374,9 +1374,9 @@ that, the room is quite bare."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3160
   key = 3161
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
@@ -1634,9 +1634,9 @@ or west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 3256
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1703,9 +1703,9 @@ Migaard lies north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 3255
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1822,9 +1822,9 @@ Temples of Thoth and Belan, but there is no way to reach them from here."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 3268
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1977,9 +1977,9 @@ village of Ofcol.  You can return to Midgaard to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 3262
   key = 3133
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3270
@@ -2758,8 +2758,8 @@ is a large brass door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3379
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2795,8 +2795,8 @@ Leather restraints fall down off the four corners of the bed."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3378
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3380
@@ -4898,9 +4898,9 @@ east and Wall Road leads both north and south from here."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 3052
   key = 3133
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3068
@@ -4966,9 +4966,9 @@ the city wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 3053
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -5286,9 +5286,9 @@ wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 3040
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -5314,9 +5314,9 @@ the city wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 3041
   key = 3133
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3054

@@ -36,9 +36,9 @@ get back into the inner lair through the stone door which is east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 7201
   key = 7205
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 7204
@@ -54,14 +54,14 @@ made from black stone.  In the western wall you see a large black stone door."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7202
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7200
   key = 7205
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7200
@@ -90,8 +90,8 @@ are a wooden door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7201
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -147,8 +147,8 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 7208
   flags = ["door"]
+  to_vnum = 7208
 
 [[rooms]]
 vnum = 7205
@@ -212,8 +212,8 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 7204
   flags = ["door"]
+  to_vnum = 7204
 
   [[rooms.mob_resets]]
   vnum = 7202
@@ -234,8 +234,8 @@ and some broken bones."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7204
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -738,13 +738,13 @@ door."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 7281
   flags = ["door"]
+  to_vnum = 7281
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 7116
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7000
@@ -764,8 +764,8 @@ through an open black hole to the east. To the south there is a round door."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 7280
   flags = ["door"]
+  to_vnum = 7280
 
   [[rooms.mob_resets]]
   vnum = 7000
@@ -833,8 +833,8 @@ box, covered with dust. To the south you can just make out a small exit."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 7286
   flags = ["door"]
+  to_vnum = 7286
 
   [[rooms.mob_resets]]
   vnum = 7002
@@ -860,8 +860,8 @@ north you can see an iron door."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 7285
   flags = ["door"]
+  to_vnum = 7285
 
   [[rooms.exits]]
   direction = "west"
@@ -998,8 +998,8 @@ way. To the west you can see mud."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7405
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1018,13 +1018,13 @@ south you see a grey block."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7404
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7406
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7406
@@ -1037,8 +1037,8 @@ The only obvious exit is to the west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7405
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1204,8 +1204,8 @@ a primitive picture."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7416
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1223,8 +1223,8 @@ secret door."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7415
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7417
@@ -1256,8 +1256,8 @@ a sign at the wall"""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 7421
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1322,8 +1322,8 @@ and west. To the west you see a wooden door."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 7418
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7422
@@ -1377,8 +1377,8 @@ can see a stone head hanging on the walls."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 7425
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1404,8 +1404,8 @@ the outline of a door. A tunnel leads to the east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 7424
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7426
@@ -3017,8 +3017,8 @@ up through the Pit without the use of a rope."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 7400
   flags = ["door"]
+  to_vnum = 7400
 
   [[rooms.mob_resets]]
   vnum = 7004
@@ -3336,8 +3336,8 @@ from here into darkness."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 7280
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7117

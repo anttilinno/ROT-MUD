@@ -7,6 +7,7 @@ type Exit struct {
 	ToVnum      int       // Target room vnum
 	ToRoom      *Room     // Resolved room pointer (set during loading)
 	Flags       ExitFlags // Exit flags (door, closed, locked, etc.)
+	ResetFlags  ExitFlags // Flags restored on area reset (ROT rs_flags)
 	Key         int       // Key vnum required to unlock
 	Keywords    string    // Keywords for the door (e.g., "door gate")
 	Description string    // What you see when you look at the exit

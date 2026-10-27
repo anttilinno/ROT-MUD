@@ -422,8 +422,8 @@ several hundred people. It is oddly deserted here, obviously not meal time.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1320
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1304
@@ -445,8 +445,8 @@ here.
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 1321
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1318
@@ -515,8 +515,8 @@ the room, hanging in mid-air is a spice rack."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1316
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1307
@@ -550,8 +550,8 @@ heard in the distance below.
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 1317
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -598,9 +598,9 @@ came."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 1327
   key = 1323
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -618,8 +618,8 @@ behind the door.
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1328
   flags = ["door"]
+  to_vnum = 1328
 
   [[rooms.exits]]
   direction = "west"
@@ -670,8 +670,8 @@ very dark. Someone, or something seems to be chained to the far wall.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 1323
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1309
@@ -693,8 +693,8 @@ prisoners survive long enough to spend much time in these dank dungeons.
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1324
   flags = ["door"]
+  to_vnum = 1324
 
   [[rooms.mob_resets]]
   vnum = 1310
@@ -724,8 +724,8 @@ magical glow which provides enough light to see by."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1332
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -733,8 +733,8 @@ magical glow which provides enough light to see by."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1333
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -750,18 +750,18 @@ which provides enough light to see by."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1334
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1336
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1335
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -778,8 +778,8 @@ leaning against walls.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1330
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1333
@@ -792,8 +792,8 @@ instruments have been left here, apparently unused (perhaps the maid quit?).
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1330
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1311
@@ -825,13 +825,13 @@ faint magical glow which provides enough light to see by."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1337
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1331
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1335
@@ -844,8 +844,8 @@ Here and there a disembodied pair of hands or eyes flits about."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1331
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1312
@@ -879,8 +879,8 @@ unused.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1331
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1337
@@ -894,8 +894,8 @@ ever so comfortable, so comfortable in fact ...someone is sleeping in it.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1334
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1314
@@ -912,8 +912,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1339
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -935,8 +935,8 @@ There is no sign of the previous occupant, undoubtedly he left in a hurry.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1338
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1340
@@ -950,8 +950,8 @@ can be seen in the culdesac to the east.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1342
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -993,8 +993,8 @@ cantrip. Cots line the walls, and the room continues west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1340
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1023,8 +1023,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1344
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1049,8 +1049,8 @@ cantrip. Cots line the walls, and the room continues east."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1343
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1315
@@ -1075,8 +1075,8 @@ be seen under the doorway to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1346
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1114,8 +1114,8 @@ small kitten cornered and seem to be testing spells upon it.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1345
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1347
@@ -1153,8 +1153,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1349
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1349
@@ -1168,8 +1168,8 @@ at your entry and lunges to attack you.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1348
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1320
@@ -1209,8 +1209,8 @@ magical glow which provides enough light to see by."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1352
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1351
@@ -1230,8 +1230,8 @@ magical glow which provides enough light to see by."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1354
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1352
@@ -1245,8 +1245,8 @@ it is bare of furnishings.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1350
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1353
@@ -1276,8 +1276,8 @@ watched comes over you, and you hear the faint rustle of robes.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1351
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1322
@@ -1314,8 +1314,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1357
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1336,8 +1336,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1359
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1354,8 +1354,8 @@ a large podium. The echos of your footsteps seem very loud here.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1355
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1324
@@ -1388,8 +1388,8 @@ magical glow providing enough light to see by.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1361
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1405,8 +1405,8 @@ You are in a large training room. It is filled with battle scared manikins
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1356
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1326
@@ -1469,8 +1469,8 @@ and hold fast.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1358
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1362
@@ -1487,8 +1487,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1364
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1509,8 +1509,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1365
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1528,8 +1528,8 @@ the far wall.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1362
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1328
@@ -1548,8 +1548,8 @@ can be seen floating about a meter above the floor.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1363
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1329
@@ -1570,8 +1570,8 @@ magical glow providing enough light to see by.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1367
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1590,8 +1590,8 @@ magical oil lamp.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1366
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1330
@@ -1653,8 +1653,8 @@ a faint magical energy providing enough light to see by.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1371
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1676,13 +1676,13 @@ candle can be seen through the curtain."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1370
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1373
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1331
@@ -1720,8 +1720,8 @@ flickering with soft blue flames provides the only light here.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1371
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1332
@@ -1758,8 +1758,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1375
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1779,8 +1779,8 @@ the shelves here, but very little looks interesting."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1374
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1313
@@ -1822,8 +1822,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1379
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1378
@@ -1844,8 +1844,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1381
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1379
@@ -1859,8 +1859,8 @@ A large cabinet with sigils of warding is bolted to one wall.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1377
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1911,23 +1911,23 @@ meters in the air of its own force."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 1379
   flags = ["door"]
+  to_vnum = 1379
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1378
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1382
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 1412
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 1314
@@ -1945,8 +1945,8 @@ table."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1381
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1334
@@ -2000,8 +2000,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1386
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2035,8 +2035,8 @@ untidy, looking almost abandoned, or used by a madman.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1384
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2057,8 +2057,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1390
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2113,8 +2113,8 @@ A crackling energy field can be seen to the south, it looks quite dangerous."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1387
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2143,8 +2143,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1394
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2194,8 +2194,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1395
   flags = ["door"]
+  to_vnum = 1395
 
   [[rooms.exits]]
   direction = "south"
@@ -2211,8 +2211,8 @@ like a safe place to rest."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1391
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1395
@@ -2226,13 +2226,13 @@ animals.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1397
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1393
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1338
@@ -2273,8 +2273,8 @@ experimentation."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1395
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1398
@@ -2329,8 +2329,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1401
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2356,13 +2356,13 @@ are here.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1400
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1402
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 1320
@@ -2380,13 +2380,13 @@ spell binder obviously needs none for the working of his art.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1401
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1403
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1340
@@ -2411,13 +2411,13 @@ very large silver chased cabinets here, other than that, the room is bare.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1402
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1405
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 1321
@@ -2454,8 +2454,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1403
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2517,8 +2517,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1409
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1409
@@ -2535,8 +2535,8 @@ lunge to attack you."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1408
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2544,8 +2544,8 @@ lunge to attack you."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 1412
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1341
@@ -2612,13 +2612,13 @@ description = "It is very dark here..."
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 1409
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 1381
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1413
@@ -2684,8 +2684,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1417
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2703,8 +2703,8 @@ at least they seem to be treasures..."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1416
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2747,8 +2747,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1420
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2765,8 +2765,8 @@ can not even hear your own footsteps.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1419
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1421
@@ -2800,8 +2800,8 @@ magical glow which provides enough light to see by.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1423
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2822,8 +2822,8 @@ wafting in from the open doorway to the north."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1422
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1424
@@ -3060,8 +3060,8 @@ from under the door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1435
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -3082,8 +3082,8 @@ mirrors."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1434
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1352
@@ -3116,8 +3116,8 @@ can barely be heard through the door to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1437
   flags = ["door"]
+  to_vnum = 1437
 
 [[rooms]]
 vnum = 1437
@@ -3482,8 +3482,8 @@ A feeling of peace and balance comes over you.
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1453
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1453
@@ -3498,8 +3498,8 @@ to the south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1452
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -3649,8 +3649,8 @@ you.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1461
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -3680,8 +3680,8 @@ light and leave it that much darker here."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1460
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 1357
@@ -3788,8 +3788,8 @@ tread upon these sacred floors.
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1467
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1467
@@ -3803,8 +3803,8 @@ feel worthy to pass into it."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1466
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -3919,9 +3919,9 @@ constant motion.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 1474
   key = 1473
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -3939,15 +3939,15 @@ constant motion.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 1475
   key = 1474
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 1473
   key = 1473
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 1475
@@ -3961,15 +3961,15 @@ constant motion.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 1476
   key = 1475
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 1474
   key = 1474
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 1476
@@ -3987,9 +3987,9 @@ seems to rustle and move at the touch of your boots."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 1475
   key = 1475
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 1477
@@ -4095,8 +4095,8 @@ worship of Mystra, the goddess of magic."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 1481
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -4104,8 +4104,8 @@ worship of Mystra, the goddess of magic."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1482
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 1336
@@ -4121,8 +4121,8 @@ that it has gone undisturbed for many years."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 1480
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 1338

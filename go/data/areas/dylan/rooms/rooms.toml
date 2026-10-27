@@ -802,8 +802,8 @@ rather damp, dismal cloud.  The door to the house is closed."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9139
   flags = ["door"]
+  to_vnum = 9139
 
   [[rooms.exits]]
   direction = "down"
@@ -857,8 +857,8 @@ hope to again.  A picture of a familiar temple hangs on the east wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3001
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1369,8 +1369,8 @@ made of oak."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof"]
   to_vnum = 9177
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1558,8 +1558,8 @@ high and is made of oak."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 9166
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"

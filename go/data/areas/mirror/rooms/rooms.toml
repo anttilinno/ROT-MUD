@@ -418,8 +418,8 @@ continues north and south and buildings line the street."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5344
   flags = ["door"]
+  to_vnum = 5344
 
   [[rooms.exits]]
   direction = "south"
@@ -479,8 +479,8 @@ west is a smithy, and this side street continues south."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5332
   flags = ["door"]
+  to_vnum = 5332
 
   [[rooms.exits]]
   direction = "south"
@@ -1143,8 +1143,8 @@ streets.  Hallways lead south and east."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5312
   flags = ["door"]
+  to_vnum = 5312
 
   [[rooms.mob_resets]]
   vnum = 5301
@@ -2621,9 +2621,9 @@ Main Street leads west from here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 5385
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2668,9 +2668,9 @@ plains stretch out in the distance."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 5384
   key = 3133
-  flags = ["door"]
 
 [[rooms]]
 vnum = 5386

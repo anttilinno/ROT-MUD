@@ -642,8 +642,8 @@ the foothills, and some pineforrest. Further on mountain peaks are visible."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 331
   flags = ["door"]
+  to_vnum = 331
 
 [[rooms]]
 vnum = 331
@@ -656,8 +656,8 @@ plains and foothills. There is a small fireplace here."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 330
   flags = ["door"]
+  to_vnum = 330
 
   [[rooms.mob_resets]]
   vnum = 301

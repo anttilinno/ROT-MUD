@@ -422,8 +422,8 @@ from the catacombs."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 6527
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2066
@@ -518,8 +518,8 @@ from the catacombs."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 6524
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2002
@@ -1227,9 +1227,9 @@ to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2032
   key = 2001
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1323,9 +1323,9 @@ closer look if possible."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2028
   key = 2001
-  flags = ["closed"]
 
   [[rooms.obj_resets]]
   vnum = 2007

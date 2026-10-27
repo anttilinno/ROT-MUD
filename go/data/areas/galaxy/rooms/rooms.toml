@@ -783,9 +783,9 @@ you from going further upwards."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9354
   key = 9324
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1108,15 +1108,15 @@ forcefield blocking your way."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9355
   key = 9325
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof"]
   to_vnum = 9339
   key = 9324
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 9355
@@ -1132,9 +1132,9 @@ is made of, you feel the ground move."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof"]
   to_vnum = 9354
   key = 9325
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9302
@@ -1204,9 +1204,9 @@ the wings are to the east but it seems that another forcefield is in the way."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9360
   key = 9326
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1226,9 +1226,9 @@ of something as the forceful gusts sweep you away."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 9359
   key = 9326
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9314
@@ -1281,9 +1281,9 @@ If only the head were here ..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9364
   key = 9327
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9313
@@ -1304,9 +1304,9 @@ seven rooms in this zone, representing the seven stars of the Dipper."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 9363
   key = 9327
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"

@@ -12,8 +12,8 @@ annoying little brats.  You have the urge to leave.  There is a sign here."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 6602
   flags = ["door"]
+  to_vnum = 6602
 
 [[rooms]]
 vnum = 6602

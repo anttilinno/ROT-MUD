@@ -719,9 +719,9 @@ a rusty door is to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 1537
   key = 1500
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
@@ -746,9 +746,9 @@ and a door leads off to the east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 1536
   key = 1500
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 1538
@@ -892,9 +892,9 @@ life.  Something lumbers its way out of the shadows."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 1546
   key = 1501
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 1512
@@ -912,9 +912,9 @@ description = "You have come into a vertical tunnel with a ladder."
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 1545
   key = 1501
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"

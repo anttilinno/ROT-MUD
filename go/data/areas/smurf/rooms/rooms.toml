@@ -312,9 +312,9 @@ Everything is so peaceful here.  You could stay forever."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 125
   key = 107
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -564,9 +564,9 @@ moves on her.  A stone path lies to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 113
   key = 107
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 110
@@ -611,9 +611,9 @@ His Castle is to the north while Smurfy Road is to the south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 128
   key = 109
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -629,9 +629,9 @@ Where else would he put it?  The place has only one room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 127
   key = 109
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 111

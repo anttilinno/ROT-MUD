@@ -20,8 +20,8 @@ and there is a staircase leading down."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13001
   flags = ["door"]
+  to_vnum = 13001
 
   [[rooms.exits]]
   direction = "down"
@@ -52,8 +52,8 @@ and lilacs; garlands, baby's breath, and broad-leaved laurels..."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13000
   flags = ["door"]
+  to_vnum = 13000
 
 [[rooms]]
 vnum = 13002
@@ -192,8 +192,8 @@ are bright, gaudy, shocking Hawaiian-print shirts, pants, and shorts."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13010
   flags = ["door"]
+  to_vnum = 13010
 
   [[rooms.exits]]
   direction = "east"
@@ -201,8 +201,8 @@ are bright, gaudy, shocking Hawaiian-print shirts, pants, and shorts."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13156
   flags = ["door"]
+  to_vnum = 13156
 
   [[rooms.mob_resets]]
   vnum = 13001
@@ -230,18 +230,18 @@ the west.  Due north is a full-length, three-sided mirror."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13011
   flags = ["door"]
+  to_vnum = 13011
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13009
   flags = ["door"]
+  to_vnum = 13009
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13012
   flags = ["door"]
+  to_vnum = 13012
 
 [[rooms]]
 vnum = 13011
@@ -254,8 +254,8 @@ from the floor level."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13010
   flags = ["door"]
+  to_vnum = 13010
 
 [[rooms]]
 vnum = 13012
@@ -268,8 +268,8 @@ from the floor level."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13010
   flags = ["door"]
+  to_vnum = 13010
 
 [[rooms]]
 vnum = 13013
@@ -290,8 +290,8 @@ street outside."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13014
   flags = ["door"]
+  to_vnum = 13014
 
   [[rooms.exits]]
   direction = "south"
@@ -328,8 +328,8 @@ spread around the room."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13013
   flags = ["door"]
+  to_vnum = 13013
 
 [[rooms]]
 vnum = 13015
@@ -483,8 +483,8 @@ ALL seems to be here.  There is an exit east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 13021
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 13022
@@ -535,8 +535,8 @@ and appear to be long dead.  There is an exit north, and one to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13021
   flags = ["door"]
+  to_vnum = 13021
 
 [[rooms]]
 vnum = 13025
@@ -686,8 +686,8 @@ sanctuary, west into another foyer, and south to the church square."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13035
   flags = ["door"]
+  to_vnum = 13035
 
   [[rooms.exits]]
   direction = "south"
@@ -741,8 +741,8 @@ door to the north, a door to the south, and an exit to the west."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13033
   flags = ["door"]
+  to_vnum = 13033
 
   [[rooms.exits]]
   direction = "west"
@@ -778,8 +778,8 @@ vestibule, and one west into the sister-sanctuary."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13032
   flags = ["door"]
+  to_vnum = 13032
 
   [[rooms.exits]]
   direction = "west"
@@ -825,8 +825,8 @@ west wall.  There is a door north and an exit east."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13038
   flags = ["door"]
+  to_vnum = 13038
 
   [[rooms.exits]]
   direction = "east"
@@ -851,8 +851,8 @@ part of the garden, and one south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13037
   flags = ["door"]
+  to_vnum = 13037
 
 [[rooms]]
 vnum = 13039
@@ -907,8 +907,8 @@ garden, south into the sanctuary, and west into another garden corner."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13036
   flags = ["door"]
+  to_vnum = 13036
 
   [[rooms.exits]]
   direction = "west"
@@ -984,8 +984,8 @@ an exit to the south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13042
   flags = ["door"]
+  to_vnum = 13042
 
   [[rooms.exits]]
   direction = "south"
@@ -1038,8 +1038,8 @@ and one west into another portion of garden."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13034
   flags = ["door"]
+  to_vnum = 13034
 
   [[rooms.exits]]
   direction = "west"
@@ -1131,13 +1131,13 @@ the floor.  The exits are north, east, west, and down."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13051
   flags = ["door"]
+  to_vnum = 13051
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13052
   flags = ["door"]
+  to_vnum = 13052
 
   [[rooms.exits]]
   direction = "down"
@@ -1190,8 +1190,8 @@ the floor.  The exits are south, east, and west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13054
   flags = ["door"]
+  to_vnum = 13054
 
   [[rooms.exits]]
   direction = "south"
@@ -1199,8 +1199,8 @@ the floor.  The exits are south, east, and west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13055
   flags = ["door"]
+  to_vnum = 13055
 
 [[rooms]]
 vnum = 13054
@@ -1251,8 +1251,8 @@ to the west, and the staircase leading up."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13057
   flags = ["door"]
+  to_vnum = 13057
 
   [[rooms.exits]]
   direction = "up"
@@ -1272,8 +1272,8 @@ leeks, celery, and others.  The only exit is east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13056
   flags = ["door"]
+  to_vnum = 13056
 
 [[rooms]]
 vnum = 13058
@@ -1317,8 +1317,8 @@ vineyards."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13058
   flags = ["door"]
+  to_vnum = 13058
 
   [[rooms.exits]]
   direction = "south"
@@ -1606,8 +1606,8 @@ a walled courtyard, and south to more garden."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13114
   flags = ["door"]
+  to_vnum = 13114
 
   [[rooms.exits]]
   direction = "south"
@@ -1674,13 +1674,13 @@ office, and south to the street."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13077
   flags = ["door"]
+  to_vnum = 13077
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13076
   flags = ["door"]
+  to_vnum = 13076
 
   [[rooms.exits]]
   direction = "south"
@@ -1717,8 +1717,8 @@ the south wall.  Exits are north, south, east, and west."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13080
   flags = ["door"]
+  to_vnum = 13080
 
   [[rooms.exits]]
   direction = "east"
@@ -1726,13 +1726,13 @@ the south wall.  Exits are north, south, east, and west."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13075
   flags = ["door"]
+  to_vnum = 13075
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13165
   flags = ["door"]
+  to_vnum = 13165
 
 [[rooms]]
 vnum = 13078
@@ -1746,13 +1746,13 @@ west; there is a staircase leading up."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13079
   flags = ["door"]
+  to_vnum = 13079
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13076
   flags = ["door"]
+  to_vnum = 13076
 
   [[rooms.exits]]
   direction = "west"
@@ -1805,13 +1805,13 @@ the west; there is a staircase down; exits are north and south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13082
   flags = ["door"]
+  to_vnum = 13082
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13083
   flags = ["door"]
+  to_vnum = 13083
 
   [[rooms.exits]]
   direction = "west"
@@ -1863,8 +1863,8 @@ the east; there are exits north and south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13086
   flags = ["door"]
+  to_vnum = 13086
 
   [[rooms.exits]]
   direction = "east"
@@ -1872,8 +1872,8 @@ the east; there are exits north and south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13085
   flags = ["door"]
+  to_vnum = 13085
 
 [[rooms]]
 vnum = 13085
@@ -1938,8 +1938,8 @@ and a door to the north."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13089
   flags = ["door"]
+  to_vnum = 13089
 
   [[rooms.exits]]
   direction = "east"
@@ -2048,8 +2048,8 @@ The hallway bends north and west here.  To the east is a door."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13095
   flags = ["door"]
+  to_vnum = 13095
 
   [[rooms.exits]]
   direction = "west"
@@ -2083,8 +2083,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13097
   flags = ["door"]
+  to_vnum = 13097
 
   [[rooms.exits]]
   direction = "south"
@@ -2118,8 +2118,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13099
   flags = ["door"]
+  to_vnum = 13099
 
   [[rooms.exits]]
   direction = "south"
@@ -2153,8 +2153,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13101
   flags = ["door"]
+  to_vnum = 13101
 
   [[rooms.exits]]
   direction = "south"
@@ -2188,8 +2188,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13103
   flags = ["door"]
+  to_vnum = 13103
 
   [[rooms.exits]]
   direction = "south"
@@ -2242,8 +2242,8 @@ west to the street."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13089
   flags = ["door"]
+  to_vnum = 13089
 
   [[rooms.exits]]
   direction = "west"
@@ -2260,8 +2260,8 @@ you can exit south to the street."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13107
   flags = ["door"]
+  to_vnum = 13107
 
   [[rooms.exits]]
   direction = "east"
@@ -2304,8 +2304,8 @@ only other exit is north to a room."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13110
   flags = ["door"]
+  to_vnum = 13110
 
   [[rooms.exits]]
   direction = "east"
@@ -2344,18 +2344,18 @@ Exits are north, east, south, and west."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13113
   flags = ["door"]
+  to_vnum = 13113
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13114
   flags = ["door"]
+  to_vnum = 13114
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13112
   flags = ["door"]
+  to_vnum = 13112
 
   [[rooms.exits]]
   direction = "west"
@@ -2406,18 +2406,18 @@ there is an iron gate to the south."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13115
   flags = ["door"]
+  to_vnum = 13115
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13072
   flags = ["door"]
+  to_vnum = 13072
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13111
   flags = ["door"]
+  to_vnum = 13111
 
 [[rooms]]
 vnum = 13115
@@ -2429,8 +2429,8 @@ There are exits north, east, and west."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13116
   flags = ["door"]
+  to_vnum = 13116
 
   [[rooms.exits]]
   direction = "east"
@@ -2438,8 +2438,8 @@ There are exits north, east, and west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13114
   flags = ["door"]
+  to_vnum = 13114
 
 [[rooms]]
 vnum = 13116
@@ -2452,8 +2452,8 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13115
   flags = ["door"]
+  to_vnum = 13115
 
 [[rooms]]
 vnum = 13117
@@ -2466,8 +2466,8 @@ dining room, and west to more hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13118
   flags = ["door"]
+  to_vnum = 13118
 
   [[rooms.exits]]
   direction = "east"
@@ -2492,8 +2492,8 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13117
   flags = ["door"]
+  to_vnum = 13117
 
 [[rooms]]
 vnum = 13119
@@ -2506,8 +2506,8 @@ more hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13120
   flags = ["door"]
+  to_vnum = 13120
 
   [[rooms.exits]]
   direction = "east"
@@ -2528,8 +2528,8 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13117
   flags = ["door"]
+  to_vnum = 13117
 
 [[rooms]]
 vnum = 13121
@@ -2542,8 +2542,8 @@ more hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13122
   flags = ["door"]
+  to_vnum = 13122
 
   [[rooms.exits]]
   direction = "east"
@@ -2564,8 +2564,8 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13121
   flags = ["door"]
+  to_vnum = 13121
 
 [[rooms]]
 vnum = 13123
@@ -2599,8 +2599,8 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13123
   flags = ["door"]
+  to_vnum = 13123
 
 [[rooms]]
 vnum = 13125
@@ -2613,8 +2613,8 @@ hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13126
   flags = ["door"]
+  to_vnum = 13126
 
   [[rooms.exits]]
   direction = "west"
@@ -2631,8 +2631,8 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13125
   flags = ["door"]
+  to_vnum = 13125
 
 [[rooms]]
 vnum = 13127
@@ -2650,18 +2650,18 @@ There are doors east, south, and west; there is a hallway north."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13135
   flags = ["door"]
+  to_vnum = 13135
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13130
   flags = ["door"]
+  to_vnum = 13130
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13128
   flags = ["door"]
+  to_vnum = 13128
 
 [[rooms]]
 vnum = 13128
@@ -2677,13 +2677,13 @@ to the room.  There are exits north, east, and south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13117
   flags = ["door"]
+  to_vnum = 13117
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13127
   flags = ["door"]
+  to_vnum = 13127
 
   [[rooms.exits]]
   direction = "south"
@@ -2719,8 +2719,8 @@ is north."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13127
   flags = ["door"]
+  to_vnum = 13127
 
 [[rooms]]
 vnum = 13131
@@ -2736,8 +2736,8 @@ unafraid.  The exits are east and west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13136
   flags = ["door"]
+  to_vnum = 13136
 
   [[rooms.exits]]
   direction = "west"
@@ -2774,8 +2774,8 @@ located.  A rack of hay is located near the wide-swinging gate to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13137
   flags = ["door"]
+  to_vnum = 13137
 
 [[rooms]]
 vnum = 13134
@@ -2821,8 +2821,8 @@ door to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13127
   flags = ["door"]
+  to_vnum = 13127
 
   [[rooms.mob_resets]]
   vnum = 13011
@@ -2847,8 +2847,8 @@ continues north and south."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13131
   flags = ["door"]
+  to_vnum = 13131
 
   [[rooms.mob_resets]]
   vnum = 13019
@@ -2873,8 +2873,8 @@ the south is Unity Square."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13133
   flags = ["door"]
+  to_vnum = 13133
 
   [[rooms.mob_resets]]
   vnum = 13012
@@ -3012,8 +3012,8 @@ linens shop."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13075
   flags = ["door"]
+  to_vnum = 13075
 
   [[rooms.exits]]
   direction = "east"
@@ -3167,8 +3167,8 @@ continues north to Unity Square, and south toward Crystal Square."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13021
   flags = ["door"]
+  to_vnum = 13021
 
 [[rooms]]
 vnum = 13148
@@ -3355,8 +3355,8 @@ due north; the Willowtree Inn is directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13005
   flags = ["door"]
+  to_vnum = 13005
 
   [[rooms.exits]]
   direction = "east"
@@ -3377,8 +3377,8 @@ is directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13006
   flags = ["door"]
+  to_vnum = 13006
 
   [[rooms.exits]]
   direction = "east"
@@ -3403,8 +3403,8 @@ directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13009
   flags = ["door"]
+  to_vnum = 13009
 
   [[rooms.exits]]
   direction = "east"
@@ -3426,8 +3426,8 @@ directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13013
   flags = ["door"]
+  to_vnum = 13013
 
   [[rooms.exits]]
   direction = "east"
@@ -3478,8 +3478,8 @@ to the west is an entrance to the metalsmith shop."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13047
   flags = ["door"]
+  to_vnum = 13047
 
   [[rooms.exits]]
   direction = "south"
@@ -3487,8 +3487,8 @@ to the west is an entrance to the metalsmith shop."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13066
   flags = ["door"]
+  to_vnum = 13066
 
 [[rooms]]
 vnum = 13160
@@ -3526,8 +3526,8 @@ north and west is the city wall."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13106
   flags = ["door"]
+  to_vnum = 13106
 
   [[rooms.exits]]
   direction = "south"
@@ -3548,8 +3548,8 @@ Chapel."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13105
   flags = ["door"]
+  to_vnum = 13105
 
   [[rooms.exits]]
   direction = "south"
@@ -3569,8 +3569,8 @@ Avenue.  The wall continues on the west side; to the east is the Convent."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13088
   flags = ["door"]
+  to_vnum = 13088
 
   [[rooms.exits]]
   direction = "south"
@@ -3591,8 +3591,8 @@ Horn Tavern."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13087
   flags = ["door"]
+  to_vnum = 13087
 
   [[rooms.exits]]
   direction = "south"
@@ -3617,8 +3617,8 @@ DragonCove Inn."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13077
   flags = ["door"]
+  to_vnum = 13077
 
   [[rooms.exits]]
   direction = "south"
@@ -3883,8 +3883,8 @@ the southern city wall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13064
   flags = ["door"]
+  to_vnum = 13064
 
   [[rooms.exits]]
   direction = "east"
@@ -4093,8 +4093,8 @@ is a shop to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13015
   flags = ["door"]
+  to_vnum = 13015
 
   [[rooms.mob_resets]]
   vnum = 13024

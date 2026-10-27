@@ -120,9 +120,9 @@ and you can hear noise coming from within."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6513
   key = 6502
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 6500
@@ -218,9 +218,9 @@ and the path continues to the west and south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6510
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -276,9 +276,9 @@ continues north to the castle, and there is a door on the western wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6509
   key = 6502
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 6511
@@ -313,9 +313,9 @@ standing on end.  A sign says:
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6525
   key = 6514
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -351,9 +351,9 @@ to the east and north, and there is a door to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6505
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -527,8 +527,8 @@ the path continues to the west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 6523
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -581,8 +581,8 @@ to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 6521
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -626,8 +626,8 @@ of beds here, and there is a stench that is unbearable."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 2001
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 6511
@@ -660,9 +660,9 @@ up, and the door leads out of the castle to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6512
   key = 6514
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
@@ -682,8 +682,8 @@ probable that not many people have been in here for many months."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 6527
-  flags = ["door"]
 
 [[rooms]]
 vnum = 6527
@@ -695,13 +695,13 @@ a wine cellar at one time."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 6526
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 2065
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 6502
@@ -786,9 +786,9 @@ bedroom is to the north, and you can see stairs to the west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 6532
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -817,9 +817,9 @@ A note has been scrawled in lipstick on the mirror:
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 6531
   key = 6502
-  flags = ["closed"]
 
   [[rooms.obj_resets]]
   vnum = 6516
@@ -911,9 +911,9 @@ east, while the path continues to the north and west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6541
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -961,9 +961,9 @@ continues to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6540
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1048,9 +1048,9 @@ and the path continues to the south, east, and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6546
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1095,9 +1095,9 @@ can see some inscriptions, and you can exit to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6544
   key = 6502
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 6547

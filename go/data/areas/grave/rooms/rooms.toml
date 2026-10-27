@@ -9,9 +9,9 @@ grate is to the north and narrow gravel paths lead east and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3124
   key = 3121
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -91,8 +91,8 @@ through the graveyard and the chapel entrance is to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3405
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -120,8 +120,8 @@ the graveyard.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3607
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3604
@@ -137,8 +137,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3606
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 3610
@@ -162,8 +162,8 @@ the graveyard.  The path leads north and west.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3609
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3609
@@ -175,8 +175,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3608
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3603
@@ -200,8 +200,8 @@ the graveyard.  The path leads east and south.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3611
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3611
@@ -213,8 +213,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3610
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3603
@@ -242,8 +242,8 @@ the graveyard.  The path leads north and east.  A small shed is to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3613
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3604
@@ -259,8 +259,8 @@ gardening equipment.  The only exit appears to be through a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3612
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3600
@@ -304,8 +304,8 @@ the graveyard.  The path leads south and west.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3615
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3615
@@ -317,8 +317,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3614
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 3610
@@ -342,8 +342,8 @@ the graveyard.  The path leads north and south.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3617
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3617
@@ -355,8 +355,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3616
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3602
@@ -384,8 +384,8 @@ the graveyard.  The path leads north and east.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3619
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3619
@@ -397,8 +397,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3618
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 3610
@@ -422,8 +422,8 @@ the graveyard.  The path leads north and west.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3639
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3605
@@ -439,8 +439,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3638
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3603
@@ -464,8 +464,8 @@ the graveyard.  The path leads north and south.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3641
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3604
@@ -481,8 +481,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3640
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 3610
@@ -506,8 +506,8 @@ the graveyard.  The path leads east and south.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3643
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3643
@@ -519,8 +519,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3642
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 3603
@@ -544,8 +544,8 @@ the graveyard.  The path leads north and west.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3645
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3605
@@ -561,8 +561,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3644
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3601
@@ -590,8 +590,8 @@ the graveyard.  The path leads south and west.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3647
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3647
@@ -603,8 +603,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3646
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 3610
@@ -628,8 +628,8 @@ the graveyard.  The path leads north and east.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3649
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3649
@@ -641,8 +641,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3648
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3603
@@ -666,8 +666,8 @@ the graveyard.  The path leads south and west.  An old tomb is here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3651
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3651
@@ -679,8 +679,8 @@ The only exit appears to be up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3650
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3605

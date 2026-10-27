@@ -86,9 +86,9 @@ An old mirror hangs on the wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 3126
   key = 3301
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 6905

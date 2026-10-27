@@ -44,8 +44,8 @@ spaced widely apart in places, you can't seem to see what lays beyond."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11703
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11788
@@ -75,8 +75,8 @@ continues east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11702
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11783
@@ -160,8 +160,8 @@ large white house to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11736
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11784
@@ -191,8 +191,8 @@ glimmers above the doorway."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11790
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11779
@@ -249,8 +249,8 @@ over the pathway to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11717
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -299,8 +299,8 @@ opening onto a granite courtyard.  The path continues south."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 11780
   flags = ["door"]
+  to_vnum = 11780
 
   [[rooms.mob_resets]]
   vnum = 11785
@@ -474,9 +474,9 @@ lead up to double silver doors."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof"]
   to_vnum = 11716
   key = 11705
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
@@ -509,9 +509,9 @@ of a circle bisected by a cross."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof"]
   to_vnum = 11715
   key = 11705
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11782
@@ -536,13 +536,13 @@ and quiet."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11770
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11709
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11777
@@ -599,8 +599,8 @@ symbol above the archway."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11720
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -631,8 +631,8 @@ south, double silver doors are set into the wall."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11719
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -673,8 +673,8 @@ above the table, encasing the entire top."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11723
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -702,8 +702,8 @@ on a spit."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11722
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11711
@@ -771,8 +771,8 @@ A spiral stairwell winds into the light above."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11727
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -798,18 +798,18 @@ half-written documents."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11728
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11729
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11726
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11700
@@ -843,8 +843,8 @@ white and multicolored steam, which accounts for the stench.  Chemists.."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11727
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11702
@@ -880,8 +880,8 @@ the length of the north and east walls."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11727
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11712
@@ -900,23 +900,23 @@ portion of the hall, leading up and down."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11734
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11733
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11732
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11731
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -938,8 +938,8 @@ silver is visible above the door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11706
@@ -961,8 +961,8 @@ in the wood above the northern door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11708
@@ -985,8 +985,8 @@ against the redwood framing the doorway to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11707
@@ -1008,8 +1008,8 @@ doorway to the south, a silver inscription gleams against the wood."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11705
@@ -1073,8 +1073,8 @@ An archway opens north, and a hallway leads into the house to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11706
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1300,13 +1300,13 @@ floor."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11750
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11746
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1332,8 +1332,8 @@ inscription is engraved in the center of the door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11745
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11719
@@ -1353,8 +1353,8 @@ oaken door opens northward, and an ashwood door opens west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11749
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1362,8 +1362,8 @@ oaken door opens northward, and an ashwood door opens west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11748
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11748
@@ -1378,8 +1378,8 @@ door is a short inscription."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11747
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11720
@@ -1410,8 +1410,8 @@ to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11747
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11721
@@ -1437,18 +1437,18 @@ the east, and a pair of golden doors opens north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11751
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11752
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11745
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11751
@@ -1463,8 +1463,8 @@ inscription across the center of the doors."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11750
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11714
@@ -1494,8 +1494,8 @@ curve of the tunnel floor probably distorts it to seem farther than it is."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11750
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11753
@@ -1509,8 +1509,8 @@ stone manor."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11754
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1531,8 +1531,8 @@ carved into the stone above the archway."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11753
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11732
@@ -1646,9 +1646,9 @@ designed to display some large object."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11760
   key = 11701
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11735
@@ -1676,15 +1676,15 @@ betraying the dangerous strength of their maker."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11761
   key = 11702
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11759
   key = 11701
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11736
@@ -1707,9 +1707,9 @@ trails of blood streaking the floor between the doors and the altar."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11760
   key = 11702
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11723
@@ -1767,8 +1767,8 @@ The corridor continues east and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11765
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1776,8 +1776,8 @@ The corridor continues east and west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11764
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1797,8 +1797,8 @@ glitters reddish in the light."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11763
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11729
@@ -1824,8 +1824,8 @@ from above the tall oak door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11763
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11730
@@ -1852,18 +1852,18 @@ skull, surrounded by gold lettering."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11768
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11769
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11767
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11725
@@ -1886,8 +1886,8 @@ is a short inscription in gold."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11766
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11731
@@ -1910,8 +1910,8 @@ mahogany door to the south, somewhow untouched the heat."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11766
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11728
@@ -1934,8 +1934,8 @@ an inscription carved into the stone archway framing the doorway."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11766
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11724
@@ -1982,8 +1982,8 @@ entrance door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11717
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11771
@@ -2035,8 +2035,8 @@ Benches line the north, west, and east walls, and an archway leads south."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11774
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11774
@@ -2049,13 +2049,13 @@ for knives, line the upper northern wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11773
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11742
@@ -2077,23 +2077,23 @@ a hawk, and a dagger among them."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11776
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11778
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11774
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11779
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11741
@@ -2115,13 +2115,13 @@ The door itself is flush with the wall and nearly invisible."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11777
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11744
@@ -2151,13 +2151,13 @@ Resting on a low table in the center of the room is a glass case containing
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11778
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11776
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11740
@@ -2187,13 +2187,13 @@ glittering against the dark stone."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11777
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11745
@@ -2224,8 +2224,8 @@ in the darkness, muffles all sound to mere whispers."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11738
@@ -2278,13 +2278,13 @@ carved oaken door opens into the large house to the west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 11710
   flags = ["door"]
+  to_vnum = 11710
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11781
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11760
@@ -2317,8 +2317,8 @@ opens east.  The hallway continues north and south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11780
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2326,8 +2326,8 @@ opens east.  The hallway continues north and south."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11782
@@ -2343,8 +2343,8 @@ doorway is the Xaek crest over a crossed shield and sword."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11783
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11761
@@ -2366,8 +2366,8 @@ out of the arena to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11782
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11756
@@ -2406,23 +2406,23 @@ west, and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11785
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11781
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11787
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11786
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11761
@@ -2461,8 +2461,8 @@ in the room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11754
@@ -2484,8 +2484,8 @@ an inscription in burnished bronze."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11753
@@ -2506,8 +2506,8 @@ the north.  Engraved above the door is an inscription in bronze."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11755
@@ -2530,8 +2530,8 @@ carved into the stone."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11789
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2557,8 +2557,8 @@ granite doors in the south wall."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11788
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11751
@@ -2592,8 +2592,8 @@ north.  A corridor exits the hall to the south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11707
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2620,13 +2620,13 @@ door leads east and a glass door south.  The corridor continues west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11792
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11793
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2645,8 +2645,8 @@ with a soft glow.  You feel healthy and at peace here."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11791
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11765
@@ -2681,8 +2681,8 @@ A glass door leads into the house to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11791
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2741,8 +2741,8 @@ upwards towards a pair of double white doors above."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11796
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2750,18 +2750,18 @@ upwards towards a pair of double white doors above."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11798
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11797
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11799
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11772
@@ -2780,8 +2780,8 @@ the door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11769
@@ -2802,8 +2802,8 @@ Beneath the leaf, you notice an inscription in gold."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11768
@@ -2826,8 +2826,8 @@ the doorway, you notice a short inscription in gold."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11770
@@ -2849,8 +2849,8 @@ Double white oaken doors open onto the stairwell to the floor below."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11771

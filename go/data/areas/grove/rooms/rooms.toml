@@ -299,8 +299,8 @@ noon."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8910
-  flags = ["door"]
 
 [[rooms]]
 vnum = 8910
@@ -314,13 +314,13 @@ wall."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8909
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8911
-  flags = ["door"]
 
 [[rooms]]
 vnum = 8911
@@ -333,13 +333,13 @@ The hallway leads south, and there is a door in the eastern wall."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8910
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8912
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -366,8 +366,8 @@ blinds in front of the large east window you can see the edge of the grove."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8911
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 8901
@@ -388,18 +388,18 @@ coat-of-arms adorn the walls here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8914
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8915
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8916
-  flags = ["door"]
 
 [[rooms]]
 vnum = 8914
@@ -414,8 +414,8 @@ pulled away from the wide windows, to reveal a nice view towards the grove."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8913
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8910
@@ -444,13 +444,13 @@ than meticulous housekeeper... There are doors to the north and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8913
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8918
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 8902
@@ -477,13 +477,13 @@ short corridor to the greenhouse."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8913
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8918
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -508,8 +508,8 @@ terrace."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8919
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8910
@@ -531,18 +531,18 @@ west there is a wide double door opening out onto the sunlit terrace."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8916
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8915
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8919
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8909
@@ -566,13 +566,13 @@ together with a matched set of chairs."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8917
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8918
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"

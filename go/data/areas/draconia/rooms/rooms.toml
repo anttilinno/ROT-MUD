@@ -8,9 +8,9 @@ it is raining.  You think it might be a good idea to turn back into the grove.""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 2202
   key = 2231
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -90,8 +90,8 @@ You trudge down the hallway.  You notice doors to the east and west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 2205
   flags = ["door"]
+  to_vnum = 2205
 
   [[rooms.exits]]
   direction = "south"
@@ -99,8 +99,8 @@ You trudge down the hallway.  You notice doors to the east and west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 2206
   flags = ["door"]
+  to_vnum = 2206
 
   [[rooms.mob_resets]]
   vnum = 2201
@@ -136,14 +136,14 @@ and a small group of dragon hatchlings are fighting over a bone."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 2223
   key = 2297
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 2204
   flags = ["door"]
+  to_vnum = 2204
 
   [[rooms.mob_resets]]
   vnum = 2200
@@ -170,13 +170,13 @@ This room is covered with dust, it looks as if no one has been here in ages."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 2204
   flags = ["door"]
+  to_vnum = 2204
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 2208
   flags = ["door"]
+  to_vnum = 2208
 
   [[rooms.mob_resets]]
   vnum = 2200
@@ -216,14 +216,14 @@ gargantuan hydra.  How fast can you climb UP stairs?"""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 2209
   key = 2234
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 2206
   flags = ["door"]
+  to_vnum = 2206
 
   [[rooms.mob_resets]]
   vnum = 2226
@@ -256,15 +256,15 @@ safely.  The west wall seems to have a large door made entirely of ruby."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 2208
   key = 2234
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2218
   key = 2232
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 2210
@@ -313,8 +313,8 @@ don't seem happy to see you ..."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 2212
   flags = ["door"]
+  to_vnum = 2212
 
   [[rooms.exits]]
   direction = "south"
@@ -401,9 +401,9 @@ You are continuing down the hall.  To the east and west you see ornate doors."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 2214
   key = 2240
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -411,9 +411,9 @@ You are continuing down the hall.  To the east and west you see ornate doors."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 2215
   key = 2233
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2214
@@ -425,9 +425,9 @@ sitting at a table, studying."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 2213
   key = 2240
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2203
@@ -487,9 +487,9 @@ occupant is deep in thought."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 2213
   key = 2233
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2216
@@ -601,9 +601,9 @@ what awaits you here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2209
   key = 2232
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -696,8 +696,8 @@ strange coffin lying against the wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 2232
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2202
@@ -730,9 +730,9 @@ dragons appear to be the victors."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 2205
   key = 2297
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2224
@@ -780,8 +780,8 @@ dragon.  You notice a trap door in the floor."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 2227
   flags = ["door"]
+  to_vnum = 2227
 
   [[rooms.mob_resets]]
   vnum = 2221
@@ -813,8 +813,8 @@ yourself wishing you were back in Midgaard."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 2226
   flags = ["door"]
+  to_vnum = 2226
 
 [[rooms]]
 vnum = 2228
@@ -838,9 +838,9 @@ of dragons.  You see a sign on the door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2230
   key = 2299
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -855,9 +855,9 @@ You have entered a huge lair.  You feel that something big lives here or at leas
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2229
   key = 2299
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2225
@@ -885,9 +885,9 @@ dragon.  You suddenly realize that you have SERIOUS problems..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof"]
   to_vnum = 2243
   key = 2241
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2220
@@ -1134,9 +1134,9 @@ fairy tales.  Well, if you're scared, you can always go down the mountain."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2231
   key = 2241
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"

@@ -485,8 +485,7 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 		for _, flag := range ed.Flags {
 			switch strings.ToLower(flag) {
 			case "door":
-				exit.Flags.Set(types.ExitIsDoor)
-				exit.Flags.Set(types.ExitClosed) // Doors are closed by default
+				exit.Flags.Set(types.ExitIsDoor) // open unless "closed" is also set
 			case "closed":
 				exit.Flags.Set(types.ExitIsDoor) // Closed implies door
 				exit.Flags.Set(types.ExitClosed)
@@ -502,6 +501,7 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 			}
 		}
 
+		exit.ResetFlags = exit.Flags
 		room.SetExit(dir, exit)
 	}
 

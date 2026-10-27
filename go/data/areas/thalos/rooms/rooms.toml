@@ -254,8 +254,8 @@ into. The street continues north and south and buildings line the street."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5244
   flags = ["door"]
+  to_vnum = 5244
 
   [[rooms.exits]]
   direction = "south"
@@ -1553,8 +1553,8 @@ around you.  Trails lead in all directions."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 5268
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -1579,8 +1579,8 @@ vomit."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 5267
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1617,8 +1617,8 @@ one back up north.  All around you, you see skeletons."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 5100
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 5110

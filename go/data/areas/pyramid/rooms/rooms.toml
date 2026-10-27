@@ -181,8 +181,8 @@ cardinal directions.
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 8708
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8702
@@ -213,8 +213,8 @@ stones of the ceiling."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 8706
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -245,8 +245,8 @@ inscriptions."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8710
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -280,8 +280,8 @@ at you, searching for things to burn.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8709
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -506,9 +506,9 @@ source is too dim to see exactly what it is."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8723
   key = 8723
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
@@ -528,9 +528,9 @@ on all sides."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8722
   key = 8723
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8706
@@ -629,9 +629,9 @@ except a large stone coffin that leans against the western wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8727
   key = 8712
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8702
@@ -656,8 +656,8 @@ of dust.  Some inscriptions are carved into the wall here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8726
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
@@ -690,8 +690,8 @@ and ceiling of this small landing are covered with strange hieroglyphics."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8730
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -710,8 +710,8 @@ peculiar pictorial form of written language that you don't understand.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8729
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -736,8 +736,8 @@ A low pedestal rests here.  You see something written into the face of it."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 8732
-  flags = ["door"]
 
 [[rooms]]
 vnum = 8732
@@ -748,8 +748,8 @@ You stand in an empty tomb, a cubicle no more then ten feet to a side."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 8731
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8717
@@ -1054,8 +1054,8 @@ of others in the dust."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 8744
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8705
@@ -1081,13 +1081,13 @@ final resting place of the mighty pharoahs of this land."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8745
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 8743
-  flags = ["door"]
 
 [[rooms]]
 vnum = 8745
@@ -1101,8 +1101,8 @@ lie before your feet."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8744
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8710
@@ -1451,9 +1451,9 @@ every other direction."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8759
   key = 8717
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8716

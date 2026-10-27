@@ -675,8 +675,8 @@ west and east paths surround this building."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7834
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -780,8 +780,8 @@ and the east, and the exit is to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7829
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7835
@@ -1010,14 +1010,14 @@ smooth spheric object in the center of the room."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7847
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7846
   key = 7804
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7807
@@ -1056,15 +1056,15 @@ You are in a storage room.  Many useless (to you) items fill this room."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7848
   key = 7804
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7845
   key = 7804
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 7809
@@ -1105,13 +1105,13 @@ line the shelves, but nothing of interest is here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 7848
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7845
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7806
@@ -1133,14 +1133,14 @@ first floor."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7846
   key = 7804
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 7847
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1812,8 +1812,8 @@ the entrance to the shack is to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 7878
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7871
@@ -1965,13 +1965,13 @@ cooking over it.  You see nothing valuable."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 7870
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 7879
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7810
@@ -1991,8 +1991,8 @@ quite warm down here."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 7878
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7880
@@ -2008,15 +2008,15 @@ room is filled with a smell close to that of burning tar."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7882
   key = 7805
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7881
   key = 7805
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7809
@@ -2038,9 +2038,9 @@ a magical aura."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7880
   key = 7805
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7811
@@ -2068,9 +2068,9 @@ whole room radiates with a magical aura."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7880
   key = 7805
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7812

@@ -208,8 +208,8 @@ The dirt path you are on continues south and west around the gazebo."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11615
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11605
@@ -448,8 +448,8 @@ is audible to the north, where the tunnel widens into a large cave."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11606
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11616
@@ -733,8 +733,8 @@ lake continues south."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11627
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11617
@@ -752,8 +752,8 @@ from the rest of the lake."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11626
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11618
@@ -883,8 +883,8 @@ is set into the east wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11656
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -909,8 +909,8 @@ a dark corridor.  A solid black door is set into the west wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11636
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11625
@@ -939,8 +939,8 @@ where spattered blood has dried."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11635
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11635
@@ -1058,8 +1058,8 @@ south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11651
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1083,8 +1083,8 @@ lead up to a pair of bloodstained bronze doors."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 11645
   flags = ["door"]
+  to_vnum = 11645
 
   [[rooms.exits]]
   direction = "east"
@@ -1121,8 +1121,8 @@ dark stone, and the hollow eyesockets seem to glare accusingly at you."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 11649
   flags = ["door"]
+  to_vnum = 11649
 
 [[rooms]]
 vnum = 11643
@@ -1189,8 +1189,8 @@ mounted on either side of the altar fill the room with a cloying smoke."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 11641
   flags = ["door"]
+  to_vnum = 11641
 
   [[rooms.mob_resets]]
   vnum = 11630
@@ -1281,8 +1281,8 @@ A skeleton is embedded in the rock below."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 11642
   flags = ["door"]
+  to_vnum = 11642
 
 [[rooms]]
 vnum = 11650
@@ -1326,8 +1326,8 @@ north wall."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11640
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11626
@@ -1358,8 +1358,8 @@ Foul odors and smoke drift into the room from the doorway to the north."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11654
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11649
@@ -1417,8 +1417,8 @@ in from above, where a wide trapdoor is set into the ceiling."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11652
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1469,13 +1469,13 @@ ceiling.  An oaken door opens into the west wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11634
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11657
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11625
@@ -1491,8 +1491,8 @@ A trapdoor is set into one corner, nearly invisible in the shadows."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11656
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11639
@@ -1665,8 +1665,8 @@ grey shrubs grow from between huge, stacked boulders."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11666
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1682,8 +1682,8 @@ opening to the south.  The cave darkens to the west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11665
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1899,8 +1899,8 @@ to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11681
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1986,8 +1986,8 @@ an impressive oak tree rises from the pines to the south."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11678
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11657
@@ -2016,8 +2016,8 @@ a dark chamber."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11677
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11659
@@ -2044,8 +2044,8 @@ the chamber to the west."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11680
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11660
@@ -2082,8 +2082,8 @@ corner to form a large nest."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11679
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11663
@@ -2099,8 +2099,8 @@ visible far above."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11674
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -2161,8 +2161,8 @@ into the void to the north.  The brick road continues west to a crossroads."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 11695
   flags = ["door"]
+  to_vnum = 11695
 
   [[rooms.exits]]
   direction = "west"

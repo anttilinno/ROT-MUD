@@ -75,8 +75,8 @@ You see a large gateway to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10405
-  flags = ["door"]
 
 [[rooms]]
 vnum = 10405
@@ -94,8 +94,8 @@ A large black iron gates tower over you to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10404
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -403,8 +403,8 @@ You see a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10417
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -435,8 +435,8 @@ The door to the bedroom is to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10416
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10403
@@ -808,8 +808,8 @@ The steel bars to the cell are to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10443
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10422
@@ -851,8 +851,8 @@ To the south you see the steel bars of a cell."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10445
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -900,8 +900,8 @@ The steel bars to the cell are to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10447
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10423
@@ -951,13 +951,13 @@ The hallway contines to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10440
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10449
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -978,8 +978,8 @@ The steel bars to the cell are to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10439
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10421
@@ -1047,8 +1047,8 @@ The bars to a cell are to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10433
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1088,8 +1088,8 @@ The steel bars to the cell are to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10435
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10421
@@ -1132,8 +1132,8 @@ You see bars to a cell to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10437
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1173,8 +1173,8 @@ The steel bars to the cell are to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10439
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10424
@@ -1236,8 +1236,8 @@ There is a dark stairway down in the corner of the room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10462
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1479,8 +1479,8 @@ construction plaque that reads, "4th DEMONsion Contruction""""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10452
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10440
@@ -1812,8 +1812,8 @@ There is a freezer door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10476
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1849,8 +1849,8 @@ There is a freezer door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10475
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10437
@@ -1913,8 +1913,8 @@ There is a steel door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10480
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1945,8 +1945,8 @@ To the west is a steel door."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10479
-  flags = ["door"]
 
 [[rooms]]
 vnum = 10481
@@ -2001,8 +2001,8 @@ To the east you see a freezer door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10484
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2037,8 +2037,8 @@ There is a freezer door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10483
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10436
@@ -2303,8 +2303,8 @@ There is a stone door to the east and a prayer room to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10497
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2326,8 +2326,8 @@ You see a stone door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10496
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10445
@@ -2384,8 +2384,8 @@ A glass door is to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10500
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2409,13 +2409,13 @@ There is a sign posted next to the stairs."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10510
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10499
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -2627,8 +2627,8 @@ To the north is a steel door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10500
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2812,8 +2812,8 @@ what this guy eats..."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 10526
   flags = ["door"]
+  to_vnum = 10526
 
 [[rooms]]
 vnum = 10518
@@ -3040,8 +3040,8 @@ you see? Nah...couldn't be..."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 10517
   flags = ["door"]
+  to_vnum = 10517
 
   [[rooms.mob_resets]]
   vnum = 10455
@@ -3316,8 +3316,8 @@ You see a maintenance hatch to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10538
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10465
@@ -3345,8 +3345,8 @@ A stairway to the control room is to the north."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10537
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10464

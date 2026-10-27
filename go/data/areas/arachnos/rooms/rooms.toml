@@ -1035,8 +1035,8 @@ the webwork.  Perhaps lists of victims?  You can't tell."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 6399
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1056,8 +1056,8 @@ to her beautiful silken body."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 6392
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 6314

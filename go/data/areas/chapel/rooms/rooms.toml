@@ -8,14 +8,14 @@ do not let much light through.  A few rows of worn wooden benches stand here."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3604
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3421
   key = 3430
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 3405
@@ -38,9 +38,9 @@ You sense even more danger coming from below but are urged onward ..."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3449
   key = 3411
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -133,8 +133,8 @@ blood stains, but their color seems a little wrong."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3413
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3413
@@ -149,13 +149,13 @@ lies overturned and smashed.  Doors lead to the south and to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3412
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 3414
   flags = ["door"]
+  to_vnum = 3414
 
 [[rooms]]
 vnum = 3414
@@ -170,8 +170,8 @@ doorway has been hewn to the east."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 3413
   flags = ["door"]
+  to_vnum = 3413
 
   [[rooms.exits]]
   direction = "east"
@@ -226,8 +226,8 @@ The passage slopes upward here and also continues to the north."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 3418
   flags = ["door"]
+  to_vnum = 3418
 
 [[rooms]]
 vnum = 3417
@@ -269,8 +269,8 @@ leading down.  The Ghost of Cristis the Kind stands here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3416
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3413
@@ -331,14 +331,14 @@ doors lead off to the south and a large stone staircase leads up."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3422
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3405
   key = 3410
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 3422
@@ -352,8 +352,8 @@ has been kept well by acolytes, there remains a stench of the undead."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3421
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -361,8 +361,8 @@ has been kept well by acolytes, there remains a stench of the undead."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3423
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -381,8 +381,8 @@ turned to the dark ways in his dying years ... and died an evil man."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3422
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -470,8 +470,8 @@ door and to the east and west the hall continues."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3428
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -489,8 +489,8 @@ A small opening has been shaped carefully to the east."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3427
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -667,8 +667,8 @@ door leading north and the hallway continues west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3409
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -902,9 +902,9 @@ description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3408
   key = 3411
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1136,9 +1136,9 @@ lies in the center of the room ... waiting for YOU!"""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3475
   key = 3419
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 3404
@@ -1222,8 +1222,8 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3470
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1420,7 +1420,7 @@ up out of the coffin, or you can wait for here the real occupant to join you."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3460
   key = 3419
-  flags = ["door"]
 

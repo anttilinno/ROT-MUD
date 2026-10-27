@@ -26,8 +26,8 @@ Some guys are sitting off to the left whispering."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 19902
   flags = ["door"]
+  to_vnum = 19902
 
   [[rooms.exits]]
   direction = "south"
@@ -43,8 +43,8 @@ the back of the room leading up to the next level of the tower."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 19901
   flags = ["door"]
+  to_vnum = 19901
 
   [[rooms.exits]]
   direction = "up"
@@ -135,8 +135,8 @@ It is slightly drafty up here."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19907
   flags = ["door"]
+  to_vnum = 19907
 
   [[rooms.exits]]
   direction = "west"
@@ -165,8 +165,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19906
   flags = ["door"]
+  to_vnum = 19906
 
   [[rooms.mob_resets]]
   vnum = 19927
@@ -351,8 +351,8 @@ The wind is picking up."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19915
   flags = ["door"]
+  to_vnum = 19915
 
   [[rooms.mob_resets]]
   vnum = 19903
@@ -377,8 +377,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19914
   flags = ["door"]
+  to_vnum = 19914
 
   [[rooms.mob_resets]]
   vnum = 19928
@@ -560,8 +560,8 @@ A draft chills you to the bones."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19923
   flags = ["door"]
+  to_vnum = 19923
 
   [[rooms.exits]]
   direction = "west"
@@ -590,8 +590,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19922
   flags = ["door"]
+  to_vnum = 19922
 
   [[rooms.mob_resets]]
   vnum = 19928
@@ -781,8 +781,8 @@ Chilling gusts of wind slow your progress."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19931
   flags = ["door"]
+  to_vnum = 19931
 
   [[rooms.mob_resets]]
   vnum = 19905
@@ -807,8 +807,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19930
   flags = ["door"]
+  to_vnum = 19930
 
   [[rooms.mob_resets]]
   vnum = 19929
@@ -994,8 +994,8 @@ You're being sprayed by a thick fog, it feels so good!"""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19939
   flags = ["door"]
+  to_vnum = 19939
 
   [[rooms.exits]]
   direction = "west"
@@ -1024,8 +1024,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19938
   flags = ["door"]
+  to_vnum = 19938
 
   [[rooms.mob_resets]]
   vnum = 19929
@@ -1220,8 +1220,8 @@ Setzer's corpse is here, slowly rotting."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19947
   flags = ["door"]
+  to_vnum = 19947
 
   [[rooms.mob_resets]]
   vnum = 19907
@@ -1246,8 +1246,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19946
   flags = ["door"]
+  to_vnum = 19946
 
   [[rooms.mob_resets]]
   vnum = 19929
@@ -1436,8 +1436,8 @@ The wind at this hight is deafening... Hell you're 140 feet up!"""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19955
   flags = ["door"]
+  to_vnum = 19955
 
   [[rooms.exits]]
   direction = "west"
@@ -1466,8 +1466,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19954
   flags = ["door"]
+  to_vnum = 19954
 
   [[rooms.mob_resets]]
   vnum = 19929
@@ -1657,8 +1657,8 @@ You're being soaked with rain!"""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19963
   flags = ["door"]
+  to_vnum = 19963
 
   [[rooms.mob_resets]]
   vnum = 19909
@@ -1683,8 +1683,8 @@ thing.  Still very powerful, he towers over you in a manacing manner."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19962
   flags = ["door"]
+  to_vnum = 19962
 
   [[rooms.mob_resets]]
   vnum = 19930
@@ -1870,8 +1870,8 @@ The wind is mauling you with raindrops going at 200 Kph!"""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19971
   flags = ["door"]
+  to_vnum = 19971
 
   [[rooms.exits]]
   direction = "west"
@@ -1900,8 +1900,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19970
   flags = ["door"]
+  to_vnum = 19970
 
   [[rooms.mob_resets]]
   vnum = 19930
@@ -2090,8 +2090,8 @@ At 200 feet up your nose & ears start to bleed, and the air is getting thin."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19979
   flags = ["door"]
+  to_vnum = 19979
 
   [[rooms.mob_resets]]
   vnum = 19911
@@ -2116,8 +2116,8 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19978
   flags = ["door"]
+  to_vnum = 19978
 
   [[rooms.mob_resets]]
   vnum = 19930
@@ -2462,8 +2462,8 @@ and ice are bolting through the clouds where lighting normally should be..."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 19993
   flags = ["door"]
+  to_vnum = 19993
 
   [[rooms.mob_resets]]
   vnum = 19913
@@ -2488,8 +2488,8 @@ asking for restores is the way {1*not*{0 to get one!  }:>"""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 19992
   flags = ["door"]
+  to_vnum = 19992
 
   [[rooms.mob_resets]]
   vnum = 19926

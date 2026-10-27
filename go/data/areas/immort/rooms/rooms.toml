@@ -53,8 +53,8 @@ upward..."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1209
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -62,8 +62,8 @@ upward..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1208
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -85,8 +85,8 @@ There are things here that you never even imagined in your wildest dreams!"""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1218
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1205
@@ -130,8 +130,8 @@ from one angle, or the wine-dark sea from another."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1217
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1208
@@ -148,8 +148,8 @@ worn by time into a shape similar to a comfortable chair."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1203
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1209
@@ -166,8 +166,8 @@ are east."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1203
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1210
@@ -219,8 +219,8 @@ of veinous marble.  A bloodstone seat awaits the true paragon of Romanity."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1218
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1212
@@ -340,8 +340,8 @@ up there..."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1207
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -371,8 +371,8 @@ sort of exit above you, but you do not know where it leads..."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1211
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -380,8 +380,8 @@ sort of exit above you, but you do not know where it leads..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1204
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"

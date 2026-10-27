@@ -10,8 +10,8 @@ The exit is to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 616
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 609
@@ -545,8 +545,8 @@ to the west.  The main exit is south."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 600
-  flags = ["door"]
 
 [[rooms]]
 vnum = 617
@@ -587,8 +587,8 @@ coop south of you.  The dirt road continues north and west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 619
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -604,8 +604,8 @@ makes you gasp.  The exit is north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 618
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 612
@@ -778,9 +778,9 @@ from home to home."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 626
   key = 665
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -788,9 +788,9 @@ from home to home."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 629
   key = 665
-  flags = ["door"]
 
 [[rooms]]
 vnum = 626
@@ -808,9 +808,9 @@ west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 625
   key = 665
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -864,9 +864,9 @@ east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 625
   key = 665
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -926,8 +926,8 @@ continues north and south.  There are many people walking along the streets."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 633
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -935,8 +935,8 @@ continues north and south.  There are many people walking along the streets."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 635
-  flags = ["door"]
 
 [[rooms]]
 vnum = 633
@@ -952,8 +952,8 @@ this room.  There is a bedroom south of here.  The exit is west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 632
-  flags = ["door"]
 
 [[rooms]]
 vnum = 634
@@ -977,8 +977,8 @@ this room.  There is a bedroom south of here.  The exit is east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 632
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1015,8 +1015,8 @@ walking along the streets."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 638
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1024,8 +1024,8 @@ walking along the streets."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 640
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 600
@@ -1065,8 +1065,8 @@ this room.  There is a bedroom south of here.  The exit is west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 637
-  flags = ["door"]
 
 [[rooms]]
 vnum = 639
@@ -1090,8 +1090,8 @@ this room.  There is a bedroom south of here.  The exit is east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 637
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1120,9 +1120,9 @@ south.  There are quite a few people on this intersection."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 643
   key = 665
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1172,9 +1172,9 @@ the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 642
   key = 665
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -2564,9 +2564,9 @@ to the west, while the citadel itself is to the east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 699
   key = 651
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 634
@@ -2651,9 +2651,9 @@ back west to Raff Way."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 698
   key = 651
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"

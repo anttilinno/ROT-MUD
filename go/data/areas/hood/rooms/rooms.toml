@@ -712,8 +712,8 @@ There is a wooden door barely on the hinges to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 2125
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2103
@@ -765,8 +765,8 @@ to a warehouse to the west.  The warehouse LOOKS abandoned. . ."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 2124
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2105
@@ -1493,8 +1493,8 @@ the east through a rusty metal door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 2149
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2110
@@ -1547,8 +1547,8 @@ muffled sounds of screams coming from the chapel."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 2148
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2105

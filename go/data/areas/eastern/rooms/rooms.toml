@@ -923,9 +923,9 @@ narrows out into a tunnel to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 5066
   key = 5024
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 5005
@@ -949,9 +949,9 @@ feel your way along the walls."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 5065
   key = 5024
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"

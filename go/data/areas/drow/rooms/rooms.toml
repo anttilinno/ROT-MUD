@@ -8,8 +8,8 @@ over physical power greatly."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5121
   flags = ["door"]
+  to_vnum = 5121
 
   [[rooms.mob_resets]]
   vnum = 5105
@@ -33,8 +33,8 @@ a building."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5120
   flags = ["door"]
+  to_vnum = 5120
 
   [[rooms.exits]]
   direction = "east"
@@ -78,8 +78,8 @@ north is a relatively small house."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5124
   flags = ["door"]
+  to_vnum = 5124
 
   [[rooms.exits]]
   direction = "south"
@@ -103,8 +103,8 @@ dull by drow standards and rather small as well."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5123
   flags = ["door"]
+  to_vnum = 5123
 
   [[rooms.mob_resets]]
   vnum = 5102
@@ -226,8 +226,8 @@ To the north is a door."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5150
   flags = ["door"]
+  to_vnum = 5150
 
   [[rooms.exits]]
   direction = "east"
@@ -287,8 +287,8 @@ To the south is a door."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5133
   flags = ["door"]
+  to_vnum = 5133
 
   [[rooms.exits]]
   direction = "west"
@@ -305,8 +305,8 @@ for neatness."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5132
   flags = ["door"]
+  to_vnum = 5132
 
   [[rooms.mob_resets]]
   vnum = 5101
@@ -363,8 +363,8 @@ of the purest adamantite with gold trim. Mosaics line the walls."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5137
   flags = ["door"]
+  to_vnum = 5137
 
   [[rooms.exits]]
   direction = "down"
@@ -381,8 +381,8 @@ floor for the mages to sleep on. the only door is to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5136
   flags = ["door"]
+  to_vnum = 5136
 
 [[rooms]]
 vnum = 5138
@@ -399,8 +399,8 @@ too the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5139
   flags = ["door"]
+  to_vnum = 5139
 
   [[rooms.exits]]
   direction = "down"
@@ -417,8 +417,8 @@ in."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5138
   flags = ["door"]
+  to_vnum = 5138
 
 [[rooms]]
 vnum = 5140
@@ -430,8 +430,8 @@ To the north are a set of large golden doors."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5141
   flags = ["door"]
+  to_vnum = 5141
 
   [[rooms.exits]]
   direction = "up"
@@ -452,8 +452,8 @@ an altar."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5140
   flags = ["door"]
+  to_vnum = 5140
 
   [[rooms.exits]]
   direction = "west"
@@ -473,8 +473,8 @@ is a door while to the north is an altar."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5146
   flags = ["door"]
+  to_vnum = 5146
 
   [[rooms.exits]]
   direction = "south"
@@ -543,8 +543,8 @@ sacrificed. You notice there are no guards around."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5147
   flags = ["door"]
+  to_vnum = 5147
 
   [[rooms.exits]]
   direction = "west"
@@ -561,8 +561,8 @@ the room since you were obviously too late to save the slave."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5146
   flags = ["door"]
+  to_vnum = 5146
 
 [[rooms]]
 vnum = 5148
@@ -579,8 +579,8 @@ to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5149
   flags = ["door"]
+  to_vnum = 5149
 
   [[rooms.mob_resets]]
   vnum = 5109
@@ -600,8 +600,8 @@ treasure being rather bare."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5148
   flags = ["door"]
+  to_vnum = 5148
 
 [[rooms]]
 vnum = 5150
@@ -613,8 +613,8 @@ to get this kind of treatment."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5129
   flags = ["door"]
+  to_vnum = 5129
 
   [[rooms.mob_resets]]
   vnum = 5106
@@ -642,8 +642,8 @@ gate lies open to the west allowing entrance into the city."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 5270
-  flags = ["door"]
 
 [[rooms]]
 vnum = 5101
@@ -727,8 +727,8 @@ south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5105
   flags = ["door"]
+  to_vnum = 5105
 
   [[rooms.mob_resets]]
   vnum = 5102
@@ -764,8 +764,8 @@ courtyard except with a blood covered altar in the center of the room."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5104
   flags = ["door"]
+  to_vnum = 5104
 
   [[rooms.mob_resets]]
   vnum = 5107
@@ -833,8 +833,8 @@ with statues of spiders and murals everywhere."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5109
   flags = ["door"]
+  to_vnum = 5109
 
   [[rooms.mob_resets]]
   vnum = 5102
@@ -870,8 +870,8 @@ the inner courtyard having an altar in the center of the room."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5108
   flags = ["door"]
+  to_vnum = 5108
 
   [[rooms.mob_resets]]
   vnum = 5107
@@ -903,8 +903,8 @@ as big and elegant as the one at the entrance to the city, stands here."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5111
   flags = ["door"]
+  to_vnum = 5111
 
 [[rooms]]
 vnum = 5111
@@ -917,8 +917,8 @@ walls depicting some battles and a spider queen."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5110
   flags = ["door"]
+  to_vnum = 5110
 
   [[rooms.exits]]
   direction = "west"
@@ -958,8 +958,8 @@ horrifying it is almost beautiful."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5113
   flags = ["door"]
+  to_vnum = 5113
 
   [[rooms.exits]]
   direction = "east"
@@ -975,8 +975,8 @@ and chairs surrounding it sits in the center of the room."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5112
   flags = ["door"]
+  to_vnum = 5112
 
   [[rooms.mob_resets]]
   vnum = 5108
@@ -1023,8 +1023,8 @@ to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5116
   flags = ["door"]
+  to_vnum = 5116
 
 [[rooms]]
 vnum = 5116
@@ -1035,8 +1035,8 @@ This is the most lavish of the academies being that it is for the clerics."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5115
   flags = ["door"]
+  to_vnum = 5115
 
   [[rooms.mob_resets]]
   vnum = 5105
@@ -1060,8 +1060,8 @@ is a giant temple."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5119
   flags = ["door"]
+  to_vnum = 5119
 
   [[rooms.exits]]
   direction = "east"
@@ -1112,8 +1112,8 @@ adamantite."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5117
   flags = ["door"]
+  to_vnum = 5117
 
   [[rooms.exits]]
   direction = "down"

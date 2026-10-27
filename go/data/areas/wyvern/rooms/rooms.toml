@@ -460,8 +460,8 @@ remains of a great many table and chairs.  The exit is south."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 1634
   flags = ["door"]
+  to_vnum = 1634
 
   [[rooms.mob_resets]]
   vnum = 1603
@@ -491,8 +491,8 @@ furniture looms obliquely about the room."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 1632
   flags = ["door"]
+  to_vnum = 1632
 
   [[rooms.mob_resets]]
   vnum = 1609
@@ -688,8 +688,8 @@ comes a strange inky blackness.  A spiral staircase leads down."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.exits]]
   direction = "down"
@@ -707,23 +707,23 @@ description = ""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 1645
   flags = ["door"]
+  to_vnum = 1645
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1647
   flags = ["door"]
+  to_vnum = 1647
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 1646
   flags = ["door"]
+  to_vnum = 1646
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1643
   flags = ["door"]
+  to_vnum = 1643
 
   [[rooms.mob_resets]]
   vnum = 1608
@@ -740,8 +740,8 @@ in one corner catches your eye.  The only exit is the way you came in."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.mob_resets]]
   vnum = 1610
@@ -768,8 +768,8 @@ of authority.  The only door is north."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.mob_resets]]
   vnum = 1613
@@ -795,13 +795,13 @@ looking keyhole.  There is also a door to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 1648
   flags = ["door"]
+  to_vnum = 1648
 
   [[rooms.mob_resets]]
   vnum = 1615
@@ -827,8 +827,8 @@ onto a catwalk."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 1647
   flags = ["door"]
+  to_vnum = 1647
 
   [[rooms.mob_resets]]
   vnum = 1616

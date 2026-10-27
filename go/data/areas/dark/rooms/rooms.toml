@@ -777,8 +777,8 @@ stacks and yellow light coming from the shuttered windows."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 14540
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -786,8 +786,8 @@ stacks and yellow light coming from the shuttered windows."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 14541
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -813,8 +813,8 @@ of value in it."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 14539
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 14525
@@ -838,8 +838,8 @@ to all wooden items and the furniture was made by a master."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 14539
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 14529
@@ -880,8 +880,8 @@ stone buildings create a wonderful setting for this family life."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 14544
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -889,8 +889,8 @@ stone buildings create a wonderful setting for this family life."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 14545
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -920,8 +920,8 @@ mountain to the north of you."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 14543
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 14525
@@ -942,8 +942,8 @@ their home, turning it a brilliant green color."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 14543
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 14531
@@ -993,8 +993,8 @@ wall ringing the village proper."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 14548
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1002,13 +1002,13 @@ wall ringing the village proper."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 14550
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 14549
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 14514
@@ -1029,8 +1029,8 @@ to see a display you see instead blank wall."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 14547
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 14529
@@ -1050,8 +1050,8 @@ It appears to be large enough to hold several people at the same time."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 14547
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 14525
@@ -1072,8 +1072,8 @@ you'll find a little of everything."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 14547
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 14524
@@ -1321,8 +1321,8 @@ for both air and light."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 14596
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1361,8 +1361,8 @@ a tiny, hand written sign attached to the gate."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 14566
-  flags = ["door"]
 
 [[rooms]]
 vnum = 14566
@@ -1377,8 +1377,8 @@ The stakes are obviously meant to keep travellers on the road."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 14565
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1993,8 +1993,8 @@ in the soft earth lead to the wall nearby and towards the river."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 14563
-  flags = ["door"]
 
 [[rooms]]
 vnum = 14597

@@ -30,6 +30,19 @@ func (r *ResetSystem) ResetArea(area *types.Area) {
 
 // resetRoom executes all resets for a single room
 func (r *ResetSystem) resetRoom(room *types.Room) {
+	// Close/lock doors back to their reset state, both sides (ROT reset_room)
+	for dir, exit := range room.Exits {
+		if exit == nil {
+			continue
+		}
+		exit.Flags = exit.ResetFlags
+		if exit.ToRoom != nil {
+			if back := exit.ToRoom.GetExit(types.Direction(dir).Reverse()); back != nil {
+				back.Flags = back.ResetFlags
+			}
+		}
+	}
+
 	// Execute mob resets
 	for _, reset := range room.MobResets {
 		r.executeMobReset(room, &reset)

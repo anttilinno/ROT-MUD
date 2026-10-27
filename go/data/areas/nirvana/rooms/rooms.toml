@@ -137,8 +137,8 @@ visible.  The hall continues to the east, while a door lies to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 9013
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 9008
@@ -150,8 +150,8 @@ and a door lies to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 9012
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -229,8 +229,8 @@ door."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 9008
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9001
@@ -250,8 +250,8 @@ east.  There is a sign on the door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 9007
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -509,8 +509,8 @@ A door lies to the north"""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 9031
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -601,8 +601,8 @@ The passages goes east and west, with a large door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof"]
   to_vnum = 9026
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"

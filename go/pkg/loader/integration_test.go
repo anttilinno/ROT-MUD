@@ -4,6 +4,8 @@ import (
 	"path/filepath"
 	"runtime"
 	"testing"
+
+	"rotmud/pkg/types"
 )
 
 func TestLoadMidgaard(t *testing.T) {
@@ -119,6 +121,12 @@ func TestLoadMidgaard(t *testing.T) {
 		}
 		if monster.Armor[0] != 85 {
 			t.Errorf("expected default mob AC 85 at level 1, got %v", monster.Armor)
+		}
+
+		// Mud school's east door from 3719 starts locked (ROT door reset D 0 3719 1 2)
+		if r := world.GetRoom(3719); r == nil || r.GetExit(types.DirEast) == nil ||
+			!r.GetExit(types.DirEast).Flags.Has(types.ExitLocked) {
+			t.Error("expected room 3719 east door to start locked")
 		}
 
 		// Weapons carry their class and damage type (restored from ROT area files)

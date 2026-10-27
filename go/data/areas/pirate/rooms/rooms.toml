@@ -545,9 +545,9 @@ weather must have really worn this ship out."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 16074
   key = 16000
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -578,9 +578,9 @@ think to yourself, "Geez, this ship sure needs some repairs!""""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 16069
   key = 16001
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 16009
@@ -1508,9 +1508,9 @@ sleeping quarters."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16053
   key = 16002
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 16006
@@ -1733,9 +1733,9 @@ you could exit to the main deck through the hatch from here."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16047
   key = 16002
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 16010
@@ -1799,9 +1799,9 @@ or continue on south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16057
   key = 16002
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1822,9 +1822,9 @@ faint odor drifts to you from the southern part of the hallway."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16058
   key = 16002
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1832,9 +1832,9 @@ faint odor drifts to you from the southern part of the hallway."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16056
   key = 16002
-  flags = ["door"]
 
 [[rooms]]
 vnum = 16058
@@ -1853,9 +1853,9 @@ or continue on south."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16057
   key = 16002
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 16005
@@ -2166,9 +2166,9 @@ lighted.  The exits are east and there is a door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16071
   key = 16003
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 16013
@@ -2188,9 +2188,9 @@ west and is very poorly lighted.  There is a door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 16072
   key = 16003
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2198,9 +2198,9 @@ west and is very poorly lighted.  There is a door to the south."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16018
   key = 16001
-  flags = ["door"]
 
 [[rooms]]
 vnum = 16070
@@ -2212,9 +2212,9 @@ lighted.  The exits are west and there is a door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16073
   key = 16003
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2232,9 +2232,9 @@ up as if they haven't been washed in decades."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16068
   key = 16003
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 16002
@@ -2270,9 +2270,9 @@ he will be VERY upset, so get out quick!"""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 16069
   key = 16003
-  flags = ["closed"]
 
   [[rooms.obj_resets]]
   vnum = 16004
@@ -2289,9 +2289,9 @@ instruments have been laid all over the table."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 16070
   key = 16003
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 16001
@@ -2324,9 +2324,9 @@ east of here and there is a door to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 16017
   key = 16000
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2644,9 +2644,9 @@ a stairway leads up."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof"]
   to_vnum = 16107
   key = 16110
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 16101
@@ -2691,9 +2691,9 @@ the living room is to the east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 16104
   key = 16110
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 16103
@@ -2727,9 +2727,9 @@ to the south or a patio door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 16102
   key = 16110
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2799,9 +2799,9 @@ foyer and there is a private library to the north."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof"]
   to_vnum = 16100
   key = 16110
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 16108
@@ -2835,9 +2835,9 @@ You may walk in all four directions from here."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 16110
   key = 16110
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2849,9 +2849,9 @@ You may walk in all four directions from here."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 16111
   key = 16110
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 16110
@@ -2872,9 +2872,9 @@ magic portal in the east wall of the room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof"]
   to_vnum = 16109
   key = 16110
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 16111
@@ -2889,9 +2889,9 @@ is a window to the east leading inside."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 16109
   key = 16110
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 16112

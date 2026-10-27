@@ -60,13 +60,13 @@ trail that you followed to get here seems to end at the base of the tree."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 6153
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 6151
   flags = ["door"]
+  to_vnum = 6151
 
 [[rooms]]
 vnum = 6153
@@ -78,8 +78,8 @@ darkness or you can exit the tree by going west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 6152
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -95,13 +95,13 @@ leads south to a room where you hear strange noises or you can go up the steps."
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 6155
   flags = ["door"]
+  to_vnum = 6155
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 6153
   flags = ["door"]
+  to_vnum = 6153
 
 [[rooms]]
 vnum = 6155
@@ -115,8 +115,8 @@ the way you came in."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 6154
   flags = ["door"]
+  to_vnum = 6154
 
   [[rooms.mob_resets]]
   vnum = 6116
@@ -315,8 +315,8 @@ wooden door to the north and small paths lead west and south through the trees."
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 6010
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -353,8 +353,8 @@ such as a bed, a chair and a table."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 6009
   flags = ["door"]
+  to_vnum = 6009
 
   [[rooms.obj_resets]]
   vnum = 6003

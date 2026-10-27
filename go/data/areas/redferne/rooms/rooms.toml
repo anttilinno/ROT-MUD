@@ -11,8 +11,8 @@ Redferne."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7901
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -87,18 +87,18 @@ this magnificent old house. To the west you can see a large ashen door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7910
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7900
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7902
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
@@ -120,8 +120,8 @@ west wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7901
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 7902
@@ -170,8 +170,8 @@ metal door. To the west there is a large aspenwood door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7913
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -179,8 +179,8 @@ metal door. To the west there is a large aspenwood door."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7905
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 7905
@@ -194,8 +194,8 @@ old arm-chair. The only exit is through the aspenwood door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7904
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 7906
@@ -210,13 +210,13 @@ stands a fridge."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7907
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7908
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -232,8 +232,8 @@ scuttering around, nibbling pieces off the heaps here and there."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7906
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 7908
@@ -243,8 +243,8 @@ description = "This place is LOADED with drink, water and booze."
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7906
-  flags = ["closed"]
 
   [[rooms.obj_resets]]
   vnum = 6013
@@ -276,8 +276,8 @@ This place is gloomy.  The only visible exit is west, through the oak door."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7901
-  flags = ["closed"]
 
   [[rooms.obj_resets]]
   vnum = 7910
@@ -297,8 +297,8 @@ broad balcony to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7912
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -315,8 +315,8 @@ of this magnificent building. To the north are the doors to Redferne's Bedroom."
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7911
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 7913
@@ -330,8 +330,8 @@ quite mildly."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 7904
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 7914

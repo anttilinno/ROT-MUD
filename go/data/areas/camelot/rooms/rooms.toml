@@ -129,8 +129,8 @@ unintelligible."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3808
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -262,8 +262,8 @@ you can hear idle chit-chat taking place.  From the room to the west--nothing.""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3813
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -271,8 +271,8 @@ you can hear idle chit-chat taking place.  From the room to the west--nothing.""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3814
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3805
@@ -349,8 +349,8 @@ sounds of pots and pans clanking together."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3825
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -386,9 +386,9 @@ laughter follows."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3818
   key = 3817
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -414,15 +414,15 @@ pile of old, used armor lying on the floor."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3822
   key = 3817
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3817
   key = 3817
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 3805
@@ -511,8 +511,8 @@ small corridor leads towards the main stairwell."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3813
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3822
@@ -529,9 +529,9 @@ noises from the guard room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3818
   key = 3817
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -588,8 +588,8 @@ There is a small stairway leading up in the back of this room."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3815
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -654,9 +654,9 @@ Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3835
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -664,9 +664,9 @@ Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3840
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -685,9 +685,9 @@ steps away.  Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3836
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -695,9 +695,9 @@ steps away.  Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3839
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -716,9 +716,9 @@ steps away. Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3837
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -726,9 +726,9 @@ steps away. Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3838
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -948,8 +948,8 @@ the area."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3854
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1118,8 +1118,8 @@ an enormous chandelier swing gently."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3860
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3840
@@ -1197,18 +1197,18 @@ though, if you could possibly live in one comfortably."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3865
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3864
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3863
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3863
@@ -1290,8 +1290,8 @@ Corridor.  In addition, there is a room to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3870
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1313,13 +1313,13 @@ and south of you."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3871
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3873
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1338,13 +1338,13 @@ the strength to open it."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3872
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3869
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1562,8 +1562,8 @@ to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3884
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3860
@@ -1720,8 +1720,8 @@ glow as you approach them."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3891
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1756,8 +1756,8 @@ adventurer.  The only exit appears to be at the south of the room."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3892
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"

@@ -439,8 +439,8 @@ with a sign next to the door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8026
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -650,14 +650,14 @@ There is also a sign next to the slot."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8027
   key = 8013
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8016
-  flags = ["door"]
 
 [[rooms]]
 vnum = 8027
@@ -669,15 +669,15 @@ south and large vault door is to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8028
   key = 8012
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8026
   key = 8013
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8007
@@ -699,9 +699,9 @@ description = "The vault is musty with a slight smell of ozone in the air."
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8027
   key = 8012
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8008

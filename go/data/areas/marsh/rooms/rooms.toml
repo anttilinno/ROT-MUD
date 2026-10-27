@@ -156,8 +156,8 @@ boots.  Better stop and check for leeches when you get out of here."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 8305
   flags = ["door"]
+  to_vnum = 8305
 
   [[rooms.mob_resets]]
   vnum = 8302

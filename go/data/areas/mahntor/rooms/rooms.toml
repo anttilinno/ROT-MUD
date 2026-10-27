@@ -1102,8 +1102,8 @@ village itself."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 2348
   flags = ["door"]
+  to_vnum = 2348
 
   [[rooms.exits]]
   direction = "east"
@@ -1175,8 +1175,8 @@ exit into the village."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 2346
   flags = ["door"]
+  to_vnum = 2346
 
   [[rooms.mob_resets]]
   vnum = 2307
@@ -1607,8 +1607,8 @@ face."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 2364
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1669,8 +1669,8 @@ streets lead east and west, while a main road appears to lead south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 2362
   flags = ["door"]
+  to_vnum = 2362
 
   [[rooms.exits]]
   direction = "east"
@@ -1915,9 +1915,9 @@ east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 2388
   key = 2351
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2325
@@ -1954,9 +1954,9 @@ is used for unholy purposes. A black door leads east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 2389
   key = 2352
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2326
@@ -1993,9 +1993,9 @@ lives here. A white door leads east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 2392
   key = 2353
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2327
@@ -2091,9 +2091,9 @@ guard houses to the north and south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2379
   key = 2350
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2157,9 +2157,9 @@ large hall leads east, deeper into the keep."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2377
   key = 2350
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2319
@@ -2321,8 +2321,8 @@ The hall leads south and west into other parts of the keep."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 2385
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2388,14 +2388,14 @@ door is to the west. To the east, you see a heavy stone door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2386
   key = 2359
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 2383
   flags = ["door"]
+  to_vnum = 2383
 
   [[rooms.mob_resets]]
   vnum = 2321
@@ -2477,9 +2477,9 @@ huge stone door stands in the west wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2385
   key = 2359
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 2387
@@ -2531,9 +2531,9 @@ itself leads south and north."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2390
   key = 2355
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2541,9 +2541,9 @@ itself leads south and north."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2372
   key = 2351
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 2389
@@ -2560,9 +2560,9 @@ black door. The hall itself leads north and south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2391
   key = 2356
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2570,9 +2570,9 @@ black door. The hall itself leads north and south."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2373
   key = 2352
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 2390
@@ -2585,9 +2585,9 @@ A yellow door leads west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 2388
   key = 2355
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2329
@@ -2625,9 +2625,9 @@ maroon door leads west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 2389
   key = 2356
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2328
@@ -2669,9 +2669,9 @@ south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2394
   key = 2357
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2679,9 +2679,9 @@ south."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2374
   key = 2353
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 2393
@@ -2731,9 +2731,9 @@ indoor garden. A green door leads west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 2392
   key = 2357
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2330
@@ -2841,15 +2841,15 @@ itself leads north back along the rows of doors."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2398
   key = 2358
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 2399
   key = 2354
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 2398
@@ -2862,9 +2862,9 @@ nothing has ever entered this room and ever left again. A grey door leads west."
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2397
   key = 2358
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2332
@@ -2901,9 +2901,9 @@ appears as though a woodsman of some sorts lives here. A brown door leads east."
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 2397
   key = 2354
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2331

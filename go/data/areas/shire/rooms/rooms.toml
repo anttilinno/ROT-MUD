@@ -235,8 +235,8 @@ awe.  A door offers passage to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1111
   flags = ["door"]
+  to_vnum = 1111
 
   [[rooms.exits]]
   direction = "west"
@@ -282,8 +282,8 @@ leads to the Shiriff Post."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1110
   flags = ["door"]
+  to_vnum = 1110
 
   [[rooms.mob_resets]]
   vnum = 1112
@@ -675,8 +675,8 @@ passage to the south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 1125
   flags = ["door"]
+  to_vnum = 1125
 
   [[rooms.mob_resets]]
   vnum = 1115
@@ -926,8 +926,8 @@ door which leads to a rather impressive abode."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 1135
   flags = ["door"]
+  to_vnum = 1135
 
   [[rooms.exits]]
   direction = "south"
@@ -945,8 +945,8 @@ to the west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1137
   flags = ["door"]
+  to_vnum = 1137
 
   [[rooms.exits]]
   direction = "south"
@@ -1007,8 +1007,8 @@ you spy a trapdoor."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1135
   flags = ["door"]
+  to_vnum = 1135
 
   [[rooms.exits]]
   direction = "down"

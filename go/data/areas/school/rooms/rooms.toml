@@ -15,8 +15,8 @@ A sign warns 'You may not pass these doors once you have passed level 9.'"""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3744
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -336,8 +336,8 @@ sign on the wall.  Find your own exit here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3719
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -387,14 +387,14 @@ sign on the wall.  The exits are north and west, with a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3721
   key = 3714
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3717
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3720
@@ -441,8 +441,8 @@ The only exit is on the other side of the gate north of you."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3722
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3720
@@ -803,8 +803,8 @@ being watched by some divine being.  There is a BIG SIGN here."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 3748
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3709
@@ -1154,8 +1154,8 @@ Of special note is the one that brings you back up!!!"""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 3734
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3749
