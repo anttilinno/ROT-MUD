@@ -44,6 +44,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
+  flags = ["vampiric"]
   dice_number = 1
   dice_size = 1
 

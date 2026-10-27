@@ -915,6 +915,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["bless", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 11
 
@@ -1342,6 +1344,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["dark", "evil"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["sharp", "poison"]
   dice_number = 5
   dice_size = 11
 
@@ -1564,6 +1569,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["dark", "nodrop", "bless"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["sharp", "poison"]
   dice_number = 13
   dice_size = 3
 
@@ -1965,6 +1973,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["vorpal"]
   dice_number = 2
   dice_size = 22
 
@@ -2209,6 +2220,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "bless"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["sharp"]
   dice_number = 2
   dice_size = 22
 
@@ -2761,6 +2775,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "dark", "bless"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
+  flags = ["flaming", "sharp", "poison"]
   dice_number = 6
   dice_size = 12
 
@@ -2927,6 +2944,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "bless"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 6
   dice_size = 6
 

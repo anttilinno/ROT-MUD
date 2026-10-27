@@ -32,6 +32,8 @@ cost = 620
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "flail"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 6
 
@@ -47,6 +49,8 @@ cost = 108
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 1
   dice_size = 10
 
@@ -62,6 +66,9 @@ cost = 270
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 6
 
@@ -77,6 +84,9 @@ cost = 148
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 8
 
@@ -92,6 +102,9 @@ cost = 148
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 8
 
@@ -107,6 +120,9 @@ cost = 148
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 8
 
@@ -122,6 +138,9 @@ cost = 192
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 10
 
@@ -137,6 +156,9 @@ cost = 169
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 4
 
@@ -152,6 +174,8 @@ cost = 210
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 4
 
@@ -167,6 +191,9 @@ cost = 1190
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 5
 
@@ -182,6 +209,8 @@ cost = 490
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 9
 
@@ -197,6 +226,8 @@ cost = 850
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 4
 
@@ -1071,6 +1102,8 @@ cost = 360
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 4
 
@@ -1087,6 +1120,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_evil", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 5
 
@@ -1103,6 +1138,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 4
 
@@ -1118,6 +1155,9 @@ cost = 660
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 7
 
@@ -1166,6 +1206,8 @@ cost = 105
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 4
 
@@ -1181,6 +1223,8 @@ cost = 380
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 5
 
@@ -1207,6 +1251,8 @@ cost = 920
 wear_flags = ["wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "negative"
   dice_number = 2
   dice_size = 5
 
@@ -1307,6 +1353,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 8
 
@@ -1327,6 +1375,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 5
 
@@ -1343,6 +1393,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 7
 

@@ -121,6 +121,15 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Errorf("expected default mob AC 85 at level 1, got %v", monster.Armor)
 		}
 
+		// Weapons carry their class and damage type (restored from ROT area files)
+		dagger := world.GetObjTemplate(3701)
+		if dagger == nil || dagger.Weapon == nil {
+			t.Fatal("expected weapon template 3701 (sub issue dagger)")
+		}
+		if dagger.Weapon.WeaponType != "dagger" || dagger.Weapon.DamageType != "pierce" {
+			t.Errorf("sub issue dagger: got %q/%q, want dagger/pierce", dagger.Weapon.WeaponType, dagger.Weapon.DamageType)
+		}
+
 		// Check Temple Square room (3005) has obj_resets for fountain
 		templeSquare := world.GetRoom(3005)
 		if templeSquare == nil {

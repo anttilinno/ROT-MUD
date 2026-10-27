@@ -22,6 +22,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["nodrop"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "acid"
   dice_number = 2
   dice_size = 4
 
@@ -118,6 +120,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 4
   dice_size = 2
 
@@ -206,6 +210,8 @@ cost = 370
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 3
 
@@ -305,6 +311,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["flaming", "vampiric"]
   dice_number = 2
   dice_size = 12
 

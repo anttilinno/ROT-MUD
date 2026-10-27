@@ -11,6 +11,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_good"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 12
 
@@ -79,6 +82,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["nodrop", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 4
 
@@ -114,6 +120,9 @@ cost = 3000
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 7
 

@@ -33,6 +33,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["shocking"]
   dice_number = 7
   dice_size = 6
 
@@ -79,6 +82,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 8
 
@@ -133,6 +138,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 7
   dice_size = 6
 
@@ -153,6 +161,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 6
   dice_size = 7
 
@@ -269,6 +280,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 11
 
@@ -389,6 +402,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 11
 

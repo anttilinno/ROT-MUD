@@ -65,6 +65,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "anti_good", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 5
 
@@ -89,6 +91,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_evil", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 4
 
@@ -296,6 +300,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["bless"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 6
 

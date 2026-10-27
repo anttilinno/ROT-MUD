@@ -86,6 +86,8 @@ cost = 350
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 3
   dice_size = 3
 

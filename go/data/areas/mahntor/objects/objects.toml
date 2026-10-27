@@ -91,6 +91,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 12
 
@@ -200,6 +202,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["dark", "magic", "anti_good", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 4
 
@@ -308,6 +312,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_evil", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 6
 
@@ -386,6 +393,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 5
   dice_size = 4
 
@@ -470,6 +480,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 5
   dice_size = 4
 
@@ -582,6 +594,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["frost", "two_hands"]
   dice_number = 7
   dice_size = 3
 
@@ -670,6 +685,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 9
 
@@ -759,6 +777,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 8
 
@@ -889,6 +909,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "magic"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 5
 
@@ -953,6 +975,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 12
 
@@ -1138,6 +1162,8 @@ cost = 1310
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 3
 
@@ -1187,6 +1213,8 @@ cost = 1310
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 4
 
@@ -1237,6 +1265,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 10
 
@@ -1312,6 +1343,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 6
   dice_size = 3
 
@@ -1387,6 +1421,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 5
   dice_size = 4
 
@@ -1462,6 +1499,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 7
   dice_size = 3
 
@@ -1485,6 +1524,8 @@ cost = 1970
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 4
 
@@ -1511,6 +1552,8 @@ cost = 1700
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 5
   dice_size = 5
 
@@ -1549,6 +1592,9 @@ cost = 320
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 10
 
@@ -1564,6 +1610,8 @@ cost = 880
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 4
 
@@ -1634,6 +1682,9 @@ cost = 1520
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 8
 

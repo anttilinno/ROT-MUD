@@ -10,6 +10,8 @@ cost = 250
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 5
 
@@ -71,6 +73,9 @@ cost = 270
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 3
 
@@ -127,6 +132,9 @@ cost = 300
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 3
 

@@ -214,6 +214,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 4
 
@@ -238,6 +240,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 7
 
@@ -489,6 +493,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["sharp", "two_hands"]
   dice_number = 4
   dice_size = 7
 

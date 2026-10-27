@@ -65,6 +65,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 6
 

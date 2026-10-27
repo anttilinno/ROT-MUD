@@ -11,6 +11,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_good", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["vorpal", "two_hands"]
   dice_number = 5
   dice_size = 6
 

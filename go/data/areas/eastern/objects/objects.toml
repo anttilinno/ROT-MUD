@@ -11,6 +11,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_good"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "pierce"
   dice_number = 1
   dice_size = 9
 
@@ -53,6 +55,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 14
 
@@ -92,6 +97,8 @@ cost = 140
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 4
 
@@ -222,6 +229,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 8
 
@@ -242,6 +251,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 7
 
@@ -262,6 +273,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 7
 
@@ -301,6 +314,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 5
 
