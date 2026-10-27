@@ -106,6 +106,9 @@ func New(logger *slog.Logger) *Server {
 		if s.onCommand != nil {
 			s.onCommand()
 		}
+		if cmd.Character != nil {
+			s.logger.Debug("cmd", "char", cmd.Character.Name, "input", cmd.Input)
+		}
 		s.Dispatcher.Dispatch(cmd)
 
 		// Send prompt after command completes
@@ -1306,6 +1309,7 @@ func (s *Server) SendToCharacter(ch *types.Character, msg string) {
 	for _, session := range s.sessions {
 		if session.Character == ch {
 			session.Write(msg)
+			s.logger.Debug("out", "char", ch.Name, "msg", msg)
 
 			// If this character is being snooped, forward output to snooper
 			if session.Descriptor != nil && session.Descriptor.SnoopedBy != nil {
