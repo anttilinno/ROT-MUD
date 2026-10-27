@@ -458,6 +458,7 @@ func (s *Server) LoadWorld() error {
 	// Wire shop system: convert loader.ShopData → shops.Shop, build registry,
 	// install handler on the dispatcher so buy/sell/list/value commands work.
 	s.Dispatcher.Shops = buildShopHandler(world, s.GameLoop)
+	s.Dispatcher.Shops.Output = s.SendToCharacter
 	s.logger.Info("shops loaded", "count", len(world.Shops))
 
 	// Load help files
