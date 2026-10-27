@@ -45,15 +45,6 @@ func (c *CombatSystem) Damage(ch, victim *types.Character, dam int, damType type
 		}
 	}
 
-	// Check defensive skills (parry, dodge, shield block) for melee attacks
-	if dam > 0 && ch != victim {
-		defense := c.CheckDefenses(ch, victim)
-		if defense != DefenseNone {
-			// Attack was defended
-			return result
-		}
-	}
-
 	// Check immunity
 	switch CheckImmune(victim, damType) {
 	case ImmImmune:

@@ -3028,7 +3028,7 @@ func (d *CommandDispatcher) cmdLore(ch *types.Character, args string) {
 
 	// Success! Show item info (like identify but using skill)
 	d.send(ch, fmt.Sprintf("Object '%s' is type %s.\r\n", obj.ShortDesc, obj.ItemType.String()))
-	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %d gold.\r\n", obj.Level, obj.Weight, obj.Cost))
+	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %s.\r\n", obj.Level, obj.Weight, types.FormatCoin(int64(obj.Cost))))
 
 	// Show wear locations
 	var wearLocs []string
@@ -3130,7 +3130,7 @@ func (d *CommandDispatcher) cmdLore(ch *types.Character, args string) {
 func (d *CommandDispatcher) showIdentifyOutput(ch *types.Character, obj *types.Object) {
 	// Basic info
 	d.send(ch, fmt.Sprintf("Object '%s' is type %s.\r\n", obj.ShortDesc, obj.ItemType.String()))
-	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %d gold.\r\n", obj.Level, obj.Weight, obj.Cost))
+	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %s.\r\n", obj.Level, obj.Weight, types.FormatCoin(int64(obj.Cost))))
 
 	// Show wear locations
 	var wearLocs []string
