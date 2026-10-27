@@ -95,6 +95,7 @@ continues to the east and west while to the north lies the general store."""
 vnum = 1105
 name = "The General Store"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside the general store.  All sorts of goodies are stacked on the
 many shelves.  Your local friendly shopkeeper is smiling patiently, waiting to 
@@ -145,6 +146,7 @@ weaponry/armory while a nursery lies to the south."""
 vnum = 1107
 name = "The House of Arms"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside the finest weapons and armour shop in all of Shiredom.  The
 shopkeeper proudly displays his fine wares and humbly offers the best daggers
@@ -162,6 +164,7 @@ that you have ever laid eyes on."""
 vnum = 1108
 name = "Kid'n Keep"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside Kid'n Keep, the convenient one-stop nursery that maintains
 the youth of the Shire.  Toddlers run every which way while their nursemaids
@@ -227,6 +230,7 @@ to the east.  Farther to the south, you can see an Inn of some sort."""
 vnum = 1110
 name = "Shiriff Post of the Eastern Shire"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Shiriff Post which acts as the nucleus for the three shiriffs
 of the Eastern Shire.  As you examine the shiriffs on duty, you come to realize
@@ -274,6 +278,7 @@ awe.  A door offers passage to the east."""
 vnum = 1111
 name = "Thain's Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand inside the office of the Thain, the police protectorate of the
 great Shire.  The Thain has sworn to protect the Shire from all thieves and
@@ -352,6 +357,7 @@ Green Dragon for its hospitality and service."""
 vnum = 1114
 name = "A smial"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a smial, a hole in the ground which serves as the proper
 dwelling place for halflings.  As you look around this private abode, you feel
@@ -374,6 +380,7 @@ to the east."""
 vnum = 1115
 name = "A smial"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a smial, a hole in the ground which serves as the proper
 dwelling place for halflings.  As you look around this private abode, you feel
@@ -396,6 +403,7 @@ to the west."""
 vnum = 1116
 name = "The Ivy Bush"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Ivy Bush, one of the most famous inns in all of Shiredom.
 Chique Shire urbanites and seasoned travelers fill the confines of the room
@@ -525,6 +533,7 @@ You catch a glimpse of the Brandywine River to the north."""
 vnum = 1119
 name = "Shiriff Post of the Bridge"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Shiriff Post which acts as the nucleus for the three shiriffs
 of the Bridge.  As you examine the shiriffs on duty, you come to realize that
@@ -593,6 +602,7 @@ Bridge."""
 vnum = 1121
 name = "The Grocer's Delight"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You tremble with ecstasy as the tempting odors of freshly made pipeweed
 bread fill your lungs.  Rumor has it that the pipeweed bread sold here can
@@ -663,6 +673,7 @@ the watermill continues to the south."""
 vnum = 1124
 name = "The Watermill"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Halfling workers are scattered everywhere, busy at work.  You see the river
 to the west and get a compelling urge to grab the nearest worker and to toss
@@ -698,6 +709,7 @@ passage to the south."""
 vnum = 1125
 name = "Rear of watermill"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a damp, dimly lit room.  Mildew clings to the walls and it
 appears as if you were the first person to enter the room in ages.  A barely
@@ -937,6 +949,7 @@ door which leads to a rather impressive abode."""
 vnum = 1135
 name = "Bag End"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a comfortably well-equipped house, a palace by humble halfling
 standards.  On the wall you see a banner which reads "Home Sweet Home".
@@ -960,6 +973,7 @@ to the west."""
 vnum = 1136
 name = "Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in the private bedroom of Bag End.  There are two beds to the
 side, neither of which are made.  Portraits of halflings hang on the wall,
@@ -999,6 +1013,7 @@ in the fireplace keeps the room warm and comfortable."""
 vnum = 1137
 name = "Pantry"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside the pantry.  Shelves filled with food and drink surround
 you on all sides.  You wonder why a halfling would need so much to eat.
@@ -1112,6 +1127,7 @@ From the east you hear the noisy din of pigs."""
 vnum = 1141
 name = "Gamgee Residence"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand inside a modest home.  You deduce that this is indeed the home
 of whomever owns the surrounding lands.  The air is somewhat musty and 
@@ -1131,6 +1147,7 @@ you long for the urban riches of the Shire proper."""
 vnum = 1142
 name = "A barn"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Animals of every sort fill the small barn.  You feel the hot breath of
 horses and cows on your neck and you feel the sudden need for fresh air.
@@ -1179,6 +1196,7 @@ wanting to cradle all the animals."""
 vnum = 1143
 name = "A chicken coop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand inside a rather crowded chicken coop.  The cackle of hens fill
 the air.  The only exit is to the south."""
@@ -1239,6 +1257,7 @@ the air.  The only exit is to the south."""
 vnum = 1144
 name = "The Green Dragon"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Welcome to the Green Dragon, the undisputed leader in the art of
 innkeeping.  A rather charming and friendly hostess stands to the side,
@@ -1309,6 +1328,7 @@ upwards."""
 vnum = 1145
 name = "Shiriff Post of Delving Lane"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Shiriff Post which acts as the nucleus for the three shiriffs
 of Delving Lane.  As you examine the shiriffs on duty, you come to realize
@@ -1351,6 +1371,7 @@ awe.  The only exit is to the west."""
 vnum = 1146
 name = "A dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside a small underground tunnel.  The ceiling is so low that
 you must crouch to avoid hitting your head.  You see light from a small
@@ -1368,6 +1389,7 @@ hole in the ceiling while to the east you see nothing but darkness."""
 vnum = 1147
 name = "A dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside a small underground tunnel.  The ceiling is so low that
 you must crouch to avoid hitting your head.  The tunnel continues east and
@@ -1385,6 +1407,7 @@ west.  All you can see is darkness."""
 vnum = 1148
 name = "A dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside a small underground tunnel.  The ceiling is so low that
 you must crouch to avoid hitting your head.  The tunnel continues east and
@@ -1402,6 +1425,7 @@ west.  All you can see is darkness."""
 vnum = 1149
 name = "A three way intersection"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand at an intersection.  The tunnel continues east and west while
 to the north you can barely make out a smaller trail."""
@@ -1422,6 +1446,7 @@ to the north you can barely make out a smaller trail."""
 vnum = 1150
 name = "End of a dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand at the end of a dark tunnel.  The underground tunnel continues
 to the west.  From a trapdoor in the ceiling you can hear the din of
@@ -1439,6 +1464,7 @@ adventurers."""
 vnum = 1151
 name = "A dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside a small underground tunnel.  The ceiling is so low that
 you must crouch to avoid hitting your head.  The tunnel continues north and
@@ -1465,6 +1491,7 @@ home.  All you can see is darkness."""
 vnum = 1152
 name = "A dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside a small underground tunnel.  The ceiling is so low that 
 you must crouch to avoid hitting your head.  The tunnel continues north and
@@ -1486,6 +1513,7 @@ south.  To the west lies a small home.  All you can see is darkness."""
 vnum = 1153
 name = "Shiriff Post of the Lower Shire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the shiriff Post which acts as the nucleus for the three shiriffs 
 of the Lower Shire.  As you examine the shiriffs on duty, you come to realize
@@ -1528,6 +1556,7 @@ awe.  The only exit is to the east."""
 vnum = 1154
 name = "A halfling hole"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside a rather crudely built halfling hole.  The many passageways
 and winding paths remind you of a rodent's lair.  The air is musty and damp
@@ -1545,6 +1574,7 @@ and you feel the need for fresh air."""
 vnum = 1155
 name = "A halfling hole"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside a rather crudely built halfling hole.  The many passageways
 and winding paths remind you of a rodent's lair.  The air is musty and damp
@@ -1562,6 +1592,7 @@ and you feel the need for fresh air."""
 vnum = 1156
 name = "End of a dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at one end of a dark tunnel.  The tunnel continues to the south
 while on the ceiling you can make out a trapdoor."""
@@ -1578,6 +1609,7 @@ while on the ceiling you can make out a trapdoor."""
 vnum = 1157
 name = "The Inn of the Green Dragon"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in the Inn of the Green dragon.  Large paintings of 
 halflings at work, and halflings at play adorn the walls.  Comfortable 

@@ -18,6 +18,7 @@ The path continues north to a village, or south to the eastern road."""
 vnum = 102
 name = "Dimly Lit Path"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 This section of the road is badly worn and frequently traversed.  There is
 faint singing to the north.  The path back to the road lies to the south."""

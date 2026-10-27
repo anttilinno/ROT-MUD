@@ -2,6 +2,7 @@
 vnum = 2101
 name = "A Dark Alleyway"
 sector = "city"
+room_flags = ["dark", "no_mob"]
 description = """
 The walls of the alleyway have been spray-painted over many times
 over the years.  One section of graffiti actually looks legible,
@@ -300,6 +301,7 @@ is a street to the north."""
 vnum = 2111
 name = "Armory"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 Well actually, this is what USED to be the armory.  The equipment has
 all been stolen or broken beyond repair. The back wall of the
@@ -379,6 +381,7 @@ recently.  What used to be the town Magic shop is to the east."""
 vnum = 2114
 name = "The remains of the magic shop"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 The wizard was tough but he couldn't take on 50 of them at once.  So he
 died and they took all his stuff and used it on their fellowmen.
@@ -561,6 +564,7 @@ and continues south.  To the east is a courtyard."""
 vnum = 2119
 name = "Courtyard North"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 Once it was the courtyard of a beautiful building complex.  But alas,
 someone forgot to water the plants and they all died.  Then again,
@@ -662,6 +666,7 @@ shortcut to the west that leads to Dracolich Plaza."""
 vnum = 2123
 name = "Courtyard South"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 Once full of lush green plants, it is now barren of growth.  A set of
 stairs used to extend up to a suite of rooms but the set is missing
@@ -704,6 +709,7 @@ the south."""
 vnum = 2124
 name = "Old Abandoned Warehouse"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 Once the center of a lucrative storage business, it has fallen to
 disrepair like everything else.  It is now the hideout of the
@@ -1491,6 +1497,7 @@ goes south to a bend and north to an intersection."""
 vnum = 2148
 name = "A small ruined chapel"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 This was a small temple built to honor the minor gods and goddesses.
 It is now desecrated by graffiti and vandalism.  Perhaps its worst
@@ -1664,6 +1671,7 @@ is also a narrow alley to the south."""
 vnum = 2153
 name = "What is left of the weaponshop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 It doesn't even look like those punks gave the weaponsmith a
 proper burial.  But what a going away present he seems to have
@@ -1885,6 +1893,7 @@ headed southeast from here."""
 vnum = 2160
 name = "A wide alleyway"
 sector = "city"
+room_flags = ["dark", "no_mob"]
 description = """
 The sides of the alleyway have been vandalized many times.
 One patch of graffiti actually looks readable:
@@ -2029,6 +2038,7 @@ You wonder if it's keeping you out, or the ghouls in?"""
 vnum = 2165
 name = "The inn/pub"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The inn actually looks fairly functional despite its lack
 of repair.  The boys come here to hoot it up and drink them selves
@@ -2172,6 +2182,7 @@ to the east."""
 vnum = 2170
 name = "Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The hallway heads back north to the main part of the inn/pub.
 The stairs leading up to the guest rooms here do not seem

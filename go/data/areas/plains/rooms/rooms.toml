@@ -718,6 +718,7 @@ the foothills, and some pineforrest. Further on mountain peaks are visible."""
 vnum = 331
 name = "Hermit's hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside the hermit's hut. It is rather old, but serves it purpose.
 It keeps its habitant from the rough winds and dangerous beasts of the
@@ -931,6 +932,7 @@ It resembles black marble, but somehow feels different."""
 vnum = 340
 name = "Dark smelly tunnels"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a gloomy tunnel leading south and west, right under
 the altar of G'harne.  The walls are covered with a smelly slime and small
@@ -960,6 +962,7 @@ You puke."""
 vnum = 341
 name = "Dead end of tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The tunnel comes to an abrupt end here. It simply looks like it
 hasn't been excavated further.  North of here the tunnel makes a turn east."""
@@ -972,6 +975,7 @@ hasn't been excavated further.  North of here the tunnel makes a turn east."""
 vnum = 342
 name = "Dark smelly tunnels"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a gloomy tunnel leading east and west.
 The walls are covered with a smelly slime and small rotting pieces of a
@@ -1018,6 +1022,7 @@ BWADR! ..."""
 vnum = 344
 name = "The Hall of G'harne"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the hall of G'harne. The walls are dressed with strange
 carving, symbolizing human sacrifice and people worshipping giant worms.
@@ -1048,6 +1053,7 @@ You puke."""
 vnum = 345
 name = "Steep slope"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You try to climb down the slope.
 >

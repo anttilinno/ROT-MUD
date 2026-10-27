@@ -367,21 +367,10 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 
 	// Parse room flags
 	for _, flag := range rd.RoomFlags {
-		switch strings.ToLower(flag) {
-		case "dark":
-			room.Flags.Set(types.RoomDark)
-		case "no_mob":
-			room.Flags.Set(types.RoomNoMob)
-		case "indoors":
-			room.Flags.Set(types.RoomIndoors)
-		case "private":
-			room.Flags.Set(types.RoomPrivate)
-		case "safe":
-			room.Flags.Set(types.RoomSafe)
-		case "solitary":
-			room.Flags.Set(types.RoomSolitary)
-		case "no_recall":
-			room.Flags.Set(types.RoomNoRecall)
+		for _, rf := range roomFlagNames {
+			if strings.EqualFold(flag, rf.name) {
+				room.Flags.Set(rf.flag)
+			}
 		}
 	}
 
@@ -1221,31 +1210,24 @@ func formatDirection(d types.Direction) string {
 	}
 }
 
+// roomFlagNames maps room flags to their TOML names (ROT's room_flags table).
+var roomFlagNames = []struct {
+	name string
+	flag types.RoomFlags
+}{
+	{"dark", types.RoomDark}, {"no_mob", types.RoomNoMob}, {"indoors", types.RoomIndoors},
+	{"private", types.RoomPrivate}, {"safe", types.RoomSafe}, {"solitary", types.RoomSolitary},
+	{"pet_shop", types.RoomPetShop}, {"no_recall", types.RoomNoRecall}, {"imp_only", types.RoomImpOnly},
+	{"gods_only", types.RoomGodsOnly}, {"heroes_only", types.RoomHeroesOnly},
+	{"newbies_only", types.RoomNewbiesOnly}, {"law", types.RoomLaw}, {"nowhere", types.RoomNowhere},
+}
+
 func formatRoomFlags(flags types.RoomFlags) []string {
 	var result []string
-	if flags.Has(types.RoomDark) {
-		result = append(result, "dark")
-	}
-	if flags.Has(types.RoomNoMob) {
-		result = append(result, "no_mob")
-	}
-	if flags.Has(types.RoomIndoors) {
-		result = append(result, "indoors")
-	}
-	if flags.Has(types.RoomPrivate) {
-		result = append(result, "private")
-	}
-	if flags.Has(types.RoomSafe) {
-		result = append(result, "safe")
-	}
-	if flags.Has(types.RoomSolitary) {
-		result = append(result, "solitary")
-	}
-	if flags.Has(types.RoomNoRecall) {
-		result = append(result, "no_recall")
-	}
-	if flags.Has(types.RoomLaw) {
-		result = append(result, "law")
+	for _, rf := range roomFlagNames {
+		if flags.Has(rf.flag) {
+			result = append(result, rf.name)
+		}
 	}
 	return result
 }

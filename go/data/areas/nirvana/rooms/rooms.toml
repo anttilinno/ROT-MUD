@@ -127,6 +127,7 @@ description = "The plane continues to the north and the south"
 vnum = 9007
 name = "In the Tower of Nirvana"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Entering the tower, there seems to be enough light to see by, but no source is 
 visible.  The hall continues to the east, while a door lies to the west."""
@@ -144,6 +145,7 @@ visible.  The hall continues to the east, while a door lies to the west."""
 vnum = 9008
 name = "A hallway in the Tower of Nirvana"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a east-west hallway in the tower.  to the west, the hall continues 
 and a door lies to the east."""
@@ -161,6 +163,7 @@ and a door lies to the east."""
 vnum = 9009
 name = "An east-west hallway in the Tower of Nirvana"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway continues to the east, and stretches to the west."""
 
@@ -176,6 +179,7 @@ The hallway continues to the east, and stretches to the west."""
 vnum = 9010
 name = "An east-west passage in the Tower of Nirvana"
 sector = "inside"
+room_flags = ["indoors"]
 description = ""
 
   [[rooms.exits]]
@@ -190,6 +194,7 @@ description = ""
 vnum = 9011
 name = "An intersection in the Tower of Nirvana"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at an intersection where the east-west passage continues, but a large 
 passage leads to the north."""
@@ -309,6 +314,7 @@ description = "the plane continues to the north and south"
 vnum = 9016
 name = "Dead End"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand at a dead end where the only exit appears to be west."""
 
@@ -324,6 +330,7 @@ You stand at a dead end where the only exit appears to be west."""
 vnum = 9017
 name = "Dead End"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at what appears to be a dead end.  The only exit is back east."""
 
@@ -339,6 +346,7 @@ You are at what appears to be a dead end.  The only exit is back east."""
 vnum = 9018
 name = "A Tertain's lair"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You quite possibly have made a terrible mistake coming in here.
 Exits lead east and west."""
@@ -359,6 +367,7 @@ Exits lead east and west."""
 vnum = 9019
 name = "A Tertian's lair"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You might have made a terrible mistake coming into here.
 Exits lead east and west."""
@@ -379,6 +388,7 @@ Exits lead east and west."""
 vnum = 9020
 name = "The Lair of Primus"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large hall, with a massive pool of what appears to be pure energy 
 in the center of the room.  Exits lead in all the cardinal directions.  From 
@@ -416,6 +426,7 @@ the pool rises the master of the Plane of Nirvana...."""
 vnum = 9021
 name = "A Tertian's lair"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Maybe coming here wasn't such a hot idea.  You feel very unwelcome here.  
 Exits lead north and south"""
@@ -436,6 +447,7 @@ Exits lead north and south"""
 vnum = 9022
 name = "The office of a Quinton"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have stumbled upon the office of a page to Primus.
 Scrolls lie about the room along with many strange objects...you can't imagine 
@@ -466,6 +478,7 @@ directions."""
 vnum = 9023
 name = "A wide north-south passageway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 you find yourself in a passage where the exits are north and south"""
 
@@ -481,6 +494,7 @@ you find yourself in a passage where the exits are north and south"""
 vnum = 9024
 name = "A Tertian's lair"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a lair of a Tertian.  Exits lead north and south."""
 
@@ -500,6 +514,7 @@ You find yourself in a lair of a Tertian.  Exits lead north and south."""
 vnum = 9025
 name = "A north south tunnel"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a passage where the only exits are north and south."""
 
@@ -519,6 +534,7 @@ You are in a passage where the only exits are north and south."""
 vnum = 9026
 name = "An intersection of passages"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand at an intersection.  Exits lead off to the east and south. 
 A door lies to the north"""
@@ -632,6 +648,7 @@ The passages goes east and west, with a large door to the south."""
 vnum = 9032
 name = "A Junction in the passage"
 sector = "inside"
+room_flags = ["indoors"]
 description = "Here, passages lead off in all cardinal directions."
 
   [[rooms.exits]]
@@ -654,6 +671,7 @@ description = "Here, passages lead off in all cardinal directions."
 vnum = 9033
 name = "The office of the Octon"
 sector = "inside"
+room_flags = ["indoors"]
 description = "you are in a small room, the only exit is south."
 
   [[rooms.exits]]
@@ -668,6 +686,7 @@ description = "you are in a small room, the only exit is south."
 vnum = 9034
 name = "A small room"
 sector = "inside"
+room_flags = ["indoors"]
 description = "The only exit is north"
 
   [[rooms.exits]]
@@ -682,6 +701,7 @@ description = "The only exit is north"
 vnum = 9035
 name = "A passageway"
 sector = "inside"
+room_flags = ["indoors"]
 description = "Exits lead in all cardinal directions."
 
   [[rooms.exits]]
@@ -704,6 +724,7 @@ description = "Exits lead in all cardinal directions."
 vnum = 9036
 name = "Lair of a Hexton"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a room that is in complete disrepair.  Items are thrown throughout 
 the room making them worthless piles of junk.
@@ -721,6 +742,7 @@ The only exit is back south"""
 vnum = 9037
 name = "Office of a Hexton"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A makeshift desk forms the center of this room.  The only exit is north."""
 
@@ -736,6 +758,7 @@ A makeshift desk forms the center of this room.  The only exit is north."""
 vnum = 9038
 name = "Office of a Secundus"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in a office of one of the Viceroys of the Plane of Nirvana.  
 The occupant doesn't look real thrilled with your presence.  The only exits is 
@@ -757,6 +780,7 @@ west."""
 vnum = 9039
 name = "A Junction in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Your are standing in a junction, exits lead in all the cardinal directions."""
 
@@ -780,6 +804,7 @@ Your are standing in a junction, exits lead in all the cardinal directions."""
 vnum = 9040
 name = "Office of an Octon"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You see a messy room with papers scattered everywhere.
 The only exit leads back to the south"""
@@ -796,6 +821,7 @@ The only exit leads back to the south"""
 vnum = 9041
 name = "Office of a Septon"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A neat and tidy room, it appear to be inhabited my a neatenss freak.  The only 
 exit lies to the north."""
@@ -812,6 +838,7 @@ exit lies to the north."""
 vnum = 9042
 name = "An east-west passage"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 In east west passage is here with exits in all of the cardinal directions."""
 
@@ -835,6 +862,7 @@ In east west passage is here with exits in all of the cardinal directions."""
 vnum = 9043
 name = "The Barracks"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A dusty room, with a almost untolerable odor, the barracks are being inspected 
 by a Hexton and his personal enterage.
@@ -852,6 +880,7 @@ The only exit lies to the south."""
 vnum = 9044
 name = "The Commander's Post"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have stumbled on to the office of the Commander of the forces in the Plane 
 Of Nirvana.  The room is well furnished and a sense of courage and bravery 
@@ -869,6 +898,7 @@ overtakes you as you enter the room.  The only exit lies to the north."""
 vnum = 9045
 name = "The chamber of the second Secundus"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This huge room is furnished with the finest, and a personal legion guards the 
 Secundus. the only exit is to the east."""
@@ -889,6 +919,7 @@ Secundus. the only exit is to the east."""
 vnum = 9046
 name = "A Passageway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a well lit passage.  A sense of forboding danger envelopes you.  
 Exits lead in all cardinal directions."""
@@ -913,6 +944,7 @@ Exits lead in all cardinal directions."""
 vnum = 9047
 name = "Chamber of the Octon"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A small room, sparsely furnished, it leaves you with a sense of fear.  The 
 only exit is to the south"""
@@ -929,6 +961,7 @@ only exit is to the south"""
 vnum = 9048
 name = "Chamber of the Nonaton"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered the chamber of the principal law and order overseers.  The 
 only exit lies to the north"""
@@ -949,6 +982,7 @@ only exit lies to the north"""
 vnum = 9049
 name = "End of the passageway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have reached the end of a long east-west passage.  The passage contiues to 
 the west, and rooms lie to the north, south, and east."""
@@ -973,6 +1007,7 @@ the west, and rooms lie to the north, south, and east."""
 vnum = 9050
 name = "Chamber of a Hexton"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered the chamber of a Hexton.  Trophies adorn the walls, some of 
 which are human. the only exit is to the south."""
@@ -989,6 +1024,7 @@ which are human. the only exit is to the south."""
 vnum = 9051
 name = "Chamber of a Hexton"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered a room where you are not very popular. The only exit lies 
 northbound."""
@@ -1005,6 +1041,7 @@ northbound."""
 vnum = 9052
 name = "Chamber of the Secudus"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A large canvernous room, this chamber serves as the sleeping quarters for the 
 third Secudus, Viceroy to Primus. The only exit lies to the west."""
@@ -1025,6 +1062,7 @@ third Secudus, Viceroy to Primus. The only exit lies to the west."""
 vnum = 9053
 name = "A passageway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a passagway where you may go in any cardinal direction."""
 
@@ -1048,6 +1086,7 @@ You are in a passagway where you may go in any cardinal direction."""
 vnum = 9054
 name = "A small chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small cramped chamber.  The only exit lies to the south."""
 
@@ -1063,6 +1102,7 @@ You are in a small cramped chamber.  The only exit lies to the south."""
 vnum = 9055
 name = "A cramped room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small, crowded room.  The only exit appears to lie to the north."""
 
@@ -1078,6 +1118,7 @@ You are in a small, crowded room.  The only exit appears to lie to the north."""
 vnum = 9056
 name = "A large room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered a room where you are not wanted.  The only exit lies to the 
 south."""
@@ -1094,6 +1135,7 @@ south."""
 vnum = 9057
 name = "A room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered a room where there was obviously a hurried move going on.  
 The only exit lies to the north."""
@@ -1110,6 +1152,7 @@ The only exit lies to the north."""
 vnum = 9058
 name = "Chamber of The First Secundus"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have disturbed the rest of the First Viceroy to Primus the Prime, The 
 Secundus.  He does not look like a happy camper. The only exit lies to the 
@@ -1131,6 +1174,7 @@ east."""
 vnum = 9059
 name = "Junction in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = "Exits lead off in all of the cardinal directions"
 
   [[rooms.exits]]

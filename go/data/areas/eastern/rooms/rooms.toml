@@ -2,6 +2,7 @@
 vnum = 5001
 name = "A long tunnel"
 sector = "water_noswim"
+room_flags = ["dark", "indoors"]
 description = """
 You encounter some rapids as you enter this tunnel cut out of
 the mountains by the river."""
@@ -18,6 +19,7 @@ the mountains by the river."""
 vnum = 5002
 name = "A long tunnel"
 sector = "water_noswim"
+room_flags = ["dark", "indoors"]
 description = "The tunnel branches off north."
 
   [[rooms.exits]]
@@ -36,6 +38,7 @@ description = "The tunnel branches off north."
 vnum = 5003
 name = "A long tunnel"
 sector = "water_noswim"
+room_flags = ["dark", "indoors"]
 description = "The tunnel branches off south."
 
   [[rooms.exits]]
@@ -54,6 +57,7 @@ description = "The tunnel branches off south."
 vnum = 5004
 name = "A long tunnel"
 sector = "water_noswim"
+room_flags = ["dark", "indoors"]
 description = "The tunnel branches off to the south."
 
   [[rooms.exits]]
@@ -72,6 +76,7 @@ description = "The tunnel branches off to the south."
 vnum = 5005
 name = "An underground lake"
 sector = "water_noswim"
+room_flags = ["dark", "indoors"]
 description = """
 You are floating on a jet-black underground lake fed by dripping
 water and lime from above. The tunnel continues to the east and the river
@@ -98,6 +103,7 @@ a tunnel south."""
 vnum = 5006
 name = "A long narrow tunnel"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = "The tunnel rises sharply to the east."
 
   [[rooms.exits]]
@@ -112,6 +118,7 @@ description = "The tunnel rises sharply to the east."
 vnum = 5007
 name = "A wide tunnel"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The tunnel continues east and west. To the east the tunnel dives
 down into a bright light."""
@@ -128,6 +135,7 @@ down into a bright light."""
 vnum = 5008
 name = "Cave-in"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You stand at the edge of a large pile of rubble created from the last
 rockslide."""
@@ -144,6 +152,7 @@ rockslide."""
 vnum = 5009
 name = "At the foot of the rubble"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the bottom of a large pile of rubble. A tunnel branches
 off to the north and east."""
@@ -172,6 +181,7 @@ off to the north and east."""
 vnum = 5010
 name = "Cave entrance"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the middle of a large and beautiful cave. A path leads
 deeper into the darkness."""
@@ -188,6 +198,7 @@ deeper into the darkness."""
 vnum = 5011
 name = "Giant cave"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 This cavern overwhelms you. The walls and ceiling seem miles away.
 Bones of previous adventurers lie strewn on the cavern floor."""
@@ -216,6 +227,7 @@ Bones of previous adventurers lie strewn on the cavern floor."""
 vnum = 5012
 name = "Narrow bend"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = "The tunnel turns to the south and west."
 
   [[rooms.exits]]
@@ -230,6 +242,7 @@ description = "The tunnel turns to the south and west."
 vnum = 5013
 name = "Large cave"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a large cave. Many furs are spread out on the floor."""
 
@@ -245,6 +258,7 @@ You are standing in a large cave. Many furs are spread out on the floor."""
 vnum = 5014
 name = "Damp hallway"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = "The walls here are extremely damp, as well as the floor."
 
   [[rooms.exits]]
@@ -267,6 +281,7 @@ description = "The walls here are extremely damp, as well as the floor."
 vnum = 5015
 name = "Underground pool"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = "You are wading in a knee deep pool of lime-water."
 
   [[rooms.exits]]
@@ -281,6 +296,7 @@ description = "You are wading in a knee deep pool of lime-water."
 vnum = 5016
 name = "Damp hallway"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The walls of the tunnel are extremely damp here. You hear the faint
 sound of running water to the south."""
@@ -297,6 +313,7 @@ sound of running water to the south."""
 vnum = 5017
 name = "Narrow crawlway"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 This crawlway is just big enough for a human to crawl through or a
 halfling to walk through."""
@@ -317,6 +334,7 @@ halfling to walk through."""
 vnum = 5018
 name = "Large cavern"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a very large cavern. The rock formations would amaze
 almost any dwarf."""
@@ -333,6 +351,7 @@ almost any dwarf."""
 vnum = 5019
 name = "Fungus patch"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 As you walk through the fungus patch, you are shot at by many millions of
 spores. You can hardly breathe."""
@@ -349,6 +368,7 @@ spores. You can hardly breathe."""
 vnum = 5020
 name = "Fungus path"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 As you walk along the path, millions of spores are shot at you. You can
 hardly breathe."""
@@ -365,6 +385,7 @@ hardly breathe."""
 vnum = 5021
 name = "Fungus temple"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself standing inside of a giant mushroom. The inside
 is decorated in the fashion of a temple."""
@@ -393,6 +414,7 @@ is decorated in the fashion of a temple."""
 vnum = 5022
 name = "Sloping passage"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = "You follow a path sloping down from the fungus temple."
 
   [[rooms.exits]]
@@ -407,6 +429,7 @@ description = "You follow a path sloping down from the fungus temple."
 vnum = 5023
 name = "Sloping passage"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a path that gently slopes up from the underground pool."""
 
@@ -422,6 +445,7 @@ You are on a path that gently slopes up from the underground pool."""
 vnum = 5024
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -450,6 +474,7 @@ You feel lost."""
 vnum = 5025
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -482,6 +507,7 @@ You feel lost."""
 vnum = 5026
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -510,6 +536,7 @@ You feel lost."""
 vnum = 5027
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -542,6 +569,7 @@ You feel lost."""
 vnum = 5028
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -586,6 +614,7 @@ You feel lost."""
 vnum = 5029
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -618,6 +647,7 @@ You feel lost."""
 vnum = 5030
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -646,6 +676,7 @@ You feel lost."""
 vnum = 5031
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -682,6 +713,7 @@ You feel lost."""
 vnum = 5032
 name = "The Sands of Sorrow"
 sector = "desert"
+room_flags = ["no_recall"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around you.
 You feel lost."""
@@ -860,6 +892,7 @@ paintings as well."""
 vnum = 5062
 name = "Strange Glowing Sand"
 sector = "mountain"
+room_flags = ["indoors", "no_mob"]
 description = """
 A vast desert stretches for miles, the sand constantly shifting around
 you.  But this patch of desert looks different...the sand glows.  You see a
@@ -894,6 +927,7 @@ a dark cave leading under the desert sands."""
 vnum = 5064
 name = "The cave mouth"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The air in here is MUCH cooler than outside. From the west you hear
 strange sounds, but can see nothing. The cave slopes down into the
@@ -911,6 +945,7 @@ darkness."""
 vnum = 5065
 name = "The mysterious lair."
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You have stumbled upon the home of something. From the treasure
 haphazardly strewn about and the rotting carcasses, you would guess that
@@ -943,6 +978,7 @@ narrows out into a tunnel to the west."""
 vnum = 5066
 name = "A wide tunnel"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This tunnel seems to go on forever into the darkness. You carefully
 feel your way along the walls."""
@@ -961,6 +997,7 @@ feel your way along the walls."""
 vnum = 5067
 name = "A narrower tunnel"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The tunnel becomes very narrow and you fight to squeeze your way through.
 The floor seems to level off a little."""
@@ -977,6 +1014,7 @@ The floor seems to level off a little."""
 vnum = 5068
 name = "A narrow crack"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 This part of the tunnel is the hardest to move through as the walls
 move in to meet you."""
@@ -993,6 +1031,7 @@ move in to meet you."""
 vnum = 5069
 name = "A small cavern."
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 It is dark and damp and bats hang from the ceiling. A narrow crack is
 in the east wall. The floor now slopes upwards."""
@@ -1009,6 +1048,7 @@ in the east wall. The floor now slopes upwards."""
 vnum = 5070
 name = "A small shaft"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 From within this shaft you can see a narrow hole in the roof just
 large enough for one person. Back south is the cavern."""

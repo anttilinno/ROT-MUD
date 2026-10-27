@@ -1754,6 +1754,7 @@ stirs the ocean dirt up making the water reddish."""
 vnum = 16053
 name = "Stairs to the Main Deck"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are below deck of the Royal Eagle.  It is poorly lighted down here.
 There is a hallway to the south and you also smell an odor from the south.
@@ -1789,6 +1790,7 @@ you could exit to the main deck through the hatch from here."""
 vnum = 16054
 name = "Below Deck"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a hallway below the deck of the ship.  The hallway goes
 north and south and is very poorly lighted.  There is a faint smell
@@ -1822,6 +1824,7 @@ coming from the stern of the ship."""
 vnum = 16056
 name = "Sleeping Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You see bunkbeds lined againts the wall.  there are various items scattered
 around the room.  The room is very dark.  Sailors come down here to rest
@@ -1843,6 +1846,7 @@ or continue on south."""
 vnum = 16057
 name = "An Intersection Below Deck"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a hallway below deck of the ship.  There are doors leading
 east and west from here.  The hallway continues north and south.  A
@@ -1872,6 +1876,7 @@ faint odor drifts to you from the southern part of the hallway."""
 vnum = 16058
 name = "Sleeping Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You see bunkbeds lined againts the wall.  there are various items scattered
 around the room.  The room is very dark.  Sailors come down here to rest
@@ -1905,6 +1910,7 @@ or continue on south."""
 vnum = 16059
 name = "Sleeping Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You see bunkbeds lined againts the wall.  there are various items scattered
 around the room.  The room is very dark.  Sailors come down here to rest
@@ -1935,6 +1941,7 @@ very quiet in order not to wake them."""
 vnum = 16060
 name = "Below Deck"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a hallway below the deck of the ship.  The hallway goes
 north and south and is very poorly lighted.  There is a strong smell
@@ -1964,6 +1971,7 @@ coming from the stern of the ship."""
 vnum = 16061
 name = "Sleeping Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You see bunkbeds lined againts the wall.  there are various items scattered
 around the room.  The room is very dark.  Sailors come down here to rest
@@ -2006,6 +2014,7 @@ very quiet in order not to wake them."""
 vnum = 16062
 name = "Sleeping Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You see bunkbeds lined againts the wall.  there are various items scattered
 around the room.  The room is very dark.  Sailors come down here to rest
@@ -2036,6 +2045,7 @@ very quiet in order not to wake them.  The store rooms are south of here."""
 vnum = 16063
 name = "The Kitchen"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 Wheww!  This was where that odor was coming from.  The rooms stinks of
 garlick, old meat and other foods which would make a beggar's face green!
@@ -2074,6 +2084,7 @@ here.  You can exit north."""
 vnum = 16064
 name = "Sleeping Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You see bunkbeds lined againts the wall.  there are various items scattered
 around the room.  The room is very dark.  Sailors come down here to rest
@@ -2092,6 +2103,7 @@ very quiet in order not to wake them."""
 vnum = 16065
 name = "Storeroom"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This room is used for storing the various supplies needed for a long
 voyage.  There are barrels and crates of food and weapons piled up
@@ -2121,6 +2133,7 @@ in the room.  You can go east or south from here."""
 vnum = 16066
 name = "Storeroom"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This room is used for storing the various supplies needed for a long
 voyage.  There are barrels and crates of food and weapons piled up
@@ -2150,6 +2163,7 @@ in the room.  There are no exits except east."""
 vnum = 16067
 name = "Sleeping Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You see bunkbeds lined againts the wall.  there are various items scattered
 around the room.  The room is very dark.  Sailors come down here to rest
@@ -2188,6 +2202,7 @@ very quiet in order not to wake them.  You can only exit north."""
 vnum = 16068
 name = "Below Deck - Port"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a corridor below deck of the ship.  The hall is very poorly
 lighted.  The exits are east and there is a door to the south."""
@@ -2210,6 +2225,7 @@ lighted.  The exits are east and there is a door to the south."""
 vnum = 16069
 name = "Below Deck"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a corridor below deck of the ship.  The hallway goes east and
 west and is very poorly lighted.  There is a door to the south."""
@@ -2238,6 +2254,7 @@ west and is very poorly lighted.  There is a door to the south."""
 vnum = 16070
 name = "Below Deck - Starboard"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a corridor below deck of the ship.  The hall is very poorly
 lighted.  The exits are west and there is a door to the south."""
@@ -2256,6 +2273,7 @@ lighted.  The exits are west and there is a door to the south."""
 vnum = 16071
 name = "First Mate's Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This room is very messy.  There is a small table against the wall with a
 little lamp on it.  Clothing is scattered all over the floor and you see
@@ -2292,6 +2310,7 @@ up as if they haven't been washed in decades."""
 vnum = 16072
 name = "Captain's Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This is the Captain's room.  He seems to be very tidy for a pirate.  There
 are various articles of note in this room, most of which are keepsakes from
@@ -2314,6 +2333,7 @@ he will be VERY upset, so get out quick!"""
 vnum = 16073
 name = "Navigator's Quarters"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This room is filled with maps from wall to wall.  There is a huge table in
 center with a map showing the ocean currents and winds.  Navigation
@@ -2349,6 +2369,7 @@ instruments have been laid all over the table."""
 vnum = 16074
 name = "Hidden Room"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a small secret room covered with cobwebs.  It seems that no one
 has been here in a LONG time.  The room is very cold and dark.  It goes
@@ -2368,6 +2389,7 @@ east of here and there is a door to the north."""
 vnum = 16075
 name = "Hidden Room"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 You are in a small secret room covered with cobwebs.  It seems that no one
 has been here in a LONG time.  The room is very cold and dark.  It goes
@@ -2385,6 +2407,7 @@ east and west."""
 vnum = 16076
 name = "Treasure Room"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 WOW!  Look at all the gold and jewelry chests here.  You could buy a
 kingdom with all these riches!  This must be the room where the Captain
@@ -2607,6 +2630,7 @@ and the height gets to you and you let loose your dinner.  Ewwe!"""
 vnum = 16084
 name = "Seashells Galore"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This remote shop located by the seashore sells trinkets made from everything
 immaginable.  The walls are stacked with shelves and shelves of multi-colored
@@ -2657,6 +2681,7 @@ journeys he may plan.  Try out the delicious seafood they serve here!"""
 vnum = 16100
 name = "Entrance Foyer in Lance's House"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 As you enter this house, you feel slightly disorriented as if stepping
 into a different time and space.  His house is modeled in an alien
@@ -2684,6 +2709,7 @@ a stairway leads up."""
 vnum = 16101
 name = "Lance's Living Room"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 You step into Lance's living room.  This is the place where Lance invites
 guests over for chats.  There are shoji screens placed at advantageous
@@ -2705,6 +2731,7 @@ corners of the room.  The foyer lies south and the dining room is west."""
 vnum = 16102
 name = "Lance's Dining Room"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 You are in Lance's dining room.  He invites his guests here for lunch or
 dinner.  There is a beautiful marble table with polished wood for borders
@@ -2731,6 +2758,7 @@ the living room is to the east."""
 vnum = 16103
 name = "Lance's Kitchen"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 You have entered into Lance's kitchen.  There are mysterious meats boiling
 in various pots on the stove and you wonder if they are edible.  The shelf
@@ -2750,6 +2778,7 @@ exit is south."""
 vnum = 16104
 name = "Lance's Backyard Swiming Pool"
 sector = "water_swim"
+room_flags = ["no_recall", "safe"]
 description = """
 As you enter the pool, all your muscles relax and all the problems of
 the day dissapear into the back of your head.  All you want to do is
@@ -2775,6 +2804,7 @@ to the south or a patio door to the east."""
 vnum = 16105
 name = "Lance's Bonsai Garden"
 sector = "mountain"
+room_flags = ["no_recall", "safe"]
 description = """
 You step into a miniature world as you enter the garden.  There are many
 bonsai in the area, each and everyone in healthy condition.  You feel
@@ -2801,6 +2831,7 @@ waters all these trees.  You may enter the swimming pool to the north."""
 vnum = 16106
 name = "Lance's Downstairs Bathroom"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 You enter a bathroom which is very well lit.  There is a shower room, a
 sink, and other things that go into a bathroom.  The floor is made of
@@ -2816,6 +2847,7 @@ probably wouldn't know either!  The entrance foyer is to the east."""
 vnum = 16107
 name = "Lance's Upstairs Foyer"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 This is the second level of Lance's house where his private quarters are.
 His house is modeled in an alien Tsuranni fashion.  It is sort of a
@@ -2839,6 +2871,7 @@ foyer and there is a private library to the north."""
 vnum = 16108
 name = "Lance's Bedroom"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 You enter a cozy looking room.  There is a large bed in the center of
 room with a matress and pillows as soft as the clouds.  There are many
@@ -2858,6 +2891,7 @@ The upstairs foyer is to the south and the library is to the west."""
 vnum = 16109
 name = "Lance's Private Library"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 You are astounded by the number of valuable books in this room.  Lance's
 collection includes some original volumes on the history oh Medievia.
@@ -2889,6 +2923,7 @@ You may walk in all four directions from here."""
 vnum = 16110
 name = "Lance's Private Study"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 This is the room in which Lance does his work.  He talks to people about
 improving the game and making adjustments here.  If you needed to talk
@@ -2912,6 +2947,7 @@ magic portal in the east wall of the room."""
 vnum = 16111
 name = "Lance's Balcony"
 sector = "mountain"
+room_flags = ["indoors", "no_mob", "no_recall", "private", "safe"]
 description = """
 You stand ouside in Lance's Balcony.  From here, you could see amost all
 of Medievia.  There are some majestic moutains towering in your sight.
@@ -2929,6 +2965,7 @@ is a window to the east leading inside."""
 vnum = 16112
 name = "Lance's Workout Room"
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 Lance comes here to excercise and improve his skills.  There are a number
 of excercise equipment around the room.  There is a mat in the center from
@@ -2943,6 +2980,7 @@ The only exit is north."""
 vnum = 16113
 name = "You step into the room and..."
 sector = "inside"
+room_flags = ["no_mob", "no_recall", "private", "safe"]
 description = """
 all of a sudden you loose all sense of direction...
 *GASP*

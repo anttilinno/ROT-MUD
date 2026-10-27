@@ -2,6 +2,7 @@
 vnum = 19900
 name = "Path to the Fanatics' Tower"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 You hear a strange droning sound from somewhere nearby.  A huge tower bustling
 with activity lies to the north.
@@ -31,6 +32,7 @@ a very special prize if beaten.
 vnum = 19901
 name = "Entrance to the Fanatics' Tower"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 You are standing in front of the Fanatics' Tower.  The droning noise is coming
 from some robed fanatics walking in a circle in front of the door to the tower.
@@ -72,6 +74,9 @@ at the top of the tower.  One offers to tell you a secret for 10000 gold.  Heh""
 vnum = 19902
 name = "A safe room with stairs leading up"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
+heal_rate = 110
+mana_rate = 100
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up to the next level of the tower."""
@@ -89,6 +94,7 @@ the back of the room leading up to the next level of the tower."""
 vnum = 19903
 name = "A safe room with stairs leading down."
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -193,6 +199,7 @@ It is slightly drafty up here."""
 vnum = 19907
 name = "Chamber of the 11th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by Artema in 1996.  But now, he is nothing more than an avatar of the real
@@ -223,6 +230,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19908
 name = "A safe room with stairs leading up"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up to the next level of the tower."""
@@ -239,6 +247,7 @@ the back of the room leading up to the next level of the tower."""
 vnum = 19909
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -405,6 +414,7 @@ The wind is picking up."""
 vnum = 19915
 name = "Chamber of the 10th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 11th in 1896.  But now, he is nothing more than an avatar of the real
@@ -435,6 +445,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19916
 name = "A safe room with stairs leading up"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -451,6 +462,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19917
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -623,6 +635,7 @@ A draft chills you to the bones."""
 vnum = 19923
 name = "Chamber of the 9th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 10th in 1796.  But now, he is nothing more than an avatar of the real
@@ -653,6 +666,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19924
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -673,6 +687,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19925
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to a previous level of the tower."""
@@ -846,6 +861,7 @@ Chilling gusts of wind slow your progress."""
 vnum = 19931
 name = "Chamber of the 8th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 9th in 1696.  But now, he is nothing more than an avatar of the real
@@ -876,6 +892,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19932
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -896,6 +913,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19933
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to a previous level of the tower."""
@@ -1069,6 +1087,7 @@ You're being sprayed by a thick fog, it feels so good!"""
 vnum = 19939
 name = "Chamber of the 7th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 8th in 1596.  But now, he is nothing more than an avatar of the real
@@ -1099,6 +1118,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19940
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -1119,6 +1139,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19941
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to a previous level of the tower."""
@@ -1297,6 +1318,7 @@ he drew a joker."""
 vnum = 19947
 name = "Chamber of the 6th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 7th in 1496.  But now, he is nothing more than an avatar of the real
@@ -1327,6 +1349,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19948
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -1347,6 +1370,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19949
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -1517,6 +1541,7 @@ The wind at this hight is deafening... Hell you're 140 feet up!"""
 vnum = 19955
 name = "Chamber of the 5th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 6th in 1396.  But now, he is nothing more than an avatar of the real
@@ -1547,6 +1572,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19956
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -1567,6 +1593,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19957
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -1739,6 +1766,7 @@ You're being soaked with rain!"""
 vnum = 19963
 name = "Chamber of the 4th {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 5th in 1296.  But now, he is nothing more than an avatar of the real
@@ -1769,6 +1797,7 @@ thing.  Still very powerful, he towers over you in a manacing manner."""
 vnum = 19964
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -1789,6 +1818,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19965
 name = "A safe room with stairs."
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -1956,6 +1986,7 @@ The wind is mauling you with raindrops going at 200 Kph!"""
 vnum = 19971
 name = "Chamber of the 3rd {8Draconian {4ArchMage{0"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the chamber of the avatar of the {8Draconian {4ArchMage{0 beaten
 by the 4th in 1196.  But now, he is nothing more than an avatar of the real
@@ -1986,6 +2017,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19972
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -2202,6 +2234,7 @@ thing.  Still very powerful, he towers over you in a menacing manner."""
 vnum = 19980
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -2222,6 +2255,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19981
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -2383,6 +2417,7 @@ The wind is tearing at your clothing and pulling you toward the railing!"""
 vnum = 19987
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -2403,6 +2438,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19988
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the previous level of the tower."""
@@ -2544,6 +2580,9 @@ and ice are bolting through the clouds where lighting normally should be..."""
 vnum = 19993
 name = "Healing room."
 sector = "inside"
+room_flags = ["indoors", "no_mob", "no_recall", "safe"]
+heal_rate = 200
+mana_rate = 200
 description = """
 This room is for all the weary travelers about to journey up to the first
 {8Draconian {4ArchMage{0.  An Adept of Eriana is here telling people that
@@ -2566,6 +2605,7 @@ asking for restores is the way {1*not*{0 to get one!  }:>"""
 vnum = 19994
 name = "A safe room with stairs leading down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading down to the other levels of the tower."""
@@ -2586,6 +2626,7 @@ the back of the room leading down to the other levels of the tower."""
 vnum = 19995
 name = "A safe room with stairs leading up and down"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are in a room, safe from all the scary mobs outside.  A staircase is in
 the back of the room leading up and down to the other levels of the tower."""
@@ -2606,6 +2647,7 @@ the back of the room leading up and down to the other levels of the tower."""
 vnum = 19996
 name = "The top of the Fanatics' Tower"
 sector = "city"
+room_flags = ["no_recall"]
 description = """
 You have entered the chamber of the avatar of the very 1st {8Draconian
 {4ArchMage{0 beaten by the 2nd in 996.  But now, he is nothing more than
@@ -2636,6 +2678,7 @@ a menacing manner."""
 vnum = 19997
 name = "Balcony over the Fanatics' Tower"
 sector = "city"
+room_flags = ["no_mob", "safe"]
 description = """
 From 275 feet up, too the east, west, and south you can see almost all
 of Thoth's Realm!  To the north is the chamber of the first {8Draconian
@@ -2653,6 +2696,7 @@ of Thoth's Realm!  To the north is the chamber of the first {8Draconian
 vnum = 19998
 name = "The top of Thoth's Great Mountain."
 sector = "mountain"
+room_flags = ["no_mob", "safe"]
 description = """
 A Mystical Waterfall of IceWine bubbles from the ground here and spills over
 the side of the mountain.  You would think the view here would be better, but
@@ -2677,6 +2721,9 @@ to drink any unless you jump!"""
 vnum = 19999
 name = "Cliff looking over all of Lestat's Realm"
 sector = "mountain"
+room_flags = ["law", "private"]
+heal_rate = 400
+mana_rate = 400
 description = """
 You are the side of a mountain that reaches up past what even
 an Avian could see.  The view here is spectacular; you are right under

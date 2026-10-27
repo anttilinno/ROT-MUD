@@ -360,6 +360,7 @@ gates.  The path leads back northward."""
 vnum = 11712
 name = "Outside of space"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A wave of vertigo washes over you as you gaze around what appears to
 be a formless multicolored void.  A variety of strange objects float
@@ -422,6 +423,7 @@ A black counter hangs in midair."""
 vnum = 11713
 name = "Shimmering pathway"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 The pathway continues east and west here.  A strange rope ladder,
 formed of the same material as the pathway, hangs suspended above the
@@ -479,6 +481,7 @@ you see marble steps leading up into the tower center."""
 vnum = 11715
 name = "Chamber of the Guardian"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight permeates the chamber, filling it with a strange greyish
 glow.  The walls, formed of something akin to marble seem impossible
@@ -512,6 +515,7 @@ lead up to double silver doors."""
 vnum = 11716
 name = "Council Chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a wide circular chamber carved of the same strange
 grey stone as the rest of the tower.  A large crescent shaped table
@@ -551,6 +555,7 @@ She'valen Myrxes, Xaek, and Noriva."""
 vnum = 11717
 name = "Hidden lane"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You stand on a narrow strip of silver leading south to a huge tree
 and east to a black oaken door.  The air seems strangely still
@@ -586,6 +591,7 @@ and quiet."""
 vnum = 11718
 name = "Laerkai Headquarters"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You find yourself in a large room enclosed by midnight black onyx
 walls.  In the center of the room is a large stone table encircled
@@ -655,6 +661,7 @@ Silver, inlayed in the dark marble wall, forms the inscription:
 vnum = 11720
 name = "Blue Marble Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dark blue marble walls frame a wide north-south corridor.  Brilliant
 streaks of white slash the darker blue stone like shafts of lightning.
@@ -691,6 +698,7 @@ south, double silver doors are set into the wall."""
 vnum = 11721
 name = "Wood Panelled Ballroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The dark polished stone of a dance floor gleams amidst the oak panelled
 walls framing the ballroom.  Silver tapestries adorn the walls, glittering
@@ -712,6 +720,7 @@ fragile snowflake frozen in mid-fall."""
 vnum = 11722
 name = "Dining Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dark, white streaked blue marble frames a long hall running east and
 west.  Dominating the center of the hall is a long table of some
@@ -746,6 +755,7 @@ preserve the food and protect it from uninvited guests."""
 vnum = 11723
 name = "Kitchen"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand inside a huge, blue walled kitchen.  Pots and pans hang in
 racks along the walls, alongside knife sets and various silver utensils.
@@ -767,6 +777,7 @@ on a spit."""
 vnum = 11724
 name = "Blue Marble Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Torchlight flickers over deep blue marble walls, picking out streaks
 of white and darker greys.  Silver, inlayed in the dark marble,
@@ -796,6 +807,7 @@ A winding stairwell is visible to the north."""
 vnum = 11725
 name = "Spiral Stairwell"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A varnished wood stairwell is set against the north wall, spiraling
 up and down to disappear into the floor and ceiling here.  A blue
@@ -817,6 +829,7 @@ marble corridor runs south."""
 vnum = 11726
 name = "Granite storage room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a dimly lit cavern hewn of solid granite.  Shelves inset in
 the rock walls bear a variety of crates and boxes.  Longer crates lean
@@ -850,6 +863,7 @@ curtain."""
 vnum = 11727
 name = "Magic Workroom"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Shelves line the east and west walls, filled to overflowing with dusty
 tomes and stacks of parchment.  Long tables line the two remaining walls
@@ -905,6 +919,7 @@ It appears that some sort of arcane studies are in progress here."""
 vnum = 11728
 name = "Chemical Lab"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 One sniff, and a raunchy stench nearly bowls you over.  The sounds of
 liquid, bubbling and dripping in the constructions of tubing and beakers
@@ -940,6 +955,7 @@ white and multicolored steam, which accounts for the stench.  Chemists.."""
 vnum = 11729
 name = "Summoning Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A warning prickle climbs along the back of your spine as you survey the
 dark walled stone room.  Inlayed in silver in the center of the floor
@@ -970,6 +986,7 @@ A magic curtain glimmers above the shelf, barely visible in the darkness."""
 vnum = 11730
 name = "Mirrored Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a long hallway.  Doors open into the north, south, east,
 and west wall.  The walls between the doors are filled with a variety
@@ -1015,6 +1032,7 @@ twisted images of yourself back at you."""
 vnum = 11731
 name = "Emerald Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Deep green tapestries adorn varnished black oak wall panels framing a 
 luxurious bedroom suite.  Emerald inlay forms swirling patterns in
@@ -1045,6 +1063,7 @@ The silver lettering reads:
 vnum = 11732
 name = "Amethyst Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 White oak walls support layers of rich purple tapestries.  Radiating
 from the center of the ceiling is a huge starburst pattern, formed of
@@ -1075,6 +1094,7 @@ The inscription reads:
 vnum = 11733
 name = "Sapphire Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a huge suite adorned with azure blue tapestries.
 Brass sconces holding torches are spaced along the redwood panelled
@@ -1106,6 +1126,7 @@ The silver letters form the words:
 vnum = 11734
 name = "Ruby Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Deep red wall hangings grace the varnished golden oak panelled walls, 
 shimmering softly in the torchlight.  Five square cut rubies form a
@@ -1136,6 +1157,7 @@ The inscription reads:
 vnum = 11735
 name = "Diamond Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 White streaked blue marble walls frame an enormous suite decorated with
 shimmering white tapestries.  Woven in silver are depictions of
@@ -1182,6 +1204,7 @@ Glittering diamond picks out an inscription against the dark stone:
 vnum = 11736
 name = "Ivory Foyer"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A crystal chandelier hangs suspended in the center of the room, its
 bright light gleaming off polished ivory and gold trim.  The huge
@@ -1242,6 +1265,7 @@ The lettering reads:
 vnum = 11737
 name = "Art Gallery"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Shallow niches, spaced evenly along the long white walls of the gallery,
 display a wide variety of portraits and figurines, each obviously
@@ -1276,6 +1300,7 @@ by the hands of master artists and probably worth a fortune."""
 vnum = 11738
 name = "White Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Gleaming grey streaked white marble frames a long hallway running
 east-west here.  The glow of torches, affixed in golden sconces along
@@ -1303,6 +1328,7 @@ The tapestries depict slender winged figures engaged in battle."""
 vnum = 11739
 name = "Dining Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim candlelight picks out the golden grains of the oak table stretching
 the length of the hall, set with white placemats and matching golden 
@@ -1316,6 +1342,7 @@ silverware.  A wide archway opens north onto a white hallway."""
 vnum = 11740
 name = "White Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway stretches west to the base of a spiral staircase and east
 towards the foyer.  A polished golden oak archway opens north into a
@@ -1345,6 +1372,7 @@ circular stone chamber."""
 vnum = 11741
 name = "Tower Base"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a circular white marble room, apparently the base of a tall
 tower.  A staircase spirals through the center of the room, leading up.
@@ -1430,6 +1458,7 @@ through the center of the room to the floor below."""
 vnum = 11744
 name = "Spiral Staircase"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand at the base of a wide spiral staircase ascending to the
 second floor.  A white marble hallway stretches east from here."""
@@ -1446,6 +1475,7 @@ second floor.  A white marble hallway stretches east from here."""
 vnum = 11745
 name = "Second Floor Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A wide hallway stretches west from here, the gleaming marble walls
 broken at intervals by varnished wood doors to the north and south.
@@ -1479,6 +1509,7 @@ floor."""
 vnum = 11746
 name = "Heir's Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A huge, luxuriously appointed bedroom stretches out around you.  Golden
 threads, interwoven in the white curtains adorning the walls, glitter
@@ -1511,6 +1542,7 @@ The inscription reads:
 vnum = 11747
 name = "Wide Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand at the western end of a wide white marble hallway.  A dark
 oaken door opens northward, and an ashwood door opens west."""
@@ -1533,6 +1565,7 @@ oaken door opens northward, and an ashwood door opens west."""
 vnum = 11748
 name = "Ashwood Panelled Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Varnished white ashwood walls frame a large, well decorated bedroom.
 Dark tapestries of battling heroes adorn the walls.  Behind a glass case
@@ -1584,6 +1617,7 @@ colors."""
 vnum = 11749
 name = "Dark Oak Panelled Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The light from several torches in golden sconces spaced along the oak
 panelled walls plays over dark velvet curtains and intricately woven
@@ -1630,6 +1664,7 @@ Inscribed in the dark oaken door to the south are the words:
 vnum = 11750
 name = "Marble Sitting Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a large, marble walled sitting room.  Golden holders hold
 large white candles set in shallow niches spaced along the walls of the
@@ -1660,6 +1695,7 @@ The tunnel crosses above ground to the white tower to the east."""
 vnum = 11751
 name = "Golden Bedchamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Shimmering golden tapestries hang from the walls, reflecting the torchlight
 in a soft golden glow.  The tapestries part across the center of the
@@ -1706,6 +1742,7 @@ carven, is elven in shape."""
 vnum = 11752
 name = "Glass Tunnel"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a narrow east-west glass tunnel spanning the midair
 gap between the tower to the east and the second floor of the house to
@@ -1753,6 +1790,7 @@ The inscription reads:
 vnum = 11754
 name = "Black Marble Entryway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Obsidian wall gleam coldly in the dim torchlight, broken only by the
 dark gates to the west and a wide archway leading east.  A symbol is
@@ -1786,6 +1824,7 @@ Cut into the dark stone, the symbol reads:
 vnum = 11755
 name = "Domed Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Curving obsidian walls arch above, forming a hermispherical ceiling
 above the large circular chamber.  Bits of silver and small diamonds,
@@ -1808,6 +1847,7 @@ the illusion of an eternal night sky."""
 vnum = 11756
 name = "Dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Plain black obsidian walls arch overhead to form a narrow north-south
 tunnel.  Deep niches open off the walls of the tunnel to the east, west,
@@ -1833,6 +1873,7 @@ and south.  To the north, the tunnel opens onto a a huge domed room."""
 vnum = 11757
 name = "Dark niche"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 You stand in a dark, narrow niche carved of plain black stone.  A
 wide black marble pedestal stands in the center of the floor, probably
@@ -1862,6 +1903,7 @@ of something very like dried blood.."""
 vnum = 11758
 name = "Dark niche"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 You stand in a dark, narrow niche carved of plain black stone.  A
 wide black marble pedestal stands in the center of the floor, probably
@@ -1891,6 +1933,7 @@ of something very like dried blood.."""
 vnum = 11759
 name = "Dark niche"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 You stand in a dark, narrow niche carved of plain black stone.  A
 wide black marble pedestal stands in the center of the floor, probably
@@ -1937,6 +1980,7 @@ resembling a keyhole."""
 vnum = 11760
 name = "Forbidding Doorway"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 Huge double doors, carved of polished black stone, loom forbiddingly to
 the south.  The archway surrounding the door is carved in the shape of
@@ -1969,6 +2013,7 @@ betraying the dangerous strength of their maker."""
 vnum = 11761
 name = "Pentagram Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You find yourself in a large chamber hewn of black stone.  A huge
 pentagram is etched into the stone of the floor, dominating the center
@@ -2019,6 +2064,7 @@ runes have been carved in the spaces between the defining lines."""
 vnum = 11762
 name = "Black Marble Corridor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Black marble walls tower above, defining a tall corridor leading east
 and south here.  The faint odor of what could have been blood lingers
@@ -2044,6 +2090,7 @@ in the air, adding to the gloom of the dark corridor."""
 vnum = 11763
 name = "Black Marble Corridor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The black marble walls gleam coldly in the dim light.  A tall oak
 door opens to the north, and a similar ash door opens south from here.
@@ -2071,6 +2118,7 @@ The corridor continues east and west."""
 vnum = 11764
 name = "Dark ash bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A single blood red candle in the center of the room bathes the room in
 an eerie reddish glow, picking out the dark grains of black ashwood
@@ -2113,6 +2161,7 @@ Lettering above the doorway reads:
 vnum = 11765
 name = "Black oak bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Black oak wall panels seem to absorb the dim light of the few torches
 spaced along the walls.  Braces of throwing daggers gleam from behind a
@@ -2152,6 +2201,7 @@ The daggers appear finely tempered and quite lethal.."""
 vnum = 11766
 name = "Black Marble Corridor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The tall black marble walls are broken to the north, east, and south
 by doorways.  The door to the north is carved mahogany, to the south
@@ -2199,6 +2249,7 @@ The lettering reads:
 vnum = 11767
 name = "Ash bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A humanoid skull hangs suspended from the center of the ceiling, an inner
 light giving it's eyes a reddish glow white permeates dimly throughout
@@ -2241,6 +2292,7 @@ The inscription above the door reads:
 vnum = 11768
 name = "Charred mahogany bedroom"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Streaks of charred and blackened wood mar the once-reddish brown mahogany
 wall panels, as if a thunderstorm once raged through the room, throwing
@@ -2272,6 +2324,7 @@ Inscribed above the doorway are the words:
 vnum = 11769
 name = "Dark Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Black obsidian walls seem to absorb all light in the room, leaving a
 forbidding darkness.  Full humanoid skeletons, embedded in the walls around
@@ -2323,6 +2376,7 @@ wings."""
 vnum = 11770
 name = "Quiet foyer"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A still quiet permeates the area, broken only by your movements and the
 occasional crackle of flickering torches.  Above the eastern archway,
@@ -2364,6 +2418,7 @@ Twining around the archway is an inscription:
 vnum = 11771
 name = "Alcove"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight illuminates the interior of a quiet, stone walled alcove.
 Benches line the north, west, and east walls, and an archway leads south."""
@@ -2380,6 +2435,7 @@ Benches line the north, west, and east walls, and an archway leads south."""
 vnum = 11772
 name = "Alcove"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight illuminates the interior of a quiet, stone walled alcove.
 Benches line the north, west, and east walls, and an archway leads south."""
@@ -2400,6 +2456,7 @@ Benches line the north, west, and east walls, and an archway leads south."""
 vnum = 11773
 name = "Alcove"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight illuminates the interior of a quiet, stone walled alcove.
 Benches line the north, west, and east walls, and an archway leads south."""
@@ -2417,6 +2474,7 @@ Benches line the north, west, and east walls, and an archway leads south."""
 vnum = 11774
 name = "Plain stone room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a plain room hewn of dark grey stone.  Wooden targets affixed
 to the walls bear deep gouges and slash marks.  Empty racks, probably
@@ -2452,6 +2510,7 @@ centers."""
 vnum = 11775
 name = "Dark cavern"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Intricate carvings cover the stone walls, floors, and ceiling.  Most
 of the engraving seems to blend into one continuous, amorphous twisting
@@ -2495,6 +2554,7 @@ You try to follow the design with your eyes, but it eludes you."""
 vnum = 11776
 name = "Chamber of the Panther"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Engravings of prowling and striking panthers grace the dark onyx walls,
 so intricate that they almost seem alive..  The polished form of a
@@ -2531,6 +2591,7 @@ The door itself is flush with the wall and nearly invisible."""
 vnum = 11777
 name = "Chamber of the Dagger"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Grey streaked black marble walls gleam coldly in the dim light, broken
 only by the depiction of a thrown dagger in the center of the northern wall.
@@ -2587,6 +2648,7 @@ of protective magic shield surrounds the case and supporting table."""
 vnum = 11778
 name = "Chamber of the Lynx"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A striking lynx fills the eastern wall, cut into the otherwise unadorned
 black onyx walls of the chamber.  A leaping lynx forms an archway above
@@ -2623,6 +2685,7 @@ glittering against the dark stone."""
 vnum = 11779
 name = "Chamber of Shadows"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Shadows seem to coallesce here, extinguishing nearly all light to
 pinpoints, dulling the polished gleam of the framing onyx walls and
@@ -2725,6 +2788,7 @@ carved oaken door opens into the large house to the west."""
 vnum = 11781
 name = "Iron Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Imposing iron walls tower above to form a long north-south hallway.
 Thick steel double doors loom to the west, and a carved oaken door
@@ -2752,6 +2816,7 @@ opens east.  The hallway continues north and south."""
 vnum = 11782
 name = "Iron Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway terminates to the south at a thick steel door.  Above the
 doorway is the Xaek crest over a crossed shield and sword."""
@@ -2777,6 +2842,7 @@ doorway is the Xaek crest over a crossed shield and sword."""
 vnum = 11783
 name = "Private Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Tall iron walls enclose a wide circular arena.  Thick sand covers the
 floor, scuffed by recent practice bouts.  Dark clumps of what appear
@@ -2871,6 +2937,7 @@ west, and south."""
 vnum = 11785
 name = "Second Commander's Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a sparsely furnished office framed by plain oak panelled
 walls.  A desk rests near the western wall, accompanied by several
@@ -2902,6 +2969,7 @@ The inscription reads:
 vnum = 11786
 name = "First Commander's Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Varnished white beechwood walls frame a spacious office.  Polished
 forms the floor, and a large window overlooks the practice field
@@ -2932,6 +3000,7 @@ The inscription reads:
 vnum = 11787
 name = "Third Commander's Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The varnished reddish brown of mahogany wall panels glimmers slightly
 in the torchlight.  Darker wood forms a doorframe around the door to
@@ -2961,6 +3030,7 @@ The inscription reads:
 vnum = 11788
 name = "Iron Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway comes to an abrupt end before two huge granite doors.
 The depiction of a huge lion is carved in relief at the crest of
@@ -2997,6 +3067,7 @@ by an inscription:
 vnum = 11789
 name = "Marble Bedchamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a huge bedchamber walled with white streaked grey
 marble.  Parted white silk tapestries to the north reveal an engraving
@@ -3045,6 +3116,7 @@ feline head.  Beneath the engraving, you notice the inscription:
 vnum = 11790
 name = "Jade Entry Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The light from thick wax candles spaced in niches along the walls
 plays over jade walls, permeating the hall with a soft greenish glow.
@@ -3068,6 +3140,7 @@ north.  A corridor exits the hall to the south."""
 vnum = 11791
 name = "Jade Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Polished jade forms the walls of a short north-south corridor, the
 green of the stone fading from dark to light and back again.
@@ -3097,6 +3170,9 @@ door leads east and a glass door south.  The corridor continues west."""
 vnum = 11792
 name = "Shrine of Healing"
 sector = "inside"
+room_flags = ["indoors", "safe"]
+heal_rate = 115
+mana_rate = 115
 description = """
 You stand in a small, jade walled shrine.  In the center of the shrine,
 a low white marble dais supports a kneeling statue of a praying drakyri.
@@ -3195,6 +3271,7 @@ a narrow path winds up to a large white house."""
 vnum = 11795
 name = "Jade Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The soft glow of candlelight shimmers over deep green jade walls.
 Varnished wood doors lead north, south, and west, and a staircase spirals
@@ -3232,6 +3309,7 @@ upwards towards a pair of double white doors above."""
 vnum = 11796
 name = "Candlelit Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Light from a single white candle, supported on a table in the center
 of the room, glows golden amidst varnished ashwood wall panels.
@@ -3273,6 +3351,7 @@ The inscription reads:
 vnum = 11797
 name = "Teak Panelled Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The golden grains of teak wall panels glow warmly in the torchlight.
 Carved above the doorway to the east is a strange, five-pointed leaf.
@@ -3307,6 +3386,7 @@ The inscription reads:
 vnum = 11798
 name = "Booklined Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Bookshelves line the east and south walls, and a large canopied bed
 rests against the west wall.  Battered tomes of herb lore and
@@ -3336,6 +3416,7 @@ Myr'vale Noriva Voryl Ira'deian"""
 vnum = 11799
 name = "Sunlit Bedchamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Curved glass panels form a domed roof overhead, filling the chamber
 with the warm glow of sunlight.  An inlayed engraving of a huge bear

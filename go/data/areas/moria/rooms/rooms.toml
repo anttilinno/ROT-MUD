@@ -2,6 +2,7 @@
 vnum = 4100
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = "Suddenly you feel that the tunnel leads slightly down."
 
   [[rooms.exits]]
@@ -16,6 +17,7 @@ description = "Suddenly you feel that the tunnel leads slightly down."
 vnum = 4101
 name = "The long tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long east-west leading tunnel. The tunnel is quite
 wide at this point."""
@@ -32,6 +34,7 @@ wide at this point."""
 vnum = 4102
 name = "The long tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long east-west leading tunnel. The tunnel becomes
 narrow to the west."""
@@ -48,6 +51,7 @@ narrow to the west."""
 vnum = 4103
 name = "The long tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long east-west leading tunnel. The tunnel is quite
 narrow at this point. You notice a small hole leading south."""
@@ -96,6 +100,7 @@ narrow at this point. You notice a small hole leading south."""
 vnum = 4104
 name = "The long tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long east-west leading tunnel. The tunnel starts sloping
 down towards the west."""
@@ -112,6 +117,7 @@ down towards the west."""
 vnum = 4105
 name = "The golden cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a giant cave, all the walls are shining with a soft golden
 light. The cave continues to the south and west."""
@@ -128,6 +134,7 @@ light. The cave continues to the south and west."""
 vnum = 4106
 name = "The golden cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a giant cave, all the walls are shining with a soft golden
 light. The cave continues to the south and east, to the north is a narrow
@@ -149,6 +156,7 @@ tunnel."""
 vnum = 4107
 name = "The passage"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small passage, it leads south, to the west is a golden
 cave."""
@@ -165,6 +173,7 @@ cave."""
 vnum = 4108
 name = "The golden cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a giant cave, all the walls are shining with a soft golden
 light. The cave continues to the north and west, east from you there is
@@ -190,6 +199,7 @@ a small passage."""
 vnum = 4109
 name = "The golden cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a giant cave, all the walls are shining with a soft golden
 light. The cave continues to the south, east and north."""
@@ -210,6 +220,7 @@ light. The cave continues to the south, east and north."""
 vnum = 4110
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = "You are at the end of the tunnel."
 
   [[rooms.exits]]
@@ -220,6 +231,7 @@ description = "You are at the end of the tunnel."
 vnum = 4111
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a small tunnel, it leads from east to the west."
 
   [[rooms.exits]]
@@ -250,6 +262,7 @@ description = "You are in a small tunnel, it leads from east to the west."
 vnum = 4112
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a larger tunnel, it leads from west to east."
 
   [[rooms.exits]]
@@ -264,6 +277,7 @@ description = "You are in a larger tunnel, it leads from west to east."
 vnum = 4113
 name = "The passage"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a passage that leads towards the south. To the east 
 you see a tunnel."""
@@ -296,6 +310,7 @@ you see a tunnel."""
 vnum = 4114
 name = "The golden cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a giant cave, all the walls are shining with a soft golden
 light. The cave continues to the north, to the west you see a dark 
@@ -329,6 +344,7 @@ passage."""
 vnum = 4115
 name = "The dark passage."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark passage, that leads east. In the ceiling you notice
 a small hole, just big enough to pass through."""
@@ -345,6 +361,7 @@ a small hole, just big enough to pass through."""
 vnum = 4116
 name = "The passage"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a passage that leads north-south. You notice a small
 light to the south."""
@@ -361,6 +378,7 @@ light to the south."""
 vnum = 4117
 name = "The secret chamber"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a secret chamber."
 
   [[rooms.exits]]
@@ -371,6 +389,7 @@ description = "You are in a secret chamber."
 vnum = 4118
 name = "The cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a light cave, from torches several feet above your
 head fire lights the room. The cave continues to the west and south.
@@ -388,6 +407,7 @@ To the north a small hole leads to a tunnel."""
 vnum = 4119
 name = "The cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a light cave, from torches several feet above your
 head fire lights the room. The cave continues to the east and south."""
@@ -420,6 +440,7 @@ head fire lights the room. The cave continues to the east and south."""
 vnum = 4120
 name = "The passage"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a north-south leading passage. To the south you see light."""
 
@@ -435,6 +456,7 @@ You are in a north-south leading passage. To the south you see light."""
 vnum = 4121
 name = "The secret tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a secret tunnel that leads west, you feel evilness
 approaching you as you continue west."""
@@ -451,6 +473,7 @@ approaching you as you continue west."""
 vnum = 4122
 name = "The secret chamber"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a secret chamber, the room is filled with an evil
 feeling."""
@@ -475,6 +498,7 @@ feeling."""
 vnum = 4123
 name = "The cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a light cave, from torches several feet above your
 head fire lights the room. The cave continues to the north and west."""
@@ -491,6 +515,7 @@ head fire lights the room. The cave continues to the north and west."""
 vnum = 4124
 name = "The cave"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a light cave, from torches several feet above your
 head fire lights the room. The cave continues to the east and north.
@@ -524,6 +549,7 @@ To the west a passage leads north."""
 vnum = 4125
 name = "The passage"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a passage, to the east you see a cave. Light from the
 cave lights up the passage. To the north the passage leads into
@@ -541,6 +567,7 @@ the darkness."""
 vnum = 4150
 name = "The dark hole"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are standing at a hole, a small passage leads south. You see
 some inscriptions on the wall, most of 'em the usual stuff, like:
@@ -556,6 +583,7 @@ The Balrog is ALIVE ..."""
 vnum = 4151
 name = "The small passage"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small passage, to the north you see a hole, and to
 the south you see a large tunnel. The air is damp in this area."""
@@ -584,6 +612,7 @@ the south you see a large tunnel. The air is damp in this area."""
 vnum = 4152
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = "You suddenly feel that the tunnel leads down."
 
   [[rooms.exits]]
@@ -598,6 +627,7 @@ description = "You suddenly feel that the tunnel leads down."
 vnum = 4153
 name = "The large tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large tunnel leading from the south to the east. The
 air is damp in the area."""
@@ -622,6 +652,7 @@ air is damp in the area."""
 vnum = 4154
 name = "The large tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large east-west leading tunnel, the air is damp and
 the floor is wet."""
@@ -638,6 +669,7 @@ the floor is wet."""
 vnum = 4155
 name = "The large tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large tunnel, the tunnel leads west, and to the east
 you notice a long tunnel. The air is damp in this area."""
@@ -662,6 +694,7 @@ you notice a long tunnel. The air is damp in this area."""
 vnum = 4156
 name = "The long tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are standing in a long north-south tunnel."
 
   [[rooms.exits]]
@@ -676,6 +709,7 @@ description = "You are standing in a long north-south tunnel."
 vnum = 4157
 name = "The wet tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a wet, north-south leading tunnel, the floor is
 partly covered by water."""
@@ -704,6 +738,7 @@ partly covered by water."""
 vnum = 4158
 name = "The small maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small maze, exits leads off to the east,  south
 and west. The floor is partly covered by water."""
@@ -732,6 +767,7 @@ and west. The floor is partly covered by water."""
 vnum = 4159
 name = "The small maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small maze, exits leads off only to the south
 and west. The air is damp in this maze."""
@@ -756,6 +792,7 @@ and west. The air is damp in this maze."""
 vnum = 4160
 name = "In the tunnel at the inscription"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a north-south leading tunnel, the air is damp. On
 the wall there is an inscription."""
@@ -801,6 +838,7 @@ dragon breathed poison gas; we are also going to die soon.
 vnum = 4161
 name = "The wet tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a north-south leading tunnel.  The floor is fully
 covered by water."""
@@ -829,6 +867,7 @@ covered by water."""
 vnum = 4162
 name = "The small maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small maze. The floor is mainly covered by
 water, exits leads north, east and south."""
@@ -853,6 +892,7 @@ water, exits leads north, east and south."""
 vnum = 4163
 name = "The small maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small maze, where the air is damp. Exits
 leads to the north and east."""
@@ -873,6 +913,7 @@ leads to the north and east."""
 vnum = 4164
 name = "The entrance to the small maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a north-south leading tunnel, and the air is damp.
 To the west you see a small maze."""
@@ -901,6 +942,7 @@ To the west you see a small maze."""
 vnum = 4165
 name = "In the water"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in water, the tunnel continues both to the
 north and south."""
@@ -917,6 +959,7 @@ north and south."""
 vnum = 4166
 name = "The wet maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a part of the maze where the floor is fully covered
 by water. The maze continues to the north, east and south."""
@@ -937,6 +980,7 @@ by water. The maze continues to the north, east and south."""
 vnum = 4167
 name = "The wet maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small maze, the floor is covered by water, the
 maze continues east, west and south."""
@@ -977,6 +1021,7 @@ maze continues east, west and south."""
 vnum = 4168
 name = "The end of the tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 The tunnel suddenly stops here, only exit is to the west.
 The air is damp here."""
@@ -997,6 +1042,7 @@ The air is damp here."""
 vnum = 4169
 name = "In the water"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the water, exits leads both north and east."""
 
@@ -1016,6 +1062,7 @@ You are standing in the water, exits leads both north and east."""
 vnum = 4170
 name = "In the water"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = "You are standing in the water, it continues east and west."
 
   [[rooms.exits]]
@@ -1042,6 +1089,7 @@ description = "You are standing in the water, it continues east and west."
 vnum = 4171
 name = "End of maze"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are at the end of the small maze which continues north.
 Above you a hole leads up."""
@@ -1058,6 +1106,7 @@ Above you a hole leads up."""
 vnum = 4172
 name = "At the sand bar"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are on a little sand bar in the water."
 
   [[rooms.exits]]
@@ -1231,6 +1280,7 @@ some mountains. The trail leads north and south along the wall."""
 vnum = 4000
 name = "The hills"
 sector = "hills"
+room_flags = ["no_mob"]
 description = """
 You are on a small bewildered path winding its way between the hills in
 lack of better things to do. To the south you have a splendid view over the
@@ -1256,6 +1306,7 @@ make out the queen's mines from here."""
 vnum = 4001
 name = "The hills"
 sector = "hills"
+room_flags = ["no_mob"]
 description = """
 You are surrounded by dark and sinister hills. Although they seemed fairly
 small from a distance you now get the feeling that they're closing in on you,
@@ -1277,6 +1328,7 @@ distant mountains."""
 vnum = 4002
 name = "End of the path"
 sector = "hills"
+room_flags = ["no_mob"]
 description = """
 At this point the path has had enough. With a terrified shudder it cowers
 to the ground, only staying here because you're standing on it. with a slight
@@ -1321,6 +1373,7 @@ Small crippled bushes desperately trying to grow south."""
 vnum = 4010
 name = "The cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large cave. The ceiling is lost somewhere above the reach of
 your light. The floor, however, is highly illuminated, your light flickering
@@ -1350,6 +1403,7 @@ The stone is inscribed with the unfortunate player's famous last words:
 vnum = 4011
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You squeeze your way through a small, narrow tunnel. The sharp-edged rocks
 protruding from the walls threaten to scratch and cut you. 
@@ -1368,6 +1422,7 @@ damp, stuffy tunnels. To the north the tunnel continues."""
 vnum = 4012
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a part of the tunnel that looks uncannily like the rest except
 that it goes in a east-north direction. To the north the tunnel widens into
@@ -1385,6 +1440,7 @@ a cave."""
 vnum = 4013
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This tunnel, leading east-west, seems seldom used.  A thick layer of dust
 covers the floor, making the air stuffy and dry."""
@@ -1421,6 +1477,7 @@ covers the floor, making the air stuffy and dry."""
 vnum = 4014
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are walking in a narrow tunnel. The walls are only roughly shaped,
 sharp rocks protruding everywhere, even from the floor making you stumble in
@@ -1448,6 +1505,7 @@ is a branch of the tunnel going west."""
 vnum = 4015
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a corner tunnel leading west and north."
 
   [[rooms.exits]]
@@ -1474,6 +1532,7 @@ description = "You are in a corner tunnel leading west and north."
 vnum = 4016
 name = "The large cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large cave, the cave continues east and west, to the south
 you notice a small tunnel."""
@@ -1494,6 +1553,7 @@ you notice a small tunnel."""
 vnum = 4017
 name = "The large cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = "You are in the east end of the large cave."
 
   [[rooms.exits]]
@@ -1508,6 +1568,7 @@ description = "You are in the east end of the large cave."
 vnum = 4018
 name = "The cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the south end of a cave, to the south you see a tunnel. You
 notice a large pile of bones in the corner."""
@@ -1529,6 +1590,7 @@ Some of the bones are human!"""
 vnum = 4019
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a north-south leading tunnel."
 
   [[rooms.exits]]
@@ -1543,6 +1605,7 @@ description = "You are in a north-south leading tunnel."
 vnum = 4020
 name = "The hole"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are by a hole in the floor, you can leave down, or north."""
 
@@ -1562,6 +1625,7 @@ You are by a hole in the floor, you can leave down, or north."""
 vnum = 4021
 name = "The hole"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = "A hole in the floor leads down here."
 
   [[rooms.exits]]
@@ -1592,6 +1656,7 @@ description = "A hole in the floor leads down here."
 vnum = 4022
 name = "The damp tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a damp tunnel.  Your clothes feel wet.  The tunnel continues
 to the north; to the west you see a hole in the floor; and to the east
@@ -1629,6 +1694,7 @@ there is a large cave."""
 vnum = 4023
 name = "The large cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the western part of the large cave, to the south you see
 a damp tunnel."""
@@ -1649,6 +1715,7 @@ a damp tunnel."""
 vnum = 4024
 name = "The damp tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a corner of a damp tunnel.  You can go west or south."""
 
@@ -1664,6 +1731,7 @@ You are in a corner of a damp tunnel.  You can go west or south."""
 vnum = 4025
 name = "The cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the north end of a cave.  To the east you see many tunnels."""
 
@@ -1683,6 +1751,7 @@ You are in the north end of a cave.  To the east you see many tunnels."""
 vnum = 4026
 name = "The many tunnels"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are at the intersection of many tunnels."
 
   [[rooms.exits]]
@@ -1705,6 +1774,7 @@ description = "You are at the intersection of many tunnels."
 vnum = 4027
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a north-south leading tunnel, you also notice a tunnel to
 the west. From the north you sense the fresh air!"""
@@ -1745,6 +1815,7 @@ the west. From the north you sense the fresh air!"""
 vnum = 4028
 name = "The smelly tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a north-south leading tunnel, you see a small light
 to the north. You notice a strange smell from the north.."""
@@ -1773,6 +1844,7 @@ to the north. You notice a strange smell from the north.."""
 vnum = 4029
 name = "The cave"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in a cave that is filled with fresh air, you sense the
 wind blowing from the north. To the south you see a small tunnel
@@ -2043,6 +2115,7 @@ description = "Exits are east."
 vnum = 4050
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "The tunnel turns here, continuing to the east and south."
 
   [[rooms.exits]]
@@ -2069,6 +2142,7 @@ description = "The tunnel turns here, continuing to the east and south."
 vnum = 4051
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a narrow east-west tunnel."
 
   [[rooms.exits]]
@@ -2083,6 +2157,7 @@ description = "You are in a narrow east-west tunnel."
 vnum = 4052
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are at a turn, the tunnel continues south and west."
 
   [[rooms.exits]]
@@ -2101,6 +2176,7 @@ description = "You are at a turn, the tunnel continues south and west."
 vnum = 4053
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are at a turn, the tunnel continues north and east."
 
   [[rooms.exits]]
@@ -2119,6 +2195,7 @@ description = "You are at a turn, the tunnel continues north and east."
 vnum = 4054
 name = "The light cave"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a cave, to south from you there is a large fire that lights
 the entire cave, to the east and west tunnels leads off."""
@@ -2139,6 +2216,7 @@ the entire cave, to the east and west tunnels leads off."""
 vnum = 4055
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a maze of small damp tunnels.  The only exit is west."""
 
@@ -2162,6 +2240,7 @@ You are in a maze of small damp tunnels.  The only exit is west."""
 vnum = 4056
 name = "The light cave"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a light cave, a large fire in front of you lights the room.
 The cave continues to the north and south."""
@@ -2186,6 +2265,7 @@ The cave continues to the north and south."""
 vnum = 4057
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze of small damp tunnels."
 
   [[rooms.exits]]
@@ -2208,6 +2288,7 @@ description = "You are in a maze of small damp tunnels."
 vnum = 4058
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze of small damp tunnels."
 
   [[rooms.exits]]
@@ -2226,6 +2307,7 @@ description = "You are in a maze of small damp tunnels."
 vnum = 4059
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in a tunnel, only exit is to the east. You sense that the
 tunnel leads slightly down."""
@@ -2250,6 +2332,7 @@ tunnel leads slightly down."""
 vnum = 4060
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small tunnel, to the west the tunnel continues and 
 to the east you see some light."""
@@ -2270,6 +2353,7 @@ to the east you see some light."""
 vnum = 4061
 name = "The light cave"
 sector = "field"
+room_flags = ["indoors"]
 description = "You are in the south end of a light cave."
 
   [[rooms.exits]]
@@ -2284,6 +2368,7 @@ description = "You are in the south end of a light cave."
 vnum = 4062
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze of small damp tunnels."
 
   [[rooms.exits]]
@@ -2314,6 +2399,7 @@ description = "You are in a maze of small damp tunnels."
 vnum = 4063
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze of small damp tunnels."
 
   [[rooms.exits]]
@@ -2328,6 +2414,7 @@ description = "You are in a maze of small damp tunnels."
 vnum = 4064
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are at the eastern end of a tunnel."
 
   [[rooms.exits]]
@@ -2354,6 +2441,7 @@ description = "You are at the eastern end of a tunnel."
 vnum = 4065
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze of small damp tunnels."
 
   [[rooms.exits]]
@@ -2376,6 +2464,7 @@ description = "You are in a maze of small damp tunnels."
 vnum = 4066
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze of small damp tunnels."
 
   [[rooms.exits]]
@@ -2394,6 +2483,7 @@ description = "You are in a maze of small damp tunnels."
 vnum = 4067
 name = "The maze"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze of small damp tunnels."
 
   [[rooms.exits]]
@@ -2416,6 +2506,7 @@ description = "You are in a maze of small damp tunnels."
 vnum = 4068
 name = "The large cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = "You are in the northwest end of a large cave."
 
   [[rooms.exits]]
@@ -2438,6 +2529,7 @@ description = "You are in the northwest end of a large cave."
 vnum = 4069
 name = "The large cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the northeast end of a large cave. To the north the
 is a small damp tunnel."""
@@ -2462,6 +2554,7 @@ is a small damp tunnel."""
 vnum = 4070
 name = "The large cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = "You are in the southwest end of a large cave."
 
   [[rooms.exits]]
@@ -2492,6 +2585,7 @@ description = "You are in the southwest end of a large cave."
 vnum = 4071
 name = "The large cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the southeast end of a large cave. To the east you
 notice a small tunnel."""
@@ -2528,6 +2622,7 @@ notice a small tunnel."""
 vnum = 4072
 name = "The tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a narrow tunnel, which leads both to the east and the
 south. There is also an exit towards the west, where you see a large
@@ -2549,6 +2644,7 @@ cave."""
 vnum = 4073
 name = "End of tunnel"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "The tunnel stops here."
 
   [[rooms.exits]]
@@ -2571,6 +2667,7 @@ description = "The tunnel stops here."
 vnum = 4074
 name = "The hole"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are at a small hole in the floor, you can either leave north
 or try your luck and leave down into the unknown!"""

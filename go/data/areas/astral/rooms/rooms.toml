@@ -213,6 +213,7 @@ A plaque is inset into the wall next to one side of the gate."""
 vnum = 7707
 name = "Into the Astral Plane"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You step through the gate, and into another reality...
 
@@ -1741,6 +1742,7 @@ warped and twisted into portals to other worlds.
 vnum = 7750
 name = "Inside the Githyanki Keep"
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 You are standing just inside a nexial portal that leads out onto the
 Astral Plane.  It seems that you have found the lair of the Githyanki,
@@ -1765,6 +1767,7 @@ The door is made from a set of rusting steel plates set deep into the stone."""
 vnum = 7751
 name = "A guard station"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a small building just inside the keep.  Doors lead out to the east
 and west.  Some small weapons hang on hooks on the walls, for use in defense
@@ -2141,6 +2144,7 @@ The door is thick, made from a knotted and twisted greyish wood."""
 vnum = 7762
 name = "A small building"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have stepped inside a dimly lit building, which apparently serves as
 living quarters for several githyanki gish.  The walls are heavy stone blocks, 
@@ -2181,6 +2185,7 @@ The door is thick, made from a knotted and twisted greyish wood."""
 vnum = 7763
 name = "A small building"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have stepped inside a dimly lit building, which apparently serves as
 living quarters for several githyanki gish.  The walls are heavy stone blocks, 
@@ -2221,6 +2226,7 @@ The door is thick, made from a knotted and twisted greyish wood."""
 vnum = 7764
 name = "A large dwelling"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have stepped inside a dimly lit building with vaulted ceilings and high
 windows.  The walls are heavy stone blocks that rise tens of feet above your
@@ -2253,6 +2259,7 @@ The door is thick, made from a knotted and twisted greyish wood."""
 vnum = 7765
 name = "The Githyanki Weaponry"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A large chamber, full of weapons in various states of completion.  Strange
 glowing blocks of silvery metal are being pounded and rolled out into deadly 
@@ -2302,6 +2309,7 @@ The door is made from many hammered iron plates, set deep into the stone wall.""
 vnum = 7766
 name = "The Forge"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 In the center of the room is a massive furnace which emits great gouts of
 heat and a strange smell which comes from the melting of the silvery metal used
@@ -2332,6 +2340,7 @@ The furnace door looks too hot to even attempt to open."""
 vnum = 7767
 name = "The Githyanki Armoury"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A large chamber, full of suits of armor in various states of completion.  In
 this chamber the hard steels of the githyanki are shaped into ornately fashioned
@@ -2381,6 +2390,7 @@ The door is made from many hammered iron plates, set deep into the stone wall.""
 vnum = 7768
 name = "Inside the furnace"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You gasp for breath and choke on toxic sulphur and brimstone.  The sweat
 on your forehead is instantly vaporized by the flames that surround you.  You
@@ -2437,6 +2447,7 @@ begin to feel faint and dizzy from the heat...
 vnum = 7769
 name = "A guard station"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in a small, fairly empty building that serves as the prison
 for the keep.  The building is small because the githyanki do not make a habit 
@@ -2485,6 +2496,7 @@ The door is fashioned from many iron plates and set deep into the stone wall."""
 vnum = 7770
 name = "The cellblock"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A torch flickers in the western wall, providing some illumination for this
 dim corridor.  Some whips, manacles, and chains hang on the walls -- they seem
@@ -2515,6 +2527,7 @@ food underneath to the prisoner."""
 vnum = 7771
 name = "A cramped cell"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a tiny, cold, dank cell.
   The only exit is back through the door to the south."""
@@ -2538,6 +2551,7 @@ food underneath to the prisoner."""
 vnum = 7772
 name = "A tiny cell"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a cold, dank, cramped cell.
    The only exit is back through the door to the north."""
@@ -2561,6 +2575,7 @@ food underneath to the prisoner."""
 vnum = 7773
 name = "A large dwelling"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have stepped inside a dimly lit building with vaulted ceilings and high
 windows.  The walls are heavy stone blocks that rise tens of feet above your
@@ -2593,6 +2608,7 @@ The door is thick, made from a knotted and twisted greyish wood."""
 vnum = 7774
 name = "South End of the Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a massive stone hall, lit by flaming blue stones set into the walls.
 Massive suits of armor line the walls, holding weapons fashioned from a strange
@@ -2654,6 +2670,7 @@ The suits of armor are very intricately and ornately fashioned splint mail."""
 vnum = 7775
 name = "North End of the Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a massive stone hall, lit by flaming blue stones set into the walls.
 Massive suits of armor line the walls, holding weapons fashioned from a strange
@@ -2689,6 +2706,7 @@ The suits of armor are very intricately and ornately fashioned splint mail."""
 vnum = 7776
 name = "The Altar Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Your eyes have trouble adjusting to the dim lighting.  All around you are
 columnar statues of githyanki turned towards the altar standing at the top
@@ -2760,6 +2778,7 @@ The archway is shrouded in a strange black mist that obscures your vision."""
 vnum = 7777
 name = "Before the Altar"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have climbed the mighty steps of the altar chamber and stand before a
 huge altar use to pay tribute to Lord Gish, long-dead ruler of the githyanki.
@@ -2810,6 +2829,7 @@ The altar is a huge sacrificial altar covered in bloodstains."""
 vnum = 7778
 name = "A Gateway to the Underworld"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You step through the tiny hole in the altar, and stand before a swirling
 field of blackness.  Through the field you can hear the howls of lost souls
@@ -2842,6 +2862,7 @@ The blood drips from above your head and falls through the field..."""
 vnum = 7779
 name = "Utter darkness and despair"
 sector = "air"
+room_flags = ["dark", "no_mob"]
 description = """
 It is pitch black...
 

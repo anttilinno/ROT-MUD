@@ -137,6 +137,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3607
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -181,6 +182,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3609
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -225,6 +227,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3611
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -271,6 +274,7 @@ the graveyard.  The path leads north and east.  A small shed is to the west."""
 vnum = 3613
 name = "In a shed on the Graveyard"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a small shed that looks as if it is used to store all sorts of
 gardening equipment.  The only exit appears to be through a door to the east."""
@@ -335,6 +339,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3615
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -379,6 +384,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3617
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -427,6 +433,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3619
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -475,6 +482,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3639
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -523,6 +531,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3641
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -567,6 +576,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3643
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -615,6 +625,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3645
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -663,6 +674,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3647
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -707,6 +719,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3649
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""
@@ -751,6 +764,7 @@ up in the ground.  The name has been erased by the ravages of time."""
 vnum = 3651
 name = "In a dusty Tomb"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark burial chamber beneath a large tomb stone.
 The only exit appears to be up."""

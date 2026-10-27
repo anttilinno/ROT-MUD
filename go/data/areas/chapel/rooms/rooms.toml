@@ -43,6 +43,7 @@ The windows must be meant to be dark.  At least they are completely clean."""
 vnum = 3408
 name = "Stairwell into Darkness"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You sense even more danger coming from below but are urged onward ..."""
 
@@ -60,6 +61,7 @@ You sense even more danger coming from below but are urged onward ..."""
 vnum = 3409
 name = "The Acolyte's Bedroom"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This is why you were not welcomed at the entrance by the tomb's faithful
 servants ... blood and gore is ankle deep in here.
@@ -95,6 +97,7 @@ and splattering yourself with offal."""
 vnum = 3410
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -117,6 +120,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3411
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -139,6 +143,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3412
 name = "The Grand Hall of Kings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the west end of the Grand Hall of Kings.  There is a doorway to the
 south with something strange written above it.  Also on the floor are dried
@@ -168,6 +173,7 @@ That's odd ... they seem a little GREEN."""
 vnum = 3413
 name = "The Shrine of Shohan"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 BLOOD EVERYWHERE!
 The walls are coated with blood, bits of bloody flesh lie at your feet,
@@ -189,6 +195,7 @@ lies overturned and smashed.  Doors lead to the south and to the north."""
 vnum = 3414
 name = "The Tomb of Shohan"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Once beautiful, this place has been turned into a slaughterhouse by the hands
 of evil beings ... even more blood and dead, rotting flesh.  This place looks
@@ -232,6 +239,7 @@ slaughtered!'"""
 vnum = 3415
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -250,6 +258,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3416
 name = "Entrance to the Lower Chambers"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You can tell that this area wasn't a part of the original construction.
 The walls have been hewn by a mighty force look as though they were CLAWED.
@@ -274,6 +283,7 @@ claw marks."""
 vnum = 3417
 name = "The Grand Hall of Kings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the western wing of the Grand Hall of Kings.  Your only exits are to
 the east and west in this gloomy hallway."""
@@ -298,6 +308,7 @@ the east and west in this gloomy hallway."""
 vnum = 3418
 name = "The Shrine of Cristis"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Different than the rest, this place has not been desecrated.  An altar still
 stands here and the walls show scenes from the life of Cristis the Kind,
@@ -349,6 +360,7 @@ peace.  May the Gods remember him forever ...'"""
 vnum = 3419
 name = "The Tomb of Cristis"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Everything here has simply been destroyed.   Exits lead north and west."""
 
@@ -372,6 +384,7 @@ Everything here has simply been destroyed.   Exits lead north and west."""
 vnum = 3420
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -386,6 +399,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3421
 name = "Entrance Chamber to the Grand Hall of Kings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Whoever built this place must have been very rich indeed!  Though you did
 enter through a rather small door this place has enough room to hold several
@@ -446,6 +460,7 @@ for an equally queerly shaped pole to fit inside.  If only you had it!"""
 vnum = 3422
 name = "The Grand Hall of Kings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A long hallway stretches east and west.  On the southern side of the hall
 there are many doors, each with the name of a king who has died and is
@@ -474,6 +489,7 @@ has been kept well by acolytes, there remains a stench of the undead."""
 vnum = 3423
 name = "The Shrine of Crotus"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Mostly rubble, this place used to be the shrine of the famous king Crotus,
 who saved the northern regions from being overrun by the goblin hordes of
@@ -494,6 +510,7 @@ turned to the dark ways in his dying years ... and died an evil man."""
 vnum = 3424
 name = "The Tomb of Crotus"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A sarcophagus lies in the middle of the room and seems undisturbed.
 A hole has been knocked into the east wall."""
@@ -522,6 +539,7 @@ A hole has been knocked into the east wall."""
 vnum = 3425
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -536,6 +554,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3426
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -562,6 +581,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3427
 name = "The Grand Hall of Kings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the western part of the Grand Hall of Kings.  To the south is a
 door and to the east and west the hall continues."""
@@ -583,6 +603,7 @@ door and to the east and west the hall continues."""
 vnum = 3428
 name = "The Shrine of Mitnar"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Mitnar was a gruesome beast of a man ... he loved battle ... and nothing
 else.  Warriors did love Mitnar, and all fighting men honored him.
@@ -606,6 +627,7 @@ A small opening has been shaped carefully to the east."""
 vnum = 3429
 name = "The Tomb of Mitnar"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The wall paintings show men and women warriors alike bowing down to Mitnar,
 prisoners of war being put to the sword by Mitnar, and great heaps of gold
@@ -624,6 +646,7 @@ only a rectangular blemish on the floor of the dusty room."""
 vnum = 3430
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -650,6 +673,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3431
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -664,6 +688,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3432
 name = "The Grand Hall of Kings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "You are still walking through the gloomy hallway."
 
   [[rooms.exits]]
@@ -686,6 +711,7 @@ description = "You are still walking through the gloomy hallway."
 vnum = 3433
 name = "The Shrine of Frath"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Little chunks of dried meat are spattered throughout this room.  The walls
 are covered in gore.  Almost as if they were painted ... ICK!  You can
@@ -703,6 +729,7 @@ almost make out the design!"""
 vnum = 3434
 name = "The Tomb of Frath"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 UGH!  The sarcophagus is opened up and the mummified body lies out in the
 open, ripped to pieces.  Gnawed pieces of flesh and bone are strewn here."""
@@ -727,6 +754,7 @@ open, ripped to pieces.  Gnawed pieces of flesh and bone are strewn here."""
 vnum = 3435
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -745,6 +773,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3436
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -763,6 +792,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3437
 name = "The Grand Hall of Kings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the western end of the Grand Hall of Kings.  There is a
 door leading north and the hallway continues west."""
@@ -784,6 +814,7 @@ door leading north and the hallway continues west."""
 vnum = 3438
 name = "The Shrine of Jubal"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This was once beautiful.  Now the huge tapestries have been torn down and the
 carpeting pulled up ... the paintings on the ceiling are unreadable and the
@@ -801,6 +832,7 @@ altar is crumbled."""
 vnum = 3439
 name = "The Tomb of Jubal"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The smell coming off of the opened sarcophagus is nauseating.  The floor is
 slightly crumpled and walls are raked ... but the worst part is the mummy ...
@@ -818,6 +850,7 @@ Jubal the Benevolent is missing his head!"""
 vnum = 3440
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -836,6 +869,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3441
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -870,6 +904,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3442
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -888,6 +923,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3443
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -902,6 +938,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3444
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -924,6 +961,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3445
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -938,6 +976,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3446
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -956,6 +995,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3447
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -978,6 +1018,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3448
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 This room has been totally hollowed out and smoothed, and a pit has been
 drilled in the center of the floor.  There are extensive gruesome paintings
@@ -1006,6 +1047,7 @@ reflected picture of the vault ... the word in tiny print is 'rathcor'."""
 vnum = 3449
 name = "The Lower Chambers and Tombs of the Undead"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "The stench of death is heavy in these caverns."
 
   [[rooms.exits]]
@@ -1038,6 +1080,7 @@ description = "The stench of death is heavy in these caverns."
 vnum = 3450
 name = "Entrance to the Forbidden Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered the forbidden catacombs.  This cave system must have been
 built long ago.  The air is dank and smells of something dead ...  or maybe
@@ -1075,6 +1118,7 @@ undead.  Enter here at your own risk ... something evil abides."""
 vnum = 3451
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1089,6 +1133,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3452
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1111,6 +1156,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3453
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1129,6 +1175,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3454
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1143,6 +1190,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3455
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1165,6 +1213,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3456
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1179,6 +1228,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3457
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1201,6 +1251,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3458
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1219,6 +1270,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3459
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1233,6 +1285,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3460
 name = "Den of the Vampire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Your mind whirls in the hideous madness of this place.  The stench
 is horrendous and dead bodies, sucked of life, lay all over.  One coffin
@@ -1272,6 +1325,7 @@ lies in the center of the room ... waiting for YOU!"""
 vnum = 3461
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1286,6 +1340,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3462
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1304,6 +1359,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3463
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1326,6 +1382,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3464
 name = "The Catacombs"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "Stone walls, musty air ... the earth seems to moan softly."
 
   [[rooms.exits]]
@@ -1345,6 +1402,7 @@ description = "Stone walls, musty air ... the earth seems to moan softly."
 vnum = 3465
 name = "The Gilded Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Wow!  Although this hallway is quite filthy and dusty, it is noticeably
 different than the rest of the catacombs ... but you don't feel safe yet.
@@ -1385,6 +1443,7 @@ Beautiful yet disturbing, they urge you to move onward."""
 vnum = 3466
 name = "The Gilded Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Ancient etchings and writing in intricate gold and silver designs fill these
 walls.  You are tempted to linger and examine them closely.  Your light source
@@ -1415,6 +1474,7 @@ Beautiful yet disturbing, they urge you to move onward."""
 vnum = 3467
 name = "The Gilded Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Ancient etchings and writing in intricate gold and silver designs fill these
 walls.  You are tempted to linger and examine them closely.  Your light source
@@ -1437,6 +1497,7 @@ Beautiful yet disturbing, they urge you to move onward."""
 vnum = 3468
 name = "The Gilded Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Ancient etchings and writing in intricate gold and silver designs fill these
 walls.  You are tempted to linger and examine them closely.  Your light source
@@ -1471,6 +1532,7 @@ Beautiful yet disturbing, they urge you to move onward."""
 vnum = 3469
 name = "The Gilded Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Ancient etchings and writing in intricate gold and silver designs fill these
 walls.  You are tempted to linger and examine them closely.  Your light source
@@ -1489,6 +1551,7 @@ Beautiful yet disturbing, they urge you to move onward."""
 vnum = 3470
 name = "A Secret Passageway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "A secret passage!  You wonder where it may lead!"
 
   [[rooms.exits]]
@@ -1504,6 +1567,7 @@ The door closed on you so softly that you didn't even notice!"""
 vnum = 3471
 name = "A Secret Passageway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "A secret passage!  You wonder where it may lead!"
 
   [[rooms.exits]]
@@ -1526,6 +1590,7 @@ description = "A secret passage!  You wonder where it may lead!"
 vnum = 3472
 name = "The Short Way to Hell ..."
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You fall ...
             hmm .... it's getting really HOT!
@@ -1552,6 +1617,7 @@ But even in Hell we give you another chance."""
 vnum = 3475
 name = "Inside the coffin"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are inside a coffin.  It seems rather cramped in here.  You can climb
 up out of the coffin, or you can wait for here the real occupant to join you."""

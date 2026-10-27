@@ -2,6 +2,7 @@
 vnum = 6144
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient,
 grey trees loom everywhere.  The tree trunks here seem to be covered in some
@@ -36,6 +37,7 @@ been for the size you could have sworn it was part of a spider web."""
 vnum = 6150
 name = "The narrow trail."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This trail looks much spookier than any other thats you have seen.  The usual
 animal claw marks and bites on the trees are getting far and few between. The
@@ -53,6 +55,7 @@ trail continues north."""
 vnum = 6151
 name = "The narrow trail."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This area of the trail is also very peculiar.  You can see no signs of animal
 life what so ever.  The structure of the surrounding trees forces the path to
@@ -70,6 +73,7 @@ make a sharp turn to the east."""
 vnum = 6152
 name = "The circle of trees."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 The trees here seem to form a circle around a HUGE tree that is in the center
 of them.  You notice a wooden door carved into the huge tree to the east.  The
@@ -89,6 +93,7 @@ trail that you followed to get here seems to end at the base of the tree."""
 vnum = 6153
 name = "Inside the great tree."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You have stepped inside of this hollowed tree.  From here steps lead down into
 darkness or you can exit the tree by going west."""
@@ -106,6 +111,7 @@ darkness or you can exit the tree by going west."""
 vnum = 6154
 name = "The underground hallway."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This hallway is apparently one of the roots of the tree hollowed out.  The hall
 leads south to a room where you hear strange noises or you can go up the steps."""
@@ -124,6 +130,7 @@ leads south to a room where you hear strange noises or you can go up the steps."
 vnum = 6155
 name = "The cultist temple."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This temple is built to some god that you don't worship.  It is a nice place
 to visit but you feel very uncomfortable about spending much time here.
@@ -147,6 +154,7 @@ the way you came in."""
 vnum = 6000
 name = "The edge of the forest"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You are standing at the eastern edge of a big forest.  To the east is the West
 Gate of Midgaard and to the west is a narrow trail, leading in through the
@@ -506,6 +514,7 @@ pretty idyllic.  It's a cabin built from logs.  Wooden logs, not system logs."""
 vnum = 6010
 name = "Inside the cabin"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a small one-room cabin made entirely from heavy logs.  It is
 very sparsely furnished, containing only most basic housekeeping equipment,
@@ -892,6 +901,7 @@ The narrow path is probably used by the animals living in the forest."""
 vnum = 6022
 name = "Inside the cave"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a natural cave.  Various sorts of debris cover the stone floor,
 emitting a rather unpleasant smell that makes the air thick and hard to
@@ -961,6 +971,7 @@ The tall grass makes a nice hiding place for animals."""
 vnum = 6100
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow trail winding its way between the enormous, grey trunks.
 The crowns of the trees must be very dense, as they leave the forest floor in
@@ -998,6 +1009,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6101
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 whose grey trunks remind you of ancient pillars in a enormous, deserted hall.
@@ -1037,6 +1049,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6102
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -1072,6 +1085,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6103
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are where the dusty trail bends, as to avoid conflict with a colossal
 trunk to the west.  Not a sound is to be heard - everything is ominously quiet.
@@ -1109,6 +1123,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6104
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  You feel as if
 the ancient trees observe you in watchful silence.  The path continues north
@@ -1149,6 +1164,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6105
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  The path continues north and west."""
@@ -1180,6 +1196,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6106
 name = "A junction in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient grey trees tower above
 you on all sides.  Paths lead east, south and west."""
@@ -1211,6 +1228,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6107
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  The path continues north and east."""
@@ -1238,6 +1256,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6108
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees
 standing close on all sides.  The trail leads north and west and to the south,
@@ -1285,6 +1304,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6109
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -1314,6 +1334,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6110
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees that stand
 close on all sides.  The trail leads east and south.  To the north, a narrow
@@ -1353,6 +1374,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6111
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way north-south between huge, ancient
 trees that loom ominously above you."""
@@ -1385,6 +1407,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6112
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees
 standing close on all sides.  The trail leads north and west and to the east,
@@ -1432,6 +1455,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6113
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom in all directions.  The path continues south and west."""
@@ -1463,6 +1487,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6114
 name = "A junction in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient grey trees tower above
 you on all sides.  Paths lead north, east and west."""
@@ -1494,6 +1519,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6115
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  You feel as
 if the ancient trees observe you in watchful silence.  The path continues north
@@ -1522,6 +1548,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6116
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Giant, grey
 trees loom ominously on all sides.  The path continues east and south."""
@@ -1557,6 +1584,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6117
 name = "A junction in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient, grey trees seem to
 observe you silently you from all sides.  Paths lead north, east and west."""
@@ -1588,6 +1616,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6118
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient,
 grey trees loom everywhere.  The path continues south and west."""
@@ -1623,6 +1652,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6119
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Huge, ancient
 trees are on all sides.  The path continues north and south."""
@@ -1654,6 +1684,7 @@ You feel as if they are watching you."""
 vnum = 6120
 name = "On the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  To the south a
 fast river is flowing westwards through the forest.  Ancient grey trees loom on
@@ -1688,6 +1719,7 @@ The river flows fast and strong.  It is black or looks so in the gloom."""
 vnum = 6121
 name = "A dead end path on the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  The ancient
 trees stand so close that the path disappears between the dusty roots.  To the
@@ -1718,6 +1750,7 @@ The river flows fast and strong.  It is black or looks so in the gloom."""
 vnum = 6122
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Giant, grey
 trees loom ominously all around.  The path continues east and south."""
@@ -1749,6 +1782,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6123
 name = "A junction on the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient, grey trees seem to
 observe you silently you from all around.  To the south a dark river flows from
@@ -1791,6 +1825,7 @@ The river flows fast and strong.  It is black or looks so in the gloom."""
 vnum = 6124
 name = "A dead end path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  The ancient
 trees stand so close that the path disappears between the dusty roots.  To the
@@ -1825,6 +1860,7 @@ The river flows fast and strong.  It is black or looks so in the gloom."""
 vnum = 6125
 name = "A small path on the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom everywhere.  To the south you smell marsh gas.  The path continues
@@ -1867,6 +1903,7 @@ The river flows fast and strong.  It is black or looks so in the gloom."""
 vnum = 6126
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees standing
 close on all sides.  The trail leads north and west, and to the south a frail
@@ -1906,6 +1943,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6127
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees
 standing close on all sides.  The trail leads east and south."""
@@ -1942,6 +1980,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6128
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -1971,6 +2010,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6129
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -2000,6 +2040,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6130
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way westwards just below huge sticky
 wires suspended like ropes between the trees.  To the west the path seems to
@@ -2035,6 +2076,7 @@ some places, giant grey roots have broken up through its surface."""
 vnum = 6131
 name = "The spider web"
 sector = "forest"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are walking along the narrow path, ducking under the sticky ropes as you
 advance...
@@ -2056,6 +2098,7 @@ You've fallen, and you can't get up!!!!!"""
 vnum = 6132
 name = "Up in the tree"
 sector = "water_swim"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are hanging on the outside of a huge tree trunk covered in a sticky
 substance.  Directly to the west is an immense spider web suspended between
@@ -2079,6 +2122,7 @@ walk on it."""
 vnum = 6133
 name = "On the spider web"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are balancing carefully on the giant sticky threads that holds the giant
 web in place.  To the east is a giant tree trunk and to the west is an entrance
@@ -2111,6 +2155,7 @@ The immense spider web moves softly."""
 vnum = 6134
 name = "The Den of the Queen Spider"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are inside a cave-like structure that seems to be made entirely from
 countless layers of spider web.  Temperature and humidity is very high making
@@ -2160,6 +2205,7 @@ The sticky walls are covered with open cocoons."""
 vnum = 6135
 name = "A dusty trail in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  The trail continues north and east."""
@@ -2181,6 +2227,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6136
 name = "A dusty trail in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail leading through the deep, dark forest.  Ancient,
 grey trees loom everywhere.  The trail continues south and west.  A broad
@@ -2219,6 +2266,7 @@ claws has been tearing at them in rage."""
 vnum = 6137
 name = "At the end of the trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  You see a dark grove north of you.
@@ -2241,6 +2289,7 @@ The ancient grey giants seem to observe you silently."""
 vnum = 6142
 name = "Outside a cave in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the end of a broad, irregular path.  To the north is a very large
 ominous-looking cave opening.  The trees here have many marks as if something
@@ -2269,6 +2318,7 @@ been tearing at them in rage."""
 vnum = 6143
 name = "The cave of the Green Dragon"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a big natural cave.  The floor is littered with bones of all sorts
 and the stench is so massive that you could cut it with a knife.  The only exit

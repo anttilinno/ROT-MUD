@@ -376,6 +376,7 @@ The dirt path you are on continues north and east around the gazebo."""
 vnum = 11611
 name = "Inside the Gazebo"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand inside a large, white gazebo.  A lacework of white painted 
 ashwood arcs overhead, marking the grey marble floor with strips of dark
@@ -427,6 +428,7 @@ itself is unburned."""
 vnum = 11613
 name = "Inside Artwork"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The green of a lush garden is visible through the twisting lattice of bones
 forming the walls of this structure.  A ladder disappears into a hole in the
@@ -449,6 +451,7 @@ A bone ladder leads into the hole in the floor."""
 vnum = 11614
 name = "Hole"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The center of the floor drops away into a churning multicolored void.
 Go down if you dare.."""
@@ -483,6 +486,7 @@ are forced to look away."""
 vnum = 11615
 name = "Quiet Tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A narrow north-south tunnel has been carved from the packed clay here.  Light
 filters in through an opening in the ceiling.  The rhythmic dripping of water
@@ -501,6 +505,7 @@ is audible to the north, where the tunnel widens into a large cave."""
 vnum = 11616
 name = "Mirror Pool"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Wet walls of packed clay frame a huge circular cave.  Water drips from crevices
 in the ceiling and walls, flowing in rivulets and small streams to form a 
@@ -662,6 +667,7 @@ A narrow dirt path exits the grove to the north."""
 vnum = 11620
 name = "Up a Large Oak Tree"
 sector = "forest"
+room_flags = ["indoors"]
 description = """
 You stand on a low branch near the huge trunk of the oak tree.  The thick
 network of branches above makes it impossible to climb higher.  The base
@@ -685,6 +691,7 @@ wonder what kind of bird would need a birdfeeder this big.."""
 vnum = 11621
 name = "Inside the Birdfeeder"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself at the edge of an enormous octagonal room.  Thick wooden
 walls disapppear out of sight above.  Blue sky and oaken branches are visible
@@ -830,6 +837,7 @@ north.  Below, the shore dips into the lake."""
 vnum = 11626
 name = "Misty Lake"
 sector = "field"
+room_flags = ["dark"]
 description = """
 Cool, dense mist swirls around you, limiting vision to less than a meter.
 The lake bottom is dotted with large grey-white boulders and clumps of 
@@ -869,6 +877,7 @@ the boulders is visible to the south."""
 vnum = 11627
 name = "Mossy Cave"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 A small natural cave is set into the grey-white rocks of the lake here.  
 Patches of phosphorescent green blue moss dot the slick cave walls, glowing
@@ -893,6 +902,7 @@ Large bushes shield the cave from the misty lake to the east."""
 vnum = 11628
 name = "Misty Lake"
 sector = "field"
+room_flags = ["dark"]
 description = """
 The chill mist of the lake tingles damply against your skin.  Through the
 white haze, you can make out a path heading east and west between the large
@@ -914,6 +924,7 @@ boulders littering the lake floor.  The lake floor continues north."""
 vnum = 11629
 name = "Misty Lake"
 sector = "field"
+room_flags = ["dark"]
 description = """
 The path along the lake floor leads west and south here.  To the south, the
 path opens onto a wide misty pool."""
@@ -959,6 +970,7 @@ pedestal."""
 vnum = 11631
 name = ""
 sector = "field"
+room_flags = ["dark"]
 description = """
 A dark opening, partially obscured by a clump of green weeds, cuts into the 
 lake wall to the south.  The lake floor continues east."""
@@ -975,6 +987,7 @@ lake wall to the south.  The lake floor continues east."""
 vnum = 11632
 name = "Dark Tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A high, narrow granite tunnel has been hewn from the granite lake wall.  White
 mist seeps in from the opening to the north, leaving the rock walls slippery
@@ -993,6 +1006,7 @@ into a cave."""
 vnum = 11633
 name = "Shadowy Cavern"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Dark granite walls form a large cavern here.  Darkness and shadows seem to 
 deepen here, as if attracted by some unseen force.  Barely visible through
@@ -1010,6 +1024,7 @@ the darkness, a tunnel exits the cave to the east."""
 vnum = 11634
 name = "Onyx Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Chill air from the north causes the torches to gutter occassionally,
 picking out eerie shadows against the dark onyx walls.  A plain oaken door
@@ -1032,6 +1047,7 @@ is set into the east wall."""
 vnum = 11635
 name = "Onyx Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The smooth black walls are broken by streaks of blood, both new and old.
 Distant screams echo through the hallway.  To the south, the hall intersects
@@ -1070,6 +1086,7 @@ a dark corridor.  A solid black door is set into the west wall."""
 vnum = 11636
 name = "Chamber of the High Priest"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 Black marble walls frame a large circular room and a high stone ceiling
 supported by marble pillars.  Dull brownish patches dot the polished walls
@@ -1112,6 +1129,7 @@ where spattered blood has dried."""
 vnum = 11637
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 Walls of dark stone line a corridor running east and west here.  Shadows,
 almost invisible against the stone, flicker eerily in the dim torchlight.
@@ -1133,6 +1151,7 @@ An onyx hallway intersects the corridor here and continues north."""
 vnum = 11638
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The dark corridor runs east and south here.  A feeling of forboding permeates
 the air.  It seems like the walls are watching.."""
@@ -1153,6 +1172,7 @@ the air.  It seems like the walls are watching.."""
 vnum = 11639
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The dark corridor runs north and south here.  Distant screams echo eerily
 against the stone walls."""
@@ -1181,6 +1201,7 @@ against the stone walls."""
 vnum = 11640
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The corridor branches north and east here.  A stone archway leads west into
 a large hall.  Huge, forbidding double doors loom over the corridor to the 
@@ -1215,6 +1236,7 @@ south."""
 vnum = 11641
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The dark corridor runs west and east here.  To the north, black marble steps
 lead up to a pair of bloodstained bronze doors."""
@@ -1244,6 +1266,7 @@ lead up to a pair of bloodstained bronze doors."""
 vnum = 11642
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The corridor branches north and west here.  A humanoid skeleton has been
 entombed in the corridor ceiling.  The bones gleam whitely against the 
@@ -1266,6 +1289,7 @@ dark stone, and the hollow eyesockets seem to glare accusingly at you."""
 vnum = 11643
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = "The dark corridor runs north and south here."
 
   [[rooms.exits]]
@@ -1292,6 +1316,7 @@ description = "The dark corridor runs north and south here."
 vnum = 11644
 name = "Dark corridor"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The dark corridor runs west and south here.  A narrow marble archway opens
 east into a large room."""
@@ -1320,6 +1345,7 @@ east into a large room."""
 vnum = 11645
 name = "Bloody Altar"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 A black marble dais dominates the room.  Mounted in the center of the dais,
 an obsidian altar gleams dully with fresh blood.  Lit copper braziers 
@@ -1350,6 +1376,7 @@ mounted on either side of the altar fill the room with a cloying smoke."""
 vnum = 11646
 name = "Room of Faces"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Hideous stone faces protrude from the black walls and ceiling, their 
 polished surfaces partly obscured by the smoke from the copper braziers
@@ -1369,6 +1396,7 @@ opens west."""
 vnum = 11647
 name = "Inside the Mouth"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You stand on the stone tongue inside the cavernous mouth of the sculpture.
 The shape of the slippery tongue seems to writhe even as you stand on it,
@@ -1387,6 +1415,7 @@ weighted rope, vaguely tonsil-shaped, ascends through an opening above."""
 vnum = 11648
 name = "Beneath the churning void"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You hang suspended on a heavy rope halfway up a narrow stone chute.
 The rope disappears into the center of what appears to be a churning
@@ -1408,6 +1437,7 @@ multicolored void.  Who know where it may lead.."""
 vnum = 11649
 name = "Narrow Passageway"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You find yourself in a narrow stone passageway leading south.  The low
 ceiling forces all but the shortest to stoop in order to pass through.
@@ -1426,6 +1456,7 @@ A skeleton is embedded in the rock below."""
 vnum = 11650
 name = "Damp Cavern"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A rhythmic dripping echoes through the large stone chamber.  Rivulets 
 of water run down the stalagtites clinging to the ceiling, collecting to
@@ -1456,6 +1487,7 @@ exits the cave to the north."""
 vnum = 11651
 name = "Pentagram Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 Engraved across the center of the stone floor is a large pentagram.  At
 the center of the star rests a large grey tome, apparently mounted to
@@ -1493,6 +1525,7 @@ page catches your eye:
 vnum = 11652
 name = "Dining Hall"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You stand in a long, black tiled hall.  A stone table dominates the center 
 of the room, stretching nearly the length of the hall.  Half-eaten carcasses 
@@ -1539,6 +1572,7 @@ tendons, among the remains."""
 vnum = 11653
 name = "Kitchen"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The dark stone floor is slippery with blood and pieces of raw flesh and 
 intestines.  A long spit in the center of the floor bears a the roasting
@@ -1577,6 +1611,7 @@ lie on the bloody chopping board, one still half embedded in a chunk of meat."""
 vnum = 11654
 name = "Damp Stairwell"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 Slippery stone stairs wind down into the darkness.  Threads of light filter
 in from above, where a wide trapdoor is set into the ceiling."""
@@ -1594,6 +1629,7 @@ in from above, where a wide trapdoor is set into the ceiling."""
 vnum = 11655
 name = "Cellar"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The slick granite walls of a cold, dank cellar rise up around you.  Shelves,
 stacked with cases of stored foods and beverages, line the walls.  Some
@@ -1626,6 +1662,7 @@ anymore about the contents.."""
 vnum = 11656
 name = "Storage Closet"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You stand in a narrow closet, stacked with various cleaning utensils and
 other odds and ends.  A thin layer of dust coats the assorted objects, as
@@ -1657,6 +1694,7 @@ be messy.  Just be glad you're not the janitor."""
 vnum = 11657
 name = "Narrow Crawlspace"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 Claw marks and blood scar the stone walls framing the narrow crawlspace.
 A trapdoor is set into one corner, nearly invisible in the shadows."""
@@ -1686,6 +1724,7 @@ A trapdoor is set into one corner, nearly invisible in the shadows."""
 vnum = 11658
 name = "Onyx Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 The dark onyx walls gleam eerily in the dim torchlight.  A chill breeze
 wafts in through the archway to the north.  The hallway continues south."""
@@ -1714,6 +1753,7 @@ wafts in through the archway to the north.  The hallway continues south."""
 vnum = 11659
 name = "Open Courtyard"
 sector = "inside"
+room_flags = ["dark", "no_recall"]
 description = """
 Tall marble pillars frame a wide circular courtyard of black granite.  A
 forbidding archway enters into a dark, sprawling building to the south.
@@ -1732,6 +1772,7 @@ low, dark hills."""
 vnum = 11660
 name = "Path among the haunted hills"
 sector = "hills"
+room_flags = ["dark", "no_recall"]
 description = """
 You stand on a narrow dirt path winding between dark, rolling hills.  Icy
 winds howl across the hilltops, and dark shapes seem to flit among the
@@ -1759,6 +1800,7 @@ look, they are gone."""
 vnum = 11661
 name = "Sheltered valley"
 sector = "hills"
+room_flags = ["dark", "no_recall"]
 description = """
 The hills rise steeply on all sides, forming a small valley protected from
 the chilling winds.  Grey brush, leafless and dead-looking, ring the valley,
@@ -1777,6 +1819,7 @@ the east."""
 vnum = 11662
 name = "Deep among the haunted hills"
 sector = "hills"
+room_flags = ["dark", "no_recall"]
 description = """
 The icy winds batter at you like vengeful ghosts.  You can almost make out
 words in the howling gusts..  The path branches east and west here and
@@ -1798,6 +1841,7 @@ continues south out of the hills."""
 vnum = 11663
 name = ""
 sector = "hills"
+room_flags = ["dark", "no_recall"]
 description = """
 The path winds north and west here, in a momentary shelter against the raging
 winds.  To the north, the brush thickens, casting eerie shadows across the
@@ -1819,6 +1863,7 @@ path."""
 vnum = 11664
 name = "Shadowed Clearing"
 sector = "hills"
+room_flags = ["dark", "no_recall"]
 description = """
 The dark brush grows thickly here, forming a shadowed clearing between the
 hills.  Silent shapes seem to flicker among the brush in your peripheral
@@ -1837,6 +1882,7 @@ south out of the clearing."""
 vnum = 11665
 name = "Dead end"
 sector = "hills"
+room_flags = ["dark", "no_recall"]
 description = """
 The narrow path ends abruptly at a sheer rock face.  To the north, stunted
 grey shrubs grow from between huge, stacked boulders."""
@@ -1860,6 +1906,7 @@ others."""
 vnum = 11666
 name = "Rocky Cave"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You find yourself in a dark, rocky cave.  Dim light seeps in through an 
 opening to the south.  The cave darkens to the west."""
@@ -1877,6 +1924,7 @@ opening to the south.  The cave darkens to the west."""
 vnum = 11667
 name = "Dark Cavern"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Darkness envelopes the cavern, seeming to soak up even the dim light as
 if a vacuum..  A glimmer of light is visible to the east."""
@@ -1893,6 +1941,7 @@ if a vacuum..  A glimmer of light is visible to the east."""
 vnum = 11668
 name = "Shimmering Tunnel"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Flickering white light arcs above to form a long tunnel leading east.
 Streaks of green energy lance intermittently through the tunnel walls,
@@ -1934,6 +1983,7 @@ lighting the area with a pulsing green glow."""
 vnum = 11669
 name = "Globe of Light"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself floating in what appears to be a globe formed of pure
 white light.  Green energy streaks through the globe like lances of 
@@ -1985,6 +2035,7 @@ Though floating without any visible supports, it appears to be quite sturdy."""
 vnum = 11670
 name = "Tunnel of Darkness"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself in a dark tunnel.  Shafts of dim light enter the through
 the tunnel mouth to the east, to be absorbed as soon as they touch the
@@ -1998,6 +2049,7 @@ black walls."""
 vnum = 11671
 name = "Darkness"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself floating in what appears to be an endless expanse of
 darkness. A blood red carpet stretches between the tunnel mouth to the east 
@@ -2023,6 +2075,7 @@ tunnel to the east."""
 vnum = 11672
 name = "Shadowy Clearing"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 Tall pine trees frame a dark circular clearing here.  A path crosses the
 clearing and bends north and east.  Two ancient trees, one black oak and one
@@ -2053,6 +2106,7 @@ the earthen floor."""
 vnum = 11673
 name = "Dark Thicket"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You stand in a dark thicket encircled by tall pines.  The twisted pine
 boughs above resemble the waiting claws of some huge predator.  A narrow
@@ -2086,6 +2140,7 @@ dirt path exits the thicket to the south."""
 vnum = 11674
 name = "Winding path through the dark forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 Tall, silent pines loom on all sides, filling the air with the scent of
 fresh wood and pine needles.  The narrow path on which you stand runs 
@@ -2128,6 +2183,7 @@ The lower branches of the pine appear climbable."""
 vnum = 11675
 name = "Birdnest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You stand perched on the edge of a large nest which stretches at least 
 five meters from side to side.  The bowl of the nest appears to be formed
@@ -2161,6 +2217,7 @@ The tree branches below appear sturdy and climbable."""
 vnum = 11676
 name = "Forest Path"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 The silent forms of tall pine trees frame the narrow dirt path.  The path
 branches north and east here."""
@@ -2181,6 +2238,7 @@ branches north and east here."""
 vnum = 11677
 name = "Dead End"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 The forest path dead ends here in a stand of tall pines.  Large boulders
 dot the earthen floor.  The huge, severed stump of what must have been
@@ -2212,6 +2270,7 @@ Scratches and light footprints mark the earth around the stump."""
 vnum = 11678
 name = "Quiet tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself in a narrow earthen tunnel.  Thin shafts of light enter
 the tunnel through the opening above.  To the east, the tunnel opens into
@@ -2238,6 +2297,7 @@ a dark chamber."""
 vnum = 11679
 name = "Meeting Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A huge chamber has been carved from the packed clay here.  A semicircular
 stone table dominates the center of the floor.  Along the inner edge of
@@ -2295,6 +2355,7 @@ the insignia of a diving hawk."""
 vnum = 11680
 name = "Shadowy Lair"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself in a large, dark cavern.  Bits of wood and gleaming
 white bones litter the earthen floor.  Leaves and vines are piled in one
@@ -2319,6 +2380,7 @@ base of the nest."""
 vnum = 11681
 name = "Inside the Tree Base"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the hollow base of a large pine tree.  A wooden platform is
 visible far above."""
@@ -2342,6 +2404,7 @@ the platform allows entrance to those who can reach it.."""
 vnum = 11682
 name = "Heart of the Tree"
 sector = "air"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself balanced on a wide wooden platform in the dark heart of
 the pine tree.  The wood of the tree, somehow fresh and very alive despite
@@ -2693,6 +2756,7 @@ void outside.  A long leather couch dominates the center of the office."""
 vnum = 11695
 name = "Inside an Outhouse"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself inside a narrow, white walled outhouse, wedged between
 the door and a really Big toilet.  Probably one of those times when you
@@ -2710,6 +2774,7 @@ reeally don't want to look down.."""
 vnum = 11696
 name = "Inside the Toilet"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Oh yuck.. what are you doing inside the toilet?  The stench is awful, and
 what's worse.. claw marks on the walls indicate that something has made
@@ -2727,6 +2792,7 @@ its home here."""
 vnum = 11697
 name = "Down a Mole Hole"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Something has dug a narrow north-south tunnel here.  Light streams in
 through the opening above, drying the fresh dirt."""
@@ -2747,6 +2813,7 @@ through the opening above, drying the fresh dirt."""
 vnum = 11698
 name = "Ouch!"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are momentarily blinded as a glaring array of colors assaults your eyes.
 Gaudy mauve curtains decorate the earthen walls, clashing with the loud
@@ -2801,4 +2868,7 @@ the center of the room."""
 vnum = 11699
 name = "Temple of Unbelief"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
+heal_rate = 220
+mana_rate = 220
 description = "Seeing is believing.."

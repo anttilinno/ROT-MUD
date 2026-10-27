@@ -2,6 +2,7 @@
 vnum = 2300
 name = "The dark woods"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 You are travelling through woods that are as dark as night. The trees above
 block all light and wind. The air is stagnant and smells of death and decay.
@@ -33,6 +34,7 @@ description = """
 vnum = 2301
 name = "The dark woods"
 sector = "forest"
+room_flags = ["dark", "no_mob"]
 description = """
 You wearily travel through the darkness of the forest. Huge skeletal trees
 line the edges of the path and tower above you. Errant rays of light spear
@@ -98,6 +100,7 @@ darkness, you feel very vulnerable and alone."""
 vnum = 2304
 name = "In the dense forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You walk along a small path leading through a dark forest. No sounds can be
 heard and little light penetrates the canopy of trees above you. The air here
@@ -116,6 +119,7 @@ to the west. The path you are on leads south into the darkening woods."""
 vnum = 2305
 name = "The dark forest path"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You continue on through darkness and gloom. The path below you has become a
 wet quagmire. It is difficult to walk, and you make squishing sounds as you
@@ -138,6 +142,7 @@ south into darkness."""
 vnum = 2306
 name = "A turn in the path"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 The forest path turns here towards the north and west. To the north, you see
 that the ground has become dank and swampy, while the western path appears
@@ -156,6 +161,7 @@ east."""
 vnum = 2307
 name = "The bloody intersection"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 This is a small intersection. Paths lead east, west, and south. You are struck
 by the carnage here when you enter the clearing. There appears to have been a
@@ -231,6 +237,7 @@ forest in that direction."""
 vnum = 2310
 name = "Up the rocky hillside"
 sector = "mountain"
+room_flags = ["no_mob"]
 description = """
 You are climbing on a rocky hillside. As you scramble about, loose rocks and
 small boulders bounce and fall down below you. Looking to the east and west,
@@ -385,6 +392,7 @@ north, south, and west."""
 vnum = 2316
 name = "Inside the horrid cave"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The stench is overwhelming. You can hardly breathe as you enter the cave.
 Looking around, you realize that some bizarre and horrible creature uses this
@@ -632,6 +640,7 @@ radiates blue light. The shore extends north away from the water's edge."""
 vnum = 2326
 name = "Floating in blue light"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You seem to be floating in blue weightlessness. You tumble head over heels and
 finally right yourself. Gaining your bearings, you notice that there are two
@@ -650,6 +659,7 @@ plain. Another window the the north shows an image of a rocky shore."""
 vnum = 2327
 name = "The swampy path"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This damp path seems to lead into a deep, dark swamp. The trees above block
 out all light and stifle the wind. You smell swamp gas and hear damp squashing
@@ -668,6 +678,7 @@ a dark forest to the west."""
 vnum = 2328
 name = "The swampy path"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You tread lightly in a wet, swampy path. All around you, you see pools of
 quicksand and rotting vegetation. Unlike the forest to the west, the swamp is
@@ -686,6 +697,7 @@ and west into more swamp."""
 vnum = 2329
 name = "The swampy path"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You weave your way through the treacherous swamp. Gas rises all around you and
 a damp mist covers the ground, making it impossible to travel safely, without
@@ -705,6 +717,7 @@ here leads east and west."""
 vnum = 2330
 name = "The turn in the swampy path"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You come upon a bend in the swampy path. The ground here is fairly sturdy,
 as this place is elevated above the rest of the swamp. Looking around, you see
@@ -730,6 +743,7 @@ a dark, mist filled swamp. Small paths lead south and west into the mist."""
 vnum = 2331
 name = "The swampy path"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You tread lightly through the mirky water and sludge that makes up the path
 you follow. To the east, there is a thick wall of mist. You can see nothing
@@ -747,6 +761,7 @@ within it. Harder ground rises to the north."""
 vnum = 2332
 name = "Lost in the Mist"
 sector = "hills"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You wander, hopelessly lost. Swirling mist obscures your vision and clouds
 your mind. You lose all concept of direction. Small, silent giggles can be
@@ -776,6 +791,7 @@ heard all around. You can wander in any direction."""
 vnum = 2333
 name = "Lost in the Mist"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are in a thick misty area. The mist swirls around you, seeming to taunt
 you and dare you to escape. You feel a slight electric charge in the mist. It
@@ -806,6 +822,7 @@ direction......."""
 vnum = 2334
 name = "Lost in the Mist"
 sector = "hills"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You try to peer through the mist......You see nothing. It swirls about you,
 covering you in a damp sheen. There is no sound, all light is eagerly devoured
@@ -831,6 +848,7 @@ by the mist. You feel totally and hopelessly lost."""
 vnum = 2335
 name = "Lost in the Mist"
 sector = "hills"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You stumble through the marsh here. The swamp seems to have swallowed you up
 and denied you exit. This mist is your jailor. You cannot tell where you are.
@@ -856,6 +874,7 @@ You hear quiet laughter all about you."""
 vnum = 2336
 name = "Lost in the Mist"
 sector = "hills"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You wander, lost, for what seems an eternity. Then....From nowhere....You see
 what appears to be trees and hills to the east. The mist itself thickens to
@@ -889,6 +908,7 @@ the west, while it grows thin to the east."""
 vnum = 2337
 name = "Lost in the Mist"
 sector = "hills"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You wander through the thick mist. It swirls all about you and makes it hard
 to breathe. The ground below you makes a soft squishing sound as you trudge
@@ -919,6 +939,7 @@ in any direction."""
 vnum = 2338
 name = "Lost in the Mist"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You wander, lost hopelessly. The mist swirls all about you. You can discern no
 direction. You stumble blindly through the mist, oblivious to your
@@ -961,6 +982,7 @@ you can see the sky above. A thick bank of mist is to your west."""
 vnum = 2340
 name = "A forested path"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 The path here leads north through a thick forest. High bushes and forest
 undergrowth line both sides of the trail. Looking north, you see a thin line
@@ -1195,6 +1217,7 @@ fresher air."""
 vnum = 2348
 name = "The entryway to the lodge"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the entry hall to a large lodge. Animal pelts and other trophies
 line the walls here. Large chests on either side of the door appear to be
@@ -1234,6 +1257,7 @@ exit into the village."""
 vnum = 2349
 name = "The throne room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a large, crudely decorated throne room. A huge throne adorned
 with humanoid skulls sits against the west wall. A crude, blood stained altar
@@ -1265,6 +1289,7 @@ smoke clings to the ceiling."""
 vnum = 2350
 name = "The chieftain's room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This appears to be the ogre chieftain's private quarters. A huge pile of furs
 is in the far corner. Large chests fill the room. All of them have heavy pad
@@ -1362,6 +1387,7 @@ discern any directions."""
 vnum = 2353
 name = "The Glacier Temple"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small temple. It appears to be built entirely from ice. The ice
 walls are frosted and are opaque. There is a small blue portal here. You can
@@ -1594,6 +1620,7 @@ to discern any directions."""
 vnum = 2360
 name = "The edge of the frigid wastes"
 sector = "mountain"
+room_flags = ["no_mob"]
 description = """
 You stand at the base of a steep rocky cliff. To the north, a vast arctic
 wasteland stretches out. The snow falls lightly here and the wind is not
@@ -1612,6 +1639,7 @@ wastes."""
 vnum = 2361
 name = "On the cliffside"
 sector = "mountain"
+room_flags = ["no_mob"]
 description = """
 You cling to the side of the cliff. Looking down, you are terrified by the
 sheer distance to the ground below. You can climb up higher into the cliffs,
@@ -1913,6 +1941,7 @@ view."""
 vnum = 2369
 name = "The Inn of the Broken Horn"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You enter a warm tavern. The room is lit mainly by two huge fireplaces at each
 end of the room. Small tables and a large bar furnish the room. The
@@ -1928,6 +1957,7 @@ north, out of the bar and back out into the cold."""
 vnum = 2370
 name = "The Mahn-Tor Equipment Shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a crude equipment shop. The store is filled with racks of various
 items that adventurers could use. Large fireplaces light and heat the room.
@@ -1950,6 +1980,7 @@ north."""
 vnum = 2371
 name = "The Mahn-Tor General Store"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You enter a small store that is dark and cold. Old empty shelves line the
 walls and snow blows across the dirty stone floor. It is evident that this
@@ -1964,6 +1995,7 @@ the chilling snow and wind."""
 vnum = 2372
 name = "Gorak's Training Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is full of all sorts of weapons and armours. Pieces of old targets
 and practice dummies lie all around. The walls are chipped and scored from
@@ -2009,6 +2041,7 @@ It looks like it leads back to the hall."""
 vnum = 2373
 name = "Darkoth's Dark Study"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is dark. It reeks of death and evil. Arcane symbols and a small
 altar fill the room. Blood runs from the altar. It is evident that this room
@@ -2053,6 +2086,7 @@ It looks like it leads back to the hall."""
 vnum = 2374
 name = "Tyrgoth's Inner Sanctum"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Idols to the gods of good fill the room. White furniture and decorations give
 the room a holy appearance. It is evident that some being of supreme goodness
@@ -2101,6 +2135,7 @@ It looks like it leads out to the hall."""
 vnum = 2375
 name = "The road to the Keep of Mahn-Tor"
 sector = "mountain"
+room_flags = ["no_mob"]
 description = """
 You walk up a steep rocky road. It leads up a steep grade to the east. At the
 end of this steep road, you see a huge keep. Snow swirls all about you and you
@@ -2119,6 +2154,7 @@ west are all you can see from here."""
 vnum = 2376
 name = "A small guard house"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You enter a small guard house. A huge fireplace lights and warms the room.
 Looking around, you see that the room is fairly well furnished. Thick rugs
@@ -2187,6 +2223,7 @@ guard houses to the north and south."""
 vnum = 2378
 name = "A small guard house"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You enter a small, but warm, guard house. Deep rugs and thick curtains
 insulate the room. A huge fireplace lights and warms the room. Outside, you
@@ -2216,6 +2253,7 @@ hear the roar of the freezing wind. A small door leads north out into the cold."
 vnum = 2379
 name = "The entryway to the Keep of Mahn-Tor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the entry hall to the huge keep. The high vaulted ceiling is carved
 from solid stone. Huge stone pillars rise up from the floor to meet the
@@ -2265,6 +2303,7 @@ large hall leads east, deeper into the keep."""
 vnum = 2380
 name = "The Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a huge hall. Large tapestries line the walls and huge statues of
 various make and appearance are spread about. The ceiling above supports huge
@@ -2311,6 +2350,7 @@ hear sounds of inhabitation. Looking west, you see the entry gates to the keep."
 vnum = 2381
 name = "The Grand Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the main hall of the Keep of Mahn-Tor. This hall is huge. The wide
 floor of the hall is an expanse of marble. It shimmers in the light thrown
@@ -2334,6 +2374,7 @@ leads to the west."""
 vnum = 2382
 name = "The Great Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in the great hall of the keep. Huge pillars rise up to the vaulted
 ceiling and torch light glimmers off the marble floor here. You are amazed at
@@ -2384,6 +2425,7 @@ smaller hall leading south, deeper into the keep."""
 vnum = 2383
 name = "Standing before the throne"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand before the throne of Mahn-Tor. This golden throne is so huge that it
 takes up almost the entire wall, stretching far above the floor. Sitting upon
@@ -2441,6 +2483,7 @@ The golden throne is huge. It takes up the whole wall........."""
 vnum = 2384
 name = "The Great Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a great hall. Huge torches light the room and their light shimmers
 off the marble floor below you. To the north, you see a huge golden throne.
@@ -2459,6 +2502,7 @@ The hall itself leads north and west."""
 vnum = 2385
 name = "The secret hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small, torch lit hall. It leads from east to west. A large gold
 door is to the west. To the east, you see a heavy stone door."""
@@ -2548,6 +2592,7 @@ Looks like the back of a secret door of sorts."""
 vnum = 2386
 name = "Entry to the Royal Chambers"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the entrance to the royal chambers of the keep. A plush shag rug
 covers the stone floor. Large candelabras hang from the ceiling, lighting the
@@ -2577,6 +2622,7 @@ A huge stone door......."""
 vnum = 2387
 name = "The Guard Post"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hall here has been built into a guard post of sorts. It appears as though
 it would be quite easy to defend in times of emergency. Obviously, something
@@ -2611,6 +2657,7 @@ seen to the north."""
 vnum = 2388
 name = "The guarded hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You walk down a torch lit hallway. It has been carved out of pure stone. It is
 very quiet in this hall. You notice rows of colored doors on each wall. To
@@ -2651,6 +2698,7 @@ You see a red door. It has the name "Gorak" written on it."""
 vnum = 2389
 name = "The guarded hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You walk down a small, quiet, torch lit hallway. Doors of different colors are
 in each wall. To your east, you see a maroon door. To your west, you see a
@@ -2690,6 +2738,7 @@ You see a black door. It has the name "Darkoth" inscribed on it."""
 vnum = 2390
 name = "Sumaron's Sanctum"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You enter a temple of sorts. A small altar is here and relics of many
 religions lie around. It is evident that this is the room of a studying cleric.
@@ -2734,6 +2783,7 @@ It looks like it leads back to the hall."""
 vnum = 2391
 name = "Amyrok's Arcane Study"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is full of shelves which hold various spell components. The center
 of the room is occupied by a huge pentagram. The entire room smells of smoke
@@ -2779,6 +2829,7 @@ It looks like it leads back to the hall."""
 vnum = 2392
 name = "The guarded hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You walk down a quiet hall. The stone walls here are wet with moisture.
 Colored doors can be seen in the walls here. To your east, you see a green
@@ -2819,6 +2870,7 @@ You see a white door here. It has the name "Tyrgoth" inscribed on it."""
 vnum = 2393
 name = "The Harem Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This appears to be the harem room of the Keep. Huge piles of furs and beds
 fill the room. The lighting is dim, but the room is very warm. You can hear
@@ -2856,6 +2908,7 @@ music playing quietly from somewhere. Beaded doorways lead north and east."""
 vnum = 2394
 name = "Nasturn's Humble Abode"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is filled with all types of natural items. Trees and plants have
 been lovingly cultivated and grown by hand, in large pots. The room is like an
@@ -2900,6 +2953,7 @@ It looks like it leads back to the hall."""
 vnum = 2395
 name = "The main living room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is decorated with sturdy stone furniture that is carved and gilded.
 Large candles light the room. A thick rug covers the floor. Thick furs and
@@ -2921,6 +2975,7 @@ tapestries decorate the walls. Beaded doorways lead south and west."""
 vnum = 2396
 name = "The Master Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This appears to be the master bedroom. A huge bed fills the rooms. Piles of
 furs and other rich furnishings adorn the room. Candles are everywhere and
@@ -2967,6 +3022,7 @@ overwhelms you. Beaded doorways lead north and west."""
 vnum = 2397
 name = "The end of the guarded hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the end of the hall. Colored doors line the walls to the north. To
 your west, you see a brown door. To your east, you see a grey door. The hall
@@ -3002,6 +3058,7 @@ You see a brown door here. It has the name "Belrak" written on it."""
 vnum = 2398
 name = "Dorgar's Dismal Domicile"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is dirty and unkempt. Odds and ends of different items lie all over.
 It is apparent that some type of pack-rat lives here. It appears as though
@@ -3046,6 +3103,7 @@ It looks like it leads back to the hall."""
 vnum = 2399
 name = "Belrak's Green Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is full of green. The furniture and all other items show the color
 of nature. The room smells of pine and forest odors. From the items here, it

@@ -2,6 +2,7 @@
 vnum = 1501
 name = "Entrance to Gnome Village"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You stand on a dusty path that leads north and east.  To the east you hear
 the sounds of a small village."""
@@ -200,6 +201,7 @@ are a few people moving around, but not many."""
 vnum = 1509
 name = "A Small Gnome House"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a small suburban house made from quality wood.  You can see the
 expert workmanship that went into making it, but it lacks creativity."""
@@ -224,6 +226,7 @@ expert workmanship that went into making it, but it lacks creativity."""
 vnum = 1510
 name = "A Small Gnome House"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a small suburban house made from quality wood.  You can see the
 expert workmanship that went into making it, but it lacks creativity."""
@@ -248,6 +251,7 @@ expert workmanship that went into making it, but it lacks creativity."""
 vnum = 1511
 name = "A Small Gnome House"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a small suburban house made from quality wood.  You can see the
 expert workmanship that went into making it, but it lacks creativity."""
@@ -272,6 +276,7 @@ expert workmanship that went into making it, but it lacks creativity."""
 vnum = 1512
 name = "A Small Gnome House"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a small suburban house made from quality wood.  You can see the
 expert workmanship that went into making it, but it lacks creativity."""
@@ -284,6 +289,7 @@ expert workmanship that went into making it, but it lacks creativity."""
 vnum = 1513
 name = "A Small Gnome House"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a small suburban house made from quality wood.  You can see the
 expert workmanship that went into making it, but it lacks creativity."""
@@ -304,6 +310,7 @@ expert workmanship that went into making it, but it lacks creativity."""
 vnum = 1514
 name = "A Gnome Shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in one of the several shops of this fine town.  The wares look fine,
 but unfortunately the gnomes don't do business with outsiders."""
@@ -324,6 +331,7 @@ but unfortunately the gnomes don't do business with outsiders."""
 vnum = 1515
 name = "A Gnome Shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in one of the several shops of this fine town.  The wares look fine,
 but unfortunately the gnomes don't do business with outsiders."""
@@ -344,6 +352,7 @@ but unfortunately the gnomes don't do business with outsiders."""
 vnum = 1516
 name = "A Gnome Shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in one of the several shops of this fine town.  The wares look fine,
 but unfortunately the gnomes don't do business with outsiders."""
@@ -356,6 +365,7 @@ but unfortunately the gnomes don't do business with outsiders."""
 vnum = 1517
 name = "Path by a Stream"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You are on a small path leading north and west, that is surrounded on the
 other two sides by a small stream.  The water looks mighty cold."""
@@ -412,6 +422,7 @@ The stream is pretty small, but it looks too cold to swim."""
 vnum = 1519
 name = "A Small Hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hut is a mess!  Blood has stained the grass walls into a dark rich
 crimson color.  Torn clothes and trash lie all around, and you think you
@@ -508,6 +519,7 @@ scurry over your feet.  There is a cave to the east."""
 vnum = 1523
 name = "The Dark Cave"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 The cave gleams as your light reflects off of it.  As you squint your eyes
 and try to look ahead, you think you see something move."""
@@ -524,6 +536,7 @@ and try to look ahead, you think you see something move."""
 vnum = 1524
 name = "Darker Cave"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 The cave gets even darker as your terror grows stronger.  You fear for your
 life as something emerges out of the shadows."""
@@ -540,6 +553,7 @@ life as something emerges out of the shadows."""
 vnum = 1526
 name = "A Dusty Path"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 You are on a well traveled path that leads in many directions.  To the north
 is a large house, and to the west is a fortress."""
@@ -589,6 +603,7 @@ well fortified."""
 vnum = 1528
 name = "A Long Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are now inside of the fortress; you must be lucky that the guards 
 haven't killed you.  As you glance around, you notice that the walls and
@@ -615,6 +630,7 @@ storage room is to the south."""
 vnum = 1529
 name = "A Long Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are now inside of the fortress; you must be lucky that the guards 
 haven't killed you.  As you glance around, you notice that the walls and
@@ -636,6 +652,7 @@ floors are spotlessly cleaned.  A mess hall is to the south."""
 vnum = 1530
 name = "The Barracks"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You now stand in the sleeping quarters of the gnome guards.  Every bed is
 made perfectly, and not single article of clothing is on the floor.  There
@@ -669,6 +686,7 @@ is a small storage room to the east."""
 vnum = 1531
 name = "A Small Storage Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is where the gnomes store all their spare clothing and armor.
 There is not much here, but you might come up with something."""
@@ -681,6 +699,7 @@ There is not much here, but you might come up with something."""
 vnum = 1532
 name = "A Small Storage Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is where the gnomes store all their spare weapons.  A door leads off
 to the east."""
@@ -697,6 +716,7 @@ to the east."""
 vnum = 1533
 name = "A Small Storage Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is yet another room for storing gnome stuff.  Maps and battle plans
 are stored in neat stacks on the shelves."""
@@ -709,6 +729,7 @@ are stored in neat stacks on the shelves."""
 vnum = 1534
 name = "The Mess Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the room where the guards come to get their grub.  The benches 
 and tables are neatly cleaned and straightened, while shiny plates line
@@ -730,6 +751,7 @@ the walls."""
 vnum = 1535
 name = "A Small Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a small plain room.  Its only interesting feature is a ladder down."""
 
@@ -745,6 +767,7 @@ This is a small plain room.  Its only interesting feature is a ladder down."""
 vnum = 1536
 name = "A Small Unused Room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a small room in an unused section of the fortress.  The whole
 room is coated with dust and cobwebs.  The ladder leads back up, and
@@ -764,6 +787,7 @@ a rusty door is to the east."""
 vnum = 1537
 name = "Dark Hallway"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself in a very old section of the fortress.  You must be the
 first person to pass through here in years.  The hallway continues south
@@ -787,6 +811,7 @@ and a door leads off to the east."""
 vnum = 1538
 name = "Torture Chamber"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 This is a room that was once used to extract lies out of helpless victims.
 The machines look unused, but could still work."""
@@ -805,6 +830,7 @@ almost feel them pulling your arms out of their sockets."""
 vnum = 1539
 name = "Dark Hallway"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The hall continues in a north-south direction.  The floor is coated with
 some kind of molded slime.  Doors lead east and west."""
@@ -829,6 +855,7 @@ some kind of molded slime.  Doors lead east and west."""
 vnum = 1540
 name = "Dark Hallway"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The hall continues in a north-south direction.  The floor is coated with
 some kind of molded slime.  Doors lead east and west."""
@@ -853,6 +880,7 @@ some kind of molded slime.  Doors lead east and west."""
 vnum = 1541
 name = "Prison Cell"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark and nasty prison cell.  Bodies lying on the floor give off
 an unbearable stench."""
@@ -873,6 +901,7 @@ an unbearable stench."""
 vnum = 1542
 name = "Prison Cell"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark and nasty prison cell.  Bodies lying on the floor give off
 an unbearable stench."""
@@ -893,6 +922,7 @@ an unbearable stench."""
 vnum = 1543
 name = "Prison Cell"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark and nasty prison cell.  Bodies lying on the floor give off
 an unbearable stench."""
@@ -909,6 +939,7 @@ an unbearable stench."""
 vnum = 1544
 name = "Prison Cell"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark and nasty prison cell.  Bodies lying on the floor give off
 an unbearable stench."""
@@ -921,6 +952,7 @@ an unbearable stench."""
 vnum = 1545
 name = "End of the Dark Hallway"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You have reached the end of the dark hallway and maybe the end of your puny
 life.  Something lumbers its way out of the shadows."""
@@ -947,6 +979,7 @@ life.  Something lumbers its way out of the shadows."""
 vnum = 1546
 name = "A Ladder"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You have come into a vertical tunnel with a ladder."
 
   [[rooms.exits]]
@@ -963,6 +996,7 @@ description = "You have come into a vertical tunnel with a ladder."
 vnum = 1547
 name = "Lair"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a new lair in the fortress.  Anything could be lurking
 around the corner."""
@@ -979,6 +1013,7 @@ around the corner."""
 vnum = 1548
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1007,6 +1042,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1549
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1023,6 +1059,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1550
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1047,6 +1084,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1551
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1071,6 +1109,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1552
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1087,6 +1126,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1553
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1111,6 +1151,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1554
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1131,6 +1172,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1555
 name = "A Damp Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You are wandering in a dark, damp, twisting hallway.  The temperature
 seems to be greater here, as well as your fear."""
@@ -1155,6 +1197,7 @@ seems to be greater here, as well as your fear."""
 vnum = 1556
 name = "The End of the Hallway"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You make your way out of the hallway, just to find yourself in greater
 danger.  Before you looms the source of the great heat."""
@@ -1187,6 +1230,7 @@ danger.  Before you looms the source of the great heat."""
 vnum = 1557
 name = "The Altar"
 sector = "field"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You finally reach the end of the maze.  There is a great altar here in the
 shape of a bat.  A passageway leads off to the west."""
@@ -1203,6 +1247,7 @@ shape of a bat.  A passageway leads off to the west."""
 vnum = 1558
 name = "The Chief's House"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You enter into a large and luxurious house.  The floor is coated with carpets
 and the walls are covered in paintings.  You feel privileged just for stepping
@@ -1232,6 +1277,7 @@ inside."""
 vnum = 1559
 name = "The Unused Path"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 You are now on a fairly unused path that leads east out of the village.  
 You wonder what could be out this way."""
@@ -1280,6 +1326,7 @@ back to the west, and there appears to be an old mine shaft to the north."""
 vnum = 1562
 name = "Entrance to the Mine Shaft"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 As you enter the mine shaft, you get a sudden fear of the walls closing
 in on you.  You are surprised to notice that you don't need a light."""
@@ -1296,6 +1343,7 @@ in on you.  You are surprised to notice that you don't need a light."""
 vnum = 1563
 name = "Mine Shaft"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 This mine shaft looks stable, at least in this area.  The wooden supports are
 thick and strong.  Torches line the walls.  Exits lead in all directions."""
@@ -1324,6 +1372,7 @@ thick and strong.  Torches line the walls.  Exits lead in all directions."""
 vnum = 1564
 name = "Mine Shaft"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 This mine shaft looks stable, at least in this area.  The wooden supports are
 thick and strong.  Torches line the walls.  Exits lead in all directions."""
@@ -1348,6 +1397,7 @@ thick and strong.  Torches line the walls.  Exits lead in all directions."""
 vnum = 1565
 name = "Mine Shaft"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 This mine shaft looks stable, at least in this area.  The wooden supports are
 thick and strong.  Torches line the walls.  Exits lead in all directions
@@ -1373,6 +1423,7 @@ except north."""
 vnum = 1566
 name = "Walkway"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are on a well built path in the middle of a mountain.  You sense something
 great up ahead, considering the hard work that must have gone into creating
@@ -1390,6 +1441,7 @@ this passage."""
 vnum = 1567
 name = "Walkway"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are on a well built path in the middle of a mountain.  You sense something
 great up ahead, considering the hard work that must have gone into creating
@@ -1407,6 +1459,7 @@ this passage."""
 vnum = 1568
 name = "The Grand Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have stepped into the Grand Hall of the hobgoblin kingdom; your luck
 must be running low by now.  Golden pillars span the hallway, and you
@@ -1424,6 +1477,7 @@ notice a red carpet beneath your feet."""
 vnum = 1569
 name = "The Throne Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is large bright room filled with Hobgoblins.  To the south there is
 a large golden throne against the wall."""
@@ -1484,6 +1538,7 @@ a large golden throne against the wall."""
 vnum = 1570
 name = "The Treasury"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside the hobgoblin's treasury.  Your eyes are almost blinded by the
 gold, silver and copper coins."""
@@ -1508,6 +1563,7 @@ gold, silver and copper coins."""
 vnum = 1571
 name = "Guarded Room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are inside a well guarded room.  The place is slightly better built than
 the mine shafts, and is lit by lanterns."""
@@ -1556,6 +1612,7 @@ the mine shafts, and is lit by lanterns."""
 vnum = 1572
 name = "Guarded Room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are inside a well guarded room.  The place is slightly better built than
 the mine shafts, and is lit by lanterns."""
@@ -1604,6 +1661,7 @@ the mine shafts, and is lit by lanterns."""
 vnum = 1573
 name = "Hobgoblin Armory"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 The guards store their spare weapons and armor here.  There are rusty swords
 on rotting shelves, and armor hanging from hooks or laying on the floor."""
@@ -1620,6 +1678,7 @@ on rotting shelves, and armor hanging from hooks or laying on the floor."""
 vnum = 1574
 name = "Mine Shaft"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You enter a part of the mine shaft where the torches have grown dim
 and are almost ready to go out.  From what you can see, there are plenty
@@ -1637,6 +1696,7 @@ of cobwebs on the walls and rats at your feet."""
 vnum = 1575
 name = "Entrance to a Dungeon"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 The floor dips slightly as you walk into this dark and nasty place.  Your
 skin crawls as you look at the filth on the walls and see it move.  Most
@@ -1662,6 +1722,7 @@ of the exits lead into jail cells."""
 vnum = 1576
 name = "A Dungeon"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in the deepest and darkest part of the mine shafts.  The light from
 the torches barely reaches to where you are.  Most directions from here
@@ -1687,6 +1748,7 @@ lead to jail cells."""
 vnum = 1577
 name = "A Jail Cell"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
 The walls glisten with slime.  You see something stir in the straw."""
@@ -1703,6 +1765,7 @@ The walls glisten with slime.  You see something stir in the straw."""
 vnum = 1578
 name = "The Jail Cell"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
 The walls glisten with slime.  You see something stir in the straw."""
@@ -1719,6 +1782,7 @@ The walls glisten with slime.  You see something stir in the straw."""
 vnum = 1579
 name = "The Jail Cell"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
 The walls glisten with slime.  You see something stir in the straw."""
@@ -1735,6 +1799,7 @@ The walls glisten with slime.  You see something stir in the straw."""
 vnum = 1580
 name = "The Jail Cell"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
 The walls glisten with slime.  You see something stir in the straw."""
@@ -1751,6 +1816,7 @@ The walls glisten with slime.  You see something stir in the straw."""
 vnum = 1581
 name = "The Jail Cell"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a musty, dark jail cell.  Wet and dirty straw covers the floor.
 The walls glisten with slime.  You see something stir in the straw."""
@@ -1767,6 +1833,7 @@ The walls glisten with slime.  You see something stir in the straw."""
 vnum = 1582
 name = "Small Mine Shaft"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a small extension of the mine shaft.  The dust on the floor is
 undisturbed by footprints."""
@@ -1783,6 +1850,7 @@ undisturbed by footprints."""
 vnum = 1583
 name = "Hobgoblin Barracks"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are suddenly surrounded by a small army of hobgoblin guards.  The room
 itself is a mess with clothes and armor everywhere.  The beds are unmade and
@@ -1812,6 +1880,7 @@ stained."""
 vnum = 1584
 name = "Hobgoblin Barracks"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 Yech!  As you continue forward, the smell just keeps getting worse.
 What are you DOING here?"""
@@ -1832,6 +1901,7 @@ What are you DOING here?"""
 vnum = 1585
 name = "Mess Hall"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You stand in the hobgoblin eating area.  There are a few rotting tables
 and many broken dishes scattered around the room.  You almost slip on a
@@ -1853,6 +1923,7 @@ rotten piece of meat, but catch yourself just in time."""
 vnum = 1586
 name = "A Store Room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand in a small room filled with flour, grain, fruit, and bat droppings."""
 
@@ -1864,6 +1935,7 @@ You stand in a small room filled with flour, grain, fruit, and bat droppings."""
 vnum = 1587
 name = "The Kitchen"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 This kitchen hasn't been cleaned since the creation of humans.  The trash and
 spoiled food laying on the floor reach up to your knees.  Off to the side a
@@ -1881,6 +1953,7 @@ pot is boiling over.  A human hand floats in it."""
 vnum = 1588
 name = "A Small Mine Shaft"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You come to a place in the mine shaft where a tunnel leads down.  The
 small passage continues north and south."""
@@ -1901,6 +1974,7 @@ small passage continues north and south."""
 vnum = 1589
 name = "Hermit's Lair"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are in a small section where the mine wall has collapsed to reveal a
 tiny one-room cave.  The area is barely lit, but you can make out something
@@ -1918,6 +1992,7 @@ moving towards you."""
 vnum = 1590
 name = "A Hole"
 sector = "forest"
+room_flags = ["indoors"]
 description = "You are in a hole."
 
   [[rooms.exits]]

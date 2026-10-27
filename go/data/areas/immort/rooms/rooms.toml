@@ -2,6 +2,7 @@
 vnum = 1200
 name = "The Chat Room"
 sector = "inside"
+room_flags = ["heroes_only", "indoors", "private"]
 description = """
 You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
 which twinkles happily in a warm fireplace.  This is one of the many rooms
@@ -16,6 +17,7 @@ comfortable!"""
 vnum = 1201
 name = "Moses' Hangout"
 sector = "inside"
+room_flags = ["heroes_only", "indoors"]
 description = """
 You see here a cozy little room with a fireplace.  You can tell it is Moses'
 room by the two stone tablets and a bible on a small ledge near the fireplace.
@@ -31,6 +33,7 @@ There is a bell here for the butler."""
 vnum = 1202
 name = "The Center of the Universe"
 sector = "inside"
+room_flags = ["heroes_only", "indoors", "private"]
 description = """
 You are at the centre of the universe, everything is filled with bright
 light in all colors. You feel time and space no longer exist here.
@@ -44,6 +47,7 @@ Exits fill the room in all 42 dimensions, leading everywhere."""
 vnum = 1203
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only", "indoors"]
 description = """
 This is the huge Hall of Valhalla, where the Gods rule supreme.  The
 cavernous building stretches infinitely in all directions.  Valhalla 
@@ -77,6 +81,7 @@ upward..."""
 vnum = 1204
 name = "Priscilla's Pleasure Palace"
 sector = "inside"
+room_flags = ["gods_only", "indoors"]
 description = """
 As you look around you, you see the largest collection of erotic toys
 in the world!!!  On a table in the middle of the room lies a book titled :
@@ -92,6 +97,7 @@ There are things here that you never even imagined in your wildest dreams!"""
 vnum = 1205
 name = "The Eye of the Hurricane"
 sector = "air"
+room_flags = ["imp_only", "indoors", "no_mob", "no_recall", "private"]
 description = """
 The shrieking winds of a monstrous storm surround you, spinning you around
 in an endless web of fury. But then, in the middle of turmoil, you find a
@@ -106,6 +112,7 @@ storm is going to be here a while."""
 vnum = 1206
 name = "Walking on the Moon"
 sector = "inside"
+room_flags = ["imp_only", "no_mob", "no_recall", "private"]
 description = """
 The proud and lonely silence of Mare Imbrium surrounds you, as you gaze upon
 the sterile splendor of the moon.  All around is the velvet curtain of night,
@@ -124,6 +131,7 @@ Upon it is a dedication to Robert Anson Heinlein, the father of the future."""
 vnum = 1207
 name = "The Satin Memorial Reading Room"
 sector = "hills"
+room_flags = ["gods_only", "indoors", "no_recall", "private"]
 description = """
 Half read books lie everywhere: Yeats, Tennyson, Chandler, Barrie;
 a battered paperback de Laclos; a dusty leather-bound Donne.  A
@@ -275,6 +283,7 @@ description = """
 vnum = 1208
 name = "A Sea Cave"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "private"]
 description = """
 You are in a small cave in a cliff next to a deep green sea.  Fine
 gold and pink sand blanket the floor.  Shells are scattered and strewn
@@ -293,6 +302,7 @@ worn by time into a shape similar to a comfortable chair."""
 vnum = 1209
 name = "The Archmage's Workroom"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This well-lit room is absolutely filled with clutter -- enchanting gear,
 reagents, spell components, ancient tomes, scrolls, braziers, exotic incense
@@ -322,6 +332,9 @@ You notice Jimmy Hoffa's ring."""
 vnum = 1210
 name = "The Office of Vengeance"
 sector = "inside"
+room_flags = ["gods_only", "indoors"]
+heal_rate = 800
+mana_rate = 800
 description = """
 The first thing you notice about this office is the floor; it
 is a black & white checkerboard pattern, with 8 squares to a side.  The
@@ -380,6 +393,7 @@ Encyclopedia of Chess Openings, to the latest Imformants are all here."""
 vnum = 1211
 name = "Arena of Judgement"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "private"]
 description = """
 The scene lain before you is one that gives you the feeling of being placed
 under a higher authority.  The jury is out.  A statue of Pontius Pilate is
@@ -404,6 +418,7 @@ shield that glimmers like a pool of blood."""
 vnum = 1212
 name = "The Realm of the Dead"
 sector = "inside"
+room_flags = ["indoors", "no_recall"]
 description = """
 You are standing on an immense, grey stone floor that stretches as far as you
 can see in all directions.  Rough winds plunging from the dark, starless sky
@@ -471,6 +486,7 @@ huge mansion lies to the east beyond a set of magnificent golden doors."""
 vnum = 1214
 name = "The Room of Lost Souls"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the room full of souls that never made it to Asgard.  They are 
 trapped here eternally, left to wander about in misery.  They were infidels
@@ -502,6 +518,7 @@ and peaceful here that it would be a shame to leave..."""
 vnum = 1216
 name = "The Entrance of Valhalla"
 sector = "city"
+room_flags = ["gods_only"]
 description = """
 The huge ornate entrance of Valhalla is before you.  It seems as though
 atleast eight-hundred soldiers could walk abreast of one another through
@@ -521,6 +538,7 @@ of bravery and glory that you know are kept within the walls of Valhalla."""
 vnum = 1217
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only"]
 description = """
 You are standing in the halls of Valhalla.  Pictures of Odin, Thor, Tyr,
 Loki, Freyr, Feyja, and Balder line the walls.  The cavernous hall extends
@@ -553,6 +571,7 @@ up there..."""
 vnum = 1218
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only"]
 description = """
 You are standing in the halls of Valhalla.  Tapestries of the gods line
 the walls.  A statue of Odin is here.  The halls continue to the east and
@@ -591,6 +610,7 @@ with black and gold veins.  It looks to be of magical origin."""
 vnum = 1219
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only"]
 description = """
 You have reached the end of the halls of Valhalla.  There are heavy doors
 on 3 walls.  They lead into the rooms of the gods.  The hall goes back to
@@ -665,6 +685,7 @@ clouds are far below you and a sense of beauty and peacefulness surrounds you.""
 vnum = 1222
 name = "Eriana's Grove"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "nowhere"]
 description = """
 You have stumbled into a peaceful, fragrant grove surrounded by deep forest,
 and carpeted in thick, lush grass. A waterfall cascades from a rock ledge to
@@ -710,6 +731,7 @@ The banner reads:
 vnum = 1223
 name = "Entrance to Hall of Knights"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "nowhere"]
 description = """
 You see here a cozy little room.
 An angel is here, checking your ID for IMM status before allowing you to pass.
@@ -727,6 +749,9 @@ To the north is a large hall, and to the south is clan road."""
 vnum = 1224
 name = "The Hall of Knights"
 sector = "inside"
+room_flags = ["indoors", "nowhere", "safe"]
+heal_rate = 400
+mana_rate = 400
 description = """
 You are in the secret hall of the Order of Eriana.  The large arched
 windows are covered with tapestries, emblazoned with the coats of arms

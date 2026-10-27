@@ -2,6 +2,7 @@
 vnum = 2048
 name = "Twisty cavern"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The way twist this way and that and its all you can do to keep your head
 from spinning.  The air is very cold here and layers of ice on the wall.
@@ -24,6 +25,7 @@ east and the main passage goes north and south."""
 vnum = 2049
 name = "Striped tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The walls of the tunnels have many brilliant colors in them from the
 various veins of crystals running in them.  An odd twinkling comes from
@@ -45,6 +47,7 @@ the east."""
 vnum = 2050
 name = "Prism cave"
 sector = "mountain"
+room_flags = ["indoors"]
 description = """
 The roof of this cave peaks over a hundred feet high making it one of
 the biggest in the catacombs.  Crystals of every color cast prismatic
@@ -85,6 +88,7 @@ fabled and feared Prism Dragon."""
 vnum = 2051
 name = "Ruined monument"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 A monument to a famous king once stood here. Not much is left to even
 signify that is was here at all.  A building of some sort can be entered
@@ -107,6 +111,7 @@ the south."""
 vnum = 2052
 name = "Basement"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 Its dark and it smells like. ...BATS down here!  All you see is a swirl
 of the darkness and lots of scratching bats madly flailing around. A set
@@ -156,6 +161,7 @@ of stairs go up into the building and a broken window leads west."""
 vnum = 2053
 name = "Fresh graves"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 The graves here seem very recent.  You notice many signs of digging and
 defilement.  There are piles of fresh bodies here awaiting burial.  A
@@ -186,6 +192,7 @@ of your neck to stand on end!"""
 vnum = 2054
 name = "Southern gate"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 A rusty gate here no longer keeps anyone out or in.  You see a lonely
 E/W passage to the south.  A little used trail winds east through a
@@ -207,6 +214,7 @@ crack in the wall."""
 vnum = 2055
 name = "Scene of ghastly horror"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 An army of undead creatures of all types are lined up patiently. Their
 leader is an evil demonoid necromancer.  His plans to use his army of
@@ -240,6 +248,7 @@ undead to take over the world seem about ready to get underway."""
 vnum = 2056
 name = "Twisty passage"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The passage bends north and east here.  To the east your not certain
 what lies ahead due to all the twists and turns you've made.  To the
@@ -257,6 +266,7 @@ north is seems cold."""
 vnum = 2057
 name = "Cross of caverns"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 A little-used cavern enters from the south. A passage twists away to
 the west.  An odd twinkling comes from the cave to the north."""
@@ -277,6 +287,7 @@ the west.  An odd twinkling comes from the cave to the north."""
 vnum = 2058
 name = "Lonely tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 Something indescribable makes you feel lonesome and sad here. Its just
 a feeling you get from this tunnel.  The tunnel east and west."""
@@ -293,6 +304,7 @@ a feeling you get from this tunnel.  The tunnel east and west."""
 vnum = 2059
 name = "Lonely tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 Something indescribable makes you feel lonesome and sad here. You see a
 gate to a burial ground to the north.  This lonesome tunnel sighs along
@@ -314,6 +326,7 @@ west and east."""
 vnum = 2060
 name = "Bend in the lonely tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 Something indescribable makes you feel lonesome and sad here. The
 tunnel bends west and south."""
@@ -330,6 +343,7 @@ tunnel bends west and south."""
 vnum = 2061
 name = "Lonely tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 Something indescribable makes you feel lonesome and sad here. The very
 walls of the tunnel seems to groan.  to the north the tunnel bends and
@@ -347,6 +361,7 @@ east is an intersection."""
 vnum = 2062
 name = "Intersection"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 To the north you enter the burial grounds.  a trail of blood leads that
 direction.  Also you feel an ominous sense of evil magic from there.
@@ -369,6 +384,7 @@ smell a hint of fresh air."""
 vnum = 2063
 name = "Tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The tunnel heads north and south.  North you see an intersection and
 far to the south you sense light and smell a fresh breeze."""
@@ -385,6 +401,7 @@ far to the south you sense light and smell a fresh breeze."""
 vnum = 2064
 name = "Tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The tunnel slopes noticeably down to the north and you sense the surface
 could be reached to the south."""
@@ -405,6 +422,7 @@ could be reached to the south."""
 vnum = 2065
 name = "Southern entrance to the catacombs"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 Through a trapdoor above you streams light.  Through a doorway to
 the north streams darkness.  A message has been scrawled upon the wall
@@ -429,6 +447,7 @@ from the catacombs."""
 vnum = 2066
 name = "Unknown passage"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 Oh dear you seem to have lost your way.  You look back from whence you
 came but there's no exit there anymore.  There are exits in other
@@ -446,6 +465,7 @@ directions but you have a feeling that you are hopelessly lost."""
 vnum = 2067
 name = "Unknown passage"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 Oh dear you seem to have lost your way.  You look back from whence you
 came but there's no exit there anymore.  There are exits in other
@@ -463,6 +483,7 @@ directions but you have a feeling that you are hopelessly lost."""
 vnum = 2068
 name = "Unknown passage"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 Oh dear you seem to have lost your way.  You look back from whence you
 came but there's no exit there anymore.  There are exits in other
@@ -480,6 +501,7 @@ directions but you have a feeling that you are hopelessly lost."""
 vnum = 2069
 name = "Unknown passage"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 Oh dear you seem to have lost your way.  You look back from whence you
 came but there's no exit there anymore.  There are exits in other
@@ -497,6 +519,7 @@ directions but you have a feeling that you are hopelessly lost."""
 vnum = 2001
 name = "North entrance to the catacombs"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 You are almost surprised to see a tunnel leading off to the south
 into utter darkness.  The floorboards above you haven't been moved
@@ -525,6 +548,7 @@ from the catacombs."""
 vnum = 2002
 name = "North/south tunnel"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This part of the catacombs looked roughly hewn and man-made. There is
 a large cross painted on the floor of the tunnel.To the south it seems
@@ -553,6 +577,7 @@ paint recently."""
 vnum = 2003
 name = "Weapon training area"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a place to keep up on there weapon skills.  Much of the
 equipment looks old and worn but upon further inspection seems quite
@@ -582,6 +607,7 @@ sturdy in fact."""
 vnum = 2004
 name = "Prayer training area"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The templar's curious mix of religion and fighting is evident here.
 A central painting depicts a cross composed of swords.  The elders
@@ -607,6 +633,7 @@ teach the ancient art of prayer to the young pages."""
 vnum = 2005
 name = "Junction of hallways"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Training facilities are evident to the west. To the south lies a hallway
 which has doors every couple of feet, looks like living quarters of some
@@ -632,6 +659,7 @@ sort.  To the east the tunnel leads back into the natural catacombs."""
 vnum = 2006
 name = "Hallway"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 The hallway takes on a more indoor look to the west.  To the east it
 looks awfully dark."""
@@ -656,6 +684,7 @@ looks awfully dark."""
 vnum = 2007
 name = "Intersection"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The tunnel continues to the north and the south, becoming less hewn and
 more natural to the south.  A passageway lined with paneling leads west."""
@@ -676,6 +705,7 @@ more natural to the south.  A passageway lined with paneling leads west."""
 vnum = 2008
 name = "Pages' sleeping quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Several bunk beds are lined up across the room.  It looks rather spartan
 and there is little evidence of toys or games.  Most of the desks are
@@ -713,6 +743,7 @@ filled with books and papers of little interest."""
 vnum = 2009
 name = "Templar Knights sleeping quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a huge room which is filled wall to wall with beds. Apparently
 all the low level knights all sleep in this one room.  A door on the
@@ -762,6 +793,7 @@ south wall is labelled "Elders only!"."""
 vnum = 2010
 name = "N/S hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway leads north an south.  A door leads to a templar's room to
 the east.  The decoration looks rather sparse here."""
@@ -786,6 +818,7 @@ the east.  The decoration looks rather sparse here."""
 vnum = 2011
 name = "A Middle-aged templar's room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a room furnished in a room becoming a low level templar scribe.
 No real amenities but better than a communal sleeping quarters. As far
@@ -799,6 +832,7 @@ as you can tell he would be a rank equivalent to a Sargeant."""
 vnum = 2012
 name = "Humid, damp tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 As the tunnel leads south it gets more humid and damp.  Moss covers the
 walls and ferns even grow in the cracks here and there.  To the north it
@@ -816,6 +850,7 @@ seems much more sterile."""
 vnum = 2013
 name = "Administration room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The elders gather here to discuss training strategies and count their
 loot.  You notice papers which look like important secret documents
@@ -844,6 +879,7 @@ trainees are kidnapped from the villages too!"""
 vnum = 2014
 name = "N/S hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway continues to become more important-looking as you wander
 south.  A room to the east looks rather more pleasant that some of the
@@ -865,6 +901,7 @@ others."""
 vnum = 2015
 name = "Mid-level leader's room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A rather nice looking room considering the drab conditions down here.
 Through all the signs of decoration you can still see evidence of water
@@ -890,6 +927,7 @@ leaks."""
 vnum = 2016
 name = "Mess hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The a huge table with an immaculate white table cloth stretches way off
 to the south.  The room is kept immaculately clean by the nights
@@ -967,6 +1005,7 @@ themselves.  They truly belive that cleanliness is next to godliness."""
 vnum = 2017
 name = "N/S hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway continues north and south.  A peculiar kind of glow seems
 to come from somewhere further along the hallway to the south. The room
@@ -988,6 +1027,7 @@ to the east looks like the lap of luxury."""
 vnum = 2018
 name = "High officer's room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 First thing you notice in this room is the pleasant aroma of cedar.  All
 the paneling in the room is made of fine cedar.  A painting of an
@@ -1019,6 +1059,7 @@ with a silvery blade."""
 vnum = 2019
 name = "Mossy intersection"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 There is a turn off to the passage here.  The main passage leads north
 and south. To the south it seems to get impossibly darker.  To the east
@@ -1045,6 +1086,7 @@ east.  The air is very humid and damp here."""
 vnum = 2020
 name = "The holy grove"
 sector = "forest"
+room_flags = ["indoors", "private"]
 description = """
 A small grove of birches grow seem to grow from solid rock.  You hear
 birds singing but try as you might you cant see any.  A strange glow
@@ -1062,6 +1104,7 @@ emanates from a place somewhere to the southeast in the grove."""
 vnum = 2021
 name = "The holy grove"
 sector = "forest"
+room_flags = ["indoors", "private"]
 description = """
 The trees seem real enough even though they take root in solid rock.
 You hear other small animals scampering through the light undergrowth
@@ -1088,6 +1131,7 @@ place passage way for some reason heads north."""
 vnum = 2022
 name = "The holy grove"
 sector = "forest"
+room_flags = ["indoors", "private"]
 description = """
 The grove continues west and south.  The glow is roughly to the south
 somewhere."""
@@ -1104,6 +1148,7 @@ somewhere."""
 vnum = 2023
 name = "Mess hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 "mess" isn't exactly the best word to describe this room.  On the
 contrary, it is immaculately clean.  A very long table stretches way off
@@ -1145,6 +1190,7 @@ to the north. A hallway is to the east."""
 vnum = 2024
 name = "End of a hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You hear voices coming from a room to the west.  the hallway goes north.
 To the east lies a room which seems to glow with power and piety."""
@@ -1165,6 +1211,7 @@ To the east lies a room which seems to glow with power and piety."""
 vnum = 2025
 name = "Grand Templar's room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 All the items in this room look ancient yet strangely very powerful and
 rich.  There is an aura of great holiness about the room."""
@@ -1193,6 +1240,7 @@ rich.  There is an aura of great holiness about the room."""
 vnum = 2026
 name = "Very dark passage"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 This room is so dark that even powerful magic lights seems to barely
 illuminate the ground in front of you.  If its possible it seems even
@@ -1218,6 +1266,7 @@ darker to the south.  The passage also leads back north."""
 vnum = 2027
 name = "The holy grove"
 sector = "forest"
+room_flags = ["indoors", "private"]
 description = """
 The grove continues north and east.  To the east a strange humming can
 barely be heard."""
@@ -1234,6 +1283,7 @@ barely be heard."""
 vnum = 2028
 name = "The holy grove"
 sector = "forest"
+room_flags = ["indoors", "private"]
 description = """
 All of a sudden all the mysterious sounds of the grove stop. Or perhaps
 its just the strange humming and glowing from a clearing to the south
@@ -1262,6 +1312,7 @@ to the south."""
 vnum = 2029
 name = "Very dark caveway"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 This room is so very dark that no one is quite sure whats in it, so
 there's nothing really to describe except maybe the powerful sense of
@@ -1280,6 +1331,7 @@ west."""
 vnum = 2030
 name = "Deep within the catacombs"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 It stinks like a lair in here.  A rotten smell of humanoid flesh
 lingers.  You stumble over what you think are corpses in the utter
@@ -1318,6 +1370,7 @@ everywhere in the room. . .."""
 vnum = 2031
 name = "Very dark cavern"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The cavern is hard to describe due to the extreme magical darkness.
 Probing with a light source seems to reveal nothing but more darkness."""
@@ -1334,6 +1387,7 @@ Probing with a light source seems to reveal nothing but more darkness."""
 vnum = 2032
 name = "The holy place"
 sector = "forest"
+room_flags = ["indoors", "private"]
 description = """
 A glowing stone lies in the center of the clearing.  You recognize it as
 the stone of the Excalibur.  The strange humming glowing makes it
@@ -1354,6 +1408,7 @@ closer look if possible."""
 vnum = 2033
 name = "Misty passageway"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 Warm mist swirl about you making you feel threatened as well as
 protected at the same time.  The swirling mist makes it tough to tell
@@ -1384,6 +1439,7 @@ The mist gets denser to the south."""
 vnum = 2034
 name = "Intersection of caverns"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 Caverns head north, south and east from this peculiar spot. Medium
 sized caverns from the east and the north join to form a huge cavern
@@ -1406,6 +1462,7 @@ of many shiny crystals."""
 vnum = 2035
 name = "Entrance to the burial grounds"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered what appears to be a burial ground of sorts. The
 templars buried their dead here.  Chills go down your spine as you feel
@@ -1432,6 +1489,7 @@ of a wraith, and the dry clanking of bones."""
 vnum = 2036
 name = "The burial grounds"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 Random tombs to unknown warriors were lain in rows as far as the eye
 can see.  To your horror many of the graves are empty and desecrated.
@@ -1466,6 +1524,7 @@ east and west."""
 vnum = 2037
 name = "The burial grounds"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 It seems as if many of the warriors could not stop fighting even in
 death.  They fight amongst each other and flail at any living being
@@ -1495,6 +1554,7 @@ that would wander near."""
 vnum = 2038
 name = "The burial grounds"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 Legions of skeletal warriors wander by and battle the enemy even in
 death.  Old battlelines have been forgotten and new ones made. Its a
@@ -1516,6 +1576,7 @@ gruesome scene."""
 vnum = 2039
 name = "New graves"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The tombs in this section seem somewhat more recent.  Rotting zombie
 warriors groan and wail with blank stares.  You hear sounds of digging
@@ -1541,6 +1602,7 @@ off a bit to the south."""
 vnum = 2040
 name = "Misty cavern"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 A chilling icy mist swirl about you.  The dampness and warmth has become
 bitter cold.  The walls of the cavern are several feet thick with ice
@@ -1578,6 +1640,7 @@ here.  An icy wind blows from the south."""
 vnum = 2041
 name = "Misty cavern"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The temperature is a pleasant and mild here.  This is due to a warm wind
 blowing in from the east and a chilly breeze blowing in from the west.
@@ -1612,6 +1675,7 @@ walls."""
 vnum = 2042
 name = "Mist cavern"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 A warm wind blows in from the east.  The air is still stifling hot in
 here despite the breeze.  The mist seems thick enough to be alive. . ."""
@@ -1640,6 +1704,7 @@ here despite the breeze.  The mist seems thick enough to be alive. . ."""
 vnum = 2043
 name = "Waterfall of mist"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 River of hot mist pour down in a cascade from a hole in the cavern.  It
 falls like water down from the heights like a waterfall and creates
@@ -1682,6 +1747,7 @@ The hole is much too high up for you to reach."""
 vnum = 2044
 name = "Huge multicolored tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The tunnel leads north and south.  To the south there is an odd
 twinkling phenomenon."""
@@ -1698,6 +1764,7 @@ twinkling phenomenon."""
 vnum = 2045
 name = "Desolate ruins"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 Several mausoleums used to grace the way here but these have been
 defiled. And most have been torn down and burned by looters. Some still
@@ -1712,6 +1779,7 @@ tombs of soldiers, now a battleground for the undead."""
 vnum = 2046
 name = "Curators place"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 The undertaker, the historian and the curator used to be here. Now they
 too have joined the legions of the undead.  From the looks of the place
@@ -1735,6 +1803,7 @@ Surprisingly the stairs look sturdy enough."""
 vnum = 2047
 name = "Fresh graves"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 Graves of recent casualties lie here.  Even the most recent don't seem to
 have been left undisturbed.  You hear sounds of digging in progress

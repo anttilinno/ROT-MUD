@@ -99,6 +99,7 @@ to the west and a small room lies to the south."""
 vnum = 5554
 name = "The future training room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This is the future site of a training room.  The only exit is north
 leading to the small alley."""
@@ -111,6 +112,7 @@ leading to the small alley."""
 vnum = 5555
 name = "Luxan's mixed shop"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are standing in a small shop, filled with all kinds of goods.
 Here you might be able to find just the thing you're looking for.
@@ -136,6 +138,7 @@ The only exit is east to village square."""
 vnum = 5556
 name = "The Local Inn"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in the local inn, where the peaceful citizens of Ofcol
 gather to have a drink or 5 if they have dry throats.
@@ -167,6 +170,7 @@ The only exit is south to the village square."""
 vnum = 5577
 name = "Ravan's hideout"
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 This place is a small, cosy place where no one disturbs you all
 the time. The room has little decoration except for some pictures

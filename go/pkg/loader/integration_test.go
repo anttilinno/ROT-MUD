@@ -188,6 +188,24 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Error("the Great Red Dragon must be attackable")
 		}
 
+		// Room flags restored from ROT: the altar is safe, mud school is
+		// newbies-only, and some rooms block recall
+		if r := world.GetRoom(3054); r == nil || !r.Flags.Has(types.RoomSafe) {
+			t.Error("expected the temple altar (3054) to be safe")
+		}
+		if r := world.GetRoom(3701); r == nil || !r.Flags.Has(types.RoomNewbiesOnly) {
+			t.Error("expected mud school (3701) to be newbies-only")
+		}
+		noRecall := 0
+		for _, r := range world.Rooms {
+			if r.Flags.Has(types.RoomNoRecall) {
+				noRecall++
+			}
+		}
+		if noRecall < 100 {
+			t.Errorf("expected 100+ no_recall rooms, got %d", noRecall)
+		}
+
 		// Weapons carry their class and damage type (restored from ROT area files)
 		dagger := world.GetObjTemplate(3701)
 		if dagger == nil || dagger.Weapon == nil {

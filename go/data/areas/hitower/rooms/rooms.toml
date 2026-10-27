@@ -2,6 +2,7 @@
 vnum = 1300
 name = "Entrance to the Shadow Grove"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 Before you, the grove of shadows lies. Giant grey trees are all that
 can be seen through the thick shadows. A great sense of both power and
@@ -21,6 +22,7 @@ back and go back the way you've come.
 vnum = 1301
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -47,6 +49,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1302
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -77,6 +80,7 @@ sounds moaning and growling come from all directions.
 vnum = 1303
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem the glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -103,6 +107,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1304
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -133,6 +138,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1305
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -159,6 +165,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1306
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -189,6 +196,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1307
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -219,6 +227,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1308
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -249,6 +258,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1309
 name = "The Shadow Grove"
 sector = "forest"
+room_flags = ["dark", "no_recall"]
 description = """
 You are inside the shadow grove. Giant trees seem to glare at you
 from all sides. The shadowy mist obscures most of your vision. Strange
@@ -275,6 +285,7 @@ sounds of moaning and growling come from all directions.
 vnum = 1311
 name = "A small clearing"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You are in a small clearing in the shadow grove. There is charred grass
 underfoot, and the signs of fire here and there. It is almost as if the
@@ -303,6 +314,7 @@ shrouded in shadowy mist."""
 vnum = 1312
 name = "Entrance to the High Tower"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have reached the entrance to the high tower of sorcery. The
 tower looms above you at an incredible height. It seems to disappear
@@ -322,6 +334,7 @@ back south has disappeared behind you."""
 vnum = 1313
 name = "Inside the High Tower of Sorcery"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside the high tower of sorcery. The sight is truly amazing.
 From here, it is obvious that somehow, the tower is much larger on the
@@ -354,6 +367,7 @@ a plain hallway and back south through the gate."""
 vnum = 1314
 name = "Common Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the common room. There are many apprentice warlocks here
 talking and resting, playing games, comparing notes. Obviously they
@@ -390,6 +404,7 @@ unremarkable.
 vnum = 1315
 name = "The Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway, it seems rather unremarkable.
   The hallway continues east and back west."""
@@ -410,6 +425,7 @@ You are in a long hallway, it seems rather unremarkable.
 vnum = 1316
 name = "Dining Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the dining area of the student mages. From the number of
 tables and chairs here, you can see that this room could easily seat
@@ -433,6 +449,7 @@ several hundred people. It is oddly deserted here, obviously not meal time.
 vnum = 1317
 name = "Dark Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark hallway. It is apparent that this area is seldom
 used by the regular occupants of the tower. Dust covers the floors
@@ -452,6 +469,7 @@ here.
 vnum = 1318
 name = "Mages Tavern"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in mages tavern. The air is smokey and filled with the smells
 of foreign food and drink. The other patrons pay you little heed, as
@@ -483,6 +501,7 @@ bartender is here waiting to take your order.
 vnum = 1319
 name = "The Magic Shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the High Tower's store of magic. Tatorious stands behind
 the counter, selling all sorts of herbs, parchment and other reagents
@@ -505,6 +524,7 @@ used in magical studies.
 vnum = 1320
 name = "the kitchen"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small kitchen. All the usual kitchen type utensils and
 equipment is here, including some not so usual ones. Among the later,
@@ -542,6 +562,7 @@ the room, hanging in mid-air is a spice rack."""
 vnum = 1321
 name = "Below the trapdoor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are below the trapdoor. It is very dark and dusty here, very little
 light filters through from above. A faint sound of dripping water can be
@@ -561,6 +582,7 @@ heard in the distance below.
 vnum = 1322
 name = "A damp intersection"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a damp intersection of what seems to be the basement of the
 tower. The sound of running water can be heard coming from the south,
@@ -591,6 +613,7 @@ other than that, an almost tangible stillness fills the air.
 vnum = 1323
 name = "A dark passage"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the end of a dark passage which ends in a stout wooden door.
 Other then through the door, the only apparent exit is back the way you
@@ -610,6 +633,7 @@ came."""
 vnum = 1324
 name = "A dark passage"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the end of a dark passage. A half opened door is to the east,
 shedding soft light around the edges. Faint snoring sounds can be heard
@@ -629,6 +653,7 @@ behind the door.
 vnum = 1325
 name = "The stagnant pool"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the edge of a stagnant pool of water. The smell here is quite
 nauseating. This is apparently where the denizens of the tower dispose of
@@ -649,6 +674,7 @@ pool."""
 vnum = 1326
 name = "A dark passage"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark passage, which comes to an abrupt stop at what appears
 to be a cave-in to the west. It is certainly unpassable, and perhaps quite
@@ -663,6 +689,7 @@ dangerous just being this close.
 vnum = 1327
 name = "A dark cell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark cell. Straw and dirt cover the floors here, it is
 very dark. Someone, or something seems to be chained to the far wall.
@@ -685,6 +712,7 @@ very dark. Someone, or something seems to be chained to the far wall.
 vnum = 1328
 name = "The Jailor's office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Jailor's office. It is rather messy here. Judging by the
 sleeping form of the Jailor on duty, you can surmise that very few, if any
@@ -708,6 +736,7 @@ prisoners survive long enough to spend much time in these dank dungeons.
 vnum = 1329
 name = "Below the stagnant pool"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 As you dive beneath the putrid waters, you feel a strong tug and a whirlpool
 drags you under.  You are sucked into blackness.  You feel your lungs burst
@@ -718,6 +747,7 @@ direction ... and are sucked under by a rip tide."""
 vnum = 1330
 name = "The hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -744,6 +774,7 @@ magical glow which provides enough light to see by."""
 vnum = 1331
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the hallway. The walls emit a faint magical glow
 which provides enough light to see by."""
@@ -771,6 +802,7 @@ which provides enough light to see by."""
 vnum = 1332
 name = "A store room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small store room. Assorted junk is piled on shelves or
 leaning against walls.
@@ -785,6 +817,7 @@ leaning against walls.
 vnum = 1333
 name = "A broom closet"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark broom closet. Many straw brooms and other cleaning
 instruments have been left here, apparently unused (perhaps the maid quit?).
@@ -815,6 +848,7 @@ instruments have been left here, apparently unused (perhaps the maid quit?).
 vnum = 1334
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a
 faint magical glow which provides enough light to see by."""
@@ -842,6 +876,7 @@ The walls shed a warm light"""
 vnum = 1335
 name = "Guardians chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the chamber of the tower guardians. It is rather sparsely
 furnished, but then again the odd occupants don't look to need furniture.
@@ -876,6 +911,7 @@ Here and there a disembodied pair of hands or eyes flits about."""
 vnum = 1336
 name = "A guest bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small guest bedroom. A small cot is in one corner, and a
 dusty mirror on one wall, other than that the room looks quite bare, and
@@ -896,6 +932,7 @@ Why, someone seems to be looking back at you from the other side!"""
 vnum = 1337
 name = "A guest bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a comfortable looking bedroom. A small globe of magical energy
 floats overhead, providing light. A small cot is in one corner looking
@@ -915,6 +952,7 @@ ever so comfortable, so comfortable in fact ...someone is sleeping in it.
 vnum = 1338
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading from the south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -937,6 +975,7 @@ magical glow which provides enough light to see by.
 vnum = 1339
 name = "The burnt room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in what looks to have once been a guest bed room. The walls are
 blackened and burnt by what you could only imagine to be magical fire.
@@ -952,6 +991,7 @@ There is no sign of the previous occupant, undoubtedly he left in a hurry.
 vnum = 1340
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading west from here. The walls emit a faint
 magical glow which provides enough light to see by. Some faint moonlight
@@ -983,6 +1023,7 @@ can be seen in the culdesac to the east.
 vnum = 1341
 name = "A culdesac"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small culdesac. A window to the east is letting in moonlight
 and a pleasant breeze. Through it, the surrounding country side can be seen.
@@ -1003,6 +1044,7 @@ to the northeast marks what is probably the city of midgaard."""
 vnum = 1342
 name = "The Apprentice's Barracks"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the barracks of the apprentice magic users. Here and there, a
 young apprentice sits engrossed in magical study, or practicing a feeble
@@ -1033,6 +1075,7 @@ cantrip. Cots line the walls, and the room continues west."""
 vnum = 1343
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1055,6 +1098,7 @@ magical glow which provides enough light to see by.
 vnum = 1344
 name = "The Apprentice's barracks"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the barracks of the apprentice magic users. Here and there, a
 young apprentice sits engrossed in magical study, or practicing a feeble
@@ -1085,6 +1129,7 @@ cantrip. Cots line the walls, and the room continues east."""
 vnum = 1345
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by. Flashes of light can
@@ -1123,6 +1168,7 @@ be seen under the doorway to the north."""
 vnum = 1346
 name = "The apprentice's workshop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small workshop. Writing implements and parchment are strewn
 about on a few worktables. In the far corner several young mages have a
@@ -1138,6 +1184,7 @@ small kitten cornered and seem to be testing spells upon it.
 vnum = 1347
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the hallway. The walls emit a faint magical glow
 which provides enough light to see by.
@@ -1155,6 +1202,7 @@ which provides enough light to see by.
 vnum = 1348
 name = "The hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1177,6 +1225,7 @@ magical glow which provides enough light to see by.
 vnum = 1349
 name = "A classroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large classroom filled with bored looking students of the
 art. The instructor stops in his lecture on the fine uses of magic missile
@@ -1212,6 +1261,7 @@ at your entry and lunges to attack you.
 vnum = 1350
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -1233,6 +1283,7 @@ magical glow which provides enough light to see by."""
 vnum = 1351
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -1254,6 +1305,7 @@ magical glow which provides enough light to see by."""
 vnum = 1352
 name = "An empty classroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in an empty classroom. Some strange sigils are written on a
 blackboard which is floating in the air here. Other than a few desks,
@@ -1269,6 +1321,7 @@ it is bare of furnishings.
 vnum = 1353
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the hallway. The walls emit a faint magical glow
 which provides enough light to see by.
@@ -1286,6 +1339,7 @@ which provides enough light to see by.
 vnum = 1354
 name = "An empty classroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in an apparently empty classroom. A strange feeling of being
 watched comes over you, and you hear the faint rustle of robes.
@@ -1320,6 +1374,7 @@ watched comes over you, and you hear the faint rustle of robes.
 vnum = 1355
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1342,6 +1397,7 @@ magical glow which provides enough light to see by.
 vnum = 1356
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1364,6 +1420,7 @@ magical glow which provides enough light to see by.
 vnum = 1357
 name = "The Amphitheater"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small amphitheater. Rows of comfortable looking chairs circle
 a large podium. The echos of your footsteps seem very loud here.
@@ -1394,6 +1451,7 @@ a large podium. The echos of your footsteps seem very loud here.
 vnum = 1358
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow providing enough light to see by.
@@ -1416,6 +1474,7 @@ magical glow providing enough light to see by.
 vnum = 1359
 name = "The training room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large training room. It is filled with battle scared manikins
 , and many other devices used in the practice of fighting."""
@@ -1461,6 +1520,7 @@ You are in a large training room. It is filled with battle scared manikins
 vnum = 1360
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the hallway. The walls emit a faint magical glow
 which provides enough light to see by.
@@ -1478,6 +1538,7 @@ which provides enough light to see by.
 vnum = 1361
 name = "A dueling room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large room used for duals arcane. The walls, ceiling and
 floor all bare the scars of many fiery spells, but still look quite strong
@@ -1493,6 +1554,7 @@ and hold fast.
 vnum = 1362
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1515,6 +1577,7 @@ magical glow which provides enough light to see by.
 vnum = 1363
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1537,6 +1600,7 @@ magical glow which provides enough light to see by.
 vnum = 1364
 name = "The spellmaster's lounge"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large comfortable looking lounge. Off duty spell teachers
 are here relaxing in their idle time. A large coffee machine is against
@@ -1556,6 +1620,7 @@ the far wall.
 vnum = 1365
 name = "A bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large, plush bedroom. The owner is obviously someone of high
 standing in the magical community here. An ice mirror is on one wall, and
@@ -1576,6 +1641,7 @@ can be seen floating about a meter above the floor.
 vnum = 1366
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow providing enough light to see by.
@@ -1598,6 +1664,7 @@ magical glow providing enough light to see by.
 vnum = 1367
 name = "The study"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small, well kept study. Ancient tomes are on shelves on the
 walls, A huge table sits in the middle of the room, with maps weighted
@@ -1618,6 +1685,7 @@ magical oil lamp.
 vnum = 1368
 name = "Below the stairs"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the end of a long hallway. The walls emit a faint magical glow
 which provides enough light to see by. A lesser guardian is here keeping
@@ -1644,6 +1712,7 @@ silent watch on the entrance to the levels above.
 vnum = 1369
 name = "Atop the stairway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are atop a stairway. The halls here look quite a bit less used than
 those below. Obviously access to these magic filled corridors is limited
@@ -1663,6 +1732,7 @@ magical aura which provides some light.
 vnum = 1370
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway stretching east and west. The walls here emit
 a faint magical energy providing enough light to see by.
@@ -1685,6 +1755,7 @@ a faint magical energy providing enough light to see by.
 vnum = 1371
 name = "A small office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small office. It looks like a calligrapher's study, there
 are quills, inkpots and parchments all about on desks and worktables.
@@ -1713,6 +1784,7 @@ candle can be seen through the curtain."""
 vnum = 1372
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -1729,6 +1801,7 @@ magical glow which provides enough light to see by."""
 vnum = 1373
 name = "The master scribe's workshop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the workshop of the tower's master scribe. Many half finished
 scrolls lay on the writing table in the center of the room. A giant candle
@@ -1768,6 +1841,7 @@ flickering with soft blue flames provides the only light here.
 vnum = 1374
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1790,6 +1864,7 @@ magical glow which provides enough light to see by.
 vnum = 1375
 name = "A store room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small dark store room. A few common items are stacked upon
 the shelves here, but very little looks interesting."""
@@ -1807,6 +1882,7 @@ the shelves here, but very little looks interesting."""
 vnum = 1376
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the long hallway. The walls emit a faint magical
 glow which provides enough light to see by.
@@ -1824,6 +1900,7 @@ glow which provides enough light to see by.
 vnum = 1377
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1846,6 +1923,7 @@ magical glow which provides enough light to see by.
 vnum = 1378
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -1868,6 +1946,7 @@ magical glow which provides enough light to see by.
 vnum = 1379
 name = "A store room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large store room. Bins of ores, minerals and other rare
 materials are here along with many neatly stacked piles of precious metals.
@@ -1903,6 +1982,7 @@ A large cabinet with sigils of warding is bolted to one wall.
 vnum = 1380
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -1919,6 +1999,7 @@ magical glow which provides enough light to see by."""
 vnum = 1381
 name = "A very hot room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a very hot room. Against one wall is a large forge, magical
 fires crackle within and heavy blue smoke pours into a vent in the ceiling.
@@ -1954,6 +2035,7 @@ meters in the air of its own force."""
 vnum = 1382
 name = "The master Enchanter's chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered the master enchanter's chamber. Upon all the walls here
 are racks of finely crafted weapons. A huge chest with a glowing lock is
@@ -1989,6 +2071,7 @@ table."""
 vnum = 1383
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in a long hallway. The walls emit a faint magical glow
 which provides enough light to see by.
@@ -2006,6 +2089,7 @@ which provides enough light to see by.
 vnum = 1384
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2028,6 +2112,7 @@ magical glow which provides enough light to see by.
 vnum = 1385
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2044,6 +2129,7 @@ magical glow which provides enough light to see by."""
 vnum = 1386
 name = "A laboratory"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small laboratory. Many strange instruments, vials, bottles
 and some scrawled notes are piled about a workbench. This room is very
@@ -2063,6 +2149,7 @@ untidy, looking almost abandoned, or used by a madman.
 vnum = 1387
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2085,6 +2172,7 @@ magical glow which provides enough light to see by.
 vnum = 1388
 name = "The Mad Alchemist's workroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the workroom of The Mad Alchemist. Bubbling braziers, long
 glass tubes and scores of oddly shaped vials and bottles are everywhere.
@@ -2107,6 +2195,7 @@ It is incredibly messy here, crushed glass and other trash litter the floor.
 vnum = 1389
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in a long hallway. The walls emit a faint magical glow
 which provides enough light to see by.
@@ -2124,6 +2213,7 @@ which provides enough light to see by.
 vnum = 1390
 name = "The pentagram chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large room with a five pointed star etched into the floor.
 A crackling energy field can be seen to the south, it looks quite dangerous."""
@@ -2149,6 +2239,7 @@ A crackling energy field can be seen to the south, it looks quite dangerous."""
 vnum = 1391
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2171,6 +2262,7 @@ magical glow which provides enough light to see by.
 vnum = 1392
 name = "Inside the Energy Field"
 sector = "inside"
+room_flags = ["indoors", "no_recall"]
 description = """
 You feel a stomach twisting sensation as you enter the energy field.
 Nice going!  You might as well wait here until the wizard who built this
@@ -2200,6 +2292,7 @@ trap comes back to imprison your soul as well as your body."""
 vnum = 1393
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2222,6 +2315,7 @@ magical glow which provides enough light to see by.
 vnum = 1394
 name = "An empty room"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are in an empty room. It is both quiet and comfortable here, it looks
 like a safe place to rest."""
@@ -2235,6 +2329,7 @@ like a safe place to rest."""
 vnum = 1395
 name = "The charm master's chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the chambers of the tower's master of charm. Some straw and
 dirt litters the floor here, it looks to have been recently used by wild
@@ -2267,6 +2362,7 @@ animals.
 vnum = 1396
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2283,6 +2379,7 @@ magical glow which provides enough light to see by."""
 vnum = 1397
 name = "The animal pens"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the animal pens. Many caged animals are here looking unhappy.
 Obviously they are destined to be enslaved, or used in some cruel magical
@@ -2297,6 +2394,7 @@ experimentation."""
 vnum = 1398
 name = "The end of the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the end of a long north-south hallway. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2322,6 +2420,7 @@ magical glow which provides enough light to see by.
 vnum = 1399
 name = "Atop the stairway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are atop the stairway to the upper levels of the high tower. The walls
 emit a faint magical glow which provides enough light to see by.
@@ -2339,6 +2438,7 @@ emit a faint magical glow which provides enough light to see by.
 vnum = 1400
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2365,6 +2465,7 @@ magical glow which provides enough light to see by.
 vnum = 1401
 name = "A store room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large store room. Raw materials are neatly bundled and piled
 here and here. Many freshly cut staves rods and wands of different sizes
@@ -2389,6 +2490,7 @@ are here.
 vnum = 1402
 name = "The master spellbinder's chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the chambers of the master spell binder. Unlike other work
 shops of similar nature, this one is without furnishings or tools. The
@@ -2421,6 +2523,7 @@ spell binder obviously needs none for the working of his art.
 vnum = 1403
 name = "The spellbinder's cache"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have discovered the cache of the master spell binder. There are two
 very large silver chased cabinets here, other than that, the room is bare.
@@ -2448,6 +2551,7 @@ very large silver chased cabinets here, other than that, the room is bare.
 vnum = 1404
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2464,6 +2568,7 @@ magical glow which provides enough light to see by."""
 vnum = 1405
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2486,6 +2591,7 @@ magical glow which provides enough light to see by.
 vnum = 1406
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the long hallway. The walls emit a faint magical
 glow which provides enough light to see by.
@@ -2503,6 +2609,7 @@ glow which provides enough light to see by.
 vnum = 1407
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2519,6 +2626,7 @@ magical glow which provides enough light to see by."""
 vnum = 1408
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2541,6 +2649,7 @@ magical glow which provides enough light to see by.
 vnum = 1409
 name = "The golem master's workshop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the golem master's workshop. A few unfinished looking humanoid
 forms of different make are here, some moving, some not. The animated forms
@@ -2584,6 +2693,7 @@ lunge to attack you."""
 vnum = 1410
 name = "A store room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small store room. Large chunks of clay, stone, wood and many
 other raw materials are here."""
@@ -2596,6 +2706,7 @@ other raw materials are here."""
 vnum = 1411
 name = "The golem chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the golem chamber. Golems made of every imaginable material
 are here, ranging in size from a hand-span to nearly the ceiling. They all
@@ -2625,6 +2736,7 @@ seem to be sleeping."""
 vnum = 1412
 name = "It is very dark here..."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "It is very dark here..."
 
   [[rooms.exits]]
@@ -2641,6 +2753,7 @@ description = "It is very dark here..."
 vnum = 1413
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2657,6 +2770,7 @@ magical glow which provides enough light to see by."""
 vnum = 1414
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the long hallway. The walls emit a faint magical
 glow which provides enough light to see by.
@@ -2674,6 +2788,7 @@ glow which provides enough light to see by.
 vnum = 1415
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2690,6 +2805,7 @@ magical glow which provides enough light to see by."""
 vnum = 1416
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2712,6 +2828,7 @@ magical glow which provides enough light to see by.
 vnum = 1417
 name = "The master of illusion's chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the chamber of the master of illusions. The walls here are
 ever-changing in color and texture, as if they were reforming before your
@@ -2739,6 +2856,7 @@ at least they seem to be treasures..."""
 vnum = 1418
 name = "A bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the bedroom of the master of illusions. Strange looking items
 and artifacts float here and there in the air. The ripples of strong magic
@@ -2753,6 +2871,7 @@ can be felt everywhere.
 vnum = 1419
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading east and west. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2775,6 +2894,7 @@ magical glow which provides enough light to see by.
 vnum = 1420
 name = "The meditation chamber"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "private"]
 description = """
 You are in a meditation chamber. It is very silent here, in fact you
 can not even hear your own footsteps.
@@ -2789,6 +2909,7 @@ can not even hear your own footsteps.
 vnum = 1421
 name = "A bend in the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the long hallway. The walls emit a faint magical
 glow which provides enough light to see by.
@@ -2806,6 +2927,7 @@ glow which provides enough light to see by.
 vnum = 1422
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by.
@@ -2828,6 +2950,7 @@ magical glow which provides enough light to see by.
 vnum = 1423
 name = "A dark room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large dark room. The air here seems quite stale, and a sense
 of extreme dread comes over you. The stench of rotten flesh seems to be
@@ -2846,6 +2969,7 @@ wafting in from the open doorway to the north."""
 vnum = 1424
 name = "A dark room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large dark room. The stench here makes you gag and wretch.
 There are body parts and half rotted corpses strewn about with complete
@@ -2865,6 +2989,7 @@ you've ever seen alive are here.
 vnum = 1425
 name = "The Necromancer's Lair"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the lair of the evil Necromancer. Undead minions of all types,
 human and otherwise stand here waiting to do their master's bidding. Some
@@ -2907,6 +3032,7 @@ protect the evil master from his own ungodly creations."""
 vnum = 1426
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2923,6 +3049,7 @@ magical glow which provides enough light to see by."""
 vnum = 1427
 name = "A hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long hallway leading north and south. The walls emit a faint
 magical glow which provides enough light to see by."""
@@ -2939,6 +3066,7 @@ magical glow which provides enough light to see by."""
 vnum = 1428
 name = "The end of the hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the end of a long hallway. The walls here glow with a faint
 magical energy which provides plenty of light.
@@ -2964,6 +3092,7 @@ magical energy which provides plenty of light.
 vnum = 1429
 name = "A corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the east end of a long corridor. Obsidian walls engraved with
 ancient runes of power stretch out before you. Magical energies seem to
@@ -2982,6 +3111,7 @@ as if the corridor it self were alive."""
 vnum = 1430
 name = "A corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long corridor. Obsidian walls engraved with ancient runes
 of power stretch out before you. Magical energies seem to crackle with
@@ -3004,6 +3134,7 @@ corridor itself were alive."""
 vnum = 1431
 name = "A bend in the corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at a bend in the long corridor. Obsidian walls engraved with
 ancient runes of power stretch out before you. Magical energies seem to
@@ -3022,6 +3153,7 @@ as if the corridor itself were alive."""
 vnum = 1432
 name = "A corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long corridor leading north and south. Obsidian walls
 engraved with ancient runes of power stretch out before you. Magical
@@ -3040,6 +3172,7 @@ long forgotten, almost as if the corridor itself were alive."""
 vnum = 1433
 name = "An intersection"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at an intersection in the corridor. The obsidian walled halls
 lead off in every direction from here, pulsing with the power of their
@@ -3069,6 +3202,7 @@ ancient runes."""
 vnum = 1434
 name = "A corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the end of a long corridor. Obsidian walls engraved with
 ancient runes of power stretch out before you. A darkened door is to the
@@ -3088,6 +3222,7 @@ from under the door."""
 vnum = 1435
 name = "The scrying chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the scrying chamber of the high tower of sorcerery. It is here
 that arcane rituals are performed to enable those of the art to look in
@@ -3122,6 +3257,7 @@ mirrors."""
 vnum = 1436
 name = "A corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have reached an end in the long corridor. Obsidian walls engraved
 with ancient runes of power stretch out before you. The sound of snoring
@@ -3140,6 +3276,7 @@ can barely be heard through the door to the west."""
 vnum = 1437
 name = "The entrance to the library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the entrance to the great library of magic. A giant desk is
 here, covered with books parchments and scrolls. Long shelves loaded with
@@ -3170,6 +3307,7 @@ see."""
 vnum = 1438
 name = "In the library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the great library of magic. A strong musty smell permeates the
 entire area. Upon shelves which float just out of reach are hundreds of
@@ -3197,6 +3335,7 @@ books seem to wink in and out of existence before your untrained eyes.
 vnum = 1439
 name = "In the library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the great library of magic. A strong musty smell permeates the
 entire area. Upon shelves which float just out of reach are hundreds of
@@ -3224,6 +3363,7 @@ books seem to wink in and out of existence before your untrained eyes.
 vnum = 1440
 name = "In the library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the great library of magic. A strong musty smell permeates the
 entire area. Upon shelves which float just out of reach are hundreds of
@@ -3251,6 +3391,7 @@ books seem to wink in and out of existence before your untrained eyes.
 vnum = 1441
 name = "In the library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the great library of magic. A strong musty smell permeates the
 entire area. Upon shelves which float just out of reach are hundreds of
@@ -3278,6 +3419,7 @@ books seem to wink in and out of existence before your untrained eyes.
 vnum = 1442
 name = "In the library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the great library of magic. A strong musty smell permeates the
 entire area. Upon shelves which float just out of reach are hundreds of
@@ -3305,6 +3447,7 @@ books seem to wink in and out of existence before your untrained eyes.
 vnum = 1443
 name = "In the library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the great library of magic. A strong musty smell permeates the
 entire area. Upon shelves which float just out of reach are hundreds of
@@ -3324,6 +3467,7 @@ books seem to wink in and out of existence before your untrained eyes.
 vnum = 1444
 name = "Between the shelves"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the great library of magic. The shelves seem uncomfortably
 close here, you can barely maneuver between them. The musty smell is still
@@ -3342,6 +3486,7 @@ strong, and the elusive books still hover just out of reach.
 vnum = 1445
 name = "The reading room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small room completely devoid of furnishings. The only thing
 here is an enormous tome, lying face open on the floor. The great book looks
@@ -3362,6 +3507,7 @@ the pages."""
 vnum = 1446
 name = "A corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long corridor leading north and south. Obsidian walls
 engraved with ancient runes of power stretch out before you. Magical
@@ -3380,6 +3526,7 @@ long forgotten, almost as if the corridor itself were alive."""
 vnum = 1447
 name = "The end of the corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the end of a long corridor. The obsidian walls come to an
 abrupt halt at the edge of a golden archway here. The hum of power is so
@@ -3398,6 +3545,7 @@ strong it nearly numbs your body.
 vnum = 1448
 name = "The arched entrance"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You feel a slight tingle as you pass through the archway, as if the living
 magical energies here had infused your body, found it wanting and left. The
@@ -3416,6 +3564,7 @@ you can barely make out a stairway leading up."""
 vnum = 1449
 name = "The landing"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are on a small landing in the middle of a long stairway leading up.
 Your senses seem dulled here, no sound or smell can be detected at all, and
@@ -3437,6 +3586,7 @@ the only thing you can see in any direction is endless stairway."""
 vnum = 1450
 name = "An intersection"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at an intersection of several hallways. You feel as if strange
 mystical forces are pushing and pulling at each other from all around you.
@@ -3470,6 +3620,7 @@ unrecognizable is to the north."""
 vnum = 1451
 name = "A grey tiled hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a grey tiled hallway leading north and south. Dim balls of
 energy float here and there shedding a warm light, and showing the way.
@@ -3487,6 +3638,7 @@ A feeling of peace and balance comes over you."""
 vnum = 1452
 name = "A grey tiled hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a grey tiled hallway leading north and south. Dim balls of
 energy float here and there shedding a warm light, and showing the way.
@@ -3506,6 +3658,7 @@ A feeling of peace and balance comes over you.
 vnum = 1453
 name = "The antechamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the antechamber of the master magician of the grey light. A
 feeling of strong magic floats in the air about you, almost as if you could
@@ -3538,6 +3691,7 @@ to the south."""
 vnum = 1454
 name = "The main chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A feeling of tranquility comes over you as you enter the main chamber of
 neutrality. Some artifacts are hung on the walls here, or set on stands.
@@ -3584,6 +3738,7 @@ master of neutrality holds audience."""
 vnum = 1455
 name = "The study"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large study. Shelves filled with many books or arcane
 knowledge are on every wall. A large oaken desk is in the center, with
@@ -3599,6 +3754,7 @@ the scales are no doubt a sign of the master's neutrality."""
 vnum = 1456
 name = "A closet"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small closet. It is filled with many cloaks, and some other
 apparel."""
@@ -3611,6 +3767,7 @@ apparel."""
 vnum = 1457
 name = "A bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the bedroom of the master magician of neutrality. Curtained
 windows can be seen on the south wall. A large comfortable looking bed
@@ -3624,6 +3781,7 @@ takes up most of the room."""
 vnum = 1458
 name = "A dark hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long dark hallway leading east and west. Not much can be
 seen in the unnatural darkness here, but you get a deep sense of dread
@@ -3641,6 +3799,7 @@ the further you go."""
 vnum = 1459
 name = "A dark hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long dark hallway leading east and west. Not much can be
 seen in the unnatural darkness here, but you get a deep sense of dread
@@ -3658,6 +3817,7 @@ the further you go."""
 vnum = 1460
 name = "The end of the hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the end of a long dark hallway. The darkness here is almost
 tangible in its thickness. A deep sense of fear and loathing comes over
@@ -3677,6 +3837,7 @@ you.
 vnum = 1461
 name = "The chamber of darkness"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a vast chamber. The walls fade into darkness, leaving you
 with a very vague idea of the actual size of the room. Swirling here and
@@ -3716,6 +3877,7 @@ light and leave it that much darker here."""
 vnum = 1462
 name = "It is very dark here..."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "It is very dark here..."
 
   [[rooms.exits]]
@@ -3726,6 +3888,7 @@ description = "It is very dark here..."
 vnum = 1463
 name = "Torture chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in an ill lit chamber. Instruments of torture hang from a rack
 on the wall, they seem to quiver with anticipation of a victim as if they
@@ -3740,6 +3903,7 @@ had a mind of their own. An operating table is here, though it is bare.
 vnum = 1464
 name = "The inner chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small dark chamber. Upon the walls are glowing sigils of
 dark power, scrawled and traced in an evil language no longer known to most
@@ -3774,6 +3938,7 @@ glow, but does not shed any light, in fact it seems to be taking light in."""
 vnum = 1465
 name = "A bright hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long well lit hallway leading east and west. The walls here
 are a milky white color, and glow with a warm luminescence, as does the
@@ -3792,6 +3957,7 @@ tread upon these sacred floors."""
 vnum = 1466
 name = "A bright hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long well lit hallway leading east and west. The walls here
 are a milky white color, and glow with a warm luminescence, as does the
@@ -3812,6 +3978,7 @@ tread upon these sacred floors.
 vnum = 1467
 name = "An antechamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small antechamber. It is well lit here, though the source
 of light cannot be seen. It is almost as if the room itself exudes a warm
@@ -3890,6 +4057,7 @@ flame flickers towards you."""
 vnum = 1470
 name = "The meditation chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small meditation chamber. White silk cushions are everywhere,
 looking very comfortable. You get an easy peaceful feeling of relaxation
@@ -3903,6 +4071,7 @@ here, almost making you want to lie down and fall asleep."""
 vnum = 1471
 name = "A study"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a spacious study. It is extremely tidy here, to an almost
 antiseptic nature. One would wonder how anyone could study without a
@@ -3916,6 +4085,7 @@ mess all around them, the master of this chamber obviously can."""
 vnum = 1472
 name = "A closet"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small closet. Cloaks and vests hang from hooks in the wall,
 and a few old boots are all that can be seen here. Rather featureless."""
@@ -3928,6 +4098,7 @@ and a few old boots are all that can be seen here. Rather featureless."""
 vnum = 1473
 name = "A wide hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large hallway, wide enough to accommodate several people
 standing abreast. The floor here is a swirl of multicolored patterns, in
@@ -3948,6 +4119,7 @@ constant motion.
 vnum = 1474
 name = "A wide hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large hallway, wide enough to accommodate several people
 standing abreast. The floor here is a swirl of multicolored patterns, in
@@ -3970,6 +4142,7 @@ constant motion.
 vnum = 1475
 name = "A wide hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large hallway, wide enough to accommodate several people
 standing abreast. The floor here is a swirl of multicolored patterns, in
@@ -3992,6 +4165,7 @@ constant motion.
 vnum = 1476
 name = "The entranceway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the entrance to the audience chamber of the grand master of
 magic. Beautiful tapestries displaying the ancient masters of lore are on
@@ -4012,6 +4186,7 @@ seems to rustle and move at the touch of your boots."""
 vnum = 1477
 name = "The audience chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a large chamber. Small bolts of energy leap from wall to wall,
 crackling with power. The floor is a swirl of indeterminable colors and
@@ -4081,6 +4256,7 @@ The giant emerald is flawless, and must be incredibly valuable."""
 vnum = 1478
 name = "A dressing room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a plush dressing room. Fine garments of many styles and some
 outlandish colors hang from a rack suspended in mid air at eye level. The
@@ -4095,6 +4271,7 @@ finely crafted gold stand."""
 vnum = 1479
 name = "The library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small cozy looking library. A few well made books sit atop
 shelves which span every wall. A large oaken writing table is in the center
@@ -4109,6 +4286,7 @@ to your surprise is a quite un-magical oil lamp."""
 vnum = 1480
 name = "The altar"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small chapel designed around a beautifully crafted golden
 altar. Many icons to lesser deities line the room, but it is obvious by one
@@ -4137,6 +4315,7 @@ worship of Mystra, the goddess of magic."""
 vnum = 1481
 name = "The treasury"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a small chamber, the stale air here is testament to the fact
 that it has gone undisturbed for many years."""
@@ -4154,6 +4333,7 @@ that it has gone undisturbed for many years."""
 vnum = 1482
 name = "A passage"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small dark passage, which would be unremarkable if not for
 the fact that it ends in a blinding blue light to the west. On hooks set
@@ -4185,6 +4365,7 @@ in the event speedy of a evacuation."""
 vnum = 1483
 name = "In the light"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You seem to be floating in a magical energy field, though you cannot see
 the source of the energy, you can feel its power pushing at you from all
@@ -4200,6 +4381,7 @@ exit."""
 vnum = 1499
 name = "Skylar's Hideout"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "private"]
 description = """
 You are in a small, very messy room. An unmade bed is against one wall, and
 books and papers cover every available flat surface. Empty beer cans lie here

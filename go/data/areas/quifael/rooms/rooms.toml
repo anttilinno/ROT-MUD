@@ -2,6 +2,7 @@
 vnum = 6900
 name = "Quifael's monster pen"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are in a big, subterranean room with heavy massive stone walls and no
 windows whatsoever.  A virtual ladder leads upwards."""
@@ -14,6 +15,7 @@ windows whatsoever.  A virtual ladder leads upwards."""
 vnum = 6901
 name = "Quifael's study"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "private"]
 description = """
 You are in a small, comfortable study room.  The walls are lined with
 bookcases filled with dusty volumes of all sizes.  In the fireplace burns a
@@ -52,6 +54,7 @@ and H. P. Lovecraft to Anne Rice and Stephen King."""
 vnum = 6902
 name = "Quifael's laboratory"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "private"]
 description = """
 You are in a room filled with shelves containing all sorts of weird equipment.
 The walls are lined with numerous shelves and a massive working desk is by
@@ -90,6 +93,7 @@ different monsters."""
 vnum = 6903
 name = "Quifael's virtual balcony"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are on a transparent balcony hanging in mid-air.  You notice a faint blue
 glow surrounding everything, even yourself, making it seem as transparent as
@@ -136,6 +140,7 @@ the whole place."""
 vnum = 6904
 name = "Quifael's hall"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are in sparsely decorated and quite dusty hall.  Old wooden doors lead
 north, east and south and to the west is the front door.
@@ -168,6 +173,7 @@ You see yourself looking back at you."""
 vnum = 6905
 name = "Quifael's kitchen"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = "You are in an old-fashioned kitchen."
 
   [[rooms.exits]]

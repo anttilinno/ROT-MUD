@@ -2,6 +2,7 @@
 vnum = 3700
 name = "Entrance to Mud School"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 This is the entrance to the Merc Mud School.  Go north to go through mud
 school.  If you have been here before and want to go directly to the arena,
@@ -26,6 +27,7 @@ A sign warns 'You may not pass these doors once you have passed level 9.'"""
 vnum = 3701
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -72,6 +74,7 @@ Copyright 1992, 1993."""
 vnum = 3702
 name = "The Center Room"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -120,6 +123,7 @@ Try going into each direction from here.  When you are done, go NORTH."""
 vnum = 3703
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -144,6 +148,7 @@ gives you more information."""
 vnum = 3704
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -162,6 +167,7 @@ Just go east to the central room."""
 vnum = 3705
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -180,6 +186,7 @@ Just go north to the central room."""
 vnum = 3707
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -198,6 +205,7 @@ Just go up to the central room."""
 vnum = 3708
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -216,6 +224,7 @@ Just go down to the central room."""
 vnum = 3709
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -253,6 +262,7 @@ to the next station, go 'WEST'."""
 vnum = 3710
 name = "The Blob Cage"
 sector = "inside"
+room_flags = ["indoors", "newbies_only"]
 description = """
 You are in a smelly cage.  Strangely, the walls are still clean!
 You see a sign here.  The only exit is up."""
@@ -275,6 +285,7 @@ when you are fighting, type 'FLEE', until you flee and are out of here."""
 vnum = 3711
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -299,6 +310,7 @@ To start, go down."""
 vnum = 3712
 name = "The Cage Room"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in the cage room.  All around are 4 cages.  Light fluoresces off the
 ceiling in soft white tones.  Of course, there is a big sign on the wall.
@@ -351,6 +363,7 @@ surroundings."""
 vnum = 3713
 name = "A Cage"
 sector = "inside"
+room_flags = ["indoors", "newbies_only"]
 description = """
 You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
 in the upkeep here!  There is a sign on the wall.  The only exit is south."""
@@ -381,6 +394,7 @@ fast!  Remember to loot and sacrifice the corpse."""
 vnum = 3714
 name = "A Cage"
 sector = "inside"
+room_flags = ["indoors", "newbies_only"]
 description = """
 You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
 in the upkeep here!  There is a sign on the wall.  The only exit is east."""
@@ -411,6 +425,7 @@ here fast!  Remember to loot and sacrifice the corpse."""
 vnum = 3715
 name = "A Cage"
 sector = "inside"
+room_flags = ["indoors", "newbies_only"]
 description = """
 You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
 in the upkeep here!  There is a sign on the wall.  The only exit is north."""
@@ -441,6 +456,7 @@ Remember to loot and sacrifice the corpse."""
 vnum = 3716
 name = "A Cage"
 sector = "inside"
+room_flags = ["indoors", "newbies_only"]
 description = """
 You are in a cage.  Blood and gore are everywhere.  The keepers must be lax
 in the upkeep here!  There is a sign on the wall.  The only exit is west."""
@@ -471,6 +487,7 @@ Remember to loot and sacrifice the corpse."""
 vnum = 3717
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -506,6 +523,7 @@ After that, find the next exit yourself."""
 vnum = 3718
 name = "The Store in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only"]
 description = """
 You are in a cramped room.  Stacked neatly on shelves everywhere are items
 and packages.  Light fluoresces off the ceiling in soft white tones.  Of
@@ -542,6 +560,7 @@ The sign reads:
 vnum = 3719
 name = "A Room in Mud School"
 sector = "inside"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a square white room.  The walls are all blank, with no windows.
 Light fluoresces off the ceiling in soft white tones.  Of course, there is a
@@ -576,6 +595,7 @@ and continue east."""
 vnum = 3720
 name = "The Darkened Room"
 sector = "inside"
+room_flags = ["dark", "indoors", "newbies_only"]
 description = """
 This room was purposefully darkened so that you would need to hold on to a
 light source to go through.  The walls are, of course, blank, and white.
@@ -609,6 +629,7 @@ The only exit is south."""
 vnum = 3721
 name = "The End of Mud School!"
 sector = "inside"
+room_flags = ["indoors", "newbies_only"]
 description = """
 This is a very bright room, with a marble pedestal in the center.  Behind
 the pedestal stands a person cloaked in Silver.  Tapestries flow from every
@@ -650,6 +671,7 @@ May your visit here be ... mercenary."""
 vnum = 3722
 name = "South Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -675,6 +697,7 @@ being watched by some divine being."""
 vnum = 3723
 name = "South Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -700,6 +723,7 @@ being watched by some divine being."""
 vnum = 3724
 name = "South West Corner of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -725,6 +749,7 @@ being watched by some divine being."""
 vnum = 3725
 name = "South Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -750,6 +775,7 @@ being watched by some divine being."""
 vnum = 3726
 name = "South East Corner of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -775,6 +801,7 @@ being watched by some divine being."""
 vnum = 3727
 name = "West Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -800,6 +827,7 @@ being watched by some divine being."""
 vnum = 3728
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -829,6 +857,7 @@ being watched by some divine being."""
 vnum = 3729
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -858,6 +887,7 @@ being watched by some divine being."""
 vnum = 3730
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -887,6 +917,7 @@ being watched by some divine being."""
 vnum = 3731
 name = "East Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -912,6 +943,7 @@ being watched by some divine being."""
 vnum = 3732
 name = "West Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -937,6 +969,7 @@ being watched by some divine being."""
 vnum = 3733
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -966,6 +999,7 @@ being watched by some divine being."""
 vnum = 3734
 name = "Center of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1011,6 +1045,7 @@ and there is no quick escape back out of here when you are in the dungeon."""
 vnum = 3735
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1040,6 +1075,7 @@ being watched by some divine being."""
 vnum = 3736
 name = "East Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1065,6 +1101,7 @@ being watched by some divine being."""
 vnum = 3737
 name = "West Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1090,6 +1127,7 @@ being watched by some divine being."""
 vnum = 3738
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1119,6 +1157,7 @@ being watched by some divine being."""
 vnum = 3739
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1148,6 +1187,7 @@ being watched by some divine being."""
 vnum = 3740
 name = "Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1177,6 +1217,7 @@ being watched by some divine being."""
 vnum = 3741
 name = "East Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1202,6 +1243,7 @@ being watched by some divine being."""
 vnum = 3742
 name = "North West Corner of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1227,6 +1269,7 @@ being watched by some divine being."""
 vnum = 3743
 name = "North Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  You can barely see the ceiling.  You feel as if you are being watched
@@ -1252,6 +1295,7 @@ by some divine being."""
 vnum = 3744
 name = "North Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1277,6 +1321,7 @@ being watched by some divine being."""
 vnum = 3745
 name = "North Wall of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1302,6 +1347,7 @@ being watched by some divine being."""
 vnum = 3746
 name = "North East Corner of Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Arena.  Remember, if you wish to get out of this Arena, just
 go up.  Ceilings can barely be seen in this huge Arena.  You feel as if you are
@@ -1327,6 +1373,7 @@ being watched by some divine being."""
 vnum = 3748
 name = "The Center of the Dungeon"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the center of a large room.  A faint light from above shows that
 the floors are all covered with slime.  A feeling of dread comes over you as
@@ -1358,6 +1405,7 @@ Of special note is the one that brings you back up!!!"""
 vnum = 3749
 name = "The North West Corner of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1378,6 +1426,7 @@ any windows in the area explains the smell around you."""
 vnum = 3750
 name = "The North Wall of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1398,6 +1447,7 @@ any windows in the area explains the smell around you."""
 vnum = 3751
 name = "The North East Corner of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1418,6 +1468,7 @@ any windows in the area explains the smell around you."""
 vnum = 3752
 name = "The West Wall of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1438,6 +1489,7 @@ any windows in the area explains the smell around you."""
 vnum = 3753
 name = "The East Wall of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1458,6 +1510,7 @@ any windows in the area explains the smell around you."""
 vnum = 3754
 name = "The South West Corner of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1478,6 +1531,7 @@ any windows in the area explains the smell around you."""
 vnum = 3755
 name = "The South Wall of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1498,6 +1552,7 @@ any windows in the area explains the smell around you."""
 vnum = 3756
 name = "The South East Corner of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are against a wall in the dungeon.  It is quite dark here.  The lack of
 any windows in the area explains the smell around you."""
@@ -1514,6 +1569,7 @@ any windows in the area explains the smell around you."""
 vnum = 3757
 name = "A Room in Mud School"
 sector = "city"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a room in Mud School.  Paintings of the heroic graduates of mud
 school adorn the walls. To the west is Furey's Training Room, and to the east
@@ -1551,6 +1607,7 @@ abilities, and then come back here and go 'NORTH'."""
 vnum = 3758
 name = "Furey's Training Room"
 sector = "city"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in Furey's Training Room.  Around you are all sorts of physical
 and mental training tools.  The whole room is filled with magic, holiness, 
@@ -1577,6 +1634,7 @@ the attribute you want increased.  Type 'help train' for more information."""
 vnum = 3759
 name = "Zump's Guild Room"
 sector = "city"
+room_flags = ["indoors", "newbies_only", "no_mob"]
 description = """
 You are in a room filled with weapons, books, and many combat dummies, some
 cut and stabbed many times, others burnt to a crisp.  The room is filled with
@@ -1604,6 +1662,7 @@ certain maximum.  When you have practiced all you wish to practice, go west."""
 vnum = 3760
 name = "A Safe Room"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are in a safe room, away from all the mean rabbits and snails of the Arena.
 You can rest here, and go up to go back to the Temple of Midgaard."""
