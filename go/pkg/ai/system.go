@@ -80,7 +80,13 @@ func (a *AISystem) castSpellWrapper(ch *types.Character, spellName string, victi
 		return victim
 	}
 
-	return a.Magic.Cast(ch, spellName, "", findTarget)
+	// Cast only consults findTarget when the target arg is non-empty; with ""
+	// defensive spells land on the caster and offensive ones on ch.Fighting.
+	targetArg := ""
+	if victim != nil {
+		targetArg = victim.Name
+	}
+	return a.Magic.Cast(ch, spellName, targetArg, findTarget)
 }
 
 // defaultBehavior implements standard NPC AI behaviors
