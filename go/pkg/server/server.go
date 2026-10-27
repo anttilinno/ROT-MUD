@@ -615,7 +615,7 @@ func (s *Server) handleAutolootAutosac(killer, victim *types.Character, corpse *
 		for len(corpse.Contents) > 0 {
 			obj := corpse.Contents[0]
 			corpse.RemoveContent(obj)
-			game.ObjToChar(obj, killer)
+			game.GetObjToChar(killer, obj)
 			s.SendToCharacter(killer, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, corpse.ShortDesc))
 		}
 	}

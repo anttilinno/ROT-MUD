@@ -67,6 +67,8 @@ func TestPlayerLoad(t *testing.T) {
 		original.PermStats[types.StatWis] = 16
 		original.PermStats[types.StatDex] = 17
 		original.PermStats[types.StatCon] = 19
+		original.Comm.Set(types.CommCombine)
+		original.Comm.Set(types.CommBrief)
 
 		err := p.SavePlayer(original)
 		if err != nil {
@@ -100,6 +102,9 @@ func TestPlayerLoad(t *testing.T) {
 		}
 		if loaded.PermStats[types.StatStr] != 20 {
 			t.Errorf("expected str 20, got %d", loaded.PermStats[types.StatStr])
+		}
+		if !loaded.Comm.Has(types.CommCombine) || !loaded.Comm.Has(types.CommBrief) {
+			t.Errorf("expected combine and brief to survive save/load, got %v", loaded.Comm)
 		}
 	})
 }
