@@ -623,6 +623,7 @@ long_desc = "A bartender watches you calmly, while he skillfully mixes a drink."
 description = "A tired looking Bartender who hates trouble in his bar."
 level = 45
 gold = 150
+inn = true
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
 alignment = 0

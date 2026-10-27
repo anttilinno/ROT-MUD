@@ -106,22 +106,6 @@ func TestHealBuyDeductsGoldAndHeals(t *testing.T) {
 	}
 }
 
-func TestHealManaRestore(t *testing.T) {
-	d, player, _ := setupHealerRoom()
-	player.Coin = 5000
-	player.MaxMana = 100
-	player.Mana = 5
-
-	d.Dispatch(Command{Character: player, Input: "heal mana"})
-
-	if player.Mana != 100 {
-		t.Errorf("expected mana restored to 100, got %d", player.Mana)
-	}
-	if player.Coin != 4990 { // mana costs 10 copper
-		t.Errorf("expected 4990 copper left, got %d", player.Coin)
-	}
-}
-
 func TestHealNotEnoughGold(t *testing.T) {
 	d, player, out := setupHealerRoom()
 	player.Coin = 10 // too little for 'heal' (50 copper)

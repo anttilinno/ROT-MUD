@@ -158,6 +158,7 @@ The Innkeeper looks skilled in brewing different beers and mixing the
 wierdest drinks known. He also looks very big."""
 level = 45
 gold = 5
+inn = true
 sex = "male"
 act_flags = ["npc", "sentinel"]
 alignment = 0

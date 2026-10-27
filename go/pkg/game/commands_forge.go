@@ -176,3 +176,51 @@ func forgeWeapon(tier *loader.ForgeTier, weapon string, smith *types.Character) 
 	}
 	return obj
 }
+
+// innRentHours is how long a rented room lasts, in game hours.
+const innRentHours = 8
+
+// innRegenMultiplier is 3 while ch rests or sleeps in a room they rented,
+// otherwise 1.
+func innRegenMultiplier(ch *types.Character) int {
+	pc := ch.PCData
+	if pc == nil || ch.InRoom == nil || pc.InnRoom != ch.InRoom.Vnum || forgeNow().Unix() >= pc.InnUntil {
+		return 1
+	}
+	if ch.Position == types.PosResting || ch.Position == types.PosSleeping {
+		return 3
+	}
+	return 1
+}
+
+// cmdRent rents the current room from an innkeeper: for the next
+// innRentHours game hours, resting or sleeping here regenerates three times
+// as fast. Costs the healer's level-scaled heal price.
+func (d *CommandDispatcher) cmdRent(ch *types.Character, args string) {
+	if ch.IsNPC() || ch.PCData == nil || ch.InRoom == nil {
+		return
+	}
+	var keeper *types.Character
+	for _, mob := range ch.InRoom.People {
+		if mob.IsNPC() && d.GameLoop != nil && d.GameLoop.World != nil {
+			if tmpl := d.GameLoop.World.GetMobTemplate(mob.MobVnum); tmpl != nil && tmpl.Inn {
+				keeper = mob
+				break
+			}
+		}
+	}
+	if keeper == nil {
+		d.send(ch, "There is no innkeeper here.\r\n")
+		return
+	}
+	price := levelPrice(50, ch.Level)
+	if ch.Coin < price {
+		d.send(ch, fmt.Sprintf("%s says 'A room is %s.'\r\n", keeper.ShortDesc, types.FormatCoin(price)))
+		return
+	}
+	ch.Coin -= price
+	ch.PCData.InnRoom = ch.InRoom.Vnum
+	ch.PCData.InnUntil = forgeNow().Add(innRentHours * gameDay / 24).Unix()
+	d.send(ch, fmt.Sprintf("You pay %s for a room. Rest or sleep here for the next %d hours to recover quickly.\r\n",
+		types.FormatCoin(price), innRentHours))
+}

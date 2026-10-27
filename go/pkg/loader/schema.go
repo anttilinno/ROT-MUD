@@ -140,6 +140,7 @@ type MobileData struct {
 	Hitroll     int       `toml:"hitroll"`
 	Gold        *int      `toml:"gold"` // wealth in copper; nil = level-based fallback
 	ForgeTiers  []string  `toml:"forge_tiers"` // weapon tiers this smith forges (data/forge.toml)
+	Inn         bool      `toml:"inn"`         // innkeeper: rents rooms (`rent`)
 	StartPos    string    `toml:"start_pos"`
 	DefaultPos  string    `toml:"default_pos"`
 	Special     string    `toml:"special"` // Special behavior function name (e.g. "spec_cast_mage")

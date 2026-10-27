@@ -5,6 +5,7 @@ import (
 	"sort"
 	"strings"
 
+	"rotmud/pkg/combat"
 	"rotmud/pkg/types"
 )
 
@@ -179,6 +180,16 @@ var healMenu = []healOffer{
 	{"mana", "", "energizer", 10, "restore mana"},
 }
 
+// levelPrice scales a service's base price (copper) with the buyer's level:
+// base through level 10, then base × level²/100, so services cost about half
+// a median kill at your level from mid-game on.
+func levelPrice(base int64, level int) int64 {
+	if mult := int64(level*level) / 100; mult > 1 {
+		return base * mult
+	}
+	return base
+}
+
 // healerOrder names the faction a healer collects donations for. There is no
 // structured faction field on mobs yet, so this is a sensible generic default;
 // it is the single place to wire a per-mob faction later.
@@ -216,7 +227,7 @@ func (d *CommandDispatcher) cmdHeal(ch *types.Character, args string) {
 		d.send(ch, fmt.Sprintf("In return for a donation to %s, the healer offers:\r\n\r\n", order))
 		for _, o := range healMenu {
 			d.send(ch, fmt.Sprintf("  %-8s - %-22s suggested donation: %s\r\n",
-				o.Keyword, o.Desc, types.FormatCoin(o.Cost)))
+				o.Keyword, o.Desc, types.FormatCoin(levelPrice(o.Cost, ch.Level))))
 		}
 		d.send(ch, "\r\nType heal <type> to make a donation and receive a blessing.\r\n")
 		return
@@ -234,7 +245,7 @@ func (d *CommandDispatcher) cmdHeal(ch *types.Character, args string) {
 		return
 	}
 
-	cost := offer.Cost
+	cost := levelPrice(offer.Cost, ch.Level)
 	if ch.Coin < cost {
 		ActToChar("$N tells you 'That donation is beyond your means right now, child.'", ch, healer, nil, d.Output)
 		return
@@ -245,9 +256,9 @@ func (d *CommandDispatcher) cmdHeal(ch *types.Character, args string) {
 	ActToRoom("$n utters the words '"+offer.Word+"'.", healer, nil, nil, d.Output)
 
 	if offer.Spell == "" {
-		// "mana" — not a spell; restore the buyer's mana.
-		ch.Mana = ch.MaxMana
-		d.send(ch, "A warm glow passes through you; your mana is restored.\r\n")
+		// "mana" — not a spell; restores 2d8 + level/3 mana as ROM's healer does.
+		ch.Mana = min(ch.Mana+combat.Dice(2, 8)+healer.Level/3, ch.MaxMana)
+		d.send(ch, "A warm glow passes through you.\r\n")
 		return
 	}
 

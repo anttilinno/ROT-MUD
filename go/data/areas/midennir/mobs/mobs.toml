@@ -83,6 +83,7 @@ nights are spent watching out for goblins.  His inn is no longer the happy
 place that is used to be in days past."""
 level = 19
 gold = 350
+inn = true
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
 alignment = 0

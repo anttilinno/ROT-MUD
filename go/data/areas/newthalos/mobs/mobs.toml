@@ -106,6 +106,7 @@ official. As you attempt to sneak a peek under her veil you notice
 a small moon-shaped birthmark on her left cheek."""
 level = 40
 gold = 505
+inn = true
 sex = "female"
 act_flags = ["npc", "sentinel"]
 alignment = 0

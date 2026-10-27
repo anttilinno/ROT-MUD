@@ -342,6 +342,7 @@ The Innkeeper is a jolly old halfling who spends his days eavesdropping on
 local gossip.  In his younger days, he was quite a seasoned traveller."""
 level = 24
 gold = 35
+inn = true
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 alignment = 0

@@ -162,6 +162,8 @@ type PCData struct {
 	// Other
 	Recall          int         // Recall room vnum
 	Forge           *ForgeOrder // Weapon commissioned from a smith, if any
+	InnRoom         int         // Room rented at an inn (`rent`)
+	InnUntil        int64       // Rent expiry, unix seconds
 	SavedRoom       int         // Last room vnum when player quit (0 = use recall)
 	Points          int         // Creation points spent
 	OverspentPoints int         // Creation points overspent (affects XP per level)

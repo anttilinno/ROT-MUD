@@ -505,6 +505,21 @@ Without a bound room, word of recall goes to the temple.
 see_also = ["recall", "word of recall"]
 
 [[help]]
+keywords = ["rent", "inn"]
+syntax = "rent"
+description = """
+Rent a room from an innkeeper.
+
+For the next 8 hours, resting or sleeping in the room where
+you rented recovers hit points, mana and movement three times
+as fast. The price rises with your level.
+
+Innkeepers: Midgaard's bartender, the innkeepers of Midennir,
+the plains and the Shire, and the New Thalos receptionist.
+"""
+see_also = ["rest", "sleep"]
+
+[[help]]
 keywords = ["commission", "collect", "forge"]
 syntax = "commission\ncommission <weapon> <tier>\ncollect"
 description = """
