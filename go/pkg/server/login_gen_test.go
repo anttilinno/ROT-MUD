@@ -33,3 +33,15 @@ func TestGroupAddRefundsBoughtSkill(t *testing.T) {
 		t.Errorf("after dropping stealth points = %d, want 0", ch.PCData.Points)
 	}
 }
+
+func TestGroupHint(t *testing.T) {
+	h := &LoginHandler{}
+	ch := types.NewCharacter("Test")
+	ch.Class = types.ClassThief
+	if got := h.groupHint(ch, "circle"); got != "circle is also in the stealth group (6): sneak, hide, backstab, circle.\r\n" {
+		t.Errorf("hint = %q", got)
+	}
+	if got := h.groupHint(ch, "steal"); got != "" {
+		t.Errorf("steal is in no group, got %q", got)
+	}
+}

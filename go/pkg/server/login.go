@@ -463,6 +463,7 @@ func (h *LoginHandler) handleGenGroups(session *Session, input string) bool {
 		case 0:
 			expPerLevel := h.getExpPerLevel(ch)
 			h.send(session, fmt.Sprintf("Skill '%s' added. (%d exp/level)\r\n", name, expPerLevel))
+			h.send(session, h.groupHint(ch, name))
 		case 1:
 			h.send(session, "That group or skill is not available. Type 'list' to see options.\r\n")
 		case 2:
@@ -1769,6 +1770,27 @@ func (h *LoginHandler) dropIndividualSkill(ch *types.Character, skillName string
 		}
 	}
 	return false
+}
+
+// groupHint points out groups that bundle a just-bought skill, so a player
+// sees the cheaper bundle (adding the group later refunds the skill).
+func (h *LoginHandler) groupHint(ch *types.Character, skillName string) string {
+	var sb strings.Builder
+	for _, s := range h.getAvailableSkills(ch) {
+		if !strings.HasPrefix(strings.ToLower(s.Name), strings.ToLower(skillName)) {
+			continue
+		}
+		for _, g := range h.getAvailableGroups(ch) {
+			for _, gs := range g.Skills {
+				if gs == s.Name {
+					sb.WriteString(fmt.Sprintf("%s is also in the %s group (%d): %s.\r\n",
+						s.Name, g.Name, g.Cost, strings.Join(g.Skills, ", ")))
+				}
+			}
+		}
+		break
+	}
+	return sb.String()
 }
 
 // skillCost returns what a skill costs on its own for ch's class.
