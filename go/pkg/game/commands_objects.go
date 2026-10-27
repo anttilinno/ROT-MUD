@@ -740,11 +740,7 @@ func (d *CommandDispatcher) cmdSacrifice(ch *types.Character, args string) {
 		return
 	}
 
-	// Sacrifice reward — 5% of the item's base copper value, floor 1cp.
-	coinReward := int64(obj.Cost) / 20
-	if coinReward < 1 {
-		coinReward = 1
-	}
+	coinReward := SacrificeReward(obj)
 
 	// Sacrifice the object
 	ObjFromRoom(obj)
@@ -753,6 +749,17 @@ func (d *CommandDispatcher) cmdSacrifice(ch *types.Character, args string) {
 	d.send(ch, fmt.Sprintf("The gods give you %s for your sacrifice of %s.\r\n",
 		types.FormatCoin(coinReward), obj.ShortDesc))
 	ActToRoom("$n sacrifices $p to the gods.", ch, nil, obj, d.Output)
+}
+
+// SacrificeReward is what the gods pay for sacrificing obj, in copper:
+// level × 3 (at least 1), capped at the item's value except for corpses,
+// as ROT's do_sacrifice does (ROT paid silver; this economy counts copper).
+func SacrificeReward(obj *types.Object) int64 {
+	reward := max(1, obj.Level*3)
+	if obj.ItemType != types.ItemTypeCorpseNPC && obj.ItemType != types.ItemTypeCorpsePC {
+		reward = min(reward, max(1, obj.Cost))
+	}
+	return int64(reward)
 }
 
 // DonationPitVnum is the vnum of the donation pit (from merc.h: OBJ_VNUM_PIT = 3010)

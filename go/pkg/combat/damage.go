@@ -447,6 +447,7 @@ func (c *CombatSystem) makeCorpse(ch *types.Character) *types.Object {
 	}
 
 	corpse.Name = "corpse"
+	corpse.Level = ch.Level // sacrifice pays by corpse level
 	corpse.LongDesc = "The corpse of " + ch.Name + " is lying here."
 	corpse.Timer = 10 // Corpse decays after 10 ticks
 

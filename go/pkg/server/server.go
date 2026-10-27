@@ -622,9 +622,9 @@ func (s *Server) handleAutolootAutosac(killer, victim *types.Character, corpse *
 		if corpse.InRoom != nil {
 			corpse.InRoom.RemoveObject(corpse)
 		}
-		// Give a small amount of coin as sacrifice reward (1 copper)
-		killer.Coin += 1
-		s.SendToCharacter(killer, "The gods give you 1c for your sacrifice.\r\n")
+		reward := game.SacrificeReward(corpse)
+		killer.Coin += reward
+		s.SendToCharacter(killer, fmt.Sprintf("The gods give you %s for your sacrifice.\r\n", types.FormatCoin(reward)))
 	}
 }
 
