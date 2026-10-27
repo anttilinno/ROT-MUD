@@ -35,6 +35,10 @@ type Session struct {
 	Character  *types.Character
 	Descriptor *types.Descriptor
 	mu         sync.Mutex
+
+	// genSkills holds skills bought one by one during creation, so adding a
+	// group that contains one refunds it instead of charging twice.
+	genSkills map[string]bool
 }
 
 // MetricsUpdaterFunc is a callback for updating metrics

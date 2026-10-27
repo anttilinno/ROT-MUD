@@ -411,6 +411,9 @@ func (h *LoginHandler) handleGenGroups(session *Session, input string) bool {
 
 	args := strings.Fields(input)
 	cmd := args[0]
+	if session.genSkills == nil {
+		session.genSkills = make(map[string]bool)
+	}
 
 	switch {
 	case strings.HasPrefix("done", cmd):
@@ -441,7 +444,7 @@ func (h *LoginHandler) handleGenGroups(session *Session, input string) bool {
 		name := strings.Join(args[1:], " ")
 
 		// Try adding as group first
-		result := h.addGroup(ch, name)
+		result := h.addGroup(ch, name, session.genSkills)
 		switch result {
 		case 0:
 			expPerLevel := h.getExpPerLevel(ch)
@@ -455,7 +458,7 @@ func (h *LoginHandler) handleGenGroups(session *Session, input string) bool {
 		}
 
 		// Group not found (result == 1), try adding as individual skill
-		skillResult := h.addIndividualSkill(ch, name)
+		skillResult := h.addIndividualSkill(ch, name, session.genSkills)
 		switch skillResult {
 		case 0:
 			expPerLevel := h.getExpPerLevel(ch)
@@ -477,7 +480,7 @@ func (h *LoginHandler) handleGenGroups(session *Session, input string) bool {
 		name := strings.Join(args[1:], " ")
 
 		// Try dropping as group first
-		if h.dropGroup(ch, name) {
+		if h.dropGroup(ch, name, session.genSkills) {
 			expPerLevel := h.getExpPerLevel(ch)
 			h.send(session, fmt.Sprintf("Group '%s' dropped. (%d exp/level)\r\n", name, expPerLevel))
 			h.sendGroupPrompt(session)
@@ -485,7 +488,7 @@ func (h *LoginHandler) handleGenGroups(session *Session, input string) bool {
 		}
 
 		// Try dropping as individual skill
-		if h.dropIndividualSkill(ch, name) {
+		if h.dropIndividualSkill(ch, name, session.genSkills) {
 			expPerLevel := h.getExpPerLevel(ch)
 			h.send(session, fmt.Sprintf("Skill '%s' dropped. (%d exp/level)\r\n", name, expPerLevel))
 		} else {
@@ -1628,7 +1631,7 @@ func (h *LoginHandler) giveDefaultGroup(ch *types.Character) {
 
 // addGroup adds a skill group to a character
 // Returns: 0 = success, 1 = not found, 2 = already have all skills
-func (h *LoginHandler) addGroup(ch *types.Character, groupName string) int {
+func (h *LoginHandler) addGroup(ch *types.Character, groupName string, bought map[string]bool) int {
 	if ch.PCData == nil {
 		return 1
 	}
@@ -1655,8 +1658,15 @@ func (h *LoginHandler) addGroup(ch *types.Character, groupName string) int {
 				}
 			}
 
-			// Spend points (can go over 40, increases exp per level)
+			// Spend points (can go over 40, increases exp per level). Skills
+			// bought individually are now covered by the group: refund them.
 			ch.PCData.Points += g.Cost
+			for _, skill := range g.Skills {
+				if bought[skill] {
+					ch.PCData.Points -= h.skillCost(ch, skill)
+					delete(bought, skill)
+				}
+			}
 			return 0 // Success
 		}
 	}
@@ -1664,7 +1674,7 @@ func (h *LoginHandler) addGroup(ch *types.Character, groupName string) int {
 }
 
 // dropGroup removes a skill group from a character
-func (h *LoginHandler) dropGroup(ch *types.Character, groupName string) bool {
+func (h *LoginHandler) dropGroup(ch *types.Character, groupName string, bought map[string]bool) bool {
 	if ch.PCData == nil {
 		return false
 	}
@@ -1687,6 +1697,7 @@ func (h *LoginHandler) dropGroup(ch *types.Character, groupName string) bool {
 			// Remove all skills from the group
 			for _, skill := range g.Skills {
 				delete(ch.PCData.Learned, skill)
+				delete(bought, skill)
 			}
 
 			// Refund points
@@ -1704,7 +1715,7 @@ func (h *LoginHandler) dropGroup(ch *types.Character, groupName string) bool {
 
 // addIndividualSkill adds a single skill to a character
 // Returns: 0 = success, 1 = not found, 2 = already have
-func (h *LoginHandler) addIndividualSkill(ch *types.Character, skillName string) int {
+func (h *LoginHandler) addIndividualSkill(ch *types.Character, skillName string, bought map[string]bool) int {
 	if ch.PCData == nil {
 		return 1
 	}
@@ -1719,6 +1730,7 @@ func (h *LoginHandler) addIndividualSkill(ch *types.Character, skillName string)
 
 			// Add the skill at 1%
 			ch.PCData.Learned[s.Name] = 1
+			bought[s.Name] = true
 
 			// Spend points (can go over 40, increases exp per level)
 			ch.PCData.Points += s.Cost
@@ -1729,7 +1741,7 @@ func (h *LoginHandler) addIndividualSkill(ch *types.Character, skillName string)
 }
 
 // dropIndividualSkill removes a single skill from a character
-func (h *LoginHandler) dropIndividualSkill(ch *types.Character, skillName string) bool {
+func (h *LoginHandler) dropIndividualSkill(ch *types.Character, skillName string, bought map[string]bool) bool {
 	if ch.PCData == nil {
 		return false
 	}
@@ -1737,13 +1749,15 @@ func (h *LoginHandler) dropIndividualSkill(ch *types.Character, skillName string
 	skills := h.getAvailableSkills(ch)
 	for _, s := range skills {
 		if strings.HasPrefix(strings.ToLower(s.Name), strings.ToLower(skillName)) {
-			// Check if we have this skill
-			if ch.PCData.Learned[s.Name] == 0 {
+			// Only skills bought on their own can be dropped (and refunded);
+			// one that came with a group goes when the group is dropped.
+			if !bought[s.Name] {
 				return false
 			}
 
 			// Remove the skill
 			delete(ch.PCData.Learned, s.Name)
+			delete(bought, s.Name)
 
 			// Refund points
 			ch.PCData.Points -= s.Cost
@@ -1754,6 +1768,16 @@ func (h *LoginHandler) dropIndividualSkill(ch *types.Character, skillName string
 		}
 	}
 	return false
+}
+
+// skillCost returns what a skill costs on its own for ch's class.
+func (h *LoginHandler) skillCost(ch *types.Character, name string) int {
+	for _, s := range h.getAvailableSkills(ch) {
+		if s.Name == name {
+			return s.Cost
+		}
+	}
+	return 0
 }
 
 // BaseCreationPoints is the starting creation points for all classes
