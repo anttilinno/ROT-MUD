@@ -737,6 +737,12 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	ch.Coin = mobCoinDrop(tmpl)
 	ch.HitRoll = tmpl.Hitroll
 
+	// Shopkeepers can't be attacked: they carry large purses to buy stock,
+	// and killing them would farm money.
+	if w.Shops[vnum] != nil {
+		ch.Act.Set(types.ActProtected)
+	}
+
 	// Armor: template AC when given, else a level-based default. Without this
 	// mobs sat at AC 0 and low-level players needed a natural 19 to hit.
 	ch.Armor = tmpl.AC
@@ -818,6 +824,8 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 			ch.Act.Set(types.ActNoAlign)
 		case "no_purge":
 			ch.Act.Set(types.ActNoPurge)
+		case "protected":
+			ch.Act.Set(types.ActProtected)
 		}
 	}
 

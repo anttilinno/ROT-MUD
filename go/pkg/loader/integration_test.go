@@ -161,6 +161,11 @@ func TestLoadMidgaard(t *testing.T) {
 			t.Error("expected Midgaard weaponsmith (3003) to forge two tiers")
 		}
 
+		// Shopkeepers spawn protected (300p merchants in the dark area)
+		if m := world.CreateMobFromTemplate(14502); m == nil || !m.Act.Has(types.ActProtected) {
+			t.Error("expected the Elven Merchant (14502) to spawn protected")
+		}
+
 		// Weapons carry their class and damage type (restored from ROT area files)
 		dagger := world.GetObjTemplate(3701)
 		if dagger == nil || dagger.Weapon == nil {
