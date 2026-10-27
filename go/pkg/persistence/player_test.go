@@ -68,7 +68,8 @@ func TestPlayerLoad(t *testing.T) {
 		original.PermStats[types.StatDex] = 17
 		original.PermStats[types.StatCon] = 19
 		original.Comm.Set(types.CommCombine)
-		original.PCData = &types.PCData{Password: "x", Recall: 5000}
+		original.PCData = &types.PCData{Password: "x", Recall: 5000,
+			Forge: &types.ForgeOrder{Smith: 3003, Tier: "fine", WeaponType: "dagger", ReadyAt: 12345}}
 		original.Comm.Set(types.CommBrief)
 
 		err := p.SavePlayer(original)
@@ -109,6 +110,9 @@ func TestPlayerLoad(t *testing.T) {
 		}
 		if loaded.PCData == nil || loaded.PCData.Recall != 5000 {
 			t.Error("expected bound recall room 5000 to survive save/load")
+		}
+		if f := loaded.PCData.Forge; f == nil || f.Tier != "fine" || f.ReadyAt != 12345 {
+			t.Errorf("expected forge order to survive save/load, got %+v", f)
 		}
 	})
 }

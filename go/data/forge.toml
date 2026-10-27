@@ -1,0 +1,47 @@
+# Weapon commissions. A smith forges the tiers listed in its mob entry
+# (`forge_tiers = [...]` in mobs.toml); `commission <weapon type> <tier>`
+# pays up front and the weapon is ready forge_days game days later.
+#
+# price is in copper (1s = 10c, 1g = 100c, 1p = 1000c). dice give the
+# weapon's damage; hitroll/damroll add affects to the forged weapon.
+
+forge_days = 14
+
+[[tiers]]
+name = "fine"
+level = 5
+dice_number = 2
+dice_size = 4
+price = 20
+
+[[tiers]]
+name = "superior"
+level = 15
+dice_number = 2
+dice_size = 7
+price = 200
+
+[[tiers]]
+name = "masterwork"
+level = 30
+dice_number = 3
+dice_size = 6
+price = 1000
+
+[[tiers]]
+name = "exquisite"
+level = 50
+dice_number = 4
+dice_size = 8
+hitroll = 3
+damroll = 3
+price = 7000
+
+[[tiers]]
+name = "legendary"
+level = 75
+dice_number = 6
+dice_size = 8
+hitroll = 5
+damroll = 5
+price = 15000

@@ -80,6 +80,7 @@ long_desc = "A weaponsmith."
 description = "A young weaponsmith, who still has lots to learn."
 level = 45
 gold = 25000
+forge_tiers = ["fine", "superior"]
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 alignment = 0

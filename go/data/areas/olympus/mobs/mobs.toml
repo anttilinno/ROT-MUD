@@ -194,6 +194,7 @@ ugly.  You get the impression that he is kind, however, and would go out of his
 way to help you.  He is attended by three golden maidens."""
 level = 105
 gold = 3000
+forge_tiers = ["legendary"]
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["detect_invis", "detect_hidden", "flying"]

@@ -133,6 +133,7 @@ type World struct {
 	MobTemplates map[int]*MobileData
 	ObjTemplates map[int]*ObjectData
 	Shops        map[int]*ShopData       // Shops by keeper mob vnum
+	Forge        *ForgeConfig            // Weapon commission tiers (nil if no forge.toml)
 	MOBprogs     map[string]*MOBprogData // MOBprogs by "area/name" key
 }
 
@@ -228,6 +229,16 @@ func (l *AreaLoader) LoadAll() (*World, error) {
 
 	// Price teleport items by the danger of their destination area.
 	priceTeleportItems(world)
+
+	// Weapon commission tiers live next to the areas directory.
+	forgePath := filepath.Join(filepath.Dir(l.BasePath), "forge.toml")
+	if data, err := os.ReadFile(forgePath); err == nil {
+		var forge ForgeConfig
+		if err := toml.Unmarshal(data, &forge); err != nil {
+			return nil, fmt.Errorf("parse forge.toml: %w", err)
+		}
+		world.Forge = &forge
+	}
 
 	return world, nil
 }

@@ -415,6 +415,7 @@ description = """
 You see a small dwarf with a large hump on his left shoulder."""
 level = 46
 gold = 505
+forge_tiers = ["masterwork", "exquisite"]
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge", "indoors"]
 affected_by = ["detect_invis"]

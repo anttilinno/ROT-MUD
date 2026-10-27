@@ -152,6 +152,15 @@ func TestLoadMidgaard(t *testing.T) {
 			}
 		}
 
+		// Weapon commissions: tiers from data/forge.toml, Midgaard's smith
+		// forges the two low tiers
+		if world.Forge == nil || world.Forge.Tier("legendary") == nil {
+			t.Error("expected forge tiers loaded from data/forge.toml")
+		}
+		if smith := world.GetMobTemplate(3003); smith == nil || len(smith.ForgeTiers) != 2 {
+			t.Error("expected Midgaard weaponsmith (3003) to forge two tiers")
+		}
+
 		// Weapons carry their class and damage type (restored from ROT area files)
 		dagger := world.GetObjTemplate(3701)
 		if dagger == nil || dagger.Weapon == nil {

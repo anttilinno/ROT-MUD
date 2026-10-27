@@ -1844,6 +1844,8 @@ func (d *CommandDispatcher) registerBasicCommands() {
 	// Utility commands
 	d.Registry.Register("recall", d.cmdRecall, types.PosStanding, 0)
 	d.Registry.Register("bind", d.cmdBind, types.PosStanding, 0)
+	d.Registry.Register("commission", d.cmdCommission, types.PosStanding, 0)
+	d.Registry.Register("collect", d.cmdCollect, types.PosStanding, 0)
 	d.Registry.Register("scan", d.cmdScan, types.PosResting, 0)
 	d.Registry.Register("visible", d.cmdVisible, types.PosSleeping, 0)
 	d.Registry.Register("exits", d.cmdExits, types.PosResting, 0)
