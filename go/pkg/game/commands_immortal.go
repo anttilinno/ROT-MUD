@@ -3372,7 +3372,7 @@ func (d *CommandDispatcher) cmdViolate(ch *types.Character, args string) {
 	CharToRoom(ch, room)
 
 	d.send(ch, fmt.Sprintf("You violate the sanctity of room %d.\r\n", vnum))
-	d.cmdLook(ch, "")
+	d.cmdLook(ch, "auto")
 }
 
 // cmdProtect toggles the snoop-proof flag on a player
@@ -3602,7 +3602,7 @@ func (d *CommandDispatcher) performTransfer(victim *types.Character, destRoom *t
 	}
 
 	// Show room to victim
-	d.doLook(victim, "")
+	d.doLook(victim, "auto")
 }
 
 // cmdWipe marks a player as wiped (banned) and disconnects them
@@ -3955,7 +3955,7 @@ func (d *CommandDispatcher) cmdWizslap(ch *types.Character, args string) {
 	d.send(victim, "You feel your strength slip away.\r\n")
 
 	// Show the new room
-	d.doLook(victim, "")
+	d.doLook(victim, "auto")
 }
 
 // getRandomRoom finds a random accessible room for the character

@@ -98,7 +98,7 @@ func (d *CommandDispatcher) cmdRecall(ch *types.Character, args string) {
 	ActToRoom("$n appears in a flash of light.", ch, nil, nil, d.Output)
 
 	// Show the new room
-	d.cmdLook(ch, "")
+	d.cmdLook(ch, "auto")
 }
 
 func (d *CommandDispatcher) cmdScan(ch *types.Character, args string) {

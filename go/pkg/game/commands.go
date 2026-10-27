@@ -2194,7 +2194,7 @@ func (d *CommandDispatcher) doMove(ch *types.Character, dir types.Direction) {
 	d.checkQuestRoomEnter(ch, newRoom)
 
 	// Show room description
-	d.doLook(ch, "")
+	d.doLook(ch, "auto")
 
 	// LLM-enabled mobs may greet the entering player.
 	d.greetLLMMobs(ch, newRoom, false)
@@ -2253,7 +2253,7 @@ func (d *CommandDispatcher) moveFollowers(leader *types.Character, fromRoom, toR
 			// Pets don't get a look message
 			continue
 		}
-		d.doLook(follower, "")
+		d.doLook(follower, "auto")
 	}
 }
 
@@ -2308,9 +2308,10 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 		return
 	}
 
-	// Room name and description
+	// Room name and description. Brief mode drops the description on the
+	// automatic look after moving ("auto"), never on a typed look.
 	d.send(ch, fmt.Sprintf("%s\r\n", room.Name))
-	if room.Description != "" {
+	if room.Description != "" && (args == "" || !ch.Comm.Has(types.CommBrief)) {
 		d.send(ch, fmt.Sprintf("  %s\r\n", room.Description))
 	}
 
@@ -3376,7 +3377,7 @@ func (d *CommandDispatcher) cmdEnter(ch *types.Character, args string) {
 	ActToRoom("$n has arrived through a portal.", ch, nil, nil, d.Output)
 
 	// Show new room
-	d.cmdLook(ch, "")
+	d.cmdLook(ch, "auto")
 
 	// Reduce portal charges if applicable (value[0] = charges, -1 = infinite)
 	if portal.Values[0] > 0 {
@@ -5143,7 +5144,7 @@ func (d *CommandDispatcher) cmdGoto(ch *types.Character, args string) {
 	ch.InRoom = room
 
 	d.send(ch, fmt.Sprintf("You goto room %d.\r\n", vnum))
-	d.doLook(ch, "")
+	d.doLook(ch, "auto")
 }
 
 func (d *CommandDispatcher) cmdStat(ch *types.Character, args string) {
@@ -5414,7 +5415,7 @@ func (d *CommandDispatcher) cmdTransfer(ch *types.Character, args string) {
 	d.send(target, fmt.Sprintf("%s has transferred you!\r\n", ch.Name))
 
 	// Show the new room to the target
-	d.doLook(target, "")
+	d.doLook(target, "auto")
 }
 
 func (d *CommandDispatcher) cmdAt(ch *types.Character, args string) {

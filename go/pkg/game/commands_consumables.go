@@ -642,7 +642,7 @@ func (d *CommandDispatcher) cmdUse(ch *types.Character, args string) {
 	CharFromRoom(ch)
 	CharToRoom(ch, destRoom)
 	ActToRoom("$n arrives in a flash of light.", ch, nil, nil, d.Output)
-	d.cmdLook(ch, "")
+	d.cmdLook(ch, "auto")
 
 	// Spend a charge; consume single-use runes.
 	if obj.Values[0] > 0 {
