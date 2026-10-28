@@ -121,6 +121,8 @@ func hisHerIts(ch *types.Character) string {
 	}
 }
 
+// Room broadcasts skip sleeping bystanders, like ROM act() with POS_RESTING.
+
 // ActToRoom sends a formatted message to everyone in the room except the actor
 func ActToRoom(format string, ch *types.Character, victim *types.Character, obj *types.Object, output OutputFunc) {
 	if ch == nil || ch.InRoom == nil {
@@ -130,7 +132,7 @@ func ActToRoom(format string, ch *types.Character, victim *types.Character, obj 
 	msg := ActFormat(format, ch, victim, obj) + "\r\n"
 
 	for _, person := range ch.InRoom.People {
-		if person == ch {
+		if person == ch || person.Position <= types.PosSleeping {
 			continue
 		}
 		output(person, msg)
@@ -164,7 +166,7 @@ func ActToNotVict(format string, ch *types.Character, victim *types.Character, o
 	msg := ActFormat(format, ch, victim, obj) + "\r\n"
 
 	for _, person := range ch.InRoom.People {
-		if person == ch || person == victim {
+		if person == ch || person == victim || person.Position <= types.PosSleeping {
 			continue
 		}
 		output(person, msg)
@@ -180,6 +182,9 @@ func ActToAll(format string, ch *types.Character, victim *types.Character, obj *
 	msg := ActFormat(format, ch, victim, obj) + "\r\n"
 
 	for _, person := range ch.InRoom.People {
+		if person != ch && person.Position <= types.PosSleeping {
+			continue
+		}
 		output(person, msg)
 	}
 }

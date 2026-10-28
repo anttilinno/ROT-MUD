@@ -175,3 +175,21 @@ func TestActToVict(t *testing.T) {
 		}
 	})
 }
+
+func TestActToRoomSkipsSleepers(t *testing.T) {
+	room := &types.Room{Vnum: 1}
+	actor := types.NewCharacter("Actor")
+	awake := types.NewCharacter("Awake")
+	asleep := types.NewCharacter("Asleep")
+	actor.Position, awake.Position, asleep.Position = types.PosStanding, types.PosResting, types.PosSleeping
+	for _, c := range []*types.Character{actor, awake, asleep} {
+		c.InRoom = room
+	}
+	room.People = []*types.Character{actor, awake, asleep}
+
+	got := map[*types.Character]bool{}
+	ActToRoom("$n waves.", actor, nil, nil, func(ch *types.Character, _ string) { got[ch] = true })
+	if !got[awake] || got[asleep] {
+		t.Errorf("awake got=%v asleep got=%v, want true/false", got[awake], got[asleep])
+	}
+}
