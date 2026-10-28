@@ -141,11 +141,11 @@ func TestPray(t *testing.T) {
 		t.Errorf("pray armor should grant armor; got %q", *out)
 	}
 
-	player.Level = 31
+	player.Level = 11
 	player.Affected = types.AffectList{}
 	*out = ""
 	d.Dispatch(Command{Character: player, Input: "pray armor"})
 	if player.Affected.HasType("armor") {
-		t.Error("level 31 player should be refused")
+		t.Error("level 11 player should be refused")
 	}
 }

@@ -300,15 +300,15 @@ func adeptSpellUseful(spell string, ch *types.Character) bool {
 	}
 }
 
-// cmdPray asks the adept for one of its free spells. Players below level 31
-// only, the same limit ROT's adept used when it cast unasked.
+// cmdPray asks the adept for one of its free spells. Players up to level 10
+// only, the same cap as mud school.
 func (d *CommandDispatcher) cmdPray(ch *types.Character, args string) {
 	adept := d.findHealer(ch)
 	if adept == nil {
 		d.send(ch, "Your prayer goes unanswered.\r\n")
 		return
 	}
-	if ch.IsNPC() || ch.Level >= 31 {
+	if ch.IsNPC() || ch.Level > 10 {
 		ActToChar("$N tells you 'You have outgrown my help, child.'", ch, adept, nil, d.Output)
 		return
 	}
