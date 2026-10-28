@@ -409,3 +409,24 @@ func TestSpecCastAdept_HighLevelPlayer(t *testing.T) {
 		t.Error("adept should NOT cast spells on players level 31+")
 	}
 }
+
+func TestSpecCastAdeptSkipsUselessSpells(t *testing.T) {
+	room := &types.Room{Vnum: 3700}
+	adept := types.NewNPC(3010, "adept", 30)
+	adept.InRoom, adept.Position = room, types.PosStanding
+	player := types.NewCharacter("TestPlayer")
+	player.Level, player.InRoom, player.Position = 5, room, types.PosStanding
+	player.Hit, player.Move = player.MaxHit, player.MaxMove
+	for _, buff := range []string{"armor", "bless", "sanctuary", "shield"} {
+		player.Affected.Add(types.NewAffect(buff, 10, 10, types.ApplyNone, 0, 0))
+	}
+	room.People = []*types.Character{adept, player}
+
+	ctx := &SpecialContext{CastSpell: func(_ *types.Character, spell string, _ *types.Character) bool {
+		t.Errorf("adept cast %q on a buffed, healthy, uncursed player", spell)
+		return true
+	}}
+	for range 200 {
+		specCastAdept(adept, ctx)
+	}
+}

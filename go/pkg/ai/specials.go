@@ -198,47 +198,20 @@ func specCastAdept(ch *types.Character, ctx *SpecialContext) bool {
 		return false
 	}
 
-	var spell string
-	var word string
-
-	switch combat.NumberBits(4) {
-	case 0:
-		word = "abrazak"
-		spell = "armor"
-	case 1:
-		word = "fido"
-		spell = "bless"
-	case 2:
-		word = "judicandus noselacri"
-		spell = "cure blindness"
-	case 3:
-		word = "judicandus dies"
-		spell = "cure light"
-	case 4:
-		word = "judicandus sausabru"
-		spell = "cure poison"
-	case 5:
-		word = "candusima"
-		spell = "refresh"
-	case 6:
-		word = "judicandus eugzagz"
-		spell = "cure disease"
-	case 7:
-		word = "judicandus eqtuyp"
-		spell = "sanctuary"
-	case 8:
-		word = "qwerty"
-		spell = "shield"
-	case 9:
-		word = "saspell"
-		spell = "heal"
-	default:
+	// ROT rolls number_bits(4) over ten spells; rolls past the table do nothing
+	roll := combat.NumberBits(4)
+	if roll >= len(adeptSpells) {
+		return false
+	}
+	spell := adeptSpells[roll]
+	// Unlike ROT, skip a spell that would do nothing, so the adept doesn't
+	// pray for cure blindness over and over at a player who can see
+	if !adeptSpellUseful(spell, victim) {
 		return false
 	}
 
-	// Say the magic word
 	if ctx.ActToRoom != nil {
-		ctx.ActToRoom("$n utters the word '"+word+"'.", ch, nil, ctx.Output)
+		ctx.ActToRoom("$n prays for '"+spell+"'.", ch, nil, ctx.Output)
 	}
 
 	// Cast the spell
@@ -247,6 +220,30 @@ func specCastAdept(ch *types.Character, ctx *SpecialContext) bool {
 	}
 
 	return true
+}
+
+// adeptSpells is spec_cast_adept's spell list, in ROT's number_bits(4) order
+var adeptSpells = []string{
+	"armor", "bless", "cure blindness", "cure light", "cure poison",
+	"refresh", "cure disease", "sanctuary", "shield", "heal",
+}
+
+// adeptSpellUseful reports whether casting spell on victim would change anything
+func adeptSpellUseful(spell string, victim *types.Character) bool {
+	switch spell {
+	case "cure blindness":
+		return victim.IsAffected(types.AffBlind)
+	case "cure poison":
+		return victim.IsAffected(types.AffPoison)
+	case "cure disease":
+		return victim.IsAffected(types.AffPlague)
+	case "cure light", "heal":
+		return victim.Hit < victim.MaxHit
+	case "refresh":
+		return victim.Move < victim.MaxMove
+	default: // buffs
+		return !magic.IsAffectedBy(victim, spell)
+	}
 }
 
 // specCastCleric - offensive cleric mob
