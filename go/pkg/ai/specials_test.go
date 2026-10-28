@@ -323,107 +323,17 @@ func TestSpecFido(t *testing.T) {
 	}
 }
 
-func TestSpecCastAdept(t *testing.T) {
-	adept := types.NewNPC(3010, "adept", 30)
-	room := &types.Room{
-		Vnum:   3700,
-		People: make([]*types.Character, 0),
-	}
-	adept.InRoom = room
-	adept.Position = types.PosStanding
-	room.People = append(room.People, adept)
-
-	ctx := &SpecialContext{}
-
-	// No players - should return false
-	if specCastAdept(adept, ctx) {
-		t.Error("adept should not act when no low-level players present")
-	}
-
-	// Add a low-level player
-	player := types.NewCharacter("TestPlayer")
-	player.Level = 5 // Below level 31, so adept should help
-	player.InRoom = room
-	player.Position = types.PosStanding
-	room.People = append(room.People, player)
-
-	// Track actions
-	spellCast := false
-	actedToRoom := false
-	ctx.ActToRoom = func(msg string, ch, victim *types.Character, output func(ch *types.Character, msg string)) {
-		actedToRoom = true
-	}
-	ctx.CastSpell = func(ch *types.Character, spellName string, victim *types.Character) bool {
-		spellCast = true
-		if victim != player {
-			t.Error("adept should cast spell on the low-level player")
-		}
-		return true
-	}
-
-	// Run multiple times to account for random chance
-	for i := 0; i < 100; i++ {
-		if specCastAdept(adept, ctx) {
-			break
-		}
-	}
-
-	if !actedToRoom {
-		t.Error("adept should have uttered a magic word")
-	}
-	if !spellCast {
-		t.Error("adept should have cast a spell")
-	}
-}
-
-func TestSpecCastAdept_HighLevelPlayer(t *testing.T) {
-	adept := types.NewNPC(3010, "adept", 30)
-	room := &types.Room{
-		Vnum:   3700,
-		People: make([]*types.Character, 0),
-	}
-	adept.InRoom = room
-	adept.Position = types.PosStanding
-	room.People = append(room.People, adept)
-
-	// Add a high-level player (level 35, above the 31 threshold)
-	player := types.NewCharacter("VeteranPlayer")
-	player.Level = 35
-	player.InRoom = room
-	player.Position = types.PosStanding
-	room.People = append(room.People, player)
-
-	ctx := &SpecialContext{}
-	spellCast := false
-	ctx.CastSpell = func(ch *types.Character, spellName string, victim *types.Character) bool {
-		spellCast = true
-		return true
-	}
-
-	// Run multiple times - should never cast on high-level player
-	for i := 0; i < 100; i++ {
-		specCastAdept(adept, ctx)
-	}
-
-	if spellCast {
-		t.Error("adept should NOT cast spells on players level 31+")
-	}
-}
-
-func TestSpecCastAdeptSkipsUselessSpells(t *testing.T) {
+func TestSpecCastAdeptNeverCastsUnasked(t *testing.T) {
 	room := &types.Room{Vnum: 3700}
 	adept := types.NewNPC(3010, "adept", 30)
 	adept.InRoom, adept.Position = room, types.PosStanding
 	player := types.NewCharacter("TestPlayer")
 	player.Level, player.InRoom, player.Position = 5, room, types.PosStanding
-	player.Hit, player.Move = player.MaxHit, player.MaxMove
-	for _, buff := range []string{"armor", "bless", "sanctuary", "shield"} {
-		player.Affected.Add(types.NewAffect(buff, 10, 10, types.ApplyNone, 0, 0))
-	}
+	player.Hit = 1
 	room.People = []*types.Character{adept, player}
 
 	ctx := &SpecialContext{CastSpell: func(_ *types.Character, spell string, _ *types.Character) bool {
-		t.Errorf("adept cast %q on a buffed, healthy, uncursed player", spell)
+		t.Errorf("adept cast %q unasked", spell)
 		return true
 	}}
 	for range 200 {

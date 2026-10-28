@@ -1826,6 +1826,7 @@ func (d *CommandDispatcher) registerBasicCommands() {
 	d.Registry.Register("cast", d.cmdCast, types.PosFighting, 0)
 	d.Registry.Register("spells", d.cmdSpells, types.PosDead, 0)
 	d.Registry.Register("heal", d.cmdHeal, types.PosStanding, 0)
+	d.Registry.Register("pray", d.cmdPray, types.PosResting, 0)
 	d.Registry.Register("use", d.cmdUse, types.PosStanding, 0)
 
 	// Shop commands

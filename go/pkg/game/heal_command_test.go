@@ -119,3 +119,33 @@ func TestHealNotEnoughGold(t *testing.T) {
 		t.Errorf("expected donation-too-high message, got %q", *out)
 	}
 }
+
+func TestPray(t *testing.T) {
+	d, player, out := setupHealerRoom()
+	player.Level = 5
+
+	d.Dispatch(Command{Character: player, Input: "pray"})
+	if !contains(*out, "You can pray for") {
+		t.Errorf("bare pray should list spells; got %q", *out)
+	}
+
+	*out = ""
+	d.Dispatch(Command{Character: player, Input: "pray cure blind"})
+	if !contains(*out, "no need") {
+		t.Errorf("cure blindness on a seeing player should be refused; got %q", *out)
+	}
+
+	*out = ""
+	d.Dispatch(Command{Character: player, Input: "pray armor"})
+	if !player.Affected.HasType("armor") {
+		t.Errorf("pray armor should grant armor; got %q", *out)
+	}
+
+	player.Level = 31
+	player.Affected = types.AffectList{}
+	*out = ""
+	d.Dispatch(Command{Character: player, Input: "pray armor"})
+	if player.Affected.HasType("armor") {
+		t.Error("level 31 player should be refused")
+	}
+}

@@ -178,72 +178,10 @@ func specBreathLightning(ch *types.Character, ctx *SpecialContext) bool {
 
 // === Casting Specials ===
 
-// specCastAdept - helpful healer that buffs low level players
+// specCastAdept marks the mud school adept. Unlike ROT it never casts on its
+// own: players ask for spells with the pray command (see game.cmdPray).
 func specCastAdept(ch *types.Character, ctx *SpecialContext) bool {
-	if !canAct(ch) {
-		return false
-	}
-
-	// Find a low-level player in the room
-	var victim *types.Character
-	for _, vch := range ch.InRoom.People {
-		if vch != ch && !vch.IsNPC() && vch.Level < 31 &&
-			combat.CanSee(ch, vch) && combat.NumberBits(1) == 0 {
-			victim = vch
-			break
-		}
-	}
-
-	if victim == nil {
-		return false
-	}
-
-	// ROT rolls number_bits(4) over ten spells; rolls past the table do nothing
-	roll := combat.NumberBits(4)
-	if roll >= len(adeptSpells) {
-		return false
-	}
-	spell := adeptSpells[roll]
-	// Unlike ROT, skip a spell that would do nothing, so the adept doesn't
-	// pray for cure blindness over and over at a player who can see
-	if !adeptSpellUseful(spell, victim) {
-		return false
-	}
-
-	if ctx.ActToRoom != nil {
-		ctx.ActToRoom("$n prays for '"+spell+"'.", ch, nil, ctx.Output)
-	}
-
-	// Cast the spell
-	if ctx.CastSpell != nil {
-		return ctx.CastSpell(ch, spell, victim)
-	}
-
-	return true
-}
-
-// adeptSpells is spec_cast_adept's spell list, in ROT's number_bits(4) order
-var adeptSpells = []string{
-	"armor", "bless", "cure blindness", "cure light", "cure poison",
-	"refresh", "cure disease", "sanctuary", "shield", "heal",
-}
-
-// adeptSpellUseful reports whether casting spell on victim would change anything
-func adeptSpellUseful(spell string, victim *types.Character) bool {
-	switch spell {
-	case "cure blindness":
-		return victim.IsAffected(types.AffBlind)
-	case "cure poison":
-		return victim.IsAffected(types.AffPoison)
-	case "cure disease":
-		return victim.IsAffected(types.AffPlague)
-	case "cure light", "heal":
-		return victim.Hit < victim.MaxHit
-	case "refresh":
-		return victim.Move < victim.MaxMove
-	default: // buffs
-		return !magic.IsAffectedBy(victim, spell)
-	}
+	return false
 }
 
 // specCastCleric - offensive cleric mob

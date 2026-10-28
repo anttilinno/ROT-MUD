@@ -6,6 +6,7 @@ import (
 	"strings"
 
 	"rotmud/pkg/combat"
+	"rotmud/pkg/magic"
 	"rotmud/pkg/types"
 )
 
@@ -272,4 +273,72 @@ func (d *CommandDispatcher) cmdHeal(ch *types.Character, args string) {
 		return
 	}
 	spell.Func(healer, healer.Level, ch)
+}
+
+// adeptSpells are the free spells the mud school adept grants on prayer:
+// ROT's spec_cast_adept list
+var adeptSpells = []string{
+	"armor", "bless", "cure blindness", "cure light", "cure poison",
+	"refresh", "cure disease", "sanctuary", "shield", "heal",
+}
+
+// adeptSpellUseful reports whether casting spell on ch would change anything
+func adeptSpellUseful(spell string, ch *types.Character) bool {
+	switch spell {
+	case "cure blindness":
+		return ch.IsAffected(types.AffBlind)
+	case "cure poison":
+		return ch.IsAffected(types.AffPoison)
+	case "cure disease":
+		return ch.IsAffected(types.AffPlague)
+	case "cure light", "heal":
+		return ch.Hit < ch.MaxHit
+	case "refresh":
+		return ch.Move < ch.MaxMove
+	default: // buffs
+		return !magic.IsAffectedBy(ch, spell)
+	}
+}
+
+// cmdPray asks the adept for one of its free spells. Players below level 31
+// only, the same limit ROT's adept used when it cast unasked.
+func (d *CommandDispatcher) cmdPray(ch *types.Character, args string) {
+	adept := d.findHealer(ch)
+	if adept == nil {
+		d.send(ch, "Your prayer goes unanswered.\r\n")
+		return
+	}
+	if ch.IsNPC() || ch.Level >= 31 {
+		ActToChar("$N tells you 'You have outgrown my help, child.'", ch, adept, nil, d.Output)
+		return
+	}
+
+	arg := strings.ToLower(strings.TrimSpace(args))
+	spell := ""
+	if arg != "" {
+		for _, s := range adeptSpells {
+			if strings.HasPrefix(s, arg) {
+				spell = s
+				break
+			}
+		}
+	}
+	if spell == "" {
+		d.send(ch, "You can pray for: "+strings.Join(adeptSpells, ", ")+".\r\n")
+		return
+	}
+	if !adeptSpellUseful(spell, ch) {
+		ActToChar("$N tells you 'You have no need of "+spell+", child.'", ch, adept, nil, d.Output)
+		return
+	}
+
+	ActToChar("You kneel and pray for '"+spell+"'.", ch, nil, nil, d.Output)
+	ActToRoom("$n kneels and prays for '"+spell+"'.", ch, nil, nil, d.Output)
+
+	if d.Magic == nil || d.Magic.Registry == nil {
+		return
+	}
+	if sp := d.Magic.Registry.FindByName(spell); sp != nil && sp.Func != nil {
+		sp.Func(adept, adept.Level, ch)
+	}
 }
