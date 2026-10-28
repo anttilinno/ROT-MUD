@@ -2371,7 +2371,10 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 	// Characters in room
 	for _, char := range room.People {
 		if char != ch {
-			if char.IsNPC() && char.ShortDesc != "" {
+			// ROM show_char_to_char_0: an NPC at its default position shows its long description
+			if char.IsNPC() && char.LongDesc != "" && char.Position == char.DefaultPos {
+				d.send(ch, strings.TrimRight(char.LongDesc, "\r\n")+"\r\n")
+			} else if char.IsNPC() && char.ShortDesc != "" {
 				d.send(ch, fmt.Sprintf("%s is here.\r\n", char.ShortDesc))
 			} else {
 				d.send(ch, fmt.Sprintf("%s is here.\r\n", char.Name))
