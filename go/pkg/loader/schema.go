@@ -41,6 +41,7 @@ type AreaMetadata struct {
 	Name          string     `toml:"name"`
 	Credits       string     `toml:"credits"`
 	ResetInterval int        `toml:"reset_interval"`
+	MaxLevel      int        `toml:"max_level"`
 	VnumRange     VnumRange  `toml:"vnum_range"`
 	LevelRange    LevelRange `toml:"level_range"`
 }

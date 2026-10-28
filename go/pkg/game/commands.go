@@ -2185,6 +2185,12 @@ func (d *CommandDispatcher) doMove(ch *types.Character, dir types.Direction) {
 		return
 	}
 
+	if a := exit.ToRoom.Area; a != nil && a != room.Area && a.MaxLevel > 0 &&
+		!ch.IsNPC() && !ch.IsImmortal() && ch.Level > a.MaxLevel {
+		d.send(ch, "You are too experienced to enter "+a.Name+".\r\n")
+		return
+	}
+
 	// Move character
 	oldRoom := room
 	newRoom := exit.ToRoom

@@ -215,6 +215,7 @@ type Area struct {
 	MaxVnum    int    // Maximum vnum in area
 	LowRange   int    // Suggested level range (low)
 	HighRange  int    // Suggested level range (high)
+	MaxLevel   int    // Highest mortal level allowed to walk in; 0 = no limit
 	Age        int    // Ticks since last reset
 	NumPlayers int    // Players currently in area
 	Empty      bool   // True if area is empty of players

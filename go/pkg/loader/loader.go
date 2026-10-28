@@ -283,6 +283,7 @@ func (l *AreaLoader) loadArea(areaPath string, world *World) error {
 	area := types.NewArea(meta.Name, meta.VnumRange.Min, meta.VnumRange.Max)
 	area.Filename = filepath.Base(areaPath)
 	area.Credits = meta.Credits
+	area.MaxLevel = meta.MaxLevel
 	world.Areas = append(world.Areas, area)
 
 	// Load mobprogs first (so they're available when loading mobs)
