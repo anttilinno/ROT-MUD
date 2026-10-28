@@ -31,6 +31,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["vampiric"]
   dice_number = 3
   dice_size = 4
 
@@ -41,6 +44,12 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["devil", "rod"]
+description = """
+This is indeed a mysterious rod.  It is dark black at the base but has four
+very sharp purple tentacles at the end."""
 
 [[objects]]
 vnum = 7201
@@ -55,12 +64,20 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 10
 
   [[objects.affects]]
   location = "damroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["large", "mace"]
+description = """
+The mace is pretty large with a weight of 10 lbs.  The head is actually four
+purple tentacles tied together."""
 
 [[objects]]
 vnum = 7202
@@ -75,12 +92,20 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 5
 
   [[objects.affects]]
   location = "damroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["small", "mace"]
+description = """
+This weapon doesn't look like it does a lot of damage, but then you never know.
+It consists of a black handle and a purple head."""
 
 [[objects]]
 vnum = 7203
@@ -116,6 +141,10 @@ cost = 1490
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 14
+  spells = ["cure critical", "invisibility", "word of recall"]
+
 [[objects]]
 vnum = 7205
 keywords = ["key", "black"]
@@ -149,6 +178,17 @@ extra_flags = ["magic", "nodrop"]
   location = "dex"
   modifier = -4
 
+[[objects.extra_descs]]
+keywords = ["writing", "text"]
+description = """
+You read the number '666'."""
+
+[[objects.extra_descs]]
+keywords = ["white", "skull"]
+description = """
+The skull has two small horns in the forehead. You notice some writing on
+the inside."""
+
 [[objects]]
 vnum = 7208
 keywords = ["stick", "small", "light"]
@@ -159,6 +199,20 @@ level = 0
 weight = 10
 cost = 5
 wear_flags = ["take", "hold"]
+
+[[objects.extra_descs]]
+keywords = ["letters", "letter"]
+description = """
+It reads 'Hold me'."""
+
+[[objects.extra_descs]]
+keywords = ["small", "stick"]
+description = """
+The small stick does not look interesting at all.  But just as you are going
+to throw it away you notice some small letters."""
+
+  [objects.light]
+  duration = 120
 
 [[objects]]
 vnum = 7209
@@ -193,6 +247,14 @@ weight = 0
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["treasure"]
+description = """
+This looks like a whole lot of coins."""
+
+  [objects.money]
+  amount = 700
+
 [[objects]]
 vnum = 7211
 keywords = ["sword", "short"]
@@ -205,6 +267,8 @@ cost = 540
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 4
 
@@ -225,6 +289,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 15
 
@@ -235,6 +301,11 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "ac"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["claw", "red", "redclaw"]
+description = """
+This big claw looks like a part of a dragon."""
 
 [[objects]]
 vnum = 7217
@@ -258,6 +329,12 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   location = "str"
   modifier = 3
 
+[[objects.extra_descs]]
+keywords = ["plate", "breast", "silvery"]
+description = """
+On the breast plate you notice a relief of large rose. The metal seems to be
+some kind of silver or platinum."""
+
 [[objects]]
 vnum = 7218
 keywords = ["plates", "leg", "silvery"]
@@ -279,6 +356,11 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "int"
   modifier = 3
+
+[[objects.extra_descs]]
+keywords = ["leg", "plates", "silvery"]
+description = """
+They seem to be made from silver or platinum.  You see the outline of a rose."""
 
 [[objects]]
 vnum = 7219
@@ -306,6 +388,11 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   location = "hitroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["gloves", "silvery"]
+description = """
+The gloves are made of silver threads."""
+
 [[objects]]
 vnum = 7220
 keywords = ["helmet", "silvery"]
@@ -327,6 +414,12 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "wis"
   modifier = 3
+
+[[objects.extra_descs]]
+keywords = ["helmet", "silvery"]
+description = """
+The helmet is made from platinum or silver and has a white fur brush attached
+on the top."""
 
 [[objects]]
 vnum = 7221
@@ -350,6 +443,12 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   location = "ac"
   modifier = -7
 
+[[objects.extra_descs]]
+keywords = ["shield"]
+description = """
+On the shield you see a clear and perfect painting of a dark red rose on a white
+background. You also notice the inscription :'Pax Est Sanctuum'."""
+
 [[objects]]
 vnum = 7222
 keywords = ["boots", "silvery"]
@@ -371,6 +470,11 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "dex"
   modifier = 3
+
+[[objects.extra_descs]]
+keywords = ["boots", "silvery"]
+description = """
+The boots are made from a silvery metal."""
 
 [[objects]]
 vnum = 7223
@@ -394,6 +498,11 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   location = "con"
   modifier = 3
 
+[[objects.extra_descs]]
+keywords = ["plates", "arm", "silvery"]
+description = """
+They seem to be made from silver or platinum. You see the outline of a rose."""
+
 [[objects]]
 vnum = 7224
 keywords = ["cloak", "white"]
@@ -416,6 +525,12 @@ extra_flags = ["magic", "bless", "anti_evil", "anti_neutral"]
   location = "saves"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["cloak", "white"]
+description = """
+This is a very fine made cloak from an unknown material, in a bright white
+color."""
+
 [[objects]]
 vnum = 7298
 keywords = ["treasure", "coins"]
@@ -426,6 +541,14 @@ level = 0
 weight = 0
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["treasure"]
+description = """
+Looks like a LOT of coins."""
+
+  [objects.money]
+  amount = 1600
 
 [[objects]]
 vnum = 7299
@@ -439,8 +562,15 @@ cost = 610
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 5
+
+[[objects.extra_descs]]
+keywords = ["short", "sword"]
+description = """
+This is a very nice little weapon."""
 
 [[objects]]
 vnum = 7300
@@ -453,6 +583,12 @@ weight = 20
 cost = 100
 wear_flags = ["take", "about"]
 
+  [objects.container]
+  capacity = 60
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 6
+
 [[objects]]
 vnum = 7301
 keywords = ["beltpouch", "pouch"]
@@ -463,6 +599,12 @@ level = 0
 weight = 10
 cost = 20
 wear_flags = ["take", "waist"]
+
+  [objects.container]
+  capacity = 5
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 1
 
 [[objects]]
 vnum = 7303
@@ -483,6 +625,12 @@ extra_flags = ["magic", "anti_good"]
   [[objects.affects]]
   location = "int"
   modifier = 2
+
+  [objects.magic]
+  level = 13
+  max_charges = 10
+  charges = 10
+  spells = ["sanctuary"]
 
 [[objects]]
 vnum = 7304
@@ -655,4 +803,3 @@ extra_flags = ["magic", "anti_good"]
   [[objects.affects]]
   location = "damroll"
   modifier = 2
-

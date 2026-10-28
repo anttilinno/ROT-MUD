@@ -71,9 +71,54 @@ type MagicSystem struct {
 
 // NewMagicSystem creates a new magic system with default spells
 func NewMagicSystem() *MagicSystem {
-	return &MagicSystem{
+	m := &MagicSystem{
 		Registry: DefaultSpells(),
 	}
+	// Spells that move characters need the system's hooks.
+	m.Registry.FindBySlot(SlotWordOfRecall).Func = m.spellWordOfRecall
+	return m
+}
+
+// spellWordOfRecall sends the target to their bound recall room (`bind`), or
+// the Midgaard temple if none is bound. It ends combat without exp loss and
+// fails in no-recall rooms or on the cursed.
+func (m *MagicSystem) spellWordOfRecall(caster *types.Character, level int, target interface{}) bool {
+	victim, ok := target.(*types.Character)
+	if !ok || victim == nil || victim.InRoom == nil || victim.IsNPC() ||
+		m.RoomFinder == nil || m.CharacterToRoom == nil {
+		return false
+	}
+
+	vnum := combat.RoomVnumTemple
+	if victim.PCData != nil && victim.PCData.Recall != 0 {
+		vnum = victim.PCData.Recall
+	}
+	room := m.RoomFinder(vnum)
+	if room == nil {
+		m.send(victim, "You are completely lost.\r\n")
+		return false
+	}
+	if victim.InRoom.Flags.Has(types.RoomNoRecall) || victim.IsAffected(types.AffCurse) {
+		m.send(victim, "Spell failed.\r\n")
+		return false
+	}
+
+	if victim.Fighting != nil {
+		combat.StopFighting(victim, true)
+	}
+	victim.Move /= 2
+	for _, p := range victim.InRoom.People {
+		if p != victim {
+			m.send(p, victim.Name+" disappears.\r\n")
+		}
+	}
+	m.CharacterToRoom(victim, room)
+	for _, p := range room.People {
+		if p != victim {
+			m.send(p, victim.Name+" appears in the room.\r\n")
+		}
+	}
+	return true
 }
 
 // Cast attempts to cast a spell

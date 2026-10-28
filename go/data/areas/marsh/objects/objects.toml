@@ -11,6 +11,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_good"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 12
 
@@ -48,6 +51,11 @@ extra_flags = ["anti_good"]
   location = "damroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["horns", "horn"]
+description = """
+These horns appear to be made of adamantite."""
+
 [[objects]]
 vnum = 8303
 keywords = ["chain", "mail", "chainmail"]
@@ -79,6 +87,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["nodrop", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 4
 
@@ -102,6 +113,15 @@ cost = 690
 wear_flags = ["take"]
 extra_flags = ["glow", "hum"]
 
+[[objects.extra_descs]]
+keywords = ["potion"]
+description = """
+It looks really disgusting and doesn't smell very nice either."""
+
+  [objects.magic]
+  level = 43
+  spells = ["cure critical"]
+
 [[objects]]
 vnum = 8308
 keywords = ["claymore", "rusty", "sword"]
@@ -114,6 +134,8 @@ cost = 3000
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 7
-

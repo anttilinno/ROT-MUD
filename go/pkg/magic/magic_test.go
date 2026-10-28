@@ -469,16 +469,6 @@ func TestDispelMagic(t *testing.T) {
 	}
 }
 
-func TestWordOfRecall(t *testing.T) {
-	ch := types.NewCharacter("Test")
-
-	// Word of recall just returns true (movement handled elsewhere)
-	success := spellWordOfRecall(ch, 30, ch)
-	if !success {
-		t.Error("word of recall should succeed")
-	}
-}
-
 func TestPassDoorSpell(t *testing.T) {
 	ch := types.NewCharacter("Test")
 
@@ -753,5 +743,31 @@ func TestDispelMobSanctuaryFlag(t *testing.T) {
 	}
 	if gone < 180 || gone > 320 {
 		t.Errorf("built-in sanctuary dispelled %d/1000 times, want about 250", gone)
+	}
+}
+
+// Thieves get a small utility spell list (shadowcraft, beguiling).
+func TestThiefSpellLevels(t *testing.T) {
+	reg := DefaultSpells()
+	th := types.NewCharacter("Test")
+	th.Class = types.ClassThief
+	th.Position = types.PosStanding
+	th.Mana = 100
+	for name, lv := range map[string]int{"detect magic": 6, "invisibility": 15, "pass door": 30, "charm person": 35} {
+		sp := reg.FindByName(name)
+		if sp == nil {
+			t.Fatalf("%s not registered", name)
+		}
+		th.Level = lv - 1
+		if sp.CanCast(th) {
+			t.Errorf("thief cast %s below level %d", name, lv)
+		}
+		th.Level = lv
+		if !sp.CanCast(th) {
+			t.Errorf("thief can't cast %s at level %d", name, lv)
+		}
+	}
+	if reg.FindByName("fireball").GetClassLevel(types.ClassThief) != 0 {
+		t.Error("thieves should not get fireball")
 	}
 }

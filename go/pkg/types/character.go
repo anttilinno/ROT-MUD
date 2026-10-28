@@ -169,12 +169,15 @@ type PCData struct {
 	ForgetList    []string    // Players to ignore (max 10)
 
 	// Other
-	Recall          int   // Recall room vnum
-	SavedRoom       int   // Last room vnum when player quit (0 = use recall)
-	Points          int   // Creation points spent
-	OverspentPoints int   // Creation points overspent (affects XP per level)
-	Security        int   // Builder security level
-	BankCoin        int64 // Coin stored in bank, in copper pieces
+	Recall          int         // Recall room vnum
+	Forge           *ForgeOrder // Weapon commissioned from a smith, if any
+	InnRoom         int         // Room rented at an inn (`rent`)
+	InnUntil        int64       // Rent expiry, unix seconds
+	SavedRoom       int         // Last room vnum when player quit (0 = use recall)
+	Points          int         // Creation points spent
+	OverspentPoints int         // Creation points overspent (affects XP per level)
+	Security        int         // Builder security level
+	BankCoin        int64       // Coin stored in bank, in copper pieces
 
 	// Dupe tracking (alternate character names owned by same player)
 	Dupes []string // List of alternate character names
@@ -425,6 +428,17 @@ func (ch *Character) CarryWeight() int {
 	return total
 }
 
+// MaxCarryCount is the most items a character can carry.
+func (ch *Character) MaxCarryCount() int {
+	return 100 + ch.GetStat(StatDex)
+}
+
+// MaxCarryWeight is the most a character can carry, in the same tenths of a
+// pound as object weights (score shows both divided by 10).
+func (ch *Character) MaxCarryWeight() int {
+	return (ch.GetStat(StatStr)*10 + ch.Level*5) * 10
+}
+
 // CarryCount returns the number of items being carried
 func (ch *Character) CarryCount() int {
 	count := len(ch.Inventory)
@@ -478,4 +492,13 @@ func (ch *Character) IsThief() bool {
 // IsFrozen returns true if the player is frozen
 func (ch *Character) IsFrozen() bool {
 	return ch.HasPenalty(PlrFrozen)
+}
+
+// ForgeOrder is a weapon a player commissioned from a smith (`commission`).
+// It is collected from the same smith once ReadyAt has passed.
+type ForgeOrder struct {
+	Smith      int    `json:"smith"`       // smith mob vnum
+	Tier       string `json:"tier"`        // tier name from data/forge.toml
+	WeaponType string `json:"weapon_type"` // dagger, sword, ...
+	ReadyAt    int64  `json:"ready_at"`    // unix seconds
 }

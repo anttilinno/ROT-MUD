@@ -2,15 +2,16 @@
 vnum = 2201
 name = "The Tower Gates"
 sector = "city"
+room_flags = ["dark"]
 description = """
 You are at the entrance to a tall tower.  Lightning flashes periodically and
 it is raining.  You think it might be a good idea to turn back into the grove."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 2202
   key = 2231
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -24,10 +25,16 @@ it is raining.  You think it might be a good idea to turn back into the grove.""
     vnum = 2231
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+The gate is tall and secure.  Whoever built it values privacy."""
+
 [[rooms]]
 vnum = 2202
 name = "The Foyer"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 This is the entrance to the Tower.  The hallway continues to the north,
 leading towards a staircase.  You notice a grim painting on the wall,  and 
@@ -45,10 +52,17 @@ quickly look away."""
   vnum = 2200
   max = 12
 
+[[rooms.extra_descs]]
+keywords = ["painting"]
+description = """
+This painting depicts the grisly death of a foolish human.  You hope you do
+not share his fate."""
+
 [[rooms]]
 vnum = 2203
 name = "Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway seems to stretch on forever.  You notice a stairway in  
 the distance."""
@@ -81,6 +95,7 @@ the distance."""
 vnum = 2204
 name = "Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You trudge down the hallway.  You notice doors to the east and west."""
 
@@ -90,8 +105,8 @@ You trudge down the hallway.  You notice doors to the east and west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 2205
   flags = ["door"]
+  to_vnum = 2205
 
   [[rooms.exits]]
   direction = "south"
@@ -99,8 +114,8 @@ You trudge down the hallway.  You notice doors to the east and west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 2206
   flags = ["door"]
+  to_vnum = 2206
 
   [[rooms.mob_resets]]
   vnum = 2201
@@ -125,25 +140,36 @@ You trudge down the hallway.  You notice doors to the east and west."""
     [[rooms.mob_resets.equips]]
     vnum = 2200
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+It says "STORAGE""""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says "NURSERY" in bold letters."""
 
 [[rooms]]
 vnum = 2205
 name = "Nursery"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 It looks like a tornado has been through here.  Toys are scattered everywhere,
 and a small group of dragon hatchlings are fighting over a bone."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof"]
   to_vnum = 2223
   key = 2297
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 2204
   flags = ["door"]
+  to_vnum = 2204
 
   [[rooms.mob_resets]]
   vnum = 2200
@@ -165,27 +191,34 @@ and a small group of dragon hatchlings are fighting over a bone."""
 vnum = 2206
 name = "Storage Room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This room is covered with dust, it looks as if no one has been here in ages."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 2204
   flags = ["door"]
+  to_vnum = 2204
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 2208
   flags = ["door"]
+  to_vnum = 2208
 
   [[rooms.mob_resets]]
   vnum = 2200
   max = 12
 
+[[rooms.extra_descs]]
+keywords = ["dust"]
+description = """
+As you look closely at the dust, you notice the outline of a trapdoor!"""
+
 [[rooms]]
 vnum = 2207
 name = "End of the Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have finally reached the end of the hallway.  A huge staircase leads up.
 You see a sign at the base of the staircase."""
@@ -206,24 +239,33 @@ You see a sign at the base of the staircase."""
   vnum = 2227
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+    This area is kind of tough.  You probably shouldn't go up these stairs
+    alone if you are under 18th level, or at all if you under 14th level.
+    Have fun! -- Wench"""
+
 [[rooms]]
 vnum = 2208
 name = "Guardian's Room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You climb down the rickety stairs and find yourself face to face with a 
 gargantuan hydra.  How fast can you climb UP stairs?"""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 2209
   key = 2234
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 2206
   flags = ["door"]
+  to_vnum = 2206
 
   [[rooms.mob_resets]]
   vnum = 2226
@@ -249,6 +291,7 @@ gargantuan hydra.  How fast can you climb UP stairs?"""
 vnum = 2209
 name = "The Treasure Room"
 sector = "city"
+room_flags = ["indoors", "no_mob"]
 description = """
 You have made it past the hydra into the vault.  You are astounded by 
 the treasure here.  Not only are you now rich, you can probably rest here
@@ -256,20 +299,21 @@ safely.  The west wall seems to have a large door made entirely of ruby."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 2208
   key = 2234
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2218
   key = 2232
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 2210
 name = "The Second Floor"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have made it up to the second floor.  You hear hissing and see several
 dragon men rushing you.  You wonder how long you will be staying here."""
@@ -303,6 +347,7 @@ dragon men rushing you.  You wonder how long you will be staying here."""
 vnum = 2211
 name = "The Court"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have entered what seems to be a large court.  The people guarding it
 don't seem happy to see you ..."""
@@ -313,8 +358,8 @@ don't seem happy to see you ..."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 2212
   flags = ["door"]
+  to_vnum = 2212
 
   [[rooms.exits]]
   direction = "south"
@@ -340,6 +385,7 @@ don't seem happy to see you ..."""
 vnum = 2212
 name = "Hall O' Pleasure"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stop dead in your tracks as you enter this ornately decorated room - it
 is populated with the king's harem."""
@@ -401,9 +447,9 @@ You are continuing down the hall.  To the east and west you see ornate doors."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 2214
   key = 2240
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -411,23 +457,24 @@ You are continuing down the hall.  To the east and west you see ornate doors."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 2215
   key = 2233
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2214
 name = "The Library"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have entered a huge room, filled with books.  A peaceful man is
 sitting at a table, studying."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 2213
   key = 2240
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2203
@@ -481,20 +528,22 @@ sitting at a table, studying."""
 vnum = 2215
 name = "The Sanctum"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This small room is modestly decorated with small dragon icons.  Its sole
 occupant is deep in thought."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 2213
   key = 2233
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2216
 name = "The Court Ends"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have reached the end of the court.  A huge Draconian is sitting in a
 chair here.  As you enter, he motions with his hand and you are rushed by three
@@ -556,6 +605,7 @@ of his bodyguards."""
 vnum = 2217
 name = "bedroom"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This is the personal room of the draconian king.  It is not empty."""
 
@@ -595,15 +645,16 @@ This is the personal room of the draconian king.  It is not empty."""
 vnum = 2218
 name = "Entrance to the Crypt"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have entered a large room which smells heavily of reptile.  You wonder
 what awaits you here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2209
   key = 2232
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -621,6 +672,7 @@ what awaits you here."""
 vnum = 2219
 name = "Crypt"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a large room which continues to the west.  You notice many
 coffins here.  Open coffins reveal remains of something other than man.  
@@ -646,6 +698,7 @@ The smell of reptile is very strong here."""
 vnum = 2220
 name = "The Lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have entered a large room dominated by a great white dragon.  It growls
 at you before it attacks."""
@@ -666,6 +719,7 @@ at you before it attacks."""
 vnum = 2221
 name = "A Lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have entered a large room dominated by a great black dragon.  It looks
 as though it is amused by your presence."""
@@ -686,6 +740,7 @@ as though it is amused by your presence."""
 vnum = 2222
 name = "The Crypt Ends"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have come to the end of the Crypt.  It seems deserted.  There is a 
 strange coffin lying against the wall."""
@@ -696,8 +751,8 @@ strange coffin lying against the wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 2232
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 2202
@@ -715,10 +770,16 @@ strange coffin lying against the wall."""
     vnum = 2271
     wear_loc = "hands"
 
+[[rooms.extra_descs]]
+keywords = ["coffin"]
+description = """
+A coffin lies a against the east wall.  It is closed."""
+
 [[rooms]]
 vnum = 2223
 name = "Entrance to the Great Hall"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have entered a huge hall.  It has been carefully decorated with
 beautiful tapestries depicting a great battle between dragons and men.  The
@@ -730,14 +791,15 @@ dragons appear to be the victors."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 2205
   key = 2297
-  flags = ["door"]
 
 [[rooms]]
 vnum = 2224
 name = "The Great Hall"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are working your way down the Hall.  To the north, you notice a smaller
 passageway, while the main hall continues to the east."""
@@ -754,6 +816,7 @@ passageway, while the main hall continues to the east."""
 vnum = 2225
 name = "A Narrow Passageway"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This Passageway branches off from the main hall and leads somewhere ... where?"""
 
@@ -769,6 +832,7 @@ This Passageway branches off from the main hall and leads somewhere ... where?""
 vnum = 2226
 name = "Lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have entered a large lair with bones strewn about the ground.  You
 notice the source of these as you come face to face with a rather large red
@@ -780,8 +844,8 @@ dragon.  You notice a trap door in the floor."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 2227
   flags = ["door"]
+  to_vnum = 2227
 
   [[rooms.mob_resets]]
   vnum = 2221
@@ -803,6 +867,7 @@ dragon.  You notice a trap door in the floor."""
 vnum = 2227
 name = "Underground Tunnel"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered an underground tunnel.  It is dark and dirty, and you find
 yourself wishing you were back in Midgaard."""
@@ -813,13 +878,14 @@ yourself wishing you were back in Midgaard."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 2226
   flags = ["door"]
+  to_vnum = 2226
 
 [[rooms]]
 vnum = 2228
 name = "Underground Tunnel"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This tunnel has come to a dead end.  You feel nervous about being trapped here."""
 
@@ -831,6 +897,7 @@ This tunnel has come to a dead end.  You feel nervous about being trapped here."
 vnum = 2229
 name = "The Great Hall Ends."
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You have come to the end of the great hall.  You see before you a huge
 golden door, it must be at least twenty feet tall!  It has beautiful etchings
@@ -838,26 +905,33 @@ of dragons.  You see a sign on the door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2230
   key = 2299
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
   to_vnum = 2224
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Congratulations on making it this far!  Watch out, it gets a little
+    nasty here... :) - Wench"""
+
 [[rooms]]
 vnum = 2230
 name = "THE Lair"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You have entered a huge lair.  You feel that something big lives here or at least did.  The golden door lies back to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2229
   key = 2299
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2225
@@ -879,15 +953,16 @@ You have entered a huge lair.  You feel that something big lives here or at leas
 vnum = 2231
 name = "The End..."
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You have reached the final lair.  It is dominated by a huge five headed
 dragon.  You suddenly realize that you have SERIOUS problems..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof"]
   to_vnum = 2243
   key = 2241
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 2220
@@ -897,6 +972,7 @@ dragon.  You suddenly realize that you have SERIOUS problems..."""
 vnum = 2232
 name = "Stairwell"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 This is an old decrepit stairwell that leads to the wine cellar.  It looks
 like it hasn't been used for decades.  Well, at least not by anything living."""
@@ -917,6 +993,7 @@ like it hasn't been used for decades.  Well, at least not by anything living."""
 vnum = 2233
 name = "Wine cellar"
 sector = "field"
+room_flags = ["dark"]
 description = """
 This is the old wine cellar of the Dragon Tower.  The shelves are empty.
 Nothing living has been in here for a long time.  You see a tunnel leading
@@ -938,6 +1015,7 @@ off to the east and boy does it smell bad.  Kinda of like rotting flesh."""
 vnum = 2234
 name = "Tunnel"
 sector = "field"
+room_flags = ["dark"]
 description = """
 This tunnel seems to stretch for miles.  You try to distinguish the end but
 your eyes soon tire from the strain.  The smell here has increased two fold.
@@ -964,6 +1042,7 @@ west."""
 vnum = 2235
 name = "A cave opening"
 sector = "field"
+room_flags = ["dark"]
 description = """
 You stand at the opening of a giant cave.  There are many bones strewn across
 the room.  Some human, some indistinguishable.  It smells very bad in here.
@@ -982,6 +1061,7 @@ south."""
 vnum = 2236
 name = "The End of the tunnel"
 sector = "field"
+room_flags = ["dark"]
 description = """
 You have finally come to the end of the tunnel.  Back to the west lies
 the miles of tunnels you have walked through.  You see the faint outline of
@@ -1007,6 +1087,7 @@ a trapdoor above you.  A bridge over an underground river lies to the south."""
 vnum = 2237
 name = "The Bridge"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are walking along an old wooden bridge.  Its not that secure.  You 
 might want to hurry along.  To the south, on the other side of the bridge,
@@ -1024,6 +1105,7 @@ lies a small opening."""
 vnum = 2238
 name = "A small opening"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a small opening.  To the north lies the old wooden
 bridge.  To your south the you can see a clearing.  You can see sunlight
@@ -1061,6 +1143,21 @@ path leads up the mountain.  The small opening is back to the north."""
   [[rooms.mob_resets]]
   vnum = 2200
   max = 12
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+         This is a bottomless pit cleverly disguised as a well.  People have
+fallen in and never been heard from again.  Trust me, you don't want to go
+down there.
+                        The All Powerful Well Keeper"""
+
+[[rooms.extra_descs]]
+keywords = ["well"]
+description = """
+You peer over the side of the well.  It looks VERY, VERY deep.  It appears
+to be ENDLESS."""
 
 [[rooms]]
 vnum = 2240
@@ -1134,18 +1231,24 @@ fairy tales.  Well, if you're scared, you can always go down the mountain."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 2231
   key = 2241
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
   to_vnum = 2242
 
+[[rooms.extra_descs]]
+keywords = ["door", "platinum"]
+description = """
+A huge platinum door separates you from harm"""
+
 [[rooms]]
 vnum = 2244
 name = "Well"
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 O
  h
@@ -1158,4 +1261,3 @@ O
    I warned you!  You have fallen into the bottomless pit.  You life flashes
 right before your eyes.  Pretty pathetic isn't it?  Next time you'll know
 to listen to the God of Laughs."""
-

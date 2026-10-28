@@ -75,7 +75,10 @@ type PlayerSave struct {
 	Conditions [4]int `json:"conditions,omitempty"`
 
 	// Player flags (autoloot, autogold, autosac, etc.)
-	PlayerAct uint64 `json:"player_act,omitempty"`
+	PlayerAct uint64            `json:"player_act,omitempty"`
+	Comm      uint64            `json:"comm,omitempty"`
+	Recall    int               `json:"recall,omitempty"`
+	Forge     *types.ForgeOrder `json:"forge,omitempty"`
 
 	// Training/Practice
 	Train           int `json:"train,omitempty"`
@@ -266,6 +269,11 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 
 	// Save player flags (autoloot, autogold, autosac, etc.)
 	save.PlayerAct = uint64(ch.PlayerAct)
+	save.Comm = uint64(ch.Comm)
+	if ch.PCData != nil {
+		save.Recall = ch.PCData.Recall
+		save.Forge = ch.PCData.Forge
+	}
 
 	// Save overspent points (affects XP per level)
 	if ch.PCData != nil {
@@ -382,6 +390,8 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 		ch.PCData = &types.PCData{
 			Password:      save.Password,
 			Learned:       save.Skills,
+			Recall:        save.Recall,
+			Forge:         save.Forge,
 			Title:         save.Title,
 			Bamfin:        save.Bamfin,
 			Bamfout:       save.Bamfout,
@@ -407,6 +417,7 @@ func (p *PlayerPersistence) saveToCharacter(save *PlayerSave) *types.Character {
 
 	// Restore player flags (autoloot, autogold, autosac, etc.)
 	ch.PlayerAct = types.PlayerFlags(save.PlayerAct)
+	ch.Comm = types.CommFlags(save.Comm)
 
 	// Restore overspent points and saved room
 	if ch.PCData != nil {

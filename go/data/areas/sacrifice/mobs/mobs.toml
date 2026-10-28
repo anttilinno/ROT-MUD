@@ -15,6 +15,7 @@ off_flags = ["bash", "disarm", "kick"]
 imm_flags = ["summon", "charm", "magic", "weapon"]
 size = "large"
 race = "human"
+gold = 1300
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 alignment = 0
@@ -28,6 +29,13 @@ alignment = 0
   number = 1
   size = 8
   bonus = 32
+
+  [mobiles.shop]
+  buy_types = ["light", "boat"]
+  profit_buy = 120
+  profit_sell = 90
+  open_hour = 0
+  close_hour = 24
 
 [[mobiles]]
 vnum = 13501
@@ -46,6 +54,7 @@ res_flags = ["summon", "charm", "bash", "fire", "cold", "acid"]
 vuln_flags = ["pierce", "cold"]
 size = "huge"
 race = "dragon"
+gold = 5000
 sex = "either"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis", "infrared", "flying"]
@@ -61,4 +70,3 @@ special = "spec_breath_any"
   number = 2
   size = 8
   bonus = 5
-

@@ -11,6 +11,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_good", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["vorpal", "two_hands"]
   dice_number = 5
   dice_size = 6
 
@@ -21,6 +24,12 @@ extra_flags = ["glow", "magic", "anti_good", "anti_evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 5
+
+[[objects.extra_descs]]
+keywords = ["sword", "long", "the"]
+description = """
+This is an extremely long and heavy sword, with many magical runes inscribed
+on it.  It glows with the power of Primus, Lord of the Plane of Nirvana."""
 
 [[objects]]
 vnum = 9001
@@ -34,6 +43,12 @@ cost = 500
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["moonstone", "moon", "stone", "white"]
+description = """
+Looking into the smooth surface of this moonstone, you feel strangely at
+peace and balance with the world around you."""
+
 [[objects]]
 vnum = 9002
 keywords = ["silver", "stone"]
@@ -45,4 +60,3 @@ weight = 0
 cost = 500
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "evil", "melt_drop"]
-

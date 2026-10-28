@@ -351,9 +351,11 @@ func (g *GameLoop) sendOutput(ch *types.Character, msg string) {
 func (g *GameLoop) processRegeneration() {
 	for _, ch := range g.Characters {
 		if ch.Position >= types.PosStunned {
+			mult := innRegenMultiplier(ch)
+
 			// HP regeneration
 			if ch.Hit < ch.MaxHit {
-				ch.Hit += g.hitGain(ch)
+				ch.Hit += g.hitGain(ch) * mult
 				if ch.Hit > ch.MaxHit {
 					ch.Hit = ch.MaxHit
 				}
@@ -361,7 +363,7 @@ func (g *GameLoop) processRegeneration() {
 
 			// Mana regeneration
 			if ch.Mana < ch.MaxMana {
-				ch.Mana += g.manaGain(ch)
+				ch.Mana += g.manaGain(ch) * mult
 				if ch.Mana > ch.MaxMana {
 					ch.Mana = ch.MaxMana
 				}
@@ -369,7 +371,7 @@ func (g *GameLoop) processRegeneration() {
 
 			// Move regeneration
 			if ch.Move < ch.MaxMove {
-				ch.Move += g.moveGain(ch)
+				ch.Move += g.moveGain(ch) * mult
 				if ch.Move > ch.MaxMove {
 					ch.Move = ch.MaxMove
 				}

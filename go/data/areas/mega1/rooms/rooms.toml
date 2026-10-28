@@ -302,6 +302,7 @@ description = "Junket Way a small Skedway continues east and west."
 vnum = 8011
 name = "Davies Alley"
 sector = "city"
+room_flags = ["dark"]
 description = """
 You are in a very dark and seedy alley.  This is just the right place for
 a bite fight.  Bite fighting is an illegal activity where both combatants
@@ -439,12 +440,17 @@ with a sign next to the door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8026
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
   to_vnum = 8017
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Throt and Gleep's Megger Store est. 2107"""
 
 [[rooms]]
 vnum = 8017
@@ -537,6 +543,7 @@ Mega-City One and Brit-Cit One."""
 vnum = 8021
 name = "Pustule Palace Cafe"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A scabrous hole.  Run by Ernie Ramirez, an ex-perp, it is a meeting place
 for the low-life in the area."""
@@ -565,6 +572,7 @@ for the low-life in the area."""
 vnum = 8022
 name = "Rietzik's Shuggy Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A sleazy dive and the meeting place of a lot of perps.  Shuggy is a
 twenty-second Century version of pool, played on a hilly table, usually
@@ -578,6 +586,7 @@ with large side bets."""
 vnum = 8023
 name = "Bazza's Home for the Terminally Sarky"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is an experimental psychiatric home.  Named after a 20th Century
 vid-critic, the home attempts, by various methods, to readjust the
@@ -599,6 +608,7 @@ socially unacceptable attitudes of the inmates."""
 vnum = 8024
 name = "Nu Phisog Parlour"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Opened as a direct rival to the New You Face Parlour chain to offer quick
 and cheap face-changing facilities to the general public.  However,
@@ -621,6 +631,7 @@ died down."""
 vnum = 8025
 name = "Ziggi Piggi's Home for the Semi-Stiff"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The only suspended animation parlour in the area.  It has a high turnover
 rate.  It is rumored that the patrons are being used in body sharking and
@@ -642,6 +653,7 @@ organ legging activities."""
 vnum = 8026
 name = "Throt & Gleep's Megger Store"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This place promises to provide everything that the citizens don't need,
 with the utmost discourtesy.  Of course, something as crazy as this was
@@ -650,34 +662,40 @@ There is also a sign next to the slot."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8027
   key = 8013
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8016
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+To open insert card."""
 
 [[rooms]]
 vnum = 8027
 name = "Stockroom of Throt & Gleep's Megger Store"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Many useless items stock the shelves of this stockroom.  A door leads
 south and large vault door is to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8028
   key = 8012
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8026
   key = 8013
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8007
@@ -691,17 +709,24 @@ south and large vault door is to the north."""
     vnum = 8012
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["vault", "door"]
+description = """
+This vault seems impervious to breaking.  There is a keyhole in the lock
+however."""
+
 [[rooms]]
 vnum = 8028
 name = "Throt & Gleep's Vault"
 sector = "inside"
+room_flags = ["indoors"]
 description = "The vault is musty with a slight smell of ozone in the air."
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8027
   key = 8012
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8008
@@ -718,4 +743,3 @@ description = "The vault is musty with a slight smell of ozone in the air."
   [[rooms.obj_resets]]
   vnum = 8004
   max = 1
-

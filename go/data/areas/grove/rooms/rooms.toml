@@ -77,6 +77,7 @@ shoulders. From here, pleasant-looking paths lead east, west and south."""
 vnum = 8903
 name = "A clearing in the woods"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 You are standing in a clearing in the light woods. Somehow, this place
 seems powerfully DIFFERENT from the rest of the forest, as if something is
@@ -103,10 +104,16 @@ on one of the trees."""
   vnum = 8907
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["tablet"]
+description = """
+This zone has been populated by Merc.  1993"""
+
 [[rooms]]
 vnum = 8904
 name = "The holy grove"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 You are standing amidst the ancient oaks and poplars in the holy grove. You
 feel calm and relaxed here, as if great burdens have been lifted from Your
@@ -238,6 +245,14 @@ area through the trees, while paths lead away north and west."""
   vnum = 8908
   max = 9
 
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house."""
+
 [[rooms]]
 vnum = 8907
 name = "The holy grove"
@@ -257,10 +272,19 @@ really matter to you."""
   direction = "east"
   to_vnum = 8908
 
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house."""
+
 [[rooms]]
 vnum = 8908
 name = "The sunny field"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are standing in the middle of a wide, summery, sunlit field. There is a
 fragrance of spring in the air, a sound of summer and a feeling of eternal
@@ -282,10 +306,20 @@ patterns of the clouds as they gently drift across the sky."""
   direction = "west"
   to_vnum = 8907
 
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house. There is a terrace in front of the house,
+next to the low wing, which is almost completely windows."""
+
 [[rooms]]
 vnum = 8909
 name = "The croquet lawn"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You are standing on a immaculately manicured green lawn, the kind you only
 get after 200 years of meticulous work. There is a winding stone path leading
@@ -299,13 +333,22 @@ noon."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8910
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["mansion"]
+description = """
+The mansion is a sprawling, two-story affair with three wings, where the top
+of one wing serves as balcony. The walls look as marble would do, if marble
+changed color slowly, continuously, through the entire spectrum. There are
+large windows all over the house."""
 
 [[rooms]]
 vnum = 8910
 name = "The foyer"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are standing in the foyer of Dragon's mansion. The wide double door to
 the croquet lawn is to the north, flanked by large windows. The walls are
@@ -314,18 +357,28 @@ wall."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8909
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8911
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["painting", "paintings"]
+description = """
+They are strange indeed, works of breathtaking precision depicting obviously
+impossible motifs, like a sky filled with headless men, all dressed in some
+black costume (including hats), or a lady standing, blue from the waist up, or
+some pieces of plankwood that seems to be melting away like snow, or a night
+sky with a dove-shaped hole of bright day sky in the middle."""
 
 [[rooms]]
 vnum = 8911
 name = "The hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the north end of a connecting hallway, tastefully decorated with
 oak paneling and the coat-of-arms of various famous nobles hung on the walls.
@@ -333,13 +386,13 @@ The hallway leads south, and there is a door in the eastern wall."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8910
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8912
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -357,6 +410,7 @@ The hallway leads south, and there is a door in the eastern wall."""
 vnum = 8912
 name = "The blue room"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are in the blue room, one of the guest rooms in Dragon's mansion. The
 walls are (surprise!) blue, and the rest of the room is decorated in similar
@@ -366,8 +420,8 @@ blinds in front of the large east window you can see the edge of the grove."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8911
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 8901
@@ -377,6 +431,7 @@ blinds in front of the large east window you can see the edge of the grove."""
 vnum = 8913
 name = "The hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in the south end of the hallway. There are doors in the
 elegant oak-panelled walls to the south, east and west. Many different
@@ -388,23 +443,24 @@ coat-of-arms adorn the walls here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8914
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8915
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8916
-  flags = ["door"]
 
 [[rooms]]
 vnum = 8914
 name = "The red room"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are in the red room, one of the guest rooms in Dragon's mansion. The
 walls are wallpapered a deep warm red, and dark mahogany panelling nicely com-
@@ -414,8 +470,8 @@ pulled away from the wide windows, to reveal a nice view towards the grove."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8913
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8910
@@ -433,6 +489,7 @@ pulled away from the wide windows, to reveal a nice view towards the grove."""
 vnum = 8915
 name = "The kitchen"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in the middle of Dragon's kitchen. Contrary to popular
 belief, He *doesn't* eat virgins, which is amply demonstrated by the large
@@ -444,13 +501,13 @@ than meticulous housekeeper... There are doors to the north and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8913
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8918
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 8902
@@ -468,6 +525,7 @@ than meticulous housekeeper... There are doors to the north and west."""
 vnum = 8916
 name = "The ballroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in the middle of a vast palisander floor. This is where
 Dragon entertains large number of guests, but the cloth-covered chairs
@@ -477,13 +535,13 @@ short corridor to the greenhouse."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8913
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8918
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -493,6 +551,7 @@ short corridor to the greenhouse."""
 vnum = 8917
 name = "The greenhouse"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 This is Dragons' greenhouse. Green light filters in slantwise through the
 plants, giving the room a subtropical ambience. It is not really hot in here,
@@ -508,8 +567,8 @@ terrace."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8919
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8910
@@ -523,6 +582,7 @@ terrace."""
 vnum = 8918
 name = "The dining hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is Dragons' dining hall. There is a large long solid oak table,
 seating at least 24, with heavy, wooden chairs to match. The oak panel walls
@@ -531,18 +591,18 @@ west there is a wide double door opening out onto the sunlit terrace."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8916
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8915
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8919
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8909
@@ -552,10 +612,26 @@ west there is a wide double door opening out onto the sunlit terrace."""
     vnum = 8916
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["painting", "paintings"]
+description = """
+There are many, many beautiful paintings of famous dragons of history and
+literature. There is a big one of Smaug, a group picture of Cuspidorian Toxic
+Dragons, a rather fearsome picture of Norse Chaos incarnate, a grainy black-
+and-white photograph of Vorgulremik the Steel Dragon, a romantic picture of
+Dalvenjah the Mindijaran and Allan the man become dragon. There are three
+empty frames labeled 'The Chimerical', 'The Mythical' and 'The Hypothetical',
+A panoramic picture of Strabo flying between the worlds dominate one wall,
+while a dragons-eye view of Pern (with dragons in the foreground, of course)
+fills another. There even are a few rare medieval renditions of the great
+beast of the Revelation. Over the head of the table hangs a rather modest
+portrait of a silver Dragon, sparkling with blue lightening, looking amused."""
+
 [[rooms]]
 vnum = 8919
 name = "The terrace"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are standing on a sunlit terrace in front of Dragon's mansion. To the
 west, there is a splendid view over the field down over the lake. To the north
@@ -566,13 +642,13 @@ together with a matched set of chairs."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8917
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8918
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -619,10 +695,10 @@ south."""
 vnum = 8999
 name = "The fog"
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 You are in a grey fog, falling, screaming in pain as you realize
 that you are being torn to nothing, atom by atom, falling and falling 
 and falling ...
 ...
 ."""
-

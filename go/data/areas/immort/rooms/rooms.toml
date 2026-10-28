@@ -2,6 +2,7 @@
 vnum = 1200
 name = "The Chat Room"
 sector = "inside"
+room_flags = ["heroes_only", "indoors", "private"]
 description = """
 You are lounging in a quiet cosy parlour, warmed by a gentle magical fire
 which twinkles happily in a warm fireplace.  This is one of the many rooms
@@ -16,6 +17,7 @@ comfortable!"""
 vnum = 1201
 name = "Moses' Hangout"
 sector = "inside"
+room_flags = ["heroes_only", "indoors"]
 description = """
 You see here a cozy little room with a fireplace.  You can tell it is Moses'
 room by the two stone tablets and a bible on a small ledge near the fireplace.
@@ -31,6 +33,7 @@ There is a bell here for the butler."""
 vnum = 1202
 name = "The Center of the Universe"
 sector = "inside"
+room_flags = ["heroes_only", "indoors", "private"]
 description = """
 You are at the centre of the universe, everything is filled with bright
 light in all colors. You feel time and space no longer exist here.
@@ -44,6 +47,7 @@ Exits fill the room in all 42 dimensions, leading everywhere."""
 vnum = 1203
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only", "indoors"]
 description = """
 This is the huge Hall of Valhalla, where the Gods rule supreme.  The
 cavernous building stretches infinitely in all directions.  Valhalla 
@@ -53,8 +57,8 @@ upward..."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1209
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -62,8 +66,8 @@ upward..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1208
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -77,6 +81,7 @@ upward..."""
 vnum = 1204
 name = "Priscilla's Pleasure Palace"
 sector = "inside"
+room_flags = ["gods_only", "indoors"]
 description = """
 As you look around you, you see the largest collection of erotic toys
 in the world!!!  On a table in the middle of the room lies a book titled :
@@ -85,13 +90,14 @@ There are things here that you never even imagined in your wildest dreams!"""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1218
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1205
 name = "The Eye of the Hurricane"
 sector = "air"
+room_flags = ["imp_only", "indoors", "no_mob", "no_recall", "private"]
 description = """
 The shrieking winds of a monstrous storm surround you, spinning you around
 in an endless web of fury. But then, in the middle of turmoil, you find a
@@ -106,6 +112,7 @@ storm is going to be here a while."""
 vnum = 1206
 name = "Walking on the Moon"
 sector = "inside"
+room_flags = ["imp_only", "no_mob", "no_recall", "private"]
 description = """
 The proud and lonely silence of Mare Imbrium surrounds you, as you gaze upon
 the sterile splendor of the moon.  All around is the velvet curtain of night,
@@ -114,10 +121,17 @@ fields of Earth, looking fragile and far away, but full of hope.  A sense of
 wistful regret touches you, as you think about what might have been, and what
 will be."""
 
+[[rooms.extra_descs]]
+keywords = ["crater", "mare", "imbrium"]
+description = """
+A small shipping tag is pinned to the ground with a worn hunting knife.
+Upon it is a dedication to Robert Anson Heinlein, the father of the future."""
+
 [[rooms]]
 vnum = 1207
 name = "The Satin Memorial Reading Room"
 sector = "hills"
+room_flags = ["gods_only", "indoors", "no_recall", "private"]
 description = """
 Half read books lie everywhere: Yeats, Tennyson, Chandler, Barrie;
 a battered paperback de Laclos; a dusty leather-bound Donne.  A
@@ -130,13 +144,146 @@ from one angle, or the wine-dark sea from another."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1217
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["rose", "rose-brambled", "balcony", "railing"]
+description = """
+Climbing white roses have swarmed over the original marble to obscure
+it almost completely.  The air is sweet not with roses, though,
+but with Satin's sandalwood perfume."""
+
+[[rooms.extra_descs]]
+keywords = ["rosewood", "chair"]
+description = """
+It looks comfortable, and the cushions are ivory velvet."""
+
+[[rooms.extra_descs]]
+keywords = ["stark", "black", "mountains", "wine", "wine-dark", "dark", "sea"]
+description = """
+The ocean is constantly smashing up against the cliffs and rending
+huge slabs from it.  The beach is scarcely a beach at all, more a
+collection of rough flakes varying in size from a small car to a
+small fist.  As the water comes up over the rocks and ebbs back
+down, it filters through the spaces and makes an unnerving rattling
+sound."""
+
+[[rooms.extra_descs]]
+keywords = ["print", "out", "print-out", "creased", "well", "poem"]
+description = """
+This page has been read over so many times that you can barely discern
+the words, and in fact with much poring only the following becomes
+clear:
+        'I know that I am studly - Heck, I'm sexy, cute and cuddly
+         And I know that I'm extremely modest too.'"""
+
+[[rooms.extra_descs]]
+keywords = ["yeats"]
+description = """
+The page it is flipped open to reads:
+
+A sudden blow: the great wings beating still
+Above the staggering girl, her thighs carressed
+By the dark webs, her nape caught in his bill,
+he holds her helpless breast upon his breast.
+How can those terrified vague fingers push
+The feathered glory from her loosening thighs?
+And how can body, laid in that white rush,
+But feel that strange heart beating where it lies?
+A shudder in the loins engenders there
+The broken wall, the burning roof and tower
+And Agammemnon dead.  Being so caught up,
+So mastered by this brute blood of the air,
+Did she put on his knowledge with his power
+Before his indifferent beak could let her drop?"""
+
+[[rooms.extra_descs]]
+keywords = ["chandler"]
+description = """
+She has just started the Lady in the Lake:
+
+Gillerain Regal, the Champagne of Perfumes.  It was definitely
+the stuff to get.  One drop of that in the hollow of your
+throat and the matched pink pearls started falling off you like
+summer rain."""
+
+[[rooms.extra_descs]]
+keywords = ["barrie"]
+description = """
+A copy of Peter Pan is opened near the end:
+
+What sort of form was Hook showing?  Misguided man though he
+was, we may be glad, without sympathising with him, that in
+the end he stayed true to the traditions of his race.  The
+other boys were flying about him now, flouting, scornful; and
+as he staggered about the deck striking at them impotently, his
+mind was no longer with them; it was slouching in the playing
+fields of long ago, or being sent up for good, or watching
+the wall-game from a famous wall.  And his shoes were right,
+and his waistcoat was right, and his tie was right, and his
+socks were right.
+
+James Hook, thou not wholly unheroic figure, farewell."""
+
+[[rooms.extra_descs]]
+keywords = ["tennyson"]
+description = """
+.       "My mariners
+         Souls that have toiled, and wrought, and thought with me -
+         The ever with a frolic welcome took
+         The thunder and the sunshine, and opposed
+         Free hearts, free foreheads - you and I are old;
+         Old age hath yet his honour and the toil
+         Death closes all; but something ere the end,
+         Some work of noble note, may yet be done,
+         Not unbecoming of men that strove with the gods.
+         The lights begin to twinkle from the rocks;
+         The long day wanes; the slow moon climbs; the deep
+         Moans round with many voices.""""
+
+[[rooms.extra_descs]]
+keywords = ["battered", "paperback", "de", "Laclos"]
+description = """
+.       'One is very soon bored of everything, my angel; it is a law
+        of nature.  It is not my fault.
+        If, that is to say, that I am bored with an adventure that has
+        claimed my attentions for four mortal months, it is not my fault.
+        If, that is to say, my love is equal to your virtue - and that
+        is certainly saying a great deal - it is not surprising that
+        one should come to the end at the same time as the other.  It
+        is not my fault.
+        A woman that I love madly now insists that I give you up for
+        her.  It is not my fault.
+        I quite realize that this is the perfect opportunity to accuse
+        me of perjury: but if, where nature has gifted men with no
+        more than constancy, she has given women obstinacy, it is
+        not my fault.
+        Believe this, you should take another lover, even as I take
+        another mistress.  This is good, very good advice: if you
+        find it bad, it is not my fault.
+        Good-bye, my angel.  I took you with pleasure, I leave you
+        without regret.  I shall come back perhaps.  Such is life.
+        It is not my fault."""
+
+[[rooms.extra_descs]]
+keywords = ["dusty", "leather", "bound", "leather-bound", "Donne"]
+description = """
+.       `Cruel and sudden, hast thou since
+        Purpled thy nail in blood of innocence?
+        Wherein could this flea guilty be,
+        Except in the drop it sucked from thee?
+        Yet thou trimph'st and say'st that thou
+        Find'st not thyself, nor me the weaker now;
+          'Tis true, then learn how false fears be:
+          Just so much honour when thou yield'st to me
+          Will waste as this flea's death took life from thee.'"""
 
 [[rooms]]
 vnum = 1208
 name = "A Sea Cave"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "private"]
 description = """
 You are in a small cave in a cliff next to a deep green sea.  Fine
 gold and pink sand blanket the floor.  Shells are scattered and strewn
@@ -148,13 +295,14 @@ worn by time into a shape similar to a comfortable chair."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1203
-  flags = ["door"]
 
 [[rooms]]
 vnum = 1209
 name = "The Archmage's Workroom"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This well-lit room is absolutely filled with clutter -- enchanting gear,
 reagents, spell components, ancient tomes, scrolls, braziers, exotic incense
@@ -166,13 +314,27 @@ are east."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1203
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["tools", "scrolls", "braziers", "components"]
+description = """
+It's all worth a fortune, but you'd better not touch it.  Alander keeps
+inventory and holds grudges."""
+
+[[rooms.extra_descs]]
+keywords = ["clutter", "mess"]
+description = """
+You notice Jimmy Hoffa's ring."""
 
 [[rooms]]
 vnum = 1210
 name = "The Office of Vengeance"
 sector = "inside"
+room_flags = ["gods_only", "indoors"]
+heal_rate = 800
+mana_rate = 800
 description = """
 The first thing you notice about this office is the floor; it
 is a black & white checkerboard pattern, with 8 squares to a side.  The
@@ -205,10 +367,33 @@ corner, you notice a statue."""
   direction = "down"
   to_vnum = 3365
 
+[[rooms.extra_descs]]
+keywords = ["desk"]
+description = """
+This desk is much larger than anyone could possibly need.  At one end you
+notice a large, disorderly mass of papers; it must be all his immortal
+paperwork.  At the other end is a magnificent wooden inlaid board with
+handcrafted ebony and hardwood pieces."""
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+You recognize this as a statue of Robert James Fischer, one of the most
+creative, if not eccentric, players of all time.  The inscription on the
+base reads, "I like the moment when I crush a man's ego.""""
+
+[[rooms.extra_descs]]
+keywords = ["bookshelf"]
+description = """
+This is the most amazing collection of chess books you have ever seen.
+Everything from Damiano's manuscripts, to a complete collection of the
+Encyclopedia of Chess Openings, to the latest Imformants are all here."""
+
 [[rooms]]
 vnum = 1211
 name = "Arena of Judgement"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "private"]
 description = """
 The scene lain before you is one that gives you the feeling of being placed
 under a higher authority.  The jury is out.  A statue of Pontius Pilate is
@@ -219,13 +404,21 @@ of veinous marble.  A bloodstone seat awaits the true paragon of Romanity."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1218
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+A statue of Pontius Pilate is here.  On it's face is the expression of some
+age old contemplation.  Standing at the statues bronzy feet is a Blood red
+shield that glimmers like a pool of blood."""
 
 [[rooms]]
 vnum = 1212
 name = "The Realm of the Dead"
 sector = "inside"
+room_flags = ["indoors", "no_recall"]
 description = """
 You are standing on an immense, grey stone floor that stretches as far as you
 can see in all directions.  Rough winds plunging from the dark, starless sky
@@ -246,6 +439,18 @@ tear savagely at your fragile body."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 1212
+
+[[rooms.extra_descs]]
+keywords = ["sky", "wind", "winds"]
+description = """
+Cold winds plunge ceaselessly at you from the dark, cloudless sky."""
+
+[[rooms.extra_descs]]
+keywords = ["floor"]
+description = """
+The stone floor is the same shade of grey as the sky and is completely plain
+and unscratched.  It is probably too hard for anything to leave as much as a
+scratch on it."""
 
 [[rooms]]
 vnum = 1213
@@ -281,6 +486,7 @@ huge mansion lies to the east beyond a set of magnificent golden doors."""
 vnum = 1214
 name = "The Room of Lost Souls"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the room full of souls that never made it to Asgard.  They are 
 trapped here eternally, left to wander about in misery.  They were infidels
@@ -312,6 +518,7 @@ and peaceful here that it would be a shame to leave..."""
 vnum = 1216
 name = "The Entrance of Valhalla"
 sector = "city"
+room_flags = ["gods_only"]
 description = """
 The huge ornate entrance of Valhalla is before you.  It seems as though
 atleast eight-hundred soldiers could walk abreast of one another through
@@ -331,6 +538,7 @@ of bravery and glory that you know are kept within the walls of Valhalla."""
 vnum = 1217
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only"]
 description = """
 You are standing in the halls of Valhalla.  Pictures of Odin, Thor, Tyr,
 Loki, Freyr, Feyja, and Balder line the walls.  The cavernous hall extends
@@ -340,8 +548,8 @@ up there..."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1207
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -363,6 +571,7 @@ up there..."""
 vnum = 1218
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only"]
 description = """
 You are standing in the halls of Valhalla.  Tapestries of the gods line
 the walls.  A statue of Odin is here.  The halls continue to the east and
@@ -371,8 +580,8 @@ sort of exit above you, but you do not know where it leads..."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 1211
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -380,8 +589,8 @@ sort of exit above you, but you do not know where it leads..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 1204
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -391,10 +600,17 @@ sort of exit above you, but you do not know where it leads..."""
   direction = "up"
   to_vnum = 2
 
+[[rooms.extra_descs]]
+keywords = ["statue", "odin"]
+description = """
+The statue of Odin has been exquisitely crafted.  It is of white marble
+with black and gold veins.  It looks to be of magical origin."""
+
 [[rooms]]
 vnum = 1219
 name = "Valhalla"
 sector = "inside"
+room_flags = ["gods_only"]
 description = """
 You have reached the end of the halls of Valhalla.  There are heavy doors
 on 3 walls.  They lead into the rooms of the gods.  The hall goes back to
@@ -438,6 +654,12 @@ that the heavens were saved for the gods personal pleasures."""
   direction = "down"
   to_vnum = 1215
 
+[[rooms.extra_descs]]
+keywords = ["clouds"]
+description = """
+The clouds are beautiful.  There are shades of gray, pink and purple swirled
+into the blue sky."""
+
 [[rooms]]
 vnum = 1221
 name = "The End of the Rainbow Bridge"
@@ -463,6 +685,7 @@ clouds are far below you and a sense of beauty and peacefulness surrounds you.""
 vnum = 1222
 name = "Eriana's Grove"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "nowhere"]
 description = """
 You have stumbled into a peaceful, fragrant grove surrounded by deep forest,
 and carpeted in thick, lush grass. A waterfall cascades from a rock ledge to
@@ -491,10 +714,24 @@ you inquisitively, yet unafraid.
   vnum = 1201
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trunk"]
+description = """
+The tree trunk is covered in moss and ivy...and strongly resembles a
+throne or large seat."""
+
+[[rooms.extra_descs]]
+keywords = ["banner", "sign"]
+description = """
+The banner reads:
+
+                        Speak, Friend, and Enter"""
+
 [[rooms]]
 vnum = 1223
 name = "Entrance to Hall of Knights"
 sector = "inside"
+room_flags = ["gods_only", "indoors", "nowhere"]
 description = """
 You see here a cozy little room.
 An angel is here, checking your ID for IMM status before allowing you to pass.
@@ -512,6 +749,9 @@ To the north is a large hall, and to the south is clan road."""
 vnum = 1224
 name = "The Hall of Knights"
 sector = "inside"
+room_flags = ["indoors", "nowhere", "safe"]
+heal_rate = 400
+mana_rate = 400
 description = """
 You are in the secret hall of the Order of Eriana.  The large arched
 windows are covered with tapestries, emblazoned with the coats of arms
@@ -523,4 +763,3 @@ enough to seat 60 people, but oddly, you see no chairs."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 1223
-

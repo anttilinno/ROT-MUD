@@ -49,6 +49,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 3
 
@@ -129,6 +131,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 5
 
@@ -148,6 +153,10 @@ cost = 200
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["armor", "invisibility"]
+
 [[objects]]
 vnum = 7809
 keywords = ["potion"]
@@ -159,6 +168,10 @@ weight = 10
 cost = 580
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["energy drain"]
 
 [[objects]]
 vnum = 7810
@@ -172,6 +185,10 @@ cost = 290
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["detect hidden", "detect magic"]
+
 [[objects]]
 vnum = 7811
 keywords = ["potion"]
@@ -183,6 +200,10 @@ weight = 10
 cost = 1380
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 50
+  spells = ["dispel magic", "dispel magic", "dispel magic"]
 
 [[objects]]
 vnum = 7812
@@ -196,6 +217,10 @@ cost = 240
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["refresh", "protection evil"]
+
 [[objects]]
 vnum = 7813
 keywords = ["potion"]
@@ -207,6 +232,10 @@ weight = 10
 cost = 250
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["sleep"]
 
 [[objects]]
 vnum = 7814
@@ -220,6 +249,10 @@ cost = 220
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["bless"]
+
 [[objects]]
 vnum = 7815
 keywords = ["potion"]
@@ -231,6 +264,10 @@ weight = 10
 cost = 330
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["cure critical"]
 
 [[objects]]
 vnum = 7816
@@ -244,6 +281,10 @@ cost = 420
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 14
+  spells = ["farsight"]
+
 [[objects]]
 vnum = 7817
 keywords = ["scroll"]
@@ -255,6 +296,10 @@ weight = 10
 cost = 660
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["cure critical"]
 
 [[objects]]
 vnum = 7818
@@ -268,6 +313,10 @@ cost = 1090
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 16
+  spells = ["enchant armor"]
+
 [[objects]]
 vnum = 7819
 keywords = ["scroll"]
@@ -279,6 +328,10 @@ weight = 10
 cost = 400
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["detect evil"]
 
 [[objects]]
 vnum = 7820
@@ -292,6 +345,10 @@ cost = 400
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["create water"]
+
 [[objects]]
 vnum = 7821
 keywords = ["scroll"]
@@ -303,6 +360,10 @@ weight = 10
 cost = 400
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["magic missile"]
 
 [[objects]]
 vnum = 7822
@@ -316,6 +377,10 @@ cost = 400
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["chill touch"]
+
 [[objects]]
 vnum = 7823
 keywords = ["scroll"]
@@ -327,6 +392,10 @@ weight = 10
 cost = 1360
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["heal"]
 
 [[objects]]
 vnum = 7824
@@ -344,6 +413,9 @@ extra_flags = ["magic", "anti_good", "anti_evil"]
   location = "damroll"
   modifier = 2
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 7825
 keywords = ["quarterstaff", "staff", "two-handed"]
@@ -357,10 +429,12 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 5
 
   [[objects.affects]]
   location = "damroll"
   modifier = 1
-

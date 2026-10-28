@@ -11,6 +11,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 2
 
@@ -35,6 +37,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "bless", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 3
 
@@ -55,6 +59,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_evil"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 6
 
@@ -71,6 +77,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "nodrop"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 7
 
@@ -130,6 +138,11 @@ extra_flags = ["glow", "magic", "nodrop"]
   location = "mana"
   modifier = 30
 
+[[objects.extra_descs]]
+keywords = ["ring", "piety"]
+description = """
+The ring has an almost holy aura around it..."""
+
 [[objects]]
 vnum = 3840
 keywords = ["broad", "royal", "sword"]
@@ -143,6 +156,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "bless", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 8
 
@@ -153,6 +168,11 @@ extra_flags = ["magic", "bless", "anti_evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["royal", "broad", "sword"]
+description = """
+This sword is one which is not attained easily.  It is given only to those who have proven their worth and their loyalty to King Arthur."""
 
 [[objects]]
 vnum = 3841
@@ -197,6 +217,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "bless", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 9
 
@@ -207,6 +229,12 @@ extra_flags = ["glow", "magic", "bless", "anti_evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["Lancelot's", "Lance"]
+description = """
+This lance is very well crafted with the crest of Lancelot's family pounded
+into the handle."""
 
 [[objects]]
 vnum = 3843
@@ -230,6 +258,11 @@ extra_flags = ["glow", "magic", "bless", "anti_evil", "noremove"]
   location = "mana"
   modifier = 15
 
+[[objects.extra_descs]]
+keywords = ["Belt", "of", "Chastity"]
+description = """
+This belt was given to Lancelot by one of his many "damsels in distress" saved.  I wonder why?..."""
+
 [[objects]]
 vnum = 3844
 keywords = ["club", "virtue"]
@@ -243,6 +276,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 9
 
@@ -289,6 +324,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 4
 
@@ -343,12 +380,19 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "bless", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 7
   dice_size = 2
 
   [[objects.affects]]
   location = "damroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["holy", "mace"]
+description = """
+This mace has been through many battles.  From the wear it seems to have taken, you can surmise that its previous owner has used it well--and often!"""
 
 [[objects]]
 vnum = 3860
@@ -363,6 +407,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "bless", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 10
 
@@ -378,6 +424,11 @@ extra_flags = ["glow", "magic", "bless", "anti_evil"]
   location = "str"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["royal", "bastard", "sword"]
+description = """
+This adamanite blade is one of the most finely crafted weapons you have come across in your travels.  It seems clear that it was built with the utmost care, and with one focus in mind--the demise of one's opponent."""
+
 [[objects]]
 vnum = 3865
 keywords = ["rod", "stir"]
@@ -391,6 +442,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "magic", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 10
 
@@ -441,6 +494,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "bless", "anti_evil", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 11
 
@@ -455,6 +510,11 @@ extra_flags = ["glow", "magic", "bless", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["sword", "excalibur"]
+description = """
+The legendary Excalibur is even more beautiful than the rumors had let on.  It's no wonder King Arthur guarded it so closely."""
 
 [[objects]]
 vnum = 3871
@@ -477,6 +537,11 @@ extra_flags = ["magic", "bless", "anti_evil"]
   [[objects.affects]]
   location = "str"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["plate", "chestplate", "justice"]
+description = """
+A beautiful piece of armor sits here.  Surprisingly, there isn't even a scratch on it.  Either King Arthur never pushed it to its limits, or the plate is indeed of the finest quality."""
 
 [[objects]]
 vnum = 3872
@@ -503,4 +568,3 @@ extra_flags = ["magic", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 3
-

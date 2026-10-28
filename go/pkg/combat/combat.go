@@ -114,6 +114,11 @@ func IsSafe(ch, victim *types.Character) bool {
 		return true
 	}
 
+	// Protected mobs (shopkeepers) can't be attacked
+	if victim.IsNPC() && victim.Act.Has(types.ActProtected) {
+		return true
+	}
+
 	return false
 }
 

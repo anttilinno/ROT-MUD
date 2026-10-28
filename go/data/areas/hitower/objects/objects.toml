@@ -9,6 +9,12 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+  [objects.container]
+  capacity = 1000
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 1000
+
 [[objects]]
 vnum = 1302
 keywords = ["locker"]
@@ -18,6 +24,17 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["locker"]
+description = """
+You just had the horrid thought that a cadaver might be in there."""
+
+  [objects.container]
+  capacity = 1000
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 1000
 
 [[objects]]
 vnum = 1304
@@ -30,6 +47,16 @@ weight = 10
 cost = 10
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["pizza", "slice"]
+description = """
+Ahh!  Round Table pizza!  How appropriate.  Any root beer?"""
+
+  [objects.food]
+  full = 15
+  hunger = 15
+  poisoned = false
+
 [[objects]]
 vnum = 1305
 keywords = ["chunk", "meat"]
@@ -40,6 +67,11 @@ level = 0
 weight = 20
 cost = 24
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = true
 
 [[objects]]
 vnum = 1306
@@ -52,6 +84,16 @@ weight = 20
 cost = 18
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["sandwich", "finger"]
+description = """
+It would look quite tasty if someone had first removed the fingernails!"""
+
+  [objects.food]
+  full = 20
+  hunger = 20
+  poisoned = false
+
 [[objects]]
 vnum = 1307
 keywords = ["broom", "straw"]
@@ -62,6 +104,11 @@ level = 0
 weight = 50
 cost = 0
 wear_flags = ["take", "hold"]
+
+[[objects.extra_descs]]
+keywords = ["broom", "straw"]
+description = """
+A magical flying broomstick?  Nah!  Not here."""
 
 [[objects]]
 vnum = 1308
@@ -74,6 +121,12 @@ weight = 0
 cost = 0
 extra_flags = ["hum"]
 
+  [objects.container]
+  capacity = 10000
+  flags = []
+  key = 0
+  max_weight = 1000
+
 [[objects]]
 vnum = 1309
 keywords = ["cabinet"]
@@ -83,6 +136,12 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.container]
+  capacity = 5000
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 5000
 
 [[objects]]
 vnum = 1310
@@ -141,6 +200,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 6
 
@@ -162,6 +223,12 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["glow"]
+
+  [objects.container]
+  capacity = 5000
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 1316
+  max_weight = 100
 
 [[objects]]
 vnum = 1316
@@ -186,6 +253,8 @@ cost = 720
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 8
 
@@ -209,6 +278,8 @@ cost = 970
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 3
 
@@ -232,6 +303,8 @@ cost = 990
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 7
 
@@ -251,6 +324,8 @@ cost = 42
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 4
 
@@ -264,6 +339,12 @@ level = 0
 weight = 0
 cost = 0
 
+  [objects.container]
+  capacity = 5000
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 1325
+  max_weight = 100
+
 [[objects]]
 vnum = 1322
 keywords = ["cabinet", "silver"]
@@ -273,6 +354,12 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.container]
+  capacity = 5000
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 1325
+  max_weight = 100
 
 [[objects]]
 vnum = 1323
@@ -318,6 +405,12 @@ weight = 80
 cost = 5600
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 20
+  max_charges = 3
+  charges = 3
+  spells = ["heal"]
+
 [[objects]]
 vnum = 1327
 keywords = ["staff", "burnt"]
@@ -328,6 +421,12 @@ level = 11
 weight = 60
 cost = 1720
 wear_flags = ["take", "hold"]
+
+  [objects.magic]
+  level = 20
+  max_charges = 4
+  charges = 4
+  spells = ["blindness"]
 
 [[objects]]
 vnum = 1328
@@ -340,6 +439,12 @@ weight = 40
 cost = 2200
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 20
+  max_charges = 3
+  charges = 3
+  spells = ["dispel evil"]
+
 [[objects]]
 vnum = 1329
 keywords = ["wand", "wooden"]
@@ -350,6 +455,12 @@ level = 13
 weight = 40
 cost = 1640
 wear_flags = ["take", "hold"]
+
+  [objects.magic]
+  level = 20
+  max_charges = 10
+  charges = 10
+  spells = ["bless"]
 
 [[objects]]
 vnum = 1330
@@ -362,6 +473,12 @@ weight = 50
 cost = 3200
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 20
+  max_charges = 20
+  charges = 4
+  spells = ["energy drain"]
+
 [[objects]]
 vnum = 1331
 keywords = ["cauldron", "black"]
@@ -371,6 +488,12 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.container]
+  capacity = 1000
+  flags = []
+  key = 0
+  max_weight = 1000
 
 [[objects]]
 vnum = 1332
@@ -405,6 +528,12 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+  [objects.container]
+  capacity = 500
+  flags = []
+  key = 0
+  max_weight = 500
+
 [[objects]]
 vnum = 1335
 keywords = ["spectacles", "glasses"]
@@ -434,6 +563,12 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.container]
+  capacity = 1000
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 100
 
 [[objects]]
 vnum = 1337
@@ -466,6 +601,12 @@ weight = 0
 cost = 0
 extra_flags = ["glow", "magic"]
 
+  [objects.container]
+  capacity = 2000
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 1339
+  max_weight = 200
+
 [[objects]]
 vnum = 1339
 keywords = ["key", "intricate"]
@@ -492,6 +633,9 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 1337
 
 [[objects]]
 vnum = 1341
@@ -572,6 +716,12 @@ cost = 1000
 wear_flags = ["take", "about", "hold"]
 extra_flags = ["magic"]
 
+  [objects.container]
+  capacity = 750
+  flags = []
+  key = 0
+  max_weight = 50
+
 [[objects]]
 vnum = 1351
 keywords = ["cup", "brew", "herbal"]
@@ -583,6 +733,12 @@ weight = 10
 cost = 12
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 6
+  current = 6
+  liquid = "tea"
+  poisoned = true
+
 [[objects]]
 vnum = 1352
 keywords = ["waybread"]
@@ -593,6 +749,11 @@ level = 0
 weight = 10
 cost = 50
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 25
+  hunger = 32
+  poisoned = false
 
 [[objects]]
 vnum = 1355
@@ -606,6 +767,9 @@ cost = 840
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
+  flags = ["sharp"]
   dice_number = 3
   dice_size = 5
 
@@ -642,6 +806,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 5
 
@@ -660,6 +826,10 @@ weight = 50
 cost = 1570
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 21
+  spells = ["blindness", "curse", "sleep"]
+
 [[objects]]
 vnum = 1360
 keywords = ["scroll", "bound"]
@@ -676,6 +846,10 @@ extra_flags = ["magic"]
   location = "ac"
   modifier = -6
 
+  [objects.magic]
+  level = 16
+  spells = ["armor", "teleport", "protection evil"]
+
 [[objects]]
 vnum = 1361
 keywords = ["tube"]
@@ -688,6 +862,12 @@ cost = 50
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 2
+
 [[objects]]
 vnum = 1362
 keywords = ["scroll", "old"]
@@ -698,6 +878,10 @@ level = 0
 weight = 20
 cost = 400
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 10
+  spells = ["create food"]
 
 [[objects]]
 vnum = 1363
@@ -711,6 +895,10 @@ cost = 1530
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 35
+  spells = ["enchant weapon"]
+
 [[objects]]
 vnum = 1364
 keywords = ["pouch", "leather"]
@@ -722,6 +910,12 @@ weight = 20
 cost = 100
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.container]
+  capacity = 150
+  flags = []
+  key = 0
+  max_weight = 5
 
 [[objects]]
 vnum = 1365
@@ -751,6 +945,10 @@ cost = 2100
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 24
+  spells = ["harm", "harm", "harm"]
+
 [[objects]]
 vnum = 1367
 keywords = ["potion", "red"]
@@ -762,6 +960,10 @@ weight = 20
 cost = 390
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 15
+  spells = ["cure critical"]
 
 [[objects]]
 vnum = 1368
@@ -775,6 +977,10 @@ cost = 470
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 20
+  spells = ["blindness", "teleport", "cure blindness"]
+
 [[objects]]
 vnum = 1369
 keywords = ["potion", "effervescent"]
@@ -787,6 +993,15 @@ cost = 260
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["potion", "effervescent"]
+description = """
+Ahh!  Schwepes Sparkling Soda a refreshing drink."""
+
+  [objects.magic]
+  level = 16
+  spells = ["detect evil", "detect invis", "detect magic"]
+
 [[objects]]
 vnum = 1370
 keywords = ["white", "milky", "potion"]
@@ -797,6 +1012,10 @@ level = 33
 weight = 20
 cost = 1350
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 14
+  spells = ["word of recall"]
 
 [[objects]]
 vnum = 1371
@@ -809,6 +1028,12 @@ weight = 50
 cost = 2600
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 18
+  max_charges = 2
+  charges = 2
+  spells = ["teleport"]
 
 [[objects]]
 vnum = 1372
@@ -826,6 +1051,12 @@ extra_flags = ["invis", "magic"]
   location = "int"
   modifier = -6
 
+  [objects.magic]
+  level = 22
+  max_charges = 1
+  charges = 1
+  spells = ["charm person"]
+
 [[objects]]
 vnum = 1373
 keywords = ["figurine"]
@@ -838,6 +1069,12 @@ cost = 3400
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 21
+  max_charges = 15
+  charges = 15
+  spells = ["cure serious"]
+
 [[objects]]
 vnum = 1374
 keywords = ["belt", "holster"]
@@ -848,6 +1085,12 @@ level = 0
 weight = 40
 cost = 100
 wear_flags = ["take", "waist"]
+
+  [objects.container]
+  capacity = 20
+  flags = []
+  key = 0
+  max_weight = 4
 
 [[objects]]
 vnum = 1375
@@ -860,6 +1103,12 @@ weight = 40
 cost = 3800
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 17
+  max_charges = 5
+  charges = 1
+  spells = ["fireball"]
 
 [[objects]]
 vnum = 1376
@@ -874,6 +1123,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 6
 
@@ -896,6 +1147,12 @@ weight = 50
 cost = 50
 wear_flags = ["take", "waist"]
 
+  [objects.container]
+  capacity = 25
+  flags = []
+  key = 0
+  max_weight = 5
+
 [[objects]]
 vnum = 1378
 keywords = ["dust"]
@@ -906,6 +1163,12 @@ level = 9
 weight = 20
 cost = 1930
 wear_flags = ["take", "hold"]
+
+  [objects.magic]
+  level = 20
+  max_charges = 1
+  charges = 1
+  spells = ["sleep"]
 
 [[objects]]
 vnum = 1379
@@ -939,6 +1202,12 @@ cost = 1860
 wear_flags = ["take", "hold"]
 extra_flags = ["anti_good"]
 
+  [objects.magic]
+  level = 20
+  max_charges = 4
+  charges = 4
+  spells = ["cause critical"]
+
 [[objects]]
 vnum = 1381
 keywords = ["club"]
@@ -951,6 +1220,8 @@ cost = 750
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 3
   dice_size = 5
 
@@ -973,6 +1244,12 @@ extra_flags = ["magic", "anti_good", "anti_evil"]
   [[objects.affects]]
   location = "ac"
   modifier = -6
+
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 1383
@@ -1023,6 +1300,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 9
 
@@ -1065,6 +1345,12 @@ extra_flags = ["magic", "anti_good", "anti_neutral"]
   [[objects.affects]]
   location = "ac"
   modifier = -5
+
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 1388
@@ -1115,6 +1401,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_good"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 6
 
@@ -1141,6 +1429,12 @@ extra_flags = ["magic", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "ac"
   modifier = -5
+
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 1392
@@ -1191,6 +1485,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "bless", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 8
 
@@ -1247,6 +1543,12 @@ extra_flags = ["glow", "magic"]
   [[objects.affects]]
   location = "ac"
   modifier = -12
+
+  [objects.container]
+  capacity = 100
+  flags = []
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 1397
@@ -1317,6 +1619,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 6
   dice_size = 6
 
@@ -1354,6 +1658,11 @@ extra_flags = ["magic"]
   location = "dex"
   modifier = 3
 
+[[objects.extra_descs]]
+keywords = ["green", "scale", "shirt"]
+description = """
+Green dragon scale shirt was made from a poor unfortunate green dragon."""
+
 [[objects]]
 vnum = 1402
 keywords = ["fridge", "refrigerator"]
@@ -1364,6 +1673,12 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["hum"]
+
+  [objects.container]
+  capacity = 500
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 100
 
 [[objects]]
 vnum = 1403
@@ -1376,6 +1691,12 @@ weight = 250
 cost = 100
 wear_flags = ["take", "hold"]
 
+  [objects.drink]
+  capacity = 25
+  current = 25
+  liquid = "vodka"
+  poisoned = false
+
 [[objects]]
 vnum = 1404
 keywords = ["juice", "bottle"]
@@ -1387,3 +1708,8 @@ weight = 250
 cost = 100
 wear_flags = ["take", "hold"]
 
+  [objects.drink]
+  capacity = 25
+  current = 25
+  liquid = "cranberry juice"
+  poisoned = false

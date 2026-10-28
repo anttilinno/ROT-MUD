@@ -1673,6 +1673,13 @@ func NewCommandDispatcher() *CommandDispatcher {
 		d.Skills.CheckImprove(ch, skillName, success, multiplier)
 	}
 
+	// Wire up magic system to move characters (word of recall, teleport...)
+	d.Magic.CharacterToRoom = func(ch *types.Character, room *types.Room) {
+		CharFromRoom(ch)
+		CharToRoom(ch, room)
+		d.cmdLook(ch, "auto")
+	}
+
 	// Wire up magic system to find objects in inventory (for identify spell)
 	d.Magic.InvObjectFinder = func(ch *types.Character, name string) *types.Object {
 		return FindObjInInventory(ch, name)
@@ -1819,6 +1826,7 @@ func (d *CommandDispatcher) registerBasicCommands() {
 	d.Registry.Register("cast", d.cmdCast, types.PosFighting, 0)
 	d.Registry.Register("spells", d.cmdSpells, types.PosDead, 0)
 	d.Registry.Register("heal", d.cmdHeal, types.PosStanding, 0)
+	d.Registry.Register("use", d.cmdUse, types.PosStanding, 0)
 
 	// Shop commands
 	d.Registry.Register("buy", d.cmdBuy, types.PosStanding, 0)
@@ -1837,6 +1845,10 @@ func (d *CommandDispatcher) registerBasicCommands() {
 
 	// Utility commands
 	d.Registry.Register("recall", d.cmdRecall, types.PosStanding, 0)
+	d.Registry.Register("bind", d.cmdBind, types.PosStanding, 0)
+	d.Registry.Register("commission", d.cmdCommission, types.PosStanding, 0)
+	d.Registry.Register("collect", d.cmdCollect, types.PosStanding, 0)
+	d.Registry.Register("rent", d.cmdRent, types.PosStanding, 0)
 	d.Registry.Register("scan", d.cmdScan, types.PosResting, 0)
 	d.Registry.Register("visible", d.cmdVisible, types.PosSleeping, 0)
 	d.Registry.Register("exits", d.cmdExits, types.PosResting, 0)
@@ -2197,7 +2209,7 @@ func (d *CommandDispatcher) doMove(ch *types.Character, dir types.Direction) {
 	d.checkQuestRoomEnter(ch, newRoom)
 
 	// Show room description
-	d.doLook(ch, "")
+	d.doLook(ch, "auto")
 
 	// LLM-enabled mobs may greet the entering player.
 	d.greetLLMMobs(ch, newRoom, false)
@@ -2256,7 +2268,7 @@ func (d *CommandDispatcher) moveFollowers(leader *types.Character, fromRoom, toR
 			// Pets don't get a look message
 			continue
 		}
-		d.doLook(follower, "")
+		d.doLook(follower, "auto")
 	}
 }
 
@@ -2280,6 +2292,13 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 		victim := FindCharInRoom(ch, args)
 		if victim != nil {
 			d.lookAtCharacter(ch, victim)
+			return
+		}
+
+		// Extra descriptions on carried, worn or nearby objects (signs,
+		// inscriptions), as ROM's do_look checks before object names.
+		if text, ok := objExtraDesc(ch, args); ok {
+			d.send(ch, strings.TrimRight(text, "\r\n")+"\r\n")
 			return
 		}
 
@@ -2307,13 +2326,20 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 			return
 		}
 
+		// Room extra descriptions (plaques, paintings, the view)
+		if ed := findExtraDesc(room.ExtraDescriptions, args); ed != nil {
+			d.send(ch, strings.TrimRight(ed.Description, "\r\n")+"\r\n")
+			return
+		}
+
 		d.send(ch, "You don't see that here.\r\n")
 		return
 	}
 
-	// Room name and description
+	// Room name and description. Brief mode drops the description on the
+	// automatic look after moving ("auto"), never on a typed look.
 	d.send(ch, fmt.Sprintf("%s\r\n", room.Name))
-	if room.Description != "" {
+	if room.Description != "" && (args == "" || !ch.Comm.Has(types.CommBrief)) {
 		d.send(ch, fmt.Sprintf("  %s\r\n", room.Description))
 	}
 
@@ -2469,25 +2495,8 @@ func (d *CommandDispatcher) cmdScore(ch *types.Character, args string) {
 		ch.Practice, ch.Train))
 
 	// Carry weight/items
-	itemCount := len(ch.Inventory)
-	for _, obj := range ch.Equipment {
-		if obj != nil {
-			itemCount++
-		}
-	}
-	carryWeight := 0
-	for _, obj := range ch.Inventory {
-		carryWeight += obj.Weight
-	}
-	for _, obj := range ch.Equipment {
-		if obj != nil {
-			carryWeight += obj.Weight
-		}
-	}
-	maxItems := 100 + ch.GetStat(types.StatDex)
-	maxWeight := ch.GetStat(types.StatStr)*10 + ch.Level*5
 	d.send(ch, fmt.Sprintf("You are carrying %d/%d items with weight %d/%d lbs.\r\n",
-		itemCount, maxItems, carryWeight/10, maxWeight))
+		ch.CarryCount(), ch.MaxCarryCount(), ch.CarryWeight()/10, ch.MaxCarryWeight()/10))
 
 	// Stats (perm and current)
 	d.send(ch, fmt.Sprintf("Str: %d(%d)  Int: %d(%d)  Wis: %d(%d)  Dex: %d(%d)  Con: %d(%d)\r\n",
@@ -2871,9 +2880,11 @@ func (d *CommandDispatcher) cmdCompare(ch *types.Character, args string) {
 
 	var obj2 *types.Object
 	if arg2 == "" {
-		// Compare to equipped item of same type
+		// Compare to the equipped item of the same type worn in the same slot
+		// (shared wear flag other than take), as ROM's do_compare does.
+		slots := obj1.WearFlags &^ types.WearTake
 		for _, equipped := range ch.Equipment {
-			if equipped != nil && equipped.ItemType == obj1.ItemType {
+			if equipped != nil && equipped.ItemType == obj1.ItemType && equipped.WearFlags&slots != 0 {
 				obj2 = equipped
 				break
 			}
@@ -2942,37 +2953,44 @@ func (d *CommandDispatcher) cmdReport(ch *types.Character, args string) {
 		ch.Hit, ch.MaxHit, ch.Mana, ch.MaxMana, ch.Move, ch.MaxMove))
 }
 
+// findExtraDesc returns the extra description whose keywords match name.
+func findExtraDesc(eds []*types.ExtraDescription, name string) *types.ExtraDescription {
+	for _, ed := range eds {
+		if nameMatches(strings.Join(ed.Keywords, " "), name) {
+			return ed
+		}
+	}
+	return nil
+}
+
+// objExtraDesc finds an extra description matching name on an object ch
+// carries, wears, or sees in the room.
+func objExtraDesc(ch *types.Character, name string) (string, bool) {
+	objs := append([]*types.Object{}, ch.Inventory...)
+	for _, obj := range ch.Equipment {
+		if obj != nil {
+			objs = append(objs, obj)
+		}
+	}
+	if ch.InRoom != nil {
+		objs = append(objs, ch.InRoom.Objects...)
+	}
+	for _, obj := range objs {
+		if ed := findExtraDesc(obj.ExtraDescriptions, name); ed != nil {
+			return ed.Description, true
+		}
+	}
+	return "", false
+}
+
 func (d *CommandDispatcher) cmdExamine(ch *types.Character, args string) {
 	if args == "" {
 		d.send(ch, "Examine what?\r\n")
 		return
 	}
-
-	// Look for object in inventory first
-	for _, obj := range ch.Inventory {
-		if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(args)) {
-			d.send(ch, fmt.Sprintf("You examine %s:\r\n", obj.ShortDesc))
-			if obj.LongDesc != "" {
-				d.send(ch, obj.LongDesc+"\r\n")
-			}
-			return
-		}
-	}
-
-	// Look for object in room
-	if ch.InRoom != nil {
-		for _, obj := range ch.InRoom.Objects {
-			if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(args)) {
-				d.send(ch, fmt.Sprintf("You examine %s:\r\n", obj.ShortDesc))
-				if obj.LongDesc != "" {
-					d.send(ch, obj.LongDesc+"\r\n")
-				}
-				return
-			}
-		}
-	}
-
-	d.send(ch, "You don't see that here.\r\n")
+	// ROM's do_examine starts with do_look; look already shows extra
+	// descriptions and container contents.
+	d.doLook(ch, args)
 }
 
 func (d *CommandDispatcher) cmdLore(ch *types.Character, args string) {
@@ -3017,7 +3035,7 @@ func (d *CommandDispatcher) cmdLore(ch *types.Character, args string) {
 
 	// Success! Show item info (like identify but using skill)
 	d.send(ch, fmt.Sprintf("Object '%s' is type %s.\r\n", obj.ShortDesc, obj.ItemType.String()))
-	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %d gold.\r\n", obj.Level, obj.Weight, obj.Cost))
+	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %s.\r\n", obj.Level, obj.Weight, types.FormatCoin(int64(obj.Cost))))
 
 	// Show wear locations
 	var wearLocs []string
@@ -3119,7 +3137,7 @@ func (d *CommandDispatcher) cmdLore(ch *types.Character, args string) {
 func (d *CommandDispatcher) showIdentifyOutput(ch *types.Character, obj *types.Object) {
 	// Basic info
 	d.send(ch, fmt.Sprintf("Object '%s' is type %s.\r\n", obj.ShortDesc, obj.ItemType.String()))
-	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %d gold.\r\n", obj.Level, obj.Weight, obj.Cost))
+	d.send(ch, fmt.Sprintf("Level %d, Weight %d, Value %s.\r\n", obj.Level, obj.Weight, types.FormatCoin(int64(obj.Cost))))
 
 	// Show wear locations
 	var wearLocs []string
@@ -3379,7 +3397,7 @@ func (d *CommandDispatcher) cmdEnter(ch *types.Character, args string) {
 	ActToRoom("$n has arrived through a portal.", ch, nil, nil, d.Output)
 
 	// Show new room
-	d.cmdLook(ch, "")
+	d.cmdLook(ch, "auto")
 
 	// Reduce portal charges if applicable (value[0] = charges, -1 = infinite)
 	if portal.Values[0] > 0 {
@@ -5146,7 +5164,7 @@ func (d *CommandDispatcher) cmdGoto(ch *types.Character, args string) {
 	ch.InRoom = room
 
 	d.send(ch, fmt.Sprintf("You goto room %d.\r\n", vnum))
-	d.doLook(ch, "")
+	d.doLook(ch, "auto")
 }
 
 func (d *CommandDispatcher) cmdStat(ch *types.Character, args string) {
@@ -5417,7 +5435,7 @@ func (d *CommandDispatcher) cmdTransfer(ch *types.Character, args string) {
 	d.send(target, fmt.Sprintf("%s has transferred you!\r\n", ch.Name))
 
 	// Show the new room to the target
-	d.doLook(target, "")
+	d.doLook(target, "auto")
 }
 
 func (d *CommandDispatcher) cmdAt(ch *types.Character, args string) {
@@ -5515,7 +5533,6 @@ func (d *CommandDispatcher) cmdLoad(ch *types.Character, args string) {
 			MaxMana:   mobTemplate.ManaDice.Number*mobTemplate.ManaDice.Size + mobTemplate.ManaDice.Bonus,
 			Move:      100,
 			MaxMove:   100,
-			Coin:      int64(mobTemplate.Gold),
 			Alignment: mobTemplate.Alignment,
 			Position:  types.PosStanding,
 			InRoom:    ch.InRoom,
@@ -5702,7 +5719,7 @@ func (d *CommandDispatcher) getWearLocationName(loc types.WearLocation) string {
 
 func (d *CommandDispatcher) findObjInInventory(ch *types.Character, name string) *types.Object {
 	for _, obj := range ch.Inventory {
-		if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(name)) {
+		if nameMatches(obj.Name, name) {
 			return obj
 		}
 	}
@@ -5711,7 +5728,7 @@ func (d *CommandDispatcher) findObjInInventory(ch *types.Character, name string)
 
 func (d *CommandDispatcher) findObjInRoom(room *types.Room, name string) *types.Object {
 	for _, obj := range room.Objects {
-		if strings.HasPrefix(strings.ToLower(obj.Name), strings.ToLower(name)) {
+		if nameMatches(obj.Name, name) {
 			return obj
 		}
 	}

@@ -4,6 +4,7 @@ import (
 	"strings"
 
 	"rotmud/pkg/loader"
+	"rotmud/pkg/magic"
 	"rotmud/pkg/types"
 )
 
@@ -30,6 +31,19 @@ func (r *ResetSystem) ResetArea(area *types.Area) {
 
 // resetRoom executes all resets for a single room
 func (r *ResetSystem) resetRoom(room *types.Room) {
+	// Close/lock doors back to their reset state, both sides (ROT reset_room)
+	for dir, exit := range room.Exits {
+		if exit == nil {
+			continue
+		}
+		exit.Flags = exit.ResetFlags
+		if exit.ToRoom != nil {
+			if back := exit.ToRoom.GetExit(types.Direction(dir).Reverse()); back != nil {
+				back.Flags = back.ResetFlags
+			}
+		}
+	}
+
 	// Execute mob resets
 	for _, reset := range room.MobResets {
 		r.executeMobReset(room, &reset)
@@ -298,13 +312,57 @@ func (r *ResetSystem) CreateObjFromTemplate(vnum int) *types.Object {
 	}
 
 	if tmpl.Container != nil {
+		// ROM layout: v0 capacity, v1 flags, v2 key, v3 max item weight
 		obj.Values[0] = tmpl.Container.Capacity
-		obj.Values[3] = tmpl.Container.Key
-		obj.Values[4] = tmpl.Container.MaxWeight
+		obj.Values[1] = containerFlagBits(tmpl.Container.Flags)
+		obj.Values[2] = tmpl.Container.Key
+		obj.Values[3] = tmpl.Container.MaxWeight
+	}
+	if m := tmpl.Magic; m != nil {
+		obj.Values[0] = m.Level
+		switch obj.ItemType {
+		case types.ItemTypeWand, types.ItemTypeStaff:
+			obj.Values[1], obj.Values[2] = m.MaxCharges, m.Charges
+			if len(m.Spells) > 0 {
+				obj.Values[3] = spellSlot(m.Spells[0])
+			}
+		default: // potion, scroll, pill: v1..v4 are spells
+			for i, name := range m.Spells {
+				if i < 4 {
+					obj.Values[1+i] = spellSlot(name)
+				}
+			}
+		}
+	}
+	if dr := tmpl.Drink; dr != nil {
+		obj.Values[0], obj.Values[1], obj.Values[2] = dr.Capacity, dr.Current, liquidIndex(dr.Liquid)
+		if dr.Poisoned {
+			obj.Values[3] = 1
+		}
+	}
+	if fd := tmpl.Food; fd != nil {
+		obj.Values[0], obj.Values[1] = fd.Full, fd.Hunger
+		if fd.Poisoned {
+			obj.Values[3] = 1
+		}
+	}
+	if tmpl.Money != nil {
+		obj.Cost = tmpl.Money.Amount // coin piles carry their copper in Cost
 	}
 
 	if tmpl.Light != nil {
 		obj.Values[2] = tmpl.Light.Duration
+	}
+
+	if tmpl.Portal != nil {
+		obj.Values[0] = tmpl.Portal.Charges  // uses remaining (-1 = infinite)
+		obj.Values[3] = tmpl.Portal.DestVnum // destination room vnum
+	}
+
+	for _, ed := range tmpl.ExtraDescs {
+		obj.ExtraDescriptions = append(obj.ExtraDescriptions, &types.ExtraDescription{
+			Keywords: ed.Keywords, Description: ed.Description,
+		})
 	}
 
 	// Parse affects (e.g., hitroll, damroll bonuses)
@@ -522,4 +580,45 @@ func (r *ResetSystem) ProcessAreaResets(areas []*types.Area) {
 			r.ResetArea(area)
 		}
 	}
+}
+
+// objSpells resolves spell names on magic items to registry slots.
+var objSpells = magic.DefaultSpells()
+
+// spellSlot returns the slot of the named spell, or 0 (no spell).
+func spellSlot(name string) int {
+	if sp := objSpells.FindByName(name); sp != nil {
+		return sp.Slot
+	}
+	return 0
+}
+
+// liquidIndex returns the liquid table index for a liquid name (0, water,
+// if unknown).
+func liquidIndex(name string) int {
+	for i, l := range liquidTable {
+		if strings.EqualFold(l.Name, name) {
+			return i
+		}
+	}
+	return 0
+}
+
+// containerFlagBits converts container flag names to the bits the game
+// checks (CONT_CLOSED 1, CONT_LOCKED 2, CONT_CLOSEABLE 4, CONT_PICKPROOF 8).
+func containerFlagBits(flags []string) int {
+	bits := 0
+	for _, f := range flags {
+		switch strings.ToLower(f) {
+		case "closed":
+			bits |= 1
+		case "locked":
+			bits |= 2
+		case "closeable":
+			bits |= 4
+		case "pickproof":
+			bits |= 8
+		}
+	}
+	return bits
 }

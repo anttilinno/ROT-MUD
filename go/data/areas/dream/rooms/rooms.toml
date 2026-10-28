@@ -2,6 +2,7 @@
 vnum = 8600
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -35,6 +36,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8601
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -68,6 +70,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8602
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -101,6 +104,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8603
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -134,6 +138,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8604
 name = "The Void"
 sector = "field"
+room_flags = ["no_mob", "no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -167,6 +172,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8605
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -200,6 +206,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8606
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -233,6 +240,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8607
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -266,6 +274,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8608
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -299,6 +308,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8610
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -332,6 +342,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8611
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -365,6 +376,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8612
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -398,6 +410,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8613
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -431,6 +444,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8614
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -464,6 +478,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8615
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -497,6 +512,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8616
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -530,6 +546,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8617
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -563,6 +580,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8618
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -596,6 +614,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8620
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -629,6 +648,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8621
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -662,6 +682,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8622
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -695,6 +716,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8623
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -728,6 +750,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8624
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -761,6 +784,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8625
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -794,6 +818,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8626
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -827,6 +852,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8627
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -860,6 +886,7 @@ same obsidian color as the ground and you can't find a horizon."""
 vnum = 8628
 name = "The Void"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -947,6 +974,11 @@ You may recall now if you like."""
   vnum = 8601
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["dancer", "dancers"]
+description = """
+The dancers have been here all night and intend to dance until dawn."""
+
 [[rooms]]
 vnum = 8634
 name = "A Small Hall"
@@ -983,6 +1015,11 @@ You may recall now if you like."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 8637
+
+[[rooms.extra_descs]]
+keywords = ["shack"]
+description = """
+The shack looks hand-made by an amateur."""
 
 [[rooms]]
 vnum = 8637
@@ -1042,6 +1079,7 @@ essence."""
 vnum = 8699
 name = "The Void"
 sector = "field"
+room_flags = ["no_mob", "solitary"]
 description = """
 You are suspended in cool electric space above a translucent plain.  You feel
 synesthesia invading your nerves and reshuffling your senses.  The sky is the
@@ -1050,4 +1088,3 @@ same obsidian color as the ground and you can't find a horizon."""
   [[rooms.mob_resets]]
   vnum = 8600
   max = 1
-

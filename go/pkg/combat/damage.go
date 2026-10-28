@@ -14,19 +14,15 @@ type DamageResult struct {
 	Missed bool // True if attack missed
 }
 
-// Damage inflicts damage on a victim
-// Returns true if the victim survives
-func (c *CombatSystem) Damage(ch, victim *types.Character, dam int, damType types.DamageType, showMessage bool) DamageResult {
-	return c.damage(ch, victim, dam, damType, showMessage, true)
-}
-
 // SpellDamage is Damage for spells: no parry, dodge or shield block, and no
 // message (the spell system sends its own).
 func (c *CombatSystem) SpellDamage(ch, victim *types.Character, dam int, damType types.DamageType) DamageResult {
-	return c.damage(ch, victim, dam, damType, false, false)
+	return c.Damage(ch, victim, dam, damType, false)
 }
 
-func (c *CombatSystem) damage(ch, victim *types.Character, dam int, damType types.DamageType, showMessage, defend bool) DamageResult {
+// Damage inflicts damage on a victim
+// Returns true if the victim survives
+func (c *CombatSystem) Damage(ch, victim *types.Character, dam int, damType types.DamageType, showMessage bool) DamageResult {
 	result := DamageResult{}
 
 	// Already dead
@@ -52,15 +48,6 @@ func (c *CombatSystem) damage(ch, victim *types.Character, dam int, damType type
 
 		if ch.Fighting == nil {
 			SetFighting(ch, victim)
-		}
-	}
-
-	// Check defensive skills (parry, dodge, shield block) for melee attacks
-	if defend && dam > 0 && ch != victim {
-		defense := c.CheckDefenses(ch, victim)
-		if defense != DefenseNone {
-			// Attack was defended
-			return result
 		}
 	}
 
@@ -390,14 +377,6 @@ func (c *CombatSystem) findRecallRoom(ch *types.Character) *types.Room {
 		return nil
 	}
 
-	// Check player's personal recall point first
-	if ch.PCData != nil && ch.PCData.Recall != 0 {
-		room := c.RoomFinder(ch.PCData.Recall)
-		if room != nil {
-			return room
-		}
-	}
-
 	// Try default temple
 	room := c.RoomFinder(RoomVnumTemple)
 	if room != nil {
@@ -474,6 +453,7 @@ func (c *CombatSystem) makeCorpse(ch *types.Character) *types.Object {
 	}
 
 	corpse.Name = "corpse"
+	corpse.Level = ch.Level // sacrifice pays by corpse level
 	corpse.LongDesc = "The corpse of " + ch.Name + " is lying here."
 	corpse.Timer = 10 // Corpse decays after 10 ticks
 
@@ -505,6 +485,7 @@ func (c *CombatSystem) makeCorpse(ch *types.Character) *types.Object {
 	if ch.Coin > 0 {
 		coinObj := types.NewObject(0, fmt.Sprintf("%s in coins", types.FormatCoin(ch.Coin)), types.ItemTypeMoney)
 		coinObj.Name = "coins money"
+		coinObj.WearFlags.Set(types.WearTake) // pick-up-able once dropped
 		coinObj.Cost = int(ch.Coin)
 		corpse.AddContent(coinObj)
 		ch.Coin = 0

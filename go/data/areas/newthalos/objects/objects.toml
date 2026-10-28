@@ -32,6 +32,8 @@ cost = 620
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "flail"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 6
 
@@ -47,6 +49,8 @@ cost = 108
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 1
   dice_size = 10
 
@@ -62,6 +66,9 @@ cost = 270
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 6
 
@@ -77,6 +84,9 @@ cost = 148
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 8
 
@@ -92,6 +102,9 @@ cost = 148
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 8
 
@@ -107,6 +120,9 @@ cost = 148
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 8
 
@@ -122,6 +138,9 @@ cost = 192
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 10
 
@@ -137,6 +156,9 @@ cost = 169
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 4
 
@@ -152,6 +174,8 @@ cost = 210
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 4
 
@@ -167,6 +191,9 @@ cost = 1190
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 5
 
@@ -182,6 +209,8 @@ cost = 490
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 9
 
@@ -197,6 +226,8 @@ cost = 850
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 4
 
@@ -543,6 +574,12 @@ weight = 10
 cost = 12
 wear_flags = ["take", "hold"]
 
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 5
+
 [[objects]]
 vnum = 9535
 keywords = ["oil", "lamp", "oillamp"]
@@ -553,6 +590,9 @@ level = 0
 weight = 10
 cost = 50
 wear_flags = ["take"]
+
+  [objects.light]
+  duration = 100
 
 [[objects]]
 vnum = 9536
@@ -565,6 +605,12 @@ weight = 40
 cost = 50
 wear_flags = ["take", "about"]
 
+  [objects.container]
+  capacity = 100
+  flags = ["closeable"]
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 9537
 keywords = ["basket"]
@@ -575,6 +621,12 @@ level = 0
 weight = 40
 cost = 8
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 50
+  flags = []
+  key = 0
+  max_weight = 5
 
 [[objects]]
 vnum = 9538
@@ -587,6 +639,12 @@ weight = 10
 cost = 27
 wear_flags = ["take", "waist"]
 
+  [objects.container]
+  capacity = 25
+  flags = []
+  key = 0
+  max_weight = 2
+
 [[objects]]
 vnum = 9539
 keywords = ["candle"]
@@ -597,6 +655,9 @@ level = 0
 weight = 10
 cost = 4
 wear_flags = ["take", "hold"]
+
+  [objects.light]
+  duration = 50
 
 [[objects]]
 vnum = 9540
@@ -609,6 +670,11 @@ weight = 10
 cost = 4
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 5
+  hunger = 5
+  poisoned = false
+
 [[objects]]
 vnum = 9541
 keywords = ["bread"]
@@ -619,6 +685,11 @@ level = 0
 weight = 10
 cost = 6
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 5
+  hunger = 3
+  poisoned = false
 
 [[objects]]
 vnum = 9542
@@ -631,6 +702,11 @@ weight = 20
 cost = 24
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 15
+  hunger = 20
+  poisoned = false
+
 [[objects]]
 vnum = 9543
 keywords = ["iron", "rations"]
@@ -642,6 +718,11 @@ weight = 10
 cost = 50
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 18
+  hunger = 30
+  poisoned = false
+
 [[objects]]
 vnum = 9545
 keywords = ["nuts"]
@@ -652,6 +733,11 @@ level = 0
 weight = 10
 cost = 3
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 1
+  hunger = 1
+  poisoned = false
 
 [[objects]]
 vnum = 9546
@@ -774,6 +860,11 @@ weight = 10
 cost = 4
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 2
+  hunger = 2
+  poisoned = false
+
 [[objects]]
 vnum = 9557
 keywords = ["carrot"]
@@ -784,6 +875,11 @@ level = 0
 weight = 10
 cost = 6
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 3
+  hunger = 3
+  poisoned = false
 
 [[objects]]
 vnum = 9558
@@ -796,6 +892,11 @@ weight = 10
 cost = 12
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 2
+  hunger = 2
+  poisoned = false
+
 [[objects]]
 vnum = 9559
 keywords = ["fig"]
@@ -806,6 +907,11 @@ level = 0
 weight = 10
 cost = 3
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 2
+  hunger = 1
+  poisoned = false
 
 [[objects]]
 vnum = 9560
@@ -818,6 +924,11 @@ weight = 10
 cost = 6
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 2
+  hunger = 2
+  poisoned = false
+
 [[objects]]
 vnum = 9561
 keywords = ["leg", "lamb"]
@@ -828,6 +939,11 @@ level = 0
 weight = 20
 cost = 10
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 10
+  hunger = 12
+  poisoned = false
 
 [[objects]]
 vnum = 9562
@@ -840,6 +956,11 @@ weight = 50
 cost = 20
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 15
+  hunger = 15
+  poisoned = false
+
 [[objects]]
 vnum = 9563
 keywords = ["whole", "chicken"]
@@ -850,6 +971,11 @@ level = 0
 weight = 30
 cost = 12
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
 
 [[objects]]
 vnum = 9564
@@ -862,6 +988,11 @@ weight = 10
 cost = 8
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 8
+  hunger = 8
+  poisoned = false
+
 [[objects]]
 vnum = 9565
 keywords = ["mussel"]
@@ -872,6 +1003,11 @@ level = 0
 weight = 10
 cost = 4
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 4
+  hunger = 4
+  poisoned = false
 
 [[objects]]
 vnum = 9567
@@ -884,6 +1020,12 @@ weight = 10
 cost = 10
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 2
+  current = 2
+  liquid = "whisky"
+  poisoned = false
+
 [[objects]]
 vnum = 9568
 keywords = ["wine", "glass"]
@@ -895,6 +1037,12 @@ weight = 10
 cost = 13
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 6
+  current = 6
+  liquid = "red wine"
+  poisoned = false
+
 [[objects]]
 vnum = 9569
 keywords = ["bottle", "grog"]
@@ -905,6 +1053,12 @@ level = 0
 weight = 10
 cost = 8
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 16
+  current = 16
+  liquid = "ale"
+  poisoned = false
 
 [[objects]]
 vnum = 9570
@@ -918,6 +1072,10 @@ cost = 270
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 12
+  spells = ["sleep"]
+
 [[objects]]
 vnum = 9571
 keywords = ["potion", "green"]
@@ -929,6 +1087,10 @@ weight = 10
 cost = 950
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 10
+  spells = ["stone skin", "blindness"]
 
 [[objects]]
 vnum = 9572
@@ -942,6 +1104,10 @@ cost = 200
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["detect invis"]
+
 [[objects]]
 vnum = 9573
 keywords = ["white", "potion"]
@@ -953,6 +1119,10 @@ weight = 10
 cost = 820
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 21
+  spells = ["haste"]
 
 [[objects]]
 vnum = 9574
@@ -966,6 +1136,10 @@ cost = 200
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 10
+  spells = ["detect evil", "refresh"]
+
 [[objects]]
 vnum = 9575
 keywords = ["beer", "bottle", "scorpion", "flaming"]
@@ -976,6 +1150,12 @@ level = 0
 weight = 10
 cost = 6
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 16
+  current = 16
+  liquid = "beer"
+  poisoned = false
 
 [[objects]]
 vnum = 9576
@@ -988,6 +1168,12 @@ weight = 80
 cost = 120
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 150
+  current = 150
+  liquid = "beer"
+  poisoned = false
+
 [[objects]]
 vnum = 9577
 keywords = ["whisky", "shot"]
@@ -998,6 +1184,12 @@ level = 0
 weight = 10
 cost = 12
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 2
+  current = 2
+  liquid = "whisky"
+  poisoned = false
 
 [[objects]]
 vnum = 9578
@@ -1011,6 +1203,10 @@ cost = 2700
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 12
+  spells = ["word of recall"]
+
 [[objects]]
 vnum = 9579
 keywords = ["wand", "call", "lightning"]
@@ -1022,6 +1218,17 @@ weight = 10
 cost = 2800
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+[[objects.extra_descs]]
+keywords = ["wand"]
+description = """
+You see a small engraved storm cloud at the base of this wand."""
+
+  [objects.magic]
+  level = 15
+  max_charges = 3
+  charges = 3
+  spells = ["call lightning"]
 
 [[objects]]
 vnum = 9580
@@ -1035,6 +1242,17 @@ cost = 580
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["wand"]
+description = """
+You see a shape slowly fading into exsistance at the base of this wand."""
+
+  [objects.magic]
+  level = 1
+  max_charges = 15
+  charges = 15
+  spells = ["detect invis"]
+
 [[objects]]
 vnum = 9581
 keywords = ["wand", "armor"]
@@ -1046,6 +1264,12 @@ weight = 10
 cost = 410
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 5
+  max_charges = 10
+  charges = 10
+  spells = ["armor"]
 
 [[objects]]
 vnum = 9582
@@ -1059,6 +1283,12 @@ cost = 250
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 3
+  max_charges = 3
+  charges = 3
+  spells = ["faerie fire"]
+
 [[objects]]
 vnum = 9583
 keywords = ["sewing", "shears"]
@@ -1071,6 +1301,8 @@ cost = 360
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 4
 
@@ -1087,6 +1319,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_evil", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 5
 
@@ -1103,8 +1337,15 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 4
+
+[[objects.extra_descs]]
+keywords = ["fountain", "pen"]
+description = """
+Well, then pen IS mightier than the sword..."""
 
 [[objects]]
 vnum = 9586
@@ -1118,6 +1359,9 @@ cost = 660
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 7
 
@@ -1166,6 +1410,8 @@ cost = 105
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 4
 
@@ -1181,6 +1427,8 @@ cost = 380
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 5
 
@@ -1207,6 +1455,8 @@ cost = 920
 wear_flags = ["wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "negative"
   dice_number = 2
   dice_size = 5
 
@@ -1307,6 +1557,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 8
 
@@ -1327,6 +1579,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 5
 
@@ -1343,6 +1597,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 7
 
@@ -1365,6 +1622,12 @@ weight = 0
 cost = 0
 extra_flags = ["magic"]
 
+  [objects.drink]
+  capacity = 100000
+  current = 100000
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 9602
 keywords = ["pearl"]
@@ -1377,3 +1640,8 @@ cost = 1000
 wear_flags = ["take", "hold"]
 extra_flags = ["melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["pearl"]
+description = """
+It's a nicely-formed pearl, should be worth a fair amount at the jewellers.
+You look around to see if there are any others nearby."""

@@ -44,12 +44,17 @@ spaced widely apart in places, you can't seem to see what lays beyond."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11703
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11788
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["gates", "mithril", "silvery"]
+description = """
+As you glance at the gates, the pattern seems to writhe and shift."""
 
 [[rooms]]
 vnum = 11703
@@ -75,8 +80,8 @@ continues east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11702
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11783
@@ -160,8 +165,8 @@ large white house to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11736
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11784
@@ -191,8 +196,8 @@ glimmers above the doorway."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11790
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11779
@@ -217,6 +222,15 @@ glimmers above the doorway."""
     [[rooms.mob_resets.equips]]
     vnum = 11796
     wear_loc = "wrist_r"
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+The inscription reads:
+
+                  - Myr'vale Noriva -
+
+                         {G-(+)-{x"""
 
 [[rooms]]
 vnum = 11708
@@ -249,8 +263,8 @@ over the pathway to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11717
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -299,8 +313,8 @@ opening onto a granite courtyard.  The path continues south."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 11780
   flags = ["door"]
+  to_vnum = 11780
 
   [[rooms.mob_resets]]
   vnum = 11785
@@ -346,6 +360,7 @@ gates.  The path leads back northward."""
 vnum = 11712
 name = "Outside of space"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A wave of vertigo washes over you as you gaze around what appears to
 be a formless multicolored void.  A variety of strange objects float
@@ -408,6 +423,7 @@ A black counter hangs in midair."""
 vnum = 11713
 name = "Shimmering pathway"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 The pathway continues east and west here.  A strange rope ladder,
 formed of the same material as the pathway, hangs suspended above the
@@ -465,6 +481,7 @@ you see marble steps leading up into the tower center."""
 vnum = 11715
 name = "Chamber of the Guardian"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight permeates the chamber, filling it with a strange greyish
 glow.  The walls, formed of something akin to marble seem impossible
@@ -474,9 +491,9 @@ lead up to double silver doors."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof"]
   to_vnum = 11716
   key = 11705
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
@@ -498,6 +515,7 @@ lead up to double silver doors."""
 vnum = 11716
 name = "Council Chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a wide circular chamber carved of the same strange
 grey stone as the rest of the tower.  A large crescent shaped table
@@ -509,9 +527,9 @@ of a circle bisected by a cross."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof"]
   to_vnum = 11715
   key = 11705
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11782
@@ -525,10 +543,19 @@ of a circle bisected by a cross."""
   vnum = 11707
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["crests"]
+description = """
+The crests represent the six drakyri houses.  The crests of the major
+houses mark the six western chairs:  She'valen Deriki, Treniste, and
+Reykaris.  The six eastern chairs bear the minor house crests of
+She'valen Myrxes, Xaek, and Noriva."""
+
 [[rooms]]
 vnum = 11717
 name = "Hidden lane"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You stand on a narrow strip of silver leading south to a huge tree
 and east to a black oaken door.  The air seems strangely still
@@ -536,13 +563,13 @@ and quiet."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11770
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11709
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11777
@@ -564,6 +591,7 @@ and quiet."""
 vnum = 11718
 name = "Laerkai Headquarters"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You find yourself in a large room enclosed by midnight black onyx
 walls.  In the center of the room is a large stone table encircled
@@ -585,6 +613,13 @@ by 7 dark stone chairs, each inscribed with a different symbol."""
   vnum = 11708
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["dark", "chairs", "stone", "symbol", "symbols"]
+description = """
+Carved into the back of each of six of the chairs is a symbol:
+flame, shield, claw, shadow, fist, and hand.  Engraved in the
+seventh chair is the whirling blade insignia of the Laerkai Master."""
+
 [[rooms]]
 vnum = 11719
 name = "Blue stone courtyard"
@@ -599,8 +634,8 @@ symbol above the archway."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11720
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -610,10 +645,23 @@ symbol above the archway."""
   vnum = 11700
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["glittering", "silver", "symbol"]
+description = """
+Silver, inlayed in the dark marble wall, forms the inscription:
+
+                       chain my body
+              but you will never enslave my mind
+
+                          {B((+*+)){x
+
+                      She'vale Deriki"""
+
 [[rooms]]
 vnum = 11720
 name = "Blue Marble Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dark blue marble walls frame a wide north-south corridor.  Brilliant
 streaks of white slash the darker blue stone like shafts of lightning.
@@ -631,8 +679,8 @@ south, double silver doors are set into the wall."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11719
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -650,6 +698,7 @@ south, double silver doors are set into the wall."""
 vnum = 11721
 name = "Wood Panelled Ballroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The dark polished stone of a dance floor gleams amidst the oak panelled
 walls framing the ballroom.  Silver tapestries adorn the walls, glittering
@@ -660,10 +709,18 @@ is an enormous crystal chandelier."""
   direction = "east"
   to_vnum = 11720
 
+[[rooms.extra_descs]]
+keywords = ["crystal", "chandelier"]
+description = """
+The chandelier is intricately wrought, delicate despite its enormity.
+Suspended from the ceiling, it gives the appearance of some huge,
+fragile snowflake frozen in mid-fall."""
+
 [[rooms]]
 vnum = 11722
 name = "Dining Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dark, white streaked blue marble frames a long hall running east and
 west.  Dominating the center of the hall is a long table of some
@@ -673,8 +730,8 @@ above the table, encasing the entire top."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11723
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -688,10 +745,17 @@ above the table, encasing the entire top."""
   vnum = 11711
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["faint", "shimmer"]
+description = """
+It appears to be some sort of magical curtain which serves to both
+preserve the food and protect it from uninvited guests."""
+
 [[rooms]]
 vnum = 11723
 name = "Kitchen"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand inside a huge, blue walled kitchen.  Pots and pans hang in
 racks along the walls, alongside knife sets and various silver utensils.
@@ -702,8 +766,8 @@ on a spit."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11722
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11711
@@ -713,6 +777,7 @@ on a spit."""
 vnum = 11724
 name = "Blue Marble Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Torchlight flickers over deep blue marble walls, picking out streaks
 of white and darker greys.  Silver, inlayed in the dark marble,
@@ -742,6 +807,7 @@ A winding stairwell is visible to the north."""
 vnum = 11725
 name = "Spiral Stairwell"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A varnished wood stairwell is set against the north wall, spiraling
 up and down to disappear into the floor and ceiling here.  A blue
@@ -763,6 +829,7 @@ marble corridor runs south."""
 vnum = 11726
 name = "Granite storage room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a dimly lit cavern hewn of solid granite.  Shelves inset in
 the rock walls bear a variety of crates and boxes.  Longer crates lean
@@ -771,8 +838,8 @@ A spiral stairwell winds into the light above."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11727
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -786,10 +853,17 @@ A spiral stairwell winds into the light above."""
     vnum = 11722
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["crates", "boxes"]
+description = """
+A faint shimmer above the shelves betrays the presence of a protective
+curtain."""
+
 [[rooms]]
 vnum = 11727
 name = "Magic Workroom"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Shelves line the east and west walls, filled to overflowing with dusty
 tomes and stacks of parchment.  Long tables line the two remaining walls
@@ -798,18 +872,18 @@ half-written documents."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11728
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11729
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11726
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11700
@@ -831,10 +905,21 @@ half-written documents."""
   vnum = 11711
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["tomes", "parchment", "shelves", "shelf"]
+description = """
+A magical barrier shocks you as you reach towards the shelves."""
+
+[[rooms.extra_descs]]
+keywords = ["implements", "documents"]
+description = """
+It appears that some sort of arcane studies are in progress here."""
+
 [[rooms]]
 vnum = 11728
 name = "Chemical Lab"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 One sniff, and a raunchy stench nearly bowls you over.  The sounds of
 liquid, bubbling and dripping in the constructions of tubing and beakers
@@ -843,8 +928,8 @@ white and multicolored steam, which accounts for the stench.  Chemists.."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11727
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11702
@@ -870,6 +955,7 @@ white and multicolored steam, which accounts for the stench.  Chemists.."""
 vnum = 11729
 name = "Summoning Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A warning prickle climbs along the back of your spine as you survey the
 dark walled stone room.  Inlayed in silver in the center of the floor
@@ -880,17 +966,27 @@ the length of the north and east walls."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11727
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11712
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["stone", "shelves"]
+description = """
+A continues stone shelf is carved at about waist height from the north
+and east walls.  Strange implements are lined up on the shelf,
+accompanied by thick tomes.  Glancing at the title of one, you can
+make out the words 'summoning' and 'outer planes'.
+A magic curtain glimmers above the shelf, barely visible in the darkness."""
+
 [[rooms]]
 vnum = 11730
 name = "Mirrored Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a long hallway.  Doors open into the north, south, east,
 and west wall.  The walls between the doors are filled with a variety
@@ -900,23 +996,23 @@ portion of the hall, leading up and down."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11734
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11733
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11732
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11731
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -926,10 +1022,17 @@ portion of the hall, leading up and down."""
   direction = "down"
   to_vnum = 11725
 
+[[rooms.extra_descs]]
+keywords = ["mirror", "mirrors"]
+description = """
+Warped glass mirrors line the walls of the hallway, reflecting strange,
+twisted images of yourself back at you."""
+
 [[rooms]]
 vnum = 11731
 name = "Emerald Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Deep green tapestries adorn varnished black oak wall panels framing a 
 luxurious bedroom suite.  Emerald inlay forms swirling patterns in
@@ -938,8 +1041,8 @@ silver is visible above the door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11706
@@ -949,10 +1052,18 @@ silver is visible above the door to the east."""
     vnum = 11718
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The silver lettering reads:
+
+                She'vale Deriki Nalyss Ira'deia"""
+
 [[rooms]]
 vnum = 11732
 name = "Amethyst Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 White oak walls support layers of rich purple tapestries.  Radiating
 from the center of the ceiling is a huge starburst pattern, formed of
@@ -961,8 +1072,8 @@ in the wood above the northern door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11708
@@ -972,10 +1083,18 @@ in the wood above the northern door."""
     vnum = 11720
     wear_loc = "body"
 
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The inscription reads:
+
+                She'vale Deriki Ykandres Ira'deian"""
+
 [[rooms]]
 vnum = 11733
 name = "Sapphire Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a huge suite adorned with azure blue tapestries.
 Brass sconces holding torches are spaced along the redwood panelled
@@ -985,8 +1104,8 @@ against the redwood framing the doorway to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11707
@@ -996,10 +1115,18 @@ against the redwood framing the doorway to the west."""
     vnum = 11719
     wear_loc = "float"
 
+[[rooms.extra_descs]]
+keywords = ["silver", "lettering"]
+description = """
+The silver letters form the words:
+
+                She'vale Deriki Daeman Ira'deian"""
+
 [[rooms]]
 vnum = 11734
 name = "Ruby Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Deep red wall hangings grace the varnished golden oak panelled walls, 
 shimmering softly in the torchlight.  Five square cut rubies form a
@@ -1008,8 +1135,8 @@ doorway to the south, a silver inscription gleams against the wood."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11730
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11705
@@ -1019,10 +1146,18 @@ doorway to the south, a silver inscription gleams against the wood."""
     vnum = 11717
     wear_loc = "arms"
 
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The inscription reads:
+
+                She'vale Deriki Tyrena Na'deia"""
+
 [[rooms]]
 vnum = 11735
 name = "Diamond Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 White streaked blue marble walls frame an enormous suite decorated with
 shimmering white tapestries.  Woven in silver are depictions of
@@ -1054,10 +1189,22 @@ the dark marble ceiling."""
     vnum = 11721
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["diamond", "lettering", "inscription"]
+description = """
+Glittering diamond picks out an inscription against the dark stone:
+
+                She'vale Deriki Lechandre Deia
+
+                          {B((+*+)){x
+
+                She'vale Deriki Noriek Deiayan"""
+
 [[rooms]]
 vnum = 11736
 name = "Ivory Foyer"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A crystal chandelier hangs suspended in the center of the room, its
 bright light gleaming off polished ivory and gold trim.  The huge
@@ -1073,8 +1220,8 @@ An archway opens north, and a hallway leads into the house to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11706
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1100,10 +1247,25 @@ An archway opens north, and a hallway leads into the house to the west."""
     vnum = 11734
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["golden", "crest"]
+description = """
+Sculpted gold forms the symbol:
+
+                           {Y((-*-)){x"""
+
+[[rooms.extra_descs]]
+keywords = ["silvery", "lettering"]
+description = """
+The lettering reads:
+
+                    - She'vale Treniste -"""
+
 [[rooms]]
 vnum = 11737
 name = "Art Gallery"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Shallow niches, spaced evenly along the long white walls of the gallery,
 display a wide variety of portraits and figurines, each obviously
@@ -1122,10 +1284,23 @@ support larger sculptures in the center of the floor."""
     vnum = 11727
     wear_loc = "legs"
 
+[[rooms.extra_descs]]
+keywords = ["figurines", "sculptures"]
+description = """
+Figurines and larger sculptures, intricately carved from precious metals,
+stones, and rare woods, grace the niches and pedestals."""
+
+[[rooms.extra_descs]]
+keywords = ["portraits"]
+description = """
+The portraits depict everthing from battle scenes to flowers, all painted
+by the hands of master artists and probably worth a fortune."""
+
 [[rooms]]
 vnum = 11738
 name = "White Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Gleaming grey streaked white marble frames a long hallway running
 east-west here.  The glow of torches, affixed in golden sconces along
@@ -1144,10 +1319,16 @@ and south, and the hallway continues west."""
   direction = "west"
   to_vnum = 11740
 
+[[rooms.extra_descs]]
+keywords = ["woven", "tapestries", "tapestry"]
+description = """
+The tapestries depict slender winged figures engaged in battle."""
+
 [[rooms]]
 vnum = 11739
 name = "Dining Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim candlelight picks out the golden grains of the oak table stretching
 the length of the hall, set with white placemats and matching golden 
@@ -1161,6 +1342,7 @@ silverware.  A wide archway opens north onto a white hallway."""
 vnum = 11740
 name = "White Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway stretches west to the base of a spiral staircase and east
 towards the foyer.  A polished golden oak archway opens north into a
@@ -1190,6 +1372,7 @@ circular stone chamber."""
 vnum = 11741
 name = "Tower Base"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a circular white marble room, apparently the base of a tall
 tower.  A staircase spirals through the center of the room, leading up.
@@ -1275,6 +1458,7 @@ through the center of the room to the floor below."""
 vnum = 11744
 name = "Spiral Staircase"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand at the base of a wide spiral staircase ascending to the
 second floor.  A white marble hallway stretches east from here."""
@@ -1291,6 +1475,7 @@ second floor.  A white marble hallway stretches east from here."""
 vnum = 11745
 name = "Second Floor Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A wide hallway stretches west from here, the gleaming marble walls
 broken at intervals by varnished wood doors to the north and south.
@@ -1300,13 +1485,13 @@ floor."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11750
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11746
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1324,6 +1509,7 @@ floor."""
 vnum = 11746
 name = "Heir's Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A huge, luxuriously appointed bedroom stretches out around you.  Golden
 threads, interwoven in the white curtains adorning the walls, glitter
@@ -1332,8 +1518,8 @@ inscription is engraved in the center of the door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11745
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11719
@@ -1343,18 +1529,28 @@ inscription is engraved in the center of the door."""
     vnum = 11729
     wear_loc = "wrist_r"
 
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+The inscription reads:
+
+              She'vale Treniste Lyrene Na'deia
+
+                    (heir to Treniste)"""
+
 [[rooms]]
 vnum = 11747
 name = "Wide Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand at the western end of a wide white marble hallway.  A dark
 oaken door opens northward, and an ashwood door opens west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11749
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1362,13 +1558,14 @@ oaken door opens northward, and an ashwood door opens west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11748
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11748
 name = "Ashwood Panelled Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Varnished white ashwood walls frame a large, well decorated bedroom.
 Dark tapestries of battling heroes adorn the walls.  Behind a glass case
@@ -1378,8 +1575,8 @@ door is a short inscription."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11747
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11720
@@ -1397,10 +1594,30 @@ door is a short inscription."""
     vnum = 11732
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["ashwood", "door", "inscription"]
+description = """
+Inscribed in the ashwood door to the east are the words:
+
+              She'vale Treniste Josreke Ira'deian"""
+
+[[rooms.extra_descs]]
+keywords = ["tapestries", "tapestry", "heroes"]
+description = """
+The warriors all appear to be of slender elven build.  All winged, some
+of the warriors battle in midair."""
+
+[[rooms.extra_descs]]
+keywords = ["collection", "masks"]
+description = """
+Strange masks, carved mostly of dark wood and painted a variety of
+colors."""
+
 [[rooms]]
 vnum = 11749
 name = "Dark Oak Panelled Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The light from several torches in golden sconces spaced along the oak
 panelled walls plays over dark velvet curtains and intricately woven
@@ -1410,8 +1627,8 @@ to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11747
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11721
@@ -1425,10 +1642,29 @@ to the south."""
     vnum = 11734
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["collection", "swords"]
+description = """
+The swords all appear finely tempered mithril or silver, each bearing
+a different design as well as the Treniste crest."""
+
+[[rooms.extra_descs]]
+keywords = ["crest"]
+description = """
+{Y((-*-)){x"""
+
+[[rooms.extra_descs]]
+keywords = ["oaken", "dark", "door", "inscription"]
+description = """
+Inscribed in the dark oaken door to the south are the words:
+
+               She'vale Treniste Rodwen Ira'deia"""
+
 [[rooms]]
 vnum = 11750
 name = "Marble Sitting Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a large, marble walled sitting room.  Golden holders hold
 large white candles set in shallow niches spaced along the walls of the
@@ -1437,23 +1673,29 @@ the east, and a pair of golden doors opens north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11751
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11752
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11745
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["glass", "tunnel"]
+description = """
+The tunnel crosses above ground to the white tower to the east."""
 
 [[rooms]]
 vnum = 11751
 name = "Golden Bedchamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Shimmering golden tapestries hang from the walls, reflecting the torchlight
 in a soft golden glow.  The tapestries part across the center of the
@@ -1463,8 +1705,8 @@ inscription across the center of the doors."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11750
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11714
@@ -1478,10 +1720,29 @@ inscription across the center of the doors."""
     vnum = 11724
     wear_loc = "body"
 
+[[rooms.extra_descs]]
+keywords = ["double", "golden", "doors", "ornate", "letters", "inscription"]
+description = """
+An inscription in the golden doors to the south reads:
+
+              She'vale Treniste Dosandre Deian
+
+                          {Y((-*-)){x
+
+              She'vale Treniste Denylis Deiayan"""
+
+[[rooms.extra_descs]]
+keywords = ["gold", "design", "north"]
+description = """
+The design depicts a winged woman garbed in white wielding a blade in
+one hand and holding a set of scales in the other.  The face, intricately
+carven, is elven in shape."""
+
 [[rooms]]
 vnum = 11752
 name = "Glass Tunnel"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a narrow east-west glass tunnel spanning the midair
 gap between the tower to the east and the second floor of the house to
@@ -1494,8 +1755,8 @@ curve of the tunnel floor probably distorts it to seem farther than it is."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11750
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11753
@@ -1509,17 +1770,27 @@ stone manor."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11754
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
   to_vnum = 11711
 
+[[rooms.extra_descs]]
+keywords = ["silver", "inscription"]
+description = """
+The inscription reads:
+
+                            {D->*<-{x
+
+                    - She'vale Reykaris -"""
+
 [[rooms]]
 vnum = 11754
 name = "Black Marble Entryway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Obsidian wall gleam coldly in the dim torchlight, broken only by the
 dark gates to the west and a wide archway leading east.  A symbol is
@@ -1531,8 +1802,8 @@ carved into the stone above the archway."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11753
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11732
@@ -1542,10 +1813,18 @@ carved into the stone above the archway."""
     vnum = 11750
     wear_loc = "neck1"
 
+[[rooms.extra_descs]]
+keywords = ["symbol"]
+description = """
+Cut into the dark stone, the symbol reads:
+
+                           {D->*<-{x"""
+
 [[rooms]]
 vnum = 11755
 name = "Domed Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Curving obsidian walls arch above, forming a hermispherical ceiling
 above the large circular chamber.  Bits of silver and small diamonds,
@@ -1568,6 +1847,7 @@ the illusion of an eternal night sky."""
 vnum = 11756
 name = "Dark tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Plain black obsidian walls arch overhead to form a narrow north-south
 tunnel.  Deep niches open off the walls of the tunnel to the east, west,
@@ -1593,6 +1873,7 @@ and south.  To the north, the tunnel opens onto a a huge domed room."""
 vnum = 11757
 name = "Dark niche"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 You stand in a dark, narrow niche carved of plain black stone.  A
 wide black marble pedestal stands in the center of the floor, probably
@@ -1610,10 +1891,19 @@ designed to display some large object."""
     vnum = 11750
     wear_loc = "neck1"
 
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestal"]
+description = """
+A low, wide pedestal carved of black marble.  Scratches and worn patches
+mar the polished top of the pedestal.  Strangely, along the sides, you
+notice offwhite streaks of what appears to be wax and darker splotches
+of something very like dried blood.."""
+
 [[rooms]]
 vnum = 11758
 name = "Dark niche"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 You stand in a dark, narrow niche carved of plain black stone.  A
 wide black marble pedestal stands in the center of the floor, probably
@@ -1631,10 +1921,19 @@ designed to display some large object."""
     vnum = 11750
     wear_loc = "neck1"
 
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestal"]
+description = """
+A low, wide pedestal carved of black marble.  Scratches and worn patches
+mar the polished top of the pedestal.  Strangely, along the sides, you
+notice offwhite streaks of what appears to be wax and darker splotches
+of something very like dried blood.."""
+
 [[rooms]]
 vnum = 11759
 name = "Dark niche"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 You stand in a dark, narrow niche carved of plain black stone.  A
 wide black marble pedestal stands in the center of the floor, probably
@@ -1646,9 +1945,9 @@ designed to display some large object."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11760
   key = 11701
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11735
@@ -1662,10 +1961,26 @@ designed to display some large object."""
     vnum = 11701
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["marble", "pedestal"]
+description = """
+A low, wide pedestal carved of black marble.  Scratches and worn patches
+mar the polished top of the pedestal.  Strangely, along the sides, you
+notice offwhite streaks of what appears to be wax and darker splotches
+of something very like dried blood..  A crack runs down the eastern
+side of the pedestal."""
+
+[[rooms.extra_descs]]
+keywords = ["crack"]
+description = """
+Peering through the crack, you can make out a small carved slot, faintly
+resembling a keyhole."""
+
 [[rooms]]
 vnum = 11760
 name = "Forbidding Doorway"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 Huge double doors, carved of polished black stone, loom forbiddingly to
 the south.  The archway surrounding the door is carved in the shape of
@@ -1676,15 +1991,15 @@ betraying the dangerous strength of their maker."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11761
   key = 11702
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11759
   key = 11701
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11736
@@ -1698,6 +2013,7 @@ betraying the dangerous strength of their maker."""
 vnum = 11761
 name = "Pentagram Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall"]
 description = """
 You find yourself in a large chamber hewn of black stone.  A huge
 pentagram is etched into the stone of the floor, dominating the center
@@ -1707,9 +2023,9 @@ trails of blood streaking the floor between the doors and the altar."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 11760
   key = 11702
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 11723
@@ -1731,10 +2047,24 @@ trails of blood streaking the floor between the doors and the altar."""
     vnum = 11751
     wear_loc = "arms"
 
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Strange runes are engraved in the sides and face of the altar.  The
+top of the altar is permanently stained with ingrained blood, and fresher
+blood dribbles in streaks down the sides."""
+
+[[rooms.extra_descs]]
+keywords = ["pentagram"]
+description = """
+A huge pentagram etched into the floor of the room.  Strange glyphs and
+runes have been carved in the spaces between the defining lines."""
+
 [[rooms]]
 vnum = 11762
 name = "Black Marble Corridor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Black marble walls tower above, defining a tall corridor leading east
 and south here.  The faint odor of what could have been blood lingers
@@ -1760,6 +2090,7 @@ in the air, adding to the gloom of the dark corridor."""
 vnum = 11763
 name = "Black Marble Corridor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The black marble walls gleam coldly in the dim light.  A tall oak
 door opens to the north, and a similar ash door opens south from here.
@@ -1767,8 +2098,8 @@ The corridor continues east and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11765
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1776,8 +2107,8 @@ The corridor continues east and west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11764
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1787,6 +2118,7 @@ The corridor continues east and west."""
 vnum = 11764
 name = "Dark ash bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A single blood red candle in the center of the room bathes the room in
 an eerie reddish glow, picking out the dark grains of black ashwood
@@ -1797,8 +2129,8 @@ glitters reddish in the light."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11763
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11729
@@ -1812,10 +2144,24 @@ glitters reddish in the light."""
     vnum = 11746
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["candle", "blood", "red"]
+description = """
+A single blood red candle balances on a nightstand in the center of the
+room."""
+
+[[rooms.extra_descs]]
+keywords = ["golden", "lettering"]
+description = """
+Lettering above the doorway reads:
+
+                  She'vale Reykaris Sorina Ira'deia"""
+
 [[rooms]]
 vnum = 11765
 name = "Black oak bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Black oak wall panels seem to absorb the dim light of the few torches
 spaced along the walls.  Braces of throwing daggers gleam from behind a
@@ -1824,8 +2170,8 @@ from above the tall oak door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11763
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11730
@@ -1839,10 +2185,23 @@ from above the tall oak door to the south."""
     vnum = 11748
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["golden", "inscription"]
+description = """
+A golden inscription above the door reads:
+
+                  She'vale Reykaris Loryn Ira'deia"""
+
+[[rooms.extra_descs]]
+keywords = ["braces", "throwing", "daggers", "collection"]
+description = """
+The daggers appear finely tempered and quite lethal.."""
+
 [[rooms]]
 vnum = 11766
 name = "Black Marble Corridor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The tall black marble walls are broken to the north, east, and south
 by doorways.  The door to the north is carved mahogany, to the south
@@ -1852,18 +2211,18 @@ skull, surrounded by gold lettering."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11768
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11769
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11767
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11725
@@ -1873,10 +2232,24 @@ skull, surrounded by gold lettering."""
     vnum = 11740
     wear_loc = "float"
 
+[[rooms.extra_descs]]
+keywords = ["humanoid", "skull"]
+description = """
+The skull gleams whitely against the dark marble archway, its mouth
+seemingly fixed in a permanent feral grin."""
+
+[[rooms.extra_descs]]
+keywords = ["gold", "lettering"]
+description = """
+The lettering reads:
+
+   She'vale Reykaris Rachal Deia  {D->*<-{x  She'vale Reykaris Toryan Deiayan"""
+
 [[rooms]]
 vnum = 11767
 name = "Ash bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A humanoid skull hangs suspended from the center of the ceiling, an inner
 light giving it's eyes a reddish glow white permeates dimly throughout
@@ -1886,8 +2259,8 @@ is a short inscription in gold."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11766
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11731
@@ -1897,10 +2270,29 @@ is a short inscription in gold."""
     vnum = 11749
     wear_loc = "arms"
 
+[[rooms.extra_descs]]
+keywords = ["humanoid", "skull"]
+description = """
+A reddish light glows from within the skull, beaming eerily from the emtpy
+eye sockets and lipless mouth to bathe the room in a dim, bloody glow."""
+
+[[rooms.extra_descs]]
+keywords = ["strange", "figures"]
+description = """
+Intricately carved, the figures depict weird, hellish creatures."""
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+The inscription above the door reads:
+
+                  She'vale Reykaris Chake Ira'deian"""
+
 [[rooms]]
 vnum = 11768
 name = "Charred mahogany bedroom"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Streaks of charred and blackened wood mar the once-reddish brown mahogany
 wall panels, as if a thunderstorm once raged through the room, throwing
@@ -1910,8 +2302,8 @@ mahogany door to the south, somewhow untouched the heat."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11766
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11728
@@ -1921,10 +2313,18 @@ mahogany door to the south, somewhow untouched the heat."""
     vnum = 11744
     wear_loc = "wrist_r"
 
+[[rooms.extra_descs]]
+keywords = ["gold", "lettering"]
+description = """
+Inscribed above the doorway are the words:
+
+                  She'vale Reykaris Kranali Na'deian"""
+
 [[rooms]]
 vnum = 11769
 name = "Dark Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Black obsidian walls seem to absorb all light in the room, leaving a
 forbidding darkness.  Full humanoid skeletons, embedded in the walls around
@@ -1934,8 +2334,8 @@ an inscription carved into the stone archway framing the doorway."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11766
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11724
@@ -1957,10 +2357,26 @@ an inscription carved into the stone archway framing the doorway."""
     vnum = 11743
     wear_loc = "about"
 
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+Above the dark doorway is the inscription:
+
+ She'vale Reykaris Rachal Deia
+                                {D->*<-{x
+                                       She'vale Reykaris Toryan Deiayan"""
+
+[[rooms.extra_descs]]
+keywords = ["humanoid", "skeletons"]
+description = """
+You notice bones rising from the shoulder blades, probably to support
+wings."""
+
 [[rooms]]
 vnum = 11770
 name = "Quiet foyer"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A still quiet permeates the area, broken only by your movements and the
 occasional crackle of flickering torches.  Above the eastern archway,
@@ -1982,13 +2398,27 @@ entrance door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11717
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["inscription"]
+description = """
+Twining around the archway is an inscription:
+
+                       Myr'vale Myrxes
+
+                 swift      {W-=+)>{x      silent
+
+                          ..or dead
+
+                   - flight of the dagger -"""
 
 [[rooms]]
 vnum = 11771
 name = "Alcove"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight illuminates the interior of a quiet, stone walled alcove.
 Benches line the north, west, and east walls, and an archway leads south."""
@@ -2005,6 +2435,7 @@ Benches line the north, west, and east walls, and an archway leads south."""
 vnum = 11772
 name = "Alcove"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight illuminates the interior of a quiet, stone walled alcove.
 Benches line the north, west, and east walls, and an archway leads south."""
@@ -2025,6 +2456,7 @@ Benches line the north, west, and east walls, and an archway leads south."""
 vnum = 11773
 name = "Alcove"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Dim torchlight illuminates the interior of a quiet, stone walled alcove.
 Benches line the north, west, and east walls, and an archway leads south."""
@@ -2035,13 +2467,14 @@ Benches line the north, west, and east walls, and an archway leads south."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11774
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11774
 name = "Plain stone room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a plain room hewn of dark grey stone.  Wooden targets affixed
 to the walls bear deep gouges and slash marks.  Empty racks, probably
@@ -2049,13 +2482,13 @@ for knives, line the upper northern wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11773
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11742
@@ -2065,10 +2498,19 @@ for knives, line the upper northern wall."""
     vnum = 11760
     wear_loc = "neck1"
 
+[[rooms.extra_descs]]
+keywords = ["wooden", "targets", "target"]
+description = """
+Thick slices of wood have been affixed to the stone walls.  Deep gouge
+marks indicate that they have been used for some sort of target
+practice.  An unsettling number of the marks are very close to the target
+centers."""
+
 [[rooms]]
 vnum = 11775
 name = "Dark cavern"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Intricate carvings cover the stone walls, floors, and ceiling.  Most
 of the engraving seems to blend into one continuous, amorphous twisting
@@ -2077,23 +2519,23 @@ a hawk, and a dagger among them."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11776
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11778
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11774
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11779
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11741
@@ -2103,10 +2545,16 @@ a hawk, and a dagger among them."""
     vnum = 11759
     wear_loc = "wrist_r"
 
+[[rooms.extra_descs]]
+keywords = ["design"]
+description = """
+You try to follow the design with your eyes, but it eludes you."""
+
 [[rooms]]
 vnum = 11776
 name = "Chamber of the Panther"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Engravings of prowling and striking panthers grace the dark onyx walls,
 so intricate that they almost seem alive..  The polished form of a
@@ -2115,13 +2563,13 @@ The door itself is flush with the wall and nearly invisible."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11777
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11744
@@ -2143,6 +2591,7 @@ The door itself is flush with the wall and nearly invisible."""
 vnum = 11777
 name = "Chamber of the Dagger"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Grey streaked black marble walls gleam coldly in the dim light, broken
 only by the depiction of a thrown dagger in the center of the northern wall.
@@ -2151,13 +2600,13 @@ Resting on a low table in the center of the room is a glass case containing
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11778
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11776
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11740
@@ -2175,10 +2624,31 @@ Resting on a low table in the center of the room is a glass case containing
     vnum = 11761
     wear_loc = "legs"
 
+[[rooms.extra_descs]]
+keywords = ["dagger"]
+description = """
+An engraving of a thrown dagger arcs across the northern wall.
+Carved along the hilt of the dagger are the words:
+
+                    Myr'vale Myrxes Dyraena Na'deia"""
+
+[[rooms.extra_descs]]
+keywords = ["glass", "case", "daggers"]
+description = """
+You see three daggers, covered by a low glass case.  The central dagger is
+thin with a narrow hilt, probably for throwing.  It gleams the silver-blue
+of finely tempered mithril.  The crest of Myrxes is engraved in the center
+of the hilt.  The eastern dagger is longer and formed of carved onyx.
+An engraved black panther stalks along the length of the blade.  Honed
+steel forms the third blade, longer than the other two, almost a shortsword.
+Carved above the dark grip is a striking lynx.  The shimmer of some sort
+of protective magic shield surrounds the case and supporting table."""
+
 [[rooms]]
 vnum = 11778
 name = "Chamber of the Lynx"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A striking lynx fills the eastern wall, cut into the otherwise unadorned
 black onyx walls of the chamber.  A leaping lynx forms an archway above
@@ -2187,13 +2657,13 @@ glittering against the dark stone."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11777
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11745
@@ -2215,6 +2685,7 @@ glittering against the dark stone."""
 vnum = 11779
 name = "Chamber of Shadows"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Shadows seem to coallesce here, extinguishing nearly all light to
 pinpoints, dulling the polished gleam of the framing onyx walls and
@@ -2224,8 +2695,8 @@ in the darkness, muffles all sound to mere whispers."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11775
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11738
@@ -2267,6 +2738,17 @@ in the darkness, muffles all sound to mere whispers."""
     vnum = 11766
     wear_loc = "hands"
 
+[[rooms.extra_descs]]
+keywords = ["hawk", "hawks", "south", "s"]
+description = """
+Beneath the engraved hawks, you notice an inscription in the dark stone:
+
+                  Myr'vale Myrxes Jaena Deia
+
+                            {W-=+)>{x
+
+                 Myr'vale Myrxes Neraikis Deiayan"""
+
 [[rooms]]
 vnum = 11780
 name = "Granite Courtyard"
@@ -2278,13 +2760,13 @@ carved oaken door opens into the large house to the west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 11710
   flags = ["door"]
+  to_vnum = 11710
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11781
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11760
@@ -2306,6 +2788,7 @@ carved oaken door opens into the large house to the west."""
 vnum = 11781
 name = "Iron Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Imposing iron walls tower above to form a long north-south hallway.
 Thick steel double doors loom to the west, and a carved oaken door
@@ -2317,8 +2800,8 @@ opens east.  The hallway continues north and south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11780
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2326,13 +2809,14 @@ opens east.  The hallway continues north and south."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
 [[rooms]]
 vnum = 11782
 name = "Iron Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway terminates to the south at a thick steel door.  Above the
 doorway is the Xaek crest over a crossed shield and sword."""
@@ -2343,8 +2827,8 @@ doorway is the Xaek crest over a crossed shield and sword."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11783
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11761
@@ -2358,6 +2842,7 @@ doorway is the Xaek crest over a crossed shield and sword."""
 vnum = 11783
 name = "Private Arena"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Tall iron walls enclose a wide circular arena.  Thick sand covers the
 floor, scuffed by recent practice bouts.  Dark clumps of what appear
@@ -2366,8 +2851,8 @@ out of the arena to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11782
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11756
@@ -2406,23 +2891,23 @@ west, and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11785
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11781
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11787
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11786
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11761
@@ -2452,6 +2937,7 @@ west, and south."""
 vnum = 11785
 name = "Second Commander's Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in a sparsely furnished office framed by plain oak panelled
 walls.  A desk rests near the western wall, accompanied by several
@@ -2461,8 +2947,8 @@ in the room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11754
@@ -2472,10 +2958,18 @@ in the room."""
     vnum = 11772
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["inscription", "bronze"]
+description = """
+The inscription reads:
+
+                  Myr'vale Xaek Rakael Sequas"""
+
 [[rooms]]
 vnum = 11786
 name = "First Commander's Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Varnished white beechwood walls frame a spacious office.  Polished
 forms the floor, and a large window overlooks the practice field
@@ -2484,8 +2978,8 @@ an inscription in burnished bronze."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11753
@@ -2495,10 +2989,18 @@ an inscription in burnished bronze."""
     vnum = 11771
     wear_loc = "legs"
 
+[[rooms.extra_descs]]
+keywords = ["inscription", "bronze"]
+description = """
+The inscription reads:
+
+                  Myr'vale Xaek Nyxil Sh'aya"""
+
 [[rooms]]
 vnum = 11787
 name = "Third Commander's Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The varnished reddish brown of mahogany wall panels glimmers slightly
 in the torchlight.  Darker wood forms a doorframe around the door to
@@ -2506,8 +3008,8 @@ the north.  Engraved above the door is an inscription in bronze."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11784
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11755
@@ -2517,10 +3019,18 @@ the north.  Engraved above the door is an inscription in bronze."""
     vnum = 11773
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["inscription", "bronze"]
+description = """
+The inscription reads:
+
+                  Myr'vale Xaek Yeven Treye"""
+
 [[rooms]]
 vnum = 11788
 name = "Iron Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway comes to an abrupt end before two huge granite doors.
 The depiction of a huge lion is carved in relief at the crest of
@@ -2530,8 +3040,8 @@ carved into the stone."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11789
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2545,10 +3055,19 @@ carved into the stone."""
   vnum = 11759
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["crest"]
+description = """
+The crest of house Xaek is engraved in the granite doors, surrounded
+by an inscription:
+
+   Myr'vale Xaek Dyana Deia    {w][+][{x    Myr'vale Xaek Ryke Deiayan"""
+
 [[rooms]]
 vnum = 11789
 name = "Marble Bedchamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a huge bedchamber walled with white streaked grey
 marble.  Parted white silk tapestries to the north reveal an engraving
@@ -2557,8 +3076,8 @@ granite doors in the south wall."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11788
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11751
@@ -2580,10 +3099,24 @@ granite doors in the south wall."""
     vnum = 11770
     wear_loc = "shield"
 
+[[rooms.extra_descs]]
+keywords = ["lion", "engraving"]
+description = """
+The intricate engraving reveals lithe, powerful muscles and a proud
+feline head.  Beneath the engraving, you notice the inscription:
+
+                 - Myr'vale  Xaek -
+
+            Strength    {w][+][{x    Power
+
+                        Wrath
+                     of the Lion"""
+
 [[rooms]]
 vnum = 11790
 name = "Jade Entry Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The light from thick wax candles spaced in niches along the walls
 plays over jade walls, permeating the hall with a soft greenish glow.
@@ -2592,8 +3125,8 @@ north.  A corridor exits the hall to the south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11707
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2607,6 +3140,7 @@ north.  A corridor exits the hall to the south."""
 vnum = 11791
 name = "Jade Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Polished jade forms the walls of a short north-south corridor, the
 green of the stone fading from dark to light and back again.
@@ -2620,13 +3154,13 @@ door leads east and a glass door south.  The corridor continues west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11792
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11793
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2636,6 +3170,9 @@ door leads east and a glass door south.  The corridor continues west."""
 vnum = 11792
 name = "Shrine of Healing"
 sector = "inside"
+room_flags = ["indoors", "safe"]
+heal_rate = 115
+mana_rate = 115
 description = """
 You stand in a small, jade walled shrine.  In the center of the shrine,
 a low white marble dais supports a kneeling statue of a praying drakyri.
@@ -2645,8 +3182,8 @@ with a soft glow.  You feel healthy and at peace here."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11791
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11765
@@ -2681,8 +3218,8 @@ A glass door leads into the house to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11791
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2734,6 +3271,7 @@ a narrow path winds up to a large white house."""
 vnum = 11795
 name = "Jade Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The soft glow of candlelight shimmers over deep green jade walls.
 Varnished wood doors lead north, south, and west, and a staircase spirals
@@ -2741,8 +3279,8 @@ upwards towards a pair of double white doors above."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11796
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2750,18 +3288,18 @@ upwards towards a pair of double white doors above."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11798
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 11797
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 11799
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11772
@@ -2771,6 +3309,7 @@ upwards towards a pair of double white doors above."""
 vnum = 11796
 name = "Candlelit Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Light from a single white candle, supported on a table in the center
 of the room, glows golden amidst varnished ashwood wall panels.
@@ -2780,8 +3319,8 @@ the door to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11769
@@ -2791,10 +3330,28 @@ the door to the south."""
     vnum = 11783
     wear_loc = "neck2"
 
+[[rooms.extra_descs]]
+keywords = ["candle", "white"]
+description = """
+A tall white candle glows brightly."""
+
+[[rooms.extra_descs]]
+keywords = ["depiction", "hand"]
+description = """
+Beneath the hand is the crest of house Noriva."""
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "golden"]
+description = """
+The inscription reads:
+
+                 Myr'vale Noriva Dryna Ira'deia"""
+
 [[rooms]]
 vnum = 11797
 name = "Teak Panelled Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The golden grains of teak wall panels glow warmly in the torchlight.
 Carved above the doorway to the east is a strange, five-pointed leaf.
@@ -2802,8 +3359,8 @@ Beneath the leaf, you notice an inscription in gold."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11768
@@ -2813,10 +3370,23 @@ Beneath the leaf, you notice an inscription in gold."""
     vnum = 11782
     wear_loc = "hands"
 
+[[rooms.extra_descs]]
+keywords = ["leaf"]
+description = """
+A strange five-pointed leaf is carved in the golden wood above the doorway."""
+
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+The inscription reads:
+
+                 Myr'vale Noriva Yllyra Na'deia"""
+
 [[rooms]]
 vnum = 11798
 name = "Booklined Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Bookshelves line the east and south walls, and a large canopied bed
 rests against the west wall.  Battered tomes of herb lore and
@@ -2826,8 +3396,8 @@ the doorway, you notice a short inscription in gold."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11770
@@ -2837,10 +3407,16 @@ the doorway, you notice a short inscription in gold."""
     vnum = 11784
     wear_loc = "feet"
 
+[[rooms.extra_descs]]
+keywords = ["inscription", "gold"]
+description = """
+Myr'vale Noriva Voryl Ira'deian"""
+
 [[rooms]]
 vnum = 11799
 name = "Sunlit Bedchamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Curved glass panels form a domed roof overhead, filling the chamber
 with the warm glow of sunlight.  An inlayed engraving of a huge bear
@@ -2849,10 +3425,15 @@ Double white oaken doors open onto the stairwell to the floor below."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 11795
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 11771
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["engraving", "bear"]
+description = """
+The engraving depicts a huge, shaggy bear, an epitome of strength
+and health."""

@@ -9,6 +9,7 @@ hitroll = 0
 ac = [30, 30, 30, 90]
 off_flags = ["disarm", "dodge", "trip"]
 race = "human"
+gold = 5
 sex = "female"
 act_flags = ["npc"]
 alignment = 0

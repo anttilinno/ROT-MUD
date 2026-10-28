@@ -129,8 +129,8 @@ unintelligible."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3808
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -160,6 +160,7 @@ unintelligible."""
 vnum = 3808
 name = "Inside Camelot"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are just inside the castle gate of Camelot.  From here, you 
 can hear the hum of activity from all directions.  Servants are hurrying about 
@@ -186,6 +187,7 @@ candles on either side of you."""
 vnum = 3809
 name = "A Corridor in Camelot"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You can hear the hum of activity from all directions.  It 
 appears to be dinner time, for the servants are hurrying about 
@@ -204,6 +206,7 @@ sort of junction."""
 vnum = 3810
 name = "Center of Camelot's First Level"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the center of all the comotion in this wondrous castle.  
 Around you, servants and guards move about their duties 
@@ -237,6 +240,7 @@ religiously.  Each direction seems to look the same..."""
 vnum = 3811
 name = "The Western Wing of Camelot"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway continues on here.  The walls here are decorated 
 with beautiful paintings and the corridor is adorned with 
@@ -255,6 +259,7 @@ guard stoically patrolling the area."""
 vnum = 3812
 name = "End of the Western Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have reached the end of this corridor.  On either side, you 
 can see beautifully crafted doors.  From the room to the east, 
@@ -262,8 +267,8 @@ you can hear idle chit-chat taking place.  From the room to the west--nothing.""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3813
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -271,8 +276,8 @@ you can hear idle chit-chat taking place.  From the room to the west--nothing.""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3814
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3805
@@ -286,6 +291,7 @@ you can hear idle chit-chat taking place.  From the room to the west--nothing.""
 vnum = 3813
 name = "The Lounge"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You've entered the servants' lounge.  Here is where they eat 
 their meals, visit with eachother, and tell tales of all they 
@@ -321,6 +327,7 @@ residence."""
 vnum = 3814
 name = "Storage Room"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You've entered a small storage room.  Here the floor is covered 
 with old broken bits of gardening equipment, brooms and 
@@ -334,6 +341,7 @@ assorted other items."""
 vnum = 3815
 name = "The Eastern Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the eastern corridor now.  The hallway continues on 
 here.  The walls here are decorated with beautiful paintings 
@@ -349,8 +357,8 @@ sounds of pots and pans clanking together."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3825
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -360,6 +368,7 @@ sounds of pots and pans clanking together."""
 vnum = 3816
 name = "the Eastern Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You continue down the eastern corridor of Camelot.  The floor 
 here is covered by a beautiful Persian carpet.  The thread is 
@@ -378,6 +387,7 @@ the crest of King Arthur."""
 vnum = 3817
 name = "End of the Eastern Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have reached the end of this corridor.  To the north, there 
 is a closed door from behind which there are loud voices 
@@ -386,9 +396,9 @@ laughter follows."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3818
   key = 3817
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -406,6 +416,7 @@ laughter follows."""
 vnum = 3818
 name = "Guards' Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered the guards' room. The room is a place where 
 the guards congregate to discuss the day's activities, which 
@@ -414,15 +425,15 @@ pile of old, used armor lying on the floor."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3822
   key = 3817
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3817
   key = 3817
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 3805
@@ -460,6 +471,7 @@ pile of old, used armor lying on the floor."""
 vnum = 3819
 name = "The Northern Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is littered with proof of the victories of 
 Arthur's men.  Beautiful swords, vases, and other artifacts 
@@ -478,6 +490,7 @@ provide light for the hallway."""
 vnum = 3820
 name = "The Northern Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is littered with proof of the victories of 
 Arthur's men.  Beautiful swords, vases, and other artifacts 
@@ -496,6 +509,7 @@ provide light for the hallway."""
 vnum = 3821
 name = "End of the Northern Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the end of the long Northern Corridor.  To your west, a 
 door lies preventing access to the lounge.  To the east, a 
@@ -511,13 +525,14 @@ small corridor leads towards the main stairwell."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3813
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3822
 name = "Small Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You leave the hustle and bustle of the Northern Corridor and 
 move down this lesser used hallway.  To the south, you hear 
@@ -529,9 +544,9 @@ noises from the guard room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3818
   key = 3817
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -541,6 +556,7 @@ noises from the guard room."""
 vnum = 3823
 name = "Down the Small Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You continue down the sideway between the main stairwell and 
 the Northern Corridor."""
@@ -557,6 +573,7 @@ the Northern Corridor."""
 vnum = 3824
 name = "Main Stairwell"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the main stairwell.  It leads up to the second level of 
 Camelot, as well as down to the dungeon.  You hear screams of 
@@ -579,6 +596,7 @@ clanking as someone paces back and forth."""
 vnum = 3825
 name = "Kitchen"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The kitchen is littered with dirty dishes and pots filled with 
 food.  Here is where all the meals for those who live in the 
@@ -588,8 +606,8 @@ There is a small stairway leading up in the back of this room."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3815
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -615,6 +633,7 @@ There is a small stairway leading up in the back of this room."""
 vnum = 3830
 name = "Camelot's Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You've entered the lowest level of Camelot.  The dungeon is 
 dimly lit and a vile stench radiates from the west.  You can 
@@ -645,6 +664,7 @@ die."""
 vnum = 3831
 name = "Passageway through the dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark, damp part of the castle--one many never 
 see.  The stench is unbelievable, and your stomach turns at the 
@@ -654,9 +674,9 @@ Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3835
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -664,9 +684,9 @@ Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3840
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -676,6 +696,7 @@ Cell doors are to the north and south."""
 vnum = 3832
 name = "Passageway through the dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark, damp part of the castle--one many never 
 see.  The stench is unbelievable, and your stomach turns at the 
@@ -685,9 +706,9 @@ steps away.  Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3836
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -695,9 +716,9 @@ steps away.  Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3839
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -707,6 +728,7 @@ steps away.  Cell doors are to the north and south."""
 vnum = 3833
 name = "Passageway through the dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dark, damp part of the castle--one many never 
 see.  The stench is unbelievable, and your stomach turns at the 
@@ -716,9 +738,9 @@ steps away. Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3837
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -726,9 +748,9 @@ steps away. Cell doors are to the north and south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3838
   key = 3815
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -738,6 +760,7 @@ steps away. Cell doors are to the north and south."""
 vnum = 3834
 name = "End of the Dungeon"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You've finally reached the end of this dark, stench ridden 
 pathway.  There don't seem to be any exits here, though, save 
@@ -751,6 +774,7 @@ the return to the stairway to your east."""
 vnum = 3835
 name = "Small Dungeon Cell"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This cell seems almost burrowed into the stone, much like a 
 small cave.  The darkness makes it very difficult to see 
@@ -770,6 +794,7 @@ can see small figures running about the dungeon floor."""
 vnum = 3836
 name = "Small Dungeon Cell"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This cell seems almost burrowed into the stone, much like a 
 small cave.  The darkness makes it very difficult to see 
@@ -785,6 +810,7 @@ can see small figures running about the dungeon floor."""
 vnum = 3837
 name = "Small Dungeon Cell"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This cell seems almost burrowed into the stone, much like a 
 small cave.  The darkness makes it very difficult to see 
@@ -804,6 +830,7 @@ can see small figures running about the dungeon floor."""
 vnum = 3838
 name = "Small Dungeon Cell"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This cell seems almost burrowed into the stone, much like a 
 small cave.  The darkness makes it very difficult to see 
@@ -823,6 +850,7 @@ can see small figures running about the dungeon floor."""
 vnum = 3839
 name = "Small Dungeon Cell"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This cell seems almost burrowed into the stone, much like a 
 small cave.  The darkness makes it very difficult to see 
@@ -842,6 +870,7 @@ can see small figures running about the dungeon floor."""
 vnum = 3840
 name = "Small Dungeon Cell"
 sector = "inside"
+room_flags = ["dark"]
 description = """
 This cell seems almost burrowed into the stone, much like a 
 small cave.  The darkness makes it very difficult to see 
@@ -861,6 +890,7 @@ can see small figures running about the dungeon floor."""
 vnum = 3850
 name = "Camelot's Second Level"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You've reached the second floor of this wondrous castle.  The 
 stairway continues up even further, and it also goes back to 
@@ -892,6 +922,7 @@ expertly."""
 vnum = 3851
 name = "Short Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway here is adorned with beautiful paintings of those 
 who ruled the surrounding lands before King Arthur.  Like him, 
@@ -911,6 +942,7 @@ brass frames."""
 vnum = 3852
 name = "Short Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway here is adorned with beautiful paintings of those 
 who ruled the surrounding lands before King Arthur.  Like him, 
@@ -938,6 +970,7 @@ brass frames."""
 vnum = 3853
 name = "Beginning of the Long Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You've reached some sort of a junction here.  A beautiful suite 
 lies to the north, while you can see another beautiful room way 
@@ -948,8 +981,8 @@ the area."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3854
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -979,6 +1012,7 @@ the area."""
 vnum = 3854
 name = "Lancelot's Private Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You've entered a beautiful room.  A large shaggy carpet covers 
 the tiled floor, and a beautiful painting of Lancelot's wife 
@@ -1009,6 +1043,7 @@ brightly shining brass frame with rubies in the four corners."""
 vnum = 3855
 name = "Long Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This long hallway leads down towards the guest quarters, as 
 well as the rooms the servants use.  The walls are adorned with 
@@ -1027,6 +1062,7 @@ around.  All of them have pledged their allegiance to King Arthur."""
 vnum = 3856
 name = "Long Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This long hallway leads down towards the guest quarters, as 
 well as the rooms the servants use.  The walls are adorned with 
@@ -1053,6 +1089,7 @@ around.  All of them have pledged their allegiance to King Arthur."""
 vnum = 3857
 name = "Long Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This long hallway leads down towards the guest quarters, as 
 well as the rooms the servants use.  The walls are adorned with 
@@ -1071,6 +1108,7 @@ around.  All of them have pledged their allegiance to King Arthur."""
 vnum = 3858
 name = "Large Junction"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 >From here, the hallway contines in each of the cardinal 
 directions.  You can go north, back towards Lancelot's Suite 
@@ -1106,6 +1144,7 @@ spectacular suite, and to the east are the guest quarters."""
 vnum = 3859
 name = "Hallway of Honor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway here has a golden glow about it.  You realize that 
 the floor is plated with gold here, and a small coffee table 
@@ -1118,8 +1157,8 @@ an enormous chandelier swing gently."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3860
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3840
@@ -1141,6 +1180,7 @@ an enormous chandelier swing gently."""
 vnum = 3860
 name = "Gawain's Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here you've entered the private room of Sir Gawain.  You 
 remember from your father that Sir Gawain single-handedly 
@@ -1169,6 +1209,7 @@ the wall."""
 vnum = 3861
 name = "Hallway towards the Servant Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is noticable less well decorated, and seems 
 designed only for ease of use.  To the south, you can see the 
@@ -1186,6 +1227,7 @@ entrances to three servant rooms."""
 vnum = 3862
 name = "Entrance to Servant Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here are three entrances to servant quarters.  The small rooms 
 are suitable for the commoners who inhabit them.  You wonder, 
@@ -1197,23 +1239,24 @@ though, if you could possibly live in one comfortably."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3865
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3864
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3863
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3863
 name = "Servant's Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is small!  You wonder how a person could live here at 
 all.  In fact, you are quite sure that this is even smaller 
@@ -1237,6 +1280,7 @@ washed in ages."""
 vnum = 3864
 name = "Servant's Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is small!  You wonder how a person could live here at 
 all.  In fact, you are quite sure that this is even smaller 
@@ -1260,6 +1304,7 @@ washed in ages."""
 vnum = 3865
 name = "Servant's Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This room is small!  You wonder how a person could live here at 
 all.  In fact, you are quite sure that this is even smaller 
@@ -1283,6 +1328,7 @@ washed in ages."""
 vnum = 3866
 name = "Hallway of Honor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway continues here towards the guest quarters and the 
 room of Sir Galahad, as well as back towards the Long 
@@ -1290,8 +1336,8 @@ Corridor.  In addition, there is a room to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3870
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1305,6 +1351,7 @@ Corridor.  In addition, there is a room to the north."""
 vnum = 3867
 name = "Hallway of Honor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The hallway continues here towards the guest quarters and the 
 room of Sir Galahad, as well as back towards the Long 
@@ -1313,13 +1360,13 @@ and south of you."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3871
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3873
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1329,6 +1376,7 @@ and south of you."""
 vnum = 3868
 name = "End of the Hallway of Honor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The end of the Hallway of Honor leads to Sir Galahad's private 
 room.  Also, to the north, there is a small doorway leading 
@@ -1338,13 +1386,13 @@ the strength to open it."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3872
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3869
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1370,6 +1418,7 @@ the strength to open it."""
 vnum = 3869
 name = "Sir Galahad's Suite"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Galahad's room is decorated all in silver.  There are silver 
 vases, silver tables, even the bedposts are silver.  Such an 
@@ -1396,6 +1445,7 @@ servant...and friend."""
 vnum = 3870
 name = "Guest's Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Though this room is by no means superbly furnished, it is 
 equipped with all the amenities one could ever need.  The bed 
@@ -1410,6 +1460,7 @@ that the blanket is still warm."""
 vnum = 3871
 name = "Guest's Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Though this room is by no means superbly furnished, it is 
 equipped with all the amenities one could ever need.  The bed 
@@ -1437,6 +1488,7 @@ item."""
 vnum = 3872
 name = "Guest's Quarters"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Though this room is by no means superbly furnished, it is 
 equipped with all the amenities one could ever need.  The bed 
@@ -1452,6 +1504,7 @@ item."""
 vnum = 3873
 name = "Chef's Lounge"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You've entered a lounge for the chefs.  Here, the royal cooks 
 can relax and rest after cleaning the exquisite utensils King 
@@ -1477,6 +1530,7 @@ Arthur uses."""
 vnum = 3880
 name = "Third Level of Camelot"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 As you reach the landing of the stairwell, you notice 
 immediately that this level is much more heavily guarded than 
@@ -1503,6 +1557,7 @@ any of the other levels."""
 vnum = 3881
 name = "The Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is lined with murals depicting the achievements of 
 the famous King Arthur and his troops.  On either side of you 
@@ -1528,6 +1583,7 @@ there are lifelike statues of former rulers of this land."""
 vnum = 3882
 name = "The Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is lined with murals depicting the achievements of 
 the famous King Arthur and his troops.  On either side of you 
@@ -1545,6 +1601,7 @@ there are lifelike statues of former rulers of this land."""
 vnum = 3883
 name = "Curve in Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here the corridor branches and continues either east or south.  
 Travelling east will take you back towards the stairway down 
@@ -1562,8 +1619,8 @@ to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 3884
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3860
@@ -1585,6 +1642,7 @@ to the west."""
 vnum = 3884
 name = "Merlin's Laboratory"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 As you enter the room, you wince at the terrible odor wafting 
 throughout the area.  A green haze floats lazily in the center 
@@ -1613,6 +1671,7 @@ used to create chemicals on the countertop."""
 vnum = 3885
 name = "The Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is lined with murals depicting the achievements of 
 the famous King Arthur and his troops.  On either side of you 
@@ -1632,6 +1691,7 @@ Table."""
 vnum = 3886
 name = "The Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is lined with murals depicting the achievements of 
 the famous King Arthur and his troops.  On either side of you 
@@ -1651,6 +1711,7 @@ Table."""
 vnum = 3887
 name = "The Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is lined with murals depicting the achievements of 
 the famous King Arthur and his troops.  On either side of you 
@@ -1678,6 +1739,7 @@ Table."""
 vnum = 3888
 name = "Turn in the Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here the corridor veers east.  You can continue east, or return 
 to the stairwell by going north."""
@@ -1694,6 +1756,7 @@ to the stairwell by going north."""
 vnum = 3889
 name = "The Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is lined with murals depicting the achievements of 
 the famous King Arthur and his troops.  On either side of you 
@@ -1713,6 +1776,7 @@ Table."""
 vnum = 3890
 name = "End of the Royal Corridor"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You've reached the end of the Royal Corridor.  A pair of gold 
 double doors lies before you to the north.  They seem to almost 
@@ -1720,8 +1784,8 @@ glow as you approach them."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3891
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1747,6 +1811,7 @@ glow as you approach them."""
 vnum = 3891
 name = "Royal Ante-Chamber"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 Here is where King Arthur does all of his work.  A beautiful 
 oak desk sits at the east end of the room overlooking the 
@@ -1756,8 +1821,8 @@ adventurer.  The only exit appears to be at the south of the room."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3892
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1767,6 +1832,7 @@ adventurer.  The only exit appears to be at the south of the room."""
 vnum = 3892
 name = "Arthur's Private Chambers"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You've entered the private sleeping chamber of King Arthur.  
 The room is littered with numerous artifacts given to him by 

@@ -2,6 +2,7 @@
 vnum = 2801
 name = "Wastedump"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is filled with bone shards and fragments.  Something (or things)
 very big lives here.  A small plaque is on the wall."""
@@ -22,10 +23,17 @@ very big lives here.  A small plaque is on the wall."""
   vnum = 2805
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This zone (trollden) is created by MERC for any MERC Mud.
+copyright 1992"""
+
 [[rooms]]
 vnum = 2802
 name = "Troll's Larder"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room has blood and grime all over the walls.  You see maggots and other
 insects crawling up them.  The resident is definitely uncivilized.  Half-eaten
@@ -56,10 +64,16 @@ worms, and maggots."""
   vnum = 2807
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["Half-eaten", "body", "rotting", "corpse"]
+description = """
+YUCK!  You find worms crawling in and out this poor unfortunate former human."""
+
 [[rooms]]
 vnum = 2803
 name = "Troll's Living Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This small cave opens to the north, south, east, and west.  You are
 overcome by the stench and consider turning around."""
@@ -104,6 +118,7 @@ overcome by the stench and consider turning around."""
 vnum = 2804
 name = "The Playpen"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The walls are covered with blood (and body parts!?!?).  Plastered on the far
 wall you see what looks like a human arm.  A half-eaten body lies here with
@@ -137,10 +152,17 @@ its chest ripped out.  The predator seems disinterested in it."""
   vnum = 2800
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["arm", "rotting"]
+description = """
+This reminds you of what a baby would do to its formula during dinnertime,
+plastering it on the wall."""
+
 [[rooms]]
 vnum = 2805
 name = "Troll's Bedroom"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 Obviously something REALLY big lives here.  The stench is quite unbearable.
 There are piles and piles of rotten and half-eaten body parts of animals,
@@ -167,4 +189,3 @@ flattened by something."""
   [[rooms.obj_resets]]
   vnum = 2801
   max = 1
-

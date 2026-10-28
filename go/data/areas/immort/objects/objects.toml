@@ -57,6 +57,10 @@ weight = 10
 cost = 100
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 50
+  spells = ["restore mana"]
+
 [[objects]]
 vnum = 1203
 keywords = ["survival", "pack"]
@@ -69,3 +73,8 @@ cost = 100
 wear_flags = ["take", "about", "hold"]
 extra_flags = ["magic"]
 
+  [objects.container]
+  capacity = 750
+  flags = []
+  key = 0
+  max_weight = 50

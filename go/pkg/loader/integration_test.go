@@ -4,6 +4,8 @@ import (
 	"path/filepath"
 	"runtime"
 	"testing"
+
+	"rotmud/pkg/types"
 )
 
 func TestLoadMidgaard(t *testing.T) {
@@ -110,6 +112,107 @@ func TestLoadMidgaard(t *testing.T) {
 		}
 		if adeptChar.Special != "spec_cast_adept" {
 			t.Errorf("expected character special 'spec_cast_adept', got '%s'", adeptChar.Special)
+		}
+
+		// Mob AC comes from the restored ROT ac table
+		monster := world.CreateMobFromTemplate(3704) // the aggressive monster, level 1
+		if monster == nil {
+			t.Fatal("failed to create aggressive monster from template")
+		}
+		if monster.Armor != [4]int{100, 100, 100, 100} {
+			t.Errorf("expected mob AC [100 100 100 100], got %v", monster.Armor)
+		}
+
+		// Mud school's east door from 3719 starts locked (ROT door reset D 0 3719 1 2)
+		if r := world.GetRoom(3719); r == nil || r.GetExit(types.DirEast) == nil ||
+			!r.GetExit(types.DirEast).Flags.Has(types.ExitLocked) {
+			t.Error("expected room 3719 east door to start locked")
+		}
+
+		// Mob wealth restored from ROT: the blob carries nothing, the
+		// aggressive monster 10 copper (purse 5-15).
+		if blob := world.GetMobTemplate(3701); blob == nil || mobCoinDrop(blob) != 0 {
+			t.Error("expected the blob (3701) to carry no coins")
+		}
+		if m := world.GetMobTemplate(3704); m == nil || m.Gold == nil || *m.Gold != 10 {
+			t.Error("expected the aggressive monster (3704) to have wealth 10")
+		}
+
+		// Midgaard is the starter town: its shops stock nothing above level 10
+		for _, room := range world.Rooms {
+			if room.Area == nil || room.Area.Name != "Midgaard" {
+				continue
+			}
+			for _, mr := range room.MobResets {
+				for _, eq := range mr.Equips {
+					if ot := world.GetObjTemplate(eq.Vnum); eq.InvOnly && ot != nil && ot.Level > 10 {
+						t.Errorf("Midgaard keeper %d stocks %q (level %d)", mr.Vnum, ot.ShortDesc, ot.Level)
+					}
+				}
+			}
+		}
+
+		// Weapon commissions: tiers from data/forge.toml, Midgaard's smith
+		// forges the two low tiers
+		if world.Forge == nil || world.Forge.Tier("legendary") == nil {
+			t.Error("expected forge tiers loaded from data/forge.toml")
+		}
+		if smith := world.GetMobTemplate(3003); smith == nil || len(smith.ForgeTiers) != 2 {
+			t.Error("expected Midgaard weaponsmith (3003) to forge two tiers")
+		}
+
+		// Shopkeepers spawn protected (300p merchants in the dark area)
+		if m := world.CreateMobFromTemplate(14502); m == nil || !m.Act.Has(types.ActProtected) {
+			t.Error("expected the Elven Merchant (14502) to spawn protected")
+		}
+
+		// Extra descriptions restored from ROT: the Shire sign and mud
+		// school's wall sign
+		if sign := world.GetObjTemplate(1102); sign == nil || len(sign.ExtraDescs) == 0 {
+			t.Error("expected the Shire sign (1102) to have its text")
+		}
+		if r := world.GetRoom(3701); r == nil || len(r.ExtraDescriptions) == 0 {
+			t.Error("expected mud school room 3701 to have its sign and plaque")
+		}
+
+		// Shops come from ROT's #SHOPS only: the Shire blacksmith buys arms,
+		// and mobs that merely carry items (the Great Red Dragon) are not
+		// shops and can be fought
+		if sh := world.GetShop(1120); sh == nil || len(sh.BuyTypes) != 2 {
+			t.Errorf("expected the Shire blacksmith (1120) to buy weapons and armor, got %+v", sh)
+		}
+		if world.GetShop(2221) != nil {
+			t.Error("the Great Red Dragon (2221) must not be a shop")
+		}
+		if d := world.CreateMobFromTemplate(2221); d == nil || d.Act.Has(types.ActProtected) {
+			t.Error("the Great Red Dragon must be attackable")
+		}
+
+		// Room flags restored from ROT: the altar is safe, mud school is
+		// newbies-only, and some rooms block recall
+		if r := world.GetRoom(3054); r == nil || !r.Flags.Has(types.RoomSafe) {
+			t.Error("expected the temple altar (3054) to be safe")
+		}
+		if r := world.GetRoom(3701); r == nil || !r.Flags.Has(types.RoomNewbiesOnly) {
+			t.Error("expected mud school (3701) to be newbies-only")
+		}
+		noRecall := 0
+		for _, r := range world.Rooms {
+			if r.Flags.Has(types.RoomNoRecall) {
+				noRecall++
+			}
+		}
+		if noRecall < 100 {
+			t.Errorf("expected 100+ no_recall rooms, got %d", noRecall)
+		}
+
+		// Weapons carry their class and damage type (restored from ROT area files)
+		dagger := world.GetObjTemplate(3701)
+		if dagger == nil || dagger.Weapon == nil {
+			t.Fatal("expected weapon template 3701 (sub issue dagger)")
+		}
+		if dagger.Weapon.WeaponType != "dagger" || dagger.Weapon.DamageType != "pierce" {
+			t.Errorf("sub issue dagger: got %q/%q, want dagger/pierce", dagger.Weapon.WeaponType, dagger.Weapon.DamageType)
 		}
 
 		// Check Temple Square room (3005) has obj_resets for fountain

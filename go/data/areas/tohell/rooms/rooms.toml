@@ -2,6 +2,7 @@
 vnum = 10401
 name = "Stone Archway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a ancient stone archway. Various faces of demons and other grim
 pictures are painted onto it. Stone gargoyles and demons glare down at
@@ -16,10 +17,25 @@ There is a bronze plaque above the archway."""
   direction = "west"
   to_vnum = 10402
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+***************
+Descent to Hell
+***************
+
+You just GO TO HELL!!!!
+*chuckle*
+
+Made for levels 59-100
+
+Brought to you by Strahd"""
+
 [[rooms]]
 vnum = 10402
 name = "Ancient Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a large stone room - feels like a crypt.  Ancient murals
 of Hell and punishment cover the walls.  In the middle of the room are stairs
@@ -43,6 +59,7 @@ To the west, there appears to be a shrine."""
 vnum = 10403
 name = "Dark Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing at the bottom of long dark stairway.  The smells of brimstone
 and sulfur choke you.  Screams of pain and terror fill the air.
@@ -61,6 +78,7 @@ Maybe this is not such a good idea after all...."""
 vnum = 10404
 name = "Landing"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This landing has been scorched as if a large brushfire had swept through it.
 Bits of ash and burnt vegetation cover everything.  The walls and floor are
@@ -75,13 +93,21 @@ You see a large gateway to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10405
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["gates"]
+description = """
+These black iron gates are covered with grotesque faces and other
+creatures in various poses and acts of violence and lust. The gates
+make your blood run cold..."""
 
 [[rooms]]
 vnum = 10405
 name = "Gateway to Hell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand next to the very gateway of Hell. You are surrounded by 
 the sounds of torture and pain. Screams pierce the air and rattle your
@@ -94,8 +120,8 @@ A large black iron gates tower over you to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10404
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -121,10 +147,18 @@ A large black iron gates tower over you to the east."""
     vnum = 10401
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["gates"]
+description = """
+These black iron gates are covered with grotesque faces and other
+creatures in various poses and acts of violence and lust. The gates
+seem to make your blood run cold..."""
+
 [[rooms]]
 vnum = 10406
 name = "Hall of the Damned"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hallway is a monument to the millions of damned souls in Hell.
 The walls are made up of various body parts and other, unidentifiable
@@ -155,6 +189,7 @@ help. Their arms desperately grasp at your clothing as you pass."""
 vnum = 10407
 name = "Hall of the Damned"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hallway is a monument to the millions of damned souls in Hell.
 The walls are made up of various body parts and other, unidentifiable
@@ -181,6 +216,7 @@ help. Their arms desperately grasp at your clothing as you pass."""
 vnum = 10408
 name = "Hall of the Damned"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hallway is a monument to the millions of damned souls in Hell.
 The walls are made up of various body parts and other, unidentifiable
@@ -211,6 +247,7 @@ help. Their arms desperately grasp at your clothing as you pass."""
 vnum = 10409
 name = "Hall of the Damned"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hallway is a monument to the millions of damned souls in Hell.
 The walls are made up of various body parts and other, unidentifiable
@@ -241,6 +278,7 @@ help. Their arms desperately grasp at your clothing as you pass."""
 vnum = 10410
 name = "Hall of the Damned"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hallway is a monument to the millions of damned souls in Hell.
 The walls are made up of various body parts and other, unidentifiable
@@ -263,6 +301,7 @@ help. Their arms desperately grasp at your clothing as you pass."""
 vnum = 10411
 name = "Mural of the Dead"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand before a large mural. The mural depicts mountains of dead
 bodies piled up to the sky. The mural covers the whole north wall from
@@ -280,6 +319,7 @@ floor to ceiling. You can smell the stench of decaying flesh."""
 vnum = 10412
 name = "Living Walls"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The walls here actually consist of greying and sinewy flesh - faces, hands,
 broken bones, feet, and toes jutting from the surface. You hear low moans
@@ -309,6 +349,7 @@ of horror, pain, and sorrow issuing from within."""
 vnum = 10413
 name = "Trapped souls"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 There are many souls trapped behind the walls of this room, almost as though 
 they were trapped beneath the surface of a frozen lake. Even the floor and 
@@ -334,6 +375,7 @@ ceiling show the screaming faces behind them."""
 vnum = 10414
 name = "Tortured Beings"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is filled with instruments of torture. Beings of all shapes and
 sizes are being brought to the thresholds of pain and beyond. Some are
@@ -360,6 +402,7 @@ they were made of rubber.  All are caught in an unending play of agony."""
 vnum = 10415
 name = "Gluttony"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Before you is a room filled with all sorts of food. The smells of pastries and
 hamburger assault your senses. All sorts of food lay everywhere you look.
@@ -394,6 +437,7 @@ out to you. You suddenly feel VERY hungry."""
 vnum = 10416
 name = "Greed"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 What luck! A room full of treasure. Gold, diamonds, riches beyond
 imagination! Wait! You suddenly feel as if it were all slowly disappearing.
@@ -403,8 +447,8 @@ You see a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10417
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -426,6 +470,7 @@ You see a door to the east."""
 vnum = 10417
 name = "Bedroom."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a small bedroom. It is well furnished and is a drastic change from
 the room you just stepped out of. A bed stands against the far wall.
@@ -435,8 +480,8 @@ The door to the bedroom is to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10416
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10403
@@ -458,6 +503,7 @@ The door to the bedroom is to the west."""
 vnum = 10418
 name = "Ancient Shrine"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is an ancient, abandoned shrine of some unknown god. It has been
 vandalized and torn apart. What used to be the shrine has been reduced to
@@ -474,6 +520,7 @@ time. All surfaces of the room are covered with dried blood and dust."""
 vnum = 10419
 name = "Room full of Body Parts."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The room is filled with piles of arms, legs, heads, and other, unidentifiable
 parts of many different creatures. The stench is overwhelming. The body
@@ -503,6 +550,7 @@ parts seem to wiggle and scream as you get closer. They are still alive!!"""
 vnum = 10420
 name = "Fountain of Blood."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is made of a rough black stone. The walls seem to ooze black
 sludge. In the middle of the room stands a stone fountain of a demon spitting
@@ -524,6 +572,7 @@ blood."""
 vnum = 10421
 name = "Bloody Stairway."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing on a very slippy stairway. The walls and stairs are
 covered with blood and gore. Pieces of goo and ooze drip from the
@@ -542,6 +591,7 @@ The stench here is overwhelming."""
 vnum = 10422
 name = "Ancient Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a very old and dusty room. It looks empty except for a few shards
 or bone and flesh."""
@@ -558,6 +608,7 @@ or bone and flesh."""
 vnum = 10423
 name = "Room of Lost Souls"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This looks like a waiting room or sorts. Dust and cobwebs are everywhere.
 Wooden benches line the walls. A digital number sign is posted on the wall.
@@ -580,10 +631,16 @@ A ticket dispenser is bolted to the wall."""
   vnum = 10418
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["dispenser"]
+description = """
+This is one of those red ticket dispensers that never seem to work right."""
+
 [[rooms]]
 vnum = 10424
 name = "Room of Lost Souls"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This looks like a waiting room or sorts. Dust and cobwebs are everywhere.
 Wooden benches line the walls. A digital number sign is posted on the wall.
@@ -606,10 +663,16 @@ A ticket dispenser is bolted to the wall."""
   vnum = 10418
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["dispenser"]
+description = """
+This is one of those red ticket dispensers that never seem to work right."""
+
 [[rooms]]
 vnum = 10425
 name = "Pit of Fire"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You enter a plain stone room with a large fire pit in the center of it.
 As you look closer at the pit you realize that hundreds of people are being
@@ -640,6 +703,7 @@ minor imps and workers push more people into the pit, whistling while"""
 vnum = 10426
 name = "Blackened Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This dark hallway looks as if it was made by a lavaworm...All the surfaces
 in it are melted and burnt. The smell of brimstone and sulfur fill the air."""
@@ -672,6 +736,7 @@ in it are melted and burnt. The smell of brimstone and sulfur fill the air."""
 vnum = 10427
 name = "Blackened Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This dark hallway looks as if it was made by a lavaworm...All the surfaces
 in it are melted and burnt. The smell of brimstone and sulfur fill the air."""
@@ -688,6 +753,7 @@ in it are melted and burnt. The smell of brimstone and sulfur fill the air."""
 vnum = 10428
 name = "Blood Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You enter the room and are immediately assaulted by the smell of rotting
 flesh and blood. The walls are covered with the crimson fluid as it runs
@@ -717,6 +783,7 @@ down from the ceiling."""
 vnum = 10429
 name = "Living Walls"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The walls here actually consist of greying and sinewy flesh - faces, hands,
 broken bones, feet, and toes jutting from the surface. You hear low moans
@@ -746,6 +813,7 @@ of horror, pain, and sorrow issuing from the walls."""
 vnum = 10430
 name = "Skeleton Factory"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is probably where they make all the skeletons for nightmares and
 graveyards. The room is simply littered with bones. A poster on the
@@ -768,6 +836,7 @@ The poster continues on...but it seems to get very technical and boring.."""
 vnum = 10431
 name = "Bottom of Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing at the bottom of a bloody stairway. Or at least you
 thought it was a stairway. It seems to be just a painting the the wall.
@@ -782,6 +851,7 @@ There is a hallway to the east."""
 vnum = 10432
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -801,6 +871,7 @@ The hall continues to the south and the west."""
 vnum = 10433
 name = "Cell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The cell is very damp and very musty. The walls are covered with moisture
 and dirt. The smell of urine is very potent here.
@@ -808,8 +879,8 @@ The steel bars to the cell are to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10443
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10422
@@ -819,6 +890,7 @@ The steel bars to the cell are to the south."""
 vnum = 10434
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -838,6 +910,7 @@ The hallway continues to the east and the south."""
 vnum = 10435
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -851,8 +924,8 @@ To the south you see the steel bars of a cell."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10445
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -862,6 +935,7 @@ To the south you see the steel bars of a cell."""
 vnum = 10436
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -893,6 +967,7 @@ The hallway contines to the south and the west."""
 vnum = 10437
 name = "Cell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The cell is very damp and very musty. The walls are covered with moisture
 and dirt. The smell of urine is very potent here.
@@ -900,8 +975,8 @@ The steel bars to the cell are to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10447
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10423
@@ -911,6 +986,7 @@ The steel bars to the cell are to the south."""
 vnum = 10438
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -942,6 +1018,7 @@ The hallway contines to the west and the east."""
 vnum = 10439
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -951,13 +1028,13 @@ The hallway contines to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10440
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10449
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -971,6 +1048,7 @@ The hallway contines to the west."""
 vnum = 10440
 name = "Cell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The cell is very damp and very musty. The walls are covered with moisture
 and dirt. The smell of urine is very potent here.
@@ -978,8 +1056,8 @@ The steel bars to the cell are to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10439
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10421
@@ -993,6 +1071,7 @@ The steel bars to the cell are to the west."""
 vnum = 10441
 name = "Hidden Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a long forgotten room. Ancient torture equipment stands around
 collecting dust. Most of this stuff was probably replace with modern
@@ -1006,6 +1085,7 @@ hi tech torture devices and for sentimental reasons wasn't thrown away."""
 vnum = 10442
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -1037,6 +1117,7 @@ The hallway contines to the north and east."""
 vnum = 10443
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -1047,8 +1128,8 @@ The bars to a cell are to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10433
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1062,6 +1143,7 @@ The bars to a cell are to the north."""
 vnum = 10444
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -1081,6 +1163,7 @@ The hallway contines to the north and west."""
 vnum = 10445
 name = "Cell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The cell is very damp and very musty. The walls are covered with moisture
 and dirt. The smell of urine is very potent here.
@@ -1088,8 +1171,8 @@ The steel bars to the cell are to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10435
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10421
@@ -1103,6 +1186,7 @@ The steel bars to the cell are to the north."""
 vnum = 10446
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -1122,6 +1206,7 @@ The hallway contines to the north and east."""
 vnum = 10447
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -1132,8 +1217,8 @@ You see bars to a cell to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10437
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1147,6 +1232,7 @@ You see bars to a cell to the north."""
 vnum = 10448
 name = "Stone Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a roughly carved hallway. The air here is damp and musty. You 
 hear the sound of something dripping in the distance. Your footsteps
@@ -1166,6 +1252,7 @@ The hallway contines to the north and west."""
 vnum = 10449
 name = "Cell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The cell is very damp and very musty. The walls are covered with moisture
 and dirt. The smell of urine is very potent here.
@@ -1173,8 +1260,8 @@ The steel bars to the cell are to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10439
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10424
@@ -1184,6 +1271,7 @@ The steel bars to the cell are to the north."""
 vnum = 10450
 name = "Hot Stairs"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing on a long stairway. The air around you is heavy and hot.
 The stone walls are hot to the touch and your sweat sizzles as it hits the
@@ -1203,6 +1291,7 @@ The stairs continue down."""
 vnum = 10451
 name = "Crack in Wall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a rather large crack in the wall. On closer inspection it appears to be
 a passageway that was closed off long ago. It was probably reopened by
@@ -1222,6 +1311,7 @@ Hot gusts of air come from the west."""
 vnum = 10452
 name = "Stone Arch"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Before you stands the a large stone arch decorated with many runes you
 cannot decifer. It looks as though it has been closed up for a long time.
@@ -1236,8 +1326,8 @@ There is a dark stairway down in the corner of the room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10462
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -1247,6 +1337,7 @@ There is a dark stairway down in the corner of the room."""
 vnum = 10453
 name = "Hall of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a hallway made of fire. The walls are ablaze with
 yellow and blue flames. The smell of the hot air and sulfur burn your
@@ -1268,6 +1359,7 @@ You see a stone archway to the west."""
 vnum = 10454
 name = "Hall of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a hallway made of fire. The walls are ablaze with
 yellow and blue flames. The smell of the hot air and sulfur burn your
@@ -1296,6 +1388,7 @@ The hall of fire continues to the south and west."""
 vnum = 10455
 name = "Construction Area"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This part of Hell seems to be under repair. Workers are fixing and replacing
 what look like various gas mains and other pipework. You can see many
@@ -1315,6 +1408,7 @@ You see more contruction to the east and south."""
 vnum = 10456
 name = "Construction Area"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This part of Hell seems to be under repair. Workers are fixing and replacing
 what look like various gas mains and other pipework. You can see many
@@ -1350,6 +1444,7 @@ You see more contruction to the east and west."""
 vnum = 10457
 name = "Construction Area"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This part of Hell seems to be under repair. Workers are fixing and replacing
 what look like various gas mains and other pipework. You can see many
@@ -1369,6 +1464,7 @@ You see more contruction to the south and west."""
 vnum = 10458
 name = "Hall of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a hallway made of fire. The walls are ablaze with
 yellow and blue flames. The smell of the hot air and sulfur burn your
@@ -1389,6 +1485,7 @@ The hall of fire continues to the east and south."""
 vnum = 10459
 name = "Hall of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a hallway made of fire. The walls are ablaze with
 yellow and blue flames. The smell of the hot air and sulfur burn your
@@ -1415,6 +1512,7 @@ A wall of fire crackles merrily to the south."""
 vnum = 10460
 name = "Fire Pits of Hades"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is filled with many small fire pits. Countless damned souls are
 being burnt and roasted within the the white flames that erupt from the
@@ -1454,6 +1552,7 @@ A fire hall lies to the west."""
 vnum = 10461
 name = "Fire Mural"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Apon all the walls of this room is an enormous mural. Pictures of burning
 bodies and tortured souls seem to be the main theme of the art. Bright reds
@@ -1471,6 +1570,7 @@ steals your breath. You choke and gag..."""
 vnum = 10462
 name = "Foreman's Office"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a crudly constructed office. Blueprints and change orders are
 scattered everywhere. A metal filing cabinet stands in the corner. Before
@@ -1479,8 +1579,8 @@ construction plaque that reads, "4th DEMONsion Contruction""""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10452
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10440
@@ -1494,6 +1594,7 @@ construction plaque that reads, "4th DEMONsion Contruction""""
 vnum = 10463
 name = "Cold Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand apon a cold stone stairway. Hot air blows down on you from
 higher up the stairwell. From below you a freezing gusts bite at your skin
@@ -1512,6 +1613,7 @@ stone floor."""
 vnum = 10464
 name = "Hall of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a hallway made of fire. The walls are ablaze with
 yellow and blue flames. The smell of the hot air and sulfur burn your
@@ -1532,6 +1634,7 @@ The hall of fire continues to the north and east."""
 vnum = 10465
 name = "Construction Area"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This part of Hell seems to be under repair. Workers are fixing and replacing
 what look like various gas mains and other pipework. You can see many
@@ -1572,6 +1675,7 @@ A hall of fire is to the west."""
 vnum = 10466
 name = "Construction Area"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This part of Hell seems to be under repair. Workers are fixing and replacing
 what look like various gas mains and other pipework. You can see many
@@ -1591,6 +1695,7 @@ You see more contruction to the east and west."""
 vnum = 10467
 name = "Construction Area"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This part of Hell seems to be under repair. Workers are fixing and replacing
 what look like various gas mains and other pipework. You can see many
@@ -1631,6 +1736,7 @@ A hall of fire lies to the east."""
 vnum = 10468
 name = "Hall of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a hallway made of fire. The walls are ablaze with
 yellow and blue flames. The smell of the hot air and sulfur burn your
@@ -1652,6 +1758,7 @@ There are loud noises of contruction to the west."""
 vnum = 10469
 name = "Wall of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This large room is cut in into sections by small walls of fire. The walls
 to move slowly changing the layout of the room. As you examine the room
@@ -1681,6 +1788,7 @@ To the east you see a lake of fire."""
 vnum = 10470
 name = "Lake of Fire"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand one the shore of a large lake of fire. The smoke and heat fill this
 enormous room. You can barely make out shapes of something moving
@@ -1722,6 +1830,7 @@ withing the dancing flames of blue and gold.."""
 vnum = 10471
 name = "Hot Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The stone floor below you heats your feet uncomfortably. The ceiling and
 walls glow a dull red and you sweat uncomfortably under the heat."""
@@ -1738,6 +1847,7 @@ walls glow a dull red and you sweat uncomfortably under the heat."""
 vnum = 10472
 name = "Icy Landing"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This landing is made entirely of ice. Its walls bear carvings of battle and
 hunting scenes in bas-relief. These carved scenes show ice devils slaying
@@ -1752,6 +1862,7 @@ To the east you see a room of ice."""
 vnum = 10473
 name = "Ice Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a room of ice. Icicles of every size hang from the
 ceiling. Some shake with every sound. Your reflection off the ice walls
@@ -1775,6 +1886,7 @@ To the west you see an Icy landing."""
 vnum = 10474
 name = "Meat Locker"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in what looks like a meat locker. Rows of beef and other
 meats hang from large steel hooks. You also notice that many of the
@@ -1802,6 +1914,7 @@ The meat locker continues to the east and south."""
 vnum = 10475
 name = "Meat Locker"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Rows of beef and other meats hang from large steel hooks. You notice that 
 many of the things hanging from the hooks are corpses of people. They 
@@ -1812,8 +1925,8 @@ There is a freezer door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10476
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1831,6 +1944,7 @@ There is a freezer door to the east."""
 vnum = 10476
 name = "Penguin Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is what appears to be a replica of an iceberg. Penguins waddle about
 the room pecking at many poor souls half trapped in the icy floor. You
@@ -1849,8 +1963,8 @@ There is a freezer door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10475
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10437
@@ -1860,6 +1974,7 @@ There is a freezer door to the west."""
 vnum = 10477
 name = "Penguin Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is what appears to be a replica of an iceberg. Penguins waddle about
 the room pecking at many poor souls half trapped in the icy floor. You
@@ -1883,6 +1998,7 @@ The iceberg continues to the south and west."""
 vnum = 10478
 name = "Ice Creamery"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You appear to be standing in a ice-creamery. Many ice-cream workers run
 frantically around tending to the various machines.
@@ -1904,6 +2020,7 @@ The factory continues to the east and south."""
 vnum = 10479
 name = "Ice Creamery"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You appear to be standing in a ice-creamery. There seems to be a
 group of people here shouting into containers and then quickly covering 
@@ -1913,8 +2030,8 @@ There is a steel door to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10480
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1932,6 +2049,7 @@ There is a steel door to the east."""
 vnum = 10480
 name = "White Marble Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a white marble hallway. It is dry and clean. Many
 portraits of demons and devils in business suits adorn the walls on either
@@ -1945,13 +2063,14 @@ To the west is a steel door."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10479
-  flags = ["door"]
 
 [[rooms]]
 vnum = 10481
 name = "Refrigerator Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is filled with giant refrigerators. All of them have no doors and
 their contents have spilled onto the floor.
@@ -1965,6 +2084,7 @@ The only exit is east."""
 vnum = 10482
 name = "Ice Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a room of ice. Icicles of every size hang from the
 ceiling. Some shake with every sound. Your reflection off the ice walls
@@ -1988,6 +2108,7 @@ To the west you see a room full of refrigerators."""
 vnum = 10483
 name = "Ice Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a room of ice. Icicles of every size hang from the
 ceiling. Some shake with every sound. Your reflection off the ice walls
@@ -2001,8 +2122,8 @@ To the east you see a freezer door."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10484
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2020,6 +2141,7 @@ To the east you see a freezer door."""
 vnum = 10484
 name = "Meat Locker"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a large meat locker. Chunks of meat hang on the wall and 
 larger corpses hang from steel hooks. Frozen blood and other 
@@ -2037,8 +2159,8 @@ There is a freezer door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10483
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10436
@@ -2052,6 +2174,7 @@ There is a freezer door to the west."""
 vnum = 10485
 name = "Meat Locker"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Rows of beef and other meats hang from large steel hooks. 
 The meat locker continues to the north and west."""
@@ -2076,6 +2199,7 @@ The meat locker continues to the north and west."""
 vnum = 10486
 name = "Penguin Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is what appears to be a replica of an iceberg. Penguins waddle about
 the room pecking at many poor souls half trapped in the icy floor. You
@@ -2099,6 +2223,7 @@ The iceberg continues to the north and east."""
 vnum = 10487
 name = "Penguin Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is what appears to be a replica of an iceberg. Penguins waddle about
 the room pecking at many poor souls half trapped in the icy floor. You
@@ -2123,6 +2248,7 @@ You can hear sounds of machinery to the east."""
 vnum = 10488
 name = "Ice-Creamery"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk into part of an ice-cream factory. Many different types of
 ice-cream and other deserts are made by these machines. Above one
@@ -2150,6 +2276,7 @@ You can hear sounds of penguins to the west."""
 vnum = 10489
 name = "Ice-Creamery"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand amidst dozens of ice-cream machines. Workers rush about
 for machine to machine, adjusting dials and checking gauges.
@@ -2167,6 +2294,7 @@ The factory continues to the north and west."""
 vnum = 10490
 name = "Marble Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are walking down a white marble hallway. Large portraits of demons
 and devils adorn the walls on either side of you. As you look again you
@@ -2187,6 +2315,7 @@ There is an office to the south."""
 vnum = 10491
 name = "Records Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This Hallway is actually an enourmous records library. Millions of records
 are kept here detailing the status of peoples lives. These are confidential
@@ -2205,6 +2334,7 @@ The records room continues to the east."""
 vnum = 10492
 name = "Records Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This Hallway is actually an enourmous records library. Millions of records
 are kept here detailing the status of peoples lives. These are confidential
@@ -2232,6 +2362,7 @@ There is another hallway to the south."""
 vnum = 10493
 name = "Records Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This Hallway is actually an enourmous records library. Millions of records
 are kept here detailing the status of peoples lives. These are confidential
@@ -2254,6 +2385,7 @@ The records room continues to the east and west."""
 vnum = 10494
 name = "Records Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This Hallway is actually an enourmous records library. Millions of records
 are kept here detailing the status of peoples lives. These are confidential
@@ -2276,6 +2408,7 @@ The records room continues to the west."""
 vnum = 10495
 name = "Small Altar"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the private prayer room of the high priest. a small altar stands
 against the west wall. Evil symbols and pictures are plastered everywhere.
@@ -2290,10 +2423,20 @@ You see a blackened hall to the east."""
   vnum = 10446
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["poster"]
+description = """
+Don't go to heaven....They're boring....
+
+***GO TO HELL!!!****
+
+You'll be damned if you don't  ;)"""
+
 [[rooms]]
 vnum = 10496
 name = "Blackened Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hall looks as if it was burned out recently. The walls are charred and
 smoking. Ashes and bits of burnt timber crunch under your feet as you 
@@ -2303,8 +2446,8 @@ There is a stone door to the east and a prayer room to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10497
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2318,6 +2461,7 @@ There is a stone door to the east and a prayer room to the west."""
 vnum = 10497
 name = "Office of the High Priest"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the office of the High Priest of Hell. A black stone desk stands
 before you. The office is lavishly furnished with gold, gems and many
@@ -2326,8 +2470,8 @@ You see a stone door to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10496
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10445
@@ -2349,6 +2493,7 @@ You see a stone door to the west."""
 vnum = 10498
 name = "Blackened Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hall looks as if it was burned out recently. The walls are charred and
 smoking. Ashes and bits of burnt timber crunch under your feet as you 
@@ -2375,6 +2520,7 @@ The hall continues to the east and south."""
 vnum = 10499
 name = "Blackened Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hall looks as if it was burned out recently. The walls are charred and
 smoking. Ashes and bits of burnt timber crunch under your feet as you 
@@ -2384,8 +2530,8 @@ A glass door is to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10500
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -2395,6 +2541,7 @@ A glass door is to the east."""
 vnum = 10500
 name = "Administration of Hell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the entrance to the Administration offices of Hell. The secretaries
 desk sits quietly in the middle of the room. To the south is a metal door
@@ -2409,13 +2556,13 @@ There is a sign posted next to the stairs."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 10510
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10499
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -2429,10 +2576,23 @@ There is a sign posted next to the stairs."""
     vnum = 10446
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+****ATTENTION***
+The Abyss is CLOSED for construction.
+
+We will open for your painful pleasures
+
+soon....
+
+-Strahd-"""
+
 [[rooms]]
 vnum = 10501
 name = "Halls of Judgement"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the Halls of Judgement. There are many alcoves 
 which contain different methods of torture. Each more grotesque than
@@ -2453,6 +2613,7 @@ The Courtroom is to the south."""
 vnum = 10502
 name = "Halls of Judgement"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the Halls of Judgement. There are many alcoves 
 which contain different methods of torture. Each more grotesque than
@@ -2476,6 +2637,7 @@ The hall of records is to the north."""
 vnum = 10503
 name = "Halls of Judgement"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the Halls of Judgement. There are many alcoves 
 which contain different methods of torture. Each more grotesque than
@@ -2499,6 +2661,7 @@ The Office of Complaints is to the south."""
 vnum = 10504
 name = "Halls of Judgement"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the Halls of Judgement. There are many alcoves 
 which contain different methods of torture. Each more grotesque than
@@ -2517,6 +2680,7 @@ The hall continues to the east and west."""
 vnum = 10505
 name = "Halls of Judgement"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the Halls of Judgement. There are many alcoves 
 which contain different methods of torture. Each more grotesque than
@@ -2535,6 +2699,7 @@ The hall continues to the east and west."""
 vnum = 10506
 name = "Blackened Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hall looks as if it was burned out recently. The walls are charred and
 smoking. Ashes and bits of burnt timber crunch under your feet as you 
@@ -2569,6 +2734,7 @@ There are exits in all directions."""
 vnum = 10507
 name = "Blackened Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hall looks as if it was burned out recently. The walls are charred and
 smoking. Ashes and bits of burnt timber crunch under your feet as you 
@@ -2587,6 +2753,7 @@ The hallway continues to the east and west."""
 vnum = 10508
 name = "Blackened Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This hall looks as if it was burned out recently. The walls are charred and
 smoking. Ashes and bits of burnt timber crunch under your feet as you 
@@ -2605,6 +2772,7 @@ The hallway continues to the north and west."""
 vnum = 10509
 name = "Stairs to the Abyss"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 These dark stairs are made out of the bones of the damned. They rattle
 softly as you tread apon them as if to cry out in protest. The air is filled
@@ -2619,6 +2787,7 @@ punished."""
 vnum = 10510
 name = "Maintenance Walkway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a maintence accessway. You walk on a metal catwalk hundreds of 
 feet above the floor. The catwalk sways unsteadily as you walk on it.
@@ -2627,8 +2796,8 @@ To the north is a steel door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 10500
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -2638,6 +2807,7 @@ To the north is a steel door."""
 vnum = 10511
 name = "Court Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the Courts of Hell. Here you are convicted, sentenced and punished.
 And no...you don't get a trial. You don't deserve one. The courtroom is
@@ -2663,6 +2833,7 @@ Behind the judges bench is a wooden door."""
 vnum = 10512
 name = "Lawyers Office"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 As you look around you, you realize you've entered a lawyers office. Now
 you know you are in Hell....Everything in this office seems to be made of
@@ -2692,6 +2863,7 @@ To the south you see a courtyard."""
 vnum = 10513
 name = "Office of Complaints"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a relatively small office. There is a large hole in the wall where a 
 clerk usually sits and takes complaints about Hell. As you peek behind
@@ -2716,6 +2888,7 @@ To the north you see the Halls of Judgement."""
 vnum = 10514
 name = "Pawn Shop"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in Hiramoto's Buy & Sell. This poor bastard has
 been damned to Hell to serve the public for eternity. He will buy most
@@ -2749,6 +2922,7 @@ To the east you see the Mall from Hell."""
 vnum = 10515
 name = "Hallway of The Mall from Hell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is definitely the Mall from Hell...there are no stores!
 Only in Hell would they have a mall with no stores.
@@ -2776,6 +2950,7 @@ The hall continues to the east and south."""
 vnum = 10516
 name = "Hallway of The Mall from Hell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is definitely the Mall from Hell...there are no stores!
 Only in Hell would they have a mall with no stores.
@@ -2799,6 +2974,7 @@ The hallway continues to the west."""
 vnum = 10517
 name = "The Office of Big Mouth"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the office of Big Mouth, head demon of Hell's Administration.
 The room is decorated posters of naked women and autographed pictures
@@ -2812,13 +2988,14 @@ what this guy eats..."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 10526
   flags = ["door"]
+  to_vnum = 10526
 
 [[rooms]]
 vnum = 10518
 name = "Stairs to the Abyss"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 These dark stairs are made out of the bones of the damned. They rattle
 softly as you tread apon them as if to cry out in protest. The air is filled
@@ -2833,6 +3010,7 @@ punished."""
 vnum = 10519
 name = "Maintenance Walkway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a maintence accessway. You walk on a metal catwalk hundreds of 
 feet above the floor. The catwalk sways unsteadily as you walk on it.
@@ -2862,6 +3040,7 @@ The catwalk continues to the east and south."""
 vnum = 10520
 name = "Maintenance Walkway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a maintence accessway. You walk on a metal catwalk hundreds of 
 feet above the floor. The catwalk sways unsteadily as you walk on it.
@@ -2891,6 +3070,7 @@ The catwalk continues to the north and west."""
 vnum = 10521
 name = "Judge's Chambers"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the private chambers of the High Judge of Hell. He has a cushy job
 and his office reflects that. Golden torches light the walls with dancing
@@ -2909,6 +3089,7 @@ torchlight."""
 vnum = 10522
 name = "Courtyard"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This courtyard is barren and neglected. Small weeds grow up in between
 the concrete slabs. An old defunct fountain sputters with a grey-brown
@@ -2936,6 +3117,7 @@ The courtyard continues to the east and south."""
 vnum = 10523
 name = "Courtyard"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This courtyard is barren and neglected. Small weeds grow up in between
 the concrete slabs. An old defunct fountain sputters with a grey-brown
@@ -2959,6 +3141,7 @@ Stanley's Magical Steeds is to the east."""
 vnum = 10524
 name = "Stanley's Magical Steeds"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the shop of Stanly. He used to be an old mage selling cursed
 trinkets at the town of Solace. He has recently set up shop in Hell selling
@@ -3016,6 +3199,7 @@ To the south you see the Mall from Hell."""
 vnum = 10525
 name = "Hallway of The Mall from Hell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is definitely the Mall from Hell...there are no stores!
 Only in Hell would they have a mall with no stores.
@@ -3033,6 +3217,7 @@ The hallway continues to the north and south."""
 vnum = 10526
 name = "Inside Big Mouth's Stomach"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing inside Big Mouth's stomach. It is roomy in here. Small
 animals and other odds and ends lie about the stomach. Is that a dragon  
@@ -3040,8 +3225,8 @@ you see? Nah...couldn't be..."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 10517
   flags = ["door"]
+  to_vnum = 10517
 
   [[rooms.mob_resets]]
   vnum = 10455
@@ -3059,6 +3244,7 @@ you see? Nah...couldn't be..."""
 vnum = 10527
 name = "Stairs to the Abyss"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 These dark stairs are made out of the bones of the damned. They rattle
 softly as you tread apon them as if to cry out in protest. The air is filled
@@ -3073,6 +3259,7 @@ punished."""
 vnum = 10528
 name = "Reactor Control Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the reactor control room of Hell. From here the workers control
 the main reactor and power supply for all of Hell and the abyss. Workers
@@ -3117,6 +3304,7 @@ There is a maintenance room to the east."""
 vnum = 10529
 name = "Maintenance Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the primary maintenance room of Hell. Tools of all
 shapes and sizes are neatly hung on the walls, each with its own painted-on
@@ -3158,6 +3346,7 @@ To the south is the secondary control room."""
 vnum = 10530
 name = "Break Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the break room for the maintenance workers. tables are filled with
 donuts and coffee. As a cruel joke, the cheif engineer has posted his guard
@@ -3181,6 +3370,7 @@ To the south is the chief engineers office."""
 vnum = 10531
 name = "Hell's Kitchen"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Welcome to Hell's kitchen, where everything is delicious....you just can't
 have any....This is where the many foods of the world of Farside are made.
@@ -3212,6 +3402,7 @@ To the east is a courtyard."""
 vnum = 10532
 name = "Courtyard"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This courtyard is barren and neglected. Small weeds grow up in between
 the concrete slabs. An old defunct fountain sputters with a grey-brown
@@ -3235,6 +3426,7 @@ You see a kitchen to the west."""
 vnum = 10533
 name = "Courtyard"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This courtyard is barren and neglected. Small weeds grow up in between
 the concrete slabs. An old defunct fountain sputters with a grey-brown
@@ -3257,6 +3449,7 @@ The courtyard continues to the north and west."""
 vnum = 10534
 name = "Hallway of The Mall from Hell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is definitely the Mall from Hell...there are no stores!
 Only in Hell would they have a mall with no stores.
@@ -3275,6 +3468,7 @@ Stanley's magic steeds are to the north."""
 vnum = 10535
 name = "Hallway of The Mall from Hell"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is definitely the Mall from Hell...there are no stores!
 Only in Hell would they have a mall with no stores.
@@ -3296,6 +3490,7 @@ The hallway continues to the north and west."""
 vnum = 10536
 name = "Stairs to the Abyss"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 These dark stairs are made out of the bones of the damned. They rattle
 softly as you tread apon them as if to cry out in protest. The air is filled
@@ -3307,6 +3502,7 @@ sign....now what did it say again?......"""
 vnum = 10537
 name = "Inside the Reactor Core"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing on the inside of the reactor core. Actually you seem to
 be floating in the plasma energy of the reactor. You can see the core
@@ -3316,8 +3512,8 @@ You see a maintenance hatch to the east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 10538
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10465
@@ -3331,6 +3527,7 @@ You see a maintenance hatch to the east."""
 vnum = 10538
 name = "Reactor Room Floor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The room is taken up almost entirely by the enormous reactor core. The
 core pulses rhythmically as it generates the heat and power for the entire
@@ -3345,8 +3542,8 @@ A stairway to the control room is to the north."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 10537
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 10464
@@ -3364,6 +3561,7 @@ A stairway to the control room is to the north."""
 vnum = 10539
 name = "Secondary Control Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the secondary control room for the reactor core. It is usually used in
 emergencies when the primary control room is contaminated or damaged.
@@ -3382,6 +3580,7 @@ working order."""
 vnum = 10540
 name = "Office of the Chief Engineer"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This office belongs to the chief engineer of Hell. Blueprints and pencils 
 are scattered about the room. The air is heavy with the smell of ammonia
@@ -3405,6 +3604,7 @@ status reports for the reactor core."""
 vnum = 10541
 name = "Ice Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a room of ice. Icicles of every size hang from the
 ceiling. Some shake with every sound. Your reflection off the ice walls
@@ -3429,4 +3629,3 @@ seems to dance and wiggle as you move about."""
     [[rooms.mob_resets.equips]]
     vnum = 10418
     inv_only = true
-

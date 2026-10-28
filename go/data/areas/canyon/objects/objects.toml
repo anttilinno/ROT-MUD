@@ -56,6 +56,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["flaming"]
   dice_number = 5
   dice_size = 4
 
@@ -142,6 +145,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["poison"]
   dice_number = 5
   dice_size = 4
 
@@ -318,6 +324,12 @@ cost = 3900
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
 
+  [objects.magic]
+  level = 15
+  max_charges = 3
+  charges = 3
+  spells = ["fireball"]
+
 [[objects]]
 vnum = 9216
 keywords = ["staff", "ice"]
@@ -329,6 +341,12 @@ weight = 70
 cost = 13700
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
+
+  [objects.magic]
+  level = 12
+  max_charges = 3
+  charges = 3
+  spells = ["frost breath"]
 
 [[objects]]
 vnum = 9217
@@ -342,6 +360,12 @@ cost = 1000
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
 
+  [objects.magic]
+  level = 7
+  max_charges = 3
+  charges = 3
+  spells = ["earthquake"]
+
 [[objects]]
 vnum = 9218
 keywords = ["wand", "air", "wind"]
@@ -353,6 +377,12 @@ weight = 70
 cost = 12600
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
+
+  [objects.magic]
+  level = 11
+  max_charges = 1
+  charges = 1
+  spells = ["gas breath"]
 
 [[objects]]
 vnum = 9219
@@ -366,6 +396,12 @@ cost = 1420
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
 
+  [objects.magic]
+  level = 9
+  max_charges = 1
+  charges = 1
+  spells = ["lightning bolt"]
+
 [[objects]]
 vnum = 9220
 keywords = ["stone", "club", "two-handed"]
@@ -378,6 +414,9 @@ cost = 730
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 8
 
@@ -404,6 +443,12 @@ wear_flags = ["take", "hold"]
   location = "str"
   modifier = -2
 
+  [objects.magic]
+  level = 19
+  max_charges = 2
+  charges = 2
+  spells = ["harm"]
+
 [[objects]]
 vnum = 9222
 keywords = ["lava", "lamp"]
@@ -415,6 +460,9 @@ weight = 40
 cost = 250
 wear_flags = ["take"]
 extra_flags = ["glow"]
+
+  [objects.light]
+  duration = 1000
 
 [[objects]]
 vnum = 9223
@@ -428,6 +476,10 @@ cost = 860
 wear_flags = ["take"]
 extra_flags = ["hum"]
 
+  [objects.magic]
+  level = 19
+  spells = ["cure critical", "refresh"]
+
 [[objects]]
 vnum = 9224
 keywords = ["water", "jug"]
@@ -439,6 +491,12 @@ weight = 20
 cost = 200
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 150
+  current = 150
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 9225
 keywords = ["dust"]
@@ -449,6 +507,10 @@ level = 0
 weight = 10
 cost = 300
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 20
+  spells = ["detect invis"]
 
 [[objects]]
 vnum = 9226
@@ -463,6 +525,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["flaming"]
   dice_number = 2
   dice_size = 15
 
@@ -487,6 +552,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["frost"]
   dice_number = 7
   dice_size = 3
 
@@ -510,6 +578,8 @@ cost = 3000
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 25
 
@@ -530,6 +600,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "flail"
+  damage_type = "bash"
   dice_number = 6
   dice_size = 3
 
@@ -554,6 +626,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "pierce"
   dice_number = 4
   dice_size = 5
 
@@ -576,3 +650,6 @@ weight = 10
 cost = 250
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 15
+  spells = ["invisibility"]

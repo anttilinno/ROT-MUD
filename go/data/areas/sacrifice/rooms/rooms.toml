@@ -163,6 +163,7 @@ most of them never to be heard from again."""
 vnum = 13508
 name = "A small Path"
 sector = "field"
+room_flags = ["gods_only"]
 description = "Description"
 
   [[rooms.exits]]
@@ -233,6 +234,7 @@ description = "Description"
 vnum = 13513
 name = "A small Path"
 sector = "field"
+room_flags = ["gods_only"]
 description = "Description"
 
   [[rooms.exits]]
@@ -279,6 +281,7 @@ description = "Description"
 vnum = 13516
 name = "A small Cave"
 sector = "inside"
+room_flags = ["no_mob", "solitary"]
 description = "Description"
 
   [[rooms.exits]]
@@ -293,6 +296,7 @@ description = "Description"
 vnum = 13517
 name = "A Lair"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -525,6 +529,7 @@ description = "Description"
 vnum = 13531
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -539,6 +544,7 @@ description = "Description"
 vnum = 13532
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -561,6 +567,7 @@ description = "Description"
 vnum = 13533
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -571,6 +578,7 @@ description = "Description"
 vnum = 13534
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -585,6 +593,7 @@ description = "Description"
 vnum = 13535
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -599,6 +608,7 @@ description = "Description"
 vnum = 13536
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -621,6 +631,7 @@ description = "Description"
 vnum = 13537
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -643,6 +654,7 @@ description = "Description"
 vnum = 13538
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -653,6 +665,7 @@ description = "Description"
 vnum = 13539
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -663,6 +676,7 @@ description = "Description"
 vnum = 13540
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -673,6 +687,7 @@ description = "Description"
 vnum = 13541
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -691,6 +706,7 @@ description = "Description"
 vnum = 13542
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -705,6 +721,7 @@ description = "Description"
 vnum = 13543
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -723,6 +740,7 @@ description = "Description"
 vnum = 13544
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -741,6 +759,7 @@ description = "Description"
 vnum = 13545
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -759,6 +778,7 @@ description = "Description"
 vnum = 13546
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -773,6 +793,7 @@ description = "Description"
 vnum = 13547
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -791,6 +812,7 @@ description = "Description"
 vnum = 13548
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -801,6 +823,7 @@ description = "Description"
 vnum = 13549
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -823,6 +846,7 @@ description = "Description"
 vnum = 13550
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -837,6 +861,7 @@ description = "Description"
 vnum = 13551
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -851,6 +876,7 @@ description = "Description"
 vnum = 13552
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -869,6 +895,7 @@ description = "Description"
 vnum = 13553
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -883,6 +910,7 @@ description = "Description"
 vnum = 13554
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -901,6 +929,7 @@ description = "Description"
 vnum = 13555
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -915,6 +944,7 @@ description = "Description"
 vnum = 13556
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -929,6 +959,7 @@ description = "Description"
 vnum = 13557
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -943,6 +974,7 @@ description = "Description"
 vnum = 13558
 name = "Bank of a Lava River"
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1139,6 +1171,7 @@ description = "Description"
 vnum = 13572
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1153,6 +1186,7 @@ description = "Description"
 vnum = 13573
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1167,6 +1201,7 @@ description = "Description"
 vnum = 13574
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1177,6 +1212,7 @@ description = "Description"
 vnum = 13575
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1191,6 +1227,7 @@ description = "Description"
 vnum = 13576
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1209,6 +1246,7 @@ description = "Description"
 vnum = 13577
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1223,6 +1261,7 @@ description = "Description"
 vnum = 13578
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1241,6 +1280,7 @@ description = "Description"
 vnum = 13579
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1255,6 +1295,7 @@ description = "Description"
 vnum = 13580
 name = "On a Ledge"
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1273,6 +1314,7 @@ description = "Description"
 vnum = 13581
 name = "On a Ledge"
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1291,6 +1333,7 @@ description = "Description"
 vnum = 13582
 name = "Southern end of hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1305,6 +1348,7 @@ description = "Description"
 vnum = 13583
 name = "Northern end of hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1319,6 +1363,7 @@ description = "Description"
 vnum = 13584
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1341,6 +1386,7 @@ description = "Description"
 vnum = 13585
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1355,6 +1401,7 @@ description = "Description"
 vnum = 13586
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1373,6 +1420,7 @@ description = "Description"
 vnum = 13587
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1391,6 +1439,7 @@ description = "Description"
 vnum = 13588
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1401,6 +1450,7 @@ description = "Description"
 vnum = 13589
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1419,6 +1469,7 @@ description = "Description"
 vnum = 13590
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1433,6 +1484,7 @@ description = "Description"
 vnum = 13591
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1451,6 +1503,7 @@ description = "Description"
 vnum = 13592
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1465,6 +1518,7 @@ description = "Description"
 vnum = 13593
 name = ""
 sector = "inside"
+room_flags = ["indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1491,6 +1545,7 @@ description = "Description"
 vnum = 13594
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1519,6 +1574,7 @@ description = "Description"
 vnum = 13596
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see.
 You seem to have gotten turned around, and wish you had a compass about
@@ -1544,6 +1600,7 @@ now."""
 vnum = 13597
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1567,6 +1624,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13598
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1590,6 +1648,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13599
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1613,6 +1672,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13600
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1640,6 +1700,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13601
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1663,6 +1724,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13602
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1686,6 +1748,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13603
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_mob", "no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see.
 Wait...Is that land to the south?"""
@@ -1710,6 +1773,7 @@ Wait...Is that land to the south?"""
 vnum = 13604
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1733,6 +1797,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13605
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1756,6 +1821,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13606
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1779,6 +1845,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13607
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1806,6 +1873,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13608
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1829,6 +1897,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13609
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see."""
 
@@ -1852,6 +1921,7 @@ Looking around, you see nothing but water as far as the eye can see."""
 vnum = 13610
 name = "Lost at Sea"
 sector = "water_noswim"
+room_flags = ["no_mob", "no_recall"]
 description = """
 Looking around, you see nothing but water as far as the eye can see.
 Wait...Is that an island to the south?"""
@@ -1876,6 +1946,7 @@ Wait...Is that an island to the south?"""
 vnum = 13611
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1894,6 +1965,7 @@ description = "Description"
 vnum = 13612
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1912,6 +1984,7 @@ description = "Description"
 vnum = 13613
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1926,6 +1999,7 @@ description = "Description"
 vnum = 13614
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1948,6 +2022,7 @@ description = "Description"
 vnum = 13615
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1962,6 +2037,7 @@ description = "Description"
 vnum = 13616
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1976,6 +2052,7 @@ description = "Description"
 vnum = 13617
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -1994,6 +2071,7 @@ description = "Description"
 vnum = 13618
 name = ""
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "Description"
 
   [[rooms.exits]]
@@ -2004,6 +2082,7 @@ description = "Description"
 vnum = 13619
 name = "A small Dock"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing on a small dock extending out into a large pool of water.
 A huge waterfall to your west sprays you with a cool mist.  A small shack
@@ -2035,3 +2114,19 @@ is here with a sign that reads "{BBert's Boats{x".
     vnum = 13502
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+               NO FISHING"""
+
+[[rooms.extra_descs]]
+keywords = ["brass", "plaque"]
+description = """
++-------------------+
+| +---------------+ |
+| | SACRIFICE.ARE | |
+| |      by       | |
+| |   Vengeance   | |
+| +---------------+ |
++--Realms-Of-Thoth--+"""

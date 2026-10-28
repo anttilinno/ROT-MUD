@@ -142,6 +142,12 @@ cost = 5
 wear_flags = ["take", "waist"]
 extra_flags = ["glow", "noremove", "inventory", "had_timer"]
 
+[[objects.extra_descs]]
+keywords = ["stain"]
+description = """
+Gosh, that is a bad stain.
+You decide to not look any closer."""
+
 [[objects]]
 vnum = 13012
 keywords = ["black", "wingtips"]
@@ -165,6 +171,11 @@ weight = 1
 cost = 3
 wear_flags = ["take", "feet"]
 extra_flags = ["glow", "noremove", "inventory"]
+
+[[objects.extra_descs]]
+keywords = ["shoes", "bowling"]
+description = """
+A moth escapes from within...  and expires."""
 
 [[objects]]
 vnum = 13014
@@ -202,6 +213,11 @@ cost = 10
 wear_flags = ["take", "face"]
 extra_flags = ["glow", "evil", "magic", "nodrop", "anti_good", "noremove", "inventory", "nopurge", "had_timer"]
 
+[[objects.extra_descs]]
+keywords = ["face", "makeup"]
+description = """
+And you thought Bozo wore makeup."""
+
 [[objects]]
 vnum = 13017
 keywords = ["white", "garter", "lace"]
@@ -225,6 +241,11 @@ weight = 2
 cost = 500
 wear_flags = ["take", "waist"]
 extra_flags = ["inventory", "had_timer"]
+
+  [objects.food]
+  full = 5
+  hunger = 8
+  poisoned = false
 
 [[objects]]
 vnum = 13019
@@ -273,4 +294,3 @@ weight = 3
 cost = 1200
 wear_flags = ["take", "feet"]
 extra_flags = ["glow", "bless", "inventory"]
-

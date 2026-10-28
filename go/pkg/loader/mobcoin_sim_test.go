@@ -62,7 +62,7 @@ func TestMobCoinDropDistribution(t *testing.T) {
 			continue
 		}
 		totalMobs++
-		if tmpl.Gold > 0 {
+		if tmpl.Gold != nil {
 			mobsWithGoldField++
 		}
 		b := buckets[bucketFor(tmpl.Level)]

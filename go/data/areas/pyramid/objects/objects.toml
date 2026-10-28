@@ -10,8 +10,15 @@ cost = 370
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 10
+
+[[objects.extra_descs]]
+keywords = ["egyptian", "mace"]
+description = """
+The mace is formed from solid brass, and engraved in strange hieroglyphs."""
 
 [[objects]]
 vnum = 8701
@@ -30,6 +37,13 @@ wear_flags = ["take", "about"]
   ac_slash = 4
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["sand", "robes"]
+description = """
+The robes are colored a sandy off-white, and are in fact caked and covered
+with sand as well.  You don't seem to be able to remove all of the sand, no
+matter how much you try."""
+
 [[objects]]
 vnum = 8702
 keywords = ["obsidian", "dirk"]
@@ -43,12 +57,19 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 8
 
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["obsidian", "dirk"]
+description = """
+The blade of the dirk is black, glassy obsidian, chipped razor sharp."""
 
 [[objects]]
 vnum = 8703
@@ -76,6 +97,12 @@ extra_flags = ["magic"]
   location = "dex"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["cloth", "turban"]
+description = """
+The turban used to be white cloth, now it is covered with oil and dirt from
+the head and hair of its previous owner, who must not have bathed much."""
+
 [[objects]]
 vnum = 8704
 keywords = ["cloth", "wrappings"]
@@ -93,6 +120,11 @@ wear_flags = ["take", "body"]
   ac_slash = 5
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["cloth", "wrappings"]
+description = """
+The cloth wrappings are old, wrinkled, and stink of embalming fluid."""
+
 [[objects]]
 vnum = 8705
 keywords = ["bottle", "fluid"]
@@ -104,6 +136,15 @@ weight = 50
 cost = 270
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["bottle", "fluid"]
+description = """
+The bottle is dusty and the fluid has a strange sickly-sweet smell to it."""
+
+  [objects.magic]
+  level = 5
+  spells = ["poison"]
+
 [[objects]]
 vnum = 8706
 keywords = ["jar", "formaldehyde"]
@@ -114,6 +155,15 @@ level = 0
 weight = 60
 cost = 200
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["jar", "formaldehyde"]
+description = """
+The jar is sticky and smells really bad."""
+
+  [objects.magic]
+  level = 10
+  spells = ["cure light"]
 
 [[objects]]
 vnum = 8707
@@ -135,6 +185,14 @@ extra_flags = ["glow", "magic"]
   location = "hit"
   modifier = 10
 
+[[objects.extra_descs]]
+keywords = ["ball", "fire"]
+description = """
+The ball of fire is hot to the touch and very very bright."""
+
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 8708
 keywords = ["stone", "scimitar"]
@@ -148,6 +206,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "magic"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 6
 
@@ -158,6 +218,12 @@ extra_flags = ["hum", "magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["stone", "scimitar"]
+description = """
+The scimitar is formed from solid stone, chipped and carved to perfection,
+with a sharp, cold blade that is marred only by a few nicks here and there."""
 
 [[objects]]
 vnum = 8709
@@ -170,6 +236,11 @@ weight = 150
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["stone", "key"]
+description = """
+The key is made from stone, but is otherwise unremarkable."""
+
 [[objects]]
 vnum = 8710
 keywords = ["stone", "sarcophagus"]
@@ -179,6 +250,23 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["stone", "sarcophagus"]
+description = """
+The sarcophagus is engraved on the sides with the images of pharoahs,
+great wars fought long ago, mighty pyramids being constructed...
+
+A raised image atop the sarcophagus is formed in the visage of one of
+the mighty pharoahs, painted in gold and studded with precious gems.
+
+You see a small keyhole in the side of the sarcophagus."""
+
+  [objects.container]
+  capacity = 500
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 8709
+  max_weight = 500
 
 [[objects]]
 vnum = 8711
@@ -191,6 +279,12 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["dust"]
+description = """
+The dust is old.  As you sift it through your hands you find tiny chips
+of aged bone inside -- it must be the ancient remains of something."""
+
 [[objects]]
 vnum = 8712
 keywords = ["scarab"]
@@ -201,6 +295,12 @@ level = 0
 weight = 50
 cost = 3000
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["scarab"]
+description = """
+The scarab is intricately detailed, down to the tiny hairs on its
+insectile legs and the faceting of the emeralds in its eyes."""
 
 [[objects]]
 vnum = 8713
@@ -221,6 +321,18 @@ extra_flags = ["glow", "hum", "magic", "anti_evil"]
   [[objects.affects]]
   location = "ac"
   modifier = -5
+
+[[objects.extra_descs]]
+keywords = ["lamp"]
+description = """
+The lamp is quite old and tarnished.  You rub at it to get some of the
+grime off, but it doesn't seem like anybody is home."""
+
+  [objects.magic]
+  level = 25
+  max_charges = 5
+  charges = 5
+  spells = ["fly"]
 
 [[objects]]
 vnum = 8714
@@ -246,6 +358,12 @@ extra_flags = ["bless", "anti_evil"]
   location = "ac"
   modifier = -3
 
+[[objects.extra_descs]]
+keywords = ["ankh"]
+description = """
+The ankh is a small brass symbol of an ancient religion.
+It glows with a soft bright light that is soothing to you."""
+
 [[objects]]
 vnum = 8715
 keywords = ["book", "riddles"]
@@ -256,6 +374,17 @@ level = 19
 weight = 150
 cost = 1540
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["book", "riddles"]
+description = """
+The book has well-worn pages, containing many befuddling riddles
+to surprise, confuse, and amuse you.  You find yourself bewildered
+by its contents and put it down to sort your head out."""
+
+  [objects.magic]
+  level = 21
+  spells = ["identify", "know alignment", "faerie fog"]
 
 [[objects]]
 vnum = 8716
@@ -270,6 +399,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 4
 
@@ -285,6 +416,13 @@ extra_flags = ["magic"]
   location = "con"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["lion", "paw"]
+description = """
+The massive paw has straps on it formed of bronze, so that it will
+fit snugly over your hand.  As you put it on, it melds with your hand,
+becoming an extension of your arm."""
+
 [[objects]]
 vnum = 8717
 keywords = ["answer"]
@@ -295,6 +433,12 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take", "hold"]
+
+[[objects.extra_descs]]
+keywords = ["answer", "hieroglyphics"]
+description = """
+You cannot decipher the strange hieroglyphics that cover the
+sheet of parchment."""
 
 [[objects]]
 vnum = 8718
@@ -307,6 +451,15 @@ weight = 200
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["treasure"]
+description = """
+The treasure is incredibly large, filled with gold coins and valuables, more
+wealth than you could ever possibly imagine accumulated in one place."""
+
+  [objects.money]
+  amount = 4150
+
 [[objects]]
 vnum = 8719
 keywords = ["pile", "sand"]
@@ -317,6 +470,14 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["pile", "sand"]
+description = """
+You think you see some coins and valuables glinting amongst the grains of sand."""
+
+  [objects.money]
+  amount = 129
 
 [[objects]]
 vnum = 8720
@@ -350,6 +511,13 @@ extra_flags = ["evil", "magic", "nodrop", "noremove"]
   location = "str"
   modifier = -3
 
+[[objects.extra_descs]]
+keywords = ["curse", "mummy"]
+description = """
+Rumor has it that whomever disturbs the grave of the mummy shall be
+cursed for all eternity, and that the descendents of that person shall
+likewise be cursed for ten generations to follow."""
+
 [[objects]]
 vnum = 8721
 keywords = ["small", "elixir"]
@@ -361,6 +529,17 @@ weight = 20
 cost = 1820
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["small", "elixir"]
+description = """
+The elixir is deceptively small.  Something tells you that its
+contents are truly quite potent.  Perhaps too potent for ordinary
+mortals to attempt to consume."""
+
+  [objects.magic]
+  level = 30
+  spells = ["giant strength", "stone skin", "sanctuary"]
 
 [[objects]]
 vnum = 8722
@@ -396,6 +575,14 @@ extra_flags = ["magic"]
   location = "mana"
   modifier = 25
 
+[[objects.extra_descs]]
+keywords = ["golden", "mask"]
+description = """
+This beautiful mask was shaped from solid gold and magically enchanted
+to perfectly fit the face of any who choose to wear it, its golden features
+and turquoise highlights even moving to match the expressions of the face
+of the wearer."""
+
 [[objects]]
 vnum = 8723
 keywords = ["diamond"]
@@ -406,6 +593,14 @@ level = 0
 weight = 50
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["diamond"]
+description = """
+Aha!
+
+You see a multifaceted gemstone, which strangely reflects no
+light, making it very hard to see when it lies on the ground."""
 
 [[objects]]
 vnum = 8724
@@ -422,6 +617,19 @@ extra_flags = ["glow", "magic"]
   [[objects.affects]]
   location = "saves"
   modifier = -2
+
+[[objects.extra_descs]]
+keywords = ["sun", "wand"]
+description = """
+This small brass shaft is a holy weapon used by the ancient people of
+this land to defend against the deadliest of foes.  It shines with the
+brilliant blazing light of the sun."""
+
+  [objects.magic]
+  level = 35
+  max_charges = 25
+  charges = 25
+  spells = ["harm"]
 
 [[objects]]
 vnum = 8725
@@ -443,6 +651,12 @@ extra_flags = ["hum", "magic"]
   location = "int"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["sandy", "ring"]
+description = """
+The ring is small, smooth, sandy-colored and unremarkable, save that
+it gives off a continuous low humming noise that tickles your fingertips."""
+
 [[objects]]
 vnum = 8726
 keywords = ["golden", "sphinx"]
@@ -458,6 +672,13 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "wis"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["golden", "sphinx"]
+description = """
+The golden sphinx is incredibly detailed and very small, fitting easily
+into the palm of your hand.  You can even make out the expression
+of wisdom and peace on its face."""
 
 [[objects]]
 vnum = 8727
@@ -485,6 +706,13 @@ extra_flags = ["magic", "anti_evil"]
   location = "str"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["sphinxian", "leggings"]
+description = """
+These magically fashioned leggings impart the strength and stamina
+of the mightiest of the ancient sphinxes.  You feel ancient power
+emanating from them; they seem to be almost alive."""
+
 [[objects]]
 vnum = 8728
 keywords = ["rune", "stone"]
@@ -497,3 +725,7 @@ cost = 100
 wear_flags = ["take", "hold"]
 extra_flags = ["evil", "melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["rune", "stone"]
+description = """
+This small shard of sandstone is completely covered in engraved runes."""

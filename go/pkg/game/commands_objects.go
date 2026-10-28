@@ -35,6 +35,16 @@ func parseQuantityArg(args string) (int, string) {
 
 // Object manipulation commands: get, drop, give, put, sacrifice
 
+// GetObjToChar gives a picked-up object to ch. Money goes straight into the
+// purse and the coin object is discarded, as ROM's get_obj does.
+func GetObjToChar(ch *types.Character, obj *types.Object) {
+	if obj.ItemType == types.ItemTypeMoney {
+		ch.Coin += int64(obj.Cost)
+		return
+	}
+	ObjToChar(obj, ch)
+}
+
 func (d *CommandDispatcher) cmdGet(ch *types.Character, args string) {
 	if args == "" {
 		d.send(ch, "Get what?\r\n")
@@ -107,7 +117,7 @@ func (d *CommandDispatcher) cmdGet(ch *types.Character, args string) {
 	// Check weight/carry limits would go here
 	// For now, just pick it up
 	ObjFromRoom(obj)
-	ObjToChar(obj, ch)
+	GetObjToChar(ch, obj)
 
 	d.send(ch, fmt.Sprintf("You get %s.\r\n", obj.ShortDesc))
 	ActToRoom("$n gets $p.", ch, nil, obj, d.Output)
@@ -134,7 +144,7 @@ func (d *CommandDispatcher) getQuantity(ch *types.Character, itemName string, co
 		}
 
 		ObjFromRoom(obj)
-		ObjToChar(obj, ch)
+		GetObjToChar(ch, obj)
 		d.checkQuestItemGet(ch, obj)
 		gotten++
 		lastObj = obj
@@ -199,7 +209,7 @@ func (d *CommandDispatcher) getQuantityFromContainer(ch *types.Character, itemNa
 
 	for _, obj := range matches {
 		container.RemoveContent(obj)
-		ObjToChar(obj, ch)
+		GetObjToChar(ch, obj)
 		d.checkQuestItemGet(ch, obj)
 		gotten++
 		lastObj = obj
@@ -233,7 +243,7 @@ func (d *CommandDispatcher) getAll(ch *types.Character, filter string) {
 		}
 
 		ObjFromRoom(obj)
-		ObjToChar(obj, ch)
+		GetObjToChar(ch, obj)
 		d.send(ch, fmt.Sprintf("You get %s.\r\n", obj.ShortDesc))
 		ActToRoom("$n gets $p.", ch, nil, obj, d.Output)
 		d.checkQuestItemGet(ch, obj)
@@ -307,15 +317,7 @@ func (d *CommandDispatcher) getFromContainer(ch *types.Character, itemName, cont
 
 	container.RemoveContent(obj)
 
-	// If looting money from own corpse, add directly to coin purse
-	if obj.ItemType == types.ItemTypeMoney && container.ItemType == types.ItemTypeCorpsePC && container.Owner == ch.Name {
-		ch.Coin += int64(obj.Cost)
-		d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
-		ActToRoom("$n gets $p from $P.", ch, nil, obj, d.Output)
-		return
-	}
-
-	ObjToChar(obj, ch)
+	GetObjToChar(ch, obj)
 
 	d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
 	ActToRoom("$n gets $p from $P.", ch, nil, obj, d.Output)
@@ -327,9 +329,6 @@ func (d *CommandDispatcher) getAllFromContainer(ch *types.Character, container *
 	contents := make([]*types.Object, len(container.Contents))
 	copy(contents, container.Contents)
 
-	// Check if this is the player's own corpse
-	isOwnCorpse := container.ItemType == types.ItemTypeCorpsePC && container.Owner == ch.Name
-
 	for _, obj := range contents {
 		if filter != "" && !nameMatches(obj.Name, filter) {
 			continue
@@ -337,15 +336,7 @@ func (d *CommandDispatcher) getAllFromContainer(ch *types.Character, container *
 
 		container.RemoveContent(obj)
 
-		// If looting money from own corpse, add directly to coin purse
-		if obj.ItemType == types.ItemTypeMoney && isOwnCorpse {
-			ch.Coin += int64(obj.Cost)
-			d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
-			found = true
-			continue
-		}
-
-		ObjToChar(obj, ch)
+		GetObjToChar(ch, obj)
 		d.send(ch, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, container.ShortDesc))
 		d.checkQuestItemGet(ch, obj)
 		found = true
@@ -737,11 +728,7 @@ func (d *CommandDispatcher) cmdSacrifice(ch *types.Character, args string) {
 		return
 	}
 
-	// Sacrifice reward — 5% of the item's base copper value, floor 1cp.
-	coinReward := int64(obj.Cost) / 20
-	if coinReward < 1 {
-		coinReward = 1
-	}
+	coinReward := SacrificeReward(obj)
 
 	// Sacrifice the object
 	ObjFromRoom(obj)
@@ -750,6 +737,17 @@ func (d *CommandDispatcher) cmdSacrifice(ch *types.Character, args string) {
 	d.send(ch, fmt.Sprintf("The gods give you %s for your sacrifice of %s.\r\n",
 		types.FormatCoin(coinReward), obj.ShortDesc))
 	ActToRoom("$n sacrifices $p to the gods.", ch, nil, obj, d.Output)
+}
+
+// SacrificeReward is what the gods pay for sacrificing obj, in copper:
+// level × 3 (at least 1), capped at the item's value except for corpses,
+// as ROT's do_sacrifice does (ROT paid silver; this economy counts copper).
+func SacrificeReward(obj *types.Object) int64 {
+	reward := max(1, obj.Level*3)
+	if obj.ItemType != types.ItemTypeCorpseNPC && obj.ItemType != types.ItemTypeCorpsePC {
+		reward = min(reward, max(1, obj.Cost))
+	}
+	return int64(reward)
 }
 
 // DonationPitVnum is the vnum of the donation pit (from merc.h: OBJ_VNUM_PIT = 3010)

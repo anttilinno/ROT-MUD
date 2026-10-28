@@ -93,6 +93,7 @@ what seems like mines."""
 vnum = 6504
 name = "Narrow Path"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a narrow path leading to the Dwarven Kingdom.  It looks less
 travelled than the others, and it is very creepy.  The path opens up
@@ -120,9 +121,9 @@ and you can hear noise coming from within."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6513
   key = 6502
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 6500
@@ -160,6 +161,7 @@ and you can hear noise coming from within."""
 vnum = 6506
 name = "Bend in Narrow Path"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a narrow path that bends to the east here.  The trees hang over
 the path, and it is very overgrown.  The narrow path continues to the
@@ -173,10 +175,16 @@ south and to the east."""
   direction = "south"
   to_vnum = 6504
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+They hang over the road in the most ominous of ways."""
+
 [[rooms]]
 vnum = 6507
 name = "Narrow path"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This path is very narrow, and it continues to the north and west."""
 
@@ -192,6 +200,7 @@ This path is very narrow, and it continues to the north and west."""
 vnum = 6508
 name = "Narrow north-south path"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This path leads to the north and south.  To the north you can see a
 door, and to the south the path continues."""
@@ -212,15 +221,16 @@ door, and to the south the path continues."""
 vnum = 6509
 name = "Door to Kingdom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here the path turns to the west.  You can see a door in front of you,
 and the path continues to the west and south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6510
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -266,6 +276,7 @@ and the path continues to the west and south."""
 vnum = 6510
 name = "Path to the Castle"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are on a path that will eventually lead to the castle.  It
 continues north to the castle, and there is a door on the western wall."""
@@ -276,14 +287,15 @@ continues north to the castle, and there is a door on the western wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6509
   key = 6502
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 6511
 name = "Still on the path to the Castle"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are still on the path to the castle, or back to the
 Dwarven village, whichever way you wish to go.  The path
@@ -301,6 +313,7 @@ continues to the north and south."""
 vnum = 6512
 name = "Door to Castle"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here there is a door to the castle to the east.  The castle
 is elegantly designed, and looks much like a roll of toilet paper
@@ -313,9 +326,9 @@ standing on end.  A sign says:
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6525
   key = 6514
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -341,6 +354,7 @@ standing on end.  A sign says:
 vnum = 6513
 name = "Inside the entrance"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Everything here is covered in soot and very grimy.  The path continues
 to the east and north, and there is a door to the west."""
@@ -351,9 +365,9 @@ to the east and north, and there is a door to the west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6505
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -367,6 +381,7 @@ to the east and north, and there is a door to the west."""
 vnum = 6514
 name = "Path"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are on a path in the dwarven village which leads north to the shops
 and south to the corner of the area."""
@@ -383,6 +398,7 @@ and south to the corner of the area."""
 vnum = 6515
 name = "Turn in road"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are on a path that leads to a Hide & Tooth shop to the west, and the
 path continues to the south."""
@@ -403,6 +419,7 @@ path continues to the south."""
 vnum = 6516
 name = "Hide & Tooth Shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the Hide & Tooth shop.  Here you may buy the finest in Dwarven
 weapons and armors. The path continues to the north and east."""
@@ -447,6 +464,7 @@ weapons and armors. The path continues to the north and east."""
 vnum = 6517
 name = "Path to the north of shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are on a path to the north of the Hide & Tooth shop.  The path continues
 to the north, and there is Granite Head's bakery to the west."""
@@ -467,6 +485,7 @@ to the north, and there is Granite Head's bakery to the west."""
 vnum = 6518
 name = "North of Shops"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here the path bends to the east towards the barracks. To the
 south you can see the shops."""
@@ -483,6 +502,7 @@ south you can see the shops."""
 vnum = 6519
 name = "Path by Hospital"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here the path passes by the Hospital to the north.  It continues
 to the east to the barracks, and to the west."""
@@ -503,6 +523,7 @@ to the east to the barracks, and to the west."""
 vnum = 6520
 name = "Path next to barracks"
 sector = "inside"
+room_flags = ["indoors"]
 description = "Here the path continues west, and east to the barracks."
 
   [[rooms.exits]]
@@ -521,14 +542,15 @@ description = "Here the path continues west, and east to the barracks."
 vnum = 6521
 name = "Entrance to barracks"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here there is an entrance to the barracks to the south, and
 the path continues to the west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 6523
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -562,6 +584,7 @@ the path continues to the west."""
 vnum = 6522
 name = "Guard House"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the guard house to the west of the entrance
 to the castle.  There are nude posters covering the walls."""
@@ -570,10 +593,16 @@ to the castle.  There are nude posters covering the walls."""
   direction = "east"
   to_vnum = 6509
 
+[[rooms.extra_descs]]
+keywords = ["poster"]
+description = """
+There is a wall poster of a nude Minne Pearl."""
+
 [[rooms]]
 vnum = 6523
 name = "First Barrack room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here is the first of two main rooms of barracks.  The
 barracks continue to the south, and you can leave the room
@@ -581,8 +610,8 @@ to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 6521
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -616,6 +645,7 @@ to the north."""
 vnum = 6524
 name = "Back of Barracks"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here is the back of the dwarven barracks.  There are rows
 of beds here, and there is a stench that is unbearable."""
@@ -626,8 +656,8 @@ of beds here, and there is a stench that is unbearable."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 2001
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 6511
@@ -653,6 +683,7 @@ of beds here, and there is a stench that is unbearable."""
 vnum = 6525
 name = "Inside of Castle Strangelove"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are just inside the castle.  It is very tubular in shape,
 and it is very featureless.  There is a set of stairs that lead
@@ -660,9 +691,9 @@ up, and the door leads out of the castle to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6512
   key = 6514
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
@@ -672,6 +703,7 @@ up, and the door leads out of the castle to the west."""
 vnum = 6526
 name = "A store room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 There is a layer of dust on the floor at least 3 inches thick!  It is
 probable that not many people have been in here for many months."""
@@ -682,26 +714,32 @@ probable that not many people have been in here for many months."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 6527
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["floor", "dust"]
+description = """
+After blowing all the dust off the floor, you notice a trapdoor!"""
 
 [[rooms]]
 vnum = 6527
 name = "Wine cellar"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room smells like wine, and you can only assume it used to be
 a wine cellar at one time."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 6526
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 2065
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 6502
@@ -715,6 +753,7 @@ a wine cellar at one time."""
 vnum = 6528
 name = "Stairs in castle"
 sector = "inside"
+room_flags = ["indoors"]
 description = "The stairs continue to circle up and down here."
 
   [[rooms.exits]]
@@ -733,6 +772,7 @@ description = "The stairs continue to circle up and down here."
 vnum = 6529
 name = "Stairs"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are still circling around on the stairs.  You are starting to
 get dizzy from going around and around and around and around and
@@ -758,6 +798,7 @@ around.  The stairs continue up and down."""
 vnum = 6530
 name = "Top of stairs"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are at the top of the stairs in the castle.  There is an exit
 to the east, and the stairs lead down."""
@@ -778,6 +819,7 @@ to the east, and the stairs lead down."""
 vnum = 6531
 name = "Queen's waiting room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the Queen's waiting room.  Here the men literally
 'wait' for the queen.  You've heard that the queen really likes
@@ -786,9 +828,9 @@ bedroom is to the north, and you can see stairs to the west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 6532
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -806,6 +848,7 @@ bedroom is to the north, and you can see stairs to the west."""
 vnum = 6532
 name = "Bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is the Queen's bedroom.  The bed is all ruffled, and there
 is a stack of dirty sheets piled in the corner.
@@ -817,9 +860,9 @@ A note has been scrawled in lipstick on the mirror:
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed"]
   to_vnum = 6531
   key = 6502
-  flags = ["closed"]
 
   [[rooms.obj_resets]]
   vnum = 6516
@@ -829,6 +872,7 @@ A note has been scrawled in lipstick on the mirror:
 vnum = 6534
 name = "Hospital"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside the Dwarven Hospital.  It smells like rubbing
 alcohol, and there is blood all over the walls."""
@@ -865,6 +909,7 @@ alcohol, and there is blood all over the walls."""
 vnum = 6535
 name = "Granite Head's Bakery"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The aroma coming from this room is sensuous.  You can almost taste
 the pastries dissolving in your mouth."""
@@ -901,6 +946,7 @@ the pastries dissolving in your mouth."""
 vnum = 6540
 name = "Dark path"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This path is very well worn, and there is an entrance to the mines to the
 east, while the path continues to the north and west."""
@@ -911,9 +957,9 @@ east, while the path continues to the north and west."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6541
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -955,15 +1001,16 @@ east, while the path continues to the north and west."""
 vnum = 6541
 name = "Mine entrance"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The little path here leads down toward the mines, while the worn path
 continues to the west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6540
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
@@ -973,6 +1020,7 @@ continues to the west."""
 vnum = 6542
 name = "Inside the mine"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 There are holes everywhere from the places that the workers blew
 away the rock to get to whatever they were looking for.  A path leads
@@ -998,6 +1046,7 @@ down and up."""
 vnum = 6543
 name = "Path in the mine"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are deep inside the mine, and you feel very uncomfortable.  The
 path continues to the east, and leads to the mineshaft to the west."""
@@ -1042,15 +1091,16 @@ path continues to the east, and leads to the mineshaft to the west."""
 vnum = 6544
 name = "Mine crossroad"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at a crossroad in the mine.  There is a door to the north,
 and the path continues to the south, east, and west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6546
   key = 6502
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1068,6 +1118,7 @@ and the path continues to the south, east, and west."""
 vnum = 6545
 name = "Coal Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are inside the storage area for the raw materials
 that are found down here.  The room is very unsturdy as the
@@ -1085,6 +1136,7 @@ supports are very rickety."""
 vnum = 6546
 name = "Mine Maze"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered the maze of the mines.  To the east you
 can see some inscriptions, and you can exit to the south."""
@@ -1095,14 +1147,15 @@ can see some inscriptions, and you can exit to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 6544
   key = 6502
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 6547
 name = "Maze inscription"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are inside the maze, but not far enough in that you could get lost."""
 
@@ -1118,6 +1171,7 @@ You are inside the maze, but not far enough in that you could get lost."""
 vnum = 6548
 name = "Maze"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze."
 
   [[rooms.exits]]
@@ -1136,6 +1190,7 @@ description = "You are in a maze."
 vnum = 6549
 name = "Maze"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze."
 
   [[rooms.exits]]
@@ -1154,6 +1209,7 @@ description = "You are in a maze."
 vnum = 6550
 name = "Maze"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "You are in a maze."
 
   [[rooms.exits]]
@@ -1168,6 +1224,7 @@ description = "You are in a maze."
 vnum = 6551
 name = "Mining equipment room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the storage room for equipment used by the
 Dwarven miners.  It is very small, and you can tell that
@@ -1185,6 +1242,7 @@ not many miners actually use any equipment."""
 vnum = 6552
 name = "Solved the Maze."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have solved the maze.  You can tell by the last few moves
 that there is no way that a dumb worker could have figured that
@@ -1206,6 +1264,7 @@ To the east, you see the maze.  There is a sign above the west exit:
 vnum = 6553
 name = "The Mazekeeper's Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered the Mazekeeper's room.  There are pictures of
 the Queen with darts thrown in it.  Spray-painted on the wall are
@@ -1227,6 +1286,7 @@ things like 'the queen shall suffer' and 'Catholics Rule'."""
 vnum = 6554
 name = "Bottom of mineshaft"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the bottom of the mineshaft.  The air here is very sooty, and
 it is very hard to breath.  The mineshaft leads up and east."""
@@ -1257,4 +1317,3 @@ The dwarven kingdom lies to the east."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 4000
-

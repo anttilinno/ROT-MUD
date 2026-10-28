@@ -139,7 +139,9 @@ type MobileData struct {
 	DamageType  string    `toml:"damage_type"`
 	AC          [4]int    `toml:"ac"`
 	Hitroll     int       `toml:"hitroll"`
-	Gold        int       `toml:"gold"`
+	Gold        *int      `toml:"gold"`        // wealth in copper; nil = level-based fallback
+	ForgeTiers  []string  `toml:"forge_tiers"` // weapon tiers this smith forges (data/forge.toml)
+	Inn         bool      `toml:"inn"`         // innkeeper: rents rooms (`rent`)
 	StartPos    string    `toml:"start_pos"`
 	DefaultPos  string    `toml:"default_pos"`
 	Special     string    `toml:"special"` // Special behavior function name (e.g. "spec_cast_mage")
@@ -193,6 +195,11 @@ type ObjectData struct {
 	Armor      *ArmorData      `toml:"armor"`
 	Container  *ContainerData  `toml:"container"`
 	Light      *LightData      `toml:"light"`
+	Portal     *PortalData     `toml:"portal"`
+	Magic      *MagicData      `toml:"magic"` // potion, scroll, pill, wand, staff
+	Drink      *DrinkData      `toml:"drink"` // drink containers and fountains
+	Food       *FoodData       `toml:"food"`
+	Money      *MoneyData      `toml:"money"`
 	Affects    []AffectData    `toml:"affects"`
 	ExtraDescs []ExtraDescData `toml:"extra_descs"`
 }
@@ -221,6 +228,13 @@ type ContainerData struct {
 
 type LightData struct {
 	Duration int `toml:"duration"`
+}
+
+// PortalData configures a portal/teleport item. DestVnum is the destination
+// room; Charges is the number of uses (1 = single-use consumable, -1 = infinite).
+type PortalData struct {
+	DestVnum int `toml:"dest_vnum"`
+	Charges  int `toml:"charges"`
 }
 
 type AffectData struct {
@@ -267,4 +281,60 @@ type MOBprogFile struct {
 // MobProgRef references a mobprog by name for association with a mob
 type MobProgRef struct {
 	Name string `toml:"name"` // Reference to a mobprog file (without .toml extension)
+}
+
+// ForgeConfig is data/forge.toml: the weapon tiers smiths can be commissioned
+// to forge.
+type ForgeConfig struct {
+	ForgeDays int         `toml:"forge_days"`
+	Tiers     []ForgeTier `toml:"tiers"`
+}
+
+// ForgeTier is one commissionable weapon quality.
+type ForgeTier struct {
+	Name       string `toml:"name"`
+	Level      int    `toml:"level"`
+	DiceNumber int    `toml:"dice_number"`
+	DiceSize   int    `toml:"dice_size"`
+	Hitroll    int    `toml:"hitroll"`
+	Damroll    int    `toml:"damroll"`
+	Price      int64  `toml:"price"`
+}
+
+// Tier returns the tier with the given name, or nil.
+func (f *ForgeConfig) Tier(name string) *ForgeTier {
+	for i := range f.Tiers {
+		if f.Tiers[i].Name == name {
+			return &f.Tiers[i]
+		}
+	}
+	return nil
+}
+
+// MagicData holds the spells of a potion, scroll, pill, wand or staff.
+type MagicData struct {
+	Level      int      `toml:"level"`       // casting level
+	MaxCharges int      `toml:"max_charges"` // wand/staff
+	Charges    int      `toml:"charges"`     // wand/staff
+	Spells     []string `toml:"spells"`      // spell names
+}
+
+// DrinkData holds a drink container's or fountain's liquid.
+type DrinkData struct {
+	Capacity int    `toml:"capacity"`
+	Current  int    `toml:"current"`
+	Liquid   string `toml:"liquid"`
+	Poisoned bool   `toml:"poisoned"`
+}
+
+// FoodData holds how filling a food item is.
+type FoodData struct {
+	Full     int  `toml:"full"`   // hours of fullness
+	Hunger   int  `toml:"hunger"` // hours of hunger relief
+	Poisoned bool `toml:"poisoned"`
+}
+
+// MoneyData is a pile of coins.
+type MoneyData struct {
+	Amount int `toml:"amount"` // copper
 }

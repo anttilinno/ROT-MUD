@@ -2,6 +2,7 @@
 vnum = 6900
 name = "Quifael's monster pen"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are in a big, subterranean room with heavy massive stone walls and no
 windows whatsoever.  A virtual ladder leads upwards."""
@@ -14,6 +15,7 @@ windows whatsoever.  A virtual ladder leads upwards."""
 vnum = 6901
 name = "Quifael's study"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "private"]
 description = """
 You are in a small, comfortable study room.  The walls are lined with
 bookcases filled with dusty volumes of all sizes.  In the fireplace burns a
@@ -24,10 +26,35 @@ reading desk is a large old-fashioned chair."""
   direction = "south"
   to_vnum = 6904
 
+[[rooms.extra_descs]]
+keywords = ["chair"]
+description = """
+It is big and old-fashioned, but quite comfortable nevertheless."""
+
+[[rooms.extra_descs]]
+keywords = ["desk"]
+description = """
+It is very massive and but seems worn from many years of use."""
+
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+The fireplace isn't particularly big, but the fire crackles merrily in it."""
+
+[[rooms.extra_descs]]
+keywords = ["bookcase", "bookcases", "volume", "volumes", "book", "books"]
+description = """
+Most of the books are heavy, leatherbound and covered in a thin layer of dust.
+There are many titles on necromancy, conjuring and other spheres of Magick,
+but also some on computer science (although these seem to be VERY dusty
+indeed) and a fair collection of horror literature, ranging from Bram Stoker
+and H. P. Lovecraft to Anne Rice and Stephen King."""
+
 [[rooms]]
 vnum = 6902
 name = "Quifael's laboratory"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "private"]
 description = """
 You are in a room filled with shelves containing all sorts of weird equipment.
 The walls are lined with numerous shelves and a massive working desk is by
@@ -47,10 +74,26 @@ A magical portal is hovering in the air just in front of the east wall."""
   direction = "down"
   to_vnum = 6900
 
+[[rooms.extra_descs]]
+keywords = ["desk"]
+description = """
+On the desk is a peculiar apparatus of glass bottles and globes connected by
+small pipelines.  The green liquid inside the apparatus' globes and pipelines
+is bubbling steadily."""
+
+[[rooms.extra_descs]]
+keywords = ["shelves"]
+description = """
+The shelves contain a mass of bottles, jars and boxes of different shapes and
+sizes, of which some contain powders and liquids in various colours.  Others
+contain dragon's claws, giant's eyes, rabbit's ears and other body parts of
+different monsters."""
+
 [[rooms]]
 vnum = 6903
 name = "Quifael's virtual balcony"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are on a transparent balcony hanging in mid-air.  You notice a faint blue
 glow surrounding everything, even yourself, making it seem as transparent as
@@ -63,10 +106,41 @@ A magical portal is hovering in the air to the west."""
   direction = "west"
   to_vnum = 6902
 
+[[rooms.extra_descs]]
+keywords = ["forest", "Haon-Dor", "view"]
+description = """
+Through the tree crowns, you see fellow adventurers walking around in the
+forest, gathering mushrooms, eating blackberries, committing rabbit genocide
+and generally having a good time."""
+
+[[rooms.extra_descs]]
+keywords = ["plate"]
+description = """
+The transparent bronze plate looks quite strange, but the engraved letters are
+quite easy to read, nevertheless :-
+
+              Quifael's Virtual Balcony
+
+                   Do not lean out!
+
+  Please do not try to attract the attention of any
+      adventurers in the forest, as you are not
+         really in existence at the moment.
+
+        (This could possibly mess up Reality,
+      and we wouldn't want to do that, would we?)"""
+
+[[rooms.extra_descs]]
+keywords = ["balcony", "railing"]
+description = """
+Quite transparent, but visible anyway, because of the blue glow that surrounds
+the whole place."""
+
 [[rooms]]
 vnum = 6904
 name = "Quifael's hall"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 You are in sparsely decorated and quite dusty hall.  Old wooden doors lead
 north, east and south and to the west is the front door.
@@ -86,17 +160,22 @@ An old mirror hangs on the wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 3126
   key = 3301
-  flags = ["closed"]
+
+[[rooms.extra_descs]]
+keywords = ["mirror"]
+description = """
+You see yourself looking back at you."""
 
 [[rooms]]
 vnum = 6905
 name = "Quifael's kitchen"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = "You are in an old-fashioned kitchen."
 
   [[rooms.exits]]
   direction = "north"
   to_vnum = 6904
-

@@ -33,6 +33,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["shocking"]
   dice_number = 7
   dice_size = 6
 
@@ -79,6 +82,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 8
 
@@ -120,6 +125,12 @@ cost = 5800
 wear_flags = ["take", "hold"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
+  [objects.magic]
+  level = 30
+  max_charges = 3
+  charges = 3
+  spells = ["sanctuary"]
+
 [[objects]]
 vnum = 906
 keywords = ["trident", "poseidon"]
@@ -133,6 +144,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 7
   dice_size = 6
 
@@ -153,6 +167,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 6
   dice_size = 7
 
@@ -197,6 +214,10 @@ weight = 10
 cost = 1130
 wear_flags = ["take"]
 extra_flags = ["invis", "magic", "anti_evil"]
+
+  [objects.magic]
+  level = 30
+  spells = ["dispel evil", "heal"]
 
 [[objects]]
 vnum = 910
@@ -269,6 +290,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 11
 
@@ -282,6 +305,11 @@ level = 0
 weight = 10
 cost = 100
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
 
 [[objects]]
 vnum = 915
@@ -327,6 +355,10 @@ weight = 10
 cost = 340
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 24
+  spells = ["cure light"]
+
 [[objects]]
 vnum = 919
 keywords = ["pear"]
@@ -337,6 +369,10 @@ level = 11
 weight = 10
 cost = 530
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 24
+  spells = ["cure poison"]
 
 [[objects]]
 vnum = 920
@@ -349,6 +385,10 @@ weight = 10
 cost = 340
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 24
+  spells = ["armor"]
+
 [[objects]]
 vnum = 921
 keywords = ["kiwi"]
@@ -359,6 +399,10 @@ level = 11
 weight = 10
 cost = 530
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 24
+  spells = ["cure poison"]
 
 [[objects]]
 vnum = 922
@@ -389,6 +433,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["invis", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 11
 
@@ -447,6 +493,10 @@ weight = 10
 cost = 810
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 12
+  spells = ["sanctuary", "giant strength", "armor"]
+
 [[objects]]
 vnum = 927
 keywords = ["key", "cell"]
@@ -469,3 +519,49 @@ weight = 10
 cost = 500
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map", "olympus", "secret"]
+description = """
+.
+                              The Secret Map Of
+                               *****OLYMPUS*****
+
+                                   (Hermes)
+                                   Bedroom    The Portal
+                                      |           |
+                                   Northern  Hall of Gods
+                                     Hall    /
+                        Western       |    /    Eastern
+              Bedroom----Hall----Second Floor----Hall----Bedroom
+              (Hera)            /     |                 (Poseidon)
+                         Stairway  Southern
+          (Prometheus)       |       Hall                    North
+              Cell    /Throne Room    |                        |  /Up
+                |   /     (Zeus)   Bedroom                     |/
+       Cell-Dungeon-Cell     |                          West---+---East
+  (Chimera)(Jailor)(Chimera) |                                /|
+                             |                          Down/  |
+                  Kitchen    |     Stable                    South
+        (Odin)       |       |       |       (Ra)
+        Guest     Western  Castle  Eastern   Guest      ()Mob Location
+       Quarters----Wing----Entry----Wing----Quarters
+                     |       |       |
+                  Storage   Z|   Storage Room
+                   Room     e|
+                            u|  Believer
+                            s|     |    (Hephaestus)
+                             |  Planning---Smithy
+                            S|  Room(Ares)   |
+                            t|               |  (Clive)
+                 (Alchemist) +--Ares Street--+--Weapon
+                    Mystery  |               |   Shop
+                    Shop-----+               |
+                             |            Armoury
+                   Residence-+-Residence  (Samuel)
+                   (Apollo)  |  (Athena)
+                             |
+             (Julius)Bakery--+
+                             |
+                       **Entrance**
+                            /
+                      Mountain"""

@@ -15,6 +15,12 @@ here, torn apart both by battle and the elements."""
   direction = "south"
   to_vnum = 8302
 
+[[rooms.extra_descs]]
+keywords = ["swamp"]
+description = """
+The swamp to the south even reaches as far as this point ... it makes the
+ground and air about you moist and fetid."""
+
 [[rooms]]
 vnum = 8302
 name = "Swamp's Edge"
@@ -41,6 +47,7 @@ the sounds stop."""
 vnum = 8303
 name = "Marshy Forest"
 sector = "mountain"
+room_flags = ["dark"]
 description = """
 This area is by no means a forest, but for those who dwell in these sparse
 trees it is one.  Occasionally you see a whole humanoid form floating face down
@@ -71,10 +78,22 @@ distance.  And feel fear creep into your heart."""
   vnum = 8303
   max = 3
 
+[[rooms.extra_descs]]
+keywords = ["pieces"]
+description = """
+You see severed limbs and spongy intestines."""
+
+[[rooms.extra_descs]]
+keywords = ["humanoid", "corpse"]
+description = """
+He looks mangled and shredded.  You see one large gash mark that looks
+like it came from the claw of some huge beast."""
+
 [[rooms]]
 vnum = 8304
 name = "On a hill."
 sector = "hills"
+room_flags = ["dark"]
 description = """
 You stand atop a hill on the northwestern side of the evil swamp. Dark
 clouds whip around you and the wind raises its voice and assails you."""
@@ -115,6 +134,7 @@ clouds whip around you and the wind raises its voice and assails you."""
 vnum = 8305
 name = "An Oozing Bog"
 sector = "mountain"
+room_flags = ["dark"]
 description = """
 You stand in an oozing quagmire.  A creaking beat fills the air, 
 accompanied by groans and soughing of the air.  Several large winged
@@ -146,18 +166,24 @@ have you for a feast."""
   vnum = 8314
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["beasts"]
+description = """
+You see a large creature, possibly a demon, flapping heavily above you."""
+
 [[rooms]]
 vnum = 8306
 name = "An Oozing Bog"
 sector = "mountain"
+room_flags = ["dark"]
 description = """
 The ground here is soft and oozing.  You feel slimy water seeping into your
 boots.  Better stop and check for leeches when you get out of here."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 8305
   flags = ["door"]
+  to_vnum = 8305
 
   [[rooms.mob_resets]]
   vnum = 8302
@@ -179,10 +205,16 @@ boots.  Better stop and check for leeches when you get out of here."""
   vnum = 8314
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["limb"]
+description = """
+The limb looks like it is attached to a trap door in the ground."""
+
 [[rooms]]
 vnum = 8307
 name = "Swamp Thing's Lair"
 sector = "water_swim"
+room_flags = ["dark"]
 description = """
 A horrible swamp thing resides here.  Mutilated corpses suffuse the air with
 the overwhelming stench of putrid flesh."""
@@ -211,10 +243,17 @@ the overwhelming stench of putrid flesh."""
     vnum = 8301
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["corpses"]
+description = """
+You notice a note on one of the corpses reading:  'Best ye forget the temple,
+it is not for the likes of you...'"""
+
 [[rooms]]
 vnum = 8308
 name = "Pool of Quick Sand"
 sector = "water_swim"
+room_flags = ["dark"]
 description = """
 You stand by a large oozing pool of quick sand.  Luckily only a complete
 klutz could not avoid it.  Dancing lights fly about you and one seems to
@@ -244,10 +283,21 @@ be taunting you towards the pool."""
   vnum = 8314
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["quicksand"]
+description = """
+It looks deadly to the foolish."""
+
+[[rooms.extra_descs]]
+keywords = ["lights"]
+description = """
+From the stories you have heard, you recognize them as will-o-wisps."""
+
 [[rooms]]
 vnum = 8309
 name = "A Dark Pool."
 sector = "water_swim"
+room_flags = ["dark"]
 description = """
 You stand beside a large dark pond.  The water boils not with heat, but with
 motion, as if it is alive.  A creaking beat pulses through the air, leaving
@@ -281,10 +331,16 @@ you with a cold sweat and fear in your heart."""
     vnum = 8301
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["pond"]
+description = """
+It looks ALIVE ..."""
+
 [[rooms]]
 vnum = 8310
 name = "Gloomy Path Through the Marsh."
 sector = "water_swim"
+room_flags = ["dark"]
 description = """
 To the north lies a hill, shrouded in dark clouds, and to the south lies
 a huge patch of vegetation.  You sense an evil presence and notice 
@@ -319,10 +375,32 @@ huge fortress, half buried in the marsh."""
     vnum = 8302
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["vegetation"]
+description = """
+It looks sentient."""
+
+[[rooms.extra_descs]]
+keywords = ["fortress"]
+description = """
+It is surrounded by walls nearly 20 meters high.  In a tall tower on the
+northeast side, a window glows blue with magical energy."""
+
+[[rooms.extra_descs]]
+keywords = ["beast"]
+description = """
+It looks to be a demon of some foul breed."""
+
+[[rooms.extra_descs]]
+keywords = ["clouds"]
+description = """
+The clouds look dark and foreboding."""
+
 [[rooms]]
 vnum = 8311
 name = "Cloud of Darkness."
 sector = "water_swim"
+room_flags = ["dark"]
 description = """
 As you travel through this cloud of darkness, a fear such as you have never
 known before assails you."""
@@ -351,6 +429,7 @@ known before assails you."""
 vnum = 8312
 name = "Near Vegetation from Hell."
 sector = "water_swim"
+room_flags = ["dark"]
 description = """
 You stand near some of the strangest plant life you have ever seen, a mixture
 of tumescent vegetables, evil-smelling fruit trees, and malignant ferns."""
@@ -379,10 +458,16 @@ of tumescent vegetables, evil-smelling fruit trees, and malignant ferns."""
     vnum = 8307
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["plant", "plants"]
+description = """
+They look rather violent, and snap at you when you come near."""
+
 [[rooms]]
 vnum = 8313
 name = "By the Monolith."
 sector = "mountain"
+room_flags = ["dark"]
 description = """
 You are standing near a monolith which protrudes some 20 feet from the
 marsh into the air.  Its black obsidian surface shines darkly in the 
@@ -420,10 +505,17 @@ strange, almost unearthly light that enters through the clouds above."""
     vnum = 8307
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["monolith"]
+description = """
+This huge monolith resembles nothing you have ever seen before.
+You have a strong feeling not to go within."""
+
 [[rooms]]
 vnum = 8314
 name = "Murky Bog."
 sector = "mountain"
+room_flags = ["dark"]
 description = """
 A murky bog surrounds you.  To the east a black monolith juts forth from the
 ground.  Far to the north lies a huge pool of quicksand.  Snarls can be heard
@@ -441,10 +533,16 @@ echoing as if from a great distance."""
   direction = "west"
   to_vnum = 8313
 
+[[rooms.extra_descs]]
+keywords = ["monolith"]
+description = """
+This is a huge obsidian stone block stuck in the marsh."""
+
 [[rooms]]
 vnum = 8315
 name = "Northern Lake Side."
 sector = "water_noswim"
+room_flags = ["dark"]
 description = """
 Floating on this boiling lake is not what you would consider an enjoyable 
 experience.  Many a creature bumps the bottom of your boat, and glares 
@@ -475,6 +573,7 @@ portion of the lake looks calm and serene compared to this wild place."""
 vnum = 8316
 name = "Southern Lake Side."
 sector = "water_noswim"
+room_flags = ["dark"]
 description = """
 You are floating on a calm section of blue crystal water.  You feel much more
 at ease then you were before in this area.  Then a wave of fear passes over
@@ -488,10 +587,17 @@ you.  You are not alone."""
   direction = "west"
   to_vnum = 8317
 
+[[rooms.extra_descs]]
+keywords = ["north"]
+description = """
+The way to the north seems to be impassable, due to the rough water and
+strange wild life."""
+
 [[rooms]]
 vnum = 8317
 name = "Beach"
 sector = "mountain"
+room_flags = ["dark"]
 description = """
 You are on a sandy shore.  Marsh life creeps across the surface.  To the west
 lies an evil fortress.  You see figures walking along the battlements."""
@@ -504,10 +610,16 @@ lies an evil fortress.  You see figures walking along the battlements."""
   direction = "west"
   to_vnum = 8318
 
+[[rooms.extra_descs]]
+keywords = ["fortress"]
+description = """
+It is hewn of black stone and heavily fortified."""
+
 [[rooms]]
 vnum = 8318
 name = "Before the Great Gates."
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You stand before the gates of a huge fortress.  The drawbridge is up, the
 gates closed, and the portcullis down.  This place looks very dangerous,
@@ -524,4 +636,3 @@ and you decide not to continue onward."""
   [[rooms.mob_resets]]
   vnum = 8321
   max = 2
-

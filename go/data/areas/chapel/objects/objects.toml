@@ -9,6 +9,15 @@ weight = 50
 cost = 50
 wear_flags = ["take", "hold"]
 
+[[objects.extra_descs]]
+keywords = ["candlestick"]
+description = """
+It is a rather old-looking three-armed candlestick made from pewter.  Its
+candles are a yellowish white colour."""
+
+  [objects.light]
+  duration = 24
+
 [[objects]]
 vnum = 3402
 keywords = ["tickler"]
@@ -22,6 +31,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["nodrop"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "acid"
   dice_number = 2
   dice_size = 4
 
@@ -32,6 +43,12 @@ extra_flags = ["nodrop"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["tickler"]
+description = """
+A horrid black mass of gooey tentacles obviously ripped from the corpse
+of a nightgaunt ... disgusting."""
 
 [[objects]]
 vnum = 3403
@@ -51,6 +68,11 @@ extra_flags = ["anti_good", "anti_neutral"]
   ac_slash = 5
   ac_exotic = 4
 
+[[objects.extra_descs]]
+keywords = ["plasma", "webbing"]
+description = """
+Yuck, mossy and wet.  It looks like some sort of webbing."""
+
 [[objects]]
 vnum = 3410
 keywords = ["rod", "key"]
@@ -61,6 +83,12 @@ level = 0
 weight = 50
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["rod", "key"]
+description = """
+This rod looks sort of octagonal, and sort of like a key and crowbar.  You
+recognize that it will probably fit the lock at the entrance of the tombs."""
 
 [[objects]]
 vnum = 3411
@@ -73,6 +101,12 @@ weight = 30
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["large", "black", "dirty", "key"]
+description = """
+One of those traditional old lock type keys ... except huge, black and
+filthy ... hmm ... like it has been buried for some time ..."""
+
 [[objects]]
 vnum = 3412
 keywords = ["head", "jubal", "mummy"]
@@ -84,6 +118,18 @@ weight = 200
 cost = 0
 wear_flags = ["take"]
 extra_flags = ["anti_evil"]
+
+[[objects.extra_descs]]
+keywords = ["head", "jubal", "mummy"]
+description = """
+ACK! It's half eaten away ... yet it is whole ... in fact I think it can be
+opened and closed ... is there something in its teeth!?!?!? ACK you do it!"""
+
+  [objects.container]
+  capacity = 3
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 3
 
 [[objects]]
 vnum = 3413
@@ -105,6 +151,12 @@ extra_flags = ["magic", "anti_evil"]
   location = "move"
   modifier = 10
 
+[[objects.extra_descs]]
+keywords = ["black", "marble", "ring"]
+description = """
+It is pitch black and has beautiful swirls characteristic of marble all
+through it."""
+
 [[objects]]
 vnum = 3414
 keywords = ["rapier", "thin"]
@@ -118,6 +170,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 4
   dice_size = 2
 
@@ -129,6 +183,11 @@ extra_flags = ["hum"]
   location = "dex"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["thin", "rapier"]
+description = """
+It seems so thin that it would be useless but at the same time it looks deadly."""
+
 [[objects]]
 vnum = 3415
 keywords = ["sarcophagus", "coffin"]
@@ -138,6 +197,18 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["sarcophagus", "coffin"]
+description = """
+A well crafted, if dusty and ancient, home for the afterworld, it seems
+to be able to be opened but needs a key."""
+
+  [objects.container]
+  capacity = 400
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 3416
+  max_weight = 400
 
 [[objects]]
 vnum = 3416
@@ -150,6 +221,11 @@ weight = 40
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["key", "iron", "heavy"]
+description = """
+It looks to be a very heavy old iron key."""
+
 [[objects]]
 vnum = 3417
 keywords = ["flask", "wineflask"]
@@ -160,6 +236,18 @@ level = 0
 weight = 10
 cost = 400
 wear_flags = ["take", "hold"]
+
+[[objects.extra_descs]]
+keywords = ["wineflask", "flask"]
+description = """
+A nice leather wineflask that has somehow survived the ages in a coffin.
+The wine should be nicely aged."""
+
+  [objects.drink]
+  capacity = 30
+  current = 30
+  liquid = "red wine"
+  poisoned = false
 
 [[objects]]
 vnum = 3418
@@ -172,6 +260,9 @@ weight = 500
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 1200
+
 [[objects]]
 vnum = 3419
 keywords = ["key"]
@@ -183,6 +274,12 @@ weight = 30
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["key"]
+description = """
+Neat you have the key to the coffin...is is a soft orange color
+and burns in your hand a bit."""
+
 [[objects]]
 vnum = 3420
 keywords = ["rathcor"]
@@ -193,6 +290,17 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["dark"]
+
+[[objects.extra_descs]]
+keywords = ["rathcor"]
+description = """
+Ah HA!  A hidden compartment!"""
+
+  [objects.container]
+  capacity = 10
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 3421
@@ -206,8 +314,16 @@ cost = 370
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 3
+
+[[objects.extra_descs]]
+keywords = ["rusty", "sword", "scimitar"]
+description = """
+Very rusty and old...it has a wide blade and chunks missing from
+its cutting edge."""
 
 [[objects]]
 vnum = 3422
@@ -220,6 +336,17 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["slime", "piece"]
+description = """
+ICK! This is a piece of slug-like brownish green slime...
+Blech!"""
+
+  [objects.food]
+  full = 15
+  hunger = 15
+  poisoned = false
+
 [[objects]]
 vnum = 3423
 keywords = ["smock"]
@@ -230,6 +357,12 @@ level = 0
 weight = 70
 cost = 0
 wear_flags = ["take", "body"]
+
+[[objects.extra_descs]]
+keywords = ["smock"]
+description = """
+It has paint and little shavings of different materials all over it.
+It is very old an smells of paint, mildew, and rot."""
 
 [[objects]]
 vnum = 3424
@@ -243,6 +376,22 @@ cost = 1070
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["scroll", "tightly", "rolled"]
+description = """
+It is tightly wound. The writing on the inside when opened up is very
+unreadable but the scroll has a seal on it with a grey :
+
+    88
+    88
+8888  8888
+    88
+    88"""
+
+  [objects.magic]
+  level = 15
+  spells = ["colour spray", "create food", "magic missile"]
+
 [[objects]]
 vnum = 3425
 keywords = ["auburn", "orb"]
@@ -255,6 +404,18 @@ cost = 4700
 wear_flags = ["take", "hold"]
 extra_flags = ["hum", "magic"]
 
+[[objects.extra_descs]]
+keywords = ["auburn", "orb"]
+description = """
+You gaze into the orb and are almost lost in the swirling mists of color
+inside of this rare and beautiful object."""
+
+  [objects.magic]
+  level = 10
+  max_charges = 2
+  charges = 2
+  spells = ["charm person"]
+
 [[objects]]
 vnum = 3426
 keywords = ["bar", "gold"]
@@ -265,6 +426,12 @@ level = 0
 weight = 30
 cost = 1000
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["bar", "gold"]
+description = """
+A nice little brick of gold...very dusty and old... it has some emblem
+on it...The emblem is a large 'J'"""
 
 [[objects]]
 vnum = 3427
@@ -292,6 +459,12 @@ extra_flags = ["magic"]
   location = "hit"
   modifier = 10
 
+[[objects.extra_descs]]
+keywords = ["dark", "black", "cape"]
+description = """
+The cape is gently flows and pulls in the light so evenly and perfectly
+that the cape seems to be simply a void of blackness. It is quite beautiful"""
+
 [[objects]]
 vnum = 3428
 keywords = ["flaming", "black", "sword", "long", "longsword"]
@@ -305,12 +478,22 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["flaming", "vampiric"]
   dice_number = 2
   dice_size = 12
 
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["flaming", "sword", "long", "longsword"]
+description = """
+This sword is amazing! It almost wields itself! As you test it out, the
+flames seems to roar brighter as you go thru basic swordsman routines.
+it is obviously a great find!"""
 
 [[objects]]
 vnum = 3429
@@ -329,6 +512,11 @@ wear_flags = ["take", "body"]
   ac_slash = 6
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["breast", "dented", "plate", "worn"]
+description = """
+Though this piece of armour is worn and dented it looks very usable."""
+
 [[objects]]
 vnum = 3430
 keywords = ["key", "silver"]
@@ -340,3 +528,7 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["key", "silver"]
+description = """
+for the altar..."""

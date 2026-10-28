@@ -13,33 +13,19 @@ import (
 
 // mobCoinDrop computes the copper-piece purse a mob carries.
 //
-//	If the TOML 'gold' field is set, treat its number as copper (historical
-//	"gold" data is now reinterpreted under the new currency model) and
-//	randomise ±50%.
+//	The TOML 'gold' field is the mob's wealth in copper, restored from the
+//	ROT area files (ROT counted it in silver; reading it as copper keeps
+//	purses small). 0 means the mob carries nothing. The purse is the wealth
+//	randomised ±50%.
 //
-//	If unset (the common case — most legacy mob files have no gold field),
-//	fall back to a level-scaled curve: lv * 10 copper, then randomise ±50%.
-//	Linear scaling keeps the medieval feel intact at endgame; most player
-//	income should come from looted gear sold to shops, not mob purses.
-//
-//	Casters (ActMage / ActCleric) carry 25% more, plain warriors 33% less
-//	(common bandits, not wealthy).
-//
-//	Indicative median purses:
-//	  L1   ~1c       (a single copper)
-//	  L10  ~1s       (a coin or two)
-//	  L20  ~2s       (half a day's wage)
-//	  L50  ~5s       (a respectable purse)
-//	  L100 ~1g       (a heroic haul)
+//	Mobs with no 'gold' field (new content) fall back to level × 10 copper,
+//	casters 25% more, plain warriors 33% less.
 func mobCoinDrop(tmpl *MobileData) int64 {
 	var base int64
-	if tmpl.Gold > 0 {
-		base = int64(tmpl.Gold)
+	if tmpl.Gold != nil {
+		base = int64(*tmpl.Gold)
 	} else {
 		base = int64(tmpl.Level) * 10
-	}
-	// Class adjustments — only when using the level-scaled fallback.
-	if tmpl.Gold == 0 {
 		for _, f := range tmpl.ActFlags {
 			switch strings.ToLower(f) {
 			case "mage", "cleric":
@@ -147,6 +133,7 @@ type World struct {
 	MobTemplates map[int]*MobileData
 	ObjTemplates map[int]*ObjectData
 	Shops        map[int]*ShopData       // Shops by keeper mob vnum
+	Forge        *ForgeConfig            // Weapon commission tiers (nil if no forge.toml)
 	MOBprogs     map[string]*MOBprogData // MOBprogs by "area/name" key
 }
 
@@ -235,80 +222,47 @@ func (l *AreaLoader) LoadAll() (*World, error) {
 	// Resolve room exits
 	l.resolveExits(world)
 
-	// Auto-register shops for any keeper mob that carries inv_only items.
-	// Historic .are conversions don't include [mobiles.shop] sections; this
-	// fills the gap so existing keeper inventories actually become shoppable.
-	autoRegisterShops(world)
+	// Price teleport items by the danger of their destination area.
+	priceTeleportItems(world)
+
+	// Weapon commission tiers live next to the areas directory.
+	forgePath := filepath.Join(filepath.Dir(l.BasePath), "forge.toml")
+	if data, err := os.ReadFile(forgePath); err == nil {
+		var forge ForgeConfig
+		if err := toml.Unmarshal(data, &forge); err != nil {
+			return nil, fmt.Errorf("parse forge.toml: %w", err)
+		}
+		world.Forge = &forge
+	}
 
 	return world, nil
 }
 
-// autoRegisterShops scans room mob_resets for inv_only equipment. Any mob
-// vnum that gets stocked this way and lacks an explicit [mobiles.shop]
-// section is registered with a default ShopData derived from the keeper's
-// name (smart per-keyword BuyTypes filter, otherwise general store).
-func autoRegisterShops(world *World) {
-	for _, room := range world.Rooms {
-		for _, mr := range room.MobResets {
-			if world.Shops[mr.Vnum] != nil {
-				continue // explicit shop config already present
-			}
-			hasInvOnly := false
-			for _, eq := range mr.Equips {
-				if eq.InvOnly {
-					hasInvOnly = true
-					break
-				}
-			}
-			if !hasInvOnly {
-				continue
-			}
-			tmpl := world.MobTemplates[mr.Vnum]
-			if tmpl == nil {
-				continue
-			}
-			world.Shops[mr.Vnum] = defaultShopFor(tmpl)
+// priceTeleportItems sets the Cost of every portal/teleport object template from
+// the average mob level of its destination area, so far-off or dangerous
+// destinations cost more. Cost is in copper (base + level scaled).
+func priceTeleportItems(world *World) {
+	const base, perLevel = 50, 20
+	for _, tmpl := range world.ObjTemplates {
+		if tmpl.Portal == nil || tmpl.Portal.DestVnum <= 0 {
+			continue
 		}
-	}
-}
-
-// defaultShopFor constructs a ShopData for a keeper mob based on the
-// keeper's short description and keywords. Margins favor the shop on both
-// sides (player buys at 120% cost, sells at 50% cost) — typical small-town
-// merchant exploiting adventurers' need for cash.
-func defaultShopFor(tmpl *MobileData) *ShopData {
-	desc := strings.ToLower(tmpl.ShortDesc + " " + strings.Join(tmpl.Keywords, " "))
-	contains := func(s string) bool { return strings.Contains(desc, s) }
-
-	var buy []string
-	switch {
-	case contains("alchem"), contains("apothec"), contains("potion"):
-		buy = []string{"potion", "pill"}
-	case contains("scribe"), contains("scroll"):
-		buy = []string{"scroll"}
-	case contains("wand"), contains("staff"), contains("mage"):
-		buy = []string{"wand", "staff", "scroll", "potion"}
-	case contains("smith"), contains("blacksmith"), contains("weaponsmith"):
-		buy = []string{"weapon", "armor"}
-	case contains("armorer"), contains("armourer"), contains("armor"):
-		buy = []string{"armor"}
-	case contains("baker"), contains("grocer"), contains("butcher"):
-		buy = []string{"food", "drink"}
-	case contains("tavern"), contains("barkeep"), contains("innkeeper"):
-		buy = []string{"drink", "food"}
-	case contains("light"), contains("lantern"), contains("candle"):
-		buy = []string{"light"}
-	default:
-		// General store — buys most adventurer detritus
-		buy = []string{"armor", "weapon", "treasure", "light", "food", "drink", "potion", "scroll", "wand", "staff", "clothing"}
-	}
-
-	return &ShopData{
-		BuyTypes:   buy,
-		ProfitBuy:  50,  // shop pays 50% of base cost when buying from player
-		ProfitSell: 120, // player pays 120% of base cost when buying from shop
-		OpenHour:   0,
-		CloseHour:  24,
+		room := world.Rooms[tmpl.Portal.DestVnum]
+		if room == nil || room.Area == nil {
+			continue
+		}
+		var total, n int
+		for v := room.Area.MinVnum; v <= room.Area.MaxVnum; v++ {
+			if m := world.MobTemplates[v]; m != nil {
+				total += m.Level
+				n++
+			}
+		}
+		avg := 0
+		if n > 0 {
+			avg = total / n
+		}
+		tmpl.Cost = base + avg*perLevel
 	}
 }
 
@@ -413,21 +367,10 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 
 	// Parse room flags
 	for _, flag := range rd.RoomFlags {
-		switch strings.ToLower(flag) {
-		case "dark":
-			room.Flags.Set(types.RoomDark)
-		case "no_mob":
-			room.Flags.Set(types.RoomNoMob)
-		case "indoors":
-			room.Flags.Set(types.RoomIndoors)
-		case "private":
-			room.Flags.Set(types.RoomPrivate)
-		case "safe":
-			room.Flags.Set(types.RoomSafe)
-		case "solitary":
-			room.Flags.Set(types.RoomSolitary)
-		case "no_recall":
-			room.Flags.Set(types.RoomNoRecall)
+		for _, rf := range roomFlagNames {
+			if strings.EqualFold(flag, rf.name) {
+				room.Flags.Set(rf.flag)
+			}
 		}
 	}
 
@@ -446,8 +389,7 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 		for _, flag := range ed.Flags {
 			switch strings.ToLower(flag) {
 			case "door":
-				exit.Flags.Set(types.ExitIsDoor)
-				exit.Flags.Set(types.ExitClosed) // Doors are closed by default
+				exit.Flags.Set(types.ExitIsDoor) // open unless "closed" is also set
 			case "closed":
 				exit.Flags.Set(types.ExitIsDoor) // Closed implies door
 				exit.Flags.Set(types.ExitClosed)
@@ -463,6 +405,7 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 			}
 		}
 
+		exit.ResetFlags = exit.Flags
 		room.SetExit(dir, exit)
 	}
 
@@ -702,6 +645,12 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	ch.Coin = mobCoinDrop(tmpl)
 	ch.HitRoll = tmpl.Hitroll
 
+	// Shopkeepers can't be attacked: they carry large purses to buy stock,
+	// and killing them would farm money.
+	if w.Shops[vnum] != nil {
+		ch.Act.Set(types.ActProtected)
+	}
+
 	// Parse sex
 	switch strings.ToLower(tmpl.Sex) {
 	case "male":
@@ -780,6 +729,8 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 			ch.Act.Set(types.ActNoAlign)
 		case "no_purge":
 			ch.Act.Set(types.ActNoPurge)
+		case "protected":
+			ch.Act.Set(types.ActProtected)
 		}
 	}
 
@@ -1368,31 +1319,24 @@ func formatDirection(d types.Direction) string {
 	}
 }
 
+// roomFlagNames maps room flags to their TOML names (ROT's room_flags table).
+var roomFlagNames = []struct {
+	name string
+	flag types.RoomFlags
+}{
+	{"dark", types.RoomDark}, {"no_mob", types.RoomNoMob}, {"indoors", types.RoomIndoors},
+	{"private", types.RoomPrivate}, {"safe", types.RoomSafe}, {"solitary", types.RoomSolitary},
+	{"pet_shop", types.RoomPetShop}, {"no_recall", types.RoomNoRecall}, {"imp_only", types.RoomImpOnly},
+	{"gods_only", types.RoomGodsOnly}, {"heroes_only", types.RoomHeroesOnly},
+	{"newbies_only", types.RoomNewbiesOnly}, {"law", types.RoomLaw}, {"nowhere", types.RoomNowhere},
+}
+
 func formatRoomFlags(flags types.RoomFlags) []string {
 	var result []string
-	if flags.Has(types.RoomDark) {
-		result = append(result, "dark")
-	}
-	if flags.Has(types.RoomNoMob) {
-		result = append(result, "no_mob")
-	}
-	if flags.Has(types.RoomIndoors) {
-		result = append(result, "indoors")
-	}
-	if flags.Has(types.RoomPrivate) {
-		result = append(result, "private")
-	}
-	if flags.Has(types.RoomSafe) {
-		result = append(result, "safe")
-	}
-	if flags.Has(types.RoomSolitary) {
-		result = append(result, "solitary")
-	}
-	if flags.Has(types.RoomNoRecall) {
-		result = append(result, "no_recall")
-	}
-	if flags.Has(types.RoomLaw) {
-		result = append(result, "law")
+	for _, rf := range roomFlagNames {
+		if flags.Has(rf.flag) {
+			result = append(result, rf.name)
+		}
 	}
 	return result
 }
@@ -1413,3 +1357,4 @@ func formatExitFlags(flags types.ExitFlags) []string {
 	}
 	return result
 }
+

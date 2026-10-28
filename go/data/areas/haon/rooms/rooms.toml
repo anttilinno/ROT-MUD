@@ -2,6 +2,7 @@
 vnum = 6144
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient,
 grey trees loom everywhere.  The tree trunks here seem to be covered in some
@@ -15,10 +16,28 @@ sticky substance.  The path continues south and west."""
   direction = "west"
   to_vnum = 6130
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
+[[rooms.extra_descs]]
+keywords = ["substance", "rope", "ropes", "thread", "threads"]
+description = """
+The substance reminds you of giant threads covered with glue.  If it had not
+been for the size you could have sworn it was part of a spider web."""
+
 [[rooms]]
 vnum = 6150
 name = "The narrow trail."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This trail looks much spookier than any other thats you have seen.  The usual
 animal claw marks and bites on the trees are getting far and few between. The
@@ -36,6 +55,7 @@ trail continues north."""
 vnum = 6151
 name = "The narrow trail."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This area of the trail is also very peculiar.  You can see no signs of animal
 life what so ever.  The structure of the surrounding trees forces the path to
@@ -53,6 +73,7 @@ make a sharp turn to the east."""
 vnum = 6152
 name = "The circle of trees."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 The trees here seem to form a circle around a HUGE tree that is in the center
 of them.  You notice a wooden door carved into the huge tree to the east.  The
@@ -60,26 +81,27 @@ trail that you followed to get here seems to end at the base of the tree."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 6153
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 6151
   flags = ["door"]
+  to_vnum = 6151
 
 [[rooms]]
 vnum = 6153
 name = "Inside the great tree."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You have stepped inside of this hollowed tree.  From here steps lead down into
 darkness or you can exit the tree by going west."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 6152
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -89,24 +111,26 @@ darkness or you can exit the tree by going west."""
 vnum = 6154
 name = "The underground hallway."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This hallway is apparently one of the roots of the tree hollowed out.  The hall
 leads south to a room where you hear strange noises or you can go up the steps."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 6155
   flags = ["door"]
+  to_vnum = 6155
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 6153
   flags = ["door"]
+  to_vnum = 6153
 
 [[rooms]]
 vnum = 6155
 name = "The cultist temple."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This temple is built to some god that you don't worship.  It is a nice place
 to visit but you feel very uncomfortable about spending much time here.
@@ -115,8 +139,8 @@ the way you came in."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 6154
   flags = ["door"]
+  to_vnum = 6154
 
   [[rooms.mob_resets]]
   vnum = 6116
@@ -130,6 +154,7 @@ the way you came in."""
 vnum = 6000
 name = "The edge of the forest"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You are standing at the eastern edge of a big forest.  To the east is the West
 Gate of Midgaard and to the west is a narrow trail, leading in through the
@@ -147,6 +172,18 @@ forest.  A dimly lit path leads north."""
   direction = "west"
   to_vnum = 6001
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are quite tall considering most of them appear to be quite young.
+On one of the trees, crude letters forming the word "Haon-Dor" have been
+carved into the bark."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The forest trail winds westwards through the trees."""
+
 [[rooms]]
 vnum = 6001
 name = "A trail through the light forest"
@@ -162,6 +199,22 @@ and to the west, the trail leads further into the forest."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 6002
+
+[[rooms.extra_descs]]
+keywords = ["birds", "insects", "animals"]
+description = """
+Very cute little creatures, they seem to enjoy life."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees here are quite young and fresh.  They seem to accommodate many kinds
+of birds, insects and other small animals."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The forest trail winds east-west through the trees."""
 
 [[rooms]]
 vnum = 6002
@@ -188,6 +241,22 @@ south, and a courtyard is just visible to the north."""
   direction = "west"
   to_vnum = 6003
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The young, slender trees look beautiful, their fresh, green leaves moving
+lightly in the wind."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The forest trail winds east-west through the trees."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6003
 name = "A trail through the dense forest"
@@ -203,6 +272,17 @@ east, the forest gradually seems to become lighter."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 6004
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The dense crowns of the mature trees leave only a fraction of the sky to be
+seen through the leaves."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The forest trail seems almost fragile compared to the massive trunks."""
 
 [[rooms]]
 vnum = 6004
@@ -225,6 +305,21 @@ total darkness.  A small path leads south through the trees."""
   direction = "west"
   to_vnum = 6100
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The crowns of the old trees almost cut out all light."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The forest trail seems almost fragile compared to the massive trunks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6005
 name = "A small path in the dense forest"
@@ -241,6 +336,16 @@ continues north and south."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 6006
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
 
 [[rooms]]
 vnum = 6006
@@ -263,6 +368,16 @@ continues north and east."""
   vnum = 6011
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6007
 name = "An intersection in the dense forest"
@@ -283,6 +398,16 @@ gradually lightens to the east.  Paths lead east, west and south."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 6006
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
 
 [[rooms]]
 vnum = 6008
@@ -305,6 +430,33 @@ supported by stakes set into the ground.  Paths lead north, east and west."""
   direction = "west"
   to_vnum = 6007
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["stump", "stumps"]
+description = """
+There are more stumps than logs and some of the stumps are partly covered in
+moss."""
+
+[[rooms.extra_descs]]
+keywords = ["stake", "stakes"]
+description = """
+The stakes keep the logs from rolling down."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
+[[rooms.extra_descs]]
+keywords = ["log", "logs"]
+description = """
+Even though the logs have been chopped to shorter pieces, they are quite heavy
+as they are fresh and still filled with sap."""
+
 [[rooms]]
 vnum = 6009
 name = "Outside a small cabin in the forest"
@@ -315,8 +467,8 @@ wooden door to the north and small paths lead west and south through the trees."
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 6010
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -342,10 +494,27 @@ wooden door to the north and small paths lead west and south through the trees."
     vnum = 6002
     wear_loc = "feet"
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are fairly young, not much more than a hundred years or so."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The path is probably used by the cabin's inhabitants."""
+
+[[rooms.extra_descs]]
+keywords = ["cabin", "logs"]
+description = """
+It looks simple but comfortable and the slender trees make the whole place seem
+pretty idyllic.  It's a cabin built from logs.  Wooden logs, not system logs."""
+
 [[rooms]]
 vnum = 6010
 name = "Inside the cabin"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a small one-room cabin made entirely from heavy logs.  It is
 very sparsely furnished, containing only most basic housekeeping equipment,
@@ -353,8 +522,8 @@ such as a bed, a chair and a table."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 6009
   flags = ["door"]
+  to_vnum = 6009
 
   [[rooms.obj_resets]]
   vnum = 6003
@@ -367,6 +536,21 @@ such as a bed, a chair and a table."""
   [[rooms.obj_resets]]
   vnum = 6013
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["table"]
+description = """
+A heavy table that doesn't even appear to rock."""
+
+[[rooms.extra_descs]]
+keywords = ["chair"]
+description = """
+It is made from oak and looks strong and sturdy."""
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+It is definitely not the most comfortable bed you have seen in your life."""
 
 [[rooms]]
 vnum = 6011
@@ -383,6 +567,16 @@ slender.  Paths lead north and south."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 6008
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are fairly young, not much more than a hundred years or so."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
 
 [[rooms]]
 vnum = 6012
@@ -409,6 +603,16 @@ lead north, east and south."""
   vnum = 309
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6013
 name = "A small path in the dense forest"
@@ -429,6 +633,16 @@ continues east and west."""
   [[rooms.obj_resets]]
   vnum = 6011
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
 
 [[rooms]]
 vnum = 6014
@@ -454,6 +668,17 @@ lightens to the north.  Paths lead north, east and west."""
   vnum = 6005
   max = 2
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The crowns of the old trees leave the forest in an unreal twilight
+illumination."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6015
 name = "A small path in the dense forest"
@@ -474,6 +699,16 @@ continues south and west."""
   [[rooms.mob_resets]]
   vnum = 309
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
 
 [[rooms]]
 vnum = 6016
@@ -496,6 +731,16 @@ continues north and south."""
   vnum = 6011
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6017
 name = "A small path in the dense forest"
@@ -515,6 +760,17 @@ become lighter to the west.  The path continues north and west."""
   [[rooms.mob_resets]]
   vnum = 309
   max = 5
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The crowns of the old trees leave the forest in an unreal twilight
+illumination."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
 
 [[rooms]]
 vnum = 6018
@@ -536,6 +792,16 @@ small field and other paths lead east and west into the dense forest."""
   direction = "west"
   to_vnum = 6019
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The tall trees are young and slender, not much more than a hundred years or so."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6019
 name = "A small path in the dense forest"
@@ -556,6 +822,17 @@ become lighter to the east.  The path continues north and east."""
   vnum = 309
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The crowns of the old trees leave the forest in an unreal twilight
+illumination."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6020
 name = "A small path in the dense forest"
@@ -572,6 +849,16 @@ continues south and west."""
   [[rooms.exits]]
   direction = "west"
   to_vnum = 6021
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The trees are mostly old beeches and oaks."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
 
 [[rooms]]
 vnum = 6021
@@ -593,10 +880,28 @@ a cave entrance.  The path continues north and east."""
   direction = "west"
   to_vnum = 6022
 
+[[rooms.extra_descs]]
+keywords = ["cave", "entrance"]
+description = """
+The irregular opening is eight feet wide and six feet tall.  An acrid smell
+emanates from within."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The crowns of the old trees leave the forest in an unreal twilight
+illumination."""
+
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
 [[rooms]]
 vnum = 6022
 name = "Inside the cave"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a natural cave.  Various sorts of debris cover the stone floor,
 emitting a rather unpleasant smell that makes the air thick and hard to
@@ -609,6 +914,21 @@ breathe.  The only obvious exit is east."""
   [[rooms.mob_resets]]
   vnum = 6002
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["air", "smell"]
+description = """
+Kind of transparent, but quite noticeable nevertheless."""
+
+[[rooms.extra_descs]]
+keywords = ["cave", "walls", "floor", "stone"]
+description = """
+Quite uninteresting."""
+
+[[rooms.extra_descs]]
+keywords = ["debris"]
+description = """
+It consists mostly of gnawed bones mixed with small pieces of torn fur."""
 
 [[rooms]]
 vnum = 6023
@@ -632,10 +952,26 @@ the trees."""
   vnum = 6010
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "thicket"]
+description = """
+The trees form a close thicket."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The narrow path is probably used by the animals living in the forest."""
+
+[[rooms.extra_descs]]
+keywords = ["grass"]
+description = """
+The tall grass makes a nice hiding place for animals."""
+
 [[rooms]]
 vnum = 6100
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow trail winding its way between the enormous, grey trunks.
 The crowns of the trees must be very dense, as they leave the forest floor in
@@ -657,10 +993,23 @@ utter darkness.  The trail leads east and west."""
     vnum = 6114
     wear_loc = "finger_l"
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6101
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 whose grey trunks remind you of ancient pillars in a enormous, deserted hall.
@@ -678,10 +1027,29 @@ To the south, a frail path leads away from the trail."""
   direction = "west"
   to_vnum = 6102
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems fragile and unsafe compared to the enormous trunks that loom
+around it."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6102
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -695,10 +1063,29 @@ ominously quiet."""
   direction = "west"
   to_vnum = 6103
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems fragile and unsafe compared to the enormous trunks that loom
+around it."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6103
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are where the dusty trail bends, as to avoid conflict with a colossal
 trunk to the west.  Not a sound is to be heard - everything is ominously quiet.
@@ -720,10 +1107,23 @@ The trail leads east and south."""
   vnum = 6102
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["trees", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6104
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  You feel as if
 the ancient trees observe you in watchful silence.  The path continues north
@@ -749,10 +1149,22 @@ and south."""
   vnum = 6106
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6105
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  The path continues north and west."""
@@ -769,10 +1181,22 @@ trees loom all around you.  The path continues north and west."""
   vnum = 6105
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6106
 name = "A junction in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient grey trees tower above
 you on all sides.  Paths lead east, south and west."""
@@ -789,10 +1213,22 @@ you on all sides.  Paths lead east, south and west."""
   direction = "west"
   to_vnum = 6107
 
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6107
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  The path continues north and east."""
@@ -805,10 +1241,22 @@ trees loom all around you.  The path continues north and east."""
   direction = "east"
   to_vnum = 6106
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6108
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees
 standing close on all sides.  The trail leads north and west and to the south,
@@ -834,10 +1282,29 @@ a frail path leads away from the trail."""
   vnum = 6102
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems fragile and unsafe compared to the enormous trunks that loom
+around it."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6109
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -851,10 +1318,23 @@ ominously quiet."""
   direction = "west"
   to_vnum = 6110
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6110
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees that stand
 close on all sides.  The trail leads east and south.  To the north, a narrow
@@ -872,10 +1352,29 @@ path leads away from the trail."""
   direction = "south"
   to_vnum = 6111
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+Some of the trunks to the west are covered in a thin, almost transparent
+substance.  It looks like small threads woven carefully together."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems fragile and unsafe compared to the enormous trunks that loom
+around it."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6111
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way north-south between huge, ancient
 trees that loom ominously above you."""
@@ -892,10 +1391,23 @@ trees that loom ominously above you."""
   vnum = 6106
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6112
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees
 standing close on all sides.  The trail leads north and west and to the east,
@@ -921,10 +1433,29 @@ a frail path leads away from the trail."""
   vnum = 6103
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems fragile and unsafe compared to the enormous trunks that loom
+around it."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6113
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom in all directions.  The path continues south and west."""
@@ -941,10 +1472,22 @@ trees loom in all directions.  The path continues south and west."""
   vnum = 6103
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6114
 name = "A junction in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient grey trees tower above
 you on all sides.  Paths lead north, east and west."""
@@ -961,10 +1504,22 @@ you on all sides.  Paths lead north, east and west."""
   direction = "west"
   to_vnum = 6122
 
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6115
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  You feel as
 if the ancient trees observe you in watchful silence.  The path continues north
@@ -978,10 +1533,22 @@ and west."""
   direction = "west"
   to_vnum = 6114
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6116
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Giant, grey
 trees loom ominously on all sides.  The path continues east and south."""
@@ -1002,10 +1569,22 @@ trees loom ominously on all sides.  The path continues east and south."""
   vnum = 6100
   max = 2
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6117
 name = "A junction in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient, grey trees seem to
 observe you silently you from all sides.  Paths lead north, east and west."""
@@ -1022,10 +1601,22 @@ observe you silently you from all sides.  Paths lead north, east and west."""
   direction = "west"
   to_vnum = 6116
 
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6118
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient,
 grey trees loom everywhere.  The path continues south and west."""
@@ -1046,10 +1637,22 @@ grey trees loom everywhere.  The path continues south and west."""
   vnum = 6103
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6119
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Huge, ancient
 trees are on all sides.  The path continues north and south."""
@@ -1066,10 +1669,22 @@ trees are on all sides.  The path continues north and south."""
   vnum = 6107
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+You feel as if they are watching you."""
+
 [[rooms]]
 vnum = 6120
 name = "On the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  To the south a
 fast river is flowing westwards through the forest.  Ancient grey trees loom on
@@ -1083,10 +1698,28 @@ both banks.  The path continues north and west."""
   direction = "west"
   to_vnum = 6121
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["bank", "banks", "tree", "trees", "trunk", "trunks"]
+description = """
+The ancient crowns of trees on both banks reach together forming a dense roof
+above the dark river."""
+
+[[rooms.extra_descs]]
+keywords = ["river"]
+description = """
+The river flows fast and strong.  It is black or looks so in the gloom."""
+
 [[rooms]]
 vnum = 6121
 name = "A dead end path on the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  The ancient
 trees stand so close that the path disappears between the dusty roots.  To the
@@ -1096,10 +1729,28 @@ south a dark river flows from east to west.  The only exit appears to be east.""
   direction = "east"
   to_vnum = 6120
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["bank", "banks", "tree", "trees", "trunk", "trunks"]
+description = """
+The ancient crowns of trees on both banks reach together forming a dense roof
+above the dark river."""
+
+[[rooms.extra_descs]]
+keywords = ["river"]
+description = """
+The river flows fast and strong.  It is black or looks so in the gloom."""
+
 [[rooms]]
 vnum = 6122
 name = "A small path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Giant, grey
 trees loom ominously all around.  The path continues east and south."""
@@ -1116,10 +1767,22 @@ trees loom ominously all around.  The path continues east and south."""
   vnum = 6106
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6123
 name = "A junction on the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are by a junction where three paths meet.  Ancient, grey trees seem to
 observe you silently you from all around.  To the south a dark river flows from
@@ -1141,10 +1804,28 @@ east to west through the forest.  Paths lead north, east and west."""
   direction = "west"
   to_vnum = 6125
 
+[[rooms.extra_descs]]
+keywords = ["path", "paths"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["bank", "banks", "tree", "trees", "trunk", "trunks"]
+description = """
+The ancient crowns of trees on both banks reach together forming a dense roof
+above the dark river."""
+
+[[rooms.extra_descs]]
+keywords = ["river"]
+description = """
+The river flows fast and strong.  It is black or looks so in the gloom."""
+
 [[rooms]]
 vnum = 6124
 name = "A dead end path in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  The ancient
 trees stand so close that the path disappears between the dusty roots.  To the
@@ -1158,10 +1839,28 @@ south a dark river flows from east to west.  The only exit appears to be west.""
   direction = "west"
   to_vnum = 6123
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["bank", "banks", "tree", "trees", "trunk", "trunks"]
+description = """
+The ancient crowns of trees on both banks reach together forming a dense roof
+above the dark river."""
+
+[[rooms.extra_descs]]
+keywords = ["river"]
+description = """
+The river flows fast and strong.  It is black or looks so in the gloom."""
+
 [[rooms]]
 vnum = 6125
 name = "A small path on the river bank in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a narrow path leading through the deep, dark forest.  Ancient grey
 trees loom everywhere.  To the south you smell marsh gas.  The path continues
@@ -1183,10 +1882,28 @@ north and east."""
   vnum = 6104
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems all too frail.  One of the giant roots could probably crush it
+in a single blow."""
+
+[[rooms.extra_descs]]
+keywords = ["bank", "banks", "tree", "trees", "trunk", "trunks"]
+description = """
+The ancient crowns of trees on both banks reach together forming a dense roof
+above the dark river."""
+
+[[rooms.extra_descs]]
+keywords = ["river"]
+description = """
+The river flows fast and strong.  It is black or looks so in the gloom."""
+
 [[rooms]]
 vnum = 6126
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees standing
 close on all sides.  The trail leads north and west, and to the south a frail
@@ -1204,10 +1921,29 @@ path leads away from the trail."""
   direction = "west"
   to_vnum = 6128
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The path seems fragile and unsafe compared to the enormous trunks that loom
+around it."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6127
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way between huge, ancient trees
 standing close on all sides.  The trail leads east and south."""
@@ -1228,10 +1964,23 @@ standing close on all sides.  The trail leads east and south."""
   vnum = 6101
   max = 2
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6128
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -1245,10 +1994,23 @@ ominously quiet."""
   direction = "west"
   to_vnum = 6129
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6129
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way east-west between huge, ancient trees
 that stand close on all sides.  Not a sound is to be heard - everything is
@@ -1262,10 +2024,23 @@ ominously quiet."""
   direction = "west"
   to_vnum = 6135
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+These ancient trees must have been here for many, many years.  It is impossible
+to catch even a glimpse of anything above the lowest branches."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6130
 name = "A narrow trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail winding its way westwards just below huge sticky
 wires suspended like ropes between the trees.  To the west the path seems to
@@ -1284,10 +2059,24 @@ This place gives you the creeps."""
   direction = "up"
   to_vnum = 6132
 
+[[rooms.extra_descs]]
+keywords = ["substance", "wire", "wires", "rope", "ropes", "tree", "trees", "trunk", "trunks"]
+description = """
+The sticky substance is hanging like ropes between the ancient trees, crossing
+the path just out of reach.  It might be possible to climb one of the sticky
+trunks."""
+
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
 [[rooms]]
 vnum = 6131
 name = "The spider web"
 sector = "forest"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are walking along the narrow path, ducking under the sticky ropes as you
 advance...
@@ -1309,6 +2098,7 @@ You've fallen, and you can't get up!!!!!"""
 vnum = 6132
 name = "Up in the tree"
 sector = "water_swim"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are hanging on the outside of a huge tree trunk covered in a sticky
 substance.  Directly to the west is an immense spider web suspended between
@@ -1322,10 +2112,17 @@ numerous of the giant trees including the one you are hanging on."""
   direction = "down"
   to_vnum = 6130
 
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The spider web stretches out to the west.  It looks as if it is possible to
+walk on it."""
+
 [[rooms]]
 vnum = 6133
 name = "On the spider web"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are balancing carefully on the giant sticky threads that holds the giant
 web in place.  To the east is a giant tree trunk and to the west is an entrance
@@ -1343,10 +2140,22 @@ to a cave-like structure made from many layers of spider web."""
   direction = "west"
   to_vnum = 6134
 
+[[rooms.extra_descs]]
+keywords = ["cave", "structure"]
+description = """
+It covers a ground area corresponding to an irregular circle with a diameter of
+about 20 feet and is nearly 10 feet tall.  It looks very old."""
+
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
+
 [[rooms]]
 vnum = 6134
 name = "The Den of the Queen Spider"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are inside a cave-like structure that seems to be made entirely from
 countless layers of spider web.  Temperature and humidity is very high making
@@ -1381,10 +2190,22 @@ open cocoons."""
   vnum = 6318
   max = 3
 
+[[rooms.extra_descs]]
+keywords = ["cocoon", "cocoons"]
+description = """
+The cocoons are burst open as if something inside really wanted to get out.
+They are at the size of a human head."""
+
+[[rooms.extra_descs]]
+keywords = ["web", "wall", "walls"]
+description = """
+The sticky walls are covered with open cocoons."""
+
 [[rooms]]
 vnum = 6135
 name = "A dusty trail in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  The trail continues north and east."""
@@ -1397,10 +2218,16 @@ trees loom all around you.  The trail continues north and east."""
   direction = "east"
   to_vnum = 6129
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6136
 name = "A dusty trail in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail leading through the deep, dark forest.  Ancient,
 grey trees loom everywhere.  The trail continues south and west.  A broad
@@ -1418,10 +2245,28 @@ irregular path leads eastwards away from the trail."""
   direction = "west"
   to_vnum = 6137
 
+[[rooms.extra_descs]]
+keywords = ["trail"]
+description = """
+The dark and dusty trail seems fragile compared to the massive trunks, and in
+some places, giant grey roots have broken up through its surface."""
+
+[[rooms.extra_descs]]
+keywords = ["path"]
+description = """
+The trees standing on the sides of the path have scratch marks on them."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+To the east the ancient grey giants have many marks as if something with huge
+claws has been tearing at them in rage."""
+
 [[rooms]]
 vnum = 6137
 name = "At the end of the trail through the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a dusty trail leading through the deep, dark forest.  Ancient grey
 trees loom all around you.  You see a dark grove north of you.
@@ -1435,10 +2280,16 @@ The only other exit is east."""
   direction = "east"
   to_vnum = 6136
 
+[[rooms.extra_descs]]
+keywords = ["tree", "trees", "trunk", "trunks"]
+description = """
+The ancient grey giants seem to observe you silently."""
+
 [[rooms]]
 vnum = 6142
 name = "Outside a cave in the deep, dark forest"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the end of a broad, irregular path.  To the north is a very large
 ominous-looking cave opening.  The trees here have many marks as if something
@@ -1452,10 +2303,22 @@ with huge claws has been tearing at them in rage."""
   direction = "west"
   to_vnum = 6136
 
+[[rooms.extra_descs]]
+keywords = ["cave", "opening"]
+description = """
+The disgusting smell of a large reptile emanates from the cave opening."""
+
+[[rooms.extra_descs]]
+keywords = ["tree", "trees"]
+description = """
+The ancient grey giants have many marks as if something with huge claws has
+been tearing at them in rage."""
+
 [[rooms]]
 vnum = 6143
 name = "The cave of the Green Dragon"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a big natural cave.  The floor is littered with bones of all sorts
 and the stench is so massive that you could cut it with a knife.  The only exit
@@ -1481,3 +2344,7 @@ is to the south."""
     vnum = 6111
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["bone", "bones", "floor"]
+description = """
+Most of the bones on the floor appear to be of human origin."""

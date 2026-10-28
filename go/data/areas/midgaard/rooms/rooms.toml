@@ -2,6 +2,7 @@
 vnum = 3100
 name = "Northwest end of Concourse"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the concourse, the city wall is just west.  A small promenade
 goes east, and the bridge is just north of here.  The concourse continues
@@ -23,6 +24,7 @@ south along the city wall."""
 vnum = 3101
 name = "Promenade"
 sector = "city"
+room_flags = ["law"]
 description = """
 The river gently flows west just north of here.  The promenade continues
 further east and to the west you see the city wall.  Park Road leads south
@@ -48,6 +50,7 @@ from here."""
 vnum = 3102
 name = "Promenade"
 sector = "city"
+room_flags = ["law"]
 description = """
 The river gently flows west just north of here.  The promenade continues
 both east and west.  A rickety bridge crosses the river to the north, towards
@@ -80,6 +83,7 @@ to your east."""
 vnum = 3103
 name = "Austral Square"
 sector = "city"
+room_flags = ["law"]
 description = """
 The Promenade opens here onto Austral Square, on the south bank of the
 Midgaard River.  All around you is the bustle of Southern Midgaard--
@@ -112,6 +116,7 @@ and the concourse ends to your east."""
 vnum = 3104
 name = "Northeast end of Concourse"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the Concourse.  The city wall is just east and Austral Square,
 home of Kate's Diner, is west.  Looking across the river you see an old  
@@ -130,10 +135,17 @@ concourse becomes wall road.  The Concourse continues south along the wall."""
   direction = "west"
   to_vnum = 3103
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
 [[rooms]]
 vnum = 3105
 name = "Park Entrance"
 sector = "city"
+room_flags = ["law", "no_mob"]
 description = """
 You are standing just inside the small park of Midgaard.  To the north is
 the promenade and a small path leads south into the park.  To your east is
@@ -155,6 +167,7 @@ the famous Park Cafe."""
 vnum = 3106
 name = "Park Cafe"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are inside Park Cafe, a very well lighted, cosy place. The cafe
 is built from large logs. Through the windows in the northern wall you
@@ -197,6 +210,7 @@ colorful plants."""
 vnum = 3107
 name = "Small path through the park"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking along a small path through the park.  The path continues
 south and east."""
@@ -213,6 +227,7 @@ south and east."""
 vnum = 3108
 name = "Small path in the park"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on a small path inside the park.  The park entrance is
 just north of here, and Park Cafe is just east of the entrance.  The path
@@ -234,6 +249,7 @@ leads further east and west."""
 vnum = 3109
 name = "Small path in the park"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on a small path running through the park.  It continues west and
 south and just north of here you see the southern wall of Park Cafe."""
@@ -278,25 +294,27 @@ south and just north of here you see the southern wall of Park Cafe."""
 vnum = 3110
 name = "Cityguard Head Quarters"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are inside a tidy office.  A big desk made from dark wood is standing
 in the centre of the room."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 3111
   flags = ["door"]
+  to_vnum = 3111
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3142
   key = 3120
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3111
 name = "Park Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 The road continues north and south.  A building is just west of here, you
 notice a sign on the door.  The park entrance is to the east."""
@@ -315,8 +333,8 @@ notice a sign on the door.  The park entrance is to the east."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 3110
   flags = ["door"]
+  to_vnum = 3110
 
   [[rooms.mob_resets]]
   vnum = 3060
@@ -366,10 +384,18 @@ notice a sign on the door.  The park entrance is to the east."""
     vnum = 3363
     wear_loc = "wrist_r"
 
+[[rooms.extra_descs]]
+keywords = ["building", "door", "sign"]
+description = """
+The sign on the door says:-
+
+                 Cityguard Head Quarters"""
+
 [[rooms]]
 vnum = 3112
 name = "Western Park Entrance"
 sector = "city"
+room_flags = ["law", "no_mob"]
 description = """
 You are standing at the western end of the park.  A small path leads east
 into the park and going west through the entrance you will reach Park Road."""
@@ -386,6 +412,7 @@ into the park and going west through the entrance you will reach Park Road."""
 vnum = 3113
 name = "A path in the park"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are in the park.  The paths lead north and west.  Westwards is the
 park entrance and to the east you see a small pond."""
@@ -410,6 +437,7 @@ park entrance and to the east you see a small pond."""
 vnum = 3114
 name = "The Pond"
 sector = "water_swim"
+room_flags = ["law"]
 description = """
 You are swimming around in the pond, feeling rather stupid.  You can get
 back on the path from the eastern and western end of the pond."""
@@ -434,6 +462,7 @@ back on the path from the eastern and western end of the pond."""
 vnum = 3115
 name = "A path in the park"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are in the park.  The paths lead north and east.  Eastwards is the
 park entrance and to the west you see a small pond."""
@@ -458,6 +487,7 @@ park entrance and to the west you see a small pond."""
 vnum = 3116
 name = "Eastern Park Entrance"
 sector = "city"
+room_flags = ["law", "no_mob"]
 description = """
 You are standing at the eastern end of the park.  A small path leads west
 into the park.  Going east through the entrance you will reach Emerald
@@ -475,6 +505,7 @@ Avenue."""
 vnum = 3117
 name = "Emerald Avenue"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at Emerald Avenue which continues north and south.  To the west is
 the park entrance and to the east is the not very big Town Hall of Midgaard."""
@@ -519,6 +550,7 @@ the park entrance and to the east is the not very big Town Hall of Midgaard."""
 vnum = 3118
 name = "Park Road"
 sector = "city"
+room_flags = ["law"]
 description = "You are on Park Road which leads north and south."
 
   [[rooms.exits]]
@@ -533,6 +565,7 @@ description = "You are on Park Road which leads north and south."
 vnum = 3119
 name = "Emerald Avenue"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing at a bend on Emerald Avenue.  The road leads north and west.
 To the east, you see some run-down slums...it looks like the bad part of
@@ -554,6 +587,7 @@ town."""
 vnum = 3120
 name = "Road Crossing"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are in the middle of the road cross.  Roads lead in all directions.
 A single mangled link of iron chain as thick as a tree trunk is fastened into
@@ -600,10 +634,23 @@ A road sign is here."""
   vnum = 3144
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign points in all directions:
+
+   North - Emerald Avenue.
+   East  - Park Road.
+   South - Emerald Avenue.
+   West  - Park Road.
+
+Someone had added something with red paint, but it's been crossed out."""
+
 [[rooms]]
 vnum = 3121
 name = "Emerald Avenue"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing at a bend on Emerald Avenue.  The road leads south and
 east."""
@@ -620,6 +667,7 @@ east."""
 vnum = 3122
 name = "Park Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on Park Road which leads south and north.  Elm Street is east of
 here."""
@@ -640,6 +688,7 @@ here."""
 vnum = 3123
 name = "Elm Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on Elm street.  Park Road is to the west and Elm Street continues
 in eastward direction."""
@@ -656,6 +705,7 @@ in eastward direction."""
 vnum = 3124
 name = "Elm Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 You near the end of Elm Street.  An old elm tree grows here.  A heavy
 iron grating is south, surrounding the city's graveyard.  You can see a sign
@@ -672,18 +722,39 @@ street ends to the north near a run-down neighborhood."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3600
   key = 3121
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
   to_vnum = 3123
 
+[[rooms.extra_descs]]
+keywords = ["elm", "tree"]
+description = """
+The fresh young leaves of the elm tree wave gently in the wind."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says :-
+
+                          Graveyard of Midgaard
+
+    Many brave adventurers have found their final resting place here.
+          Please show respect and do not desecrate their tombs."""
+
+[[rooms.extra_descs]]
+keywords = ["grate", "grating"]
+description = """
+Looks heavy.  A small sign is hanging on it."""
+
 [[rooms]]
 vnum = 3125
 name = "Emerald Avenue"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on Emerald Avenue which continues north.
 The Concourse is south of here."""
@@ -720,6 +791,7 @@ The Concourse is south of here."""
 vnum = 3126
 name = "Park Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on Park Road which continues north.  The Concourse is south of here."""
 
@@ -735,6 +807,7 @@ You are on Park Road which continues north.  The Concourse is south of here."""
 vnum = 3127
 name = "On the Concourse"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the southwest corner of the city wall.  The Concourse leads
 both north and east, and a watchtower is to the south."""
@@ -755,6 +828,7 @@ both north and east, and a watchtower is to the south."""
 vnum = 3128
 name = "On the Concourse"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking around the scenic concourse as it continues its path around
 the city of Midgaard.  The south gate of the city lies to your east, and the 
@@ -785,6 +859,7 @@ to the north."""
 vnum = 3129
 name = "On the Concourse"
 sector = "city"
+room_flags = ["dark", "law"]
 description = """
 The concourse continues its path around the city.  The southern gates of the
 city are west of here, and park road lies north.  The northeastern corner of
@@ -806,6 +881,7 @@ the city wall is east."""
 vnum = 3130
 name = "On the Concourse"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the southeast corner of the city wall.  The Concourse leads
 both north and west, and a watchtower is to the south."""
@@ -826,6 +902,7 @@ both north and west, and a watchtower is to the south."""
 vnum = 3131
 name = "Park Road"
 sector = "city"
+room_flags = ["law"]
 description = "You are at Park Road which continues north and south."
 
   [[rooms.exits]]
@@ -840,6 +917,7 @@ description = "You are at Park Road which continues north and south."
 vnum = 3132
 name = "Emerald Avenue"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on the north end of Emerald Avenue.  To the north is 
 Austral Square and Kate's Diner, to the east is the small street Penny Lane."""
@@ -860,6 +938,7 @@ Austral Square and Kate's Diner, to the east is the small street Penny Lane."""
 vnum = 3133
 name = "Emerald Avenue"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing at a bend on Emerald Avenue.  To the east the road goes on
 and to the south is the Road Crossing."""
@@ -876,6 +955,7 @@ and to the south is the Road Crossing."""
 vnum = 3134
 name = "Emerald Avenue"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing at a bend on Emerald Avenue.  To the west the road goes on
 and to the north is the Road Crossing."""
@@ -892,6 +972,7 @@ and to the north is the Road Crossing."""
 vnum = 3135
 name = "Park Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at a bend on Park Road.  To the north the road goes on and to the
 east is the Road Crossing.  To the south, the ancient cliffs rise from deep
@@ -909,6 +990,7 @@ under the ground, forming a wall."""
 vnum = 3136
 name = "Park Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at a bend on Park Road.  To the south the road goes on and to the
 west is the Road Crossing."""
@@ -925,6 +1007,7 @@ west is the Road Crossing."""
 vnum = 3137
 name = "The Waiting Room"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are standing in the waiting room at the town hall.  Wooden chairs stand
 along the walls and a long desk is placed in the middle of the room."""
@@ -945,6 +1028,7 @@ along the walls and a long desk is placed in the middle of the room."""
 vnum = 3138
 name = "The Mayor's Office"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in the not very big office of the Mayor of Midgaard.  A large and
 polished but completely empty desk is standing in front of an armchair that
@@ -1027,10 +1111,17 @@ raised slightly."""
     vnum = 3350
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["chair", "armchair"]
+description = """
+This chair is really a masterpiece.  A chair where one can sit as comfortably
+as in a bed.  All lecture halls should be equipped with these things."""
+
 [[rooms]]
 vnum = 3139
 name = "Penny Lane"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on Penny Lane.  Emerald Avenue is to the west and Penny Lane
 continues in eastward direction."""
@@ -1047,6 +1138,7 @@ continues in eastward direction."""
 vnum = 3140
 name = "Penny Lane"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on Penny Lane.  The narrow road continues north and west, and
 the concourse intersects this street to the east."""
@@ -1067,6 +1159,7 @@ the concourse intersects this street to the east."""
 vnum = 3141
 name = "The end of Penny Lane"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the end of Penny Lane.  The only exit appears to be south."""
 
@@ -1086,21 +1179,22 @@ You are at the end of Penny Lane.  The only exit appears to be south."""
 vnum = 3142
 name = "Captain's Office"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in the Office of the Captain of the Guard.  The Midgaard Coat of
 Arms is hanging on the north wall and a heavy steel door is to the south."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3110
   key = 3120
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3143
   key = 3137
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3140
@@ -1158,24 +1252,37 @@ Arms is hanging on the north wall and a heavy steel door is to the south."""
   vnum = 3131
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["arms"]
+description = """
+Although a bit dusty the Coat of Arms is an excellent piece of work."""
+
 [[rooms]]
 vnum = 3143
 name = "The Jail"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a dark and humid jail.  The dark stone walls are hard and cold
 to the touch.  A heavy steel door is to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed", "locked"]
   to_vnum = 3142
   key = 3137
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["wall", "walls"]
+description = """
+The walls are marked with lots of scratches.  Some of them spell sentences
+like "JAIL IS BETTER THAN SQL" and "BIGFOOTDAMOOSE IS ALIVE"."""
 
 [[rooms]]
 vnum = 3144
 name = "The end of Elm Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 Elm street ends here, next to a dangerous-looking run down neighborhood.
 You can enter the slums to the east, or head towards the graveyard to the
@@ -1193,6 +1300,7 @@ south.  It occurs to you that this isn't the happiest section of town."""
 vnum = 3150
 name = "Kate's Diner"
 sector = "inside"
+room_flags = ["indoors", "law", "safe"]
 description = """
 The smells of baking bread and simmering stew lead you dancing through
 the doorway of the diner.  No greasy spoons to be seen here-- the
@@ -1256,10 +1364,20 @@ Pull up a chair, perhaps play a game, and take time out to talk."""
   vnum = 3200
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["window", "landing"]
+description = """
+You can see a rickety bridge to your northwest, leading back into
+Central Midgaard.  A rustic dock connects the Diner with the Midgaard
+River, and a boat or two floats lazily past.  Across the river you can see
+the Levee and the Guild of Thieves, but they seem very far away from all
+of this..."""
+
 [[rooms]]
 vnum = 3160
 name = "Melancholy's Maps"
 sector = "inside"
+room_flags = ["law", "no_mob"]
 description = """
 As you walk in, a sudden gust of wind enters the shop and sends several
 scraps of paper fly around the room.  You blink as the dust you've stirred 
@@ -1272,9 +1390,9 @@ half hidden by a stack of books, leads to a room in the back of the shop."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3161
   key = 3161
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1316,14 +1434,66 @@ half hidden by a stack of books, leads to a room in the back of the shop."""
     vnum = 3162
     inv_only = true
 
+    [[rooms.mob_resets.equips]]
+    vnum = 3170
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3171
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3172
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3173
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3174
+    inv_only = true
+
   [[rooms.mob_resets]]
   vnum = 3161
   max = 1
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3180
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3181
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3182
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3183
+    inv_only = true
+
+    [[rooms.mob_resets.equips]]
+    vnum = 3184
+    inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["window"]
+description = """
+You peer out the window and see a cityguard beating up an old lady."""
+
+[[rooms.extra_descs]]
+keywords = ["bookcase"]
+description = """
+You see many cartographer journals and topographical studies.  You also see
+quite a few tomes written by someone named "Anson MacDonald"."""
 
 [[rooms]]
 vnum = 3161
 name = "Melancholy's Room"
 sector = "inside"
+room_flags = ["law", "no_mob", "private"]
 description = """
 A faint smell of incense teases your nose as you enter this room.  You 
 step onto a soft bearskin rug and look around.  A simple bed lies against
@@ -1334,18 +1504,25 @@ that, the room is quite bare."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 3160
   key = 3161
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
   to_vnum = 1219
 
+[[rooms.extra_descs]]
+keywords = ["chest"]
+description = """
+This chest is firmly locked, and the device by which it opens is beyond your
+reckoning."""
+
 [[rooms]]
 vnum = 3170
 name = "Temple Of Stupid"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 As you enter the abandoned warehouse your eyes blink violently to
 adjust to the almost total darkness.  You wonder where the windows are
@@ -1362,10 +1539,16 @@ realize that you've entered the Temple of Stupid."""
   direction = "up"
   to_vnum = 1219
 
+[[rooms.extra_descs]]
+keywords = ["puddle", "puddles"]
+description = """
+The puddles on the floor are filthy and exude a foul stench."""
+
 [[rooms]]
 vnum = 3200
 name = "Under the Bridge"
 sector = "water_noswim"
+room_flags = ["law"]
 description = """
 The arch under the bridge is covered by seaweed for one foot above the
 surface of the river.  The water gently flows through an opening in the lower
@@ -1379,10 +1562,17 @@ part of the city wall."""
   direction = "west"
   to_vnum = 9772
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  Looks pretty solid."""
+
 [[rooms]]
 vnum = 3201
 name = "On the River"
 sector = "water_noswim"
+room_flags = ["law"]
 description = """
 North of here you see the miserable buildings of the poor alley.  The
 river flows west towards the bridge.  The riverbanks are too steep to climb."""
@@ -1399,6 +1589,7 @@ river flows west towards the bridge.  The riverbanks are too steep to climb."""
 vnum = 3202
 name = "On the River"
 sector = "water_noswim"
+room_flags = ["law"]
 description = """
 North of here you see the dump.  The river flows from east to west.  The
 riverbanks are too steep to climb.  A bridge passes overhead, connecting the
@@ -1416,6 +1607,7 @@ dump to the promenade."""
 vnum = 3203
 name = "On the River"
 sector = "water_noswim"
+room_flags = ["law", "no_mob"]
 description = """
 The levee is directly north of here, and a small boat landing for Kate's
 Diner is to the south.  The river flows in an east west direction."""
@@ -1440,6 +1632,7 @@ Diner is to the south.  The river flows in an east west direction."""
 vnum = 3204
 name = "On the River"
 sector = "water_noswim"
+room_flags = ["law"]
 description = """
 You see the warehouse on the northern riverbank.  East of here the river
 passes under the eastern bridge and through the city wall. The banks of the 
@@ -1457,6 +1650,7 @@ levee are west, in the direction of the current."""
 vnum = 3205
 name = "On the River"
 sector = "water_noswim"
+room_flags = ["law"]
 description = """
 The river enters from a hole in the eastern city wall.  The hole has been
 blocked by several vertically positioned iron bars set into the wall. Overhead
@@ -1474,6 +1668,7 @@ you can see the stone buttresses of the eastern bridge."""
 vnum = 3250
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 Wall road extends north and south along the eastern walls of the city.
 The east gate is north of you, south is an intersection with a dark alley. You
@@ -1495,6 +1690,7 @@ check to make sure you still have your wallet.  A gatehouse is to the east."""
 vnum = 3251
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking along the eastern wall of the city, on a road extending 
 between the east gate and a bridge to the south. A dark, dirty alley lies
@@ -1522,6 +1718,7 @@ in a place this foul..."""
 vnum = 3252
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 The walls of Midgaard tower above you to the east, keeping the city safe
 from its enemies...you hope.  An intersection with a dark alley lies north,
@@ -1545,6 +1742,7 @@ concourse."""
 vnum = 3253
 name = "On the Bridge"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are crossing a strong stone bridge, which spans the Midgaard river.
 Below you, the river flows into an opening in the city wall, sealed with
@@ -1559,10 +1757,18 @@ loops around the inside of the city walls."""
   direction = "south"
   to_vnum = 3104
 
+[[rooms.extra_descs]]
+keywords = ["opening", "bars", "river"]
+description = """
+Hmm...some of the bars have been ripped out of the wall.  Enough to pass a
+good sized raft or canoe, or perhaps even a barge.  You wonder what sort of
+beast had the strength to do this."""
+
 [[rooms]]
 vnum = 3254
 name = "The South Bridge"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on a small, rickety bridge leading from the Midgaard
 City Dump to the much more attractive promenade of the southern parts of 
@@ -1582,6 +1788,7 @@ currents of the Midgaard river."""
 vnum = 3255
 name = "Inside the South Gate of Midgaard"
 sector = "city"
+room_flags = ["law"]
 description = """
 Two strong stone towers surround a heavy wooden gate set into the city wall,
 to guard against the goblins that lurk in the southern forests.  You can exit
@@ -1594,9 +1801,9 @@ or west."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 3256
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1654,6 +1861,7 @@ or west."""
 vnum = 3256
 name = "Outside the South Gate of Midgaard"
 sector = "forest"
+room_flags = ["law"]
 description = """
 You are standing outside the strong wooden gate on the southern walls of
 Midgaard.  Guards eye you suspiciously from the two towers on either side of
@@ -1663,9 +1871,9 @@ Migaard lies north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 3255
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1675,6 +1883,7 @@ Migaard lies north."""
 vnum = 3257
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking along wall road, just north of the west gate of Midgaard.  
 The road continues along the western wall to the north, towards an intersection
@@ -1696,6 +1905,7 @@ with a busy Clan street.  A gatehouse is to the west."""
 vnum = 3258
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 Wall road intersects with a crowded Clan Road here, filled with shops and
 artisans.  The street stretches off to the east, towards the far wall of the
@@ -1717,6 +1927,7 @@ city.  Wall road continues to the north and south."""
 vnum = 3259
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking along wall road, which extends along the inside of the western
 wall of Midgaard.  To the south, you can see an intersection with a crowded
@@ -1735,6 +1946,7 @@ north."""
 vnum = 3260
 name = "The Northwest Corner"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing beneath the northwestern corner of the city wall, on a turn
 in wall road.  You can head south, towards the west gate, east, to the 
@@ -1756,6 +1968,7 @@ north gate, or north into a watchtower."""
 vnum = 3261
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 The city walls tower over you as walk down wall road, between the northwestern
 corner of the wall to the west, and the northern gate of Midgaard to the east."""
@@ -1772,6 +1985,7 @@ corner of the wall to the west, and the northern gate of Midgaard to the east.""
 vnum = 3262
 name = "Inside the North Gate of Midgaard"
 sector = "city"
+room_flags = ["law"]
 description = """
 Two small towers surround a strong wooden gate, connected by a small stone
 bridge set with murder holes.  This gate is not as heavily guarded as the 
@@ -1782,9 +1996,9 @@ Temples of Thoth and Belan, but there is no way to reach them from here."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 3268
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1822,6 +2036,7 @@ Temples of Thoth and Belan, but there is no way to reach them from here."""
 vnum = 3263
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking along wall road, between the northern gate of the city and the
 northeastern corner of the city walls.  You can see bloodstains on the road...
@@ -1839,6 +2054,7 @@ better be on guard for thieves."""
 vnum = 3264
 name = "The Northeast Corner"
 sector = "city"
+room_flags = ["law"]
 description = """
 Wall road turns the corner here, as you pass by the northeastern edge of the
 city wall.  The north gate lies to your west, the road south leads to the
@@ -1860,6 +2076,7 @@ eastern gate of Midgaard, and a watchtower is to the north"""
 vnum = 3265
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 Just south of you is an intersection with a crowded clan street.  The 
 eastern wall of Midgaard is beside you, and to the north you can see the 
@@ -1881,6 +2098,7 @@ northeast corner of the city wall. A strange looking church is to the west."""
 vnum = 3266
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 Here, wall road meets up with a busy clan street heading off towards the 
 west, and the far wall of the city.  You can smell spices, perfume, freshly
@@ -1903,6 +2121,7 @@ Wall road continues to the north and south."""
 vnum = 3267
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are near the center of wall road, just north of the east gate of the city.
 To the north, you can see an intersection with a crowded clan street.
@@ -1925,6 +2144,7 @@ the east."""
 vnum = 3268
 name = "Outside the North Gate of Midgaard"
 sector = "field"
+room_flags = ["law"]
 description = """
 You stand outside the north gate of the walled city of Midgaard.  A dusty 
 trail is visibile to the north, it stretches around the walls of the city.  
@@ -1937,14 +2157,15 @@ village of Ofcol.  You can return to Midgaard to the south."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 3262
   key = 3133
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3270
 name = "On the Concourse"
 sector = "city"
+room_flags = ["law"]
 description = """
 The strong stone walls of Midgaard rise up to the west, keeping evil at bay.
 The concourse heads towards a bridge to the north, and continues south 
@@ -1962,6 +2183,7 @@ alongside a beautiful park."""
 vnum = 3271
 name = "On the Concourse near the park"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking down the Concoruse, along the western wall of Midgaard.  To
 the north, the road passes by a beautiful park, to the south, you can see
@@ -1979,6 +2201,7 @@ the southwest corner of the city wall."""
 vnum = 3272
 name = "On the Concourse at Penny Lane"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on a road leading around the inner walls of Midgaard.  To the north,
 the concourse heads towards a bridge into northern Midgaard.  To the south, 
@@ -2001,6 +2224,7 @@ Penny Lane lie west."""
 vnum = 3273
 name = "On the Concourse at Elm Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 The air grows chill as you pass near the Elm Street graveyard.  The walls of
 Midgaard are to the east, and the concourse continues to the north and south.
@@ -2022,6 +2246,7 @@ To your west, you see Elm Street at the graveyard entrance."""
 vnum = 3301
 name = "Clan Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on the western end of Clan Road.  The traffic here  
 is light.  This is a quieter section of Midgaard.  You can hear the sound of
@@ -2043,6 +2268,7 @@ haggling coming from the east."""
 vnum = 3302
 name = "Clan Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking along Clan Road.  To the south of you is the money changer.  
 Clan Road continues on to the east and the west."""
@@ -2063,6 +2289,7 @@ Clan Road continues on to the east and the west."""
 vnum = 3303
 name = "Clan Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 The shops on this stretch of Clan road are long-closed and boarded up.
 Not much traffic passes through this part, as there is nothing to buy."""
@@ -2079,6 +2306,7 @@ Not much traffic passes through this part, as there is nothing to buy."""
 vnum = 3314
 name = "Clan Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 Noise and light abound on this part of Clan Road.  Clan road continues off
 to the east and west."""
@@ -2099,6 +2327,7 @@ to the east and west."""
 vnum = 3315
 name = "Clan Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 Clan Road seems to widen here slightly, allowing more traffic to 
 travel through the area.  To the south is another entrance to the busy
@@ -2121,6 +2350,7 @@ happy patrons.  Clan Road continues to the east and west."""
 vnum = 3316
 name = "Clan Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the eastern end of Clan Road.  To the east of you, the  
 tall wall around the city looms up before you and casts its shadow on
@@ -2138,6 +2368,7 @@ you.  Clan Road continues to the west."""
 vnum = 3334
 name = "A Money Changer's Room"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 A few strategically placed lanterns keep this place well-lit in the 
 absence of any windows.  The room is surprisingly well appointed with  
@@ -2154,10 +2385,22 @@ A smallish sign hangs on the wall, lettered in common."""
   vnum = 3162
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["tapestries", "walls"]
+description = """
+You think about peeking behind the tapestries, but think better of it."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Give me your coins, and I shall change them for you, taking but 1 in 20 for
+my fee.  --- Otho the Changer"""
+
 [[rooms]]
 vnum = 3352
 name = "Grebe's Tavern"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 Dive.  That's all you can say about this place; its a
 dive.  You step carefully over the dead and/or drunk sailors
@@ -2174,10 +2417,21 @@ you search vainly for a clean table to sit at, and then give up."""
   vnum = 3200
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["wall", "walls"]
+description = """
+Bare, except for the holes."""
+
+[[rooms.extra_descs]]
+keywords = ["table", "tables"]
+description = """
+You find a table that's relatively vomit-free."""
+
 [[rooms]]
 vnum = 3355
 name = "Andy's Pub"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 The busy pub is filled with patrons.  People are laughing and singing.
 A minstrel plays his lute in another part of the pub, and a few people
@@ -2202,6 +2456,7 @@ be had somewhere around here..."""
 vnum = 3356
 name = "A Room in the Pub"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 This part of the pub is filled with dancing and singing.  A wandering
 minstrel is on a chair in a corner with his lute.  A busty red headed
@@ -2236,6 +2491,7 @@ prosperous establishment."""
 vnum = 3357
 name = "The Bar"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 A long mahogany bar is set in the back of the pub.  Mugs line a shelf
 behind the bar.  Bottles of strong, nasty looking liquids decorate one
@@ -2249,10 +2505,16 @@ A sign is on the wall."""
   direction = "north"
   to_vnum = 3355
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says: Don't forget our dinner menu."""
+
 [[rooms]]
 vnum = 3358
 name = "The Bar"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 A long mahogany bar is set in the back of the pub.  Mugs line a shelf
 behind the bar.  Bottles of strong, nasty looking liquids decorate one
@@ -2265,10 +2527,16 @@ inviting glances your way."""
   direction = "north"
   to_vnum = 3356
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says: Don't forget our dinner menu."""
+
 [[rooms]]
 vnum = 3359
 name = "The Inn"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are standing upstairs from Andy's Pub at Andy's Inn.  A few chairs
 and a couple of end tables give the room a `homey' atmosphere.  A large
@@ -2286,6 +2554,9 @@ probably waiting for you to ask him for a room."""
 vnum = 3360
 name = "In Thoth's Chapel"
 sector = "inside"
+room_flags = ["indoors", "law", "safe"]
+heal_rate = 130
+mana_rate = 115
 description = """
 You feel Belan's hateful gaze on your back as you enter this chapel.
 You are in a small chapel dedicated to the god Thoth.  The church of
@@ -2301,10 +2572,19 @@ who wish to be.........For a price.
   vnum = 3165
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Made of pure gold, the altar shines with an unearthly beauty.
+Ancient runes cover it's surface."""
+
 [[rooms]]
 vnum = 3361
 name = "In Belan's Chapel"
 sector = "inside"
+room_flags = ["indoors", "law", "safe"]
+heal_rate = 130
+mana_rate = 115
 description = """
 You feel Thoth's sorrowed gaze on your back as you enter this chapel.
 You are in a small chapel dedicated to the god Belan.  The walls are
@@ -2319,10 +2599,17 @@ radiating from a large black altar in the center of the room."""
   vnum = 3164
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+The altar appears to have been carved from a single piece of obsidian.
+Dark red stains cover it's surface."""
+
 [[rooms]]
 vnum = 3362
 name = "Church foyer"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are inside the small foyer of a church.  Your soul feels like it's
 being pulled by two opposing forces, one to the north, and one to the south."""
@@ -2343,6 +2630,7 @@ being pulled by two opposing forces, one to the north, and one to the south."""
 vnum = 3365
 name = "The Temple Of Belan"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 You are in the southern end of the temple hall in the Temple of Belan.
 The temple has been constructed from giant obsidian blocks, sickening in
@@ -2378,10 +2666,22 @@ SCHOOL.  (type 'up' to go to MUD SCHOOL.)  A small plaque is on this wall."""
     vnum = 3005
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This entire world has been integrated, modified, debugged, and enhanced by
+Hatchet, Kahn, and Furey of MERC Industries to be run by any MERC Mud.
+1992 December 17
+ROM enhancements by Alander.
+ROT enhancements by Vengeance."""
+
 [[rooms]]
 vnum = 3366
 name = "By the Temple Altar"
 sector = "inside"
+room_flags = ["indoors", "law", "safe"]
+heal_rate = 130
+mana_rate = 115
 description = """
 You are by the temple altar in the northern end of the Temple of Belan.
 A huge altar made from black polished obsidian is standing in front of you and
@@ -2401,10 +2701,24 @@ seen a rainbow."""
   vnum = 3167
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["statue", "Belan", "god"]
+description = """
+The statue represents the Great God Belan, holding a staff.  He has long, black
+hair and beard and a menacing look on his face.  His staff is topped by a
+painted cube, the 6 faces of which represent the 6 aspects of his power."""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Even though the altar is more than ten feet long it appears to be made from a
+single block of flawless black obsidian."""
+
 [[rooms]]
 vnum = 3367
 name = "Donation Room"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 You are in a small room next to the temple.  A note on the wall tells you
 that this is a place to leave your unwanted items for other travelers."""
@@ -2425,6 +2739,7 @@ that this is a place to leave your unwanted items for other travelers."""
 vnum = 3368
 name = "Entrance to Druid's Guild"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 A large tree stands in the center of this room, and as you walk past it
 you notice a movement.  Upon closer inspection, that tree isn't just a tree,
@@ -2451,6 +2766,7 @@ the bar is in the eastern wall."""
 vnum = 3369
 name = "Druid's Bar"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 Arcane smells and a hint of incense in the air here make you think this
 isn't so much a bar as it is an apothecary.  A small sign is hanging on the
@@ -2484,10 +2800,21 @@ wall."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
+
 [[rooms]]
 vnum = 3370
 name = "Druid's Holy Sanctum"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This is the holy sanctum.  A wizened old woman occupies this room,
 chanting very softly to herself.  On a table in the corner is a large
@@ -2511,6 +2838,7 @@ from the depths."""
 vnum = 3371
 name = "Entrance to Ranger's Guild"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 This room has a feral smell to it, as if it was once a stable of some sort.
 A rack of spears of various lengths and designs adorns the western wall.
@@ -2536,6 +2864,7 @@ An exit leads south to the alley.  A small doorway is in the northern wall."""
 vnum = 3372
 name = "Ranger's Bar"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This is a rustic-looking tavern, decorated liberally with stuffed bears,
 wildcats, and various other vicious fauna.  The chairs here are crafted
@@ -2571,10 +2900,21 @@ on the wall."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
+
 [[rooms]]
 vnum = 3373
 name = "Ranger's Study"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 As you enter here your senses are bombarded by the sweet smells of cedar
 and a fireplace that is burning hickory.  The fire provides the only light
@@ -2599,6 +2939,7 @@ depths."""
 vnum = 3374
 name = "Entrance to Vampire's Guild"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 There is a gate swinging lazily here, creaking with the voices of
 countless centuries of use.  Just beyond the gate beckons a ghostly
@@ -2623,6 +2964,7 @@ the best thing to do is just leave. A stairway leads up to the Inn."""
 vnum = 3375
 name = "Vampire's Bar"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 There are several ghostly-white beings here, each fixing you with a cold
 stare upon your entrance.  Seated in line along the wall are several
@@ -2650,10 +2992,21 @@ on the wall."""
     vnum = 3381
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
+
 [[rooms]]
 vnum = 3376
 name = "Vampire's Crypt"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This crypt is filled wall-to-wall with coffins, some open, some tossed
 haphazardly against the wall, some perfectly undisturbed.  It's so dark
@@ -2676,6 +3029,7 @@ of the floor leads down into darkness.  Vile smells waft from the depths."""
 vnum = 3377
 name = "Entrance to the House of Fetish"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are standing in the entrance hall of the House of Fetish.  There's not
 much to see, just a man in a three piece suit checking ID's and waving
@@ -2709,6 +3063,7 @@ people through."""
 vnum = 3378
 name = "The House of Fetish"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a large room that reminds you more of a dungeon than a shop.
 Undescribable contraptions hang from the ceiling and walls, and the floor
@@ -2718,8 +3073,8 @@ is a large brass door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 3379
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -2745,6 +3100,7 @@ is a large brass door."""
 vnum = 3379
 name = "Nemesis' Private Dungeon"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You've stumbled upon Nemesis' private chamber.  You had better not let
 her catch you here, or you may never want to leave.  Leather straps
@@ -2755,13 +3111,14 @@ Leather restraints fall down off the four corners of the bed."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 3378
-  flags = ["door"]
 
 [[rooms]]
 vnum = 3380
 name = "Clem's Counter"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = "There is a small note on the counter."
 
   [[rooms.exits]]
@@ -2771,18 +3128,6 @@ description = "There is a small note on the counter."
   [[rooms.mob_resets]]
   vnum = 3176
   max = 1
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3389
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3390
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3391
-    inv_only = true
 
     [[rooms.mob_resets.equips]]
     vnum = 3392
@@ -2796,10 +3141,22 @@ description = "There is a small note on the counter."
     vnum = 3394
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
+
 [[rooms]]
 vnum = 3381
 name = "Mercy's Counter"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = "There is a small note on the counter."
 
   [[rooms.exits]]
@@ -2818,10 +3175,22 @@ description = "There is a small note on the counter."
     vnum = 3396
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
+
 [[rooms]]
 vnum = 2901
 name = "Western gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small room built into the city wall.  A mechanism for
 lowering the siege door for the west gate is on the wall, but seems
@@ -2841,6 +3210,7 @@ Wall road is to the east."""
 vnum = 2902
 name = "Base of the southwest tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead further up into
 the watchtower.  The Concourse is to the north."""
@@ -2857,6 +3227,7 @@ the watchtower.  The Concourse is to the north."""
 vnum = 2903
 name = "Base of the southeast tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead further up into
 the watchtower.  The Concourse is to the north."""
@@ -2873,6 +3244,7 @@ the watchtower.  The Concourse is to the north."""
 vnum = 2904
 name = "Eastern gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small room built into the city wall.  A mechanism for
 lowering the siege door for the east gate is on the wall, but seems
@@ -2892,6 +3264,7 @@ Wall road is to the west."""
 vnum = 2905
 name = "Eastern gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small room built into the city wall.  A mechanism for
 lowering the siege door for the east gate is on the wall, but seems
@@ -2911,6 +3284,7 @@ Wall road is to the west."""
 vnum = 2906
 name = "Base of the northeast tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead further up into
 the watchtower.  Wall Road is to the south."""
@@ -2927,6 +3301,7 @@ the watchtower.  Wall Road is to the south."""
 vnum = 2907
 name = "Base of the northwest tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead further up into
 the watchtower.  Wall Road is to the south."""
@@ -2943,6 +3318,7 @@ the watchtower.  Wall Road is to the south."""
 vnum = 2908
 name = "Western gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small room built into the city wall.  A mechanism for
 lowering the siege door for the west gate is on the wall, but seems
@@ -2962,6 +3338,7 @@ Wall road is to the east."""
 vnum = 2910
 name = "Western gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a long room over the western gates of midgaard.  Remnants from
 a less peaceful past dominate this room, from the heavy iron door waiting
@@ -2987,6 +3364,7 @@ wall to the north."""
 vnum = 2911
 name = "Atop the western wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the western wall of Midgaard.  A forest extends to the
 west, and a small castle is barely visible above the treetops.
@@ -3029,6 +3407,7 @@ To the south is the top of the western gatehouse."""
 vnum = 2912
 name = "In the northwest tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead both up to
 the top of the watchtower, and down to street level.  Archways
@@ -3054,6 +3433,7 @@ lead outside both to the south and east."""
 vnum = 2913
 name = "Atop the northern wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the northern wall of Midgaard.  The great plains
 extend far to the north, and a mountain range is just visible.
@@ -3071,6 +3451,7 @@ Archways to the east and west lead into city watchtowers."""
 vnum = 2914
 name = "In the northeast tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead both up to
 the top of the watchtower, and down to street level.  Archways
@@ -3096,6 +3477,7 @@ lead outside both to the south and west."""
 vnum = 2915
 name = "Atop the eastern wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the eastern wall of Midgaard.  The top of a strange
 tower is just visible above the forest east of here.
@@ -3114,6 +3496,7 @@ To the south is the top of the eastern gatehouse."""
 vnum = 2916
 name = "Eastern gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a long room over the eastern gates of midgaard.  Remnants from
 a less peaceful past dominate this room, from the heavy iron door waiting
@@ -3139,6 +3522,7 @@ wall to the north."""
 vnum = 2917
 name = "Eastern gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a long room over the eastern gates of midgaard.  Remnants from
 a less peaceful past dominate this room, from the heavy iron door waiting
@@ -3164,6 +3548,7 @@ wall to the south."""
 vnum = 2918
 name = "Atop the eastern wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the eastern wall of Midgaard.  Not much can be seen
 from here, since mountains block your view to the east.  A small
@@ -3183,6 +3568,7 @@ To the north is the top of the eastern gatehouse."""
 vnum = 2919
 name = "Atop the eastern wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the eastern wall of Midgaard.  Not much can be seen
 from here, since mountains block your view to the east.
@@ -3225,6 +3611,7 @@ To the south, an archway leads into one of the city watchtowers."""
 vnum = 2920
 name = "In the southeast tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead both up to
 the top of the watchtower, and down to street level.  Archways
@@ -3250,6 +3637,7 @@ lead outside both to the north and west."""
 vnum = 2921
 name = "Atop the southern wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the southern wall of Midgaard.  A road extends to
 the south through a dark forest.
@@ -3267,6 +3655,7 @@ Archways to the east and west lead into city watchtowers."""
 vnum = 2922
 name = "In the southwest tower"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small circular room, spiral stairs lead both up to
 the top of the watchtower, and down to street level.  Archways
@@ -3292,6 +3681,7 @@ lead outside both to the north and east."""
 vnum = 2923
 name = "Atop the western wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the western wall of Midgaard.  Swampland extends to
 the west.  The wall continues to the north.
@@ -3309,6 +3699,7 @@ To the south, an archway leads into one of the city watchtowers."""
 vnum = 2924
 name = "Atop the western wall"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop the western wall of Midgaard. A small river flows
 through an arch in the wall below you, and vanishes into the forest
@@ -3327,6 +3718,7 @@ To the north is the top of the western gatehouse."""
 vnum = 2925
 name = "Western gatehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a long room over the western gates of midgaard.  Remnants from
 a less peaceful past dominate this room, from the heavy iron door waiting
@@ -3352,6 +3744,7 @@ wall to the south."""
 vnum = 2926
 name = "Top of the northwest tower"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop one of the city watchtowers.  To the north, a wall of
 mountains rise up out of the plains.  To the west, the green canopy of
@@ -3390,6 +3783,7 @@ Spiral stairs lead down into the tower."""
 vnum = 2927
 name = "Top of the northeast tower"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop one of the city watchtowers.  To the north, a wall of
 mountains rise up out of the plains.  The north sea is just visible
@@ -3429,6 +3823,7 @@ Spiral stairs lead down into the tower."""
 vnum = 2928
 name = "Top of the southeast tower"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop one of the city watchtowers.  To the east, the beginning
 of a mountain range blocks your view.  To the south, beyond the dark
@@ -3467,6 +3862,7 @@ Spiral stairs lead down into the tower."""
 vnum = 2929
 name = "Top of the southwest tower"
 sector = "city"
+room_flags = ["law"]
 description = """
 You stand atop one of the city watchtowers.  To the west, the green
 canopy of the Haon Dor forest stretches off into the distance.  To the
@@ -3505,6 +3901,7 @@ Spiral stairs lead down into the tower."""
 vnum = 3001
 name = "Temple of Thoth"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 You are in the southern end of the temple hall in the Temple of Thoth.
 The temple has been constructed from giant marble blocks, eternal in
@@ -3545,10 +3942,20 @@ SCHOOL.  (type 'up' to go to MUD SCHOOL.)  A small plaque is on this wall.
     vnum = 3379
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+This entire world has been integrated, modified, debugged, and enhanced by
+Hatchet, Kahn, and Furey of MERC Industries to be run by any MERC Mud.
+1992 December 17
+ROM enhancements by Alander.
+ROT enhancements by Vengeance."""
+
 [[rooms]]
 vnum = 3002
 name = "Cleric's Inner Sanctum"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This is the inner sanctum.  A picture of the mighty Thoth is hanging on
 the wall, just above the altar which is set against the western wall.  A well
@@ -3571,6 +3978,7 @@ the depths."""
 vnum = 3003
 name = "Cleric's Bar"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 The bar is one of the finest in the land, lucky it is members only.  Fine
 furniture is set all around the room.  A small sign is hanging on the wall."""
@@ -3603,10 +4011,21 @@ furniture is set all around the room.  A small sign is hanging on the wall."""
   vnum = 3200
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the waiter:
+
+   Buy  - Buy something (drinkable) from the waiter.
+   List - The waiter will show you all the different drinks and
+          specialties, and tell the price of each."""
+
 [[rooms]]
 vnum = 3004
 name = "Entrance to Cleric's Guild"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 The entrance hall is a small modest room, reflecting the true nature of
 the Clerics.  The exit leads east to the temple square.  A small entrance to
@@ -3652,6 +4071,7 @@ the bar is in the northern wall."""
 vnum = 3005
 name = "The Temple Square"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on the temple square.  Huge marble steps lead up to the
 temple gate.  The entrance to the Clerics Guild is to the west, and the old
@@ -3686,6 +4106,7 @@ square, the center of Midgaard."""
 vnum = 3006
 name = "Entrance to the Grunting Boar Inn"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are standing in the entrance hall of the Grunting Boar Inn.  The hall
 has been wisely decorated with simple but functional furniture.  A small
@@ -3716,6 +4137,7 @@ The bar is to the east."""
 vnum = 3007
 name = "The Grunting Boar"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are standing in the bar.  The bar is set against the northern wall, old
 archaic writing, carvings and symbols cover its top.  A fireplace is built into
@@ -3751,10 +4173,27 @@ A small sign with big letters is fastened to the bar."""
   vnum = 3200
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["writing", "carving", "carvings", "symbols", "symbol"]
+description = """
+Although it is very hard to understand, you think it looks a lot like beer,
+poems about beer, and small beer-mugs."""
+
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+Free instructions provided by the Grunting Boar Inn.
+
+   Buy  - Buy something (drinkable) from the bartender.
+   List - The bartender will show you all the different drinks and
+          specialties, and tell the price of each."""
+
 [[rooms]]
 vnum = 3008
 name = "The Defunct Reception"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are standing in a dusty, defunct reception.  The staircase leads
 down to the entrance hall."""
@@ -3775,6 +4214,7 @@ down to the entrance hall."""
 vnum = 3009
 name = "The Bakery"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are standing inside the small bakery.  A sweet scent of Danish and
 fine bread fills the room.  The bread and Danish are arranged in fine order
@@ -3813,10 +4253,30 @@ A small sign is on the counter."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Free instructions provided by the store:
+
+   Buy  - Will buy you some bread or pastry.
+   List - The baker will kindly tell you the price and sort of the bread in
+          his bakery."""
+
+[[rooms.extra_descs]]
+keywords = ["danish", "pastry"]
+description = """
+You see that this is truly delicious pastry.  Must be made by a Dane from
+Denmark (which surely is not the capital of Sweden!).  Former ruler of
+Scandinavia, England, Northern Germany, Northern France, Russia, Greenland,
+Iceland, Estonia etc. etc.
+   The sight of those large, wholesome chokoladeboller makes your mouth water
+and your soul sing."""
+
 [[rooms]]
 vnum = 3010
 name = "The General Store"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are inside the general store.  All sorts of items are stacked on shelves
 behind the counter, safely out of your reach.
@@ -3858,10 +4318,6 @@ A small note hangs on the wall."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3042
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3383
     inv_only = true
 
@@ -3873,10 +4329,22 @@ A small note hangs on the wall."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
+
 [[rooms]]
 vnum = 3011
 name = "The Weapon Shop"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are inside the weapon shop.  There is a small note on the counter."""
 
@@ -3897,15 +4365,7 @@ You are inside the weapon shop.  There is a small note on the counter."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3022
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3023
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3024
     inv_only = true
 
     [[rooms.mob_resets.equips]]
@@ -3921,10 +4381,6 @@ You are inside the weapon shop.  There is a small note on the counter."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3028
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3029
     inv_only = true
 
@@ -3932,10 +4388,22 @@ You are inside the weapon shop.  There is a small note on the counter."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+The note reads:
+
+  List  - Show which various items are in the store.
+  Buy   - Buy an item.
+  Value - The shopkeeper will (free of charge) tell how much he will
+          pay for your item.
+  Sell  - Sell an item."""
+
 [[rooms]]
 vnum = 3012
 name = "Main Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the end of the main street of Midgaard.  South of here is the
 entrance to the Guild of Magic Users.  The street continues east towards the
@@ -3966,6 +4434,7 @@ gate."""
 vnum = 3013
 name = "Main Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on the main street passing through the City of Midgaard.  South of
 here is the entrance to the Armoury, and the bakery is to the north.  East of
@@ -3991,6 +4460,7 @@ here is the market square."""
 vnum = 3014
 name = "Market Square"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on the market square, the famous Square of Midgaard.
 A large, peculiar looking statue is standing in the middle of the square.
@@ -4041,10 +4511,16 @@ common square, east and westbound is the main street."""
     vnum = 3356
     wear_loc = "head"
 
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+What you see is the Midgaard Worm, stretching around the Palace of Midgaard."""
+
 [[rooms]]
 vnum = 3015
 name = "The Main Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are on Main Street crossing through town.  To the north is the general
 store, and the main street continues east.  To the west you see and hear the
@@ -4070,6 +4546,7 @@ market place and to the south is the Jeweller's Shop."""
 vnum = 3016
 name = "The Main Street"
 sector = "city"
+room_flags = ["law"]
 description = """
 The main street, to the north is the weapon shop and to the south is the
 Guild of Swordsmen.  To the east you leave town and to the west the street
@@ -4099,6 +4576,7 @@ leads to the market square."""
 vnum = 3017
 name = "Entrance to Mage's Guild"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = "The entrance hall is a small, poor lighted room."
 
   [[rooms.exits]]
@@ -4141,6 +4619,7 @@ description = "The entrance hall is a small, poor lighted room."
 vnum = 3018
 name = "Mage's Bar"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 The bar is one of the wierdest in the land.  Mystical images float around
 the air.  Illusions of fine furniture appear all around the room."""
@@ -4177,6 +4656,7 @@ the air.  Illusions of fine furniture appear all around the room."""
 vnum = 3019
 name = "Mage's Laboratory"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This is the Magical Experiments Laboratory.  Dark smoke-stained stones
 arch over numerous huge oaken tables, most of these cluttered with strange-
@@ -4202,6 +4682,7 @@ depths."""
 vnum = 3020
 name = "The Armoury"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 The armoury with all kinds of armours on the walls and in the window.  You
 see helmets, shields and chain mails.  To the north is the main street.
@@ -4240,34 +4721,6 @@ On the wall is a small note."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3110
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3111
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3112
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3113
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3114
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3115
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3116
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3097
     inv_only = true
 
@@ -4279,10 +4732,24 @@ On the wall is a small note."""
     vnum = 3022
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["note"]
+description = """
+You can use these commands for trading:
+
+  value <item>     To get the price of an item in your possession.
+  sell <item>      To sell something.
+  buy <item>       To buy something (provided that the shop has it in store).
+  list             Gives you a listing of the shop's inventory.
+
+        WE DON'T GIVE CREDIT; WE DON'T EXPECT TO RECEIVE CREDIT!
+                             NO HAGGLING"""
+
 [[rooms]]
 vnum = 3021
 name = "Entrance Hall to the Guild of Swordsmen"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 The entrance hall to the Guild of Swordsmen.  A place where one has to be
 careful not to say something wrong (or right).  To the east is the bar and to
@@ -4332,6 +4799,7 @@ the north is the main street."""
 vnum = 3022
 name = "The Bar of Swordsmen"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 The bar of swordsmen, once upon a time beautifully furnished.  But now the
 furniture is all around you in small pieces.  To the south is the yard, and
@@ -4373,6 +4841,7 @@ to the west is the entrance hall."""
 vnum = 3023
 name = "The Tournament and Practice Yard"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 The practice yard of the fighters.  To the north is the bar.  A well leads
 down into darkness."""
@@ -4393,6 +4862,7 @@ down into darkness."""
 vnum = 3024
 name = "Eastern End of Poor Alley"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the poor alley. South of here is the Grubby Inn and to the
 east you see common square. Melancholy's map shop is north. The alley continues 
@@ -4422,6 +4892,7 @@ further west."""
 vnum = 3025
 name = "The Common Square"
 sector = "city"
+room_flags = ["law"]
 description = """
 The common square, people pass you, talking to each other.  To the west is
 the poor alley and to the east is the dark alley.  To the north, this square
@@ -4451,6 +4922,7 @@ is connected to the market square.  From the south you notice a nasty smell."""
 vnum = 3026
 name = "The Dark Alley"
 sector = "city"
+room_flags = ["law"]
 description = """
 The dark alley, to the west is the common square and to the south is the
 Guild of Thieves.  To the north is the Guild of Rangers.  The alley
@@ -4492,10 +4964,16 @@ continues east."""
   vnum = 3066
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["guild"]
+description = """
+It is the thieves guild, don't enter if you care about your health or money."""
+
 [[rooms]]
 vnum = 3027
 name = "Entrance Hall to the Guild of Thieves"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 The entrance hall to the thieves' and assassins' guild.  A place where you
 can lose both your life and your money, if you are not careful.  To the north
@@ -4553,6 +5031,7 @@ is the dark alley and to the east is the thieves' bar."""
 vnum = 3028
 name = "The Thieves Bar"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 The bar of the thieves.  Once upon a time this place was beautifully
 furnished, but now it seems almost empty.  To the south is the yard, and to
@@ -4587,10 +5066,16 @@ the west is the entrance hall.
   vnum = 3200
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["furniture"]
+description = """
+As you look at the furniture, the chair you sit on disappears."""
+
 [[rooms]]
 vnum = 3029
 name = "The Secret Yard"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 The secret practice yard of thieves and assassins.  To the north is the
 bar.  A well leads down into darkness."""
@@ -4611,6 +5096,7 @@ bar.  A well leads down into darkness."""
 vnum = 3030
 name = "The Dump"
 sector = "field"
+room_flags = ["law", "no_mob"]
 description = """
 The dump, where the people from the city drop their garbage.  Through the
 garbage you can see a large junction of pipes, looks like the entrance to the
@@ -4633,6 +5119,7 @@ square.  A rickety old bridge leads south to the promenade."""
 vnum = 3031
 name = "The Pet Shop"
 sector = "inside"
+room_flags = ["indoors", "law", "pet_shop"]
 description = """
 The Pet Shop is a small crowded store, full of cages and animals of
 various sorts and sizes.  There is a sign on the wall."""
@@ -4645,10 +5132,27 @@ various sorts and sizes.  There is a sign on the wall."""
   vnum = 3008
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign reads:
+
+  Use 'List' to see the available pets.
+  Use 'Buy <pet> <name>' to buy yourself a pet and name it.
+
+  You can use 'order <pet> <instructions>' to order your pets around.
+  If you abuse your pet, it will no longer regard you as its master.
+  If you have several pets you may use 'order all <instructions>'
+
+ Regards,
+
+   The Shopkeeper"""
+
 [[rooms]]
 vnum = 3032
 name = "Pet Shop Store"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This is the small dark room in which the Pet Shop Boy keeps his pets.
 It is vital that this room be immediately after the pet shop."""
@@ -4677,6 +5181,7 @@ It is vital that this room be immediately after the pet shop."""
 vnum = 3033
 name = "The Magic Shop"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small room that smells of rare chemicals and spices.
 Dividing the room in two is a large desk, and on the wall behind it are
@@ -4692,33 +5197,34 @@ sorts and sizes."""
   max = 1
 
     [[rooms.mob_resets.equips]]
-    vnum = 3040
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3041
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3039
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3042
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3043
     inv_only = true
 
     [[rooms.mob_resets.equips]]
     vnum = 3044
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["scrolls"]
+description = """
+Each scroll is stored in a leather tube that protects it from moist."""
+
+[[rooms.extra_descs]]
+keywords = ["books"]
+description = """
+Most of them appear to be very old and dusty."""
+
+[[rooms.extra_descs]]
+keywords = ["jars", "bottles"]
+description = """
+Some of them are transparent enabling you to see that some contain colored
+powders while others contain body parts of various animals."""
+
 [[rooms]]
 vnum = 3034
 name = "The Jeweller's Shop"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are in a small, beautifully furnished room.  The warm light emanating
 from the small oil lamps on the walls is reflected in the hard, polished
@@ -4761,10 +5267,32 @@ A small sign with golden letters stands on the desk."""
     vnum = 3373
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The golden letters say :-
+
+    Use 'list' to see what is in store,
+        'buy <item>' to buy an item,
+        'sell <item>' to sell an item and
+        'value <item>' to make the jeweller evaluate an item."""
+
+[[rooms.extra_descs]]
+keywords = ["desk"]
+description = """
+Your face is reflected in its surface."""
+
+[[rooms.extra_descs]]
+keywords = ["oil", "lamps"]
+description = """
+They are made from polished gold and looks as if they are securely fastened
+to the smooth stone walls."""
+
 [[rooms]]
 vnum = 3035
 name = "The Leather Shop"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 An acrid smell fills this large room.  Along the walls are numerous
 shelves containing all sorts of animal hide and in the crackling fireplace
@@ -4840,10 +5368,38 @@ A wooden sign is hanging above the fireplace."""
     vnum = 3054
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The wooden sign says :-
+
+    Use 'list' to see what is in store,
+        'buy <item>' to buy an item,
+        'sell <item>' to sell an item and
+        'value <item>' to make the leather worker evaluate an item."""
+
+[[rooms.extra_descs]]
+keywords = ["pot"]
+description = """
+Several large pieces of leather hide are boiling in the iron pot."""
+
+[[rooms.extra_descs]]
+keywords = ["table"]
+description = """
+It is made from solid oak but appears to be very used.  Its surface is
+covered in marks and scratches.  A large burning candle stands directly on
+the table surface, tallow flowing down its sides."""
+
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+It is a rather large fireplace made from heavy granite rocks."""
+
 [[rooms]]
 vnum = 3040
 name = "Inside the West Gate of Midgaard"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  Main Street leads
@@ -4863,9 +5419,9 @@ east and Wall Road leads both north and south from here."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 3052
   key = 3133
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 3068
@@ -4915,10 +5471,36 @@ east and Wall Road leads both north and south from here."""
     vnum = 3362
     wear_loc = "waist"
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
+
 [[rooms]]
 vnum = 3041
 name = "Inside the East Gate of Midgaard"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  Main Street leads
@@ -4931,9 +5513,9 @@ the city wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 3053
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -4991,10 +5573,36 @@ the city wall."""
     vnum = 3354
     wear_loc = "shield"
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
+
 [[rooms]]
 vnum = 3042
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking next to the western city wall.  The road continues further
 south and the city gate is just north of here.  A gatehouse is to the west."""
@@ -5011,10 +5619,17 @@ south and the city gate is just north of here.  A gatehouse is to the west."""
   direction = "west"
   to_vnum = 2901
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
 [[rooms]]
 vnum = 3043
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are walking next to the western city wall.  Wall Road continues further
 north and south.  A small, poor alley leads east.
@@ -5032,10 +5647,22 @@ Some letters have been written on the wall here."""
   direction = "south"
   to_vnum = 3047
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["letters"]
+description = """
+It says 'Who watches the watchmen?'"""
+
 [[rooms]]
 vnum = 3044
 name = "Poor Alley"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are in narrow and dirty alley leading east and west.  The leather shop
 is to the north."""
@@ -5064,6 +5691,7 @@ is to the north."""
 vnum = 3045
 name = "Alley at Levee"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing in the alley which continues east and west.  South of
 here you see the levee.  North is the Pet Shop."""
@@ -5088,6 +5716,7 @@ here you see the levee.  North is the Pet Shop."""
 vnum = 3046
 name = "Eastern end of Alley"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing at the eastern end of the alley,  near the city walls.  
 Wall road loops around the city to your east, and you can see an old 
@@ -5114,6 +5743,7 @@ north."""
 vnum = 3047
 name = "Wall Road"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on the road next to the western city wall which
 continues north.  South of here is a bridge across the river.  To the east,
@@ -5132,10 +5762,17 @@ it must be the Mob Factory!"""
   direction = "south"
   to_vnum = 3051
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
 [[rooms]]
 vnum = 3048
 name = "Grubby Inn"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are inside the old Grubby Inn.  This place has not been cleaned for
 several decades, vile smells make you dizzy."""
@@ -5172,6 +5809,7 @@ several decades, vile smells make you dizzy."""
 vnum = 3049
 name = "Levee"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are at the levee.  South of here you see the river gently flowing west.
 The river bank is very low making it possible to enter the river.  Directly
@@ -5201,6 +5839,7 @@ across the river you can see a small boat landing built off of Kate's Diner."""
 vnum = 3050
 name = "Abandoned Warehouse"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 You are inside the only room in the old warehouse.  The place is very dusty
 and appears to have been unused for many years.  The skylight spills
@@ -5222,6 +5861,7 @@ violet-tinged light."""
 vnum = 3051
 name = "On the Bridge"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are standing on the stone bridge crosses the river.  The bridge is
 built out from the western city wall and the river flows west through an
@@ -5235,10 +5875,28 @@ opening in the wall ten feet below the bridge."""
   direction = "south"
   to_vnum = 3100
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["opening"]
+description = """
+You cannot really see it from here as it is somewhere beneath your feet."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar, just like the wall."""
+
 [[rooms]]
 vnum = 3052
 name = "Outside the West Gate of Midgaard"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  To the west you
@@ -5251,18 +5909,44 @@ wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 3040
   key = 3133
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
   to_vnum = 6000
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
+
 [[rooms]]
 vnum = 3053
 name = "Outside the East Gate of Midgaard"
 sector = "city"
+room_flags = ["law"]
 description = """
 You are by two small towers that have been built into the city wall and
 connected with a footbridge across the heavy wooden gate.  To the east the
@@ -5279,14 +5963,42 @@ the city wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door"]
   to_vnum = 3041
   key = 3133
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+It is built from large grey rocks that have been fastened to each other with
+some kind of mortar.  It is far too high to climb."""
+
+[[rooms.extra_descs]]
+keywords = ["tower", "towers"]
+description = """
+Both of the towers are built from large grey rocks that have been fastened to
+each other with some kind of mortar, just like the city wall."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+It is a set of very big double doors made from hard wood.  They have been
+reinforced with large iron bands to make them even more sturdy.  One of the
+doors is equipped with a very big lock."""
+
+[[rooms.extra_descs]]
+keywords = ["bridge", "footbridge"]
+description = """
+It is too high up to reach but it looks as if one easily could walk across it
+from one tower to the other."""
 
 [[rooms]]
 vnum = 3054
 name = "By the Temple Altar"
 sector = "inside"
+room_flags = ["indoors", "law", "safe"]
+heal_rate = 130
+mana_rate = 115
 description = """
 You are by the temple altar in the northern end of the Temple of Thoth.
 A huge altar made from white polished marble is standing in front of you and
@@ -5306,10 +6018,24 @@ seen a rainbow."""
   vnum = 3012
   max = 5
 
+[[rooms.extra_descs]]
+keywords = ["statue", "Thoth", "king", "god"]
+description = """
+The statue represents the Great God Thoth, holding a pen.  He has the head of
+an ibis and a kindly look on his face.  His pen is topped by a painted
+cube, the 6 faces of which represent the 6 aspects of his power."""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+Even though the altar is more than ten feet long it appears to be made from a
+single block of white virgin marble."""
+
 [[rooms]]
 vnum = 3056
 name = "The Fountain of Youth Apothecary"
 sector = "inside"
+room_flags = ["indoors", "law"]
 description = """
 An old man putters around behind the counter, making strange love potions
 and curative philtres.  He turns as you enter, and looks on with avarice.
@@ -5324,18 +6050,6 @@ Judging from the furnishings, he's been made very wealthy by his trade."""
   max = 5
 
     [[rooms.mob_resets.equips]]
-    vnum = 3080
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3081
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3082
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3083
     inv_only = true
 
@@ -5348,23 +6062,11 @@ Judging from the furnishings, he's been made very wealthy by his trade."""
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3086
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3087
     inv_only = true
 
     [[rooms.mob_resets.equips]]
-    vnum = 3088
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
     vnum = 3089
-    inv_only = true
-
-    [[rooms.mob_resets.equips]]
-    vnum = 3090
     inv_only = true
 
     [[rooms.mob_resets.equips]]
@@ -5379,6 +6081,7 @@ Judging from the furnishings, he's been made very wealthy by his trade."""
 vnum = 3057
 name = "In the air..."
 sector = "air"
+room_flags = ["law", "no_mob"]
 description = """
 WOW you can fly!  You are floating in the air above Temple Square of Midgaard."""
 
@@ -5389,4 +6092,3 @@ WOW you can fly!  You are floating in the air above Temple Square of Midgaard.""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 3005
-

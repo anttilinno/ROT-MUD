@@ -147,7 +147,7 @@ func (d *CommandDispatcher) cmdFlee(ch *types.Character, args string) {
 	}
 
 	// Show the new room
-	d.cmdLook(ch, "")
+	d.cmdLook(ch, "auto")
 }
 
 // directionName returns the name of a direction

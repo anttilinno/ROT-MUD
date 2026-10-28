@@ -18,6 +18,7 @@ func TestDemonLifecycle(t *testing.T) {
 	d := NewCommandDispatcher()
 	d.GameLoop = NewGameLoop()
 	d.GameLoop.World = world
+	d.GameLoop.Resets = NewResetSystem(world)
 	var out string
 	d.Output = func(_ *types.Character, msg string) { out += msg }
 	run := func(ch *types.Character, input string) string {

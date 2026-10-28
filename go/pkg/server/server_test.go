@@ -224,3 +224,16 @@ func TestLoadWorldWithFountain(t *testing.T) {
 		t.Logf("Fountain spawned in room %d (%s)", fountainRoom.Vnum, fountainRoom.Name)
 	}
 }
+
+// TestShopHandlerHasOutput: shop commands must reach the player; with no
+// Output wired, list/buy/sell/value ran silently.
+func TestShopHandlerHasOutput(t *testing.T) {
+	srv := New(slog.New(slog.NewTextHandler(os.Stdout, nil)))
+	srv.DataPath = "../../data"
+	if err := srv.LoadWorld(); err != nil {
+		t.Fatalf("failed to load world: %v", err)
+	}
+	if srv.Dispatcher.Shops == nil || srv.Dispatcher.Shops.Output == nil {
+		t.Fatal("shop handler has no Output")
+	}
+}

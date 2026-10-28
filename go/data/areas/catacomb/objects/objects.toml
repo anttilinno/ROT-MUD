@@ -65,6 +65,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "anti_good", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 5
 
@@ -89,6 +91,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_evil", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 4
 
@@ -127,6 +131,12 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+  [objects.container]
+  capacity = 15
+  flags = ["closeable", "closed", "locked", "pickproof"]
+  key = 2006
+  max_weight = 15
+
 [[objects]]
 vnum = 2008
 keywords = ["holy", "water", "flask"]
@@ -138,6 +148,10 @@ weight = 20
 cost = 880
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
+
+  [objects.magic]
+  level = 25
+  spells = ["bless", "sanctuary"]
 
 [[objects]]
 vnum = 2009
@@ -250,6 +264,12 @@ cost = 2200
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 11
+  max_charges = 4
+  charges = 4
+  spells = ["colour spray"]
+
 [[objects]]
 vnum = 2014
 keywords = ["shadow", "cloak"]
@@ -283,6 +303,10 @@ weight = 10
 cost = 920
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 10
+  spells = ["pass door", "faerie fire"]
+
 [[objects]]
 vnum = 2016
 keywords = ["templar", "templars", "sword", "wooden"]
@@ -296,10 +320,11 @@ wear_flags = ["take", "wield"]
 extra_flags = ["bless"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 6
 
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
-

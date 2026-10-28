@@ -137,6 +137,13 @@ func (c *CombatSystem) OneHit(ch, victim *types.Character, secondary bool) Damag
 	}
 
 	// Apply damage
+	// Parry, dodge and shield block apply to melee hits only (ROM's damage()
+	// checks them for dt >= TYPE_HIT); spells and skills like kick can't be
+	// dodged. A defended hit still starts the fight.
+	if dam > 0 && c.CheckDefenses(ch, victim) != DefenseNone {
+		c.Damage(ch, victim, 0, damType, false)
+		return result
+	}
 	result = c.Damage(ch, victim, dam, damType, true)
 
 	// Check for shield damage reflection

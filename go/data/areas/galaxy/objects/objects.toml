@@ -11,6 +11,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 6
 
@@ -40,6 +42,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "str"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["arm"]
+description = """
+These mighty armors have been worn by this immortal, since the ancient time."""
+
 [[objects]]
 vnum = 9304
 keywords = ["belt", "orion"]
@@ -62,6 +69,12 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "con"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["belt"]
+description = """
+You can immediately see that it belongs to Orion, from the three stars
+engraved on it."""
+
 [[objects]]
 vnum = 9305
 keywords = ["skull", "draco"]
@@ -73,6 +86,12 @@ weight = 200
 cost = 4300
 wear_flags = ["take", "hold"]
 extra_flags = ["hum", "magic", "nodrop"]
+
+  [objects.magic]
+  level = 15
+  max_charges = 5
+  charges = 5
+  spells = ["call lightning"]
 
 [[objects]]
 vnum = 9306
@@ -95,6 +114,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   [[objects.affects]]
   location = "ac"
   modifier = -2
+
+[[objects.extra_descs]]
+keywords = ["fleece"]
+description = """
+From a look it resembles the Golden Fleece that exists in the Greek myths."""
 
 [[objects]]
 vnum = 9307
@@ -122,6 +146,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "move"
   modifier = 20
 
+[[objects.extra_descs]]
+keywords = ["hoof"]
+description = """
+It is with these hooves that Taurus can stand against Orion's attacks."""
+
 [[objects]]
 vnum = 9308
 keywords = ["mask", "gemini"]
@@ -148,6 +177,12 @@ extra_flags = ["glow", "magic", "nodrop", "anti_evil"]
   location = "str"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["mask"]
+description = """
+You notice the mask has got two faces, one smiling and the other crying.
+You don't know which way you should wear it."""
+
 [[objects]]
 vnum = 9309
 keywords = ["shell", "cancer"]
@@ -170,6 +205,12 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "ac"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["shell"]
+description = """
+A shell which is dented in the middle, resulting from the Hercules' mighty
+pound when the Crab was still an enemy of Hercules in ancient times."""
+
 [[objects]]
 vnum = 9310
 keywords = ["skin", "leo"]
@@ -188,6 +229,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   ac_slash = 7
   ac_exotic = 5
 
+[[objects.extra_descs]]
+keywords = ["skin"]
+description = """
+A skin made of metal, which was worn by Hercules during his Ten Labours."""
+
 [[objects]]
 vnum = 9311
 keywords = ["bracelet", "virgo"]
@@ -203,6 +249,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   [[objects.affects]]
   location = "wis"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["bracelet"]
+description = """
+A bracelet of purity and youth, only worn by selected virgins."""
 
 [[objects]]
 vnum = 9312
@@ -230,6 +281,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "ac"
   modifier = -3
 
+[[objects.extra_descs]]
+keywords = ["scale"]
+description = """
+It is a shield of justice, used in the ancient battle against injustice."""
+
 [[objects]]
 vnum = 9313
 keywords = ["scale", "libra"]
@@ -256,6 +312,11 @@ extra_flags = ["hum", "magic", "nodrop"]
   location = "ac"
   modifier = 6
 
+[[objects.extra_descs]]
+keywords = ["scale"]
+description = """
+It is a shield of injustice, it picks on the innocent."""
+
 [[objects]]
 vnum = 9314
 keywords = ["sting", "scorpio"]
@@ -269,6 +330,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 4
   dice_size = 4
 
@@ -279,6 +342,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 3
+
+[[objects.extra_descs]]
+keywords = ["sting"]
+description = """
+This dreadful weapon put a lot of mortals to death before Scorpio was banished."""
 
 [[objects]]
 vnum = 9315
@@ -291,6 +359,17 @@ weight = 70
 cost = 3400
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic", "anti_evil"]
+
+[[objects.extra_descs]]
+keywords = ["arrow"]
+description = """
+It's an arrow of lightning; it will never miss any target."""
+
+  [objects.magic]
+  level = 10
+  max_charges = 10
+  charges = 10
+  spells = ["lightning bolt"]
 
 [[objects]]
 vnum = 9316
@@ -305,6 +384,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 9
 
@@ -315,6 +396,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["bow"]
+description = """
+The gigantic bow used by the Archer; it is a very powerful weapon."""
 
 [[objects]]
 vnum = 9317
@@ -342,6 +428,12 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "hitroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["horn"]
+description = """
+These strange horns are the work of gods, shaped to fit on hands.
+They look powerful indeed."""
+
 [[objects]]
 vnum = 9318
 keywords = ["vessel", "aquarius"]
@@ -353,6 +445,18 @@ weight = 120
 cost = 5900
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic", "anti_evil"]
+
+[[objects.extra_descs]]
+keywords = ["vessel"]
+description = """
+This vessel has been carried by the Water Bearer ever since she came to the
+Zodiac."""
+
+  [objects.magic]
+  level = 10
+  max_charges = 10
+  charges = 10
+  spells = ["create spring"]
 
 [[objects]]
 vnum = 9319
@@ -380,6 +484,12 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "ac"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["tail"]
+description = """
+This tail can actually be worn by mortals somehow as leggings ... another
+work of the gods."""
+
 [[objects]]
 vnum = 9320
 keywords = ["ring", "dignity"]
@@ -399,6 +509,12 @@ extra_flags = ["glow", "hum", "invis", "magic", "anti_evil"]
   [[objects.affects]]
   location = "mana"
   modifier = 25
+
+[[objects.extra_descs]]
+keywords = ["ring"]
+description = """
+This ring belongs to Cassiopeia, queen of the Universe.
+Mortals, do not touch!"""
 
 [[objects]]
 vnum = 9321
@@ -420,6 +536,14 @@ extra_flags = ["glow", "hum", "invis", "magic", "anti_evil"]
   location = "hitroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["sceptre"]
+description = """
+You'd better give it back, or the king of the Universe will punish you."""
+
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 9322
 keywords = ["ring", "universe"]
@@ -440,6 +564,11 @@ extra_flags = ["glow", "hum", "invis", "magic", "bless"]
   location = "mana"
   modifier = 10
 
+[[objects.extra_descs]]
+keywords = ["ring"]
+description = """
+It conceals the power of the universe."""
+
 [[objects]]
 vnum = 9323
 keywords = ["great", "dipper"]
@@ -453,6 +582,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "invis", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 6
 
@@ -524,3 +655,7 @@ cost = 0
 wear_flags = ["take"]
 extra_flags = ["glow", "invis"]
 
+[[objects.extra_descs]]
+keywords = ["chains"]
+description = """
+They certainly look important!"""

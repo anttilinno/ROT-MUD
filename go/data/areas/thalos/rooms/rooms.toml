@@ -2,6 +2,7 @@
 vnum = 5200
 name = "The Grand Gate of Thalos"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 You stand in the archway of a gigantic stone archway. The two
 steel gates have been forced open and have rusted in place. A hollow
@@ -254,8 +255,8 @@ into. The street continues north and south and buildings line the street."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5244
   flags = ["door"]
+  to_vnum = 5244
 
   [[rooms.exits]]
   direction = "south"
@@ -477,6 +478,7 @@ the city watchtowers."""
 vnum = 5219
 name = "The guild house"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are standing in what once was this city's ONLY guild house.
 Tables and chairs have been smashed and broken weapons lie strewn about
@@ -541,6 +543,7 @@ in the city."""
 vnum = 5221
 name = "The smithy"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 In here you find tools and anvils used to make various weapons
 and items. The walls have been stripped clean and only a few incomplete
@@ -641,6 +644,7 @@ tarnished and few would have any value anymore."""
 vnum = 5226
 name = "A ruined clay dwelling"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This was once a very plain house with nothing more than a few chairs
 and a bed. A cold fireplace suggests that the city has been abandoned
@@ -711,6 +715,7 @@ a small side street."""
 vnum = 5229
 name = "An abandoned shop"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 From the outside this place looks like an ordinary pile of rubble,
 but inside these cramped quarters you discover what used to be a shop
@@ -757,6 +762,7 @@ has fallen in, leaving a gaping hole above."""
 vnum = 5231
 name = "South wing of the city hall"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand in a large room attached to this end of the hallway which
 leads back north to the reception area.  Pedestals and columns have fallen
@@ -780,6 +786,7 @@ is a vine-covered archway leading out into a private courtyard."""
 vnum = 5232
 name = "The city hall"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This is the main reception area of Thalos' city hall. The walls have
 been charred and scored massively and debris is spread from wall to wall.
@@ -823,6 +830,7 @@ Hallways lead south and east."""
 vnum = 5233
 name = "East wing of the city hall"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 Here lies the remnants of a fancy office, possibly the mayor's. A few
 withered plants and broken pieces of furniture make this place anything
@@ -929,6 +937,7 @@ was once housed here. A shrieking howl chills your blood."""
 vnum = 5237
 name = "A tall dwelling"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This seems to be the tallest structure remaining in the city. At
 one time this could have been an inn of some sort, but now it's just
@@ -953,6 +962,7 @@ set of wooden steps leads up to a creaking second floor."""
 vnum = 5238
 name = "A small shack"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This cramped dwelling could not have housed more than one person. Now
 with the back wall missing, it could hold many more. Looking around you
@@ -1041,6 +1051,7 @@ south and a very weak looking ladder leads up into the tower."""
 vnum = 5242
 name = "A bath house"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This was once the bath house for the commoners of the city. Hot
 steamy water still wells up from a hole in the floor. Obviously there
@@ -1087,6 +1098,7 @@ building to the south."""
 vnum = 5244
 name = "An upright house"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This home is practically the only one around that is still standing.
 Except for the massive hole in the east wall, everything else looks
@@ -1109,6 +1121,7 @@ the hole in the east wall."""
 vnum = 5245
 name = "On the second floor"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 The minute you step off onto this floor you realize it was a mistake.
 The old rotted floorboards suddenly give way and you fall down, impaling
@@ -1213,6 +1226,7 @@ long."""
 vnum = 5250
 name = "The Temple of Thalos"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand within one of the most holy places in the realm. This
 stunning domed temple once housed the city's worshipers en masse.
@@ -1323,6 +1337,13 @@ for so long.  There is a small plaque on the stones."""
     [[rooms.mob_resets.equips]]
     vnum = 5202
     wear_loc = "hands"
+
+[[rooms.extra_descs]]
+keywords = ["sign", "plaque"]
+description = """
+This extension to Thalos, along with the dwarf forest, is made by Hatchet for
+any Merc Mud.
+copyright 1992"""
 
 [[rooms]]
 vnum = 5255
@@ -1467,6 +1488,7 @@ dark toward the east."""
 vnum = 5263
 name = "The darker dwarf forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You see a more dense foliage in these stunted trees.  The gloom caused
 by them is enhanced by a draft coming from all around.  The trail turns south
@@ -1484,6 +1506,7 @@ from the west."""
 vnum = 5264
 name = "The darker dwarf forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You see a more dense foliage in these stunted trees.  The gloom caused
 by them is enhanced by a draft coming from all around.  The trail turns east
@@ -1501,6 +1524,7 @@ from the north."""
 vnum = 5265
 name = "The darker dwarf forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You see a more dense foliage in these stunted trees.  The gloom caused
 by them is enhanced by a draft coming from all around.  The trail leads
@@ -1518,6 +1542,7 @@ east and west."""
 vnum = 5266
 name = "The darker dwarf forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You see a more dense foliage in these stunted trees.  The gloom caused
 by them is enhanced by a draft coming from all around.  The trail leads
@@ -1535,6 +1560,7 @@ down into a valley and west."""
 vnum = 5267
 name = "A valley in the dark dwarf forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You are in a valley in the dark dwarf forest.  Short black grass grows
 around you.  Trails lead in all directions."""
@@ -1553,8 +1579,8 @@ around you.  Trails lead in all directions."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 5268
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -1572,6 +1598,7 @@ around you.  Trails lead in all directions."""
 vnum = 5268
 name = "A small ugly cave"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You see a small cave.  Skeletons of many types of creatures litter the area.
 Obviously, no fox lives here!  The oppression makes you want to leave and
@@ -1579,17 +1606,24 @@ vomit."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 5267
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
   to_vnum = 5269
 
+[[rooms.extra_descs]]
+keywords = ["skeleton", "skeletons"]
+description = """
+Something is strange about these skeletons.  Upon further investigation, these
+skeletons appear illusionary."""
+
 [[rooms]]
 vnum = 5269
 name = "A small ugly cave"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You are in a small ugly cave.  More skeletons lie around.  It is obvious
 that the owner doesn't want you here.  The exit north is still visible.
@@ -1603,10 +1637,24 @@ Some writings are on this wall."""
   direction = "down"
   to_vnum = 5270
 
+[[rooms.extra_descs]]
+keywords = ["skeleton", "skeletons"]
+description = """
+Something is strange about these skeletons.  Upon further investigation, these
+skeletons appear illusionary."""
+
+[[rooms.extra_descs]]
+keywords = ["writings", "writing", "words"]
+description = """
+This cave along with the valley and dwarf forest is made by Hatchet for any
+Merc Mud.
+copyright 1992"""
+
 [[rooms]]
 vnum = 5270
 name = "Down the path into a dead end"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You are down the path.  There is no obvious exit in this place, exit the
 one back up north.  All around you, you see skeletons."""
@@ -1617,8 +1665,8 @@ one back up north.  All around you, you see skeletons."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 5100
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 5110
@@ -1635,11 +1683,19 @@ one back up north.  All around you, you see skeletons."""
     [[rooms.mob_resets.equips]]
     vnum = 5100
     wear_loc = "wield"
+
+[[rooms.extra_descs]]
+keywords = ["skeleton", "skeletons"]
+description = """
+Something is strange about these skeletons.  Upon further investigation, these
+skeletons appear illusionary.  In fact, through the skeletons, you see a
+secret door!!"""
 
 [[rooms]]
 vnum = 5271
 name = "The Valley in the dark dwarf forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You are in a valley in the forest.  To the north is a trail out of this
 dark valley.  South is more of this valley."""
@@ -1656,6 +1712,7 @@ dark valley.  South is more of this valley."""
 vnum = 5272
 name = "A dim trail in the dwarf forest"
 sector = "forest"
+room_flags = ["dark"]
 description = """
 You are in a dim trail in the dwarf forest.  Not much light passes through
 here.  To the south is a gloomy valley, while to the north the light grows
@@ -1828,4 +1885,3 @@ The trail leads north."""
   [[rooms.exits]]
   direction = "north"
   to_vnum = 5279
-

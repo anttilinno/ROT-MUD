@@ -2,14 +2,15 @@
 vnum = 5120
 name = "Mage's Academy"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The mages academy is fairly well decorated see that the drow prefer magic
 over physical power greatly."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5121
   flags = ["door"]
+  to_vnum = 5121
 
   [[rooms.mob_resets]]
   vnum = 5105
@@ -27,14 +28,15 @@ over physical power greatly."""
 vnum = 5121
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street going eastward. To the north is
 a building."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5120
   flags = ["door"]
+  to_vnum = 5120
 
   [[rooms.exits]]
   direction = "east"
@@ -52,6 +54,7 @@ a building."""
 vnum = 5122
 name = "Slave Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The room is in shambles. Straw is strewn all about the room as beds for the
 unfortunate creatures who have fallen prey to drow imperialism."""
@@ -72,14 +75,15 @@ unfortunate creatures who have fallen prey to drow imperialism."""
 vnum = 5123
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street leading west and south. To the
 north is a relatively small house."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5124
   flags = ["door"]
+  to_vnum = 5124
 
   [[rooms.exits]]
   direction = "south"
@@ -93,6 +97,7 @@ north is a relatively small house."""
 vnum = 5124
 name = "4th house"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside the 4th house of the city. Its inner courtyard is rather
 dull by drow standards and rather small as well."""
@@ -103,8 +108,8 @@ dull by drow standards and rather small as well."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5123
   flags = ["door"]
+  to_vnum = 5123
 
   [[rooms.mob_resets]]
   vnum = 5102
@@ -134,6 +139,7 @@ dull by drow standards and rather small as well."""
 vnum = 5125
 name = "Throne Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The throne room is basically similar to the inner courtyard in regards
 to decor. there is a small throne behind the altar but that is about it."""
@@ -158,6 +164,7 @@ to decor. there is a small throne behind the altar but that is about it."""
 vnum = 5126
 name = "Entrance Way"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the entrance way to the temple which opens up to the north
 into a large hallway going east and west. Small statues of spiders line the
@@ -175,6 +182,7 @@ entrance way's walls."""
 vnum = 5127
 name = "Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long hallway lined with adamantite. The walls are engraved
 with pictures of elves and spiders. The hallway continues east and west. As you
@@ -201,6 +209,7 @@ To the north is a obsidian stairway."""
 vnum = 5128
 name = "Long Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long hallway lined with adamantite. The walls are engraved
 with pictures of elves and spiders. The hallway continues east and west. As you
@@ -218,6 +227,7 @@ look down the hallway you can make out one or two figures moving away from you."
 vnum = 5129
 name = "Long Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long hallway lined with adamantite. The walls are engraved
 with pictures of elves and spiders. The hallway continues east and west. As you
@@ -226,8 +236,8 @@ To the north is a door."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5150
   flags = ["door"]
+  to_vnum = 5150
 
   [[rooms.exits]]
   direction = "east"
@@ -241,6 +251,7 @@ To the north is a door."""
 vnum = 5130
 name = "Long Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long hallway lined with adamantite. The walls are engraved
 with pictures of elves and spiders. The hallway continues east and west. As you
@@ -258,6 +269,7 @@ look down the hallway you can make out one or two figures moving away from you."
 vnum = 5131
 name = "Long Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long hallway lined with adamantite. The walls are engraved
 with pictures of elves and spiders. The hallway continues east and west. As you
@@ -275,6 +287,7 @@ look down the hallway you can make out one or two figures moving away from you."
 vnum = 5132
 name = "Long Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long hallway lined with adamantite. The walls are engraved
 with pictures of elves and spiders. The hallway continues east and west. As you
@@ -287,8 +300,8 @@ To the south is a door."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5133
   flags = ["door"]
+  to_vnum = 5133
 
   [[rooms.exits]]
   direction = "west"
@@ -298,6 +311,7 @@ To the south is a door."""
 vnum = 5133
 name = "Warrior's Barracks"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The room is a complete mess. None of the beds are made, clothes and other
 items have been left all about the room. Well drow warriors never were known
@@ -305,8 +319,8 @@ for neatness."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5132
   flags = ["door"]
+  to_vnum = 5132
 
   [[rooms.mob_resets]]
   vnum = 5101
@@ -320,6 +334,7 @@ for neatness."""
 vnum = 5134
 name = "Long Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a long hallway lined with adamantite. The walls are engraved
 with pictures of elves and spiders. The hallway continues east and west. As you
@@ -337,6 +352,7 @@ look down the hallway you can make out one or two figures moving away from you."
 vnum = 5135
 name = "Grand Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing at the bottom of a giant obsidian and adamantite
 stairway. The edges are trimmed with gold."""
@@ -353,6 +369,7 @@ stairway. The edges are trimmed with gold."""
 vnum = 5136
 name = "Grand Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the middle of a grand hallway. The walls are
 of the purest adamantite with gold trim. Mosaics line the walls."""
@@ -363,8 +380,8 @@ of the purest adamantite with gold trim. Mosaics line the walls."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5137
   flags = ["door"]
+  to_vnum = 5137
 
   [[rooms.exits]]
   direction = "down"
@@ -374,6 +391,7 @@ of the purest adamantite with gold trim. Mosaics line the walls."""
 vnum = 5137
 name = "Mage's Barracks"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The mage's living quarters is rather clean with the exception of a few
 used component containers. It is rather well decorated as well. Cots line the
@@ -381,13 +399,14 @@ floor for the mages to sleep on. the only door is to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5136
   flags = ["door"]
+  to_vnum = 5136
 
 [[rooms]]
 vnum = 5138
 name = "Grand Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are walking down a grand hallway, heavily decorated with adamantite
 and gold. To the north the hall goes down a flight of stairs while a door is
@@ -399,8 +418,8 @@ too the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5139
   flags = ["door"]
+  to_vnum = 5139
 
   [[rooms.exits]]
   direction = "down"
@@ -410,6 +429,7 @@ too the west."""
 vnum = 5139
 name = "Cleric's Barracks"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The bed chamber is brightly decorated with spider shaped statues, murals
 and the like. Large beds line the floor making this a comfortable room to live
@@ -417,21 +437,22 @@ in."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5138
   flags = ["door"]
+  to_vnum = 5138
 
 [[rooms]]
 vnum = 5140
 name = "Grand Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are climbing a set of obsidian stairs surrounded by adamantite walls.
 To the north are a set of large golden doors."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5141
   flags = ["door"]
+  to_vnum = 5141
 
   [[rooms.exits]]
   direction = "up"
@@ -441,6 +462,7 @@ To the north are a set of large golden doors."""
 vnum = 5141
 name = "Main Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the south side of a large auditorium used for services by the
 drow priestesses. In the center is a large sacrificial pit and beyond that is
@@ -452,8 +474,8 @@ an altar."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5140
   flags = ["door"]
+  to_vnum = 5140
 
   [[rooms.exits]]
   direction = "west"
@@ -463,6 +485,7 @@ an altar."""
 vnum = 5142
 name = "Eastern side of Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are on the eastern side of the chamber overlooking the pit. To the east
 is a door while to the north is an altar."""
@@ -473,8 +496,8 @@ is a door while to the north is an altar."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5146
   flags = ["door"]
+  to_vnum = 5146
 
   [[rooms.exits]]
   direction = "south"
@@ -484,6 +507,7 @@ is a door while to the north is an altar."""
 vnum = 5143
 name = "Sacrificial Pit"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 A you climb down into the pit thousands of spiders cover you tearing your
 body to shreds.
@@ -496,6 +520,7 @@ You've fallen, and you can't get up!!!"""
 vnum = 5144
 name = "Western side of Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are on the western side of the main chamber overlooking a sacrificial
 pit. To the north is an altar."""
@@ -512,6 +537,7 @@ pit. To the north is an altar."""
 vnum = 5145
 name = "The Altar"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in front of a highly and freshly bloodstained altar.
 Engraved on the top of the altar is a giant spider with a human head. Looking
@@ -537,14 +563,15 @@ down from the altar you see a large sacrificial pit."""
 vnum = 5146
 name = "Slave Cells"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the main room to the cell chambers for the slaves to be
 sacrificed. You notice there are no guards around."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5147
   flags = ["door"]
+  to_vnum = 5147
 
   [[rooms.exits]]
   direction = "west"
@@ -554,6 +581,7 @@ sacrificed. You notice there are no guards around."""
 vnum = 5147
 name = "Slave Pen"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Rotten meat and breads lie about the floor while shackles hang from the
 walls. The room wreaks of death. You almost become nauseous and decide to leave
@@ -561,13 +589,14 @@ the room since you were obviously too late to save the slave."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5146
   flags = ["door"]
+  to_vnum = 5146
 
 [[rooms]]
 vnum = 5148
 name = "Dais"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand upon a dais behind the altar. Above you is a enormous illusion
 of a female drow turning into a giant spider and back again. There is a door
@@ -579,8 +608,8 @@ to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5149
   flags = ["door"]
+  to_vnum = 5149
 
   [[rooms.mob_resets]]
   vnum = 5109
@@ -594,27 +623,29 @@ to the west."""
 vnum = 5149
 name = "The Treasury"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is obviously only a temporary storage place for the collected
 treasure being rather bare."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5148
   flags = ["door"]
+  to_vnum = 5148
 
 [[rooms]]
 vnum = 5150
 name = "Weaponsmaster's Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This one person bedchamber is very elegant. The owner must be held in high
 to get this kind of treatment."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5129
   flags = ["door"]
+  to_vnum = 5129
 
   [[rooms.mob_resets]]
   vnum = 5106
@@ -632,6 +663,7 @@ to get this kind of treatment."""
 vnum = 5100
 name = "City Entrance"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the entrance to a small underground city. A great adamantite
 gate lies open to the west allowing entrance into the city."""
@@ -642,13 +674,24 @@ gate lies open to the west allowing entrance into the city."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 5270
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["hole"]
+description = """
+A small hole that looks to have been sealed at one time."""
+
+[[rooms.extra_descs]]
+keywords = ["gate"]
+description = """
+A large adamantite gate with giant spider shaped emblems stands here."""
 
 [[rooms]]
 vnum = 5101
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate street going north-south. A large gate
 lies to the east while a building lies to the west."""
@@ -681,6 +724,7 @@ lies to the east while a building lies to the west."""
 vnum = 5102
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street going north and west."""
 
@@ -696,6 +740,7 @@ You walk along a highly ornate city street going north and west."""
 vnum = 5103
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street going east-west. A large house
 stands to the south."""
@@ -716,6 +761,7 @@ stands to the south."""
 vnum = 5104
 name = "3rd House"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside the 3rd house of the city; it is fairly well decorated
 by drow standards having a few statues, murals and such. A door leads to the
@@ -727,8 +773,8 @@ south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5105
   flags = ["door"]
+  to_vnum = 5105
 
   [[rooms.mob_resets]]
   vnum = 5102
@@ -758,14 +804,15 @@ south."""
 vnum = 5105
 name = "Throne Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The throne room of the 3rd house is about as decorated as the inner
 courtyard except with a blood covered altar in the center of the room."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5104
   flags = ["door"]
+  to_vnum = 5104
 
   [[rooms.mob_resets]]
   vnum = 5107
@@ -783,6 +830,7 @@ courtyard except with a blood covered altar in the center of the room."""
 vnum = 5106
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street going east-west. To the north
 is a large building."""
@@ -803,6 +851,7 @@ is a large building."""
 vnum = 5107
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street leading north and east. To the
 south is an extremely large house."""
@@ -823,6 +872,7 @@ south is an extremely large house."""
 vnum = 5108
 name = "2nd House"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand inside the 2nd house of the city. The room is highly decorated
 with statues of spiders and murals everywhere."""
@@ -833,8 +883,8 @@ with statues of spiders and murals everywhere."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5109
   flags = ["door"]
+  to_vnum = 5109
 
   [[rooms.mob_resets]]
   vnum = 5102
@@ -864,14 +914,15 @@ with statues of spiders and murals everywhere."""
 vnum = 5109
 name = "Throne Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The throne room of the 2nd house is just a little more decorative than
 the inner courtyard having an altar in the center of the room."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5108
   flags = ["door"]
+  to_vnum = 5108
 
   [[rooms.mob_resets]]
   vnum = 5107
@@ -889,6 +940,7 @@ the inner courtyard having an altar in the center of the room."""
 vnum = 5110
 name = "Main Gate"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the entrance to the 1st house of the city. A large gate, almost
 as big and elegant as the one at the entrance to the city, stands here."""
@@ -903,13 +955,14 @@ as big and elegant as the one at the entrance to the city, stands here."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5111
   flags = ["door"]
+  to_vnum = 5111
 
 [[rooms]]
 vnum = 5111
 name = "1st House"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the inner courtyard of the 1st and largest house in the city.
 The room is extremely large and decorative. Mural and paintings hang on the
@@ -917,8 +970,8 @@ walls depicting some battles and a spider queen."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5110
   flags = ["door"]
+  to_vnum = 5110
 
   [[rooms.exits]]
   direction = "west"
@@ -952,14 +1005,15 @@ walls depicting some battles and a spider queen."""
 vnum = 5112
 name = "Throne Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The throne room of the 1st house is in one word...awesome. It is so
 horrifying it is almost beautiful."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5113
   flags = ["door"]
+  to_vnum = 5113
 
   [[rooms.exits]]
   direction = "east"
@@ -969,14 +1023,15 @@ horrifying it is almost beautiful."""
 vnum = 5113
 name = "Main Chamber"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the council chamber for the Matron Mother herself. A huge table
 and chairs surrounding it sits in the center of the room."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5112
   flags = ["door"]
+  to_vnum = 5112
 
   [[rooms.mob_resets]]
   vnum = 5108
@@ -994,6 +1049,7 @@ and chairs surrounding it sits in the center of the room."""
 vnum = 5114
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street leading north-south and east."""
 
@@ -1013,6 +1069,7 @@ You walk along a highly ornate city street leading north-south and east."""
 vnum = 5115
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street leading south. A building is
 to the west."""
@@ -1023,20 +1080,21 @@ to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 5116
   flags = ["door"]
+  to_vnum = 5116
 
 [[rooms]]
 vnum = 5116
 name = "Cleric Academy"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is the most lavish of the academies being that it is for the clerics."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 5115
   flags = ["door"]
+  to_vnum = 5115
 
   [[rooms.mob_resets]]
   vnum = 5105
@@ -1054,14 +1112,15 @@ This is the most lavish of the academies being that it is for the clerics."""
 vnum = 5117
 name = "City street"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You walk along a highly ornate city street going east-west. To the north
 is a giant temple."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 5119
   flags = ["door"]
+  to_vnum = 5119
 
   [[rooms.exits]]
   direction = "east"
@@ -1075,6 +1134,7 @@ is a giant temple."""
 vnum = 5118
 name = "Warrior's Academy"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "This looks more like a barracks than a school."
 
   [[rooms.exits]]
@@ -1105,6 +1165,7 @@ description = "This looks more like a barracks than a school."
 vnum = 5119
 name = "Entrance to the Temple of Lloth"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The temple is the largest building in the city. Even it's doors are beyond
 imagination. Inside of the temple entrance, the walls are made of gold and
@@ -1112,10 +1173,9 @@ adamantite."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 5117
   flags = ["door"]
+  to_vnum = 5117
 
   [[rooms.exits]]
   direction = "down"
   to_vnum = 5126
-

@@ -11,6 +11,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "evil", "magic", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 10
 
@@ -39,6 +42,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "evil", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 6
 
@@ -58,6 +63,8 @@ cost = 6300
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 3
   dice_size = 10
 
@@ -86,6 +93,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "invis", "magic", "nodrop", "noremove"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 9
   dice_size = 4
 
@@ -100,6 +110,20 @@ extra_flags = ["hum", "invis", "magic", "nodrop", "noremove"]
   [[objects.affects]]
   location = "hit"
   modifier = 50
+
+[[objects.extra_descs]]
+keywords = ["sword"]
+description = """
+The blade of the sword is a full meter long and straight as an arrow, with
+lightly-fluted sides.  Both edges are keened down to perfect lines, invisibly
+sharp.  Perfection like this could have only been forged by a god.  The black
+hilt is contrasted only by the faint symbol of a white arrow.
+Upon the blade is engraved a poem:
+
+                      Farslayer howls across the world
+                      For thy heart, for thy heart, who hast wronged me!
+                      Vengeance is his who casts the blade
+                      Yet he will in the end no triumph see."""
 
 [[objects]]
 vnum = 10405
@@ -147,6 +171,9 @@ cost = 4800
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 10
 
@@ -166,6 +193,9 @@ cost = 9400
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
+  flags = ["flaming"]
   dice_number = 7
   dice_size = 5
 
@@ -218,6 +248,8 @@ cost = 7600
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 7
   dice_size = 4
 
@@ -253,6 +285,12 @@ weight = 70
 cost = 74600
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 46
+  max_charges = 10
+  charges = 10
+  spells = ["general purpose"]
+
 [[objects]]
 vnum = 10413
 keywords = ["circular", "saw"]
@@ -266,6 +304,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 6
   dice_size = 6
 
@@ -289,6 +329,12 @@ cost = 5000
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
 
+  [objects.magic]
+  level = 48
+  max_charges = 10
+  charges = 10
+  spells = ["sleep"]
+
 [[objects]]
 vnum = 10415
 keywords = ["bloody", "black", "talon"]
@@ -302,6 +348,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["evil", "magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
+  flags = ["vampiric"]
   dice_number = 4
   dice_size = 10
 
@@ -320,6 +369,10 @@ weight = 10
 cost = 1170
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 50
+  spells = ["teleport", "remove curse", "refresh"]
+
 [[objects]]
 vnum = 10417
 keywords = ["hell", "hound", "teeth"]
@@ -332,6 +385,9 @@ cost = 7500
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["flaming"]
   dice_number = 6
   dice_size = 6
 
@@ -350,6 +406,10 @@ weight = 10
 cost = 970
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 47
+  spells = ["create spring", "faerie fog"]
+
 [[objects]]
 vnum = 10419
 keywords = ["ice", "spear", "two-handed"]
@@ -362,6 +422,9 @@ cost = 1330
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["frost", "two_hands"]
   dice_number = 6
   dice_size = 7
 
@@ -377,6 +440,9 @@ cost = 2400
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "pierce"
+  flags = ["frost", "two_hands"]
   dice_number = 9
   dice_size = 4
 
@@ -395,6 +461,11 @@ weight = 20
 cost = 20
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 30
+  hunger = 30
+  poisoned = false
+
 [[objects]]
 vnum = 10422
 keywords = ["blueprint"]
@@ -405,6 +476,11 @@ level = 0
 weight = 10
 cost = 100
 wear_flags = ["take", "hold"]
+
+  [objects.food]
+  full = 31
+  hunger = 31
+  poisoned = false
 
 [[objects]]
 vnum = 10423
@@ -418,6 +494,8 @@ cost = 3400
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 10
 
@@ -459,6 +537,12 @@ weight = 20
 cost = 5300
 wear_flags = ["take", "hold"]
 
+  [objects.magic]
+  level = 53
+  max_charges = 10
+  charges = 10
+  spells = ["cure poison"]
+
 [[objects]]
 vnum = 10426
 keywords = ["unholy", "robes", "pile", "cloth"]
@@ -494,6 +578,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  flags = ["vampiric"]
   dice_number = 12
   dice_size = 3
 
@@ -554,6 +640,10 @@ weight = 10
 cost = 2400
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 51
+  spells = ["cure blindness", "detect evil", "shield"]
+
 [[objects]]
 vnum = 10431
 keywords = ["ionic", "torque", "wrench"]
@@ -566,6 +656,8 @@ cost = 6500
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 5
   dice_size = 8
 
@@ -605,6 +697,12 @@ cost = 16600
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 50
+  charges = 50
+  spells = ["summon"]
+
 [[objects]]
 vnum = 10434
 keywords = ["figurine", "dark", "horse", "nightmare"]
@@ -616,6 +714,12 @@ weight = 30
 cost = 18900
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 54
+  max_charges = 50
+  charges = 50
+  spells = ["teleport"]
 
 [[objects]]
 vnum = 10435
@@ -629,6 +733,12 @@ cost = 3900
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["weaken"]
+
 [[objects]]
 vnum = 10436
 keywords = ["figurine", "red", "dragon"]
@@ -640,6 +750,12 @@ weight = 30
 cost = 11000
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["mass invis"]
 
 [[objects]]
 vnum = 10437
@@ -653,6 +769,12 @@ cost = 17600
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["acid blast"]
+
 [[objects]]
 vnum = 10438
 keywords = ["figurine", "green", "dragon"]
@@ -665,6 +787,12 @@ cost = 37800
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["gas breath"]
+
 [[objects]]
 vnum = 10439
 keywords = ["figurine", "blue", "dragon"]
@@ -676,6 +804,12 @@ weight = 30
 cost = 1840
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
+
+  [objects.magic]
+  level = 54
+  max_charges = 10
+  charges = 10
+  spells = ["faerie fire"]
 
 [[objects]]
 vnum = 10440
@@ -693,6 +827,12 @@ extra_flags = ["glow"]
   location = "con"
   modifier = 1
 
+  [objects.magic]
+  level = 52
+  max_charges = 10
+  charges = 10
+  spells = ["remove curse"]
+
 [[objects]]
 vnum = 10441
 keywords = ["photon", "displacement", "matrix"]
@@ -706,6 +846,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "bash"
   dice_number = 15
   dice_size = 2
 
@@ -754,6 +896,10 @@ weight = 10
 cost = 1520
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 54
+  spells = ["pass door", "refresh"]
+
 [[objects]]
 vnum = 10444
 keywords = ["manes", "claws"]
@@ -766,6 +912,8 @@ cost = 2900
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 30
 
@@ -785,6 +933,8 @@ cost = 6400
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "fire"
   dice_number = 5
   dice_size = 8
 
@@ -858,6 +1008,8 @@ cost = 6400
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 7
   dice_size = 5
 
@@ -881,6 +1033,13 @@ cost = 5000
 wear_flags = ["take", "hold"]
 extra_flags = ["melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["fire", "opal", "gem"]
+description = """
+The fire opal is a nicely-polished round gem, with orange, gold, and red
+mixed together like the heart of flame.  You can almost feel the hellfire
+from whence it came."""
+
 [[objects]]
 vnum = 10450
 keywords = ["hellstone", "hell", "stone"]
@@ -893,3 +1052,9 @@ cost = 10000
 wear_flags = ["take", "hold"]
 extra_flags = ["evil", "melt_drop"]
 
+[[objects.extra_descs]]
+keywords = ["hellstone", "hell", "stone"]
+description = """
+The hellstones are mined from the deepest pits of Hell at the cost of the
+blood, sweat, and pain of hundreds of damned souls.  You feel vaguely ill
+as you gaze into its lustrous black heart."""

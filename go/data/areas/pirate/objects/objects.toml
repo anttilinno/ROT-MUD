@@ -22,6 +22,13 @@ extra_flags = ["glow", "invis"]
   location = "hit"
   modifier = 20
 
+[[objects.extra_descs]]
+keywords = ["amulet", "captain"]
+description = """
+It is a small coin shaped amulet hung on a thin gold chain.  On the
+face of the amulet is a picture of a dagger pointing down at a set
+of skull and crossbones."""
+
 [[objects]]
 vnum = 16001
 keywords = ["key", "long", "wooden"]
@@ -64,6 +71,17 @@ item_type = "container"
 level = 1
 weight = 3
 cost = 500
+
+[[objects.extra_descs]]
+keywords = ["log", "captain"]
+description = """
+It is a very old book which the captain uses to keep track of his journeys."""
+
+  [objects.container]
+  capacity = 100
+  flags = ["closed", "pickproof"]
+  key = 16003
+  max_weight = 100
 
 [[objects]]
 vnum = 16005
@@ -526,6 +544,8 @@ cost = 500
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 4
   dice_size = 6
 
@@ -550,6 +570,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "anti_good", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 5
 
@@ -573,6 +595,8 @@ cost = 150
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 10
   dice_size = 2
 
@@ -604,6 +628,22 @@ extra_flags = ["glow", "invis", "magic", "bless", "anti_evil"]
   location = "damroll"
   modifier = 3
 
+[[objects.extra_descs]]
+keywords = ["charm", "good", "luck"]
+description = """
+On it is written :
+
+       Straighten your chin up and smile a bright smile,
+       The GODS are on your side thru each and every trial.
+       Don't worry about your troubles or even of your woes.
+       Because the GODS wish you the best of luck in everything you do!"""
+
+  [objects.magic]
+  level = 15
+  max_charges = 5
+  charges = 5
+  spells = ["bless"]
+
 [[objects]]
 vnum = 16026
 keywords = ["foot", "lucky", "rabbit"]
@@ -624,6 +664,12 @@ extra_flags = ["glow", "invis", "magic", "bless", "anti_evil"]
   location = "ac"
   modifier = -10
 
+  [objects.magic]
+  level = 15
+  max_charges = 3
+  charges = 3
+  spells = ["bless"]
+
 [[objects]]
 vnum = 16027
 keywords = ["jug", "beer"]
@@ -634,6 +680,12 @@ level = 42
 weight = 4
 cost = 10
 wear_flags = ["take", "hold"]
+
+  [objects.drink]
+  capacity = 10
+  current = 7
+  liquid = "beer"
+  poisoned = false
 
 [[objects]]
 vnum = 16028
@@ -646,6 +698,18 @@ weight = 10
 cost = 500
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "hum"]
+
+[[objects.extra_descs]]
+keywords = ["flag", "pirates"]
+description = """
+there is a picture of a dagger pointed down upon a white set of skull and
+crossbones.  In small leters you see : Amos Trask, The Dagger of the Sea!"""
+
+  [objects.magic]
+  level = 7
+  max_charges = 10
+  charges = 10
+  spells = ["chill touch"]
 
 [[objects]]
 vnum = 16029
@@ -785,6 +849,12 @@ level = 1
 weight = 35
 cost = 1000
 
+  [objects.container]
+  capacity = 100
+  flags = ["closed", "pickproof"]
+  key = 16000
+  max_weight = 100
+
 [[objects]]
 vnum = 16035
 keywords = ["diamond", "black"]
@@ -842,6 +912,9 @@ extra_flags = ["glow", "hum"]
   location = "con"
   modifier = -1
 
+  [objects.light]
+  duration = 120
+
 [[objects]]
 vnum = 16039
 keywords = ["crate", "wooden"]
@@ -851,6 +924,12 @@ item_type = "container"
 level = 1
 weight = 15
 cost = 200
+
+  [objects.container]
+  capacity = 150
+  flags = ["closeable"]
+  key = 0
+  max_weight = 150
 
 [[objects]]
 vnum = 16040
@@ -863,6 +942,11 @@ weight = 2
 cost = 10
 wear_flags = ["take", "hold"]
 
+  [objects.food]
+  full = 6
+  hunger = 4
+  poisoned = false
+
 [[objects]]
 vnum = 16041
 keywords = ["apple"]
@@ -873,6 +957,11 @@ level = 1
 weight = 2
 cost = 10
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 6
+  hunger = 4
+  poisoned = true
 
 [[objects]]
 vnum = 16042
@@ -885,6 +974,12 @@ weight = 20
 cost = 100
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 30
+  current = 30
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 16043
 keywords = ["carton", "milk"]
@@ -895,6 +990,12 @@ level = 1
 weight = 3
 cost = 40
 wear_flags = ["take", "hold"]
+
+  [objects.drink]
+  capacity = 10
+  current = 10
+  liquid = "milk"
+  poisoned = false
 
 [[objects]]
 vnum = 16044
@@ -908,6 +1009,8 @@ cost = 200
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 10
 
@@ -923,6 +1026,12 @@ cost = 900
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "invis", "magic"]
 
+  [objects.magic]
+  level = 18
+  max_charges = 5
+  charges = 5
+  spells = ["heal"]
+
 [[objects]]
 vnum = 16046
 keywords = ["guano"]
@@ -933,6 +1042,10 @@ level = 5
 weight = 1
 cost = 500
 wear_flags = ["take", "head"]
+
+  [objects.magic]
+  level = 5
+  spells = ["stone skin", "fly", "refresh"]
 
 [[objects]]
 vnum = 16047
@@ -945,6 +1058,10 @@ weight = 8
 cost = 500
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 26
+  spells = ["stone skin", "cause critical", "shield"]
+
 [[objects]]
 vnum = 16048
 keywords = ["feather", "wand"]
@@ -955,6 +1072,12 @@ level = 10
 weight = 3
 cost = 1000
 wear_flags = ["take", "hold"]
+
+  [objects.magic]
+  level = 32
+  max_charges = 3
+  charges = 3
+  spells = ["fly"]
 
 [[objects]]
 vnum = 16049
@@ -967,6 +1090,12 @@ weight = 5
 cost = 100
 wear_flags = ["take", "about"]
 
+  [objects.container]
+  capacity = 300
+  flags = ["closeable"]
+  key = 1
+  max_weight = 300
+
 [[objects]]
 vnum = 16050
 keywords = ["fish"]
@@ -977,6 +1106,11 @@ level = 0
 weight = 2
 cost = 50
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 24
+  hunger = 20
+  poisoned = false
 
 [[objects]]
 vnum = 16051
@@ -991,6 +1125,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 8
   dice_size = 3
 
@@ -1012,6 +1148,9 @@ level = 2
 weight = 0
 cost = 0
 
+  [objects.money]
+  amount = 2000
+
 [[objects]]
 vnum = 16053
 keywords = ["katana", "blade"]
@@ -1024,6 +1163,8 @@ cost = 200
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 15
 
@@ -1074,6 +1215,8 @@ wear_flags = ["wield"]
 extra_flags = ["hum", "bless"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 15
 
@@ -1113,6 +1256,12 @@ weight = 500
 cost = 0
 extra_flags = ["hum", "magic"]
 
+  [objects.container]
+  capacity = 3000
+  flags = ["closeable"]
+  key = 0
+  max_weight = 3000
+
 [[objects]]
 vnum = 16104
 keywords = ["ducky", "rubber"]
@@ -1143,6 +1292,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 4
 
@@ -1163,4 +1314,3 @@ item_type = "key"
 level = 0
 weight = 1
 cost = 0
-

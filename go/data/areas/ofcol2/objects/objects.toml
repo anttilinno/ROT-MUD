@@ -10,8 +10,16 @@ cost = 420
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 8
+
+[[objects.extra_descs]]
+keywords = ["handaxe", "hand", "axe"]
+description = """
+You see a finely made axe.  Iron, with a nice wooden shaft, this axe can
+withstand years of use."""
 
 [[objects]]
 vnum = 601
@@ -25,12 +33,19 @@ cost = 530
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 5
 
   [[objects.affects]]
   location = "damroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["meat", "cleaver"]
+description = """
+This meat cleaver is made of good steel."""
 
 [[objects]]
 vnum = 602
@@ -43,6 +58,11 @@ weight = 100
 cost = 50
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
+
 [[objects]]
 vnum = 603
 keywords = ["side", "meat", "pork"]
@@ -53,6 +73,11 @@ level = 0
 weight = 100
 cost = 42
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 23
+  hunger = 23
+  poisoned = false
 
 [[objects]]
 vnum = 604
@@ -65,6 +90,11 @@ weight = 120
 cost = 21
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 30
+  hunger = 30
+  poisoned = false
+
 [[objects]]
 vnum = 605
 keywords = ["meat", "chicken"]
@@ -75,6 +105,11 @@ level = 0
 weight = 50
 cost = 10
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 16
+  hunger = 16
+  poisoned = false
 
 [[objects]]
 vnum = 606
@@ -129,6 +164,11 @@ weight = 20
 cost = 2
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
+
 [[objects]]
 vnum = 610
 keywords = ["lettuce"]
@@ -139,6 +179,11 @@ level = 0
 weight = 20
 cost = 2
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
 
 [[objects]]
 vnum = 611
@@ -151,6 +196,12 @@ weight = 50
 cost = 3
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 20
+  current = 20
+  liquid = "milk"
+  poisoned = false
+
 [[objects]]
 vnum = 612
 keywords = ["apple"]
@@ -162,6 +213,11 @@ weight = 10
 cost = 1
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 8
+  hunger = 8
+  poisoned = false
+
 [[objects]]
 vnum = 613
 keywords = ["corn"]
@@ -172,6 +228,11 @@ level = 0
 weight = 10
 cost = 3
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 8
+  hunger = 8
+  poisoned = false
 
 [[objects]]
 vnum = 614
@@ -196,6 +257,8 @@ cost = 122
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 3
 
@@ -538,6 +601,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 4
 
@@ -978,6 +1044,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 6
 
@@ -1000,6 +1068,12 @@ weight = 10
 cost = 12
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 2
+  current = 2
+  liquid = "whisky"
+  poisoned = false
+
 [[objects]]
 vnum = 649
 keywords = ["ale", "quart"]
@@ -1011,6 +1085,12 @@ weight = 20
 cost = 10
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 32
+  current = 32
+  liquid = "ale"
+  poisoned = false
+
 [[objects]]
 vnum = 650
 keywords = ["port", "brew", "quart"]
@@ -1021,6 +1101,12 @@ level = 0
 weight = 20
 cost = 18
 wear_flags = ["take"]
+
+  [objects.drink]
+  capacity = 32
+  current = 32
+  liquid = "dark ale"
+  poisoned = false
 
 [[objects]]
 vnum = 651
@@ -1070,6 +1156,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 6
 
@@ -1302,6 +1391,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 10
 
@@ -1328,6 +1419,12 @@ extra_flags = ["magic", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "int"
   modifier = 1
+
+  [objects.magic]
+  level = 14
+  max_charges = 4
+  charges = 4
+  spells = ["heal"]
 
 [[objects]]
 vnum = 664
@@ -1374,6 +1471,8 @@ cost = 760
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 3
 
@@ -1396,6 +1495,12 @@ weight = 100
 cost = 100
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 100
+  flags = []
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 668
 keywords = ["claw", "golden"]
@@ -1409,6 +1514,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 6
   dice_size = 5
 
@@ -1429,10 +1536,11 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 8
 
   [[objects.affects]]
   location = "damroll"
   modifier = 3
-

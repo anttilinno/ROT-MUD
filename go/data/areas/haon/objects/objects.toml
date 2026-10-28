@@ -10,8 +10,16 @@ cost = 820
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 6
+
+[[objects.extra_descs]]
+keywords = ["axe", "lumber"]
+description = """
+It is a heavy axe of the kind lumberjacks use to chop down trees."""
 
 [[objects]]
 vnum = 6001
@@ -30,6 +38,11 @@ wear_flags = ["take", "body"]
   ac_slash = 3
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["shirt"]
+description = """
+It is an extra large, chequered shirt made from heavy cloth."""
+
 [[objects]]
 vnum = 6002
 keywords = ["boots"]
@@ -47,6 +60,12 @@ wear_flags = ["take", "feet"]
   ac_slash = 3
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["boots"]
+description = """
+They are fashioned from rough leather that has been oiled frequently to make
+it stay waterproof.  They look worn but quite functional."""
+
 [[objects]]
 vnum = 6003
 keywords = ["fireplace"]
@@ -56,6 +75,19 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["fireplace"]
+description = """
+It is fashioned from stones of various sizes that have been stacked on top of
+each other and fastened with mortar.  Its chimney is constructed likewise and
+leads the smoke out through the low cabin ceiling."""
+
+  [objects.container]
+  capacity = 200
+  flags = []
+  key = 0
+  max_weight = 200
 
 [[objects]]
 vnum = 6005
@@ -68,6 +100,18 @@ weight = 400
 cost = 100
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["chest"]
+description = """
+It is a robust chest made from short, heavy planks that have been fastened
+together with tenons.  It is equipped with a simple brass lock."""
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed", "locked"]
+  key = 6006
+  max_weight = 20
+
 [[objects]]
 vnum = 6006
 keywords = ["key"]
@@ -78,6 +122,11 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["key"]
+description = """
+It is a small, simple brass key with no inscriptions or marks of any kind."""
 
 [[objects]]
 vnum = 6007
@@ -90,6 +139,14 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["coins"]
+description = """
+The coins seem to be gold.  They are obviously valuable."""
+
+  [objects.money]
+  amount = 189
+
 [[objects]]
 vnum = 6010
 keywords = ["blackberries"]
@@ -100,6 +157,16 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["blackberries"]
+description = """
+They look very tasty indeed."""
+
+  [objects.food]
+  full = 3
+  hunger = 3
+  poisoned = false
 
 [[objects]]
 vnum = 6011
@@ -112,6 +179,16 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["mushroom"]
+description = """
+It is a tasty little thing."""
+
+  [objects.food]
+  full = 6
+  hunger = 6
+  poisoned = false
+
 [[objects]]
 vnum = 6013
 keywords = ["water", "barrel"]
@@ -123,6 +200,12 @@ weight = 200
 cost = 20
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 256
+  current = 256
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 6102
 keywords = ["tree", "opening"]
@@ -132,6 +215,25 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["opening"]
+description = """
+The opening is far too narrow for you to squeeze through but it looks as if the
+tree is hollow."""
+
+[[objects.extra_descs]]
+keywords = ["tree"]
+description = """
+This enormous tree must be a thousand years old.  Its rough bark looks grey
+and pale and is decorated with scratches and claw marks.  On its west side is a
+small opening just above ground level."""
+
+  [objects.container]
+  capacity = 1000
+  flags = []
+  key = 0
+  max_weight = 400
 
 [[objects]]
 vnum = 6103
@@ -143,6 +245,9 @@ level = 0
 weight = 200
 cost = 0
 wear_flags = ["take", "hold"]
+
+  [objects.light]
+  duration = 25
 
 [[objects]]
 vnum = 6104
@@ -156,6 +261,8 @@ cost = 290
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 5
 
@@ -185,6 +292,18 @@ weight = 50
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["toadstool"]
+description = """
+It is a large, brown boletus that must weigh nearly five pounds.  The top
+surface is covered in a thin layer of transparent slime that emits a weak,
+musty smell.  Not the most delicious thing you have seen."""
+
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = false
+
 [[objects]]
 vnum = 6107
 keywords = ["toadstool"]
@@ -195,6 +314,18 @@ level = 0
 weight = 50
 cost = 0
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["toadstool"]
+description = """
+It is a large, brown boletus that must weigh nearly five pounds.  It has small
+white spots and the top surface is covered in a thin layer of transparent slime
+that emits a weak, musty smell.  Not the most delicious thing you have seen."""
+
+  [objects.food]
+  full = 12
+  hunger = 12
+  poisoned = true
 
 [[objects]]
 vnum = 6110
@@ -207,6 +338,15 @@ weight = 20
 cost = 350
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["potion", "yellow"]
+description = """
+It has a deep yellow colour and and a strong spicy smell."""
+
+  [objects.magic]
+  level = 15
+  spells = ["giant strength"]
 
 [[objects]]
 vnum = 6111
@@ -224,6 +364,11 @@ wear_flags = ["take", "shield"]
   ac_bash = 6
   ac_slash = 6
   ac_exotic = 3
+
+[[objects.extra_descs]]
+keywords = ["shield", "large"]
+description = """
+It is made from hard wood that has been reinforced with heavy iron bands."""
 
 [[objects]]
 vnum = 6112
@@ -243,6 +388,11 @@ extra_flags = ["magic"]
   ac_slash = 6
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["crown", "iron"]
+description = """
+It is a heavy human-sized crown made from solid iron."""
+
 [[objects]]
 vnum = 6114
 keywords = ["ring", "iron"]
@@ -254,6 +404,12 @@ weight = 10
 cost = 50
 wear_flags = ["take", "finger"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["ring", "iron"]
+description = """
+It is a quite heavy human-sized ring made from solid iron.  It lacks
+decorations of any kind."""
 
 [[objects]]
 vnum = 6155
@@ -268,6 +424,7 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 8
-

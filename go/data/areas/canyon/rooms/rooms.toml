@@ -136,6 +136,7 @@ climb a rise in the canyon floor to the north."""
 vnum = 9220
 name = "Dark Cave"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You notice a path winding east among some huge boulders.  You feel a powerful
 source of energy from that direction."""
@@ -164,6 +165,7 @@ source of energy from that direction."""
 vnum = 9221
 name = "Darker Caves"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You can barely see your way even with a light source.  The rocks of the cave
 are even darker than the darkness.  You hear a powerful humming all around
@@ -198,6 +200,7 @@ can't see where you are going."""
 vnum = 9222
 name = "Darker Caves"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You can barely see your way even with a light source.  The rocks of the cave
 are even darker than the darkness.  You hear a powerful humming all around
@@ -244,6 +247,7 @@ can't see where you are going."""
 vnum = 9223
 name = "Darker Caves"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You can barely see your way even with a light source.  The rocks of the cave
 are even darker than the darkness.  You hear a powerful humming all around you.
@@ -274,6 +278,7 @@ you can't see where you are going."""
 vnum = 9224
 name = "Darker Caves"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You can barely see your way even with a light source.  The rocks of the cave
 are even darker than the darkness.  You hear a powerful humming all around you.
@@ -300,6 +305,7 @@ can't see where you are going."""
 vnum = 9225
 name = "Darkest Caves"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 Your light doesn't even seem to work here.  Even magical light sources seem
 only to illuminate about a foot ahead of you.  You suddenly realize that the
@@ -334,6 +340,7 @@ darkness.  You sense a great presence off to the east aways."""
 vnum = 9226
 name = "Darkest Caves"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 Your light doesn't even seem to work here.  Even magical light sources seem
 only to illuminate about a foot ahead of you.  You suddenly realize that the
@@ -360,6 +367,7 @@ darkness.  You sense a great presence directly to the east."""
 vnum = 9227
 name = "Earth Chamber"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 This is the abode of the Earth Ruler.  He decides about earthquakes,
 landslides, and avalanches.  The Earth Ruler sits upon a huge marble throne
@@ -392,6 +400,12 @@ carved into the wall."""
   [[rooms.mob_resets]]
   vnum = 9224
   max = 8
+
+[[rooms.extra_descs]]
+keywords = ["marble", "throne"]
+description = """
+The ruler notices your stare, and doesn't like it one bit!  The whole
+earth seems to shake with his emotion."""
 
 [[rooms]]
 vnum = 9228
@@ -625,6 +639,7 @@ magical water indeed.  Though you splash through the bay you do not get wet."""
 vnum = 9236
 name = "Water Chamber"
 sector = "water_swim"
+room_flags = ["indoors"]
 description = """
 This chamber was magically created here on the floor of the bay.  It looks
 like it's been here for a long, long time.  Though you are 'under water' there
@@ -995,6 +1010,7 @@ is the electric playground."""
 vnum = 9252
 name = "Lightning Chamber"
 sector = "water_swim"
+room_flags = ["indoors"]
 description = """
 There is some sort of control panel here. Apparently the Lightning Ruler
 observes and controls electric forces from here.  A set of steps carved into
@@ -1239,10 +1255,16 @@ this tunnel is quite fierce, it seems as if it's forced."""
   vnum = 9224
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["portal"]
+description = """
+Through the portal you see nothing but sky."""
+
 [[rooms]]
 vnum = 9260
 name = "Air Chamber"
 sector = "water_swim"
+room_flags = ["indoors"]
 description = """
 Tiny tornadoes come and go and dance along the ground here.  At the back
 of the chamber you notice a huge throne made of swirling clouds.
@@ -1279,6 +1301,12 @@ A tunnel leads west."""
   [[rooms.mob_resets]]
   vnum = 9225
   max = 15
+
+[[rooms.extra_descs]]
+keywords = ["throne", "clouds"]
+description = """
+Although the cloud throne appears solid enough to sit on, I wouldn't try
+it if I were you!"""
 
 [[rooms]]
 vnum = 9201
@@ -1358,6 +1386,18 @@ east around the mountain."""
     [[rooms.mob_resets.equips]]
     vnum = 9231
     inv_only = true
+
+[[rooms.extra_descs]]
+keywords = ["bodies", "body", "dead"]
+description = """
+They look as if their necks have been broken and their flesh, chewed."""
+
+[[rooms.extra_descs]]
+keywords = ["heaps", "stones", "tombs"]
+description = """
+You are sure glad that YOU aren't under one of those piles!
+Many of the tombstones have the same name on them, 'Raff'.  He must come
+here a lot."""
 
 [[rooms]]
 vnum = 9204
@@ -1729,4 +1769,3 @@ things going on about.  The canyon floor extends in all directions."""
   [[rooms.mob_resets]]
   vnum = 9203
   max = 15
-

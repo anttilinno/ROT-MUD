@@ -2,6 +2,7 @@
 vnum = 7190
 name = "Mid-air"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You've just stepped into the most unlucky position in the whole of DikuMUD.
 The result of such a foolish act should be punished with death, you know.
@@ -15,6 +16,7 @@ You've fallen, and you can't get up!!!"""
 vnum = 7199
 name = "The Edge of the Water"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 The pool side is dimly lit up by your light. You can see absolutely nothing
 else nearby. The darkness here seems enormously oppressive. The air is
@@ -29,6 +31,7 @@ to make anything clear. The rock can be climbed upwards from here."""
 vnum = 7200
 name = "The Treasury"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are in a small but well equipped treasury.  You can see some writing on
 the wall.  The ceiling has a funny glow, which enables you to see.  You can
@@ -36,32 +39,43 @@ get back into the inner lair through the stone door which is east."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door"]
   to_vnum = 7201
   key = 7205
-  flags = ["door"]
 
   [[rooms.obj_resets]]
   vnum = 7204
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["writing"]
+description = """
+You read the number '666'."""
+
+[[rooms.extra_descs]]
+keywords = ["door", "stone"]
+description = """
+This is a heavy black stone door it looks very solid."""
+
 [[rooms]]
 vnum = 7201
 name = "The inner Lair"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a octagonal room with smooth purple stone walls.  The floor is 
 made from black stone.  In the western wall you see a large black stone door."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7202
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed", "locked"]
   to_vnum = 7200
   key = 7205
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7200
@@ -83,6 +97,7 @@ made from black stone.  In the western wall you see a large black stone door."""
 vnum = 7202
 name = "The Lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 On the floor you see a lot of human decay, like bones and skulls. You also
 see a lot of slime. On the wall is a torch sitting in its sconce. To the north 
@@ -90,8 +105,8 @@ are a wooden door."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7201
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
@@ -101,10 +116,27 @@ are a wooden door."""
   direction = "south"
   to_vnum = 7203
 
+[[rooms.extra_descs]]
+keywords = ["torch", "sconce"]
+description = """
+The torch is bolted to the sconce and the sconce to the wall."""
+
+[[rooms.extra_descs]]
+keywords = ["slime"]
+description = """
+The slime is slimy and uninteresting."""
+
+[[rooms.extra_descs]]
+keywords = ["skull", "skulls", "bones", "decay"]
+description = """
+On all the skulls you notice that there is a three inch hole in the
+forehead. All the bones are broken and old."""
+
 [[rooms]]
 vnum = 7203
 name = "The Lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 On the floor you see a lot of human decay, like bones and skulls. You also
 see a lot of slime. On the wall is a torch sitting in its sconce."""
@@ -129,10 +161,27 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
     vnum = 7201
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["torch", "sconce"]
+description = """
+The torch is bolted to the sconce and the sconce to the wall."""
+
+[[rooms.extra_descs]]
+keywords = ["slime"]
+description = """
+The slime is slimy and uninteresting."""
+
+[[rooms.extra_descs]]
+keywords = ["skull", "skulls", "bones", "decay"]
+description = """
+On all the skulls you notice that there is a three inch hole in the
+forehead. All the bones are broken and old."""
+
 [[rooms]]
 vnum = 7204
 name = "The Lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 On the floor you see a lot of human decay, like bones and skulls. You also
 see a lot of slime. On the wall is a torch sitting in its sconce."""
@@ -147,13 +196,30 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 7208
   flags = ["door"]
+  to_vnum = 7208
+
+[[rooms.extra_descs]]
+keywords = ["torch", "sconce"]
+description = """
+The torch is bolted to the sconce and the sconce to the wall."""
+
+[[rooms.extra_descs]]
+keywords = ["slime"]
+description = """
+The slime is slimy and uninteresting."""
+
+[[rooms.extra_descs]]
+keywords = ["skull", "skulls", "bones", "decay"]
+description = """
+On all the skulls you notice that there is a three inch hole in the
+forehead. All the bones are broken and old."""
 
 [[rooms]]
 vnum = 7205
 name = "The Lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 On the floor you see a lot of human decay, like bones and skulls. You also
 see a lot of slime. On the wall is a torch sitting in its sconce."""
@@ -174,10 +240,27 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
     vnum = 7202
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["torch", "sconce"]
+description = """
+The torch is bolted to the sconce and the sconce to the wall."""
+
+[[rooms.extra_descs]]
+keywords = ["slime"]
+description = """
+The slime is slimy and uninteresting."""
+
+[[rooms.extra_descs]]
+keywords = ["skull", "skulls", "bones", "decay"]
+description = """
+On all the skulls you notice that there is a three inch hole in the
+forehead. All the bones are broken and old."""
+
 [[rooms]]
 vnum = 7206
 name = "The lair."
 sector = "city"
+room_flags = ["indoors", "no_mob"]
 description = """
 On the floor you see a lot of human decay, like bones and skulls. You also
 see a lot of slime. On the wall is a torch sitting in its sconce."""
@@ -198,10 +281,26 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
   vnum = 7206
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["torch", "sconce"]
+description = """
+The torch is bolted to the sconce and the sconce to the wall."""
+
+[[rooms.extra_descs]]
+keywords = ["slime"]
+description = """
+The slime is slimy and uninteresting."""
+
+[[rooms.extra_descs]]
+keywords = ["bones", "decay"]
+description = """
+All the bones are broken and old."""
+
 [[rooms]]
 vnum = 7207
 name = "The lair."
 sector = "city"
+room_flags = ["indoors"]
 description = """
 On the floor you see a lot of human decay, like bones and skulls. You also
 see a lot of slime. On the wall is a torch sitting in its sconce."""
@@ -212,8 +311,8 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 7204
   flags = ["door"]
+  to_vnum = 7204
 
   [[rooms.mob_resets]]
   vnum = 7202
@@ -223,10 +322,27 @@ see a lot of slime. On the wall is a torch sitting in its sconce."""
     vnum = 7202
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["torch", "sconce"]
+description = """
+The torch is bolted to the sconce and the sconce to the wall."""
+
+[[rooms.extra_descs]]
+keywords = ["slime"]
+description = """
+The slime is slimy and uninteresting."""
+
+[[rooms.extra_descs]]
+keywords = ["skull", "skulls", "bones", "decay"]
+description = """
+On all the skulls you notice that there is a three inch hole in the
+forehead. All the bones are broken and old."""
+
 [[rooms]]
 vnum = 7208
 name = "The lair entrance."
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in a dry part of the sewer. To the north is a wooden door, you 
 can see some slime at the lower part of the door. You also see some skulls
@@ -234,17 +350,23 @@ and some broken bones."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7204
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "east"
   to_vnum = 7209
 
+[[rooms.extra_descs]]
+keywords = ["slime"]
+description = """
+The slime is slimy and uninteresting."""
+
 [[rooms]]
 vnum = 7209
 name = "The crawlway."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a narrow crawlway.  You don't notice anything interesting here."""
 
@@ -260,6 +382,7 @@ You are in a narrow crawlway.  You don't notice anything interesting here."""
 vnum = 7210
 name = "The four-way junction."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a sewer junction. To the north is a small hole, to the west is a
 narrow crawlway and to the east and south the sewer continues."""
@@ -284,6 +407,7 @@ narrow crawlway and to the east and south the sewer continues."""
 vnum = 7211
 name = "The small cave."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a collapsed sewer drain, which now is more like a small cave."""
 
@@ -295,6 +419,7 @@ You are in a collapsed sewer drain, which now is more like a small cave."""
 vnum = 7212
 name = "The sewer drain."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a dry sewer drain which bends to the north."
 
   [[rooms.exits]]
@@ -309,6 +434,7 @@ description = "You are in a dry sewer drain which bends to the north."
 vnum = 7213
 name = "The sewer drain."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a dry sewer drain which bends to the east."
 
   [[rooms.exits]]
@@ -331,6 +457,7 @@ description = "You are in a dry sewer drain which bends to the east."
 vnum = 7214
 name = "The drain end."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the end of the drain around you the sewer has collapsed, the only
 exit is west."""
@@ -351,6 +478,7 @@ exit is west."""
 vnum = 7215
 name = "The half-wet drain."
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a sewer drain where the floor is covered with water. To the north
 it looks more dry, south however the drain runs down into some water."""
@@ -371,10 +499,16 @@ it looks more dry, south however the drain runs down into some water."""
     vnum = 7211
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+The water is dirty but it looks like you would be able to swim in it."""
+
 [[rooms]]
 vnum = 7216
 name = "Under water in the sewer."
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You swim in some dirty water and is holding you breath. You'll better 
 continue before you drown. It is a good thing that you can hold your light
@@ -392,6 +526,7 @@ above water-level."""
 vnum = 7217
 name = "The half-dry drain."
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a half-dry sewer drain. To the north the drain runs a little bit
 downwards into some water to the east you can see a small hole. To the west
@@ -421,10 +556,21 @@ you see another drain."""
     vnum = 7211
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["hole"]
+description = """
+Through the hole you can just make out a very small room."""
+
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+The water is dirty but it looks like you would be able to swim in it."""
+
 [[rooms]]
 vnum = 7218
 name = "The very small room."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a very small room, it is pretty uninteresting."
 
   [[rooms.exits]]
@@ -435,6 +581,7 @@ description = "You are in a very small room, it is pretty uninteresting."
 vnum = 7219
 name = "A dry sewer drain."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a dry but dirty sewer drain. The drain continues east and south."""
 
@@ -462,6 +609,7 @@ You are in a dry but dirty sewer drain. The drain continues east and south."""
 vnum = 7220
 name = "A boring drain."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in yet another sewer drain."
 
   [[rooms.exits]]
@@ -476,6 +624,7 @@ description = "You are in yet another sewer drain."
 vnum = 7221
 name = "The sewer drain."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a sewer drain, there is nothing special in here, except for a 
 loud echo."""
@@ -508,6 +657,7 @@ loud echo."""
 vnum = 7222
 name = "The sewer drain."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = "You are in a drain, with some slimy water on the floor."
 
   [[rooms.exits]]
@@ -518,10 +668,16 @@ description = "You are in a drain, with some slimy water on the floor."
   direction = "west"
   to_vnum = 7221
 
+[[rooms.extra_descs]]
+keywords = ["slimy", "water"]
+description = """
+The water floats to the east from here."""
+
 [[rooms]]
 vnum = 7223
 name = "The sewer bend."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You find yourself in an ordinary sewer bend, which bend from west to north."""
 
@@ -549,6 +705,7 @@ You find yourself in an ordinary sewer bend, which bend from west to north."""
 vnum = 7224
 name = "The sewer junction"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a junction of three sewer drains. You see some odd scratches on
 the pipe wall, as from a gigantic rat.North and south the sewer continues 
@@ -570,6 +727,7 @@ as usual, but west it looks a little strange."""
 vnum = 7225
 name = "The sewer"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a sewer, where the slimy water runs down through a tiny hole.
 You see some odd scratches on the pipe wall, as from a gigantic rat. There 
@@ -591,6 +749,7 @@ is a sewer drain south."""
 vnum = 7229
 name = "The strange sewer"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a very strange sewer indeed, there are some odd scratches on the
 pipe wall, as from a gigantic rat. And you can see a lot of organic decay
@@ -608,6 +767,7 @@ like bones from animals AND humans. West the drain runs slightly upwards."""
 vnum = 7230
 name = "The damp sewer"
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in a sewer drain with a funny damp substance on the floor, in the 
 substance you see a lot of decay. You see some odd scratches on the wall, as
@@ -625,6 +785,7 @@ from a gigantic rat. Both to the east and west the pipe seems to run down."""
 vnum = 7231
 name = "The strange sewer"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in an ordinary sewer except for a lot of scratches on the sewer wall,
 ad a lot of debris on the floor."""
@@ -637,10 +798,16 @@ ad a lot of debris on the floor."""
   direction = "west"
   to_vnum = 7232
 
+[[rooms.extra_descs]]
+keywords = ["debris"]
+description = """
+You see a lot of organic decay on the floor."""
+
 [[rooms]]
 vnum = 7232
 name = "The sewer"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a sewer with more scratches on the walls. And of course a whole lot
 of decay. The drain runs east and north."""
@@ -657,6 +824,7 @@ of decay. The drain runs east and north."""
 vnum = 7233
 name = "The sewer drain"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in in a sewer drain, you are able to see some kind of cave-like
 room. You see some odd scratches on the drain wall, as from a gigantic rat. 
@@ -698,6 +866,7 @@ The sewer leads south."""
 vnum = 7234
 name = "The rat's lair"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a little cave. You are able to see quite a lot of debris on the 
 floor. There is a sewer drain west of here."""
@@ -714,6 +883,7 @@ floor. There is a sewer drain west of here."""
 vnum = 7279
 name = "The Wall of the Abyss"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You hang onto some steps leading down into utter darkness. There's an exit 
 leading up as well, though you'll have to open the tiny rock again to do so."""
@@ -730,6 +900,7 @@ leading up as well, though you'll have to open the tiny rock again to do so."""
 vnum = 7280
 name = "The entrance."
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a very dark room. You notice that some faces are
 staring at you from inside the walls. In the middle of the room
@@ -738,22 +909,35 @@ door."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 7281
   flags = ["door"]
+  to_vnum = 7281
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 7116
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 7000
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["triangle"]
+description = """
+The triangle is filled with small symbols in a language you have
+never seen before."""
+
+[[rooms.extra_descs]]
+keywords = ["altar"]
+description = """
+This altar are very special. Faces are smiling from it. There
+is a triangle in top of it."""
+
 [[rooms]]
 vnum = 7281
 name = "The corridor."
 sector = "city"
+room_flags = ["indoors"]
 description = """
 The corridor is glowing oppressively in a red hue. You can hear wailing
 through an open black hole to the east. To the south there is a round door."""
@@ -764,8 +948,8 @@ through an open black hole to the east. To the south there is a round door."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 7280
   flags = ["door"]
+  to_vnum = 7280
 
   [[rooms.mob_resets]]
   vnum = 7000
@@ -774,11 +958,27 @@ through an open black hole to the east. To the south there is a round door."""
   [[rooms.mob_resets]]
   vnum = 7000
   max = 8
+
+[[rooms.extra_descs]]
+keywords = ["walls"]
+description = """
+The walls look alive."""
+
+[[rooms.extra_descs]]
+keywords = ["red", "light"]
+description = """
+The red light glows from the walls."""
+
+[[rooms.extra_descs]]
+keywords = ["small", "round", "door"]
+description = """
+The door is completely round without a keyhole."""
 
 [[rooms]]
 vnum = 7282
 name = "The Realm of lost souls"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in nothing. All around you there are stars.
 Sometimes a shadow flies closely by you, wailing very loudly. 
@@ -793,10 +993,16 @@ a small red hole."""
   direction = "west"
   to_vnum = 7281
 
+[[rooms.extra_descs]]
+keywords = ["shadow"]
+description = """
+The shadow looks like a man in great pain."""
+
 [[rooms]]
 vnum = 7283
 name = "The T-crossing"
 sector = "city"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in a small hallway. There are doors to the east and to
 the west. To the south there are a black hole. There is writing
@@ -814,18 +1020,38 @@ in the wall. Wails can be heard from the south."""
   direction = "west"
   to_vnum = 7284
 
+[[rooms.extra_descs]]
+keywords = ["writing"]
+description = """
+The writing says 'The one to the east, belongs to the beast.
+To the west you will surely END your quest!'."""
+
 [[rooms]]
 vnum = 7284
 name = "The firedeath"
 sector = "city"
+room_flags = ["indoors", "no_mob"]
 description = """
 This room is very hot. There are flames surrounding you.  You can
 see no exits at all!  Skeletons are lying all over the floor."""
+
+[[rooms.extra_descs]]
+keywords = ["writing", "wall"]
+description = """
+The writing says 'A pray to the GODS will not be heard, though
+the only exit is death..... Mother, I love you'."""
+
+[[rooms.extra_descs]]
+keywords = ["skeletons"]
+description = """
+The skeletons looks like they had suffered the death of hunger.
+One of them looks like he has written something at the wall."""
 
 [[rooms]]
 vnum = 7285
 name = "The tortureroom."
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are standing in a middle of a square room. Along the walls skeletons 
 are hanging in rusty chains. In the middle of the room there is a big metal 
@@ -833,8 +1059,8 @@ box, covered with dust. To the south you can just make out a small exit."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 7286
   flags = ["door"]
+  to_vnum = 7286
 
   [[rooms.mob_resets]]
   vnum = 7002
@@ -848,10 +1074,24 @@ box, covered with dust. To the south you can just make out a small exit."""
   vnum = 7002
   max = 7
 
+[[rooms.extra_descs]]
+keywords = ["big", "metal", "box"]
+description = """
+The metal box is covered with dust. You notice that is once has been
+filled with coal, as you see some of them."""
+
+[[rooms.extra_descs]]
+keywords = ["skeletons"]
+description = """
+When you look at the skeletons, you can see that they once had been in great
+pain. They are hanging in their arms, and some of them has been killed
+with a sharp instrument."""
+
 [[rooms]]
 vnum = 7286
 name = "The hells yard"
 sector = "mountain"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are standing in a lot of mud. A disgusting smell surrounds
 the place, and makes you feel sick. Small flames sometimes shoot
@@ -860,8 +1100,8 @@ north you can see an iron door."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 7285
   flags = ["door"]
+  to_vnum = 7285
 
   [[rooms.exits]]
   direction = "west"
@@ -879,6 +1119,7 @@ north you can see an iron door."""
 vnum = 7301
 name = "The Entrance to the Realm of silence"
 sector = "field"
+room_flags = ["indoors", "no_mob"]
 description = """
 This is an utterly silent place. As you look around you see that there
 hasn't been a living thing in a long time. The dust lies here in a thick
@@ -887,10 +1128,29 @@ worn tapestry. A winding stone staircase leads up into darkness. On the
 wall to the west you can see a huge torch stuck into the solid rock.
 A large portcullis blocks your way to the north."""
 
+[[rooms.extra_descs]]
+keywords = ["stairs", "staircase"]
+description = """
+This looks as if it has been standing here for at least 12 centuries. It's
+Very worn and cracks in the surface mingle with the cores of mineral that
+penetrates the rock from which these steps are chiselled."""
+
+[[rooms.extra_descs]]
+keywords = ["torch", "light"]
+description = """
+This VERY old torch looks as if it has burned for ages, yet no traces of
+the searing flame can be seen on it!"""
+
+[[rooms.extra_descs]]
+keywords = ["portcullis", "gate"]
+description = """
+This seems like an exceptionally heavy gate, made of thick iron."""
+
 [[rooms]]
 vnum = 7399
 name = "On the walls of the Abyss"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are clutching the steps on the wall so that you don't fall to the ground
 down below.
@@ -909,6 +1169,7 @@ This stops your journey down, the only exit is up."""
 vnum = 7400
 name = "Cave entrance"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the cave entrance. It is very dark
 down here. There is writing at the wall. There is an exit
@@ -922,10 +1183,16 @@ to the north. A stairway leads up."""
   direction = "up"
   to_vnum = 7102
 
+[[rooms.extra_descs]]
+keywords = ["writing", "wall"]
+description = """
+The writing says 'BEWARE adventurer!'"""
+
 [[rooms]]
 vnum = 7401
 name = "Cave tunnel"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are walking in a tunnel. It is very cold. You
 can feel the presence of a living thing ... SOMEWHERE."""
@@ -946,6 +1213,7 @@ can feel the presence of a living thing ... SOMEWHERE."""
 vnum = 7402
 name = "Cave room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are standing in a room. It's much cooler now.
 The walls are glowing."""
@@ -966,6 +1234,7 @@ The walls are glowing."""
 vnum = 7403
 name = "Cave T-cross"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a mud-like substance. The smell here is
 awful, it is rotten. To the west you can see some light."""
@@ -986,10 +1255,22 @@ awful, it is rotten. To the west you can see some light."""
   vnum = 7013
   max = 3
 
+[[rooms.extra_descs]]
+keywords = ["worms"]
+description = """
+The worms are purple. They do not look edible."""
+
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+When you examine the mud, you notice small worms crawling
+around."""
+
 [[rooms]]
 vnum = 7404
 name = "Cave turning-point"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 The mud are getting deeper. You are wondering, 'Would
 it be an idea to leave, before I disappear?'. To the
@@ -998,17 +1279,25 @@ way. To the west you can see mud."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7405
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
   to_vnum = 7403
 
+[[rooms.extra_descs]]
+keywords = ["flat", "round", "stone"]
+description = """
+The stone looks very uninteresting. BUT as you are
+about to turn away, you see a lightstribe coming
+through a small hole. Conclusion: The stone is movable."""
+
 [[rooms]]
 vnum = 7405
 name = "The secret room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 There is dust all over the place. It looks like nobody
 has been here for ages. In the middle of the room you see
@@ -1018,18 +1307,30 @@ south you see a grey block."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7404
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7406
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["crystal", "globe"]
+description = """
+The crystal globe is glowing with a pulsing light. It
+looks like there is smoke inside it."""
+
+[[rooms.extra_descs]]
+keywords = ["socket"]
+description = """
+The socket looks like the work of a dwarf. It is VERY beautiful."""
 
 [[rooms]]
 vnum = 7406
 name = "The mudhole"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a lot of mud. The mud goes to your
 chest. You feel the presence of something IN the mud.
@@ -1037,8 +1338,8 @@ The only obvious exit is to the west."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7405
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1052,6 +1353,7 @@ The only obvious exit is to the west."""
 vnum = 7407
 name = "Tunnel"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The mud goes to your knees. Otherwise the tunnel looks
 very normal."""
@@ -1072,6 +1374,7 @@ very normal."""
 vnum = 7408
 name = "The long tunnel"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 Here There is almost no mud, as you stand at the top
 of a small rock. Just beside you there are a sign which
@@ -1089,6 +1392,7 @@ says 'WARNING! The worms are dangerous!'."""
 vnum = 7409
 name = "The hot room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are very surprised, as this room for a change are
 hot instead of cold. To the north it goes downwards into
@@ -1106,6 +1410,7 @@ some mud. There are also an exit to the west."""
 vnum = 7410
 name = "The small room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 As you look around you notice a small statue. There are
 exits to the west and to the east."""
@@ -1118,10 +1423,17 @@ exits to the west and to the east."""
   direction = "west"
   to_vnum = 7411
 
+[[rooms.extra_descs]]
+keywords = ["small", "statue"]
+description = """
+This is a statue of a imp, pointing to the west. The imp
+looks like a man with horns and a tail."""
+
 [[rooms]]
 vnum = 7411
 name = "The stalagmite cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a stalagmite cave. Water is dripping
 from the walls. It is very cold in here."""
@@ -1138,10 +1450,16 @@ from the walls. It is very cold in here."""
   direction = "south"
   to_vnum = 7412
 
+[[rooms.extra_descs]]
+keywords = ["stalagmite"]
+description = """
+The stalagmites are very tall, and looks very beautiful."""
+
 [[rooms]]
 vnum = 7412
 name = "The stalagmite tunnel"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a small tunnel. Here it is quite dry.
 Maybe it would be an idea to rest here."""
@@ -1162,6 +1480,7 @@ Maybe it would be an idea to rest here."""
 vnum = 7413
 name = "The spongy room"
 sector = "forest"
+room_flags = ["indoors", "no_mob"]
 description = """
 You definitely NOT like this area. It is very dank, and most
 of the places it is wet."""
@@ -1178,6 +1497,7 @@ of the places it is wet."""
 vnum = 7414
 name = "The stalagmite T-cross"
 sector = "city"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are standing in a cross. To the north you can see
 some light. Otherwise it is dark."""
@@ -1198,23 +1518,32 @@ some light. Otherwise it is dark."""
 vnum = 7415
 name = "The blind end room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 This room is obviously a blind end. To the north you see
 a primitive picture."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 7416
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
   to_vnum = 7414
 
+[[rooms.extra_descs]]
+keywords = ["primitive", "picture"]
+description = """
+You see some persons dancing around a huge sun. The
+sun is about 7 feet in diameter, which shows the size
+of the picture."""
+
 [[rooms]]
 vnum = 7416
 name = "The treasure room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 This room is rich ornamented. The walls has carves showing
 persons dancing around a sun which is drawn at the floor. It
@@ -1223,13 +1552,14 @@ secret door."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 7415
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7417
 name = "The square lair"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are standing in the south-east part of the lair. You can
 see a skeleton lying at the wall."""
@@ -1246,18 +1576,25 @@ see a skeleton lying at the wall."""
   direction = "west"
   to_vnum = 7420
 
+[[rooms.extra_descs]]
+keywords = ["skeleton"]
+description = """
+It looks like a adventurer who wasn't lucky. You better
+watch out-"""
+
 [[rooms]]
 vnum = 7418
 name = "The square lair"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the north-east part of the lair. You see
 a sign at the wall"""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 7421
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1267,10 +1604,18 @@ a sign at the wall"""
   direction = "west"
   to_vnum = 7419
 
+[[rooms.extra_descs]]
+keywords = ["sign", "wall"]
+description = """
+The sign says 'Gods of War I call you, my sword is by my side,
+               I seek a light free from all false pride'
+                       Reyemle Grug....."""
+
 [[rooms]]
 vnum = 7419
 name = "The square lair"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the north-west part of the lair. Here's
 another sign. There are a exit from the lair to the north."""
@@ -1291,10 +1636,18 @@ another sign. There are a exit from the lair to the north."""
   vnum = 7045
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says 'I'm wandering around in a everlasting tale,
+               seeking the light to regain my pride
+                           Corama..."""
+
 [[rooms]]
 vnum = 7420
 name = "The lair end"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You can see a table in front of you. It's very dusty.
 Around the table five skeletons are sitting. Exits are
@@ -1308,10 +1661,31 @@ north and east."""
   direction = "east"
   to_vnum = 7417
 
+[[rooms.extra_descs]]
+keywords = ["dragon", "statue"]
+description = """
+it looks like a silver dragon. It is nailed onto the table.
+The dragon sits on a red dragon that looks dead. But the
+eyes of the red dragon is glowing pulsating red. You feel
+drained."""
+
+[[rooms.extra_descs]]
+keywords = ["skeleton", "skeletons"]
+description = """
+You can see that they have been killed in some sort of way. Not
+by sword or club."""
+
+[[rooms.extra_descs]]
+keywords = ["table"]
+description = """
+On the table there is dust, in the center there is a small statue of a
+Dragon sleeping."""
+
 [[rooms]]
 vnum = 7421
 name = "East tunnel"
 sector = "city"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are standing in dark tunnel, the exits are east
 and west. To the west you see a wooden door."""
@@ -1322,13 +1696,14 @@ and west. To the west you see a wooden door."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 7418
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7422
 name = "North tunnel"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = "You are standing in a dark tunnel, it leads upwards."
 
   [[rooms.exits]]
@@ -1351,6 +1726,7 @@ description = "You are standing in a dark tunnel, it leads upwards."
 vnum = 7423
 name = "The L-shaped room."
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in deep darkness. To the south there is a small exit.
 To the east you can see a gaping hole."""
@@ -1371,14 +1747,15 @@ To the east you can see a gaping hole."""
 vnum = 7424
 name = "The Circular hall."
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in round hall. To the north, east and south you
 can see a stone head hanging on the walls."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 7425
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1388,10 +1765,34 @@ can see a stone head hanging on the walls."""
   vnum = 7046
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["blue"]
+description = """
+This looks like a good dragon"""
+
+[[rooms.extra_descs]]
+keywords = ["red"]
+description = """
+This looks like a neutral dragon"""
+
+[[rooms.extra_descs]]
+keywords = ["green"]
+description = """
+This looks like a evil dragon"""
+
+[[rooms.extra_descs]]
+keywords = ["head", "heads"]
+description = """
+When you study the faces of the heads you see that it
+is faces of dragons. The face to the north is red, the
+face to the east is green and the face to the south is
+blue."""
+
 [[rooms]]
 vnum = 7425
 name = "Dusty tunnel"
 sector = "city"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are standing in dust. This place has not been
 touched for a long time. Otherwise it is quite boring
@@ -1404,13 +1805,14 @@ the outline of a door. A tunnel leads to the east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 7424
-  flags = ["door"]
 
 [[rooms]]
 vnum = 7426
 name = "The crossing"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a crossing of hallways. You can leave this place
 in every direction, except up and down. In the dust you notice strange
@@ -1432,10 +1834,16 @@ footprints."""
   direction = "west"
   to_vnum = 7425
 
+[[rooms.extra_descs]]
+keywords = ["footprints", "foot"]
+description = """
+You have never seen this kind of footprints before!"""
+
 [[rooms]]
 vnum = 7427
 name = "The L-shaped room"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a L-shaped room. You can hear noises from the long
 tunnel to the east. You can feel fear! A sign is hanging on the wall."""
@@ -1448,10 +1856,16 @@ tunnel to the east. You can feel fear! A sign is hanging on the wall."""
   direction = "east"
   to_vnum = 7428
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+The sign says 'DANGER!!'."""
+
 [[rooms]]
 vnum = 7428
 name = "Dragons lair"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You can see burned walls, the floorstones are fiery red.  All kinds of bones
 are scattered all over the floor.  On the walls you can see some burned
@@ -1510,6 +1924,7 @@ You're next."""
 vnum = 7429
 name = "The burned room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a room, which once had been quite burned.
 There is writing on the wall."""
@@ -1526,10 +1941,16 @@ There is writing on the wall."""
   vnum = 7010
   max = 2
 
+[[rooms.extra_descs]]
+keywords = ["writing"]
+description = """
+The writing says 'DANGER!!!'"""
+
 [[rooms]]
 vnum = 7430
 name = "The wind tunnel"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a tunnel. Above you, you can feel
 a breeze."""
@@ -1542,10 +1963,17 @@ a breeze."""
   direction = "west"
   to_vnum = 7426
 
+[[rooms.extra_descs]]
+keywords = ["breeze"]
+description = """
+The breeze comes from a hole above you. NO way to get up
+there."""
+
 [[rooms]]
 vnum = 7431
 name = "The glittering room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This room are all bright. In the walls you can see some
 silver. Exits are: West, east and south."""
@@ -1562,10 +1990,16 @@ silver. Exits are: West, east and south."""
   direction = "west"
   to_vnum = 7433
 
+[[rooms.extra_descs]]
+keywords = ["glitter", "walls", "silver"]
+description = """
+The glittering silver looks like it is INSIDE the walls."""
+
 [[rooms]]
 vnum = 7432
 name = "The secret passageroom"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a tiny room. There WAS an exit down, and an
 exit to the west."""
@@ -1574,10 +2008,16 @@ exit to the west."""
   direction = "west"
   to_vnum = 7431
 
+[[rooms.extra_descs]]
+keywords = ["down"]
+description = """
+A sign is blocking the way. It says 'we have closed an entrance to DEATH'"""
+
 [[rooms]]
 vnum = 7433
 name = "End of long tunnel"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are at a end of a long tunnel. Right in front of you,
 you can see a grey mass. To the east you can see a tremendous
@@ -1591,10 +2031,16 @@ long tunnel, but you know that, you has just been there."""
   direction = "west"
   to_vnum = 7434
 
+[[rooms.extra_descs]]
+keywords = ["grey", "mass"]
+description = """
+The mass is nothing but a mass, but it is quite suspicious!"""
+
 [[rooms]]
 vnum = 7434
 name = "Stair-room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a small room. Drawings of faces in pain
 are on the walls. You can feel that darkness is ruling this place.
@@ -1609,6 +2055,7 @@ isn't finished yet..."""
 vnum = 7435
 name = "Dark tunnel"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a dark tunnel. It continues to the north
 and to the south. Bones are spread on the floor"""
@@ -1625,10 +2072,16 @@ and to the south. Bones are spread on the floor"""
   vnum = 7042
   max = 2
 
+[[rooms.extra_descs]]
+keywords = ["bones", "bone"]
+description = """
+it looks like bones of a human."""
+
 [[rooms]]
 vnum = 7436
 name = "Entrance to lair"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 The smell here is awful.  To the south you can see some smoke.
 A tunnel leads north, and east."""
@@ -1649,6 +2102,7 @@ A tunnel leads north, and east."""
 vnum = 7437
 name = "North-eastern part of Basilisks cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 It is hard to see here because of the smoke. To the north you
 can see barely see a small tunnel. Other exits are to the south
@@ -1670,6 +2124,7 @@ and to the west."""
 vnum = 7438
 name = "South-eastern part of basilisks cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 There are a very small hole in wall, from where the smoke
 are coming from. Otherwise it is pitch dark. Exits are north
@@ -1683,10 +2138,16 @@ and west."""
   direction = "west"
   to_vnum = 7440
 
+[[rooms.extra_descs]]
+keywords = ["hole", "small"]
+description = """
+It's a small hole. About 1 feet in diameter."""
+
 [[rooms]]
 vnum = 7439
 name = "North-western part of basilisks cave"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You can see some hay spread on the floor. The smell is awful here,
 and it makes you feel sick.  The basilisk sleeps here.
@@ -1708,10 +2169,16 @@ Watch out ... Maybe it is not far away."""
   vnum = 7300
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["hay"]
+description = """
+The hay is very dirty. The smell of it makes you feel sick."""
+
 [[rooms]]
 vnum = 7440
 name = "South-western part of basilisks cave"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = "You can see nothing but smoke."
 
   [[rooms.exits]]
@@ -1730,6 +2197,7 @@ description = "You can see nothing but smoke."
 vnum = 7441
 name = "The small cave"
 sector = "field"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are standing in small cave. You can see
 some light in the end. Exits are north and south."""
@@ -1746,6 +2214,7 @@ some light in the end. Exits are north and south."""
 vnum = 7442
 name = "The northern end of the pool"
 sector = "hills"
+room_flags = ["indoors"]
 description = """
 You have wet feet, you are standing in water. The water looks calm. You can
 see that it's a big lake. Light seeps from the water."""
@@ -1766,6 +2235,7 @@ see that it's a big lake. Light seeps from the water."""
 vnum = 7443
 name = "The pool"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are swimming in water. It is getting deep here. It is dark in this end."""
 
@@ -1781,6 +2251,7 @@ You are swimming in water. It is getting deep here. It is dark in this end."""
 vnum = 7444
 name = "The south end of the pool"
 sector = "mountain"
+room_flags = ["indoors"]
 description = """
 You standing in water up to you neck. You can only see water."""
 
@@ -1800,6 +2271,7 @@ You standing in water up to you neck. You can only see water."""
 vnum = 7445
 name = "The pool"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are swimming in DARKNESS. You feel something
 touching your right leg."""
@@ -1820,6 +2292,7 @@ touching your right leg."""
 vnum = 7001
 name = "The muddy sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in mud to your knees. This is not the kind of place
 for a picnic. The muddy sewer stretches further into the south."""
@@ -1828,10 +2301,17 @@ for a picnic. The muddy sewer stretches further into the south."""
   direction = "south"
   to_vnum = 7002
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7002
 name = "The muddy sewer junction"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The muddy sewer stretches into the dark to the south. It looks as if 
 no person has ever sat his foot here before. It's too muddy for that
@@ -1849,10 +2329,17 @@ anyway. The sewer leads north, south and east from here."""
   direction = "south"
   to_vnum = 7003
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7003
 name = "The mudhole"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You stand in mud all the way up to your thighs and it's not too 
 comfortable since you are used to a somewhat different environment.
@@ -1867,10 +2354,17 @@ out an enormous drainpipe leading down."""
   direction = "down"
   to_vnum = 7101
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7004
 name = "The Dark Pit"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing by the edge of a dark pit that leads down into even
 deeper darkness. >BWWAAADDRR< - The smell from down there is unbearable.
@@ -1896,6 +2390,7 @@ The sewer stretches into the darkness to the east."""
 vnum = 7005
 name = "The muddy sewer"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in the middle of a bend of the sewer pipe. It is very
 dark around here and the mud is sticking to your legs, not very pleasant.
@@ -1909,10 +2404,17 @@ The pipe leads east and south from here."""
   direction = "south"
   to_vnum = 7006
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7006
 name = "The muddy sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in something that reminds you very much of porridge, this
 has the advantage that it's not hot, it's rather cold actually. The pipe 
@@ -1926,10 +2428,17 @@ bends to the north and east."""
   direction = "east"
   to_vnum = 7012
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7007
 name = "The muddy sewer bend"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 This isn't your idea of a place to stay too long. You're in up to your
 knees in something that resembles mud, but you're not quite sure. The
@@ -1943,10 +2452,17 @@ bend in which you stand leads west and south."""
   direction = "west"
   to_vnum = 7002
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7008
 name = "A muddy intersection"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 You have both your feet safely stuck in mud. It isn't the mud that's wrong
 it's the smell, the sounds, the total darkness that surrounds you. Everything
@@ -1965,10 +2481,17 @@ north, east and south."""
   direction = "south"
   to_vnum = 7009
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7009
 name = "The Sewer Junction"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the middle of a huge junction of sewer pipes right under
 what you'd think was an air shaft. The sewer pipes lead to the north,
@@ -1990,10 +2513,17 @@ south, east and west. It look quite impossible to force your way up."""
   direction = "west"
   to_vnum = 7004
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7010
 name = "A bend in sewer pipe"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a bend in the sewer pipe. A strong smell seeps in from the north.
 The sewer goes north and east."""
@@ -2010,6 +2540,7 @@ The sewer goes north and east."""
 vnum = 7011
 name = "The muddy sewer pipe"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a kind of tube intersection that leads south, west and east.
 Your legs are covered in mud up to the knees. REAL yucky!"""
@@ -2026,10 +2557,17 @@ Your legs are covered in mud up to the knees. REAL yucky!"""
   direction = "west"
   to_vnum = 7005
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7012
 name = "The bend in the Muddy sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 This is not your idea of a holiday. You stand in mud up to your knees.
 It's absolutely inconceivable how all this mud could have been placed
@@ -2043,10 +2581,17 @@ here. The pipe leads to the west and south."""
   direction = "west"
   to_vnum = 7006
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7013
 name = "A MUDDY intersection"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You wouldn't want to know the true feeling of standing in this mud up to 
 your hips. >BWAADR<. All that fills your mind right now is the dream of 
@@ -2065,10 +2610,24 @@ sewer! The pipes leads north, south and east."""
   direction = "south"
   to_vnum = 7014
 
+[[rooms.extra_descs]]
+keywords = ["sediment"]
+description = """
+It's NOT the kind of matter that would concern you too much, normally, but
+as you are in the middle of it, it just might become your main concern.
+REAL YUCKY!"""
+
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7014
 name = "Muddy sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a bend of the pipe system of the sewer with mud up to your
 thighs. Contemplating a higher level of existence here would be utterly
@@ -2084,10 +2643,17 @@ The bend goes from north to west."""
   direction = "west"
   to_vnum = 7008
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7015
 name = "The old well"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing by an old and worn well from before this century. The sewer
 leads to the east from here and the well leads down into darkness. Metal
@@ -2101,10 +2667,17 @@ bars implanted in the side of the well lead down as a ladder."""
   direction = "down"
   to_vnum = 7105
 
+[[rooms.extra_descs]]
+keywords = ["bars"]
+description = """
+These look like they're pretty slippery, and not very safe, but perhaps safe
+enough for you to climb down, WITH both hands on them."""
+
 [[rooms]]
 vnum = 7016
 name = "The ordinary bend"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the middle of a bend in the pipe system of the sewer system, 
 WHAT a place!!! The pipe leads to the south and the east."""
@@ -2121,6 +2694,7 @@ WHAT a place!!! The pipe leads to the south and the east."""
 vnum = 7017
 name = "The sewer junction"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = "You are in a junction that leads north, west and south."
 
   [[rooms.exits]]
@@ -2139,6 +2713,7 @@ description = "You are in a junction that leads north, west and south."
 vnum = 7018
 name = "The ordinary junction"
 sector = "city"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This looks like an ordinary junction, actually it seems very quiet
 here. The pipelines lead west, east and north."""
@@ -2159,6 +2734,7 @@ here. The pipelines lead west, east and north."""
 vnum = 7021
 name = "A quiet pipe junction"
 sector = "city"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This is the kind of place to rest, though the smell could be a LOT better
 than this. The sewer goes east, north and west from here."""
@@ -2179,6 +2755,7 @@ than this. The sewer goes east, north and west from here."""
 vnum = 7022
 name = "The odd room with smooth walls"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 As you enter you hear a loud click from one of the walls ... and you fall
 and fall and fall ...
@@ -2197,6 +2774,7 @@ entryway leading down."""
 vnum = 7024
 name = "The sewer"
 sector = "city"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are standing in mud up to your ankles. This is an intersection with 
 sewer pipes leading east, south and west."""
@@ -2217,6 +2795,7 @@ sewer pipes leading east, south and west."""
 vnum = 7025
 name = "Another intersection"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You have never seen anything so BORING...This is an intersection with pipes
 leading north, south and east."""
@@ -2241,6 +2820,7 @@ leading north, south and east."""
 vnum = 7026
 name = "A junction"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This one seems interesting, a big difference from all the other junctions.
 It seems cleaner than the rest of them. Weird. Something that looks like 
@@ -2259,10 +2839,17 @@ The pipes lead to the south, west and north."""
   direction = "west"
   to_vnum = 7013
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+It's dark as tar and looks like something out of a toilet, on top of THAT
+the smell is absolutely OVERWHELMING."""
+
 [[rooms]]
 vnum = 7028
 name = "The sewer junction"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a junction of sewer pipes leading north, east and west."""
 
@@ -2282,6 +2869,7 @@ You stand in a junction of sewer pipes leading north, east and west."""
 vnum = 7029
 name = "The Triple Junction"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the middle of a huge junction of concrete sewer pipes. The 
 pipes lead into three different directions : east, south and west."""
@@ -2302,6 +2890,7 @@ pipes lead into three different directions : east, south and west."""
 vnum = 7030
 name = "The Quadruple Junction Under the Dump"
 sector = "city"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are standing in something that reminds you of an entry to an ant hive.
 There are enormous concrete pipes leading north, south, east and west. 
@@ -2328,10 +2917,18 @@ a layer of garbage."""
   direction = "up"
   to_vnum = 3030
 
+[[rooms.extra_descs]]
+keywords = ["ladder"]
+description = """
+It looks as if it's made of stainless steel, and it would very well function
+as a club of considerable power, but alas ... You can't take at all since
+it's firmly set into the concrete wall."""
+
 [[rooms]]
 vnum = 7031
 name = "A triple junction"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a junction with pipes leading west, north and east."""
 
@@ -2355,6 +2952,7 @@ You stand in a junction with pipes leading west, north and east."""
 vnum = 7034
 name = "A bend in the sewer pipe"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You can look in two directions where the pipe leads : south and west."""
 
@@ -2370,6 +2968,7 @@ You can look in two directions where the pipe leads : south and west."""
 vnum = 7035
 name = "The sewer pipe bend"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You can look in two different directions where the pipe goes : west and 
 north."""
@@ -2386,6 +2985,7 @@ north."""
 vnum = 7036
 name = "The pit"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a section of a pipe that leads to a dead end. In the floor
 there's a pit leading down. There are bars set in the side of the pit wall
@@ -2403,6 +3003,7 @@ functioning as a ladder."""
 vnum = 7037
 name = "The round room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 As you enter the room it starts rotating - at first slowly, later faster
 and faster - You get totally confused as to where up and down are, but you are
@@ -2425,6 +3026,7 @@ you entered. It now leads east. There was only this one exit."""
 vnum = 7038
 name = "The three way junction"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in a junction of pipes that lead west, east and south."""
 
@@ -2444,6 +3046,7 @@ You are standing in a junction of pipes that lead west, east and south."""
 vnum = 7039
 name = "The Sewer Store Room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand in a small room lit by a single torch set in the wall. The only 
 way out of here is to the north."""
@@ -2468,6 +3071,7 @@ way out of here is to the north."""
 vnum = 7041
 name = "The Shaft"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing by the edge of a deep, dark shaft leading down. A single
 ladder is your tool to work your way down if you so wish. The sewer pipe
@@ -2485,10 +3089,17 @@ leads south from here."""
   vnum = 7001
   max = 12
 
+[[rooms.extra_descs]]
+keywords = ["ladder"]
+description = """
+Firmly set into the wall of the shaft it's impossible to even rock, is your
+estimate."""
+
 [[rooms]]
 vnum = 7043
 name = "The Sewer Entrance"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the middle of a pipe that leads from north to south. Above you
 an air shaft leads up into sunlight. It seems totally impossible to go up
@@ -2506,6 +3117,7 @@ that way."""
 vnum = 7044
 name = "The junction going three ways"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a passageway in the pipes of the sewer system leading north, east
 and west."""
@@ -2526,6 +3138,7 @@ and west."""
 vnum = 7045
 name = "The Sewer Room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are standing in a large room with chairs set in the walls. You have the
 feeling of being watched. To the south there's an entry to a larger room.
@@ -2544,6 +3157,7 @@ is a doorway leading out to the sewers."""
 vnum = 7046
 name = "The Sewer room"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 This is a Room with walls that glitters like gold though not quite like it.
 This is strange as it looks as if the glitter lights the whole room. It
@@ -2562,6 +3176,7 @@ North leads to sort of a Guard Room."""
 vnum = 7047
 name = "The Pool in the Sewer"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand in water to your waist.  To the north is the entrance to this room.
 A single door leads east."""
@@ -2578,6 +3193,7 @@ A single door leads east."""
 vnum = 7048
 name = "The Sewers"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a dead end of the sewer. The only way out is south.
 You can see a shaft leading up but it looks too difficult to go up
@@ -2591,6 +3207,7 @@ that way."""
 vnum = 7049
 name = "The junction"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = "You stand in a junction leading north, west and east."
 
   [[rooms.exits]]
@@ -2613,6 +3230,7 @@ description = "You stand in a junction leading north, west and east."
 vnum = 7050
 name = "The small room"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 The only thing in this room of interest is a chair, and that's tight to the 
 rock floor. A doorway leads south and another leads east into darkness."""
@@ -2629,10 +3247,17 @@ rock floor. A doorway leads south and another leads east into darkness."""
   vnum = 7003
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["chair"]
+description = """
+This chair is made of marble, but the fact that it is worn and attached to the
+floor makes you think twice about taking it along with you."""
+
 [[rooms]]
 vnum = 7051
 name = "The Sewer pipe"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in what reminds you of a foul sewer, as if you liked being here! 
 You can see two exits leading either north or south."""
@@ -2649,6 +3274,7 @@ You can see two exits leading either north or south."""
 vnum = 7052
 name = "The Grand Sewer"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in a Grand Sewer Pipe. This stretches toward the south. It's large 
 indeed! A doorway leads to the east from here."""
@@ -2669,6 +3295,7 @@ indeed! A doorway leads to the east from here."""
 vnum = 7053
 name = "The South end of the Grand Pipe"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand in water to your knees. A doorway leads west from here. The Pipe
 stretches north."""
@@ -2685,6 +3312,7 @@ stretches north."""
 vnum = 7055
 name = "The Edge of The Water Sewer"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a room where half of the floor is covered in water. The water
 leads east and a doorway leads west."""
@@ -2697,10 +3325,16 @@ leads east and a doorway leads west."""
   direction = "west"
   to_vnum = 7050
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7056
 name = "The Dark hallway"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see much of this, even with a light. The hallway goes into a
 passageway to the south. A doorway leads west."""
@@ -2717,6 +3351,7 @@ passageway to the south. A doorway leads west."""
 vnum = 7057
 name = "The dark passageway"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the ground where you put your feet. The 
 passageway seems to continue south and north."""
@@ -2733,6 +3368,7 @@ passageway seems to continue south and north."""
 vnum = 7058
 name = "The dark passageway"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the ground where you put your feet. The
 passageway seems to continue south and north."""
@@ -2749,6 +3385,7 @@ passageway seems to continue south and north."""
 vnum = 7059
 name = "The dark passageway"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the ground where you put your feet. The
 passageway seems to continue south and north."""
@@ -2765,6 +3402,7 @@ passageway seems to continue south and north."""
 vnum = 7060
 name = "The dark passageway"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the ground where you put your feet. The
 passageway seems to continue west and north. To the east there's water
@@ -2783,10 +3421,16 @@ sewer."""
   direction = "west"
   to_vnum = 7049
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7061
 name = "The Watery Sewer Bend"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to bend and lead south and west."""
@@ -2799,10 +3443,16 @@ seems to bend and lead south and west."""
   direction = "west"
   to_vnum = 7055
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7062
 name = "The Watery sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to lead south and north."""
@@ -2815,10 +3465,16 @@ seems to lead south and north."""
   direction = "south"
   to_vnum = 7063
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7063
 name = "The Watery sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to lead south and north."""
@@ -2831,10 +3487,16 @@ seems to lead south and north."""
   direction = "south"
   to_vnum = 7064
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7064
 name = "The Watery Sewer Junction"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to lead into a junction going south, north and east."""
@@ -2851,10 +3513,16 @@ seems to lead into a junction going south, north and east."""
   direction = "south"
   to_vnum = 7065
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7065
 name = "The Watery sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to lead south and north."""
@@ -2867,10 +3535,16 @@ seems to lead south and north."""
   direction = "south"
   to_vnum = 7066
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7066
 name = "The Watery sewer junction"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to lead into a junction that goes north, south and east."""
@@ -2887,10 +3561,16 @@ seems to lead into a junction that goes north, south and east."""
   direction = "south"
   to_vnum = 7067
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7067
 name = "The Watery sewer"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to lead south and north."""
@@ -2903,10 +3583,16 @@ seems to lead south and north."""
   direction = "south"
   to_vnum = 7068
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7068
 name = "The Watery sewer bend"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see anything but the water you're in up to your hips. The sewer
 seems to bend and lead west and north."""
@@ -2919,10 +3605,16 @@ seems to bend and lead west and north."""
   direction = "west"
   to_vnum = 7060
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7069
 name = "A ledge by the dark pool"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see much here but the echo tells you that there's quite a drop
 down. You can just make out a huge dark pool out there in the darkness, 
@@ -2938,10 +3630,16 @@ like a waterfall, into the pool far down."""
   direction = "west"
   to_vnum = 7064
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7070
 name = "A ledge by the dark pool"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You can't see much here but the echo tells you that there's quite a drop
 down. You can just make out a huge dark pool out there in the darkness,
@@ -2962,10 +3660,16 @@ in the rock. It seems big enough to contain a few people."""
   direction = "down"
   to_vnum = 7099
 
+[[rooms.extra_descs]]
+keywords = ["water"]
+description = """
+It looks dark and murky, and emanates a foul stench."""
+
 [[rooms]]
 vnum = 7099
 name = "The fissure under the ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This is a small fissure in the solid rock. Under you lies the deep dark pool.
 The water trickles quietly down from the ledge above you. The water smells 
@@ -2983,6 +3687,7 @@ like the water in a sewer."""
 vnum = 7101
 name = "Under the mudhole"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You stand in a small room with a great big opening in the ceiling. From this
 opening there's mud dripping down in large lumps. >YUCK<. You can smell the 
@@ -2998,10 +3703,16 @@ it seems absolutely impossible to force the muddy descent."""
   vnum = 7006
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+You never saw such disgusting matter before, it nearly makes you puke."""
+
 [[rooms]]
 vnum = 7102
 name = "Under the Dark Pit"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 Nice place you found yourself. You stand in the middle of a room with only
 two exits, Up and East. A tall ladder is left here so that you can climb
@@ -3017,8 +3728,8 @@ up through the Pit without the use of a rope."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 7400
   flags = ["door"]
+  to_vnum = 7400
 
   [[rooms.mob_resets]]
   vnum = 7004
@@ -3028,10 +3739,18 @@ up through the Pit without the use of a rope."""
   vnum = 7006
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["ladder"]
+description = """
+This is funny enough a wooden ladder and, after closer inspection, you
+discover it is magically held towards the wall! You can't, even with your
+greatest effort, rock it at ALL!"""
+
 [[rooms]]
 vnum = 7103
 name = "A muddy bend in the sewer system"
 sector = "hills"
+room_flags = ["dark", "indoors"]
 description = """
 You are standing in what looks like a bend in the pipe system of the
 sewer. The 'floor' is covered completely by mud! This includes covering
@@ -3053,10 +3772,16 @@ your legs up to your knees as well. The pipe leads west and south."""
   vnum = 7000
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["mud"]
+description = """
+You never saw such disgusting matter before, it nearly makes you puke."""
+
 [[rooms]]
 vnum = 7104
 name = "A junction in the sewer pipes"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in the middle of what looks like a triple junction of pipes
 going east, west and north."""
@@ -3085,6 +3810,7 @@ going east, west and north."""
 vnum = 7105
 name = "Down the old well"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 You are dangling on the slippery sides of the old well leading down and up.
 The only secure point here is the metal bars that are cemented into the 
@@ -3095,10 +3821,17 @@ knows how deep this well is?"""
   direction = "up"
   to_vnum = 7015
 
+[[rooms.extra_descs]]
+keywords = ["bars"]
+description = """
+These look like they're pretty slippery, and not very safe.  You'd better
+not go down any further."""
+
 [[rooms]]
 vnum = 7106
 name = "The northwestern corner of the ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You stand, swaying out from the ledge, with only a couple of inches of safe, 
 solid ledge under your feet. The ledge continues to the east but not back
@@ -3117,6 +3850,7 @@ continue forward."""
 vnum = 7107
 name = "The narrow ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3139,6 +3873,7 @@ free fall session afterwards."""
 vnum = 7108
 name = "The narrow ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3161,6 +3896,7 @@ free fall session afterwards."""
 vnum = 7109
 name = "The narrow ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3183,6 +3919,7 @@ free fall session afterwards."""
 vnum = 7110
 name = "The narrow ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3205,6 +3942,7 @@ free fall session afterwards."""
 vnum = 7111
 name = "The southwestern corner of the ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This seems like a ledge that is a little broader than the one just to the 
 north of here. The ledge seems to lead around some sort of Abyss of total 
@@ -3226,10 +3964,30 @@ darkness. The ledge seems to have an odd-looking edge here."""
   direction = "down"
   to_vnum = 7279
 
+[[rooms.extra_descs]]
+keywords = ["rock"]
+description = """
+It looks as if it can be opened in a door-like fashion. Maybe this will lead
+the way down."""
+
+[[rooms.extra_descs]]
+keywords = ["step"]
+description = """
+A small rock sticks out right under it, otherwise the way is DOWN, DOWN, and
+SPLAT!!!"""
+
+[[rooms.extra_descs]]
+keywords = ["edge", "odd-looking"]
+description = """
+This is truly a weird piece of craftsmanship in your eyes. The edge seems to
+form a step leading down, but WHAT a STEP DOWN. The Abyss opens down there
+leading to seemingly total destruction."""
+
 [[rooms]]
 vnum = 7112
 name = "An odd intersection"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a rather odd intersection of pipes. The pipes actually don't
 resemble pipes anymore. They look more like a real stone tunnel, or a
@@ -3260,6 +4018,7 @@ and west."""
 vnum = 7113
 name = "The narrow ledge going east to west"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the process of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3282,6 +4041,7 @@ free fall session afterwards."""
 vnum = 7114
 name = "Mid-air"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You've just stepped into the most unlucky position in the whole of Merc Mud.
 The result of such a foolish act should be punished with death, you know.
@@ -3295,6 +4055,7 @@ You've fallen, and you can't get up!!!"""
 vnum = 7115
 name = "The Broad ledge"
 sector = "hills"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are standing on a ledge that seems quite a lot larger than the rest 
 of the ledges. This one leads to the west and the east, plus it has an exit
@@ -3321,6 +4082,7 @@ wouldn't be such a good idea. The way south is in utter darkness."""
 vnum = 7116
 name = "The northeastern corner of the ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You stand, swaying out from the ledge, with only a couple of inches of safe,
 solid ledge under your feet. The ledge continues to the west and leads south
@@ -3336,13 +4098,28 @@ from here into darkness."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 7280
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["soil", "soft", "earth"]
+description = """
+You can just make out the outline of a trapdoor here in the soil. The earth
+is probably there to conceal a secret entrance. This looks as if it leads down
+into the seemingly solid rock face of the ledge."""
+
+[[rooms.extra_descs]]
+keywords = ["ground", "ledge", "rock"]
+description = """
+The ground here seems a little different from all the other ledges along the
+Abyss. There's a kind of soft soil on this ledge, maybe you should look
+carefully at this. It seems to be of some interest."""
 
 [[rooms]]
 vnum = 7117
 name = "The narrow eastern ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3361,6 +4138,7 @@ free fall session afterwards. And THAT is west of here so watch your step."""
 vnum = 7118
 name = "The narrow eastern ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3379,6 +4157,7 @@ free fall session afterwards. And THAT is west of here so watch your step."""
 vnum = 7119
 name = "The narrow eastern ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3397,6 +4176,7 @@ free fall session afterwards. And THAT is west of here so watch your step."""
 vnum = 7120
 name = "The narrow eastern ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in the progress of walking all the way around the ledge since there's
 no way of turning around on this all too narrow path. There IS another exit
@@ -3420,6 +4200,7 @@ You also see a small opening to the east."""
 vnum = 7121
 name = "The southeastern corner of the ledge"
 sector = "mountain"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This seems like a ledge that is a little broader than the one just to the
 north of here. The ledge seems to lead around some sort of abyss of total
@@ -3437,6 +4218,7 @@ darkness."""
 vnum = 7122
 name = "Under the pit"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in a completely dark cavern leading west. The wall looks weird here."""
 
@@ -3448,10 +4230,16 @@ You stand in a completely dark cavern leading west. The wall looks weird here.""
   vnum = 7005
   max = 7
 
+[[rooms.extra_descs]]
+keywords = ["wall"]
+description = """
+There is a crack here that looks like it has been made recently."""
+
 [[rooms]]
 vnum = 7123
 name = "Under The Shaft"
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 A ladder leads up from here to the Shaft.
 A small opening leads west from here."""
@@ -3468,6 +4256,7 @@ A small opening leads west from here."""
 vnum = 7129
 name = "The sewer line."
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a narrow part of the sewer. Down the sewer continues and to the
 north is the ledge."""
@@ -3484,8 +4273,8 @@ north is the ledge."""
 vnum = 7130
 name = "The sewer pipe."
 sector = "forest"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in an odd sewer pipe You see some odd scratches on the pipe wall, as
 from a gigantic rat. You can see some slimy water gently running down into
 a sewer drain, and north the drain continues."""
-

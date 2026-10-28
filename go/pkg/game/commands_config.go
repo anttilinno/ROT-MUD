@@ -105,6 +105,9 @@ func (d *CommandDispatcher) cmdDescription(ch *types.Character, args string) {
 	d.send(ch, "Description set.\r\n")
 }
 
+// DefaultPrompt is the prompt new characters start with (ROM default).
+const DefaultPrompt = "<%hhp %mm %vmv> "
+
 func (d *CommandDispatcher) cmdPrompt(ch *types.Character, args string) {
 	if ch.IsNPC() {
 		return
@@ -141,7 +144,7 @@ func (d *CommandDispatcher) cmdPrompt(ch *types.Character, args string) {
 	}
 
 	if strings.ToLower(args) == "default" {
-		ch.Prompt = "<%hhp %mm %vmv> "
+		ch.Prompt = DefaultPrompt
 		d.send(ch, "Prompt set to default.\r\n")
 		return
 	}

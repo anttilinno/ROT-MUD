@@ -23,6 +23,12 @@ wear_flags = ["take", "hands"]
   location = "hitroll"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["gloves", "combat"]
+description = """
+These gloves are plated with metal plates that provide strength and
+protection."""
+
 [[objects]]
 vnum = 2301
 keywords = ["spiked", "armor", "garde"]
@@ -91,6 +97,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 12
 
@@ -117,6 +125,17 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "saves"
   modifier = -2
+
+[[objects.extra_descs]]
+keywords = ["cloak", "pitch", "black"]
+description = """
+It appears to have pockets inside it."""
+
+  [objects.container]
+  capacity = 150
+  flags = []
+  key = 0
+  max_weight = 30
 
 [[objects]]
 vnum = 2306
@@ -161,6 +180,11 @@ wear_flags = ["take", "hands"]
   location = "damroll"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["spiked", "gauntlets"]
+description = """
+They look pretty damaging."""
+
 [[objects]]
 vnum = 2308
 keywords = ["shield", "shadow"]
@@ -187,6 +211,11 @@ extra_flags = ["glow", "magic", "anti_good", "anti_neutral"]
   location = "ac"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["shield", "shadow"]
+description = """
+You look into the depths of the shield and shiver at the evil it contains."""
+
 [[objects]]
 vnum = 2309
 keywords = ["nightbringer", "short", "sword", "shortsword"]
@@ -200,6 +229,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["dark", "magic", "anti_good", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 4
 
@@ -210,6 +241,11 @@ extra_flags = ["dark", "magic", "anti_good", "anti_neutral"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 3
+
+[[objects.extra_descs]]
+keywords = ["nightbringer", "short", "sword", "shortsword"]
+description = """
+The runes "NiGHtBrINgeR" are scrawled along the blade."""
 
 [[objects]]
 vnum = 2310
@@ -295,6 +331,11 @@ extra_flags = ["glow", "magic"]
   ac_slash = 9
   ac_exotic = 3
 
+[[objects.extra_descs]]
+keywords = ["shield", "huge", "tower"]
+description = """
+A pure white shield with a gold cross emblazoned across it."""
+
 [[objects]]
 vnum = 2314
 keywords = ["dawnbringer", "mace", "huge", "two-handed"]
@@ -308,6 +349,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic", "anti_evil", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 4
   dice_size = 6
 
@@ -318,6 +362,11 @@ extra_flags = ["glow", "magic", "anti_evil", "anti_neutral"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 3
+
+[[objects.extra_descs]]
+keywords = ["dawnbringer", "mace", "huge"]
+description = """
+The runes "DAwNbRIngER" are scrawled along the handle."""
 
 [[objects]]
 vnum = 2315
@@ -335,6 +384,11 @@ extra_flags = ["magic"]
   location = "int"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["spectacles", "wire", "rimmed"]
+description = """
+They'll make you look smart."""
+
 [[objects]]
 vnum = 2316
 keywords = ["ring", "banded"]
@@ -350,6 +404,11 @@ extra_flags = ["glow", "magic"]
   [[objects.affects]]
   location = "mana"
   modifier = 30
+
+[[objects.extra_descs]]
+keywords = ["ring", "banded"]
+description = """
+The ring has entwined bands of gold and silver."""
 
 [[objects]]
 vnum = 2317
@@ -373,6 +432,11 @@ extra_flags = ["glow", "magic"]
   location = "saves"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["globe", "minor"]
+description = """
+Shimmering colors move inside the globe."""
+
 [[objects]]
 vnum = 2318
 keywords = ["staff", "gnarled", "magius"]
@@ -386,6 +450,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 5
   dice_size = 4
 
@@ -401,6 +468,11 @@ extra_flags = ["magic"]
   location = "hitroll"
   modifier = 3
 
+[[objects.extra_descs]]
+keywords = ["staff", "gnarled", "magius"]
+description = """
+It appears to be simply a gnarled old limb. It feels powerful though."""
+
 [[objects]]
 vnum = 2319
 keywords = ["girdle", "pouches", "many"]
@@ -411,6 +483,17 @@ level = 0
 weight = 50
 cost = 1000
 wear_flags = ["take", "waist"]
+
+[[objects.extra_descs]]
+keywords = ["girdle", "pouches", "many"]
+description = """
+It appears to be full of tiny pockets."""
+
+  [objects.container]
+  capacity = 500
+  flags = []
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 2320
@@ -457,6 +540,15 @@ weight = 50
 cost = 800
 wear_flags = ["take", "hold"]
 
+[[objects.extra_descs]]
+keywords = ["manual", "arts", "healing", "book"]
+description = """
+It appears to be a book of anatomy and medicine."""
+
+  [objects.magic]
+  level = 30
+  spells = ["cure light", "cure light", "cure light"]
+
 [[objects]]
 vnum = 2323
 keywords = ["mace", "huge", "mithril"]
@@ -470,6 +562,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 5
   dice_size = 4
 
@@ -551,6 +645,11 @@ extra_flags = ["magic"]
   location = "move"
   modifier = 30
 
+[[objects.extra_descs]]
+keywords = ["boots", "striding"]
+description = """
+They look comfortable to walk in."""
+
 [[objects]]
 vnum = 2328
 keywords = ["cloak", "icy", "white"]
@@ -569,6 +668,11 @@ extra_flags = ["glow", "magic"]
   ac_slash = 8
   ac_exotic = 2
 
+[[objects.extra_descs]]
+keywords = ["cloak", "icy", "white"]
+description = """
+Smoke rises from it almost like it's made of dry ice."""
+
 [[objects]]
 vnum = 2329
 keywords = ["staff", "ice"]
@@ -582,6 +686,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["frost", "two_hands"]
   dice_number = 7
   dice_size = 3
 
@@ -592,6 +699,11 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["staff", "ice"]
+description = """
+The runes "FrIgID" are inscribed in the icy staff."""
 
 [[objects]]
 vnum = 2330
@@ -625,6 +737,17 @@ cost = 930
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["horn", "life"]
+description = """
+The horn is capped at both ends with gold. Unreadable runes are scrawled on it."""
+
+  [objects.magic]
+  level = 30
+  max_charges = 8
+  charges = 8
+  spells = ["cure light"]
+
 [[objects]]
 vnum = 2332
 keywords = ["belt", "life"]
@@ -657,6 +780,11 @@ extra_flags = ["hum", "magic", "melt_drop"]
   location = "hit"
   modifier = 20
 
+[[objects.extra_descs]]
+keywords = ["stone", "blood", "red"]
+description = """
+The stone pulses with your own heart beat."""
+
 [[objects]]
 vnum = 2334
 keywords = ["crossbow", "huge"]
@@ -670,6 +798,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 9
 
@@ -692,6 +823,17 @@ weight = 90
 cost = 500
 wear_flags = ["take", "about"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["pack", "leather", "small"]
+description = """
+It looks pretty big on the inside."""
+
+  [objects.container]
+  capacity = 200
+  flags = []
+  key = 0
+  max_weight = 20
 
 [[objects]]
 vnum = 2336
@@ -746,6 +888,11 @@ extra_flags = ["magic"]
   ac_slash = 7
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["pants", "black", "leather"]
+description = """
+They look sneaky."""
+
 [[objects]]
 vnum = 2339
 keywords = ["sword", "wicked", "short", "shortsword"]
@@ -759,6 +906,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "pierce"
   dice_number = 3
   dice_size = 8
 
@@ -769,6 +918,11 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["sword", "wicked", "short", "shortsword"]
+description = """
+It looks just perfect for backstabbing."""
 
 [[objects]]
 vnum = 2340
@@ -791,6 +945,11 @@ extra_flags = ["glow", "hum", "magic"]
   [[objects.affects]]
   location = "saves"
   modifier = -2
+
+[[objects.extra_descs]]
+keywords = ["globe", "major"]
+description = """
+Shimmering colors move inside the globe."""
 
 [[objects]]
 vnum = 2341
@@ -889,6 +1048,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "magic"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 5
 
@@ -899,6 +1060,11 @@ extra_flags = ["hum", "magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["axe", "great"]
+description = """
+The runes "DeAtH" are scrawled along the blade."""
 
 [[objects]]
 vnum = 2346
@@ -922,6 +1088,11 @@ extra_flags = ["glow", "anti_good"]
   location = "saves"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["plate", "ethereal", "suit"]
+description = """
+You can almost see through it."""
+
 [[objects]]
 vnum = 2347
 keywords = ["helm", "ethereal"]
@@ -940,6 +1111,11 @@ extra_flags = ["glow", "anti_good"]
   ac_slash = 8
   ac_exotic = 4
 
+[[objects.extra_descs]]
+keywords = ["helm", "ethereal"]
+description = """
+You can almost see through it."""
+
 [[objects]]
 vnum = 2348
 keywords = ["blade", "ethereal"]
@@ -953,6 +1129,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 12
 
@@ -963,6 +1141,11 @@ extra_flags = ["glow", "anti_good"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["blade", "ethereal"]
+description = """
+You can almost see through it."""
 
 [[objects]]
 vnum = 2349
@@ -975,6 +1158,12 @@ weight = 30
 cost = 2600
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 20
+  max_charges = 5
+  charges = 5
+  spells = ["heat metal"]
 
 [[objects]]
 vnum = 2350
@@ -1086,6 +1275,11 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["key", "runed"]
+description = """
+The key looks like it was made for royalty."""
+
 [[objects]]
 vnum = 2360
 keywords = ["boots", "fur", "lined"]
@@ -1138,8 +1332,16 @@ cost = 1310
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 3
+
+[[objects.extra_descs]]
+keywords = ["sword", "kopesh"]
+description = """
+The sword looks like it would be grasped so that the blade extended along the
+forearm of the wielder."""
 
 [[objects]]
 vnum = 2363
@@ -1187,6 +1389,8 @@ cost = 1310
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 4
 
@@ -1237,6 +1441,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 10
 
@@ -1312,6 +1519,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 6
   dice_size = 3
 
@@ -1387,6 +1597,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 5
   dice_size = 4
 
@@ -1462,6 +1675,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 7
   dice_size = 3
 
@@ -1472,6 +1687,11 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["star", "morning", "morningstar"]
+description = """
+It looks damaging."""
 
 [[objects]]
 vnum = 2381
@@ -1485,8 +1705,15 @@ cost = 1970
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 4
+
+[[objects.extra_descs]]
+keywords = ["spiked", "brass", "knuckles"]
+description = """
+A band held in the hand that has spikes on the front side."""
 
 [[objects]]
 vnum = 2382
@@ -1498,6 +1725,17 @@ level = 0
 weight = 30
 cost = 0
 wear_flags = ["take", "neck"]
+
+[[objects.extra_descs]]
+keywords = ["ring", "key", "multi", "colored", "multi-colored"]
+description = """
+It has several keys of different colors on it."""
+
+  [objects.container]
+  capacity = 10
+  flags = []
+  key = 0
+  max_weight = 2
 
 [[objects]]
 vnum = 2383
@@ -1511,6 +1749,8 @@ cost = 1700
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 5
   dice_size = 5
 
@@ -1526,6 +1766,10 @@ cost = 800
 wear_flags = ["take"]
 extra_flags = ["glow", "magic", "inventory"]
 
+  [objects.magic]
+  level = 20
+  spells = ["heal"]
+
 [[objects]]
 vnum = 2385
 keywords = ["pouch", "belt"]
@@ -1536,6 +1780,12 @@ level = 0
 weight = 50
 cost = 20
 wear_flags = ["take", "waist"]
+
+  [objects.container]
+  capacity = 15
+  flags = []
+  key = 0
+  max_weight = 2
 
 [[objects]]
 vnum = 2386
@@ -1549,6 +1799,9 @@ cost = 320
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 10
 
@@ -1564,6 +1817,8 @@ cost = 880
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 4
 
@@ -1622,6 +1877,11 @@ extra_flags = ["hum", "magic"]
   location = "str"
   modifier = 2
 
+[[objects.extra_descs]]
+keywords = ["gauntlets", "ogre", "power"]
+description = """
+They look very "handy"."""
+
 [[objects]]
 vnum = 2391
 keywords = ["club", "massive"]
@@ -1634,6 +1894,9 @@ cost = 1520
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 8
 
@@ -1743,4 +2006,3 @@ wear_flags = ["take", "face"]
   ac_bash = 7
   ac_slash = 7
   ac_exotic = 0
-

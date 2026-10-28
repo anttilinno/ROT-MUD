@@ -30,23 +30,60 @@ func NewShopHandler(registry *ShopRegistry, world WorldInterface) *ShopHandler {
 	}
 }
 
-// findKeeperInRoom finds a shopkeeper in the character's room
+// keeperShop pairs a shopkeeper mob with its shop.
+type keeperShop struct {
+	keeper *types.Character
+	shop   *Shop
+}
+
+// findKeeperInRoom finds the first shopkeeper in the character's room.
 func (h *ShopHandler) findKeeperInRoom(ch *types.Character) (*types.Character, *Shop) {
-	if ch.InRoom == nil {
+	keepers := h.keepersInRoom(ch)
+	if len(keepers) == 0 {
 		return nil, nil
 	}
+	return keepers[0].keeper, keepers[0].shop
+}
 
+// keepersInRoom returns every shopkeeper present in the character's room, so a
+// single room can host more than one merchant (e.g. a map seller and a teleport
+// vendor) and buy/sell/list route to whichever keeper is relevant.
+func (h *ShopHandler) keepersInRoom(ch *types.Character) []keeperShop {
+	if ch.InRoom == nil {
+		return nil
+	}
+	var out []keeperShop
 	for _, mob := range ch.InRoom.People {
 		if mob == ch || !mob.IsNPC() {
 			continue
 		}
-
-		shop := h.Registry.GetByMob(mob)
-		if shop != nil {
-			return mob, shop
+		if shop := h.Registry.GetByMob(mob); shop != nil {
+			out = append(out, keeperShop{keeper: mob, shop: shop})
 		}
 	}
-	return nil, nil
+	return out
+}
+
+// openKeepers returns the keepers in the room whose shop is open now. When
+// there are none it tells ch why (no shop here, or every keeper is closed)
+// and returns nil.
+func (h *ShopHandler) openKeepers(ch *types.Character) []keeperShop {
+	keepers := h.keepersInRoom(ch)
+	if len(keepers) == 0 {
+		h.sendToChar(ch, "You can't do that here.\r\n")
+		return nil
+	}
+	hour := h.World.GetCurrentHour()
+	var open []keeperShop
+	for _, ks := range keepers {
+		if ks.shop.IsOpen(hour) {
+			open = append(open, ks)
+		}
+	}
+	if len(open) == 0 {
+		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keepers[0].keeper.ShortDesc)
+	}
+	return open
 }
 
 // sendToChar sends a message to a character
@@ -58,16 +95,8 @@ func (h *ShopHandler) sendToChar(ch *types.Character, format string, args ...int
 
 // DoBuy handles the 'buy' command
 func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
-	keeper, shop := h.findKeeperInRoom(ch)
-	if keeper == nil {
-		h.sendToChar(ch, "You can't do that here.\r\n")
-		return
-	}
-
-	// Check if shop is open
-	hour := h.World.GetCurrentHour()
-	if !shop.IsOpen(hour) {
-		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keeper.ShortDesc)
+	keepers := h.openKeepers(ch)
+	if keepers == nil {
 		return
 	}
 
@@ -76,17 +105,27 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 		return
 	}
 
-	// Find the item in keeper's inventory
+	// Find the keeper that stocks the requested item.
+	var shop *Shop
 	var obj *types.Object
-	for _, item := range keeper.Inventory {
-		if matchesKeyword(item.Name, argument) {
-			obj = item
+	for _, ks := range keepers {
+		for _, item := range ks.keeper.Inventory {
+			if matchesKeyword(item.Name, argument) {
+				shop, obj = ks.shop, item
+				break
+			}
+		}
+		if obj != nil {
 			break
 		}
 	}
 
 	if obj == nil {
-		h.sendToChar(ch, "%s says 'I don't have that item.'\r\n", keeper.ShortDesc)
+		if len(keepers) > 1 {
+			h.sendToChar(ch, "Nobody here sells that.\r\n")
+		} else {
+			h.sendToChar(ch, "%s says 'I don't have that item.'\r\n", keepers[0].keeper.ShortDesc)
+		}
 		return
 	}
 
@@ -100,13 +139,13 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 	}
 
 	// Check weight
-	if getCarryWeight(ch)+obj.Weight > maxCarryWeight(ch) {
+	if ch.CarryWeight()+obj.TotalWeight() > ch.MaxCarryWeight() {
 		h.sendToChar(ch, "You can't carry that much weight.\r\n")
 		return
 	}
 
 	// Check item count
-	if getCarryCount(ch) >= maxCarryCount(ch) {
+	if ch.CarryCount() >= ch.MaxCarryCount() {
 		h.sendToChar(ch, "You can't carry that many items.\r\n")
 		return
 	}
@@ -145,16 +184,8 @@ func (h *ShopHandler) DoBuy(ch *types.Character, argument string) {
 
 // DoSell handles the 'sell' command
 func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
-	keeper, shop := h.findKeeperInRoom(ch)
-	if keeper == nil {
-		h.sendToChar(ch, "You can't do that here.\r\n")
-		return
-	}
-
-	// Check if shop is open
-	hour := h.World.GetCurrentHour()
-	if !shop.IsOpen(hour) {
-		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keeper.ShortDesc)
+	keepers := h.openKeepers(ch)
+	if keepers == nil {
 		return
 	}
 
@@ -185,9 +216,17 @@ func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
 		return
 	}
 
-	// Check if shop buys this type
-	if !shop.BuysType(obj.ItemType) {
-		h.sendToChar(ch, "%s says 'I don't buy that kind of thing.'\r\n", keeper.ShortDesc)
+	// Find an open keeper that buys this item type.
+	var keeper *types.Character
+	var shop *Shop
+	for _, ks := range keepers {
+		if ks.shop.BuysType(obj.ItemType) {
+			keeper, shop = ks.keeper, ks.shop
+			break
+		}
+	}
+	if keeper == nil {
+		h.sendToChar(ch, "%s says 'I don't buy that kind of thing.'\r\n", keepers[0].keeper.ShortDesc)
 		return
 	}
 
@@ -220,50 +259,56 @@ func (h *ShopHandler) DoSell(ch *types.Character, argument string) {
 
 // DoList handles the 'list' command
 func (h *ShopHandler) DoList(ch *types.Character, argument string) {
-	keeper, shop := h.findKeeperInRoom(ch)
-	if keeper == nil {
-		h.sendToChar(ch, "You can't do that here.\r\n")
+	keepers := h.openKeepers(ch)
+	if keepers == nil {
 		return
 	}
 
-	// Check if shop is open
-	hour := h.World.GetCurrentHour()
-	if !shop.IsOpen(hour) {
-		h.sendToChar(ch, "%s says 'Sorry, we're closed. Come back later.'\r\n", keeper.ShortDesc)
-		return
-	}
-
-	if len(keeper.Inventory) == 0 {
-		h.sendToChar(ch, "%s says 'I have nothing for sale right now.'\r\n", keeper.ShortDesc)
-		return
-	}
-
+	multi := len(keepers) > 1
 	var sb strings.Builder
-	sb.WriteString("[Lvl        Price Qty] Item\r\n")
+	listed := false
 
-	// Group items by vnum and count quantities
-	itemCounts := make(map[int]int)
-	itemObjects := make(map[int]*types.Object)
-	for _, obj := range keeper.Inventory {
-		itemCounts[obj.Vnum]++
-		if itemObjects[obj.Vnum] == nil {
-			itemObjects[obj.Vnum] = obj
-		}
-	}
-
-	for vnum, obj := range itemObjects {
-		price := shop.GetSellPrice(obj, ch)
-		qty := itemCounts[vnum]
-
-		// Filter by argument if provided
-		if argument != "" && !matchesKeyword(obj.Name, argument) {
+	for _, ks := range keepers {
+		if len(ks.keeper.Inventory) == 0 {
 			continue
 		}
 
-		sb.WriteString(fmt.Sprintf("[%3d %12s %3d] %s\r\n",
-			obj.Level, types.FormatCoin(price), qty, obj.ShortDesc))
+		// Group items by vnum and count quantities for this keeper.
+		itemCounts := make(map[int]int)
+		itemObjects := make(map[int]*types.Object)
+		var order []int
+		for _, obj := range ks.keeper.Inventory {
+			if itemObjects[obj.Vnum] == nil {
+				itemObjects[obj.Vnum] = obj
+				order = append(order, obj.Vnum)
+			}
+			itemCounts[obj.Vnum]++
+		}
+
+		var body strings.Builder
+		for _, vnum := range order {
+			obj := itemObjects[vnum]
+			if argument != "" && !matchesKeyword(obj.Name, argument) {
+				continue
+			}
+			body.WriteString(fmt.Sprintf("[%3d %12s %3d] %s\r\n",
+				obj.Level, types.FormatCoin(ks.shop.GetSellPrice(obj, ch)), itemCounts[vnum], obj.ShortDesc))
+		}
+		if body.Len() == 0 {
+			continue
+		}
+		if multi {
+			sb.WriteString(fmt.Sprintf("%s offers:\r\n", ks.keeper.ShortDesc))
+		}
+		sb.WriteString("[Lvl        Price Qty] Item\r\n")
+		sb.WriteString(body.String())
+		listed = true
 	}
 
+	if !listed {
+		h.sendToChar(ch, "There is nothing for sale here right now.\r\n")
+		return
+	}
 	h.sendToChar(ch, "%s", sb.String())
 }
 
@@ -314,44 +359,27 @@ func (h *ShopHandler) DoValue(ch *types.Character, argument string) {
 
 // Helper functions
 
+// matchesKeyword reports whether every word of target is a prefix of one of
+// the item's keywords, as ROM's is_name does ("rune shire" matches
+// "rune teleport shire").
 func matchesKeyword(keywords, target string) bool {
-	if target == "" {
+	words := strings.Fields(strings.ToLower(target))
+	if len(words) == 0 {
 		return false
 	}
-	target = strings.ToLower(target)
-	for _, kw := range strings.Fields(strings.ToLower(keywords)) {
-		if strings.HasPrefix(kw, target) {
-			return true
+	kws := strings.Fields(strings.ToLower(keywords))
+	for _, w := range words {
+		found := false
+		for _, kw := range kws {
+			if strings.HasPrefix(kw, w) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
 		}
 	}
-	return false
+	return true
 }
 
-func getCarryWeight(ch *types.Character) int {
-	total := 0
-	for _, obj := range ch.Inventory {
-		total += obj.TotalWeight()
-	}
-	for _, obj := range ch.Equipment {
-		if obj != nil {
-			total += obj.TotalWeight()
-		}
-	}
-	return total
-}
-
-func maxCarryWeight(ch *types.Character) int {
-	// Base on strength
-	str := ch.GetStat(types.StatStr)
-	return 50 + str*10 + ch.Level*5
-}
-
-func getCarryCount(ch *types.Character) int {
-	return len(ch.Inventory)
-}
-
-func maxCarryCount(ch *types.Character) int {
-	// Base on dexterity
-	dex := ch.GetStat(types.StatDex)
-	return 15 + dex/2 + ch.Level/3
-}

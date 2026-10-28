@@ -115,6 +115,7 @@ to the north, east, and west.  A sign over the eastern building says
 vnum = 1607
 name = "House of Pancakes"
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 The moment you enter this room, the ceiling descends and crushes you
 into a pancake.  Don't you hate it when that happens?"""
@@ -123,6 +124,7 @@ into a pancake.  Don't you hate it when that happens?"""
 vnum = 1608
 name = "Old Store Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered what appears to be an old storeroom. Most of the items
 that were in here appear to have been ruined long ago."""
@@ -139,6 +141,7 @@ that were in here appear to have been ruined long ago."""
 vnum = 1609
 name = "Empty Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room appears to be completely empty. The only exit seems to be the
 way you came.  There are some scratches around the floor."""
@@ -155,6 +158,7 @@ way you came.  There are some scratches around the floor."""
 vnum = 1610
 name = "Minotaur's Room"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You have entered a secret chamber under the empty room. In this room is
 the worn but cared-for gear and trappings of some large humanoid."""
@@ -246,6 +250,7 @@ around you."""
 vnum = 1623
 name = "Tower Foyer"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a foyer on the west side of the structure. The moat is west of 
 here. There is also a large door eastward into the structure.  You notice that
@@ -271,6 +276,7 @@ the walls are ornately decorated with very life-like stone gargoyles."""
 vnum = 1624
 name = "The Grand Lobby"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a vast lobby. This lobby appears to have once been very
 ornately furnished, but now everything is decayed and moldering.  A highly
@@ -298,6 +304,7 @@ covered in highly ornate and life-like stone gargoyles."""
 vnum = 1625
 name = "Base of the Western Tower"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand in the center of the Western tower's base. Torch brackets occupy
 the four corners of this huge room. Above each torch is a lifelike ornate
@@ -327,6 +334,7 @@ stone gargoyle.  There are doors north and south, and passages east and west."""
 vnum = 1626
 name = "The Musty Corridor"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are walking along a musty east-west corridor joining the two towers.
 There are room on each side of the corridor, and openings at each end."""
@@ -351,6 +359,7 @@ There are room on each side of the corridor, and openings at each end."""
 vnum = 1627
 name = "Kitchen"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered what must once have been a kitchen. The rusting remains of
 various utensils lie on countertops. There is also an old wash basin and a
@@ -368,6 +377,7 @@ pot-belly stove.  There is a door south, and a serving hatch east."""
 vnum = 1628
 name = "Conservatory"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the tower's private conservatory. However, through years of neglect,
 the plants have grown into a hideous jungle.  The only exit is north."""
@@ -384,6 +394,7 @@ the plants have grown into a hideous jungle.  The only exit is north."""
 vnum = 1629
 name = "The Dining Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a fabulous dining hall.  The wrecked remains of a long table
 dominate the room. A horrible odor pervades the room, like some foul-smelling
@@ -402,6 +413,7 @@ a door south."""
 vnum = 1630
 name = "Art Gallery"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the ruined remains of an art gallery. Everything appears to
 have been stolen long ago, however.  The only exit is north."""
@@ -418,6 +430,7 @@ have been stolen long ago, however.  The only exit is north."""
 vnum = 1631
 name = "Base of the Eastern Tower"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand in the center of the Eastern tower's base. Torch brackets occupy the
 four corners of this huge room.  Above each torch is a lifelike ornate stone
@@ -449,6 +462,7 @@ tower."""
 vnum = 1632
 name = "The Common Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in what must once have been a common room for all residents of the
 tower. There is a huge fire pit with a chimney in the center, and the smashed
@@ -460,8 +474,8 @@ remains of a great many table and chairs.  The exit is south."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 1634
   flags = ["door"]
+  to_vnum = 1634
 
   [[rooms.mob_resets]]
   vnum = 1603
@@ -471,6 +485,7 @@ remains of a great many table and chairs.  The exit is south."""
 vnum = 1633
 name = "Servant's Quarters"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in what once was the servant's quarters, as evidenced by the shabby
 belongings and decor. What little remains is rotting and of little value
@@ -484,6 +499,7 @@ anyway.  The only exit is north."""
 vnum = 1634
 name = "A Large Murky Cellar"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a large, murky cellar. An almost tangible air of horror pervades
 the room.  A thin layer of nitre covers the walls and ceiling.  Rotting
@@ -491,8 +507,8 @@ furniture looms obliquely about the room."""
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 1632
   flags = ["door"]
+  to_vnum = 1632
 
   [[rooms.mob_resets]]
   vnum = 1609
@@ -506,6 +522,7 @@ furniture looms obliquely about the room."""
 vnum = 1635
 name = "On the First Staircase"
 sector = "field"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a Spiral staircase connecting the first and second levels of
 the eastern tower. You can go up or down."""
@@ -522,6 +539,7 @@ the eastern tower. You can go up or down."""
 vnum = 1636
 name = "Second Level of the Eastern Tower"
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the center of the second level of the Eastern tower. This large
 room appears quite empty, except for the candle abras firmly fixed to the
@@ -555,6 +573,7 @@ walls.  An opening leads westward, and a spiral staircase leads down."""
 vnum = 1637
 name = "The Elegant Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in what was once a elegant hall, although everything is moldering now.
 The rotted remains of a plush carpet covers the floor, while several moldy
@@ -585,6 +604,7 @@ and openings east and west."""
 vnum = 1638
 name = "The Shaman's Room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You have entered an elegantly furnished room that looks to be still in use!
 Costly paintings and pieces of furniture are tastefully situated.  On the
@@ -611,6 +631,7 @@ exit is south."""
 vnum = 1639
 name = "The Library"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room appears to have been a library.  Empty book shelves line each wall.
 The only exit is north."""
@@ -631,6 +652,7 @@ The only exit is north."""
 vnum = 1640
 name = "Second Level of the Western Tower"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in the center of the western tower's second floor.  A large spiral 
 staircase of 29 steps connects this level with the third.  There are doors
@@ -653,6 +675,7 @@ room is barren."""
 vnum = 1641
 name = "On the Balcony"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are on the balcony overlooking the Grand lobby.  You have a fabulous
 view of the entire room.  The only exit is the way you came in."""
@@ -665,6 +688,7 @@ view of the entire room.  The only exit is the way you came in."""
 vnum = 1642
 name = "The Spiral Stairs"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 You are on a large spiral staircase of 29 steps, leading between the 
 second and third floors.  You can go up or down."""
@@ -681,6 +705,7 @@ second and third floors.  You can go up or down."""
 vnum = 1643
 name = "Third Level of Western Tower"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You stand in the center of the western tower's third floor.  This large room
 glows mysteriously with a strange light all its own.  From a door to the east
@@ -688,8 +713,8 @@ comes a strange inky blackness.  A spiral staircase leads down."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.exits]]
   direction = "down"
@@ -703,27 +728,28 @@ comes a strange inky blackness.  A spiral staircase leads down."""
 vnum = 1644
 name = "It's too dark to see anything!"
 sector = "forest"
+room_flags = ["dark", "indoors"]
 description = ""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 1645
   flags = ["door"]
+  to_vnum = 1645
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 1647
   flags = ["door"]
+  to_vnum = 1647
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 1646
   flags = ["door"]
+  to_vnum = 1646
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1643
   flags = ["door"]
+  to_vnum = 1643
 
   [[rooms.mob_resets]]
   vnum = 1608
@@ -733,6 +759,7 @@ description = ""
 vnum = 1645
 name = "The Armory"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 In this room, which has somehow evaded the ravages of time, are neatly stored
 racks of common weapons.  They appear to be quite ordinary; however, a chest
@@ -740,8 +767,8 @@ in one corner catches your eye.  The only exit is the way you came in."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.mob_resets]]
   vnum = 1610
@@ -759,6 +786,7 @@ in one corner catches your eye.  The only exit is the way you came in."""
 vnum = 1646
 name = "The Officer's Quarters"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have entered a lavish but functional room decked out in a military style.
 Murals on the wall show battle scenes in gargoyles, minotaurs, and huge,
@@ -768,8 +796,8 @@ of authority.  The only door is north."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.mob_resets]]
   vnum = 1613
@@ -787,6 +815,7 @@ of authority.  The only door is north."""
 vnum = 1647
 name = "Third Level of Eastern Tower"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in the center of the Eastern Tower's third floor.  The room you are in
 glows with a mysterious light that has no source.  In the center of the room a
@@ -795,13 +824,13 @@ looking keyhole.  There is also a door to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 1644
   flags = ["door"]
+  to_vnum = 1644
 
   [[rooms.exits]]
   direction = "up"
-  to_vnum = 1648
   flags = ["door"]
+  to_vnum = 1648
 
   [[rooms.mob_resets]]
   vnum = 1615
@@ -827,8 +856,8 @@ onto a catwalk."""
 
   [[rooms.exits]]
   direction = "down"
-  to_vnum = 1647
   flags = ["door"]
+  to_vnum = 1647
 
   [[rooms.mob_resets]]
   vnum = 1616
@@ -866,6 +895,7 @@ leads into the western turret."""
 vnum = 1650
 name = "Turret of the Western Tower"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in the turret of the western tower.  You feel very strange here.
 Scattered about this room are a great many coins and valuable articles.
@@ -923,6 +953,7 @@ chair facing a mirror on the wall."""
 vnum = 1701
 name = "Main Eastern Road"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 You are on the old Eastern Road.  The crossroads to the east joins ANOTHER
 northern route to this road, which continues east.  South of the crossroads is
@@ -967,6 +998,7 @@ surrounding wilderness."""
 vnum = 1703
 name = "Trading Post"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a trading post just south of the crossroads, where rangers,
 trappers and hunters from the surrounding area come to buy, sell, and
@@ -1212,6 +1244,7 @@ clearing continues to the east.  To the west is a very large hut."""
 vnum = 1712
 name = "A Centaur's Hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a smallish hut, the home of a family of Centaurs.  The hut
 is sparsely furnished, mostly the trappings of survival."""
@@ -1228,6 +1261,7 @@ is sparsely furnished, mostly the trappings of survival."""
 vnum = 1713
 name = "A Centaur's Hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a smallish hut, the home of a family of Centaurs.  The hut
 is sparsely furnished, mostly the trappings of survival."""
@@ -1244,6 +1278,7 @@ is sparsely furnished, mostly the trappings of survival."""
 vnum = 1714
 name = "A Centaur's Hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a smallish hut, the home of a family of Centaurs.  The hut
 is sparsely furnished, mostly the trappings of survival."""
@@ -1260,6 +1295,7 @@ is sparsely furnished, mostly the trappings of survival."""
 vnum = 1715
 name = "A Centaur's Hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a smallish hut, the home of a family of Centaurs.  The hut
 is sparsely furnished, mostly the trappings of survival."""
@@ -1276,6 +1312,7 @@ is sparsely furnished, mostly the trappings of survival."""
 vnum = 1716
 name = "Entrance to a Large Hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the entry foyer of a large hut.  A curtain separates this section
 of the hut from the next section to the west.  To the east is an opening out
@@ -1309,6 +1346,7 @@ onto the clearing."""
 vnum = 1717
 name = "Back of a Large Hut"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in the back of a large hut.  A curtain separates this section from
 the front of the hut to the east.  This room is finely decorated, if

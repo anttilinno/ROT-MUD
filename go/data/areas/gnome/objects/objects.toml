@@ -32,6 +32,8 @@ cost = 730
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 4
 
@@ -47,6 +49,8 @@ cost = 730
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 9
 
@@ -62,6 +66,8 @@ cost = 610
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 3
 
@@ -92,6 +98,10 @@ level = 13
 weight = 220
 cost = 480
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 15
+  spells = ["cure blindness", "cure critical", "giant strength"]
 
 [[objects]]
 vnum = 1507
@@ -155,6 +165,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 4
   dice_size = 3
 
@@ -169,6 +181,12 @@ weight = 50
 cost = 0
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 90
+  flags = []
+  key = 0
+  max_weight = 20
+
 [[objects]]
 vnum = 1512
 keywords = ["peanuts"]
@@ -180,6 +198,11 @@ weight = 90
 cost = 0
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 16
+  hunger = 16
+  poisoned = false
+
 [[objects]]
 vnum = 1513
 keywords = ["grain"]
@@ -190,6 +213,11 @@ level = 0
 weight = 80
 cost = 0
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 15
+  hunger = 15
+  poisoned = false
 
 [[objects]]
 vnum = 1514
@@ -234,6 +262,9 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 100
+
 [[objects]]
 vnum = 1517
 keywords = ["coins"]
@@ -244,6 +275,9 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 500
 
 [[objects]]
 vnum = 1519
@@ -295,6 +329,9 @@ cost = 460
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 1
   dice_size = 12
 
@@ -313,6 +350,11 @@ weight = 50
 cost = 0
 wear_flags = ["take"]
 
+  [objects.food]
+  full = 6
+  hunger = 6
+  poisoned = false
+
 [[objects]]
 vnum = 1523
 keywords = ["life", "potion"]
@@ -324,6 +366,10 @@ weight = 10
 cost = 630
 wear_flags = ["take"]
 extra_flags = ["nodrop"]
+
+  [objects.magic]
+  level = 32
+  spells = ["cure poison", "bless"]
 
 [[objects]]
 vnum = 1524
@@ -337,10 +383,11 @@ cost = 220
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 3
 
   [[objects.affects]]
   location = "hitroll"
   modifier = -1
-

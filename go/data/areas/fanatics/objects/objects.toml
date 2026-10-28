@@ -9,6 +9,12 @@ weight = 60
 cost = 0
 extra_flags = ["glow", "magic", "nopurge", "nolocate", "melt_drop"]
 
+  [objects.drink]
+  capacity = 99999
+  current = 99999
+  liquid = "icewine"
+  poisoned = false
+
 [[objects]]
 vnum = 19901
 keywords = ["artema", "wisdom", "claw"]
@@ -22,6 +28,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "dark", "invis", "magic", "bless", "noremove", "rot_death", "nonmetal", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "slash"
+  flags = ["frost", "vampiric", "sharp", "vorpal", "shocking", "poison"]
   dice_number = 555
   dice_size = 555
 
@@ -44,6 +53,10 @@ weight = 1
 cost = 0
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic", "bless", "nolocate", "melt_drop"]
+
+  [objects.magic]
+  level = 102
+  spells = ["mass healing", "mass healing", "mass healing", "mass healing"]
 
 [[objects]]
 vnum = 19903
@@ -128,6 +141,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "negative"
+  flags = ["flaming", "frost", "vampiric", "shocking"]
   dice_number = 10
   dice_size = 14
 
@@ -152,6 +168,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "negative"
+  flags = ["flaming", "frost", "vampiric", "shocking"]
   dice_number = 10
   dice_size = 16
 
@@ -176,6 +195,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "negative"
+  flags = ["flaming", "frost", "vampiric", "shocking"]
   dice_number = 10
   dice_size = 18
 
@@ -200,6 +222,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "evil", "invis", "magic", "noremove", "nolocate", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "negative"
+  flags = ["flaming", "frost", "vampiric", "shocking"]
   dice_number = 10
   dice_size = 20
 
@@ -224,6 +249,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["sharp", "vorpal", "poison"]
   dice_number = 10
   dice_size = 14
 
@@ -248,6 +276,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["sharp", "vorpal", "poison"]
   dice_number = 10
   dice_size = 16
 
@@ -272,6 +303,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["sharp", "vorpal", "poison"]
   dice_number = 10
   dice_size = 18
 
@@ -296,6 +330,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "dark", "evil", "noremove", "melt_drop"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["sharp", "vorpal", "poison"]
   dice_number = 10
   dice_size = 20
 
@@ -318,6 +355,10 @@ weight = 5
 cost = 0
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "hum", "evil", "invis", "magic", "anti_good", "anti_evil", "anti_neutral", "rot_death", "nolocate", "melt_drop"]
+
+  [objects.magic]
+  level = 110
+  spells = ["restore mana", "mass healing", "quest pill", "quest pill"]
 
 [[objects]]
 vnum = 19915
@@ -350,6 +391,9 @@ weight = 40
 cost = 75
 wear_flags = ["take"]
 extra_flags = ["magic", "rot_death", "melt_drop", "had_timer"]
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 19917
@@ -396,6 +440,9 @@ weight = 0
 cost = 10000
 wear_flags = ["take"]
 extra_flags = ["glow"]
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 19950
@@ -564,4 +611,3 @@ extra_flags = ["glow", "hum", "invis"]
   [[objects.affects]]
   location = "int"
   modifier = 4
-

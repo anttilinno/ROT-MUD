@@ -479,15 +479,66 @@ see_also = ["stand", "sit", "rest", "sleep"]
 keywords = ["recall"]
 syntax = "recall"
 description = """
-Teleport instantly back to the temple.
+Pray to return to the temple in Midgaard.
 
-Recall costs half your current movement points.
-You cannot recall while in combat or if you are cursed.
+Recall costs movement points (half your level, at least 10).
+In combat it may fail; your recall skill sets the odds, and
+escaping a fight costs 25 experience.
 
-This is useful for escaping dangerous situations or
-returning quickly after exploring.
+Recall always goes to Midgaard. To return to a place of your
+own choosing, bind it and use word of recall.
 """
-see_also = ["flee"]
+see_also = ["flee", "bind", "word of recall"]
+
+[[help]]
+keywords = ["bind"]
+syntax = "bind"
+description = """
+Bind your word of recall to the room you stand in.
+
+Scrolls of recall and the word of recall spell take you to
+your bound room. You have one bound room; binding again
+replaces it. Some places resist binding.
+
+Without a bound room, word of recall goes to the temple.
+"""
+see_also = ["recall", "word of recall"]
+
+[[help]]
+keywords = ["rent", "inn"]
+syntax = "rent"
+description = """
+Rent a room from an innkeeper.
+
+For the next 8 hours, resting or sleeping in the room where
+you rented recovers hit points, mana and movement three times
+as fast. The price rises with your level.
+
+Innkeepers: Midgaard's bartender, the innkeepers of Midennir,
+the plains and the Shire, and the New Thalos receptionist.
+"""
+see_also = ["rest", "sleep"]
+
+[[help]]
+keywords = ["commission", "collect", "forge"]
+syntax = "commission\ncommission <weapon> <tier>\ncollect"
+description = """
+Some smiths forge weapons to order.
+
+commission         - see the tiers this smith forges and prices
+commission dagger fine - order a fine dagger, paid up front
+collect            - pick up your weapon once it is done
+
+Forging takes 14 days. You may have one order at a time and
+must collect it from the smith who took it. You must be at
+least the tier's level to order it.
+
+The Midgaard weaponsmith forges fine and superior weapons;
+finer work is found in other towns.
+
+Weapons: dagger, sword, axe, mace, spear, flail, whip, polearm.
+"""
+see_also = ["list", "buy"]
 
 [[help]]
 keywords = ["affects", "aff"]

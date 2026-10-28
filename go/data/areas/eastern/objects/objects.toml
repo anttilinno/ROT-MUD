@@ -11,6 +11,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_good"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "pierce"
   dice_number = 1
   dice_size = 9
 
@@ -53,6 +55,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 14
 
@@ -92,6 +97,8 @@ cost = 140
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 4
 
@@ -106,6 +113,12 @@ weight = 60
 cost = 5
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 5
+  current = 5
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 5007
 keywords = ["basket"]
@@ -116,6 +129,12 @@ level = 0
 weight = 20
 cost = 20
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 10
 
 [[objects]]
 vnum = 5008
@@ -128,6 +147,12 @@ weight = 20
 cost = 20
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 5009
 keywords = ["basket"]
@@ -139,6 +164,12 @@ weight = 20
 cost = 20
 wear_flags = ["take"]
 
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 5010
 keywords = ["basket"]
@@ -148,6 +179,12 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 0
 
 [[objects]]
 vnum = 5011
@@ -209,6 +246,9 @@ weight = 0
 cost = 0
 wear_flags = ["take"]
 
+  [objects.money]
+  amount = 1627
+
 [[objects]]
 vnum = 5016
 keywords = ["sabre"]
@@ -222,6 +262,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 8
 
@@ -242,6 +284,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 7
 
@@ -262,6 +306,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 7
 
@@ -276,6 +322,10 @@ weight = 60
 cost = 1220
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 25
+  spells = ["heal", "remove curse"]
+
 [[objects]]
 vnum = 5020
 keywords = ["wand", "platinum"]
@@ -287,6 +337,12 @@ weight = 80
 cost = 990
 wear_flags = ["take", "hold"]
 extra_flags = ["hum"]
+
+  [objects.magic]
+  level = 30
+  max_charges = 10
+  charges = 10
+  spells = ["magic missile"]
 
 [[objects]]
 vnum = 5021
@@ -301,6 +357,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "hum", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
   dice_number = 4
   dice_size = 5
 
@@ -315,6 +373,10 @@ weight = 70
 cost = 1730
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 22
+  spells = ["cure blindness", "remove curse", "cure poison"]
+
 [[objects]]
 vnum = 5023
 keywords = ["chest"]
@@ -324,6 +386,12 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.container]
+  capacity = 200
+  flags = ["closeable", "closed", "locked"]
+  key = 5024
+  max_weight = 200
 
 [[objects]]
 vnum = 5024
@@ -446,4 +514,3 @@ weight = 1
 cost = 4000
 wear_flags = ["take", "hold"]
 extra_flags = ["melt_drop"]
-

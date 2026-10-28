@@ -2,6 +2,7 @@
 vnum = 13000
 name = "Florist shop & Herbalist"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 You are standing in a fragrant, sunny room surrounded by dried herbs,
 fresh-cut and potted flowers, and plants.  Sprigs of herbs hang from
@@ -20,8 +21,8 @@ and there is a staircase leading down."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13001
   flags = ["door"]
+  to_vnum = 13001
 
   [[rooms.exits]]
   direction = "down"
@@ -39,10 +40,44 @@ and there is a staircase leading down."""
   vnum = 13008
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["long", "marble", "counter"]
+description = """
+The counter is clean and smooth.  There is a vase of roses on one end;
+bouquets of daisies and small corsages are arranged on the other.  Long,
+wispy ferns trail over the edge."""
+
+[[rooms.extra_descs]]
+keywords = ["vase", "roses"]
+description = """
+A glass vase is filled with beautiful red roses."""
+
+[[rooms.extra_descs]]
+keywords = ["wispy", "ferns"]
+description = """
+Long, delicate ferns trail gently over your shoulders."""
+
+[[rooms.extra_descs]]
+keywords = ["container", "bouquets"]
+description = """
+Mixed bouquets of bright, beautiful flowers are tied with colorful
+ribbons."""
+
+[[rooms.extra_descs]]
+keywords = ["corsages"]
+description = """
+Small, colorful flowers are tied together into corsages."""
+
+[[rooms.extra_descs]]
+keywords = ["daisies"]
+description = """
+Immaculate, cheerful daisies are caught up into bouquets."""
+
 [[rooms]]
 vnum = 13001
 name = "A stone vault"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "private"]
 description = """
 A small stone vault lined with shelves of various planters, plants,
 fresh-cut flowers, and bags of soil.  The variety of flowers is endless;
@@ -52,13 +87,96 @@ and lilacs; garlands, baby's breath, and broad-leaved laurels..."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13000
   flags = ["door"]
+  to_vnum = 13000
+
+[[rooms.extra_descs]]
+keywords = ["Roses"]
+description = """
+Long-stemmed, dusky red roses."""
+
+[[rooms.extra_descs]]
+keywords = ["Tulips"]
+description = """
+A large vase is filled with varicolored tulips."""
+
+[[rooms.extra_descs]]
+keywords = ["Violets"]
+description = """
+Rich, deep purple violets are being grown in pots here."""
+
+[[rooms.extra_descs]]
+keywords = ["Daffodils"]
+description = """
+Bright, cheerful daffodils are here in a vase."""
+
+[[rooms.extra_descs]]
+keywords = ["Jasmine"]
+description = """
+Sweet, fragrant jasmine blossoms are here in a clay vase."""
+
+[[rooms.extra_descs]]
+keywords = ["Hyacinths"]
+description = """
+Pink, white, and blue hyacinths fill the air with sweet fragrance from
+their heavy clusters."""
+
+[[rooms.extra_descs]]
+keywords = ["Magnolias"]
+description = """
+Giant, fragrant magnolias nearly overpower the tiny room with their
+perfume."""
+
+[[rooms.extra_descs]]
+keywords = ["Irises"]
+description = """
+Long-stemmed, brilliant irises are gathered here in a jar."""
+
+[[rooms.extra_descs]]
+keywords = ["Peonies"]
+description = """
+Blood-red, brilliant peonies from Eriana's personal garden are here,
+glowing softly."""
+
+[[rooms.extra_descs]]
+keywords = ["Fern"]
+description = """
+Long, lacy fern fronds are here, scattered on the table, waiting to be
+tied into bouquets."""
+
+[[rooms.extra_descs]]
+keywords = ["Heather"]
+description = """
+Pink and purple fronds rest here in vases."""
+
+[[rooms.extra_descs]]
+keywords = ["Lilacs"]
+description = """
+Pink, purple, and white clusters of fragrant lilacs brighten the room."""
+
+[[rooms.extra_descs]]
+keywords = ["Garlands"]
+description = """
+Fresh and dried flower garlands, formed into circlets for any fair
+maiden's hair, hang from pegs."""
+
+[[rooms.extra_descs]]
+keywords = ["Baby's", "breath"]
+description = """
+Tiny clusters of delicate baby's breath are tied together to add color
+to bouquets."""
+
+[[rooms.extra_descs]]
+keywords = ["Laurel"]
+description = """
+Broad-leaf, shining laurels are braided into ropes and twisted into
+garlands."""
 
 [[rooms]]
 vnum = 13002
 name = "A dark, cool cellar"
 sector = "inside"
+room_flags = ["dark", "indoors", "safe"]
 description = """
 This cellar is rather humid and cool.  Surprisingly clean for such a
 dark place, the room is filled with the aroma of damp earth and wet
@@ -79,6 +197,7 @@ variety of floral supplies."""
 vnum = 13003
 name = "An empty, abandoned shop"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The room is dark and musty, its windows boarded up.  There is trash
 littering the floor."""
@@ -91,6 +210,7 @@ littering the floor."""
 vnum = 13004
 name = "An empty, abandoned shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The room is better lit than the one next door.  There are two windows on
 the east wall.  Through them, you can see a north-south running street, and
@@ -104,6 +224,7 @@ buildings across the way."""
 vnum = 13005
 name = "Howell's Jeweller's"
 sector = "inside"
+room_flags = ["indoors", "no_recall", "safe"]
 description = """
 This well-lit shop is accentuated by the light dancing off the surfaces
 of virtually hundreds of gems, jewels, and precious & semi-precious
@@ -126,10 +247,29 @@ the counter."""
   vnum = 13005
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["A", "long", "glass", "counter", "lined", "with", "blue", "gems", "and", "stones."]
+description = """
+Fiery sapphires, paua shells, turquoise, and varicolored amethysts catch
+the light and seem to alight with an inner glow from beneath the glass."""
+
+[[rooms.extra_descs]]
+keywords = ["A", "case", "with", "red", "gems"]
+description = """
+Blazing, fiery rubies, topazes, firegems, and mysterious stones of
+unknown make glitter and glow here."""
+
+[[rooms.extra_descs]]
+keywords = ["A", "case", "of", "green", "gems"]
+description = """
+Beautiful, deep-green emeralds, cool jades, passionate Moongems,
+dragons' tears, and a number of rare green gems are here."""
+
 [[rooms]]
 vnum = 13006
 name = "A dark alleyway"
 sector = "city"
+room_flags = ["dark", "no_recall"]
 description = """
 An eerie, silent black alleyway is here.  You can hear a soft
 "scratch-scratch", as though of scales or claws on stone from the
@@ -147,6 +287,7 @@ darkened corners."""
 vnum = 13007
 name = "A dark alleyway"
 sector = "city"
+room_flags = ["dark", "no_recall"]
 description = """
 An eerie, silent black alleyway is here.  You can hear a soft
 "scratch-scratch", as though of scales or claws on stone from the
@@ -164,6 +305,7 @@ darkened corners."""
 vnum = 13008
 name = "A dark alleyway"
 sector = "city"
+room_flags = ["dark", "no_recall"]
 description = """
 An eerie, silent black alleyway is here.  You can hear a soft
 "scratch-scratch", as though of scales or claws on stone from the
@@ -181,6 +323,7 @@ darkened corners."""
 vnum = 13009
 name = "Magnum's Formalwear"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 This unusual formal wear shop has typical vertical racks of clothing to
 the east and the west.  The racks on the left contain new, clean,
@@ -192,8 +335,8 @@ are bright, gaudy, shocking Hawaiian-print shirts, pants, and shorts."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13010
   flags = ["door"]
+  to_vnum = 13010
 
   [[rooms.exits]]
   direction = "east"
@@ -201,8 +344,8 @@ are bright, gaudy, shocking Hawaiian-print shirts, pants, and shorts."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13156
   flags = ["door"]
+  to_vnum = 13156
 
   [[rooms.mob_resets]]
   vnum = 13001
@@ -220,33 +363,51 @@ are bright, gaudy, shocking Hawaiian-print shirts, pants, and shorts."""
     vnum = 13009
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["vertical", "rack"]
+description = """
+A vertical rack of tattered, worn, and grungy clothes."""
+
+[[rooms.extra_descs]]
+keywords = ["tailored", "rack"]
+description = """
+A rack of well-tailored men's suits and tuxedos."""
+
+[[rooms.extra_descs]]
+keywords = ["shelf"]
+description = """
+A shelf of gaudy Hawaiian-print shirts in every imaginable color
+<and a NUMBER you'd rather not!>."""
+
 [[rooms]]
 vnum = 13010
 name = "The men's dressing room"
 sector = "inside"
+room_flags = ["dark", "indoors", "private", "safe"]
 description = """
 This small foyer leads into two dressing areas; one to the east, one to
 the west.  Due north is a full-length, three-sided mirror."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13011
   flags = ["door"]
+  to_vnum = 13011
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13009
   flags = ["door"]
+  to_vnum = 13009
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13012
   flags = ["door"]
+  to_vnum = 13012
 
 [[rooms]]
 vnum = 13011
 name = "The dressing room cubicle"
 sector = "inside"
+room_flags = ["dark", "indoors", "safe", "solitary"]
 description = """
 This small dressing room has a bench against one wall, and a mirror on
 the other.  Small wooden pegs are driven into the wall about six feet
@@ -254,13 +415,14 @@ from the floor level."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13010
   flags = ["door"]
+  to_vnum = 13010
 
 [[rooms]]
 vnum = 13012
 name = "The dressing room cubicle"
 sector = "inside"
+room_flags = ["dark", "indoors", "safe", "solitary"]
 description = """
 This small dressing room has a bench against one wall, and a mirror on
 the other.  Small wooden pegs are driven into the wall about six feet
@@ -268,13 +430,14 @@ from the floor level."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13010
   flags = ["door"]
+  to_vnum = 13010
 
 [[rooms]]
 vnum = 13013
 name = "Sherri Bridals"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 This neat, airy shop is bustling with activity.  The seamstress seems to
 virtually fly from customer to customer to keep up with the rush.  Along
@@ -290,8 +453,8 @@ street outside."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13014
   flags = ["door"]
+  to_vnum = 13014
 
   [[rooms.exits]]
   direction = "south"
@@ -313,10 +476,32 @@ street outside."""
     vnum = 13003
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["long", "rack", "east"]
+description = """
+A long horizontal rack of white and off-white wedding gowns."""
+
+[[rooms.extra_descs]]
+keywords = ["wooden", "shelves"]
+description = """
+A set of wooden shelves containing petticoats, hoopskirts, and various
+lingerie."""
+
+[[rooms.extra_descs]]
+keywords = ["long", "rack", "west"]
+description = """
+A rack of sequined formals in various colors."""
+
+[[rooms.extra_descs]]
+keywords = ["veil", "rack"]
+description = """
+A tall rack containing veils in various lengths and shades."""
+
 [[rooms]]
 vnum = 13014
 name = "The ladies' dressing room"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 This spacious area was constructed with the bride and her maids-of-honor
 in mind; it is large enough for at least ten people to sit or stand
@@ -328,13 +513,14 @@ spread around the room."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13013
   flags = ["door"]
+  to_vnum = 13013
 
 [[rooms]]
 vnum = 13015
 name = "An empty, abandoned store"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Cobwebs canopy the ceiling and blanket the piles of trash and fallen
 debris in this abandoned building.  Litter is scattered across the floor,
@@ -352,6 +538,7 @@ covered with dust and rat droppings.  There are exits east & north."""
 vnum = 13016
 name = "Photographer's studio"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Hmmm...this place looks more like a mad scientist's laboratory than a
 photographer's studio...test tubes, bubbling potions, steaming flasks,
@@ -382,6 +569,7 @@ west to a darkened room."""
 vnum = 13017
 name = "A darkened room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is completely black.  There appear to be no windows, and no
 exits, save the one through which you entered."""
@@ -394,6 +582,7 @@ exits, save the one through which you entered."""
 vnum = 13018
 name = "An abandoned storehouse"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This old storehouse has long shelves lining each of the walls.  A few
 dusty wooden bins line the east wall.  Pieces of withered, desiccated
@@ -412,6 +601,7 @@ There are exits to the north and to the west."""
 vnum = 13019
 name = "Higgins' Haberdashery"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This small, well-tended shop has a clean-pressed, immaculate look to it.
 The north wall is lined with trim, narrow shelves sporting a wide array
@@ -437,6 +627,7 @@ played faintly from somewhere nearby."""
 vnum = 13020
 name = "The Cobbler & Shoe Store"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A small shop containing a maze of tall racks, each containing several
 horizontal rows of shelves.  Each shelf has, prominently displayed, a
@@ -469,6 +660,7 @@ long, low, padded benches.  The only exit is east."""
 vnum = 13021
 name = "A Gift Shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This mid-sized shop is crammed full of items both rare and common.
 Although there seems to be nothing holding the items up for display, you
@@ -483,13 +675,14 @@ ALL seems to be here.  There is an exit east."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 13021
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 13022
 name = "An empty room."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is completely empty.  The walls are dull grey, and you can
 peer through the cracks in the planks.  The floor is dirty and dusty.
@@ -503,6 +696,7 @@ The only exit is east."""
 vnum = 13023
 name = "An alleyway"
 sector = "city"
+room_flags = ["dark", "no_recall"]
 description = """
 An alleyway running north and south.  To the north, you can see the
 church square.  To the south, you can see an unkempt courtyard and a
@@ -520,6 +714,7 @@ large tree."""
 vnum = 13024
 name = "An abandoned, unkempt courtyard"
 sector = "city"
+room_flags = ["no_recall"]
 description = """
 Scraggly weeds lie forlornly tangled at about knee-height.  Ivy clings
 desperately to the cobbles of the surrounding buildings, and creeps
@@ -535,13 +730,14 @@ and appear to be long dead.  There is an exit north, and one to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13021
   flags = ["door"]
+  to_vnum = 13021
 
 [[rooms]]
 vnum = 13025
 name = "A caterer's shop"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This small shop is sparsely decorated, save for a long glass counter and
 a few chairs.  There are a few engravings of various food items carved
@@ -556,6 +752,7 @@ and fresh baked goods wafts from the back of the shop."""
 vnum = 13026
 name = "Erasmus' Mystical Oils and Potions"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This moderately-lit, aromatic shop is totally disorganized....vials,
 flasks, jars, canisters, and tubes of all shapes and sizes seem to be
@@ -575,6 +772,7 @@ which some mysterious but arousing liquid bubbles and foams."""
 vnum = 13027
 name = "The Linens Shop"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 A well-lighted, dazzlingly bright shop.  Shelves line each wall, and
 are loaded with neatly-folded, crisply-pressed sheets, pillowcases, and
@@ -595,6 +793,9 @@ counter."""
 vnum = 13028
 name = "An Overgrown Room"
 sector = "inside"
+room_flags = ["dark", "indoors"]
+heal_rate = 90
+mana_rate = 110
 description = """
 Outcast plants seem to congregate here.  They grow out of the floorboard,
 out of the walls, and down from the ceiling.  In fact, they seem to walk
@@ -610,6 +811,7 @@ it difficult to breathe."""
 vnum = 13029
 name = "The Library"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This is a very nice place to spend an afternoon.  Books are scattered
 about shelves that run N-S across the entire length of the room.  The
@@ -620,10 +822,21 @@ are heaped into the book return bin."""
   direction = "west"
   to_vnum = 13169
 
+[[rooms.extra_descs]]
+keywords = ["shelf", "shelves"]
+description = """
+You see a copy of PlayDragon Magazine."""
+
+[[rooms.extra_descs]]
+keywords = ["playdragon"]
+description = """
+Naughty!"""
+
 [[rooms]]
 vnum = 13030
 name = "We Be Weddings"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This wooden-plank lined room is....unimpressive at best.  Black and
 pink checkered curtains hang limply from the windows.  A single,
@@ -643,10 +856,16 @@ sunflower is displayed prominently in front of the podium."""
   direction = "south"
   to_vnum = 13143
 
+[[rooms.extra_descs]]
+keywords = ["sunflower"]
+description = """
+A huge sunflower sits here...but it appears to be...PLASTIC??"""
+
 [[rooms]]
 vnum = 13031
 name = "The Church foyer"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "safe"]
 description = """
 This foyer is rather sparse in furnishings.  There are a few iron candle
 stick holders and candelabras scattered about, with dimly-glowing tapers
@@ -676,6 +895,7 @@ and south to the church square."""
 vnum = 13032
 name = "The Church foyer"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "safe"]
 description = """
 This foyer is rather sparse in furnishings.  There are a few iron candle
 stick holders and candelabras scattered about, with dimly-glowing tapers
@@ -686,8 +906,8 @@ sanctuary, west into another foyer, and south to the church square."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13035
   flags = ["door"]
+  to_vnum = 13035
 
   [[rooms.exits]]
   direction = "south"
@@ -701,6 +921,9 @@ sanctuary, west into another foyer, and south to the church square."""
 vnum = 13033
 name = "The healing room"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
+heal_rate = 200
+mana_rate = 200
 description = """
 This peaceful, quiet room is the epitome of tranquillity; pecan paneling
 and flooring glisten throughout, its medium-colored wood polished to an
@@ -724,6 +947,9 @@ the floor.  The exit is to the north."""
 vnum = 13034
 name = "The chapel"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
+heal_rate = 125
+mana_rate = 125
 description = """
 This small, intimate chapel is more druidic than not; it is filled with
 trees and leafy green plants.  Sunshine streams in through skylights and
@@ -741,8 +967,8 @@ door to the north, a door to the south, and an exit to the west."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13033
   flags = ["door"]
+  to_vnum = 13033
 
   [[rooms.exits]]
   direction = "west"
@@ -752,6 +978,9 @@ door to the north, a door to the south, and an exit to the west."""
 vnum = 13035
 name = "The sanctuary"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
+heal_rate = 125
+mana_rate = 125
 description = """
 This massive room is lavishly paneled in dark, rich mahogany, polished
 to an unearthly glow.  Rows and rows of matching dark pews are lined
@@ -778,17 +1007,45 @@ vestibule, and one west into the sister-sanctuary."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13032
   flags = ["door"]
+  to_vnum = 13032
 
   [[rooms.exits]]
   direction = "west"
   to_vnum = 13036
 
+[[rooms.extra_descs]]
+keywords = ["Vengeance", "north"]
+description = """
+A stained glass window depicting His Benevolence holding a dragon's head
+in one hand, and a staff in the other."""
+
+[[rooms.extra_descs]]
+keywords = ["Eriana", "south"]
+description = """
+An elaborately-tiled stained glass window showing the wife of His
+Benevolence with one hand atop the head of a white tiger, the other
+poised above the head of an injured man."""
+
+[[rooms.extra_descs]]
+keywords = ["Felix", "east"]
+description = """
+A colorful window showing a pose of the deity Felix, a White Raven
+perched atop his left arm, his other atop the hilt of a sword."""
+
+[[rooms.extra_descs]]
+keywords = ["Tim", "west"]
+description = """
+Another stained-glass panel depicts the deity Tim, the Enchanter,
+holding a long-toothed rabbit in one arm, and a skull in the other..."""
+
 [[rooms]]
 vnum = 13036
 name = "The sister-sanctuary"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
+heal_rate = 150
+mana_rate = 150
 description = """
 This sanctuary is paneled in modest oak.  The benches, which form two
 parallel rows running alongside a central aisle, and the wall paneling
@@ -819,14 +1076,15 @@ the vestibule; and an exit west."""
 vnum = 13037
 name = "An empty room"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "safe"]
 description = """
 This room is featureless and empty, save a few benches piled against the
 west wall.  There is a door north and an exit east."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13038
   flags = ["door"]
+  to_vnum = 13038
 
   [[rooms.exits]]
   direction = "east"
@@ -836,6 +1094,9 @@ west wall.  There is a door north and an exit east."""
 vnum = 13038
 name = "A corner of the garden"
 sector = "city"
+room_flags = ["no_mob", "safe"]
+heal_rate = 135
+mana_rate = 135
 description = """
 A large 10' hedge runs the perimeter of this corner of the garden.
 Close-cropped, cool green grass peeks from between flagstone footpaths,
@@ -851,13 +1112,16 @@ part of the garden, and one south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13037
   flags = ["door"]
+  to_vnum = 13037
 
 [[rooms]]
 vnum = 13039
 name = "The garden"
 sector = "city"
+room_flags = ["no_mob", "safe"]
+heal_rate = 135
+mana_rate = 135
 description = """
 This expanse of garden is very like the rest; a large 10' hedge runs the
 perimeter of this corner of the garden.  Close-cropped, cool green grass
@@ -881,6 +1145,9 @@ another section of garden, and another exit west."""
 vnum = 13040
 name = "The main garden"
 sector = "city"
+room_flags = ["no_mob", "safe"]
+heal_rate = 135
+mana_rate = 135
 description = """
 This expanse of lush, cool, manicured lawn runs basically north-south.
 Cool, matronly willows are scattered here, their branches high enough
@@ -907,8 +1174,8 @@ garden, south into the sanctuary, and west into another garden corner."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13036
   flags = ["door"]
+  to_vnum = 13036
 
   [[rooms.exits]]
   direction = "west"
@@ -918,6 +1185,9 @@ garden, south into the sanctuary, and west into another garden corner."""
 vnum = 13041
 name = "The gazebo (summerhouse)"
 sector = "inside"
+room_flags = ["no_mob", "safe"]
+heal_rate = 140
+mana_rate = 140
 description = """
 This immaculately painted white summerhouse is a popular locale for
 spring and summer weddings.  It is octagonal, with white latticework
@@ -939,6 +1209,7 @@ garden."""
 vnum = 13042
 name = "A gardener's hut"
 sector = "inside"
+room_flags = ["dark", "indoors", "solitary"]
 description = """
 This small hut is lined in shelves containing typical gardening
 equipment; shears, trimmers, pruners, etc.  A few bags of fertilizer
@@ -953,6 +1224,9 @@ and sand are piled on the dusty floor.  The only exit is south."""
 vnum = 13043
 name = "A quiet section of garden"
 sector = "city"
+room_flags = ["no_mob", "safe"]
+heal_rate = 200
+mana_rate = 200
 description = """
 This area is secluded and quiet.  Protected on all four sides by a tall,
 thick hedge, many people are unaware that it exists.  At ground level to
@@ -972,10 +1246,25 @@ There are hidden exits to the east and to the south."""
   direction = "south"
   to_vnum = 13045
 
+[[rooms.extra_descs]]
+keywords = ["statue", "Eriana"]
+description = """
+A three-foot-high statue of Eriana, the Goddess of Life.  Her hands are
+outstretched as though welcoming someone to her."""
+
+[[rooms.extra_descs]]
+keywords = ["Inscription"]
+description = """
+"Seek Peace, and welcome here; find rest, and food, and sanctuary from thy
+burdens; All are welcome in the Gardens of the Goddess.""""
+
 [[rooms]]
 vnum = 13044
 name = "The northeastern corner of the garden"
 sector = "city"
+room_flags = ["no_mob", "safe"]
+heal_rate = 140
+mana_rate = 140
 description = """
 This corner of the garden is secluded enough that it is nearly hidden.
 A few flowers are neatly planted in stone planters.  Trees overhang the
@@ -984,8 +1273,8 @@ an exit to the south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13042
   flags = ["door"]
+  to_vnum = 13042
 
   [[rooms.exits]]
   direction = "south"
@@ -999,6 +1288,9 @@ an exit to the south."""
 vnum = 13045
 name = "A part of the garden"
 sector = "city"
+room_flags = ["no_mob", "safe"]
+heal_rate = 130
+mana_rate = 130
 description = """
 This part of the garden is well-traveled; sanded footpaths run from the
 southern door to the east and to the west.  Trees are more sparse here
@@ -1027,6 +1319,7 @@ and west to the main garden."""
 vnum = 13046
 name = "A corner of the garden"
 sector = "city"
+room_flags = ["no_mob", "safe"]
 description = """
 This corner of garden is less-traveled.  There are fewer flowers and
 plants here.  There is an exit to the north, one south into the chapel,
@@ -1038,8 +1331,8 @@ and one west into another portion of garden."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13034
   flags = ["door"]
+  to_vnum = 13034
 
   [[rooms.exits]]
   direction = "west"
@@ -1049,6 +1342,7 @@ and one west into another portion of garden."""
 vnum = 13047
 name = "The Willowtree Inn"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This quiet little inn is a popular spot both for the townsfolk and
 newlyweds.  This main room sports a long, L-shaped bar in the southeast
@@ -1072,6 +1366,7 @@ area, and to the west onto the street."""
 vnum = 13048
 name = "The dining room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This cozy room is lit by hanging candleracks and a large stone hearth in
 the southeast corner.  A haunch of deer is roasting and sizzling on a
@@ -1101,6 +1396,7 @@ room."""
 vnum = 13049
 name = "The kitchen"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This large room is lined neatly with shelves of spices, condiments, and
 staples.  In the center of the room is a long, heavy butcher block;
@@ -1120,6 +1416,7 @@ the door.  The only exit is west."""
 vnum = 13050
 name = "The upstairs hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This simple hallway is lighted by sconces every few feet along both
 walls at shoulder height.  There are a few braided rag rugs tossed on
@@ -1131,13 +1428,13 @@ the floor.  The exits are north, east, west, and down."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13051
   flags = ["door"]
+  to_vnum = 13051
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13052
   flags = ["door"]
+  to_vnum = 13052
 
   [[rooms.exits]]
   direction = "down"
@@ -1147,6 +1444,7 @@ the floor.  The exits are north, east, west, and down."""
 vnum = 13051
 name = "An inn room"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 This cozy bedroom is fairly simple; against the east wall is an
 enormous, heavy, oak-post bed layered in featherbeds.  Matching
@@ -1161,10 +1459,37 @@ tall, narrow chiffarobe.  The only exit is west."""
   direction = "west"
   to_vnum = 13050
 
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matching mithril brush and mirror set on top
+of the dresser."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
+
 [[rooms]]
 vnum = 13052
 name = "An inn room"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 This cozy bedroom is fairly simple; against the west wall is an
 enormous, heavy, oak-post bed layered in featherbeds.  Matching
@@ -1179,10 +1504,37 @@ tall, narrow chiffarobe.  The only exit is east."""
   direction = "east"
   to_vnum = 13050
 
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matching mithril brush and mirror set on top
+of the dresser."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
+
 [[rooms]]
 vnum = 13053
 name = "The upstairs hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This simple hallway is lighted by sconces every few feet along both
 walls at shoulder height.  There are a few braided rag rugs tossed on
@@ -1190,8 +1542,8 @@ the floor.  The exits are south, east, and west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13054
   flags = ["door"]
+  to_vnum = 13054
 
   [[rooms.exits]]
   direction = "south"
@@ -1199,13 +1551,14 @@ the floor.  The exits are south, east, and west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13055
   flags = ["door"]
+  to_vnum = 13055
 
 [[rooms]]
 vnum = 13054
 name = "An inn room"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 This cozy bedroom is fairly simple; against the east wall is an
 enormous, heavy, oak-post bed layered in featherbeds.  Matching
@@ -1220,10 +1573,37 @@ tall, narrow chiffarobe.  The only exit is west."""
   direction = "west"
   to_vnum = 13050
 
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matching mithril brush and mirror set on top
+of the dresser."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
+
 [[rooms]]
 vnum = 13055
 name = "An inn room"
 sector = "inside"
+room_flags = ["indoors", "private"]
 description = """
 This cozy bedroom is fairly simple; against the west wall is an
 enormous, heavy, oak-post bed layered in featherbeds.  Matching
@@ -1238,10 +1618,36 @@ tall, narrow chiffarobe.  The only exit is east."""
   direction = "east"
   to_vnum = 13050
 
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+An enormous four-post bed made of heavy oak posts, rounded and polished,
+then lacquered.  There is a huge, fluffy comforter of quilted cotton in
+a starburst pattern on top of the bed."""
+
+[[rooms.extra_descs]]
+keywords = ["oak", "dresser"]
+description = """
+A large, four-drawer oak dresser, made of wood matching the bed and
+nightstands.  There is a matched mithril brush and mirror set here."""
+
+[[rooms.extra_descs]]
+keywords = ["night", "stand"]
+description = """
+A small, single-drawer nightstand of oak matching the dresser and bed.
+On top is a white lace doily and a lantern."""
+
+[[rooms.extra_descs]]
+keywords = ["rug"]
+description = """
+A braided multicolored rag rug, coiled and sewn into several rows covers
+the floor here."""
+
 [[rooms]]
 vnum = 13056
 name = "The wine cellar"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This dark, cool cellar smells faintly of alcohol and rancid berries.
 It is quiet and clean, and much cooler than the rest of the inn.  Large
@@ -1251,8 +1657,8 @@ to the west, and the staircase leading up."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13057
   flags = ["door"]
+  to_vnum = 13057
 
   [[rooms.exits]]
   direction = "up"
@@ -1262,6 +1668,7 @@ to the west, and the staircase leading up."""
 vnum = 13057
 name = "The meat locker"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_recall", "private"]
 description = """
 It is extremely cold in here! Sides of pork, beef, goat, and mutton hang
 from heavy ceiling hooks.  Chickens, turkeys, ducks, and geese hang by
@@ -1272,13 +1679,14 @@ leeks, celery, and others.  The only exit is east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13056
   flags = ["door"]
+  to_vnum = 13056
 
 [[rooms]]
 vnum = 13058
 name = "The winery"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a large, clean, well-tended room.  Huge wooden casks line all
 three walls; each is fitted with a tap.  An enormous wooden vat in the
@@ -1317,8 +1725,8 @@ vineyards."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13058
   flags = ["door"]
+  to_vnum = 13058
 
   [[rooms.exits]]
   direction = "south"
@@ -1397,6 +1805,7 @@ north and west."""
 vnum = 13063
 name = "An abandoned shop"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Boards cover the windows on the west and south walls; daylight barely
 peers through them.  A thin film of dust and cobwebs covers the plank
@@ -1415,6 +1824,7 @@ clawed feet from the shadows.  The exits are south and west."""
 vnum = 13064
 name = "The leather shop"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A delightful aroma of newly-tanned leather touches you immediately.  A
 few leather items are hung from wooden pegs throughout the store; the
@@ -1434,6 +1844,7 @@ and gives off a meaty, bitter smell.  The only exit is south."""
 vnum = 13065
 name = "An empty shop"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is completely empty; there are no windows, back rooms, or
 exits, save the one to the south.  A few cobwebs stretch across the
@@ -1448,6 +1859,7 @@ dust and leaves."""
 vnum = 13066
 name = "The metalsmith"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This store is incredibly HOT and stuffy.  In the northwest corner is a
 rack sporting several implements used for extruding and working metal
@@ -1480,6 +1892,7 @@ glass on a pivoting pedestal is on the counter.  Exits are east and south."""
 vnum = 13067
 name = "An empty shop"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This shop appears to once have sold some sort of foodstuffs; loose,
 dried chaff and bits of grain are scattered across the floor; dried
@@ -1498,6 +1911,7 @@ The only exit is east."""
 vnum = 13068
 name = "The Blacksmith shop"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room is enormous.  The heat from the huge forge against the east wall
 is STAGGERING; your face seems to want to crisp like a leg of mutton over a
@@ -1530,10 +1944,26 @@ exits are north into the carriage house, and south to the street."""
   vnum = 13021
   max = 8
 
+[[rooms.extra_descs]]
+keywords = ["Stall"]
+description = """
+A plain, wooden stall for cornering horses.  There is straw on the floor here."""
+
+[[rooms.extra_descs]]
+keywords = ["anvil"]
+description = """
+A large iron anvil, used for pounding heated iron."""
+
+[[rooms.extra_descs]]
+keywords = ["Furnace"]
+description = """
+A roaring furnace used to heat iron for smelting and forging."""
+
 [[rooms]]
 vnum = 13069
 name = "The convent gardens"
 sector = "field"
+room_flags = ["safe"]
 description = """
 This enormous garden spreads out across a vast area of ground, and
 disappears northward.  Arranged in neat, well-hoed rows are a vast array of
@@ -1550,10 +1980,33 @@ north, deeper into the garden, and south to the street."""
   direction = "south"
   to_vnum = 13140
 
+[[rooms.extra_descs]]
+keywords = ["corn", "stalk"]
+description = """
+Neat rows of tall, rigid corn, their silken tassels spilling like golden
+hair down the sharp leaves."""
+
+[[rooms.extra_descs]]
+keywords = ["thick", "pole", "beans"]
+description = """
+Tall, heavy poles of cedarwood support the heavy beans."""
+
+[[rooms.extra_descs]]
+keywords = ["stake", "tomatoes"]
+description = """
+Tall, strong stakes of tomatoes plants are pendulous with deep-red fruit."""
+
+[[rooms.extra_descs]]
+keywords = ["slender", "pole", "peas"]
+description = """
+Slender poles of curling pea plants are here; the pods themselves are
+large and heavy, ready to be picked."""
+
 [[rooms]]
 vnum = 13070
 name = "A garden square"
 sector = "field"
+room_flags = ["safe"]
 description = """
 This patch of garden has the low, bushy vegetables; poles of trailing
 summer and pattypan squash; long, twisted pumpkin vines; twisted tendrils
@@ -1577,6 +2030,7 @@ gardens."""
 vnum = 13071
 name = "Orchard section"
 sector = "field"
+room_flags = ["safe"]
 description = """
 This area of garden has been set aside as a small orchard, complete with
 trees of plums and apples; rich, juicy peaches; bushes of raspberry,
@@ -1595,6 +2049,7 @@ strawberries; and a tree of elderberries.  The only exit is east."""
 vnum = 13072
 name = "The main garden"
 sector = "field"
+room_flags = ["safe"]
 description = """
 This section of garden is larger than the rest; here the "primary"
 plants were seeded and grown; mounds of potatoes, carrots, and leeks;
@@ -1606,8 +2061,8 @@ a walled courtyard, and south to more garden."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13114
   flags = ["door"]
+  to_vnum = 13114
 
   [[rooms.exits]]
   direction = "south"
@@ -1629,6 +2084,7 @@ a walled courtyard, and south to more garden."""
 vnum = 13073
 name = "Kestra's Exotic Pets"
 sector = "city"
+room_flags = ["indoors", "pet_shop"]
 description = """
 A wave of exotic animal smells assaults you as you step in the door;
 sweat, excrement, ammonia, cedarwood, and castor oil.  The walls are
@@ -1656,6 +2112,7 @@ only exit is south."""
 vnum = 13074
 name = "The Pet Shop Store"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This is a small, dark room where Kestra's special-order pets are kept."""
 
@@ -1663,6 +2120,7 @@ This is a small, dark room where Kestra's special-order pets are kept."""
 vnum = 13075
 name = "The foyer"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in a luxurious, immaculate foyer, entry to the famed
 "DragonCove Inn".  Bookshelves of leather-bound books line the north and
@@ -1674,22 +2132,34 @@ office, and south to the street."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13077
   flags = ["door"]
+  to_vnum = 13077
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13076
   flags = ["door"]
+  to_vnum = 13076
 
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13142
 
+[[rooms.extra_descs]]
+keywords = ["sign"]
+description = """
+Welcome to the DragonCove Inn! Please knock on door for assistance."""
+
+[[rooms.extra_descs]]
+keywords = ["couch", "sofa"]
+description = """
+A large, stylish sofa, comfortably padded.  It is covered in deep blue
+linen, and trimmed with rosewood accents."""
+
 [[rooms]]
 vnum = 13076
 name = "The office"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 A medium-sized, comfortable office.  Bookshelves line the east and south
 walls and reach floor to ceiling.  A large desk is situated diagonally
@@ -1709,6 +2179,7 @@ north and west."""
 vnum = 13077
 name = "A hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A fairly dark hallway.  A few richly-colored braided rugs are laid on
 the wooden floor.  Crystal and silver sconces line the walls and hold
@@ -1717,8 +2188,8 @@ the south wall.  Exits are north, south, east, and west."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13080
   flags = ["door"]
+  to_vnum = 13080
 
   [[rooms.exits]]
   direction = "east"
@@ -1726,18 +2197,19 @@ the south wall.  Exits are north, south, east, and west."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13075
   flags = ["door"]
+  to_vnum = 13075
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13165
   flags = ["door"]
+  to_vnum = 13165
 
 [[rooms]]
 vnum = 13078
 name = "The east hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A fairly dark hallway.  A few richly-colored braided rugs are laid on
 the wooden floor.  Crystal and silver sconces line the walls and hold
@@ -1746,13 +2218,13 @@ west; there is a staircase leading up."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13079
   flags = ["door"]
+  to_vnum = 13079
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13076
   flags = ["door"]
+  to_vnum = 13076
 
   [[rooms.exits]]
   direction = "west"
@@ -1766,6 +2238,7 @@ west; there is a staircase leading up."""
 vnum = 13079
 name = "Suite 1"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This spacious hotel suite is lavishly decorated in deep, bright colors;
 royal blue, burgundy, and gold.  A black marble fireplace stands against
@@ -1778,10 +2251,23 @@ is a dressing screen opposite it.  The only exit is south."""
   direction = "south"
   to_vnum = 13078
 
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+Logs crackle merrily in this large fireplace.  It is accented with silver
+log holders and a matching silver fireplace set."""
+
+[[rooms.extra_descs]]
+keywords = ["settee", "couch"]
+description = """
+Covered in burgundy fabric, this settee adds a touch of elegance to the
+suite."""
+
 [[rooms]]
 vnum = 13080
 name = "Room 1"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This small bedroom is simple, yet elegant.  Large windows line the west
 wall from floor to ceiling, and are covered in white lace drapes.  The
@@ -1793,10 +2279,22 @@ The only exit is south."""
   direction = "south"
   to_vnum = 13077
 
+[[rooms.extra_descs]]
+keywords = ["dressing", "screen"]
+description = """
+A shoulder-high rosewood and lace-panel dressing screen."""
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+A small, comfortable bed, piled high with feather beds and rich quilts.
+The frame is rosewood polished to a high gloss."""
+
 [[rooms]]
 vnum = 13081
 name = "The upstairs hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hall is elaborately carpeted in deep blues, reds, and golds.
 Expensive silver and crystal sconces are attached to the walls, and hold
@@ -1805,13 +2303,13 @@ the west; there is a staircase down; exits are north and south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13082
   flags = ["door"]
+  to_vnum = 13082
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13083
   flags = ["door"]
+  to_vnum = 13083
 
   [[rooms.exits]]
   direction = "west"
@@ -1825,6 +2323,7 @@ the west; there is a staircase down; exits are north and south."""
 vnum = 13082
 name = "Room 2"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This small bedroom is simple, yet elegant.  Large windows line the north
 wall from floor to ceiling, and are covered in white lace drapes.  The
@@ -1836,10 +2335,22 @@ southwest corner.  The only exit is south."""
   direction = "south"
   to_vnum = 13077
 
+[[rooms.extra_descs]]
+keywords = ["dressing", "screen"]
+description = """
+A shoulder-high rosewood and lace-panel dressing screen."""
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+A small, comfortable bed, piled high with feather beds and rich quilts.
+The frame is rosewood polished to a high gloss."""
+
 [[rooms]]
 vnum = 13083
 name = "Room 3"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This small bedroom is simple, yet elegant.  Large windows line the south
 wall from floor to ceiling, and are covered in white lace drapes.  The
@@ -1851,10 +2362,22 @@ corner.  The only exit is north."""
   direction = "north"
   to_vnum = 13081
 
+[[rooms.extra_descs]]
+keywords = ["dressing", "screen"]
+description = """
+A shoulder-high rosewood and lace-panel dressing screen."""
+
+[[rooms.extra_descs]]
+keywords = ["bed"]
+description = """
+A small, comfortable bed, piled high with feather beds and rich quilts.
+The frame is rosewood polished to a high gloss."""
+
 [[rooms]]
 vnum = 13084
 name = "The upstairs hall west"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hall is elaborately carpeted in deep blues, reds, and golds.
 Expensive silver and crystal sconces are attached to the walls, and hold
@@ -1863,8 +2386,8 @@ the east; there are exits north and south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13086
   flags = ["door"]
+  to_vnum = 13086
 
   [[rooms.exits]]
   direction = "east"
@@ -1872,13 +2395,14 @@ the east; there are exits north and south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13085
   flags = ["door"]
+  to_vnum = 13085
 
 [[rooms]]
 vnum = 13085
 name = "Suite 2"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This spacious hotel suite is lavishly decorated in deep, bright colors;
 forest green, royal reds, and gold.  A white marble fireplace stands
@@ -1891,10 +2415,23 @@ it.  There is a dressing screen opposite it.  The only exit is north."""
   direction = "north"
   to_vnum = 13084
 
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+Logs crackle merrily in this large fireplace.  It is accented with silver
+log holders and a matching silver fireplace set."""
+
+[[rooms.extra_descs]]
+keywords = ["settee", "couch"]
+description = """
+Covered in deep red fabric, this settee adds a touch of elegance to the
+suite."""
+
 [[rooms]]
 vnum = 13086
 name = "Suite 3"
 sector = "inside"
+room_flags = ["indoors", "safe"]
 description = """
 This spacious hotel suite is lavishly decorated in whites, blacks, and
 greys.  A grey marble fireplace stands against the west wall, over which
@@ -1908,10 +2445,23 @@ is a dressing screen opposite the settee.  The only exit is south."""
   direction = "south"
   to_vnum = 13084
 
+[[rooms.extra_descs]]
+keywords = ["fireplace"]
+description = """
+Logs crackle merrily in this large fireplace.  It is accented with silver
+log holders and a matching silver fireplace set."""
+
+[[rooms.extra_descs]]
+keywords = ["settee", "couch"]
+description = """
+Covered in burgundy fabric, this settee adds a touch of elegance to the
+suite."""
+
 [[rooms]]
 vnum = 13087
 name = "The Unicorn's Horn"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Smoke, music, and alcohol fumes smack you in the face as you enter this
 pub.  Small tables are scattered randomly about, surrounded by barrelback
@@ -1929,6 +2479,7 @@ The only exit is west."""
 vnum = 13088
 name = "Ste.  Catherine's Convent"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "safe"]
 description = """
 This foyer is a small, unadorned waiting room for visitors to the
 convent.  A few wooden chars are arranged against the east wall.  A
@@ -1938,8 +2489,8 @@ and a door to the north."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13089
   flags = ["door"]
+  to_vnum = 13089
 
   [[rooms.exits]]
   direction = "east"
@@ -1953,6 +2504,7 @@ and a door to the north."""
 vnum = 13089
 name = "The convent office"
 sector = "inside"
+room_flags = ["indoors", "no_mob", "safe"]
 description = """
 This rather austere room is sparsely decorated; only a huge black desk,
 a few chairs, and a large statue of Ste.  Catherine adorn the room.  A
@@ -1971,6 +2523,7 @@ are north and south."""
 vnum = 13090
 name = "The dining room"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "safe"]
 description = """
 A large, rectangular oak table overpowers this clean, threadbare room.
 The floors are bare, with an occasional worn rag rug thrown down.  A
@@ -1991,6 +2544,7 @@ and south to the hallway."""
 vnum = 13091
 name = "The kitchen"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "safe"]
 description = """
 There is a large cookstove on the east wall; a few pots bubble and
 simmer on top of it.  There is a locked larder on the south wall.  A
@@ -2005,6 +2559,7 @@ into the top.  The only exit is south."""
 vnum = 13092
 name = "The hallway."
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 The hallway leads further east, and west into the foyer; there is a door
 north, into the dining room."""
@@ -2025,6 +2580,7 @@ north, into the dining room."""
 vnum = 13093
 name = "The hall"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = "The hall continues east and west."
 
   [[rooms.exits]]
@@ -2039,6 +2595,7 @@ description = "The hall continues east and west."
 vnum = 13094
 name = "A bend in the hallway."
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 The hallway bends north and west here.  To the east is a door."""
 
@@ -2048,8 +2605,8 @@ The hallway bends north and west here.  To the east is a door."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13095
   flags = ["door"]
+  to_vnum = 13095
 
   [[rooms.exits]]
   direction = "west"
@@ -2059,6 +2616,7 @@ The hallway bends north and west here.  To the east is a door."""
 vnum = 13095
 name = "A small chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "private", "safe"]
 description = """
 This small, sparse chamber is dimly-lit.  There is a small, clean but
 threadbare bed against the south wall.  A small dresser is pushed against
@@ -2073,6 +2631,7 @@ window in the east wall.  The only exit is west."""
 vnum = 13096
 name = "the hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 The hallway connects to more of the same to the north and to the south.
 There is a door to the east."""
@@ -2083,8 +2642,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13097
   flags = ["door"]
+  to_vnum = 13097
 
   [[rooms.exits]]
   direction = "south"
@@ -2094,6 +2653,7 @@ There is a door to the east."""
 vnum = 13097
 name = "A small chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "private", "safe"]
 description = """
 This small, sparse chamber is dimly-lit.  There is a small, clean but
 threadbare bed against the south wall.  A small dresser is pushed against
@@ -2108,6 +2668,7 @@ window in the east wall.  The only exit is west."""
 vnum = 13098
 name = "the hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 The hallway connects to more of the same to the north and to the south.
 There is a door to the east."""
@@ -2118,8 +2679,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13099
   flags = ["door"]
+  to_vnum = 13099
 
   [[rooms.exits]]
   direction = "south"
@@ -2129,6 +2690,7 @@ There is a door to the east."""
 vnum = 13099
 name = "A small chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "private", "safe"]
 description = """
 This small, sparse chamber is dimly-lit.  There is a small, clean but
 threadbare bed against the south wall.  A small dresser is pushed against
@@ -2143,6 +2705,7 @@ window in the east wall.  The only exit is west."""
 vnum = 13100
 name = "The hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 The hallway connects to more of the same to the north and to the south.
 There is a door to the east."""
@@ -2153,8 +2716,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13101
   flags = ["door"]
+  to_vnum = 13101
 
   [[rooms.exits]]
   direction = "south"
@@ -2164,6 +2727,7 @@ There is a door to the east."""
 vnum = 13101
 name = "A small chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "private", "safe"]
 description = """
 This small, sparse chamber is dimly-lit.  There is a small, clean but
 threadbare bed against the south wall.  A small dresser is pushed against
@@ -2178,6 +2742,7 @@ window in the east wall.  The only exit is west."""
 vnum = 13102
 name = "the hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 The hallway connects to more of the same to the north and to the south.
 There is a door to the east."""
@@ -2188,8 +2753,8 @@ There is a door to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13103
   flags = ["door"]
+  to_vnum = 13103
 
   [[rooms.exits]]
   direction = "south"
@@ -2199,6 +2764,7 @@ There is a door to the east."""
 vnum = 13103
 name = "A small chamber"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "private", "safe"]
 description = """
 This small, sparse chamber is dimly-lit.  There is a small, clean but
 threadbare bed against the south wall.  A small dresser is pushed against
@@ -2213,6 +2779,7 @@ window in the east wall.  The only exit is west."""
 vnum = 13104
 name = "A long hallway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This long hallway runs between the back of the chapel to the west, and
 the side of a large bedroom to the east.  The only exits are north and
@@ -2230,6 +2797,7 @@ south."""
 vnum = 13105
 name = "The chapel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This bare-floored chapel serves the needs of the nearby convent,
 monastery, and orphanage.  Few items have been used to adorn the simple,
@@ -2242,8 +2810,8 @@ west to the street."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13089
   flags = ["door"]
+  to_vnum = 13089
 
   [[rooms.exits]]
   direction = "west"
@@ -2253,6 +2821,7 @@ west to the street."""
 vnum = 13106
 name = "The hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This long, darkly-carpeted hallway is the main travelway for the Little
 Annie Orphanage.  The hall continues east, the office door is north, or
@@ -2260,8 +2829,8 @@ you can exit south to the street."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13107
   flags = ["door"]
+  to_vnum = 13107
 
   [[rooms.exits]]
   direction = "east"
@@ -2275,6 +2844,7 @@ you can exit south to the street."""
 vnum = 13107
 name = "Little Annie's Adoption Office"
 sector = "inside"
+room_flags = ["pet_shop"]
 description = """
 This office is cheerful, sunny, and comfortable.  Large west-facing
 windows are thrown open to let the sunshine and breeze through.  A thin
@@ -2290,6 +2860,7 @@ chairs.  The only exit is south."""
 vnum = 13108
 name = "The adoption pool"
 sector = "inside"
+room_flags = ["indoors", "law", "no_mob"]
 description = """
 This is the room where the orphanage keeps adoptable children."""
 
@@ -2297,6 +2868,7 @@ This is the room where the orphanage keeps adoptable children."""
 vnum = 13109
 name = "The T-shaped hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hall continues to the east in the direction of the courtyard; it
 makes a bend south to the convent chambers, and west to the office.  The
@@ -2304,8 +2876,8 @@ only other exit is north to a room."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13110
   flags = ["door"]
+  to_vnum = 13110
 
   [[rooms.exits]]
   direction = "east"
@@ -2323,6 +2895,7 @@ only other exit is north to a room."""
 vnum = 13110
 name = "A medium-sized sitting room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Windows along the north wall face a dusty street.  There are several
 comfortable, upholstered chairs here, each with a small table nearby.
@@ -2338,24 +2911,25 @@ it.  The only exit is south."""
 vnum = 13111
 name = "The courtyard hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hall connects the courtyard to the orphanage and convent rooms.
 Exits are north, east, south, and west."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13113
   flags = ["door"]
+  to_vnum = 13113
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13114
   flags = ["door"]
+  to_vnum = 13114
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13112
   flags = ["door"]
+  to_vnum = 13112
 
   [[rooms.exits]]
   direction = "west"
@@ -2365,6 +2939,7 @@ Exits are north, east, south, and west."""
 vnum = 13112
 name = "A large bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A large, arched window on the east wall overlooks the monastery gardens.
 There is a large bed in the southwest corner.  A comfortable-looking
@@ -2379,6 +2954,7 @@ dresser against the west wall.  The only exit is north."""
 vnum = 13113
 name = "A large bedroom"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 A large, arched window on the north wall overlooks the monastery
 gardens.  There is a large bed in the northwest corner.  A
@@ -2406,31 +2982,32 @@ there is an iron gate to the south."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13115
   flags = ["door"]
+  to_vnum = 13115
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13072
   flags = ["door"]
+  to_vnum = 13072
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13111
   flags = ["door"]
+  to_vnum = 13111
 
 [[rooms]]
 vnum = 13115
 name = "The hall"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This portion of hall connects the courtyard with the monastery rooms.
 There are exits north, east, and west."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13116
   flags = ["door"]
+  to_vnum = 13116
 
   [[rooms.exits]]
   direction = "east"
@@ -2438,13 +3015,14 @@ There are exits north, east, and west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13114
   flags = ["door"]
+  to_vnum = 13114
 
 [[rooms]]
 vnum = 13116
 name = "A small room"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This bedchamber is small, clean, and somber.  It is adorned only by a
 simple bed, a small dresser, and a small window in the north wall.  The
@@ -2452,13 +3030,14 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13115
   flags = ["door"]
+  to_vnum = 13115
 
 [[rooms]]
 vnum = 13117
 name = "The hall"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This is the continuation of hallway from the monastery bedchambers to
 the courtyard.  Exits here are north through a door, east, south to the
@@ -2466,8 +3045,8 @@ dining room, and west to more hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13118
   flags = ["door"]
+  to_vnum = 13118
 
   [[rooms.exits]]
   direction = "east"
@@ -2485,6 +3064,7 @@ dining room, and west to more hall."""
 vnum = 13118
 name = "A small room"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This bedchamber is small, clean, and somber.  It is adorned only by a
 simple bed, a small dresser, and a small window in the north wall.  The
@@ -2492,13 +3072,14 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13117
   flags = ["door"]
+  to_vnum = 13117
 
 [[rooms]]
 vnum = 13119
 name = "The hall"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This is the continuation of hallway from the monastery bedchambers to
 the courtyard.  Exits here are north through a door, east, and west to
@@ -2506,8 +3087,8 @@ more hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13120
   flags = ["door"]
+  to_vnum = 13120
 
   [[rooms.exits]]
   direction = "east"
@@ -2521,6 +3102,7 @@ more hall."""
 vnum = 13120
 name = "A small room"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This bedchamber is small, clean, and somber.  It is adorned only by a
 simple bed, a small dresser, and a small window in the north wall.  The
@@ -2528,13 +3110,14 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13117
   flags = ["door"]
+  to_vnum = 13117
 
 [[rooms]]
 vnum = 13121
 name = "The hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This is the continuation of hallway from the monastery bedchambers to
 the courtyard.  Exits here are north through a door, east, and west to
@@ -2542,8 +3125,8 @@ more hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13122
   flags = ["door"]
+  to_vnum = 13122
 
   [[rooms.exits]]
   direction = "east"
@@ -2557,6 +3140,7 @@ more hall."""
 vnum = 13122
 name = "A small room"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This bedchamber is small, clean, and somber.  It is adorned only by a
 simple bed, a small dresser, and a small window in the north wall.  The
@@ -2564,13 +3148,14 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13121
   flags = ["door"]
+  to_vnum = 13121
 
 [[rooms]]
 vnum = 13123
 name = "This is the continuation of hallway from the monastery bedchambers to\n\nthe courtyard.  Exits here are north through a door, east, south to the\n\nfoyer, and west to more hall."
 sector = "city"
+room_flags = ["dark", "gods_only", "heroes_only", "imp_only", "indoors", "law", "newbies_only", "no_mob", "no_recall", "nowhere", "pet_shop", "private", "safe", "solitary"]
 description = """
 0 ADJ 0
 D0
@@ -2592,6 +3177,7 @@ You see a small wooden doorsmall wooden door"""
 vnum = 13124
 name = "A small room"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This bedchamber is small, clean, and somber.  It is adorned only by a
 simple bed, a small dresser, and a small window in the north wall.  The
@@ -2599,13 +3185,14 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13123
   flags = ["door"]
+  to_vnum = 13123
 
 [[rooms]]
 vnum = 13125
 name = "The hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This is the continuation of hallway from the monastery bedchambers to
 the courtyard.  Exits here are north through a door, and west to more
@@ -2613,8 +3200,8 @@ hall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13126
   flags = ["door"]
+  to_vnum = 13126
 
   [[rooms.exits]]
   direction = "west"
@@ -2624,6 +3211,7 @@ hall."""
 vnum = 13126
 name = "A small room"
 sector = "inside"
+room_flags = ["dark", "indoors", "private"]
 description = """
 This bedchamber is small, clean, and somber.  It is adorned only by a
 simple bed, a small dresser, and a small window in the north wall.  The
@@ -2631,13 +3219,14 @@ only exit is south."""
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13125
   flags = ["door"]
+  to_vnum = 13125
 
 [[rooms]]
 vnum = 13127
 name = "The Monastery Foyer"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This is a simple waiting area.  The bare floor creaks with every step;
 the boards are worn smooth by many feet.  The only adornment in this
@@ -2650,23 +3239,24 @@ There are doors east, south, and west; there is a hallway north."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13135
   flags = ["door"]
+  to_vnum = 13135
 
   [[rooms.exits]]
   direction = "south"
-  to_vnum = 13130
   flags = ["door"]
+  to_vnum = 13130
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13128
   flags = ["door"]
+  to_vnum = 13128
 
 [[rooms]]
 vnum = 13128
 name = "The dining room"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Furnished in deep, dark walnut, this room is only dimly lit by soft
 tallow candles.  An immense walnut dining table sits in the middle of
@@ -2677,13 +3267,13 @@ to the room.  There are exits north, east, and south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13117
   flags = ["door"]
+  to_vnum = 13117
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13127
   flags = ["door"]
+  to_vnum = 13127
 
   [[rooms.exits]]
   direction = "south"
@@ -2693,6 +3283,7 @@ to the room.  There are exits north, east, and south."""
 vnum = 13129
 name = "The kitchen"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Two large but sparse cupboards line the south wall; one contains cracked
 earthenware dishes; the other a few stoneware bowls and iron skillets,
@@ -2710,6 +3301,7 @@ The exit is north."""
 vnum = 13130
 name = "The monastery office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The floor here is polished to a high gloss.  A polished, smiling statue
 of Ste.  Francis graces the room from the southeast corner, next to the
@@ -2719,13 +3311,14 @@ is north."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13127
   flags = ["door"]
+  to_vnum = 13127
 
 [[rooms]]
 vnum = 13131
 name = "The stables"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 A broad, double-wide door swings both ways on large hinges.  The stable
 itself is dark and cool, and smells of manure, sweet hay, and mice.
@@ -2736,8 +3329,8 @@ unafraid.  The exits are east and west."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13136
   flags = ["door"]
+  to_vnum = 13136
 
   [[rooms.exits]]
   direction = "west"
@@ -2747,6 +3340,7 @@ unafraid.  The exits are east and west."""
 vnum = 13132
 name = "The carriage house"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 This room smells of rich leather, sweat, and oil.  Halters, bridles,
 cruppers, and saddles hang from pegs and shelves, and are tossed on the
@@ -2766,6 +3360,7 @@ exits are east and south."""
 vnum = 13133
 name = "The corral"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Several horses are penned up here in this area between the blacksmith
 shop and the stable.  The third wall is formed by the outer wall of the
@@ -2774,13 +3369,14 @@ located.  A rack of hay is located near the wide-swinging gate to the east."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13137
   flags = ["door"]
+  to_vnum = 13137
 
 [[rooms]]
 vnum = 13134
 name = "Willowby Bridge"
 sector = "field"
+room_flags = ["no_recall"]
 description = """
 This is an arched, stone-and-wood bridge that spans the Cottonwood river
 and leads into StoneBow Dale.  The crystal, bubbling waters of the
@@ -2800,6 +3396,24 @@ the bridge.  There is a large wooden sign on the right tower."""
   [[rooms.mob_resets]]
   vnum = 13022
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["A", "large", "wooden", "sign"]
+description = """
+WELCOME To StoneBow Dale! Please observe all rules; this is a quiet town
+and a honeymoon haven; let's keep it that way! -The Mayor"""
+
+[[rooms.extra_descs]]
+keywords = ["right", "keep", "guard", "tower"]
+description = """
+A tall, grey tower made of large boulders.  There is an arched window
+opening near the top, from which a guard peers at you questioningly."""
+
+[[rooms.extra_descs]]
+keywords = ["left", "guard", "tower"]
+description = """
+A tall, grey tower made of large boulders.  There is a wooden door here
+that opens into the tower."""
 
 [[rooms]]
 vnum = 13135
@@ -2821,12 +3435,23 @@ door to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13127
   flags = ["door"]
+  to_vnum = 13127
 
   [[rooms.mob_resets]]
   vnum = 13011
   max = 16
+
+[[rooms.extra_descs]]
+keywords = ["A", "sign"]
+description = """
+DragonCove Road North"""
+
+[[rooms.extra_descs]]
+keywords = ["A", "large", "building"]
+description = """
+The building is of stone-and-mortar construction.  An old, faded sign
+reads "The Monastery"."""
 
 [[rooms]]
 vnum = 13136
@@ -2847,8 +3472,8 @@ continues north and south."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13131
   flags = ["door"]
+  to_vnum = 13131
 
   [[rooms.mob_resets]]
   vnum = 13019
@@ -2873,8 +3498,8 @@ the south is Unity Square."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13133
   flags = ["door"]
+  to_vnum = 13133
 
   [[rooms.mob_resets]]
   vnum = 13012
@@ -2892,6 +3517,7 @@ the south is Unity Square."""
 vnum = 13138
 name = "Unity Square"
 sector = "city"
+room_flags = ["safe"]
 description = """
 A large white marble fountain stands in the center of this large, grassy
 square.  Water spouts from the top of the fountain from the hand of a
@@ -2924,6 +3550,21 @@ here, pointing in every direction."""
   [[rooms.mob_resets]]
   vnum = 13014
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["statue"]
+description = """
+The figure of Eriana stands barefoot, her hand atop the head of a
+massive tiger; the other hand holds a pitcher, from which water pours
+into the fountain."""
+
+[[rooms.extra_descs]]
+keywords = ["Sign", "post"]
+description = """
+This signpost points in the four major directions.  The arrow north
+indicates that DragonCove Road north lies in that direction; to the
+south is DragonCove Road south.  East is Nightbane Avenue east; west
+is the western portion of that street."""
 
 [[rooms]]
 vnum = 13139
@@ -3012,8 +3653,8 @@ linens shop."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13075
   flags = ["door"]
+  to_vnum = 13075
 
   [[rooms.exits]]
   direction = "east"
@@ -3167,8 +3808,8 @@ continues north to Unity Square, and south toward Crystal Square."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13021
   flags = ["door"]
+  to_vnum = 13021
 
 [[rooms]]
 vnum = 13148
@@ -3224,6 +3865,7 @@ Crystal Square; and west is the corner of a shop."""
 vnum = 13150
 name = "Crystal Square"
 sector = "city"
+room_flags = ["safe"]
 description = """
 Located at the intersection of Redfern Road and DragonCove, this square
 is rather small in contrast to its northern counterpart.  Instead of a
@@ -3272,6 +3914,23 @@ here."""
   [[rooms.mob_resets]]
   vnum = 13025
   max = 6
+
+[[rooms.extra_descs]]
+keywords = ["Signpost"]
+description = """
+This sign points in each of the four directions: North DragonCove &
+South DragonCove lie north and south, respectively; and East and West
+Redfern lie in their respective directions"""
+
+[[rooms.extra_descs]]
+keywords = ["blue", "crystal"]
+description = """
+This crystal is a complete mystery; it stands about eight feet tall,
+and is made of some completely clear crystal of unknown origin or
+purpose.  Roughly marquis-shaped, it balances on one point, its other
+pointed skyward.  Lights dance within the depths of the glass, bursting
+into a myriad of colors deep within, and radiate outward, causing the
+crystal to appear surrounded by some mystical aura It hums faintly."""
 
 [[rooms]]
 vnum = 13151
@@ -3355,8 +4014,8 @@ due north; the Willowtree Inn is directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13005
   flags = ["door"]
+  to_vnum = 13005
 
   [[rooms.exits]]
   direction = "east"
@@ -3377,8 +4036,8 @@ is directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13006
   flags = ["door"]
+  to_vnum = 13006
 
   [[rooms.exits]]
   direction = "east"
@@ -3403,8 +4062,8 @@ directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13009
   flags = ["door"]
+  to_vnum = 13009
 
   [[rooms.exits]]
   direction = "east"
@@ -3426,8 +4085,8 @@ directly south."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13013
   flags = ["door"]
+  to_vnum = 13013
 
   [[rooms.exits]]
   direction = "east"
@@ -3478,8 +4137,8 @@ to the west is an entrance to the metalsmith shop."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13047
   flags = ["door"]
+  to_vnum = 13047
 
   [[rooms.exits]]
   direction = "south"
@@ -3487,8 +4146,8 @@ to the west is an entrance to the metalsmith shop."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13066
   flags = ["door"]
+  to_vnum = 13066
 
 [[rooms]]
 vnum = 13160
@@ -3526,8 +4185,8 @@ north and west is the city wall."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13106
   flags = ["door"]
+  to_vnum = 13106
 
   [[rooms.exits]]
   direction = "south"
@@ -3548,8 +4207,8 @@ Chapel."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13105
   flags = ["door"]
+  to_vnum = 13105
 
   [[rooms.exits]]
   direction = "south"
@@ -3569,8 +4228,8 @@ Avenue.  The wall continues on the west side; to the east is the Convent."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13088
   flags = ["door"]
+  to_vnum = 13088
 
   [[rooms.exits]]
   direction = "south"
@@ -3591,8 +4250,8 @@ Horn Tavern."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13087
   flags = ["door"]
+  to_vnum = 13087
 
   [[rooms.exits]]
   direction = "south"
@@ -3617,8 +4276,8 @@ DragonCove Inn."""
 
   [[rooms.exits]]
   direction = "east"
-  to_vnum = 13077
   flags = ["door"]
+  to_vnum = 13077
 
   [[rooms.exits]]
   direction = "south"
@@ -3883,8 +4542,8 @@ the southern city wall."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 13064
   flags = ["door"]
+  to_vnum = 13064
 
   [[rooms.exits]]
   direction = "east"
@@ -3946,6 +4605,7 @@ Castlerock.  To the north is the metalsmith shop."""
 vnum = 13180
 name = "Briarwood Road"
 sector = "city"
+room_flags = ["dark"]
 description = """
 Briarwood Road ends in this alley.  The Inn lies due west; the city wall
 lies south and east; the street continues north."""
@@ -3958,6 +4618,7 @@ lies south and east; the street continues north."""
 vnum = 13181
 name = "Briarwood Road"
 sector = "city"
+room_flags = ["dark"]
 description = """
 Briarwood Road continues here.  The Inn lies due west; the city wall
 lies east, and the street continues north and south to the dead end."""
@@ -3974,6 +4635,7 @@ lies east, and the street continues north and south to the dead end."""
 vnum = 13182
 name = "Briarwood Road"
 sector = "city"
+room_flags = ["dark"]
 description = """
 Briarwood Road intersects Redfern just north of here.  The Inn lies due
 west; the city wall lies east; and Briarwood continues north."""
@@ -4093,8 +4755,8 @@ is a shop to the west."""
 
   [[rooms.exits]]
   direction = "west"
-  to_vnum = 13015
   flags = ["door"]
+  to_vnum = 13015
 
   [[rooms.mob_resets]]
   vnum = 13024
@@ -4181,4 +4843,3 @@ Nightbane Avenue."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 13190
-

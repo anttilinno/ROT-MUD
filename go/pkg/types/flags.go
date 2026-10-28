@@ -35,6 +35,7 @@ const (
 	ActUpdateAlways                      // Always updates
 	ActIsChanger                         // Class changer
 	ActBanker                            // Can handle bank transactions
+	ActProtected                         // Cannot be attacked (shopkeepers)
 )
 
 // Has returns true if the flag is set

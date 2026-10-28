@@ -9,6 +9,19 @@ weight = 0
 cost = 0
 extra_flags = ["glow", "nopurge"]
 
+[[objects.extra_descs]]
+keywords = ["artwork", "white", "object", "bones", "thing"]
+description = """
+A ghastly array of bones, bent in impossible angles and melded together, form
+a huge domelike structure.  The bones are polished to a sick white gleam and
+seem to twist and change even as you look at them.  A large gap is visible in
+the western face of the object, shifting occasionally with the movement of
+the bones."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11613
+
 [[objects]]
 vnum = 11601
 keywords = ["mirror", "pool", "water"]
@@ -20,6 +33,19 @@ weight = 0
 cost = 0
 extra_flags = ["nopurge"]
 
+[[objects.extra_descs]]
+keywords = ["mirror", "pool", "water"]
+description = """
+Water, remarkably clear despite the muddy rivulets which feed it, forms a
+flat circular pool in the center of the cavern.  As you gaze at the pool,
+you reflection seems to twist and darken.  Grinning, it beckons, and you feel
+drawn towards the pool.  The pool ripples and clears, and your reflection
+returns to normal.  Or did it ever really change.. ?"""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11650
+
 [[objects]]
 vnum = 11602
 keywords = ["shadow", "shadows"]
@@ -29,6 +55,15 @@ item_type = "portal"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["shadow", "shadows"]
+description = """
+The shadows seem to beckon.."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11672
 
 [[objects]]
 vnum = 11603
@@ -40,6 +75,17 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["leering", "stone", "face", "mouth"]
+description = """
+The face has been carved twisted and waving, as if reflected in a bent
+mirror.  The open mouth reveals a gaping, toothless void.  The stone tongue
+hangs slightly out of the mouth like a ramp."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11647
+
 [[objects]]
 vnum = 11604
 keywords = ["dark", "pool", "water"]
@@ -49,6 +95,18 @@ item_type = "portal"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["dark", "pool", "water"]
+description = """
+Streamers of light flicker within the still, dark waters.  As you watch,
+they appear to wrap around your reflection, dissolving it for a moment
+into glitters of light.  Something about the pool is both frightening
+and appealing.."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11616
 
 [[objects]]
 vnum = 11605
@@ -61,6 +119,13 @@ weight = 0
 cost = 0
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["pine", "coffin"]
+description = """
+Tattered black felt lines the inside of the coffin.  Dark splotches of dried
+blood harden the felt in places.  Strips of felt, obviously rent by sharp
+claws, hang loosely revealing the bare pine underneath."""
+
 [[objects]]
 vnum = 11606
 keywords = ["darkness"]
@@ -70,6 +135,16 @@ item_type = "portal"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["darkness"]
+description = """
+The darkness seems almost tangible.  As you concentrate on it, it seems
+to pull you towards it.."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11672
 
 [[objects]]
 vnum = 11607
@@ -82,6 +157,12 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+[[objects.extra_descs]]
+keywords = ["altar", "white"]
+description = """
+Upon closer examination, you notice that the altar is made of a smooth,
+slightly offwhite substance similar to bone.."""
+
 [[objects]]
 vnum = 11608
 keywords = ["bloody", "black", "obsidian", "altar"]
@@ -92,6 +173,13 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["hum"]
+
+[[objects.extra_descs]]
+keywords = ["bloody", "black", "obsidian", "altar"]
+description = """
+Streamers of wet blood spatter the obsidian altar.  The blood seems to
+blend in with the black stone, giving it the appearance of some twisted
+form of red-streaked marble."""
 
 [[objects]]
 vnum = 11609
@@ -104,6 +192,12 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+[[objects.extra_descs]]
+keywords = ["gleaming", "white", "throne"]
+description = """
+It appears to be made of some weird glowing substance.. strangely like
+polished bone."""
+
 [[objects]]
 vnum = 11610
 keywords = ["forbidding", "dark", "black", "throne"]
@@ -115,6 +209,12 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+[[objects.extra_descs]]
+keywords = ["forbidding", "dark", "black", "throne"]
+description = """
+The throne seems to be made of a polished black substance similar to
+blackened bone."""
+
 [[objects]]
 vnum = 11611
 keywords = ["white", "oak", "tree"]
@@ -125,6 +225,17 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["white", "oak", "tree"]
+description = """
+A huge white oak looms here.  As you gaze at it, a rectangular area in this
+face of the tree -- about the height of a man -- shimmers momentarily, as
+if not entirely there."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11633
+
 [[objects]]
 vnum = 11612
 keywords = ["black", "oak", "tree"]
@@ -134,6 +245,16 @@ item_type = "portal"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["black", "oak", "tree"]
+description = """
+A large gap opens into the base of the black oak, slightly charred as if
+burned by fire."""
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11667
 
 [[objects]]
 vnum = 11613
@@ -146,6 +267,14 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+[[objects.extra_descs]]
+keywords = ["signpost", "sign", "post"]
+description = """
+The painted arrows are skewed in all directions, as if the maker couldn't
+decide which way they should point and made arrows in all directions just
+to be safe.  Which makes it pretty useless as a signpost.. but it looks
+like a mighty comfy bench anyway :)"""
+
 [[objects]]
 vnum = 11614
 keywords = ["leather", "couch"]
@@ -156,6 +285,13 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["hum"]
+
+[[objects.extra_descs]]
+keywords = ["leather", "couch"]
+description = """
+The couch seems to hum continuously.  Under your scrutiny, you think you
+hear it mutter something about "..neuro deficiency leading to..", but
+maybe it's just your imagination..  Need a seat?"""
 
 [[objects]]
 vnum = 11615
@@ -245,6 +381,35 @@ extra_flags = ["glow", "invis"]
   location = "damroll"
   modifier = 5
 
+[[objects.extra_descs]]
+keywords = ["circlets", "wonder", "arm", "bands"]
+description = """
+shimmering letters are visible amidst the swirling matter of the circlets:
+
+  in this web of silver wires
+  thinner than thread
+  and brighter than steel
+  we wander --
+  dazzled by myriad glints,
+  pulsing with knowledge
+  and glowing with power...
+  And in that glow,
+
+  we know
+  and yet are decieved
+
+  we thrive
+  and yet we drown
+
+  we grow
+  and we are dwarfed
+
+  we are alone
+  and never lonely
+
+  we are lost
+  and we are found."""
+
 [[objects]]
 vnum = 11619
 keywords = ["bubbling", "indigo", "potion"]
@@ -256,6 +421,10 @@ weight = 10
 cost = 1000
 wear_flags = ["take", "hold"]
 extra_flags = ["glow"]
+
+  [objects.magic]
+  level = 80
+  spells = ["change sex", "heal", "bless"]
 
 [[objects]]
 vnum = 11620
@@ -431,6 +600,35 @@ extra_flags = ["hum", "bless", "noremove"]
   location = "damroll"
   modifier = 3
 
+[[objects.extra_descs]]
+keywords = ["mark", "gabrian", "white", "insignia", "hair"]
+description = """
+an inscription is woven in gold around edge of the mark:
+
+  Take my hand
+  and fear no longer
+  Take my hand
+  and cry no more..
+
+  Reaching into the icy darkness
+  and for an instant
+  a glimmer of laughter
+  emerges from the depths of memory
+  to brush his heart,
+  before flickering away,
+  leaving traces
+  like threads of gold
+  shimmering warmly in the darkness.
+
+  Picking up the threads,
+  he weaves them together --
+  Together my friends.
+  Forever my friends.
+
+  And against the deepening darkness
+  Echoing in my ears,
+  The golden roar of a lion."""
+
 [[objects]]
 vnum = 11625
 keywords = ["white", "grey", "feather", "breast", "plate"]
@@ -510,6 +708,10 @@ extra_flags = ["hum"]
   location = "con"
   modifier = -4
 
+  [objects.magic]
+  level = 70
+  spells = ["colour spray", "curse", "charm person", "poison"]
+
 [[objects]]
 vnum = 11628
 keywords = ["sparkling", "wand"]
@@ -521,6 +723,12 @@ weight = 10
 cost = 3250
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "invis"]
+
+  [objects.magic]
+  level = 69
+  max_charges = 12
+  charges = 12
+  spells = ["colour spray"]
 
 [[objects]]
 vnum = 11629
@@ -670,6 +878,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 7
   dice_size = 5
 
@@ -717,6 +927,8 @@ cost = 1000
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 22
 
@@ -765,6 +977,9 @@ cost = 4500
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["sharp"]
   dice_number = 2
   dice_size = 22
 
@@ -817,6 +1032,11 @@ extra_flags = ["glow"]
   [[objects.affects]]
   location = "mana"
   modifier = 75
+
+[[objects.extra_descs]]
+keywords = ["flowing", "white", "priest", "robes"]
+description = """
+A glowing white cross is emblazoned across the front of the robes."""
 
 [[objects]]
 vnum = 11641
@@ -942,6 +1162,10 @@ weight = 10
 cost = 500
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 55
+  spells = ["haste"]
+
 [[objects]]
 vnum = 11646
 keywords = ["weeping", "angel", "white"]
@@ -1036,6 +1260,24 @@ extra_flags = ["glow"]
   location = "damroll"
   modifier = 5
 
+[[objects.extra_descs]]
+keywords = ["ice", "mask"]
+description = """
+A poem is engraved on the inside of the mask:
+
+  A flurry of icy flakes
+  blocking out the searing sun
+  and wrapping me
+  in their cool, soft embrace
+
+  The cold in my mind
+  to freeze the memories
+  The ice in my heart
+  to chill the pain
+  The cool in my eyes
+  to freeze the tears
+  to ice."""
+
 [[objects]]
 vnum = 11649
 keywords = ["hellhawk", "hawk", "feather", "black"]
@@ -1127,6 +1369,9 @@ extra_flags = ["glow", "evil"]
   location = "damroll"
   modifier = 5
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 11652
 keywords = ["nightmare", "breath", "dark", "cloud"]
@@ -1200,6 +1445,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "negative"
+  flags = ["vampiric"]
   dice_number = 3
   dice_size = 14
 
@@ -1254,6 +1502,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "anti_good"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["sharp"]
   dice_number = 3
   dice_size = 14
 
@@ -1275,6 +1526,12 @@ level = 55
 weight = 0
 cost = 9540
 wear_flags = ["take", "hold"]
+
+  [objects.container]
+  capacity = 350
+  flags = []
+  key = 0
+  max_weight = 40
 
 [[objects]]
 vnum = 11658
@@ -1352,6 +1609,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["vampiric", "sharp"]
   dice_number = 2
   dice_size = 22
 
@@ -1430,6 +1690,23 @@ extra_flags = ["hum", "dark", "noremove"]
   location = "damroll"
   modifier = 5
 
+[[objects.extra_descs]]
+keywords = ["mark", "daemias", "black", "hair"]
+description = """
+silver threads interwoven with the black form the words:
+
+  Chill fingers of icy wind
+  through open windows
+  in the blackest night..
+  brushing across his cheek
+  and freezing wet tears
+  in a comforting mask of ice;
+
+  Take my hand
+  and fear no longer
+  Take my hand
+  and cry no more.."""
+
 [[objects]]
 vnum = 11663
 keywords = ["flame", "darkness"]
@@ -1457,6 +1734,9 @@ extra_flags = ["glow", "dark", "anti_good"]
   [[objects.affects]]
   location = "damroll"
   modifier = 5
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 11664
@@ -1721,6 +2001,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["dark"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["sharp"]
   dice_number = 2
   dice_size = 22
 
@@ -1790,6 +2073,12 @@ extra_flags = ["hum", "dark", "invis"]
   location = "damroll"
   modifier = 5
 
+  [objects.container]
+  capacity = 200
+  flags = []
+  key = 0
+  max_weight = 20
+
 [[objects]]
 vnum = 11675
 keywords = ["ice", "candle"]
@@ -1814,6 +2103,9 @@ extra_flags = ["glow", "invis"]
   location = "damroll"
   modifier = 5
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 11676
 keywords = ["stiletto", "shadow", "shadow's", "edge"]
@@ -1827,6 +2119,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["dark"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
+  flags = ["vampiric", "sharp"]
   dice_number = 5
   dice_size = 10
 
@@ -2233,6 +2528,9 @@ extra_flags = ["glow", "hum"]
   location = "damroll"
   modifier = 6
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 11690
 keywords = ["energy", "mail", "chainmail", "chain"]
@@ -2310,6 +2608,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["sharp", "shocking"]
   dice_number = 13
   dice_size = 3
 
@@ -2375,6 +2676,9 @@ extra_flags = ["glow", "dark", "invis"]
   location = "damroll"
   modifier = 4
 
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 11695
 keywords = ["shadowy", "handprints", "prints"]
@@ -2427,6 +2731,10 @@ level = 0
 weight = 0
 cost = 0
 
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11646
+
 [[objects]]
 vnum = 11698
 keywords = ["rip", "void"]
@@ -2437,6 +2745,10 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["glow"]
+
+  [objects.portal]
+  charges = 0
+  dest_vnum = 11612
 
 [[objects]]
 vnum = 11699
@@ -2450,3 +2762,6 @@ cost = 0
 wear_flags = ["take", "hold"]
 extra_flags = ["hum"]
 
+  [objects.portal]
+  charges = 0
+  dest_vnum = 2

@@ -502,16 +502,18 @@ see_also = ["fly"]
 keywords = ["word of recall"]
 syntax = "cast 'word of recall'"
 description = """
-Instantly teleports the caster back to the temple.
+Instantly takes the target to their bound room (see 'bind'),
+or to the temple if none is bound. Scrolls of recall cast it.
 
-Unlike the 'recall' command, this uses mana instead of
-movement points.
+It ends any fight without the experience loss of the 'recall'
+command, but halves movement. It fails in places that block
+recall and on the cursed.
 
 Class availability:
   Mage: Level 32
   Cleric: Level 28
 """
-see_also = ["recall"]
+see_also = ["recall", "bind"]
 
 # === Defensive Buff Spells ===
 

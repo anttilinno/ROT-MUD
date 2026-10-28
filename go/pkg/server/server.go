@@ -34,6 +34,10 @@ type Session struct {
 	Character  *types.Character
 	Descriptor *types.Descriptor
 	mu         sync.Mutex
+
+	// genSkills holds skills bought one by one during creation, so adding a
+	// group that contains one refunds it instead of charging twice.
+	genSkills map[string]bool
 }
 
 // MetricsUpdaterFunc is a callback for updating metrics
@@ -104,6 +108,9 @@ func New(logger *slog.Logger) *Server {
 		s.commandCount++
 		if s.onCommand != nil {
 			s.onCommand()
+		}
+		if cmd.Character != nil {
+			s.logger.Debug("cmd", "char", cmd.Character.Name, "input", cmd.Input)
 		}
 		s.Dispatcher.Dispatch(cmd)
 
@@ -218,11 +225,6 @@ func New(logger *slog.Logger) *Server {
 		if s.GameLoop.WorldTime != nil {
 			s.GameLoop.WorldTime.ControlWeather(change)
 		}
-	}
-
-	// Wire up character movement for teleport/summon/gate spells
-	s.Dispatcher.Magic.CharacterToRoom = func(ch *types.Character, room *types.Room) {
-		game.CharToRoom(ch, room)
 	}
 
 	// Wire up room finder for teleport/summon/gate spells
@@ -451,6 +453,7 @@ func (s *Server) LoadWorld() error {
 	// Wire shop system: convert loader.ShopData → shops.Shop, build registry,
 	// install handler on the dispatcher so buy/sell/list/value commands work.
 	s.Dispatcher.Shops = buildShopHandler(world, s.GameLoop)
+	s.Dispatcher.Shops.Output = s.SendToCharacter
 	s.logger.Info("shops loaded", "count", len(world.Shops))
 
 	// Load help files
@@ -608,7 +611,7 @@ func (s *Server) handleAutolootAutosac(killer, victim *types.Character, corpse *
 		for len(corpse.Contents) > 0 {
 			obj := corpse.Contents[0]
 			corpse.RemoveContent(obj)
-			game.ObjToChar(obj, killer)
+			game.GetObjToChar(killer, obj)
 			s.SendToCharacter(killer, fmt.Sprintf("You get %s from %s.\r\n", obj.ShortDesc, corpse.ShortDesc))
 		}
 	}
@@ -619,9 +622,9 @@ func (s *Server) handleAutolootAutosac(killer, victim *types.Character, corpse *
 		if corpse.InRoom != nil {
 			corpse.InRoom.RemoveObject(corpse)
 		}
-		// Give a small amount of coin as sacrifice reward (1 copper)
-		killer.Coin += 1
-		s.SendToCharacter(killer, "The gods give you 1c for your sacrifice.\r\n")
+		reward := game.SacrificeReward(corpse)
+		killer.Coin += reward
+		s.SendToCharacter(killer, fmt.Sprintf("The gods give you %s for your sacrifice.\r\n", types.FormatCoin(reward)))
 	}
 }
 
@@ -651,223 +654,7 @@ func (s *Server) countObjInWorld(vnum int) int {
 
 // createObjectFromTemplate creates an Object instance from a template
 func (s *Server) createObjectFromTemplate(tmpl *loader.ObjectData) *types.Object {
-	obj := types.NewObject(tmpl.Vnum, tmpl.ShortDesc, parseItemType(tmpl.ItemType))
-	obj.Name = strings.Join(tmpl.Keywords, " ")
-	obj.LongDesc = tmpl.LongDesc
-	obj.Level = tmpl.Level
-	obj.Weight = tmpl.Weight
-	obj.Cost = tmpl.Cost
-
-	// Parse wear flags
-	for _, flag := range tmpl.WearFlags {
-		switch strings.ToLower(flag) {
-		case "take":
-			obj.WearFlags.Set(types.WearTake)
-		case "wield":
-			obj.WearFlags.Set(types.WearWield)
-		case "hold":
-			obj.WearFlags.Set(types.WearHold)
-		case "body":
-			obj.WearFlags.Set(types.WearBody)
-		case "head":
-			obj.WearFlags.Set(types.WearHead)
-		case "legs":
-			obj.WearFlags.Set(types.WearLegs)
-		case "feet":
-			obj.WearFlags.Set(types.WearFeet)
-		case "hands":
-			obj.WearFlags.Set(types.WearHands)
-		case "arms":
-			obj.WearFlags.Set(types.WearArms)
-		case "shield":
-			obj.WearFlags.Set(types.WearShield)
-		case "about":
-			obj.WearFlags.Set(types.WearAbout)
-		case "waist":
-			obj.WearFlags.Set(types.WearWaist)
-		case "wrist":
-			obj.WearFlags.Set(types.WearWrist)
-		case "finger":
-			obj.WearFlags.Set(types.WearFinger)
-		case "neck":
-			obj.WearFlags.Set(types.WearNeck)
-		}
-	}
-
-	// Parse extra flags
-	for _, flag := range tmpl.ExtraFlags {
-		switch strings.ToLower(flag) {
-		case "glow":
-			obj.ExtraFlags.Set(types.ItemGlow)
-		case "hum":
-			obj.ExtraFlags.Set(types.ItemHum)
-		case "magic":
-			obj.ExtraFlags.Set(types.ItemMagic)
-		case "bless":
-			obj.ExtraFlags.Set(types.ItemBless)
-		case "nodrop":
-			obj.ExtraFlags.Set(types.ItemNoDrop)
-		case "noremove":
-			obj.ExtraFlags.Set(types.ItemNoRemove)
-		}
-	}
-
-	// Weapon-specific values
-	if tmpl.Weapon != nil {
-		obj.Values[0] = parseWeaponType(tmpl.Weapon.WeaponType, tmpl.Keywords)
-		obj.Values[1] = tmpl.Weapon.DiceNumber
-		obj.Values[2] = tmpl.Weapon.DiceSize
-	}
-
-	// Parse affects (hitroll, damroll, stat bonuses, etc.)
-	for _, affData := range tmpl.Affects {
-		aff := &types.Affect{
-			Type:     "equipment",
-			Level:    obj.Level,
-			Duration: -1, // Permanent while equipped
-			Location: parseApplyType(affData.Location),
-			Modifier: affData.Modifier,
-		}
-		obj.Affects.Add(aff)
-	}
-
-	return obj
-}
-
-// parseApplyType converts a location string to an ApplyType constant
-func parseApplyType(s string) types.ApplyType {
-	switch strings.ToLower(s) {
-	case "str", "strength":
-		return types.ApplyStr
-	case "dex", "dexterity":
-		return types.ApplyDex
-	case "int", "intelligence":
-		return types.ApplyInt
-	case "wis", "wisdom":
-		return types.ApplyWis
-	case "con", "constitution":
-		return types.ApplyCon
-	case "mana":
-		return types.ApplyMana
-	case "hp", "hit", "hitpoints":
-		return types.ApplyHit
-	case "move", "movement":
-		return types.ApplyMove
-	case "ac", "armor":
-		return types.ApplyAC
-	case "hitroll":
-		return types.ApplyHitroll
-	case "damroll":
-		return types.ApplyDamroll
-	case "saves", "saving_throw":
-		return types.ApplySaves
-	}
-	return types.ApplyNone
-}
-
-// parseItemType converts item type string to ItemType constant
-func parseItemType(s string) types.ItemType {
-	switch strings.ToLower(s) {
-	case "weapon":
-		return types.ItemTypeWeapon
-	case "armor":
-		return types.ItemTypeArmor
-	case "scroll":
-		return types.ItemTypeScroll
-	case "wand":
-		return types.ItemTypeWand
-	case "staff":
-		return types.ItemTypeStaff
-	case "potion":
-		return types.ItemTypePotion
-	case "container":
-		return types.ItemTypeContainer
-	case "key":
-		return types.ItemTypeKey
-	case "food":
-		return types.ItemTypeFood
-	case "money":
-		return types.ItemTypeMoney
-	case "light":
-		return types.ItemTypeLight
-	case "fountain":
-		return types.ItemTypeFountain
-	case "drink", "drink_con":
-		return types.ItemTypeDrinkCon
-	case "pill":
-		return types.ItemTypePill
-	case "treasure":
-		return types.ItemTypeTreasure
-	case "furniture":
-		return types.ItemTypeFurniture
-	case "trash":
-		return types.ItemTypeTrash
-	case "boat":
-		return types.ItemTypeBoat
-	case "jewelry":
-		return types.ItemTypeJewelry
-	case "clothing":
-		return types.ItemTypeClothing
-	case "map":
-		return types.ItemTypeMap
-	case "portal":
-		return types.ItemTypePortal
-	case "corpse_npc":
-		return types.ItemTypeCorpseNPC
-	case "corpse_pc":
-		return types.ItemTypeCorpsePC
-	default:
-		return types.ItemTypeTrash
-	}
-}
-
-// parseWeaponType converts weapon type string or keywords to weapon class constant
-// Returns weapon class: 0=exotic, 1=sword, 2=dagger, 3=spear, 4=mace, 5=axe, 6=flail, 7=whip, 8=polearm
-func parseWeaponType(weaponType string, keywords []string) int {
-	// First check explicit weapon type
-	switch strings.ToLower(weaponType) {
-	case "sword":
-		return 1
-	case "dagger":
-		return 2
-	case "spear":
-		return 3
-	case "mace":
-		return 4
-	case "axe":
-		return 5
-	case "flail":
-		return 6
-	case "whip":
-		return 7
-	case "polearm", "glaive":
-		return 8
-	}
-
-	// If no explicit type, try to infer from keywords
-	for _, kw := range keywords {
-		switch strings.ToLower(kw) {
-		case "sword", "blade", "longsword", "shortsword", "broadsword":
-			return 1
-		case "dagger", "knife", "dirk", "stiletto":
-			return 2
-		case "spear", "lance", "javelin", "pike":
-			return 3
-		case "mace", "club", "hammer", "maul", "morning star", "morningstar":
-			return 4
-		case "axe", "hatchet", "battleaxe":
-			return 5
-		case "flail", "nunchaku":
-			return 6
-		case "whip", "lash", "bullwhip":
-			return 7
-		case "polearm", "glaive", "halberd", "bardiche", "staff":
-			return 8
-		}
-	}
-
-	// Default to exotic (uses sword skill as fallback in combat code)
-	return 0
+	return s.GameLoop.Resets.CreateObjFromTemplate(tmpl.Vnum)
 }
 
 // Start begins listening for connections on the specified port
@@ -1288,6 +1075,7 @@ func (s *Server) SendToCharacter(ch *types.Character, msg string) {
 	for _, session := range s.sessions {
 		if session.Character == ch {
 			session.Write(msg)
+			s.logger.Debug("out", "char", ch.Name, "msg", msg)
 
 			// If this character is being snooped, forward output to snooper
 			if session.Descriptor != nil && session.Descriptor.SnoopedBy != nil {
@@ -1342,13 +1130,11 @@ func (s *Server) dispatchLLMResult(res llm.Result) {
 	}
 }
 
-// tickUpdate handles periodic character updates (regeneration, affects)
+// tickUpdate handles per-tick damage over time (poison, plague, mortal
+// wounds). Regeneration and affect decay run in GameLoop.tickUpdate.
 func (s *Server) tickUpdate() {
 	// Use GetCharacters() for thread-safe iteration
 	for _, ch := range s.GameLoop.GetCharacters() {
-		// HP/mana/move regeneration runs in GameLoop.processRegeneration (ROM
-		// hit_gain/mana_gain/move_gain); doing it here too doubled regen.
-
 		// Process poison damage
 		if ch.IsAffected(types.AffPoison) && !ch.IsAffected(types.AffSlow) {
 			// Find the poison affect to get its level
@@ -1446,9 +1232,6 @@ func (s *Server) tickUpdate() {
 			s.Dispatcher.Combat.Damage(ch, ch, 1, types.DamNone, false)
 		}
 	}
-
-	// Affect decay runs in GameLoop.tickUpdate (processAffectDecay), which
-	// calls this OnTick first; ticking here too halved every affect's duration.
 }
 
 func min(a, b int) int {
@@ -1782,6 +1565,10 @@ var shopItemTypeMap = map[string]int{
 	"boat":      int(types.ItemTypeBoat),
 	"fountain":  int(types.ItemTypeFountain),
 	"pill":      int(types.ItemTypePill),
+	"map":       int(types.ItemTypeMap),
+	"portal":    int(types.ItemTypePortal),
+	"gem":       int(types.ItemTypeGem),
+	"jewelry":   int(types.ItemTypeJewelry),
 }
 
 // buildShopHandler converts the auto-registered loader shop data into a

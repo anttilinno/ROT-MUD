@@ -20,6 +20,29 @@ const (
 	TrainCostMove = 1 // Trains to gain Move
 )
 
+// trainingFee is the coin charged per lesson: free through level 10, then
+// level² copper times mult (1 for practice, 5 for train).
+func trainingFee(ch *types.Character, mult int64) int64 {
+	if ch.Level <= 10 {
+		return 0
+	}
+	return int64(ch.Level*ch.Level) * mult
+}
+
+// chargeTraining takes a lesson fee from ch; false if they can't pay.
+func (d *CommandDispatcher) chargeTraining(ch, teacher *types.Character, fee int64) bool {
+	if fee <= 0 {
+		return true
+	}
+	if ch.Coin < fee {
+		d.send(ch, fmt.Sprintf("%s says 'My time costs %s.'\r\n", teacher.ShortDesc, types.FormatCoin(fee)))
+		return false
+	}
+	ch.Coin -= fee
+	d.send(ch, fmt.Sprintf("You pay %s for the lesson.\r\n", types.FormatCoin(fee)))
+	return true
+}
+
 func (d *CommandDispatcher) cmdTrain(ch *types.Character, args string) {
 	if ch.IsNPC() {
 		d.send(ch, "NPCs can't train.\r\n")
@@ -45,6 +68,9 @@ func (d *CommandDispatcher) cmdTrain(ch *types.Character, args string) {
 		d.send(ch, fmt.Sprintf("  mana - Mana         (cost: %d train, gain 10 max mana)\r\n", TrainCostMana))
 		d.send(ch, fmt.Sprintf("  move - Movement     (cost: %d train, gain 10 max move)\r\n", TrainCostMove))
 		d.send(ch, fmt.Sprintf("\r\nYou have %d training sessions.\r\n", ch.Train))
+		if fee := trainingFee(ch, 5); fee > 0 {
+			d.send(ch, fmt.Sprintf("Each lesson also costs %s.\r\n", types.FormatCoin(fee)))
+		}
 		return
 	}
 
@@ -78,6 +104,9 @@ func (d *CommandDispatcher) cmdTrain(ch *types.Character, args string) {
 			return
 		}
 
+		if !d.chargeTraining(ch, trainer, trainingFee(ch, 5)) {
+			return
+		}
 		ch.Train -= TrainCostStat
 		ch.PermStats[statType]++
 		d.send(ch, fmt.Sprintf("Your %s increases!\r\n", types.StatName(statType)))
@@ -89,6 +118,9 @@ func (d *CommandDispatcher) cmdTrain(ch *types.Character, args string) {
 	case "hp", "hitpoints", "hits":
 		if ch.Train < TrainCostHP {
 			d.send(ch, "You don't have enough training sessions.\r\n")
+			return
+		}
+		if !d.chargeTraining(ch, trainer, trainingFee(ch, 5)) {
 			return
 		}
 		ch.Train -= TrainCostHP
@@ -103,6 +135,9 @@ func (d *CommandDispatcher) cmdTrain(ch *types.Character, args string) {
 			d.send(ch, "You don't have enough training sessions.\r\n")
 			return
 		}
+		if !d.chargeTraining(ch, trainer, trainingFee(ch, 5)) {
+			return
+		}
 		ch.Train -= TrainCostMana
 		ch.MaxMana += 10
 		if ch.PCData != nil {
@@ -113,6 +148,9 @@ func (d *CommandDispatcher) cmdTrain(ch *types.Character, args string) {
 	case "move", "moves", "mv":
 		if ch.Train < TrainCostMove {
 			d.send(ch, "You don't have enough training sessions.\r\n")
+			return
+		}
+		if !d.chargeTraining(ch, trainer, trainingFee(ch, 5)) {
 			return
 		}
 		ch.Train -= TrainCostMove
@@ -133,8 +171,8 @@ func (d *CommandDispatcher) findTrainer(ch *types.Character) *types.Character {
 	}
 
 	for _, mob := range ch.InRoom.People {
-		// Both trainers and guildmasters (practicers) can train stats
-		if mob.IsNPC() && (mob.Act.Has(types.ActTrain) || mob.Act.Has(types.ActPractice)) {
+		// Only trainers train stats; guildmasters (ActPractice) teach skills
+		if mob.IsNPC() && mob.Act.Has(types.ActTrain) {
 			return mob
 		}
 	}
@@ -343,6 +381,9 @@ func (d *CommandDispatcher) cmdPractice(ch *types.Character, args string) {
 		gain = 1
 	}
 
+	if !d.chargeTraining(ch, practicer, trainingFee(ch, 1)) {
+		return
+	}
 	ch.Practice--
 	ch.PCData.Learned[foundSkill] = min(current+gain, maxPractice)
 
@@ -784,6 +825,8 @@ func (d *CommandDispatcher) getAvailableGroups(ch *types.Character) []SkillGroup
 		},
 		types.ClassThief: {
 			{"stealth", 6, []string{"sneak", "hide", "backstab", "circle"}},
+			{"shadowcraft", 6, []string{"detect magic", "detect hidden", "detect invis", "invisibility", "pass door"}},
+			{"beguiling", 6, []string{"sleep", "charm person"}},
 		},
 		types.ClassMage: {
 			{"attack", 3, []string{"magic missile", "burning hands", "chill touch", "colour spray"}},

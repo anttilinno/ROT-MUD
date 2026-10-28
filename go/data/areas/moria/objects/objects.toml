@@ -13,6 +13,11 @@ wear_flags = ["take", "finger"]
   location = "str"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["ring"]
+description = """
+It feels heavy."""
+
 [[objects]]
 vnum = 4001
 keywords = ["corpse"]
@@ -25,6 +30,12 @@ cost = 0
 wear_flags = ["take"]
 extra_flags = ["rot_death"]
 
+[[objects.extra_descs]]
+keywords = ["corpse"]
+description = """
+Ew.  This must have been the mapper that was lost in Moria.  His rotted hand
+still clutches a partially digested map..."""
+
 [[objects]]
 vnum = 4002
 keywords = ["coins"]
@@ -35,6 +46,9 @@ level = 0
 weight = 5000
 cost = 0
 wear_flags = ["take"]
+
+  [objects.money]
+  amount = 500
 
 [[objects]]
 vnum = 4003
@@ -48,12 +62,19 @@ cost = 165
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 1
   dice_size = 5
 
   [[objects.affects]]
   location = "hitroll"
   modifier = -1
+
+[[objects.extra_descs]]
+keywords = ["dagger"]
+description = """
+It's old and rusted, but it still has a good edge."""
 
 [[objects]]
 vnum = 4004
@@ -67,6 +88,8 @@ cost = 240
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 7
 
@@ -86,12 +109,21 @@ cost = 780
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 9
 
   [[objects.affects]]
   location = "hitroll"
   modifier = -2
+
+[[objects.extra_descs]]
+keywords = ["club", "tree"]
+description = """
+This is the biggest club you have ever seen!  The giant didn't even bother to
+trim the roots off the end."""
 
 [[objects]]
 vnum = 4006
@@ -114,6 +146,12 @@ wear_flags = ["take", "about"]
   location = "dex"
   modifier = -1
 
+[[objects.extra_descs]]
+keywords = ["furs"]
+description = """
+They're heavy and smelly and would probably slow you down...but they do look
+like good armor."""
+
 [[objects]]
 vnum = 4050
 keywords = ["potion", "purple"]
@@ -124,6 +162,15 @@ level = 21
 weight = 10
 cost = 720
 wear_flags = ["take", "hold"]
+
+[[objects.extra_descs]]
+keywords = ["potion", "purple"]
+description = """
+It looks rather strange!"""
+
+  [objects.magic]
+  level = 13
+  spells = ["cure blindness", "sanctuary"]
 
 [[objects]]
 vnum = 4051
@@ -158,6 +205,16 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["mushroom"]
+description = """
+Let's put it this way - I wouldn't eat it !"""
+
+  [objects.food]
+  full = 2
+  hunger = 2
+  poisoned = true
+
 [[objects]]
 vnum = 4053
 keywords = ["dirk"]
@@ -171,6 +228,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 5
 
@@ -181,6 +240,13 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["dirk"]
+description = """
+It's a medium sized, beautifully crafted dirk made from grey alloy.
+Its blade is double-edged and very thin ... this looks like a good
+thieves weapon."""
 
 [[objects]]
 vnum = 4054
@@ -195,12 +261,19 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "axe"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 4
 
   [[objects.affects]]
   location = "damroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["axe"]
+description = """
+It has an edge sharp enough to cut a passing thought. A good find, this."""
 
 [[objects]]
 vnum = 4055
@@ -214,8 +287,15 @@ cost = 550
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 10
+
+[[objects.extra_descs]]
+keywords = ["sword"]
+description = """
+It's much heavier than a long sword, but not as well balanced."""
 
 [[objects]]
 vnum = 4056
@@ -229,6 +309,8 @@ cost = 290
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "flail"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 7
 
@@ -239,6 +321,12 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "damroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["flail"]
+description = """
+It's a stout wooden rod with two spiked balls attached, each weighing over 2
+pounds.  It's a little worn for wear, but looks most painful."""
 
 [[objects]]
 vnum = 4057
@@ -252,12 +340,19 @@ cost = 390
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 4
 
   [[objects.affects]]
   location = "damroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["mace"]
+description = """
+A metal shaft mounted with an iron head, shaped into armor-shattering form."""
 
 [[objects]]
 vnum = 4058
@@ -271,8 +366,16 @@ cost = 490
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 4
+
+[[objects.extra_descs]]
+keywords = ["falchion"]
+description = """
+It's curved like a scimitar, only with no recurved blade and a tip designed
+for piercing as well as slashing."""
 
 [[objects]]
 vnum = 4059
@@ -286,12 +389,21 @@ cost = 520
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "polearm"
+  damage_type = "slash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 6
 
   [[objects.affects]]
   location = "ac"
   modifier = -1
+
+[[objects.extra_descs]]
+keywords = ["voulge"]
+description = """
+It looks a lot like a staff with a pruning knife tied to the end, but it's
+quite effective."""
 
 [[objects]]
 vnum = 4100
@@ -306,8 +418,16 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_good", "anti_neutral"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["vampiric", "two_hands"]
   dice_number = 3
   dice_size = 4
+
+[[objects.extra_descs]]
+keywords = ["blade"]
+description = """
+You'll become as evil as the weapon, if you use it!"""
 
 [[objects]]
 vnum = 4101
@@ -347,6 +467,15 @@ cost = 840
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+[[objects.extra_descs]]
+keywords = ["scroll"]
+description = """
+It looks informative."""
+
+  [objects.magic]
+  level = 10
+  spells = ["identify"]
+
 [[objects]]
 vnum = 4103
 keywords = ["slime", "mold"]
@@ -358,6 +487,16 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 extra_flags = ["rot_death"]
+
+[[objects.extra_descs]]
+keywords = ["slime", "mold"]
+description = """
+It wasn't meant to be food, - Certainly not for humans."""
+
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = false
 
 [[objects]]
 vnum = 4104
@@ -371,6 +510,16 @@ cost = 0
 wear_flags = ["take"]
 extra_flags = ["rot_death"]
 
+[[objects.extra_descs]]
+keywords = ["slime", "mold"]
+description = """
+It wasn't meant to be food, - Certainly not for humans."""
+
+  [objects.food]
+  full = 24
+  hunger = 24
+  poisoned = true
+
 [[objects]]
 vnum = 4105
 keywords = ["staff", "iron", "iron-shod"]
@@ -383,12 +532,20 @@ cost = 630
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 2
   dice_size = 5
 
   [[objects.affects]]
   location = "ac"
   modifier = -2
+
+[[objects.extra_descs]]
+keywords = ["staff"]
+description = """
+It's a superb weapon for warrior or mage."""
 
 [[objects]]
 vnum = 4150
@@ -401,6 +558,15 @@ weight = 10
 cost = 320
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["potion", "black"]
+description = """
+It looks healthy."""
+
+  [objects.magic]
+  level = 9
+  spells = ["cure critical"]
 
 [[objects]]
 vnum = 4151
@@ -418,6 +584,22 @@ extra_flags = ["magic"]
   location = "mana"
   modifier = -20
 
+[[objects.extra_descs]]
+keywords = ["runes"]
+description = """
+The runes says : Funthark."""
+
+[[objects.extra_descs]]
+keywords = ["staff", "oak"]
+description = """
+You see it has some sort of runes on it."""
+
+  [objects.magic]
+  level = 15
+  max_charges = 4
+  charges = 2
+  spells = ["harm"]
+
 [[objects]]
 vnum = 4152
 keywords = ["dagger", "light", "silver"]
@@ -430,6 +612,8 @@ cost = 660
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 2
   dice_size = 4
 
@@ -440,6 +624,11 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["dagger", "light", "silver"]
+description = """
+It looks like an excellent weapon for thieves."""
 
 [[objects]]
 vnum = 4153
@@ -453,6 +642,8 @@ cost = 270
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 6
 
@@ -463,6 +654,12 @@ wear_flags = ["take", "wield"]
   [[objects.affects]]
   location = "damroll"
   modifier = 1
+
+[[objects.extra_descs]]
+keywords = ["star", "morning"]
+description = """
+It's a huge length of wood studded with iron spikes and bands. You wouldn't
+want to meet this in a dark alley..."""
 
 [[objects]]
 vnum = 4154
@@ -475,6 +672,27 @@ weight = 10
 cost = 100
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map", "moria", "second"]
+description = """
+.
+    * * * MORIA - Map 2 * * *
+     = = =============== = =
+
+Maze--Maze
+ |     |    (Map 1)
+ |    Maze--Tunnel*
+ |
+Maze--Maze--Maze--Maze
+              |
+     Large--Large
+     Cave   Cave
+      |       |
+     Large--Large--Tunnel--End of
+     Cave    Cave    |     Tunnel
+                   *Hole
+                  (Map 3)"""
+
 [[objects]]
 vnum = 4155
 keywords = ["map", "moria", "third"]
@@ -486,3 +704,39 @@ weight = 10
 cost = 200
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["map", "moria", "third"]
+description = """
+.
+                                                   (Map 1*)
+                             Long                     |
+        Tunnel----Tunnel----Tunnel--Tunnel--Tunnel--Tunnel
+          |                   |
+          |                  Gold--Gold
+          |                  Cave  Cave
+          |                   |      |
+          |                  Gold--Gold---Passage
+          |                  Cave  Cave      |
+          |                   |           Passage--Tunnel--Tunnel--Tunnel
+          |          Dark*---Gold            |
+          |         Passage  Cave            |     Secret
+          |                               Passage  Chamber
+          |                      Hole        |       |
+          |                        |      Passage  Secret
+        Large   Large   Large    Small       |     Chamber--Cave--Cave
+        Tunnel--Tunnel--Tunnel--Passage      |                |      |
+          |                        |      Passage-----------Cave--Cave
+          |                       Long
+          |                      Tunnel
+         Wet    Small  Small       |
+        Tunnel--Maze---Maze   Inscription
+          |       |      |         |
+         Wet    Small--Small-----Small
+        Tunnel  Maze   Maze      Maze
+          |       |                |
+          |      Wet    Wet      End of
+        Water    Maze---Maze-----Tunnel
+          |       |      |
+        Water---Water  End of
+                       Maze*
+                      (Map 2)"""

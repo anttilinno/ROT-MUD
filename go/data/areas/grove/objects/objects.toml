@@ -8,6 +8,17 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["closet"]
+description = """
+It is large, yet gracefully made, obviously of Scandinavian design."""
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable"]
+  key = 0
+  max_weight = 100
+
 [[objects]]
 vnum = 8902
 keywords = ["jar"]
@@ -18,6 +29,12 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 5
+  flags = ["closeable", "closed"]
+  key = 0
+  max_weight = 5
 
 [[objects]]
 vnum = 8903
@@ -30,6 +47,20 @@ weight = 10
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["powder"]
+description = """
+*        *         *
+      *      *       *
+****   AAAHHHH-TSHOU!   ****
+      *      *       *
+    *        *         *"""
+
+  [objects.food]
+  full = -2
+  hunger = -2
+  poisoned = false
+
 [[objects]]
 vnum = 8904
 keywords = ["kernel", "kernels"]
@@ -41,6 +72,16 @@ weight = 10
 cost = 0
 wear_flags = ["take", "hold"]
 
+[[objects.extra_descs]]
+keywords = ["kernel", "kernels"]
+description = """
+Look fairly dull..."""
+
+  [objects.food]
+  full = 1
+  hunger = 1
+  poisoned = false
+
 [[objects]]
 vnum = 8905
 keywords = ["paper", "wad"]
@@ -51,6 +92,41 @@ level = 0
 weight = 10
 cost = 0
 wear_flags = ["take", "hold"]
+
+[[objects.extra_descs]]
+keywords = ["paper", "wad"]
+description = """
+It looks old and worn, but You can still make out a faint lettering on it,
+written in a strange, alien hand:
+
+o    WARNING! WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!   o
+o                                                                     o
+o    MSGS: MATRIX CONTROL      TO   SUBSYSTEMS/<ALL>                  o
+o    ACT : REQUIRED            T:   NOW                               o
+o                                                                     o
+o    RECENT DATAQUAKE EVALUATED... EVALUATION FOLLOWS...              o
+o    MASSIVE SEGMENTATION HAS OCCURRED... ALL SUBSIDIARY SECTORS      o
+o    SHUTDOWN... CENTRAL SHUTDOWN: AUTOMATICS ENGAGED...              o
+o                                                                     o
+o    DATALEAK DETECTED... DIRECTION:FOREIGN VIRTUAL REALITY, CODENAME o
+o    ASSIGNED: 'Midgaard'...                                          o
+o    SPECIFIC LOCATION: UNCERTAIN, BEING WITHIN 'Midgaard' SUBSECTOR  o
+o    CODENAME ASSIGNED: 'Holy Grove'...                               o
+o    BEWARE INTRUSIONS POSSIBLE. ADVISE EXTREME CAUTION...            o
+o    .                                                                o
+o    .                                                                o
+o    .                                                                o
+o                                                                     o
+o    MSGS: MATRIX CONTROL      TO   SUBSYSTEMS/<Sark>                 o
+o                                              <101110101101>         o
+o                                              <1101111010101101>     o
+o    ACT : URGENT              T:   IMMEDIATE                         o
+o                                                                     o
+o    INTRUDERS DETECTED IN MAIN MATRIX... DIRECTIVE SEARCH AND        o
+o    ELIMINATE...                                                     o
+o    .                                                                o
+o    .                                                                o
+o                                                                     o"""
 
 [[objects]]
 vnum = 8910
@@ -65,8 +141,16 @@ wear_flags = ["take", "wield"]
 extra_flags = ["anti_evil"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "bash"
+  flags = ["two_hands"]
   dice_number = 3
   dice_size = 6
+
+[[objects.extra_descs]]
+keywords = ["staff", "wooden"]
+description = """
+This oaken staff is very hefty but balanced."""
 
 [[objects]]
 vnum = 8911
@@ -90,6 +174,11 @@ extra_flags = ["anti_evil"]
   location = "mana"
   modifier = 10
 
+[[objects.extra_descs]]
+keywords = ["robe", "brown", "cloth"]
+description = """
+This robe is rough, but appears quite durable."""
+
 [[objects]]
 vnum = 8913
 keywords = ["bluish", "herbs"]
@@ -100,6 +189,10 @@ level = 1
 weight = 10
 cost = 270
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 15
+  spells = ["bless"]
 
 [[objects]]
 vnum = 8914
@@ -112,6 +205,10 @@ weight = 10
 cost = 250
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 15
+  spells = ["change sex"]
+
 [[objects]]
 vnum = 8915
 keywords = ["blackish", "herbs"]
@@ -122,6 +219,10 @@ level = 0
 weight = 10
 cost = 178
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 5
+  spells = ["blindness"]
 
 [[objects]]
 vnum = 8916
@@ -134,6 +235,10 @@ weight = 10
 cost = 360
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 5
+  spells = ["giant strength", "poison"]
+
 [[objects]]
 vnum = 8917
 keywords = ["reddish", "herbs"]
@@ -144,6 +249,10 @@ level = 0
 weight = 10
 cost = 250
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 15
+  spells = ["detect magic"]
 
 [[objects]]
 vnum = 8918
@@ -156,6 +265,10 @@ weight = 10
 cost = 150
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 5
+  spells = ["cure light"]
+
 [[objects]]
 vnum = 8919
 keywords = ["pinkish", "herbs"]
@@ -167,3 +280,6 @@ weight = 10
 cost = 430
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 5
+  spells = ["cure poison", "poison"]

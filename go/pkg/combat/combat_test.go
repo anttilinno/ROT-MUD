@@ -514,3 +514,18 @@ func TestCombatSystemDamage(t *testing.T) {
 		}
 	})
 }
+
+func TestIsSafeProtectedMob(t *testing.T) {
+	room := types.NewRoom(1, "Shop", "x")
+	ch := types.NewCharacter("Test")
+	keeper := types.NewNPC(14502, "merchant", 12)
+	keeper.Act.Set(types.ActProtected)
+	ch.InRoom, keeper.InRoom = room, room
+	if !IsSafe(ch, keeper) {
+		t.Error("protected shopkeeper should be safe")
+	}
+	keeper.Act.Remove(types.ActProtected)
+	if IsSafe(ch, keeper) {
+		t.Error("ordinary mob should be attackable")
+	}
+}

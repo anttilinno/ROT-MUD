@@ -18,6 +18,7 @@ The path continues north to a village, or south to the eastern road."""
 vnum = 102
 name = "Dimly Lit Path"
 sector = "forest"
+room_flags = ["no_mob"]
 description = """
 This section of the road is badly worn and frequently traversed.  There is
 faint singing to the north.  The path back to the road lies to the south."""
@@ -218,6 +219,12 @@ Road continues to to the south and west."""
   vnum = 108
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["smurfy", "well"]
+description = """
+A small well is here.  Just the right size if you're a smurf.  But big
+enough for you to get some water from.  I'm sure the smurfs wont mind."""
+
 [[rooms]]
 vnum = 110
 name = "Smurfy Road"
@@ -312,9 +319,9 @@ Everything is so peaceful here.  You could stay forever."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 125
   key = 107
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -564,9 +571,9 @@ moves on her.  A stone path lies to the north."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 113
   key = 107
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 110
@@ -611,9 +618,9 @@ His Castle is to the north while Smurfy Road is to the south."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door"]
   to_vnum = 128
   key = 109
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -629,9 +636,9 @@ Where else would he put it?  The place has only one room."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door"]
   to_vnum = 127
   key = 109
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 111
@@ -669,4 +676,3 @@ have little smurfs running around.  The only exit is to the east."""
     [[rooms.mob_resets.equips]]
     vnum = 107
     inv_only = true
-

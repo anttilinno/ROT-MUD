@@ -25,13 +25,13 @@ func CharToRoom(ch *types.Character, room *types.Room) {
 
 	// Update light level if carrying a light
 	for _, obj := range ch.Inventory {
-		if obj.ItemType == types.ItemTypeLight && obj.Values[2] > 0 {
+		if obj.ItemType == types.ItemTypeLight && obj.Values[2] != 0 {
 			room.Light++
 		}
 	}
 	for i := 0; i < int(types.WearLocMax); i++ {
 		obj := ch.Equipment[i]
-		if obj != nil && obj.ItemType == types.ItemTypeLight && obj.Values[2] > 0 {
+		if obj != nil && obj.ItemType == types.ItemTypeLight && obj.Values[2] != 0 {
 			room.Light++
 		}
 	}
@@ -47,13 +47,13 @@ func CharFromRoom(ch *types.Character) {
 
 	// Update light level if carrying a light
 	for _, obj := range ch.Inventory {
-		if obj.ItemType == types.ItemTypeLight && obj.Values[2] > 0 {
+		if obj.ItemType == types.ItemTypeLight && obj.Values[2] != 0 {
 			room.Light--
 		}
 	}
 	for i := 0; i < int(types.WearLocMax); i++ {
 		obj := ch.Equipment[i]
-		if obj != nil && obj.ItemType == types.ItemTypeLight && obj.Values[2] > 0 {
+		if obj != nil && obj.ItemType == types.ItemTypeLight && obj.Values[2] != 0 {
 			room.Light--
 		}
 	}
@@ -74,7 +74,7 @@ func ObjToRoom(obj *types.Object, room *types.Room) {
 	room.AddObject(obj)
 
 	// Update light if it's a light source
-	if obj.ItemType == types.ItemTypeLight && obj.Values[2] > 0 {
+	if obj.ItemType == types.ItemTypeLight && obj.Values[2] != 0 {
 		room.Light++
 	}
 }
@@ -88,7 +88,7 @@ func ObjFromRoom(obj *types.Object) {
 	room := obj.InRoom
 
 	// Update light if it's a light source
-	if obj.ItemType == types.ItemTypeLight && obj.Values[2] > 0 {
+	if obj.ItemType == types.ItemTypeLight && obj.Values[2] != 0 {
 		room.Light--
 	}
 
@@ -290,7 +290,25 @@ func nameMatches(fullName, search string) bool {
 		}
 	}
 
-	return false
+	// Several words ("rune shire"): each must prefix a keyword, as ROM's
+	// is_name does.
+	words := strings.Fields(search)
+	if len(words) < 2 {
+		return false
+	}
+	for _, w := range words {
+		found := false
+		for _, kw := range strings.Fields(fullName) {
+			if strings.HasPrefix(kw, w) {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
+		}
+	}
+	return true
 }
 
 // keywordsMatch checks if any keyword in the description matches

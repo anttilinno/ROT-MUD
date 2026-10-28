@@ -2,6 +2,7 @@
 vnum = 6200
 name = "On the spider web"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are balancing carefully on the giant sticky threads that holds the giant
 web in place.  To the south leads a strand to a cave-like structure made from
@@ -15,10 +16,16 @@ many layers of a spider web.  Another silky strand continues to the north."""
   direction = "south"
   to_vnum = 6133
 
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
+
 [[rooms]]
 vnum = 6201
 name = "On the spider web"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are balancing carefully on the giant sticky threads that holds the giant
 web in place.  To the north leads a strand to a cave-like structure made from
@@ -28,10 +35,16 @@ many layers of a spider web."""
   direction = "north"
   to_vnum = 6134
 
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
+
 [[rooms]]
 vnum = 6202
 name = "On the spider web"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are balancing carefully on the giant sticky threads that holds the giant
 web in place.  To the east leads a strand to a cave-like structure made from
@@ -41,10 +54,16 @@ many layers of a spider web."""
   direction = "east"
   to_vnum = 6134
 
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
+
 [[rooms]]
 vnum = 6203
 name = "On the spider web"
 sector = "water_swim"
+room_flags = ["dark", "indoors"]
 description = """
 You are balancing carefully on the giant sticky threads that holds the giant
 web in place. A single silky strand lead to the south, while another leads
@@ -58,10 +77,16 @@ off into the northern direction."""
   direction = "south"
   to_vnum = 6200
 
+[[rooms.extra_descs]]
+keywords = ["web"]
+description = """
+The immense spider web moves softly."""
+
 [[rooms]]
 vnum = 6301
 name = "Webbed Entrance"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 Sticky, sticky, sticky!  The ground is cluttered with leaves, decayed
 remains of webbed crickets, beetle, rats, dogs (?), and even humans.
@@ -861,6 +886,11 @@ soul escapes.  The room is undecorated."""
   vnum = 6313
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["chair"]
+description = """
+An ordinary chair, well used, glued to the ground by spiderweb."""
+
 [[rooms]]
 vnum = 6368
 name = "Realm of the Hopeless"
@@ -984,6 +1014,7 @@ of thunder."""
 vnum = 6380
 name = "Mahatma's Inescapable Trap"
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 Mahatma, that silly thief, is here, and he steals everything you
 have.  He says, 'Here, have a quick trip to the Temple of Midgaard.'
@@ -1028,6 +1059,7 @@ die, you're gonna fry.  Good bye!""""
 vnum = 6392
 name = "The Great Door"
 sector = "field"
+room_flags = ["indoors"]
 description = """
 Before you you see a large, web-like door.  Various designs
 of ancient runes and names of Midgaard heroes are etched into
@@ -1035,8 +1067,8 @@ the webwork.  Perhaps lists of victims?  You can't tell."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 6399
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1056,8 +1088,8 @@ to her beautiful silken body."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 6392
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 6314
@@ -1070,4 +1102,3 @@ to her beautiful silken body."""
     [[rooms.mob_resets.equips]]
     vnum = 6304
     inv_only = true
-

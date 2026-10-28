@@ -22,6 +22,11 @@ Rising out of the sand to the east you see a mighty pyramid."""
   direction = "west"
   to_vnum = 5057
 
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+The massive pyramid rises out of the sand, a monument to long-dead pharoahs."""
+
 [[rooms]]
 vnum = 8701
 name = "At the Base of the Pyramid"
@@ -39,6 +44,11 @@ to climb it."""
   [[rooms.exits]]
   direction = "up"
   to_vnum = 8702
+
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
 
 [[rooms]]
 vnum = 8702
@@ -69,6 +79,11 @@ walls of the pyramid are quite steep."""
   vnum = 8700
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
+
 [[rooms]]
 vnum = 8703
 name = "Climbing the Great Pyramid"
@@ -98,6 +113,11 @@ are having trouble keeping from sliding down into the sands below."""
   vnum = 8701
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
+
 [[rooms]]
 vnum = 8704
 name = "Climbing the Great Pyramid"
@@ -122,6 +142,11 @@ are having trouble keeping from sliding down into the sands below."""
   [[rooms.exits]]
   direction = "down"
   to_vnum = 8707
+
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
 
 [[rooms]]
 vnum = 8705
@@ -153,6 +178,11 @@ top from here."""
   vnum = 8700
   max = 6
 
+[[rooms.extra_descs]]
+keywords = ["pyramid"]
+description = """
+You wonder how anyone could have built such a massive thing out in this heat."""
+
 [[rooms]]
 vnum = 8706
 name = "The Apex of the Great Pyramid"
@@ -181,17 +211,31 @@ cardinal directions.
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 8708
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8702
   max = 3
 
+[[rooms.extra_descs]]
+keywords = ["plaque"]
+description = """
+The plaque reads:
+This area (Great Pyramid) written by Andersen."""
+
+[[rooms.extra_descs]]
+keywords = ["stones"]
+description = """
+As you look closer you can make out a crack in the center of the stones
+beneath your feet.  With some effort you might be able to lift that
+section up and get inside!"""
+
 [[rooms]]
 vnum = 8707
 name = "Climbing the Great Pyramid"
 sector = "desert"
+room_flags = ["no_mob"]
 description = """
 Here the elements have carved away at the sides of the pyramid quite a 
 bit.  You aren't so sure of your footing anymore...
@@ -205,6 +249,7 @@ SPLAT."""
 vnum = 8708
 name = "A Ladder"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 You are climbing an ancient ladder that leads down into the depths of
 the pyramid.  The air around is thick with layers of dust and a strange
@@ -213,17 +258,25 @@ stones of the ceiling."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 8706
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
   to_vnum = 8709
 
+[[rooms.extra_descs]]
+keywords = ["stones"]
+description = """
+As you look closer you can make out a crack in the center of the stones
+above your head.  With some effort you might be able to lift that
+section up and get outside!"""
+
 [[rooms]]
 vnum = 8709
 name = "A Musty Chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in a dank, musty chamber just inside the pyramid. 
 Footprints and other strange marks are set into the dusty floor here.
@@ -245,8 +298,8 @@ inscriptions."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "closed"]
   to_vnum = 8710
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
@@ -268,10 +321,25 @@ inscriptions."""
     vnum = 8701
     wear_loc = "about"
 
+[[rooms.extra_descs]]
+keywords = ["sigils", "hieroglyphs", "inscriptions", "writing"]
+description = """
+You cannot understand the strange glyphs that cover the door, but most of
+them seem to depict scenes of fire and massive creatures of apparently
+tremendous strength.  You have a feeling that the glyphs are serving as a
+warning."""
+
+[[rooms.extra_descs]]
+keywords = ["door", "stone"]
+description = """
+The stone door is covered in strange inscriptions and hieroglyphs that warn
+you not to proceed any further."""
+
 [[rooms]]
 vnum = 8710
 name = "The Fire Pool"
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 This room is dominated by a massive raised pool that is filled with
 not water but flames of intense heat.  The multicoloured flames lick out
@@ -280,8 +348,8 @@ at you, searching for things to burn.
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 8709
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "west"
@@ -291,6 +359,7 @@ at you, searching for things to burn.
 vnum = 8711
 name = "The Chamber of the Efreet"
 sector = "water_noswim"
+room_flags = ["indoors"]
 description = """
 You make your way across the fire pool, and into a small stone chamber.
 Here the flames are nearly as high as your head, singeing your face and 
@@ -312,6 +381,7 @@ evaporating your sweat instantaneously."""
 vnum = 8712
 name = "A Tiny Crawlway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You have to go down onto your hands and knees to fit inside this tiny
 space.  The crawlway is thick with sand and dust, and markings of the
@@ -333,6 +403,7 @@ passage of other creatures."""
 vnum = 8713
 name = "A Tiny Crawlway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are on your hands and knees, inside a small crawlway that winds
 through the inside of the pyramid.  The crawlway is thick with sand, dust, 
@@ -354,6 +425,7 @@ and markings of the passage of other creatures."""
 vnum = 8714
 name = "A Tiny Crawlway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are on your hands and knees, inside a small crawlway that winds
 through the inside of the pyramid.  The crawlway is thick with sand, dust, 
@@ -371,6 +443,7 @@ and markings of the passage of other creatures."""
 vnum = 8715
 name = "A Tightening in the Crawlway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Here you are forced to slide on your belly through a particularly tight
 section of the crawlway, as the stones of the pyramid close together
@@ -393,6 +466,7 @@ blackness."""
 vnum = 8716
 name = "The Crawlway's End"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The crawlway shrinks away to nothing as the sandy stones of the pyramid
 close together into a space through which only a snake could fit.   There is
@@ -411,6 +485,7 @@ crawlway to the north."""
 vnum = 8717
 name = "A Slippery Hole"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 The sides of this hole are slippery-smooth.  You lower yourself in, and 
 proceed to move downward... when suddenly you lose your purchase!
@@ -426,10 +501,22 @@ small rocky crevasse."""
   direction = "south"
   to_vnum = 8719
 
+[[rooms.extra_descs]]
+keywords = ["bones"]
+description = """
+The bones have whitened and cracked in the dry air, apparently the remains
+of adventurers, thieves, and creatures that did not survive the fall."""
+
+[[rooms.extra_descs]]
+keywords = ["u", "up"]
+description = """
+The hole looks far too slippery to climb back up."""
+
 [[rooms]]
 vnum = 8718
 name = "Under the Hole"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a small chamber underneath the slippery hole, far below
 the pyramid now.   The floor is strewn with bones.  To the south is a
@@ -439,10 +526,22 @@ small rocky crevasse."""
   direction = "south"
   to_vnum = 8719
 
+[[rooms.extra_descs]]
+keywords = ["bones"]
+description = """
+The bones have whitened and cracked in the dry air, apparently the remains
+of adventurers, thieves, and creatures that did not survive the fall."""
+
+[[rooms.extra_descs]]
+keywords = ["u", "up"]
+description = """
+The hole looks far too slippery to climb back up."""
+
 [[rooms]]
 vnum = 8719
 name = "A Rough Crevasse"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are now exploring deep within a strange rocky crevasse that plunges
 down into the rock on which the pyramid was constructed.  To the south you
@@ -464,10 +563,16 @@ see the flickering light of a fire, and the crevasse proceeds downward."""
   vnum = 8723
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["rough"]
+description = """
+As you look through the rough terrain, your eyes catch a small glint of light!"""
+
 [[rooms]]
 vnum = 8720
 name = "A Small Fire"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here a small fire burns in a nook in the rocks, providing some warmth and
 comforting light in the cold, dark, dry air.
@@ -478,10 +583,22 @@ Standing here is a strange-looking old man, who stares at you balefully."""
   direction = "north"
   to_vnum = 8719
 
+[[rooms.extra_descs]]
+keywords = ["man", "old"]
+description = """
+The old man looks like he has been trapped down here far too long, and
+has begun to lose his mind.  He moves about slowly, cackling to himself.
+
+He turns to you and shouts, 'nope measse!  nope measse!', then turns
+back and stares into the fire.
+
+'What a strange person,' you think to yourself."""
+
 [[rooms]]
 vnum = 8721
 name = "Down the Crevasse"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The crevasse proceeds downward into the dark depths of the earth.
 The air about you is now cold and quite dry, and your light source
@@ -499,6 +616,7 @@ gutters in a cool breeze that wafts up from below."""
 vnum = 8722
 name = "At the Crevasse's End"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Here the crevasse comes to an abrupt end.  A chilling wind howls
 at your face from a black shape to the south, but the light from your
@@ -506,18 +624,38 @@ source is too dim to see exactly what it is."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8723
   key = 8723
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "up"
   to_vnum = 8721
 
+[[rooms.extra_descs]]
+keywords = ["tiger", "head", "animal", "sesame"]
+description = """
+You are now certain that the wind is the cold breath of some unearthly
+giant animal, whose voice rumbles lowly on the breeze, and whose
+massive jaws could easily swallow you whole.
+
+You move closer for a better look, when suddenly a pair of eyes flashes.
+A cold voice echoes: 'SEEK YE THE DIAMOND... IN THE ROUGH...'
+
+... Then all is silent."""
+
+[[rooms.extra_descs]]
+keywords = ["black", "shape"]
+description = """
+Wind howls about your ears like the roar of a tiger.  As your eyes
+adjust to the light the shape to the south almost seems to take the
+form of a massive animal head."""
+
 [[rooms]]
 vnum = 8723
 name = "The Vault of the Lamp"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The jaws of the massive stone tiger part wide to reveal a great vault.
 An arched ceiling lies far above your head... and all about you is a low
@@ -528,9 +666,9 @@ on all sides."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8722
   key = 8723
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8706
@@ -544,10 +682,21 @@ on all sides."""
     vnum = 8713
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["treasure", "gold", "coins", "valuables"]
+description = """
+You reach for some of the tasty goodies, when you hear a loud rumbling
+sound and see a bright flash of light...
+
+Then the words: 'TAKE ONLY THE LAMP... TOUCH NOTHING ELSE.'
+
+... All is silent once again."""
+
 [[rooms]]
 vnum = 8724
 name = "A Crack in the Wall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You exhale, and squeeze yourself into the narrow crack in the wall.
 Dust fills your eyes as you disturb it, and chunks of mortar and stone
@@ -565,6 +714,7 @@ mixed with a touch of sand fall on you as you scrape your way through."""
 vnum = 8725
 name = "A Looted Tomb"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The floor of this small tomb is littered with the lids of 
 smashed sarcophagi, bits of treasure dropped by thieves and
@@ -618,6 +768,7 @@ looters, and corpses pulled from their resting places."""
 vnum = 8726
 name = "A Demolished Tomb"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This tomb has been utterly destroyed by thieves and looters in search of
 the treasures of the pharoahs.  Nothing of interest remains in this room,
@@ -629,9 +780,9 @@ except a large stone coffin that leans against the western wall."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8727
   key = 8712
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8702
@@ -645,10 +796,30 @@ except a large stone coffin that leans against the western wall."""
     vnum = 3351
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["man", "garments", "pharoah"]
+description = """
+As you look closer at the figure sculpted into the stone coffin you notice a
+small marking carved into its chest.  It looks like a scarab or small beetle
+would fit into the small space, if properly sized.
+
+Hmm."""
+
+[[rooms.extra_descs]]
+keywords = ["coffin", "lid"]
+description = """
+The coffin is sculpted into the form of a man, standing several heads above
+you, and clad in the garments of pharoahs.  It has apparently been untouched
+by the ravages of time and the activities of looters.  Several markings on the
+side indicate spots where unsuccessful attempts were made to open the coffin.
+
+You can't see any way to open it."""
+
 [[rooms]]
 vnum = 8727
 name = "A Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand now at the head of a stairway that goes down into darkness.
 The steps and walls are smooth sandy stone, covered with a thick layer
@@ -656,17 +827,29 @@ of dust.  Some inscriptions are carved into the wall here."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8726
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
   to_vnum = 8728
 
+[[rooms.extra_descs]]
+keywords = ["coffin", "lid"]
+description = """
+On this side the coffin lid is smooth featureless stone."""
+
+[[rooms.extra_descs]]
+keywords = ["inscriptions"]
+description = """
+You blow dust away from the inscriptions to read:
+'Beware the curse of the mummy.'"""
+
 [[rooms]]
 vnum = 8728
 name = "A Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are on a stairway that disappears into darkness in both directions.
 The smooth, uneven steps of the stairway have not been travelled in what
@@ -684,23 +867,31 @@ appears to be centuries."""
 vnum = 8729
 name = "A Stairway"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand now at the base of the uneven stairway.  The walls, floor,
 and ceiling of this small landing are covered with strange hieroglyphics."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8730
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
   to_vnum = 8728
 
+[[rooms.extra_descs]]
+keywords = ["walls", "floor", "ceiling", "hieroglyphics"]
+description = """
+The hieroglyphics are covered with a thick layer of dust.  You clear the
+dust away with your hand, and find that you cannot comprehend them."""
+
 [[rooms]]
 vnum = 8730
 name = "The Ancient Hall"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Here the air is deathly still, motes of dust thickly obscuring your
 vision.  Several stone statues line the walls of the hall, depicting the 
@@ -710,8 +901,8 @@ peculiar pictorial form of written language that you don't understand.
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8729
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "south"
@@ -721,10 +912,16 @@ peculiar pictorial form of written language that you don't understand.
   vnum = 8728
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["writings", "glyphs", "sigils", "hieroglyphics", "symbols"]
+description = """
+You don't understand the meaning of these symbols."""
+
 [[rooms]]
 vnum = 8731
 name = "A Raised Dais"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are at the southern end of the ancient hall, the dust and darkness
 absorbing your light so that you cannot see past the steps of the dais.
@@ -736,20 +933,29 @@ A low pedestal rests here.  You see something written into the face of it."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 8732
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["pedestal", "writings"]
+description = """
+The writings are covered in sand and worn nearly away by the passage
+of time: 'I am Ramses the Damned, once counselor and aide to the mightiest
+of pharoahs and queens of this land.  Much time has passed since I last
+walked the earth.  Disturb my rest at your peril.'"""
 
 [[rooms]]
 vnum = 8732
 name = "The Tomb of Ramses"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand in an empty tomb, a cubicle no more then ten feet to a side."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 8731
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8717
@@ -779,6 +985,7 @@ You stand in an empty tomb, a cubicle no more then ten feet to a side."""
 vnum = 8733
 name = "A Ransacked Tomb"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This tomb has been completely ransacked and destroyed by the actions
 of pyramid thieves and looters.  The floor is littered with junk."""
@@ -803,6 +1010,7 @@ of pyramid thieves and looters.  The floor is littered with junk."""
 vnum = 8734
 name = "A Tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = "The low-ceilinged tunnel runs east-west."
 
   [[rooms.exits]]
@@ -825,6 +1033,7 @@ description = "The low-ceilinged tunnel runs east-west."
 vnum = 8735
 name = "A Fork in the Tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Here the tunnel forks off through a gaping hole down in the
 southern wall, continuing onward to the east and west as well."""
@@ -849,10 +1058,16 @@ southern wall, continuing onward to the east and west as well."""
     vnum = 3351
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["s", "south", "hole"]
+description = """
+The hole is low, at the floor of the southern wall."""
+
 [[rooms]]
 vnum = 8736
 name = "A Tunnel"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 The low-ceilinged tunnel makes a turn to the west and ends
 to the north as it spills out into a dusty hallway."""
@@ -869,6 +1084,7 @@ to the north as it spills out into a dusty hallway."""
 vnum = 8737
 name = "A Dank Chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This chamber has a dank, dusty, musty smell to it.  Small footprints
 in the dust betray the recent passage of some sort of creatures.  A hole 
@@ -910,6 +1126,7 @@ in the floor lies to the west and a stairway is to the east."""
 vnum = 8738
 name = "A Spiral Stairway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Some dusty, broken stone stairs here spiral slowly in a constricted
 space down towards a dusty hallway."""
@@ -926,6 +1143,7 @@ space down towards a dusty hallway."""
 vnum = 8739
 name = "A Dust-Covered Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is covered with dust that has accumulated over the
 centuries that the pyramid has stood.  Small markings and footprints
@@ -943,6 +1161,7 @@ in the dust betray the recent passage of others -- perhaps thieves?"""
 vnum = 8740
 name = "A Smelly Chamber"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This small chamber has a sickly putrescent smell to it, the
 smell of formaldehyde and other ointments used to preserve the
@@ -980,6 +1199,7 @@ corpses of those who died ages ago."""
 vnum = 8741
 name = "A Dust-Covered Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway is covered with a thick, choking dust that rises
 up to obscure your light source and sting your eyes.  Small marks
@@ -1013,6 +1233,7 @@ and footprints in the dust betray the recent passage of others."""
 vnum = 8742
 name = "A Turn in the Hallway"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are standing in an elbow turn in a dust-covered stone hallway,
 that dead ends to the north and continues on to the west.  To the south
@@ -1043,6 +1264,7 @@ a low-ceilinged tunnel."""
 vnum = 8743
 name = "A Dead End"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The dust-covered hallway has come to an abrupt end at a stony,
 featureless wall.  Here and there are signs of the recent passage
@@ -1054,8 +1276,8 @@ of others in the dust."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "closed"]
   to_vnum = 8744
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8705
@@ -1069,10 +1291,17 @@ of others in the dust."""
     vnum = 8702
     wear_loc = "wield"
 
+[[rooms.extra_descs]]
+keywords = ["cracks"]
+description = """
+The cracks look like you might be able to pull away some pieces of
+the floor, perhaps even fit your body through the space you make."""
+
 [[rooms]]
 vnum = 8744
 name = "The Tomb Entrance"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You are in a small, dark chamber that has stood undisturbed for
 many years.  To the north stands a massive stone tomb, which is
@@ -1081,18 +1310,31 @@ final resting place of the mighty pharoahs of this land."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "closed"]
   to_vnum = 8745
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "closed"]
   to_vnum = 8743
-  flags = ["door"]
+
+[[rooms.extra_descs]]
+keywords = ["hieroglyphics", "carvings"]
+description = """
+The markings indicate that this tomb is indeed the tomb of the greatest
+pharoahs of the ancient civilization that built this massive pyramid."""
+
+[[rooms.extra_descs]]
+keywords = ["tomb"]
+description = """
+The tomb looks like it has stood for many years, much like the pyramid
+which encloses it.  It is covered in small hieroglyphics."""
 
 [[rooms]]
 vnum = 8745
 name = "The Tomb of the Pharoahs"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Great golden sarcophogai line the walls of this massive tomb.  It has
 withstood the passage of time intact, untouched by the hands of thieves
@@ -1101,8 +1343,8 @@ lie before your feet."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "closed"]
   to_vnum = 8744
-  flags = ["door"]
 
   [[rooms.mob_resets]]
   vnum = 8710
@@ -1128,10 +1370,17 @@ lie before your feet."""
   vnum = 8710
   max = 1
 
+[[rooms.extra_descs]]
+keywords = ["treasures"]
+description = """
+The treasures are dusty and fragile, but still seem quite valuable.
+You decide not to take them out of respect for the ancient dead."""
+
 [[rooms]]
 vnum = 8746
 name = "A Rubble-Strewn Hallway"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 This hallway formerly had a beautiful arch to the ceiling, now
 collapsed under the weight of the slowly settling stones of the
@@ -1151,6 +1400,7 @@ rubble and fallen stones you see a sandstone crypt."""
 vnum = 8747
 name = "A Sandstone Crypt"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This small crypt is lit by a hole in the wall to the south, through
 which sand pours from the desert outside.  A hot wind blows in from the
@@ -1181,6 +1431,7 @@ hallway continues."""
 vnum = 8748
 name = "An Arched Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway has a beautiful arch to it, formed painstakingly and
 exquisitely out of the sandy stones of the pyramid.  The dust that
@@ -1204,6 +1455,7 @@ your ears."""
 vnum = 8749
 name = "An Arched Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway has a beautiful arch to it, formed painstakingly and
 exquisitely out of the sandy stones of the pyramid.  To the east is
@@ -1230,6 +1482,7 @@ and north."""
 vnum = 8750
 name = "A Golden Crypt"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You stand inside a small crypt with walls and ceiling made of
 golden bricks that obscure the large sandy stones of the pyramid.
@@ -1252,10 +1505,22 @@ they appear to have been used recently."""
     vnum = 8714
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["bricks"]
+description = """
+The small golden bricks are very smooth and also quite soft."""
+
+[[rooms.extra_descs]]
+keywords = ["rug", "rugs", "tapestry", "tapestries"]
+description = """
+The rugs and tapestries are very fine and worn with age, their colors
+now faded.  They depict scenes of life in an ancient desert city."""
+
 [[rooms]]
 vnum = 8751
 name = "An Arched Hall"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 This hallway has a beautiful arch to it, formed painstakingly and
 exquisitely out of the sandy stones of the pyramid.  The arched
@@ -1277,6 +1542,7 @@ hall proceeds to the north and ends to the south in a small vault."""
 vnum = 8752
 name = "A Shining Vault"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 The stones of the pyramid here take on a strange, twinkling quality,
 almost seeming to shine with an internal light.  As you look closer you
@@ -1299,10 +1565,17 @@ the light from your light source so perfectly that they seem to shine."""
     vnum = 8715
     inv_only = true
 
+[[rooms.extra_descs]]
+keywords = ["particles", "glass"]
+description = """
+The glassy particles reflect and refract your light source in a myriad
+of dazzling colours that dance across your eyes and make you giggle."""
+
 [[rooms]]
 vnum = 8753
 name = "A Massive Sand Dune"
 sector = "desert"
+room_flags = ["no_mob"]
 description = """
 You stand now on a massive sand dune on the southern side of
 the pyramid.  At the foot of the sand dune to the north you see a
@@ -1317,6 +1590,11 @@ storm howls and bites at your face even here."""
   [[rooms.exits]]
   direction = "south"
   to_vnum = 8754
+
+[[rooms.extra_descs]]
+keywords = ["sand", "dune", "sandstorm"]
+description = """
+The sand is very white, and very sandy.  There sure is a lot of it."""
 
 [[rooms]]
 vnum = 8754
@@ -1347,6 +1625,12 @@ you and choking you.  You have lost all sense of direction."""
   vnum = 8708
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
+
 [[rooms]]
 vnum = 8755
 name = "A Swirling Sandstorm"
@@ -1375,6 +1659,12 @@ you and choking you.  You have lost all sense of direction."""
   [[rooms.mob_resets]]
   vnum = 8708
   max = 4
+
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
 
 [[rooms]]
 vnum = 8756
@@ -1405,6 +1695,12 @@ you and choking you.  You have lost all sense of direction."""
   vnum = 8708
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
+
 [[rooms]]
 vnum = 8757
 name = "A Swirling Sandstorm"
@@ -1434,6 +1730,12 @@ you and choking you.  You have lost all sense of direction."""
   vnum = 8708
   max = 4
 
+[[rooms.extra_descs]]
+keywords = ["sand"]
+description = """
+Sand is about all you CAN see right now.  Unfortunately, it isn't very
+interesting sand, only white, dry, and blowing all over the place."""
+
 [[rooms]]
 vnum = 8758
 name = "A Massive Sand Dune"
@@ -1451,9 +1753,9 @@ every other direction."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 8759
   key = 8717
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 8716
@@ -1463,10 +1765,28 @@ every other direction."""
     vnum = 8717
     wear_loc = "hold"
 
+[[rooms.extra_descs]]
+keywords = ["hieroglyphics", "symbols"]
+description = """
+Like most of the ancient hieroglyphics of this land, the symbols are
+totally incomprehensible to you.  Perhaps the Sphinx has the answer
+to this ancient riddle."""
+
+[[rooms.extra_descs]]
+keywords = ["riddle"]
+description = """
+A vision forms before your eyes, in glowing hieroglyphic symbols."""
+
+[[rooms.extra_descs]]
+keywords = ["sand", "dune"]
+description = """
+The sand is very white, and very sandy.  There sure is a lot of it."""
+
 [[rooms]]
 vnum = 8759
 name = "Through the Hole in the Sand"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob"]
 description = """
 You squeeze through the small hole in the sand and land in a small
 white chamber.  Above you is a small hole, reachable by climbing up
@@ -1495,4 +1815,3 @@ the small sandy slope down which you slid."""
   [[rooms.obj_resets]]
   vnum = 8727
   max = 1
-

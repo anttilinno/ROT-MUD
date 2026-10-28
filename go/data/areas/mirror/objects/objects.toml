@@ -48,6 +48,12 @@ cost = 2000
 wear_flags = ["take", "hold"]
 extra_flags = ["invis", "magic"]
 
+  [objects.magic]
+  level = 20
+  max_charges = 2
+  charges = 2
+  spells = ["earthquake"]
+
 [[objects]]
 vnum = 5304
 keywords = ["scroll", "magic"]
@@ -59,6 +65,10 @@ weight = 150
 cost = 1420
 wear_flags = ["take"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 30
+  spells = ["enchant weapon"]
 
 [[objects]]
 vnum = 5305
@@ -72,6 +82,10 @@ cost = 800
 wear_flags = ["take"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 30
+  spells = ["detect evil", "detect invis", "detect magic"]
+
 [[objects]]
 vnum = 5306
 keywords = ["fountain"]
@@ -81,6 +95,19 @@ item_type = "fountain"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["fountain"]
+description = """
+You see the most beautiful fountain in the world.  The white marble glistens
+as sunlight hits its wet surfaces.  Fish swim around in the inner fountain, and
+an exterior fountain is reserved just for drinking."""
+
+  [objects.drink]
+  capacity = 10
+  current = 10
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 5307
@@ -92,6 +119,18 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["desk"]
+description = """
+The sea shell desk here is just gorgeous.  The creamy white of the table
+surface makes you dream of being in a pool swimming among mermaids."""
+
+  [objects.container]
+  capacity = 100
+  flags = ["closeable", "closed", "locked"]
+  key = 5224
+  max_weight = 100
+
 [[objects]]
 vnum = 5308
 keywords = ["cabinet"]
@@ -101,6 +140,19 @@ item_type = "container"
 level = 0
 weight = 0
 cost = 0
+
+[[objects.extra_descs]]
+keywords = ["cabinet"]
+description = """
+A cabinet made of oak and mahogany, this piece of woodmanship is just splendid
+to view.  The wood is varnished with a very strong stain that looks as if it
+would last longer than the cabinet itself."""
+
+  [objects.container]
+  capacity = 500
+  flags = ["closeable", "closed", "locked"]
+  key = 5226
+  max_weight = 100
 
 [[objects]]
 vnum = 5309
@@ -113,6 +165,12 @@ weight = 200
 cost = 2800
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 18
+  max_charges = 5
+  charges = 5
+  spells = ["cure critical"]
 
 [[objects]]
 vnum = 5310
@@ -130,6 +188,12 @@ extra_flags = ["magic"]
   location = "dex"
   modifier = -2
 
+  [objects.magic]
+  level = 30
+  max_charges = 1
+  charges = 1
+  spells = ["call lightning"]
+
 [[objects]]
 vnum = 5311
 keywords = ["flute", "silver"]
@@ -146,6 +210,12 @@ extra_flags = ["glow", "magic"]
   location = "dex"
   modifier = -2
 
+  [objects.magic]
+  level = 30
+  max_charges = 1
+  charges = 1
+  spells = ["charm person"]
+
 [[objects]]
 vnum = 5312
 keywords = ["potion", "green"]
@@ -156,6 +226,10 @@ level = 49
 weight = 50
 cost = 3000
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 20
+  spells = ["gas breath"]
 
 [[objects]]
 vnum = 5313
@@ -168,6 +242,10 @@ weight = 10
 cost = 270
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 15
+  spells = ["bless"]
+
 [[objects]]
 vnum = 5314
 keywords = ["purplish", "herbs"]
@@ -178,6 +256,10 @@ level = 0
 weight = 10
 cost = 250
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 15
+  spells = ["change sex"]
 
 [[objects]]
 vnum = 5315
@@ -190,6 +272,10 @@ weight = 10
 cost = 360
 wear_flags = ["take"]
 
+  [objects.magic]
+  level = 5
+  spells = ["giant strength", "poison"]
+
 [[objects]]
 vnum = 5316
 keywords = ["orangish", "herbs"]
@@ -200,6 +286,10 @@ level = 0
 weight = 10
 cost = 150
 wear_flags = ["take"]
+
+  [objects.magic]
+  level = 5
+  spells = ["cure light"]
 
 [[objects]]
 vnum = 5317
@@ -214,6 +304,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 3
   dice_size = 4
 
@@ -224,6 +316,12 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["sword"]
+description = """
+You see a sword of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 5318
@@ -238,6 +336,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 7
 
@@ -248,6 +348,12 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
+
+[[objects.extra_descs]]
+keywords = ["mace"]
+description = """
+You see a mace of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 5319
@@ -266,6 +372,12 @@ wear_flags = ["take", "body"]
   ac_slash = 5
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["chest", "plate"]
+description = """
+You see a chest plate of great craftsmanship.  Stamped on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 5320
 keywords = ["shield"]
@@ -282,6 +394,12 @@ wear_flags = ["take", "shield"]
   ac_bash = 5
   ac_slash = 5
   ac_exotic = 2
+
+[[objects.extra_descs]]
+keywords = ["shield"]
+description = """
+You see a shield of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 5321
@@ -300,6 +418,12 @@ wear_flags = ["take", "neck"]
   ac_slash = 5
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["cloak"]
+description = """
+You see a cloak of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 5322
 keywords = ["helm"]
@@ -316,6 +440,12 @@ wear_flags = ["take", "head"]
   ac_bash = 5
   ac_slash = 5
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["helm"]
+description = """
+You see a helm of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 5323
@@ -334,6 +464,12 @@ wear_flags = ["take", "legs"]
   ac_slash = 5
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["plate", "leggings"]
+description = """
+You see plate leggings of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 5324
 keywords = ["plate", "boots"]
@@ -350,6 +486,12 @@ wear_flags = ["take", "feet"]
   ac_bash = 5
   ac_slash = 5
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["plate", "boots"]
+description = """
+You see plate boots of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 5325
@@ -368,6 +510,12 @@ wear_flags = ["take", "hands"]
   ac_slash = 5
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["plate", "gloves"]
+description = """
+You see plate gloves of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 5326
 keywords = ["plate", "sleeves"]
@@ -384,6 +532,12 @@ wear_flags = ["take", "arms"]
   ac_bash = 5
   ac_slash = 5
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["plate", "sleeves"]
+description = """
+You see plate sleeves of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 5327
@@ -402,6 +556,12 @@ wear_flags = ["take", "about"]
   ac_slash = 5
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["cape"]
+description = """
+You see a cape of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 5328
 keywords = ["belt"]
@@ -419,6 +579,12 @@ wear_flags = ["take", "waist"]
   ac_slash = 5
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["belt"]
+description = """
+You see a belt of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
+
 [[objects]]
 vnum = 5329
 keywords = ["metal", "bracer"]
@@ -435,6 +601,12 @@ wear_flags = ["take", "wrist"]
   ac_bash = 5
   ac_slash = 5
   ac_exotic = 0
+
+[[objects.extra_descs]]
+keywords = ["metal", "bracer"]
+description = """
+You see a metal bracer of great craftsmanship.  Imprinted on the side is:
+Merc Industries"""
 
 [[objects]]
 vnum = 5330
@@ -476,6 +648,14 @@ extra_flags = ["glow", "magic"]
   location = "saves"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["banner"]
+description = """
+This is the official Merc war banner to see you through the darkest realm!"""
+
+  [objects.light]
+  duration = 999
+
 [[objects]]
 vnum = 5332
 keywords = ["two-handed", "two", "sword"]
@@ -489,6 +669,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
+  flags = ["sharp", "two_hands"]
   dice_number = 4
   dice_size = 7
 
@@ -499,4 +682,3 @@ extra_flags = ["magic", "anti_evil"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 2
-

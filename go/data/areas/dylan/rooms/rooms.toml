@@ -2,6 +2,7 @@
 vnum = 9101
 name = "A fluffy white cloud."
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 You find yourself standing on a small cloud.  The cloud feels kind
 of spongy beneath your feet.  You find it hard to see anything in
@@ -423,6 +424,7 @@ ledges to rest on.  You see a small cave here."""
 vnum = 9121
 name = "Dank, dark, smelly hole."
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 This hole must have been used as a lair or nest.  There are
 feathers and bones everywhere and the floor is covered with
@@ -469,6 +471,7 @@ two small caves here, one north and one west."""
 vnum = 9123
 name = "Absolutely disgusting lair."
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The stench in here is quite foul.  There are feathers, bones and
 rotting carcasses everywhere.  This place is absolutely gross and
@@ -490,6 +493,7 @@ you have to strain yourself not to lose your lunch."""
 vnum = 9124
 name = "Absolutely disgusting lair."
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 The stench in here is quite foul.  There are feathers, bones and
 rotting carcasses everywhere.  This place is absolutely gross and
@@ -775,6 +779,7 @@ mouth.  What a nifty cloud to be on."""
 vnum = 9137
 name = "Cold, damp cloud."
 sector = "inside"
+room_flags = ["dark"]
 description = """
 Your mood grows grumpy as you find yourself cold and wet from this
 dismal cloud.  You notice a rock outcropping above you."""
@@ -795,6 +800,7 @@ dismal cloud.  You notice a rock outcropping above you."""
 vnum = 9138
 name = "Mysterious rock outcropping."
 sector = "inside"
+room_flags = ["dark", "no_mob"]
 description = """
 This rock outcropping just seems to hang in midair.  To the north
 you see a house and if you ease yourself down, you can land on a
@@ -802,8 +808,8 @@ rather damp, dismal cloud.  The door to the house is closed."""
 
   [[rooms.exits]]
   direction = "north"
-  to_vnum = 9139
   flags = ["door"]
+  to_vnum = 9139
 
   [[rooms.exits]]
   direction = "down"
@@ -813,6 +819,7 @@ rather damp, dismal cloud.  The door to the house is closed."""
 vnum = 9139
 name = "Foyer."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 Shadows play tricks on your eyes.  Everytime you think you see
 something in a corner and turn to get a better look, nothing is
@@ -831,6 +838,7 @@ trouble making out the room to the east."""
 vnum = 9140
 name = "Tower."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You are in a musty old tower.  The smell of mold and mildew is
 almost overpowering.  You hear strange creaks and groans ... is it
@@ -849,6 +857,7 @@ is the house and there is a stairway leading up into the tower."""
 vnum = 9141
 name = "Witches Tower"
 sector = "inside"
+room_flags = ["dark", "indoors", "no_mob", "no_recall"]
 description = """
 Here you see strange things of arcane value.  There is a cauldron in the
 corner bubbling madly, belching a foul brew that must have come from hell.
@@ -857,8 +866,8 @@ hope to again.  A picture of a familiar temple hangs on the east wall."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "closed"]
   to_vnum = 3001
-  flags = ["door"]
 
   [[rooms.exits]]
   direction = "down"
@@ -867,6 +876,12 @@ hope to again.  A picture of a familiar temple hangs on the east wall."""
   [[rooms.mob_resets]]
   vnum = 9107
   max = 1
+
+[[rooms.extra_descs]]
+keywords = ["picture"]
+description = """
+The picture is in on the east wall.  It is very complex in detail, and you
+almost see people walking around the temple in the picture."""
 
 [[rooms]]
 vnum = 9142
@@ -904,6 +919,7 @@ This cloud looks like it is of the cirrus maximus genre of clouds."""
 vnum = 9144
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -925,6 +941,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9145
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -950,6 +967,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9146
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -971,6 +989,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9147
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -992,6 +1011,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9148
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -1017,6 +1037,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9149
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -1042,6 +1063,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9150
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -1067,6 +1089,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9151
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -1088,6 +1111,7 @@ Your only thought is to seek refuge from the storm."""
 vnum = 9152
 name = "Raging hurricane."
 sector = "mountain"
+room_flags = ["dark", "no_recall"]
 description = """
 You are buffeted and knocked about by the almost godlike strength
 of the raging hurricane.  It is hard to see and hear anything.
@@ -1201,6 +1225,7 @@ This cloud looks like it belongs to the phylum of cumulative nimbus clouds."""
 vnum = 9158
 name = "Dark hidden cloud."
 sector = "inside"
+room_flags = ["dark"]
 description = "This cloud looks like the perfect place to hide."
 
   [[rooms.exits]]
@@ -1235,6 +1260,7 @@ end?  There is a rope ladder leading up."""
 vnum = 9160
 name = "Front gate"
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 There is a gate here.  It is huge, towering over you.  It creaks
 as it sways in the breeze.  To the south you see a huge lawn.
@@ -1369,8 +1395,8 @@ made of oak."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof"]
   to_vnum = 9177
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "west"
@@ -1500,6 +1526,7 @@ to peek in a window, but it is a little too high to see anything."""
 vnum = 9174
 name = "Dirty, dusty tunnel."
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = "This dirty dusty tunnel must lead somewhere."
 
   [[rooms.exits]]
@@ -1514,6 +1541,7 @@ description = "This dirty dusty tunnel must lead somewhere."
 vnum = 9175
 name = "Basement."
 sector = "mountain"
+room_flags = ["dark", "indoors"]
 description = """
 This seems like your average basement.  Old Christmas decorations,
 suitcases, bicycles litter your way.  You hear the squeaking of
@@ -1531,6 +1559,7 @@ rats in the corners."""
 vnum = 9176
 name = "Bottom of the stairs."
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You stand at the bottom of a long staircase leading up to the main
 house.  To the south you can barely make out the accumulated
@@ -1548,6 +1577,7 @@ clutter gathered throughout the years."""
 vnum = 9177
 name = "Foyer."
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 "Magnificent" does not even begin to describe the foyer.  Lavishly
 decorated, yet elegant, it gives an impression of indescribable
@@ -1558,8 +1588,8 @@ high and is made of oak."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 9166
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "east"
@@ -1581,6 +1611,7 @@ high and is made of oak."""
 vnum = 9178
 name = "Elegant hallway."
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long, sprawling hallway connecting the eastern and
 western wings of the house.  There are several chairs and sofas in
@@ -1602,6 +1633,7 @@ the hallway and some gorgeous, handwoven drapes."""
 vnum = 9179
 name = "Library"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are overwhelmed by the sheer volumes of books here.  The
 shelves stretch all the way to the ceiling and are on every wall,
@@ -1616,6 +1648,7 @@ and a desk for more intense studies."""
 vnum = 9180
 name = "Arboretum."
 sector = "inside"
+room_flags = ["indoors", "no_mob"]
 description = """
 A small indoor garden so that the residents don't have to go
 outside to enjoy plants and commune with nature.  There are several
@@ -1633,6 +1666,7 @@ trees, a small pond and flowers of every kind."""
 vnum = 9181
 name = "Western tower."
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in the bottom part of a tower.  A draft brings a chill to
 your spine and causes creaks and groans.  Curtains flutter in the
@@ -1652,6 +1686,7 @@ up into darkness."""
 vnum = 9182
 name = "Western tower."
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 The tower creaks and groans, almost as if it were muttering to
 itself.  There are windows displaying a full moon, reigning over
@@ -1675,6 +1710,7 @@ although there are a couple of cobwebs in the corner."""
 vnum = 9183
 name = "Elegant hallway."
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are in a long, sprawling hallway connecting the eastern and
 western wings of the house.  There are several chairs and sofas in
@@ -1696,6 +1732,7 @@ the hallway and some gorgeous, handwoven drapes."""
 vnum = 9184
 name = "Conservatory"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 Here was the rehearsal and recital room for the residents of the
 estate.  There is a Steinway piano in the corner and various gilded
@@ -1709,6 +1746,7 @@ instruments are on display in a glass cabinet."""
 vnum = 9185
 name = "Office"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You find yourself in a lavish office.  The desk is absolutely huge,
 at least ten feet by five feet and made of ebony and inlaid with
@@ -1727,6 +1765,7 @@ mechanically ticking and tocking the hours away."""
 vnum = 9186
 name = "Eastern tower."
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are in the bottom part of a tower.  A draft brings a chill to
 your spine and causes creaks and groans.  Curtains flutter in the
@@ -1746,6 +1785,7 @@ up into darkness."""
 vnum = 9187
 name = "Eastern tower."
 sector = "city"
+room_flags = ["dark", "indoors"]
 description = """
 The tower creaks and groans, almost as if it were muttering to
 itself.  There are windows displaying a full moon, reigning over
@@ -1769,6 +1809,7 @@ although there are a couple of cobwebs in the corner."""
 vnum = 9199
 name = "Mid-Air."
 sector = "field"
+room_flags = ["no_mob"]
 description = """
 You slide down the moisture covered rock, gaining speed as you
 approach the cliff.  Realizing your foolish error, you madly claw
@@ -1776,4 +1817,3 @@ at the rock, vainly trying to get a precious hold and save your
 worthless hide.  Next time, heed your conscience.
 
 You've fallen, and you can't get up!!!"""
-

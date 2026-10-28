@@ -45,6 +45,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow"]
 
   [objects.weapon]
+  weapon_type = "whip"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 6
 
@@ -85,6 +87,12 @@ cost = 2200
 wear_flags = ["take", "hold"]
 extra_flags = ["hum"]
 
+  [objects.magic]
+  level = 11
+  max_charges = 2
+  charges = 2
+  spells = ["colour spray"]
+
 [[objects]]
 vnum = 2106
 keywords = ["stiletto"]
@@ -97,6 +105,8 @@ cost = 1090
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 2
 
@@ -145,6 +155,12 @@ cost = 1910
 wear_flags = ["take", "hold"]
 extra_flags = ["glow", "magic"]
 
+  [objects.magic]
+  level = 20
+  max_charges = 10
+  charges = 10
+  spells = ["blindness"]
+
 [[objects]]
 vnum = 2109
 keywords = ["gloves"]
@@ -178,6 +194,8 @@ cost = 980
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 1
   dice_size = 10
 
@@ -241,6 +259,8 @@ cost = 0
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 2
   dice_size = 6
 
@@ -314,6 +334,11 @@ wear_flags = ["take", "legs"]
   ac_slash = 4
   ac_exotic = 0
 
+[[objects.extra_descs]]
+keywords = ["pants", "black", "leather"]
+description = """
+They're worn, but they look suprisingly tough."""
+
 [[objects]]
 vnum = 2118
 keywords = ["switchblade", "knife"]
@@ -326,6 +351,8 @@ cost = 760
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 1
   dice_size = 12
 
@@ -345,6 +372,8 @@ cost = 0
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "slash"
   dice_number = 2
   dice_size = 7
 
@@ -352,3 +381,7 @@ wear_flags = ["take", "wield"]
   location = "hitroll"
   modifier = -2
 
+[[objects.extra_descs]]
+keywords = ["bottle", "broken"]
+description = """
+It appears to be a broken wine bottle, but what do you know about brewing?"""

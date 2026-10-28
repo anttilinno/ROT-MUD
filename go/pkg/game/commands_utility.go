@@ -12,6 +12,20 @@ import (
 // Default recall room vnum
 const RecallVnum = 3001
 
+// cmdBind makes the current room the player's word of recall destination.
+// A player has one bound room; binding again replaces it.
+func (d *CommandDispatcher) cmdBind(ch *types.Character, args string) {
+	if ch.IsNPC() || ch.PCData == nil || ch.InRoom == nil {
+		return
+	}
+	if ch.InRoom.Flags.Has(types.RoomNoRecall) {
+		d.send(ch, "The magic of this place resists your binding.\r\n")
+		return
+	}
+	ch.PCData.Recall = ch.InRoom.Vnum
+	d.send(ch, "You bind your recall to "+ch.InRoom.Name+".\r\n")
+}
+
 func (d *CommandDispatcher) cmdRecall(ch *types.Character, args string) {
 	// If fighting, need to skill check first
 	if ch.Fighting != nil {
@@ -47,13 +61,9 @@ func (d *CommandDispatcher) cmdRecall(ch *types.Character, args string) {
 		combat.StopFighting(ch, true)
 	}
 
-	// Find recall room
-	var recallVnum int
-	if ch.PCData != nil && ch.PCData.Recall != 0 {
-		recallVnum = ch.PCData.Recall
-	} else {
-		recallVnum = RecallVnum
-	}
+	// The recall command always returns to Midgaard; word of recall uses the
+	// room bound with `bind`.
+	recallVnum := RecallVnum
 
 	var recallRoom *types.Room
 	if d.GameLoop != nil && d.GameLoop.Rooms != nil {
@@ -98,7 +108,7 @@ func (d *CommandDispatcher) cmdRecall(ch *types.Character, args string) {
 	ActToRoom("$n appears in a flash of light.", ch, nil, nil, d.Output)
 
 	// Show the new room
-	d.cmdLook(ch, "")
+	d.cmdLook(ch, "auto")
 }
 
 func (d *CommandDispatcher) cmdScan(ch *types.Character, args string) {

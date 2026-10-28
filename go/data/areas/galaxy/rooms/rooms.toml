@@ -2,6 +2,7 @@
 vnum = 9301
 name = "Inside a Tavern"
 sector = "inside"
+room_flags = ["indoors"]
 description = """
 You are inside a dimly-lit room.  The atmosphere makes you feel uncomfortable.
 In front of you stands a mysterious gypsy.  She whispers 'Your fate and
@@ -167,6 +168,7 @@ the east lies the Milky Way."""
 vnum = 9309
 name = "On the Bridge of Nebulae"
 sector = "city"
+room_flags = ["dark"]
 description = """
 This bridge, like the other, was made as a memorial.  The nebulae had to
 make one just to show that they are as capable as the stars.  North lies
@@ -192,6 +194,7 @@ a throne room."""
 vnum = 9310
 name = "The Throne Room of the Nebula King"
 sector = "inside"
+room_flags = ["dark", "indoors"]
 description = """
 You can only faintly make out that it is a throne room as it is too
 dark in here.  In the middle is an empty throne.  You wonder where
@@ -354,6 +357,7 @@ is a path which leads down."""
 vnum = 9319
 name = "Very Near to a Gigantic Star"
 sector = "city"
+room_flags = ["no_mob"]
 description = """
 You are very near to a gigantic red star.  While you are still fascinated
 by its beauty, the star keeps on growing ... suddenly you realize that you'd
@@ -379,6 +383,7 @@ better leave."""
 vnum = 9320
 name = "Too Bright to Tell"
 sector = "inside"
+room_flags = ["no_mob"]
 description = """
 Indeed it is too bright to tell.  Because what you are witnessing is the
 rare event of a Supernova, how a star explodes itself into galactic dust.
@@ -390,6 +395,7 @@ That really HURTS!"""
 vnum = 9321
 name = "The Star Cluster"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are inside the home of the stars.  All you can see around you are stars
 and nothing else.  You eyes become pretty hurt as you look at them."""
@@ -493,6 +499,7 @@ courses now prove worthless.  Well who told you to take one at the start?"""
 vnum = 9324
 name = "Lost in Space"
 sector = "field"
+room_flags = ["dark"]
 description = """
 You are now lost in space.  Compasses don't work here, sorry.  What's more
 you can sense darkness engulfing you.  You'd better get out quick."""
@@ -513,6 +520,7 @@ you can sense darkness engulfing you.  You'd better get out quick."""
 vnum = 9325
 name = "Black Hole"
 sector = "inside"
+room_flags = ["dark", "no_mob"]
 description = """
 Well you have chosen the wrong path, sorry.  Nothing can escape from this
 monster, not even light.
@@ -783,9 +791,9 @@ you from going further upwards."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9354
   key = 9324
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
@@ -924,6 +932,7 @@ overgrowth you think you glimpse a pair of menacing eyes."""
 vnum = 9347
 name = "Inside a Luxurious Bedroom"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 A peaceful feeling overtakes you.  You see a magnificent four-poster bed.
 It's a double bed and there is only room for one more!  Well, what now ... ?"""
@@ -944,6 +953,7 @@ It's a double bed and there is only room for one more!  Well, what now ... ?"""
 vnum = 9348
 name = "The Supreme Court"
 sector = "city"
+room_flags = ["indoors"]
 description = """
 You are standing inside the dock of a court.  You feel an overwhelming
 sense of guilt and you want to protest your innocence!  You fear retribution
@@ -1108,20 +1118,21 @@ forcefield blocking your way."""
 
   [[rooms.exits]]
   direction = "up"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9355
   key = 9325
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof"]
   to_vnum = 9339
   key = 9324
-  flags = ["closed"]
 
 [[rooms]]
 vnum = 9355
 name = "On the Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 You realize you are standing on scaly ground.  As you wonder what the ground
 is made of, you feel the ground move."""
@@ -1132,9 +1143,9 @@ is made of, you feel the ground move."""
 
   [[rooms.exits]]
   direction = "down"
+  flags = ["door", "pickproof"]
   to_vnum = 9354
   key = 9325
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9302
@@ -1144,6 +1155,7 @@ is made of, you feel the ground move."""
 vnum = 9356
 name = "Tail of the Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 At last you realize that you are on a giant snake-like dragon called the
 Draco, the guardian of the inner galaxy.  You realize that the Draco is
@@ -1161,6 +1173,7 @@ actually flying now!"""
 vnum = 9357
 name = "Path of the Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 As you struggle along this scaly creature you realize that the only way
 you can reach to the inner galaxy is by going all the way to the head."""
@@ -1177,6 +1190,7 @@ you can reach to the inner galaxy is by going all the way to the head."""
 vnum = 9358
 name = "Near the Legs of Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 You are approaching the leg part of this creature.  You look around and see
 that the surrounding is all dark except for some faint lights from the
@@ -1198,15 +1212,16 @@ distant stars."""
 vnum = 9359
 name = "On the Back of Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 At last you are half way through this long, weary journey. You can see
 the wings are to the east but it seems that another forcefield is in the way."""
 
   [[rooms.exits]]
   direction = "east"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9360
   key = 9326
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"
@@ -1216,6 +1231,7 @@ the wings are to the east but it seems that another forcefield is in the way."""
 vnum = 9360
 name = "Between the Wings of Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 You hear some giant flapping sounds nearby.  You desperately try to get hold
 of something as the forceful gusts sweep you away."""
@@ -1226,9 +1242,9 @@ of something as the forceful gusts sweep you away."""
 
   [[rooms.exits]]
   direction = "west"
+  flags = ["door", "pickproof"]
   to_vnum = 9359
   key = 9326
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9314
@@ -1238,6 +1254,7 @@ of something as the forceful gusts sweep you away."""
 vnum = 9361
 name = "Near the Arms of Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 From above you can faintly make out the gigantic arms which extend far
 beyond into the darkness."""
@@ -1254,6 +1271,7 @@ beyond into the darkness."""
 vnum = 9362
 name = "On the Neck of Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 Your journey is now approaching the end.  However, this neck seems to be
 endless."""
@@ -1270,6 +1288,7 @@ endless."""
 vnum = 9363
 name = "Approaching the Head of Draco"
 sector = "hills"
+room_flags = ["dark"]
 description = """
 You have come to the end of Draco, but you can't find the head!
 You see a forcefield to the south, some distance away, beyond reach.
@@ -1281,9 +1300,9 @@ If only the head were here ..."""
 
   [[rooms.exits]]
   direction = "south"
+  flags = ["door", "pickproof", "closed", "locked"]
   to_vnum = 9364
   key = 9327
-  flags = ["closed"]
 
   [[rooms.mob_resets]]
   vnum = 9313
@@ -1304,9 +1323,9 @@ seven rooms in this zone, representing the seven stars of the Dipper."""
 
   [[rooms.exits]]
   direction = "north"
+  flags = ["door", "pickproof"]
   to_vnum = 9363
   key = 9327
-  flags = ["closed"]
 
   [[rooms.exits]]
   direction = "south"

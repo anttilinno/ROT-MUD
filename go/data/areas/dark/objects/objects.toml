@@ -31,6 +31,11 @@ wear_flags = ["take", "neck"]
   location = "ac"
   modifier = -10
 
+[[objects.extra_descs]]
+keywords = ["necklace", "elven"]
+description = """
+Engraved on the back are the words: "Protect that which is important""""
+
 [[objects]]
 vnum = 14503
 keywords = ["potion", "elven"]
@@ -42,6 +47,16 @@ weight = 300
 cost = 2000
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+[[objects.extra_descs]]
+keywords = ["potion"]
+description = """
+Written on the seal of the bottle is a glyph. You believe that the glyph
+stands for "POISON""""
+
+  [objects.magic]
+  level = 10
+  spells = ["bless", "cure critical", "cure poison", "heal"]
 
 [[objects]]
 vnum = 14504
@@ -70,6 +85,12 @@ weight = 30
 cost = 90
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 20
+  current = 20
+  liquid = "local specialty"
+  poisoned = false
+
 [[objects]]
 vnum = 14506
 keywords = ["everlasting", "lantern", "dwarven"]
@@ -81,6 +102,9 @@ weight = 50
 cost = 150
 wear_flags = ["take"]
 
+  [objects.light]
+  duration = 99
+
 [[objects]]
 vnum = 14507
 keywords = ["dwarven", "adventurer", "bread"]
@@ -91,6 +115,11 @@ level = 1
 weight = 1
 cost = 50
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 48
+  hunger = 20
+  poisoned = false
 
 [[objects]]
 vnum = 14508
@@ -104,6 +133,12 @@ cost = 1200
 wear_flags = ["take", "wrist"]
 extra_flags = ["magic"]
 
+  [objects.container]
+  capacity = 100
+  flags = []
+  key = 0
+  max_weight = 20
+
 [[objects]]
 vnum = 14509
 keywords = ["magical", "emergency", "wafer"]
@@ -116,6 +151,10 @@ cost = 1000
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
 
+  [objects.magic]
+  level = 15
+  spells = ["teleport", "teleport", "teleport", "teleport"]
+
 [[objects]]
 vnum = 14510
 keywords = ["map", "treasure"]
@@ -126,6 +165,11 @@ level = 1
 weight = 10
 cost = 500
 wear_flags = ["take"]
+
+[[objects.extra_descs]]
+keywords = ["map"]
+description = """
+The golden talent a large is at tree step then twenty plus twenty step south."""
 
 [[objects]]
 vnum = 14511
@@ -150,6 +194,12 @@ weight = 1
 cost = 0
 wear_flags = ["take"]
 
+[[objects.extra_descs]]
+keywords = ["note", "quest"]
+description = """
+Find what is missing and tell someone on the wizlist what is missing and who
+has it.  DO NOT TELL ANYONE ELSE!!"""
+
 [[objects]]
 vnum = 14513
 keywords = ["water", "urn"]
@@ -161,6 +211,12 @@ weight = 1
 cost = 30
 wear_flags = ["take"]
 
+  [objects.drink]
+  capacity = 15
+  current = 15
+  liquid = "water"
+  poisoned = false
+
 [[objects]]
 vnum = 14514
 keywords = ["head", "madboy"]
@@ -171,6 +227,9 @@ level = 7
 weight = 10
 cost = 200
 wear_flags = ["take", "hold"]
+
+  [objects.light]
+  duration = 999
 
 [[objects]]
 vnum = 14515
@@ -185,6 +244,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "magic", "bless"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 1
   dice_size = 12
 
@@ -209,6 +270,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["hum", "bless"]
 
   [objects.weapon]
+  weapon_type = "sword"
+  damage_type = "slash"
   dice_number = 5
   dice_size = 5
 
@@ -238,6 +301,11 @@ extra_flags = ["glow", "magic", "anti_evil"]
   location = "wis"
   modifier = 1
 
+[[objects.extra_descs]]
+keywords = ["helmet"]
+description = """
+You see an Island Helmet.  Imprinted on the side is: Gapcio Industries"""
+
 [[objects]]
 vnum = 14518
 keywords = ["shield", "island"]
@@ -256,6 +324,11 @@ extra_flags = ["magic"]
   ac_slash = 6
   ac_exotic = 1
 
+[[objects.extra_descs]]
+keywords = ["shield", "island"]
+description = """
+You see an Island Shield.  Imprinted on the side is: Gapcio Industries"""
+
 [[objects]]
 vnum = 14519
 keywords = ["island", "mace"]
@@ -269,6 +342,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic"]
 
   [objects.weapon]
+  weapon_type = "mace"
+  damage_type = "bash"
   dice_number = 5
   dice_size = 5
 
@@ -279,6 +354,11 @@ extra_flags = ["magic"]
   [[objects.affects]]
   location = "hitroll"
   modifier = 5
+
+[[objects.extra_descs]]
+keywords = ["island", "mace"]
+description = """
+You see a island mace.  Imprinted on the side is: Gapcio Industries"""
 
 [[objects]]
 vnum = 14520
@@ -291,6 +371,10 @@ weight = 300
 cost = 5313
 wear_flags = ["take", "hold"]
 extra_flags = ["magic"]
+
+  [objects.magic]
+  level = 20
+  spells = ["earthquake", "earthquake", "earthquake", "earthquake"]
 
 [[objects]]
 vnum = 14521
@@ -335,6 +419,8 @@ wear_flags = ["take", "wield"]
 extra_flags = ["magic", "anti_evil"]
 
   [objects.weapon]
+  weapon_type = "dagger"
+  damage_type = "pierce"
   dice_number = 5
   dice_size = 6
 
@@ -373,6 +459,12 @@ weight = 10
 cost = 40
 wear_flags = ["take", "hold"]
 
+  [objects.container]
+  capacity = 50
+  flags = ["closeable"]
+  key = 0
+  max_weight = 10
+
 [[objects]]
 vnum = 14525
 keywords = ["chair", "woven"]
@@ -393,6 +485,11 @@ level = 15
 weight = 50
 cost = 200
 wear_flags = ["take"]
+
+  [objects.food]
+  full = 24
+  hunger = 12
+  poisoned = false
 
 [[objects]]
 vnum = 14527
@@ -421,6 +518,12 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["magic"]
+
+  [objects.drink]
+  capacity = 100000
+  current = 100000
+  liquid = "water"
+  poisoned = false
 
 [[objects]]
 vnum = 14529
@@ -452,6 +555,17 @@ level = 0
 weight = 0
 cost = 0
 
+[[objects.extra_descs]]
+keywords = ["portrait"]
+description = """
+This portrait is of a sandy haired woman with penetrating wise eyes.
+The upturned lips signifies the possession of secret knowledge."""
+
+[[objects.extra_descs]]
+keywords = ["secret", "knowledge"]
+description = """
+This portrait is of Siren, the Goddess of the Mist."""
+
 [[objects]]
 vnum = 14532
 keywords = ["toy", "bow"]
@@ -464,6 +578,7 @@ cost = 100
 wear_flags = ["take", "wield"]
 
   [objects.weapon]
+  weapon_type = "exotic"
   dice_number = 1
   dice_size = 1
 
@@ -478,6 +593,12 @@ weight = 50
 cost = 4000
 wear_flags = ["take", "hold"]
 
+  [objects.container]
+  capacity = 1000
+  flags = ["closeable"]
+  key = 0
+  max_weight = 200
+
 [[objects]]
 vnum = 14534
 keywords = ["chest"]
@@ -488,6 +609,12 @@ level = 0
 weight = 50
 cost = 50
 wear_flags = ["take"]
+
+  [objects.container]
+  capacity = 150
+  flags = []
+  key = 0
+  max_weight = 100
 
 [[objects]]
 vnum = 14535
@@ -502,6 +629,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic"]
 
   [objects.weapon]
+  weapon_type = "exotic"
+  damage_type = "pierce"
+  flags = ["sharp"]
   dice_number = 4
   dice_size = 5
 
@@ -548,6 +678,9 @@ wear_flags = ["take", "wield"]
 extra_flags = ["glow", "magic"]
 
   [objects.weapon]
+  weapon_type = "flail"
+  damage_type = "bash"
+  flags = ["sharp"]
   dice_number = 5
   dice_size = 5
 
@@ -572,4 +705,3 @@ extra_flags = ["glow", "magic"]
   [[objects.affects]]
   location = "con"
   modifier = 4
-
