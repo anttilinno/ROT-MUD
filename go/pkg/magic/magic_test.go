@@ -867,3 +867,46 @@ func TestBless(t *testing.T) {
 		}
 	}
 }
+
+// Teleport, summon and gate move characters through the system's hooks.
+func TestTravelSpellsMove(t *testing.T) {
+	m := NewMagicSystem()
+	here, there := types.NewRoom(1, "here", "here"), types.NewRoom(2, "there", "there")
+	mage, friend := types.NewCharacter("Mage"), types.NewCharacter("Friend")
+	mage.Level, friend.Level = 30, 10
+	move := func(ch *types.Character, room *types.Room) {
+		if ch.InRoom != nil {
+			ch.InRoom.RemovePerson(ch)
+		}
+		room.AddPerson(ch)
+		ch.InRoom = room
+	}
+	m.CharacterToRoom = move
+	m.RandomRoom = func(*types.Character) *types.Room { return there }
+	m.CharFinder = func(_ *types.Character, name string) *types.Character {
+		if name == "friend" {
+			return friend
+		}
+		return nil
+	}
+	cast := func(spell string, target interface{}) bool {
+		return m.Registry.FindByName(spell).Func(mage, 30, target)
+	}
+
+	move(mage, here)
+	move(friend, there)
+	if !cast("teleport", mage) || mage.InRoom != there {
+		t.Error("teleport did not move the caster")
+	}
+	move(mage, here)
+	if !cast("gate", "friend") || mage.InRoom != there {
+		t.Error("gate did not take the caster to the target")
+	}
+	move(mage, here)
+	if !cast("summon", "friend") || friend.InRoom != here {
+		t.Error("summon did not bring the target")
+	}
+	if cast("summon", "nobody") {
+		t.Error("summoned someone who doesn't exist")
+	}
+}

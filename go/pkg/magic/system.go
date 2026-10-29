@@ -23,6 +23,12 @@ type WeatherControlFunc func(change int)
 // CharacterToRoomFunc moves a character to a room
 type CharacterToRoomFunc func(ch *types.Character, room *types.Room)
 
+// CharFinderFunc finds a character anywhere in the world by name
+type CharFinderFunc func(ch *types.Character, name string) *types.Character
+
+// RandomRoomFunc picks a random room ch may be teleported to
+type RandomRoomFunc func(ch *types.Character) *types.Room
+
 // RoomFinderFunc finds a room by vnum
 type RoomFinderFunc func(vnum int) *types.Room
 
@@ -61,6 +67,8 @@ type MagicSystem struct {
 	WeatherControl  WeatherControlFunc  // For control weather spell
 	CharacterToRoom CharacterToRoomFunc // For teleport/summon/gate spells
 	RoomFinder      RoomFinderFunc      // For finding rooms by vnum
+	CharFinder      CharFinderFunc      // For summon/gate (ROT get_char_world)
+	RandomRoom      RandomRoomFunc      // For teleport (ROT get_random_room)
 	PortalCreator   PortalCreatorFunc   // For portal/nexus spells
 	PetCreator      PetCreatorFunc      // For animate/resurrect/conjure spells
 	CorpseFinder    CorpseFinderFunc    // For finding corpses in room
@@ -78,6 +86,9 @@ func NewMagicSystem() *MagicSystem {
 	// Spells that move characters or talk need the system's hooks.
 	for name, fn := range map[string]SpellFunc{
 		"word of recall": m.spellWordOfRecall,
+		"teleport":       m.spellTeleport,
+		"summon":         m.spellSummon,
+		"gate":           m.spellGate,
 		"faerie fog":     m.spellFaerieFog,
 		"mass invis":     m.spellMassInvis,
 		"cancellation":   m.spellCancellation,
@@ -89,6 +100,98 @@ func NewMagicSystem() *MagicSystem {
 		m.Registry.FindByName(name).Func = fn
 	}
 	return m
+}
+
+// moveChar takes ch out of any fight and moves it to room with the given
+// departure and arrival messages for the rooms.
+func (m *MagicSystem) moveChar(ch *types.Character, room *types.Room, leave, arrive string) {
+	if ch.Fighting != nil {
+		combat.StopFighting(ch, true)
+	}
+	m.toRoom(ch, ch.Name+leave)
+	m.CharacterToRoom(ch, room)
+	m.toRoom(ch, ch.Name+arrive)
+}
+
+// spellTeleport sends the target to a random room (ROT spell_teleport).
+func (m *MagicSystem) spellTeleport(caster *types.Character, level int, target interface{}) bool {
+	victim, ok := target.(*types.Character)
+	if !ok || victim == nil || victim.InRoom == nil || m.RandomRoom == nil || m.CharacterToRoom == nil {
+		return false
+	}
+	if victim.InRoom.Flags.Has(types.RoomNoRecall) ||
+		(victim != caster && victim.Imm.Has(types.ImmSummon)) ||
+		(!caster.IsNPC() && victim.Fighting != nil) ||
+		(victim != caster && combat.SavesSpell(level-5, victim, types.DamOther)) {
+		return false
+	}
+	room := m.RandomRoom(victim)
+	if room == nil {
+		return false
+	}
+	if victim != caster {
+		m.send(victim, "You have been teleported!\r\n")
+	}
+	m.moveChar(victim, room, " vanishes!", " slowly fades into existence.")
+	return true
+}
+
+// refusesTravel reports whether a room bars summoning and gating.
+func refusesTravel(room *types.Room) bool {
+	return room.Flags.Has(types.RoomSafe) || room.Flags.Has(types.RoomPrivate) ||
+		room.Flags.Has(types.RoomSolitary) || room.Flags.Has(types.RoomNoRecall)
+}
+
+// spellSummon brings the named character to the caster (ROT spell_summon).
+// ROT's clan and shopkeeper checks are not ported.
+func (m *MagicSystem) spellSummon(caster *types.Character, level int, target interface{}) bool {
+	name, _ := target.(string)
+	if name == "" || caster.InRoom == nil || m.CharFinder == nil || m.CharacterToRoom == nil {
+		return false
+	}
+	victim := m.CharFinder(caster, name)
+	if victim == nil || victim == caster || victim.InRoom == nil ||
+		caster.InRoom.Flags.Has(types.RoomSafe) || refusesTravel(victim.InRoom) ||
+		(victim.IsNPC() && victim.Act.Has(types.ActAggressive)) ||
+		victim.Level >= level+3 ||
+		(!victim.IsNPC() && victim.Level >= types.LevelImmortal) ||
+		victim.Fighting != nil ||
+		(victim.IsNPC() && victim.Imm.Has(types.ImmSummon)) ||
+		(!victim.IsNPC() && victim.PlayerAct.Has(types.PlrNoSummon)) ||
+		(victim.IsNPC() && combat.SavesSpell(level, victim, types.DamOther)) {
+		return false
+	}
+	m.moveChar(victim, caster.InRoom, " disappears suddenly.", " arrives suddenly.")
+	m.send(victim, caster.Name+" has summoned you!\r\n")
+	return true
+}
+
+// spellGate takes the caster, and a pet beside them, to the named
+// character (ROT spell_gate). ROT's clan check is not ported.
+func (m *MagicSystem) spellGate(caster *types.Character, level int, target interface{}) bool {
+	name, _ := target.(string)
+	if name == "" || caster.InRoom == nil || m.CharFinder == nil || m.CharacterToRoom == nil {
+		return false
+	}
+	victim := m.CharFinder(caster, name)
+	if victim == nil || victim == caster || victim.InRoom == nil ||
+		refusesTravel(victim.InRoom) || caster.InRoom.Flags.Has(types.RoomNoRecall) ||
+		victim.Level >= level+3 ||
+		(!victim.IsNPC() && victim.Level >= types.LevelHero) ||
+		(victim.IsNPC() && victim.Imm.Has(types.ImmSummon)) ||
+		(victim.IsNPC() && combat.SavesSpell(level, victim, types.DamOther)) {
+		return false
+	}
+	pet := caster.Pet
+	travellers := []*types.Character{caster}
+	if pet != nil && pet.InRoom == caster.InRoom {
+		travellers = append(travellers, pet)
+	}
+	for _, ch := range travellers {
+		m.send(ch, "You step through a gate and vanish.\r\n")
+		m.moveChar(ch, victim.InRoom, " steps through a gate and vanishes.", " has arrived through a gate.")
+	}
+	return true
 }
 
 // toRoom sends msg to everyone awake in ch's room but ch.
@@ -672,6 +775,9 @@ type TargetFinder func(ch *types.Character, name string, offensive bool) interfa
 func (m *MagicSystem) resolveTarget(caster *types.Character, spell *Spell, arg string, findTarget TargetFinder) (interface{}, string) {
 	switch spell.Target {
 	case TargetIgnore:
+		if arg != "" {
+			return arg, "" // summon and gate read a name (ROT target_name)
+		}
 		return nil, ""
 
 	case TargetCharSelf:

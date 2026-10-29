@@ -1679,6 +1679,13 @@ func NewCommandDispatcher() *CommandDispatcher {
 		CharToRoom(ch, room)
 		d.cmdLook(ch, "auto")
 	}
+	d.Magic.CharFinder = func(ch *types.Character, name string) *types.Character {
+		if d.GameLoop == nil {
+			return FindCharInRoom(ch, name)
+		}
+		return d.findCharacterWorld(ch, name)
+	}
+	d.Magic.RandomRoom = d.teleportRoom
 
 	// Wire up magic system to find objects in inventory (for identify spell)
 	d.Magic.InvObjectFinder = func(ch *types.Character, name string) *types.Object {

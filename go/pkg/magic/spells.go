@@ -406,10 +406,10 @@ func DefaultSpells() *SpellRegistry {
 
 	// === Utility Spells ===
 
-	r.Register(NewSpell("teleport", SlotTeleport, TargetCharSelf, 35, spellTeleport).
+	r.Register(NewSpell("teleport", SlotTeleport, TargetCharSelf, 35, spellNeedsSystem).
 		SetLevels(map[string]int{"mage": 13, "cleric": 22, "thief": 53, "warrior": 53}))
 
-	r.Register(NewSpell("summon", SlotSummon, TargetCharDefense, 50, spellSummon).
+	r.Register(NewSpell("summon", SlotSummon, TargetIgnore, 50, spellNeedsSystem).
 		SetLevels(map[string]int{"mage": 24, "cleric": 32, "thief": 53, "warrior": 53}))
 
 	r.Register(NewSpell("locate object", SlotLocateObject, TargetIgnore, 20, spellLocateObject).
@@ -504,7 +504,7 @@ func DefaultSpells() *SpellRegistry {
 
 	// === Transportation Spells ===
 
-	r.Register(NewSpell("gate", 223, TargetIgnore, 80, spellGate).
+	r.Register(NewSpell("gate", 223, TargetIgnore, 80, spellNeedsSystem).
 		SetLevels(map[string]int{"mage": 28, "cleric": 32, "thief": 53, "warrior": 53}))
 
 	// === Shield Spells ===
@@ -1504,138 +1504,6 @@ func spellMassHealing(caster *types.Character, level int, target interface{}) bo
 			member.Hit = min(member.Hit+100, member.MaxHit)
 		}
 	}
-	return true
-}
-
-// Teleport - Mage utility spell
-// Note: Actual room selection happens in the magic system after this returns true
-// The spell sets up the teleport, but movement is handled by the game loop
-func spellTeleport(caster *types.Character, level int, target interface{}) bool {
-	// Can't teleport while fighting
-	if caster.InCombat() {
-		return false
-	}
-
-	// Can't teleport from no-recall rooms
-	if caster.InRoom != nil && caster.InRoom.Flags.Has(types.RoomNoRecall) {
-		return false
-	}
-
-	// Success - the actual teleport destination is picked randomly by the game
-	// This spell just validates that teleport is allowed
-	return true
-}
-
-// Summon - Mage utility spell
-// Note: Target finding and movement happens in the magic system
-func spellSummon(caster *types.Character, level int, target interface{}) bool {
-	victim, ok := target.(*types.Character)
-	if !ok || victim == nil {
-		return false
-	}
-
-	// Can't summon yourself
-	if victim == caster {
-		return false
-	}
-
-	// Can't summon while fighting
-	if victim.InCombat() {
-		return false
-	}
-
-	// Check level difference (can't summon much higher level)
-	if victim.Level > level+3 {
-		return false
-	}
-
-	// Can't summon from no-recall rooms
-	if victim.InRoom != nil && victim.InRoom.Flags.Has(types.RoomNoRecall) {
-		return false
-	}
-
-	// Can't summon to safe rooms
-	if caster.InRoom != nil && caster.InRoom.IsSafe() {
-		return false
-	}
-
-	// Players have a chance to resist summon
-	if !victim.IsNPC() {
-		// Check if player has nosummon flag
-		if victim.PlayerAct.Has(types.PlrNoSummon) {
-			return false
-		}
-
-		if combat.NumberPercent() < 50+victim.Level-level {
-			return false
-		}
-	}
-
-	// Success - actual movement is handled by game system after spell succeeds
-	return true
-}
-
-// Gate - Teleport to target's location
-// Unlike summon (brings target to you), gate takes you to target
-func spellGate(caster *types.Character, level int, target interface{}) bool {
-	// Gate requires a character target (passed via targetArg in Cast)
-	// The actual target finding is done by the magic system
-	victim, ok := target.(*types.Character)
-	if !ok || victim == nil {
-		return false
-	}
-
-	// Can't gate to yourself
-	if victim == caster {
-		return false
-	}
-
-	// Can't gate while fighting
-	if caster.InCombat() {
-		return false
-	}
-
-	// Check level difference
-	if victim.Level >= level+3 {
-		return false
-	}
-
-	// Can't gate from no-recall rooms
-	if caster.InRoom != nil && caster.InRoom.Flags.Has(types.RoomNoRecall) {
-		return false
-	}
-
-	// Can't gate to restricted rooms
-	if victim.InRoom != nil {
-		flags := victim.InRoom.Flags
-		if flags.Has(types.RoomSafe) || flags.Has(types.RoomPrivate) ||
-			flags.Has(types.RoomSolitary) || flags.Has(types.RoomNoRecall) {
-			return false
-		}
-	}
-
-	// Can't gate to immortals
-	if !victim.IsNPC() && victim.Level >= 51 {
-		return false
-	}
-
-	// NPCs get a save based on level difference
-	if victim.IsNPC() {
-		saveChance := 50 + victim.Level - level
-		if combat.NumberPercent() < saveChance {
-			return false
-		}
-	}
-
-	// Success - move caster to victim's room
-	if caster.InRoom != nil && victim.InRoom != nil {
-		// Remove from current room
-		caster.InRoom.RemovePerson(caster)
-		// Add to victim's room
-		victim.InRoom.AddPerson(caster)
-		caster.InRoom = victim.InRoom
-	}
-
 	return true
 }
 
