@@ -483,7 +483,7 @@ func (s *Server) resetWorld() {
 	mobCount := 0
 	objCount := 0
 
-	for _, room := range s.World.Rooms {
+	for _, room := range s.roomsInResetOrder() {
 		// Spawn mobs
 		for _, reset := range room.MobResets {
 			// Check if mob already exists in this room
@@ -559,6 +559,16 @@ func (s *Server) resetWorld() {
 	}
 
 	s.logger.Info("world reset complete", "mobs", mobCount, "objects", objCount)
+}
+
+// roomsInResetOrder lists every room area by area, each area by vnum, so
+// boot resets are deterministic like ROT's area_update.
+func (s *Server) roomsInResetOrder() []*types.Room {
+	var rooms []*types.Room
+	for _, area := range s.World.Areas {
+		rooms = append(rooms, area.RoomsInResetOrder()...)
+	}
+	return rooms
 }
 
 // equipMob gives an object to a mob based on equip reset data

@@ -24,7 +24,7 @@ func NewResetSystem(world *loader.World) *ResetSystem {
 
 // ResetArea resets a single area, spawning mobs and objects according to reset data
 func (r *ResetSystem) ResetArea(area *types.Area) {
-	for _, room := range area.Rooms {
+	for _, room := range area.RoomsInResetOrder() {
 		r.resetRoom(room)
 	}
 	area.Age = 0
