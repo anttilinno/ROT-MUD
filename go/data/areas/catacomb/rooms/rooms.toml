@@ -1404,6 +1404,10 @@ closer look if possible."""
   vnum = 2007
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 2005
+    max = 9
+
 [[rooms]]
 vnum = 2033
 name = "Misty passageway"

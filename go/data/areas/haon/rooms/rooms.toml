@@ -529,9 +529,17 @@ such as a bed, a chair and a table."""
   vnum = 6003
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 6006
+    max = 1
+
   [[rooms.obj_resets]]
   vnum = 6005
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 6007
+    max = 1
 
   [[rooms.obj_resets]]
   vnum = 6013

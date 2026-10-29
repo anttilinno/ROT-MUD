@@ -782,6 +782,10 @@ in one corner catches your eye.  The only exit is the way you came in."""
   vnum = 1651
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 1603
+    max = 1
+
 [[rooms]]
 vnum = 1646
 name = "The Officer's Quarters"

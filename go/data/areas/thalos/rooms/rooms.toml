@@ -782,6 +782,14 @@ is a vine-covered archway leading out into a private courtyard."""
   vnum = 5225
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 5215
+    max = 4
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5216
+    max = 4
+
 [[rooms]]
 vnum = 5232
 name = "The city hall"
@@ -849,6 +857,10 @@ an ivy-covered archway leads south into a private courtyard."""
   [[rooms.obj_resets]]
   vnum = 5227
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 3105
+    max = 8
 
 [[rooms]]
 vnum = 5234

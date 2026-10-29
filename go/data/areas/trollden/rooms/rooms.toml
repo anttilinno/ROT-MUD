@@ -152,6 +152,9 @@ its chest ripped out.  The predator seems disinterested in it."""
   vnum = 2800
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 2804
+
 [[rooms.extra_descs]]
 keywords = ["arm", "rotting"]
 description = """
@@ -189,3 +192,7 @@ flattened by something."""
   [[rooms.obj_resets]]
   vnum = 2801
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 2803
+    max = 5

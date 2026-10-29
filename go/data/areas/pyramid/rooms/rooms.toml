@@ -1370,6 +1370,14 @@ lie before your feet."""
   vnum = 8710
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 8711
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 8712
+    max = 1
+
 [[rooms.extra_descs]]
 keywords = ["treasures"]
 description = """

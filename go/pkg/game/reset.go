@@ -114,6 +114,8 @@ func (r *ResetSystem) executeEquipReset(mob *types.Character, reset *types.Equip
 		return
 	}
 
+	r.fillContainer(obj, reset.Contents)
+
 	// Either put in inventory or equip
 	if reset.InvOnly {
 		obj.CarriedBy = mob
@@ -138,19 +140,20 @@ func (r *ResetSystem) executeObjReset(room *types.Room, reset *types.ObjReset) {
 		return
 	}
 
-	// Check if we've reached the max for this object
-	if reset.Max > 0 {
-		count := r.countObjInWorld(reset.Vnum)
-		if count >= reset.Max {
-			return
+	// Check if object already exists in this room; a container still gets
+	// its contents topped up, but not under players' noses (ROT 'P')
+	for _, obj := range room.Objects {
+		if obj.Vnum == reset.Vnum {
+			if room.Area == nil || room.Area.NumPlayers == 0 {
+				r.fillContainer(obj, reset.Contents)
+			}
+			return // Already have one here
 		}
 	}
 
-	// Check if object already exists in this room
-	for _, obj := range room.Objects {
-		if obj.Vnum == reset.Vnum {
-			return // Already have one here
-		}
+	// Check if we've reached the max for this object
+	if reset.Max > 0 && r.countObjInWorld(reset.Vnum) >= reset.Max {
+		return
 	}
 
 	// Spawn the object
@@ -163,6 +166,37 @@ func (r *ResetSystem) executeObjReset(room *types.Room, reset *types.ObjReset) {
 		// Place in room
 		obj.InRoom = room
 		room.Objects = append(room.Objects, obj)
+		r.fillContainer(obj, reset.Contents)
+	}
+}
+
+// fillContainer tops a container up to its reset contents and closes and
+// locks it again as built (ROM reset_room 'P').
+func (r *ResetSystem) fillContainer(container *types.Object, contents []types.ObjReset) {
+	if len(contents) == 0 {
+		return
+	}
+	for _, reset := range contents {
+		have := 0
+		for _, obj := range container.Contents {
+			if obj.Vnum == reset.Vnum {
+				have++
+			}
+		}
+		for ; have < reset.Count; have++ {
+			if reset.Max > 0 && r.countObjInWorld(reset.Vnum) >= reset.Max {
+				break
+			}
+			obj := r.CreateObjFromTemplate(reset.Vnum)
+			if obj == nil {
+				break
+			}
+			container.AddContent(obj)
+			r.fillContainer(obj, reset.Contents)
+		}
+	}
+	if tmpl := r.World.GetObjTemplate(container.Vnum); tmpl != nil && tmpl.Container != nil {
+		container.Values[1] = containerFlagBits(tmpl.Container.Flags)
 	}
 }
 
@@ -179,28 +213,30 @@ func (r *ResetSystem) countMobInWorld(vnum int) int {
 	return count
 }
 
-// countObjInWorld counts how many instances of an object vnum exist
+// countObjInWorld counts how many instances of an object vnum exist in rooms,
+// on characters, and inside their containers
 func (r *ResetSystem) countObjInWorld(vnum int) int {
 	count := 0
 	for _, room := range r.World.Rooms {
-		for _, obj := range room.Objects {
-			if obj.Vnum == vnum {
-				count++
-			}
-		}
-		// Also count in mob inventory
+		count += countObjs(room.Objects, vnum)
 		for _, ch := range room.People {
-			for _, obj := range ch.Inventory {
-				if obj.Vnum == vnum {
-					count++
-				}
-			}
-			for _, obj := range ch.Equipment {
-				if obj != nil && obj.Vnum == vnum {
-					count++
-				}
-			}
+			count += countObjs(ch.Inventory, vnum)
+			count += countObjs(ch.Equipment[:], vnum)
 		}
+	}
+	return count
+}
+
+func countObjs(objs []*types.Object, vnum int) int {
+	count := 0
+	for _, obj := range objs {
+		if obj == nil {
+			continue
+		}
+		if obj.Vnum == vnum {
+			count++
+		}
+		count += countObjs(obj.Contents, vnum)
 	}
 	return count
 }

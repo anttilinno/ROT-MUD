@@ -855,6 +855,14 @@ walls."""
   vnum = 5007
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 5012
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5011
+    max = 1
+
 [[rooms]]
 vnum = 5061
 name = "The main tent"
@@ -880,6 +888,10 @@ paintings as well."""
   vnum = 5008
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 5014
+    max = 5
+
   [[rooms.obj_resets]]
   vnum = 5009
   max = 1
@@ -887,6 +899,10 @@ paintings as well."""
   [[rooms.obj_resets]]
   vnum = 5010
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5013
+    max = 50
 
 [[rooms]]
 vnum = 5062
@@ -1064,6 +1080,38 @@ large enough for one person. Back south is the cavern."""
   [[rooms.obj_resets]]
   vnum = 5023
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5025
+    max = 3
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5026
+    max = 3
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5027
+    max = 3
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5028
+    max = 3
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5029
+    max = 3
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5030
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5031
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5032
+    max = 3
 
   [[rooms.obj_resets]]
   vnum = 5015

@@ -85,17 +85,19 @@ type MobResetData struct {
 
 // EquipResetData defines an object to equip on a mob
 type EquipResetData struct {
-	Vnum    int    `toml:"vnum"`     // Object template vnum
-	WearLoc string `toml:"wear_loc"` // Wear location (wield, body, head, etc.)
-	Limit   int    `toml:"limit"`    // Max number in world (0 = unlimited)
-	InvOnly bool   `toml:"inv_only"` // Put in inventory instead of equipping
+	Vnum     int            `toml:"vnum"`     // Object template vnum
+	WearLoc  string         `toml:"wear_loc"` // Wear location (wield, body, head, etc.)
+	Limit    int            `toml:"limit"`    // Max number in world (0 = unlimited)
+	InvOnly  bool           `toml:"inv_only"` // Put in inventory instead of equipping
+	Contents []ObjResetData `toml:"contents"` // Objects put inside this one
 }
 
 // ObjResetData defines an object that spawns in a room
 type ObjResetData struct {
-	Vnum  int `toml:"vnum"`  // Object template vnum
-	Max   int `toml:"max"`   // Max number in world (0 = unlimited)
-	Count int `toml:"count"` // Number to spawn (default 1)
+	Vnum     int            `toml:"vnum"`     // Object template vnum
+	Max      int            `toml:"max"`      // Max number in world (0 = unlimited)
+	Count    int            `toml:"count"`    // Number to spawn (default 1)
+	Contents []ObjResetData `toml:"contents"` // Objects put inside this one (ROM 'P' resets)
 }
 
 type ExitData struct {

@@ -1131,6 +1131,18 @@ is a vine-covered archway leading out into a private courtyard."""
   vnum = 5307
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 5304
+    max = 4
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5305
+    max = 4
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5231
+    max = 9
+
 [[rooms]]
 vnum = 5332
 name = "The city hall"
@@ -1194,6 +1206,18 @@ courtyard."""
   [[rooms.obj_resets]]
   vnum = 5308
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 3105
+    max = 8
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5214
+    max = 8
+
+    [[rooms.obj_resets.contents]]
+    vnum = 5230
+    max = 1
 
 [[rooms]]
 vnum = 5334

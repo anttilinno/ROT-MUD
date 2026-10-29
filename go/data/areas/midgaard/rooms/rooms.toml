@@ -1248,9 +1248,17 @@ Arms is hanging on the north wall and a heavy steel door is to the south."""
   vnum = 3130
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 3123
+    max = 1
+
   [[rooms.obj_resets]]
   vnum = 3131
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 3132
+    max = 1
 
 [[rooms.extra_descs]]
 keywords = ["arms"]

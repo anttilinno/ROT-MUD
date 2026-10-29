@@ -433,30 +433,48 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 		// Parse equipment resets for this mob
 		for _, er := range mr.Equips {
 			mobReset.Equips = append(mobReset.Equips, types.EquipReset{
-				Vnum:    er.Vnum,
-				WearLoc: parseWearLocation(er.WearLoc),
-				Limit:   er.Limit,
-				InvOnly: er.InvOnly,
+				Vnum:     er.Vnum,
+				WearLoc:  parseWearLocation(er.WearLoc),
+				Limit:    er.Limit,
+				InvOnly:  er.InvOnly,
+				Contents: parseObjResets(er.Contents),
 			})
 		}
 
 		room.MobResets = append(room.MobResets, mobReset)
 	}
 
-	// Parse object resets
-	for _, or := range rd.ObjResets {
-		count := or.Count
-		if count == 0 {
-			count = 1
-		}
-		room.ObjResets = append(room.ObjResets, types.ObjReset{
-			Vnum:  or.Vnum,
-			Max:   or.Max,
-			Count: count,
-		})
-	}
+	room.ObjResets = parseObjResets(rd.ObjResets)
 
 	return room
+}
+
+// parseObjResets converts object resets, and the resets for their contents.
+func parseObjResets(data []ObjResetData) []types.ObjReset {
+	var out []types.ObjReset
+	for _, or := range data {
+		out = append(out, types.ObjReset{
+			Vnum:     or.Vnum,
+			Max:      or.Max,
+			Count:    max(or.Count, 1),
+			Contents: parseObjResets(or.Contents),
+		})
+	}
+	return out
+}
+
+// formatObjResets is parseObjResets in reverse, for saving rooms.
+func formatObjResets(resets []types.ObjReset) []ObjResetData {
+	var out []ObjResetData
+	for _, or := range resets {
+		out = append(out, ObjResetData{
+			Vnum:     or.Vnum,
+			Max:      or.Max,
+			Count:    or.Count,
+			Contents: formatObjResets(or.Contents),
+		})
+	}
+	return out
 }
 
 // loadMobs loads all mobile files from a directory
@@ -1087,24 +1105,18 @@ func (w *World) SaveRoom(room *types.Room, basePath string) error {
 		// Convert equip resets for this mob
 		for _, er := range mr.Equips {
 			mobResetData.Equips = append(mobResetData.Equips, EquipResetData{
-				Vnum:    er.Vnum,
-				WearLoc: formatWearLocation(er.WearLoc),
-				Limit:   er.Limit,
-				InvOnly: er.InvOnly,
+				Vnum:     er.Vnum,
+				WearLoc:  formatWearLocation(er.WearLoc),
+				Limit:    er.Limit,
+				InvOnly:  er.InvOnly,
+				Contents: formatObjResets(er.Contents),
 			})
 		}
 
 		rd.MobResets = append(rd.MobResets, mobResetData)
 	}
 
-	// Convert object resets
-	for _, or := range room.ObjResets {
-		rd.ObjResets = append(rd.ObjResets, ObjResetData{
-			Vnum:  or.Vnum,
-			Max:   or.Max,
-			Count: or.Count,
-		})
-	}
+	rd.ObjResets = formatObjResets(room.ObjResets)
 
 	// Determine filename based on room vnum
 	filename := fmt.Sprintf("room_%d.toml", room.Vnum)

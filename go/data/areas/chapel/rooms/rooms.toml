@@ -535,6 +535,14 @@ A hole has been knocked into the east wall."""
   vnum = 3415
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 3417
+    max = 5
+
+    [[rooms.obj_resets.contents]]
+    vnum = 3418
+    max = 1
+
 [[rooms]]
 vnum = 3425
 name = "The Lower Chambers and Tombs of the Undead"
@@ -749,6 +757,10 @@ open, ripped to pieces.  Gnawed pieces of flesh and bone are strewn here."""
     [[rooms.mob_resets.equips]]
     vnum = 3412
     inv_only = true
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 3413
+      max = 2
 
 [[rooms]]
 vnum = 3435
@@ -1036,6 +1048,10 @@ blood of beasts and humans alike."""
   [[rooms.obj_resets]]
   vnum = 3420
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 3410
+    max = 1
 
 [[rooms.extra_descs]]
 keywords = ["painting", "paintings", "mural"]

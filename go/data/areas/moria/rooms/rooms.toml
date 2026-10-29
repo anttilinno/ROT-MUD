@@ -1878,6 +1878,9 @@ the sky. A small tunnel to the south is the only way out."""
     vnum = 4001
     inv_only = true
 
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 4002
+
     [[rooms.mob_resets.equips]]
     vnum = 4154
     inv_only = true

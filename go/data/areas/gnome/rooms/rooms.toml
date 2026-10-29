@@ -306,6 +306,10 @@ expert workmanship that went into making it, but it lacks creativity."""
     vnum = 1511
     inv_only = true
 
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1513
+      max = 12
+
 [[rooms]]
 vnum = 1514
 name = "A Gnome Shop"
@@ -326,6 +330,10 @@ but unfortunately the gnomes don't do business with outsiders."""
     [[rooms.mob_resets.equips]]
     vnum = 1511
     inv_only = true
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1512
+      max = 12
 
 [[rooms]]
 vnum = 1515

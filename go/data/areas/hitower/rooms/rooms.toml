@@ -554,9 +554,21 @@ the room, hanging in mid-air is a spice rack."""
   vnum = 1301
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 1304
+    max = 20
+
   [[rooms.obj_resets]]
   vnum = 1302
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1305
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1306
+    max = 1
 
 [[rooms]]
 vnum = 1321
@@ -2067,6 +2079,18 @@ table."""
   vnum = 1315
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 1317
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1318
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1319
+    max = 1
+
 [[rooms]]
 vnum = 1383
 name = "A bend in the hallway"
@@ -2190,6 +2214,26 @@ It is incredibly messy here, crushed glass and other trash litter the floor.
     [[rooms.mob_resets.equips]]
     vnum = 1364
     wear_loc = "hold"
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1365
+      max = 2
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1367
+      max = 2
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1368
+      max = 2
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1369
+      max = 2
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1370
+      max = 2
 
 [[rooms]]
 vnum = 1389
@@ -2519,6 +2563,10 @@ spell binder obviously needs none for the working of his art.
     vnum = 1374
     wear_loc = "waist"
 
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1375
+      max = 2
+
 [[rooms]]
 vnum = 1403
 name = "The spellbinder's cache"
@@ -2543,9 +2591,29 @@ very large silver chased cabinets here, other than that, the room is bare.
   vnum = 1321
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 1326
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1327
+    max = 1
+
   [[rooms.obj_resets]]
   vnum = 1322
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1328
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1329
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1330
+    max = 1
 
 [[rooms]]
 vnum = 1404
@@ -2851,6 +2919,10 @@ at least they seem to be treasures..."""
     [[rooms.mob_resets.equips]]
     vnum = 1377
     wear_loc = "waist"
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 1378
+      max = 3
 
 [[rooms]]
 vnum = 1418
@@ -3253,6 +3325,14 @@ mirrors."""
   vnum = 1331
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 1332
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1333
+    max = 1
+
 [[rooms]]
 vnum = 1436
 name = "A corridor"
@@ -3502,6 +3582,10 @@ the pages."""
   [[rooms.obj_resets]]
   vnum = 1334
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1335
+    max = 1
 
 [[rooms]]
 vnum = 1446
@@ -4311,6 +4395,10 @@ worship of Mystra, the goddess of magic."""
   vnum = 1336
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 1337
+    max = 1
+
 [[rooms]]
 vnum = 1481
 name = "The treasury"
@@ -4328,6 +4416,10 @@ that it has gone undisturbed for many years."""
   [[rooms.obj_resets]]
   vnum = 1338
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1340
+    max = 1
 
 [[rooms]]
 vnum = 1482
@@ -4361,6 +4453,10 @@ in the event speedy of a evacuation."""
   vnum = 1345
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 1344
+    max = 1
+
 [[rooms]]
 vnum = 1483
 name = "In the light"
@@ -4391,3 +4487,11 @@ on a desk."""
   [[rooms.obj_resets]]
   vnum = 1402
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1403
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 1404
+    max = 1

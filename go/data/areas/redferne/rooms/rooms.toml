@@ -355,6 +355,14 @@ This place is gloomy.  The only visible exit is west, through the oak door."""
   vnum = 7910
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 7298
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 7208
+    max = 6
+
 [[rooms]]
 vnum = 7911
 name = "Redferne's Bedroom"

@@ -2653,6 +2653,38 @@ seen to the north."""
     vnum = 2382
     wear_loc = "waist"
 
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2351
+      max = 1
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2352
+      max = 1
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2353
+      max = 1
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2354
+      max = 1
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2355
+      max = 1
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2356
+      max = 1
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2357
+      max = 1
+
+      [[rooms.mob_resets.equips.contents]]
+      vnum = 2358
+      max = 1
+
 [[rooms]]
 vnum = 2388
 name = "The guarded hall"

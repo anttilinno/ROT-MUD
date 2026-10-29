@@ -73,17 +73,19 @@ type MobReset struct {
 
 // EquipReset defines an object to equip on a mob
 type EquipReset struct {
-	Vnum    int          // Object template vnum
-	WearLoc WearLocation // Where to equip the item
-	Limit   int          // Max number in world (0 = unlimited)
-	InvOnly bool         // Put in inventory instead of equipping
+	Vnum     int          // Object template vnum
+	WearLoc  WearLocation // Where to equip the item
+	Limit    int          // Max number in world (0 = unlimited)
+	InvOnly  bool         // Put in inventory instead of equipping
+	Contents []ObjReset   // Objects put inside this one (ROM 'P' resets)
 }
 
 // ObjReset defines an object that spawns in a room
 type ObjReset struct {
-	Vnum  int // Object template vnum
-	Max   int // Max number in world (0 = unlimited)
-	Count int // Number to spawn (default 1)
+	Vnum     int        // Object template vnum
+	Max      int        // Max number in world (0 = unlimited)
+	Count    int        // Number to spawn (default 1)
+	Contents []ObjReset // Objects put inside this one (ROM 'P' resets)
 }
 
 // Room represents a room in the world

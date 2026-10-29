@@ -743,3 +743,7 @@ description = "The vault is musty with a slight smell of ozone in the air."
   [[rooms.obj_resets]]
   vnum = 8004
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 8007
+    max = 10

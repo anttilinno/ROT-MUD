@@ -2159,6 +2159,13 @@ in the room.  There are no exits except east."""
   vnum = 16039
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 16040
+    count = 3
+
+    [[rooms.obj_resets.contents]]
+    vnum = 16041
+
 [[rooms]]
 vnum = 16067
 name = "Sleeping Quarters"
@@ -2329,6 +2336,9 @@ he will be VERY upset, so get out quick!"""
   vnum = 16004
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 16000
+
 [[rooms]]
 vnum = 16073
 name = "Navigator's Quarters"
@@ -2449,6 +2459,21 @@ You couldn't possibly carry out all this gold.  Too bad."""
   [[rooms.obj_resets]]
   vnum = 16034
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 16035
+
+    [[rooms.obj_resets.contents]]
+    vnum = 16036
+    count = 3
+
+    [[rooms.obj_resets.contents]]
+    vnum = 16037
+    count = 2
+
+    [[rooms.obj_resets.contents]]
+    vnum = 16052
+    count = 2
 
 [[rooms]]
 vnum = 16077
@@ -2773,6 +2798,14 @@ exit is south."""
   [[rooms.obj_resets]]
   vnum = 16103
   max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 16043
+    count = 2
+
+    [[rooms.obj_resets.contents]]
+    vnum = 16040
+    count = 2
 
 [[rooms]]
 vnum = 16104

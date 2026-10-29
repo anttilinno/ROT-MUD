@@ -513,6 +513,14 @@ than meticulous housekeeper... There are doors to the north and west."""
   vnum = 8902
   max = 1
 
+    [[rooms.obj_resets.contents]]
+    vnum = 8903
+    max = 1
+
+    [[rooms.obj_resets.contents]]
+    vnum = 8904
+    max = 1
+
   [[rooms.obj_resets]]
   vnum = 8902
   max = 1
