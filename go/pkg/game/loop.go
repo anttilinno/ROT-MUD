@@ -448,7 +448,7 @@ func (g *GameLoop) hitGain(ch *types.Character) int {
 		gain = gain * ch.InRoom.HealRate / 90
 	}
 
-	// TODO: Apply furniture bonuses
+	gain = furnitureGain(ch, gain, 3)
 
 	// Apply status penalties
 	if ch.IsAffected(types.AffPoison) {
@@ -520,7 +520,7 @@ func (g *GameLoop) manaGain(ch *types.Character) int {
 		gain = gain * ch.InRoom.ManaRate / 90
 	}
 
-	// TODO: Apply furniture bonuses
+	gain = furnitureGain(ch, gain, 4)
 
 	return min(gain, ch.MaxMana-ch.Mana)
 }
@@ -557,6 +557,8 @@ func (g *GameLoop) moveGain(ch *types.Character) int {
 		gain = gain * ch.InRoom.HealRate / 90
 	}
 
+	gain = furnitureGain(ch, gain, 3)
+
 	// Apply status penalties
 	if ch.IsAffected(types.AffPoison) {
 		gain /= 4
@@ -569,6 +571,15 @@ func (g *GameLoop) moveGain(ch *types.Character) int {
 	}
 
 	return min(gain, ch.MaxMove-ch.Move)
+}
+
+// furnitureGain scales regen by the furniture ch is on: v3 heals hit points
+// and moves, v4 mana, in percent of 90 (ROT update.c).
+func furnitureGain(ch *types.Character, gain, value int) int {
+	if ch.On != nil && ch.On.ItemType == types.ItemTypeFurniture {
+		gain = gain * ch.On.Values[value] / 90
+	}
+	return gain
 }
 
 // processAffectDecay handles affect duration decrement and wear-off

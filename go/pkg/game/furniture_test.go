@@ -65,3 +65,29 @@ func TestFurniture(t *testing.T) {
 		t.Error("removing the bench should drop its user")
 	}
 }
+
+// Furniture v3/v4 scale hit, move and mana regen by value/90 (ROT update.c).
+func TestFurnitureRegenBonus(t *testing.T) {
+	g := NewGameLoop()
+	room := types.NewRoom(100, "Inn", "")
+	room.HealRate, room.ManaRate = 90, 90
+	mob := types.NewNPC(1, "mob", 85) // NPC resting gain: 5+level = 90
+	mob.Position = types.PosResting
+	mob.MaxHit, mob.MaxMana, mob.MaxMove = 1000, 1000, 1000
+	CharToRoom(mob, room)
+
+	bed := types.NewObject(1, "a bed", types.ItemTypeFurniture)
+	bed.Values = [5]int{1, 0, types.RestOn, 180, 45}
+	ObjToRoom(bed, room)
+	mob.On = bed
+
+	if got := g.hitGain(mob); got != 180 {
+		t.Errorf("hit gain = %d, want 180", got)
+	}
+	if got := g.manaGain(mob); got != 45 {
+		t.Errorf("mana gain = %d, want 45", got)
+	}
+	if got := g.moveGain(mob); got != 170 { // level 85 * 180/90
+		t.Errorf("move gain = %d, want 170", got)
+	}
+}
