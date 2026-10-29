@@ -95,6 +95,8 @@ type Character struct {
 
 	// NPC-specific
 	MobVnum    int      // Mob template vnum (for NPCs)
+	MobRace    string   // Mob template race; Race indexes PC races only
+	MobGroup   int      // Mob template group: same-group mobs assist each other (0 = none)
 	StartPos   Position // Starting position
 	DefaultPos Position // Default position
 	Special    string   // Special behavior function name (e.g. "spec_cast_mage")
@@ -315,9 +317,15 @@ func (ch *Character) AddAffect(aff *Affect) {
 func (ch *Character) RemoveAffect(aff *Affect) {
 	ch.Modify(aff, -1)
 	ch.Affected.Remove(aff)
-	// Recalculate flags from remaining affects
-	ch.AffectedBy = ch.Affected.GetBitVector()
-	ch.ShieldedBy = ch.Affected.GetShieldVector()
+	ch.DropAffectBits(aff)
+}
+
+// DropAffectBits clears a removed affect's flags, keeping those still granted
+// by other affects (ROT affect_remove + affect_check). Flags no affect gave,
+// like a mob's area-file sanctuary or fire shield, stay put.
+func (ch *Character) DropAffectBits(aff *Affect) {
+	ch.AffectedBy = ch.AffectedBy&^aff.BitVector | ch.Affected.GetBitVector()
+	ch.ShieldedBy = ch.ShieldedBy&^aff.ShieldVector | ch.Affected.GetShieldVector()
 }
 
 // IsGood returns true if alignment is good (>= 350)

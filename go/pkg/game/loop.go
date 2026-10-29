@@ -602,6 +602,15 @@ func (g *GameLoop) areaUpdate() {
 		g.OnAreaReset()
 	}
 
+	// Drop slain mobs before resets add their replacements. Combat only takes
+	// a dead mob out of its room; pruning here, outside any character loop,
+	// keeps the list from growing with every repop.
+	g.mu.Lock()
+	g.Characters = slices.DeleteFunc(g.Characters, func(ch *types.Character) bool {
+		return ch.IsNPC() && ch.Position == types.PosDead && ch.InRoom == nil
+	})
+	g.mu.Unlock()
+
 	// Process area resets
 	if g.Resets != nil && g.Areas != nil {
 		g.Resets.ProcessAreaResets(g.Areas)

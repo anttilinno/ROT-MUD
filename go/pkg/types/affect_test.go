@@ -153,3 +153,33 @@ func TestAffectList(t *testing.T) {
 		}
 	})
 }
+
+// A mob's area-file flags outlive spell affects that wear off it; the worn
+// affect's own flags go unless another affect still grants them.
+func TestRemoveAffectKeepsPermanentFlags(t *testing.T) {
+	ch := NewNPC(1, "mob", 50)
+	ch.AffectedBy.Set(AffSanctuary)
+	ch.ShieldedBy.Set(ShdFire)
+
+	ff := NewAffect("faerie fire", 10, 2, ApplyAC, 20, AffFaerieFire)
+	blind := NewAffect("blindness", 10, 2, ApplyHitroll, -4, AffBlind)
+	again := NewAffect("dirt kicking", 10, 1, ApplyHitroll, -4, AffBlind)
+	ice := &Affect{Type: "iceshield", Duration: 5, ShieldVector: ShdIce}
+	for _, af := range []*Affect{ff, blind, again, ice} {
+		ch.AddAffect(af)
+	}
+
+	ch.RemoveAffect(ff)
+	ch.RemoveAffect(blind)
+	ch.RemoveAffect(ice)
+
+	if !ch.IsAffected(AffSanctuary) || !ch.IsShielded(ShdFire) {
+		t.Error("area-file sanctuary or fire shield lost when an affect wore off")
+	}
+	if ch.IsAffected(AffFaerieFire) || ch.IsShielded(ShdIce) {
+		t.Error("worn-off affect's flag still set")
+	}
+	if !ch.IsAffected(AffBlind) {
+		t.Error("blind cleared while dirt kicking still grants it")
+	}
+}

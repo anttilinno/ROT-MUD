@@ -1,6 +1,6 @@
 """Restore mob fields the TOML conversion dropped, from ROT .are #MOBILES.
 
-Restores alignment, start/default position, mana dice, and merges the ROT
+Restores alignment, mob group (check_assist), start/default position, mana dice, and merges the ROT
 act, affect, shield and off flags into the existing flag lists (ROT names
 mapped to the names the Go loader reads). Re-runnable: managed keys are
 replaced in place, flag lists are unions, mana dice are rewritten.
@@ -71,10 +71,10 @@ def parse_are(path):
             m2 = re.compile(r"\S+").search(text, pos)
             toks.append(m2.group(0))
             pos = m2.end()
-        (act, aff, shd, align, _group, _level, _hitroll, _hitd, manad, _damd, _damtype,
+        (act, aff, shd, align, group, _level, _hitroll, _hitd, manad, _damd, _damtype,
          *_ac, off, _imm, _res, _vuln, spos, dpos, _sex, _wealth, _form, _parts, _size, _mat) = toks
         mobs[vnum] = dict(
-            short=strs[1], align=int(align), mana=dice(manad),
+            short=strs[1], align=int(align), group=int(group), mana=dice(manad),
             act=names(act, ACT), aff=names(aff, AFF) + names(shd, SHIELD_AFF),
             shield=names(shd, SHIELD), off=names(off, OFF),
             start=POS.get(spos, "standing"), default=POS.get(dpos, "standing"),
@@ -98,6 +98,7 @@ def restore_block(lines, t, d):
     """Rewrite one [[mobiles]] block's lines with the ROT fields in d."""
     want = {
         "alignment": str(d["align"]),
+        "group": str(d["group"]) if d["group"] else None,
         "act_flags": toml_list(merge(t.get("act_flags"), d["act"])),
         "affected_by": toml_list(merge(t.get("affected_by"), d["aff"])) if d["aff"] or t.get("affected_by") else None,
         "shield_flags": toml_list(d["shield"]) if d["shield"] else None,

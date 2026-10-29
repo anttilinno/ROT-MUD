@@ -131,6 +131,7 @@ type MobileData struct {
 	Race        string    `toml:"race"`
 	Size        string    `toml:"size"`
 	Alignment   int       `toml:"alignment"`
+	Group       int       `toml:"group"` // ROM mob group: members assist each other
 	ActFlags    []string  `toml:"act_flags"`
 	AffectedBy  []string  `toml:"affected_by"`
 	ShieldFlags []string  `toml:"shield_flags"` // elemental shields: ice, fire, shock

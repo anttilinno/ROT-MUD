@@ -13,6 +13,9 @@ import (
 type ResetSystem struct {
 	World  *loader.World
 	Output OutputFunc
+	// OnSpawn registers a freshly reset mob with the game loop, so it fights,
+	// wanders and ticks like the mobs spawned at boot.
+	OnSpawn func(*types.Character)
 }
 
 // NewResetSystem creates a new reset system
@@ -24,7 +27,7 @@ func NewResetSystem(world *loader.World) *ResetSystem {
 
 // ResetArea resets a single area, spawning mobs and objects according to reset data
 func (r *ResetSystem) ResetArea(area *types.Area) {
-	for _, room := range area.Rooms {
+	for _, room := range area.RoomsInResetOrder() {
 		r.resetRoom(room)
 	}
 	area.Age = 0
@@ -104,6 +107,9 @@ func (r *ResetSystem) executeMobReset(room *types.Room, reset *types.MobReset) {
 		// Place in room
 		mob.InRoom = room
 		room.People = append(room.People, mob)
+		if r.OnSpawn != nil {
+			r.OnSpawn(mob)
+		}
 
 		// Equip the mob with items
 		for _, equipReset := range reset.Equips {

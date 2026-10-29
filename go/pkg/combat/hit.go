@@ -269,6 +269,11 @@ func (c *CombatSystem) ViolenceUpdate(characters []*types.Character) {
 		} else {
 			StopFighting(ch, false)
 		}
+
+		// Fun for the whole family! (ROM violence_update)
+		if victim = ch.Fighting; victim != nil && ch.InRoom != nil {
+			c.checkAssist(ch, victim)
+		}
 	}
 }
 

@@ -323,21 +323,26 @@ func (f *ExitFlags) Remove(flag ExitFlags) {
 type OffFlags uint32
 
 const (
-	OffAreaAttack OffFlags = 1 << iota // Area attack
-	OffBackstab                        // Can backstab
-	OffBash                            // Can bash
-	OffBerserk                         // Can berserk
-	OffDisarm                          // Can disarm
-	OffDodge                           // Can dodge
-	OffFade                            // Can fade
-	OffFast                            // Fast attacks
-	OffKick                            // Can kick
-	OffKickDirt                        // Can kick dirt
-	OffParry                           // Can parry
-	OffRescue                          // Can rescue
-	OffTail                            // Tail attack
-	OffTrip                            // Can trip
-	OffCrush                           // Crush attack
+	OffAreaAttack    OffFlags = 1 << iota // Area attack
+	OffBackstab                           // Can backstab
+	OffBash                               // Can bash
+	OffBerserk                            // Can berserk
+	OffDisarm                             // Can disarm
+	OffDodge                              // Can dodge
+	OffFade                               // Can fade
+	OffFast                               // Fast attacks
+	OffKick                               // Can kick
+	OffKickDirt                           // Can kick dirt
+	OffParry                              // Can parry
+	OffRescue                             // Can rescue
+	OffTail                               // Tail attack
+	OffTrip                               // Can trip
+	OffCrush                              // Crush attack
+	OffAssistAll                          // Assists any mob in a fight (ROM ASSIST_ALL)
+	OffAssistAlign                        // Assists mobs of its alignment
+	OffAssistRace                         // Assists mobs of its race
+	OffAssistPlayers                      // Joins players fighting mobs near its level
+	OffAssistVnum                         // Assists mobs of its own vnum
 )
 
 // Has returns true if the flag is set

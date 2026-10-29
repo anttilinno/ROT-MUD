@@ -1,5 +1,10 @@
 package types
 
+import (
+	"maps"
+	"slices"
+)
+
 // Exit represents a room exit/door
 // Based on EXIT_DATA from merc.h:1876-1890
 type Exit struct {
@@ -233,6 +238,17 @@ type Area struct {
 
 	// Runtime data
 	Rooms map[int]*Room // Rooms in this area (keyed by vnum)
+}
+
+// RoomsInResetOrder returns the area's rooms by ascending vnum, the order
+// ROT reset_area walks them (min_vnum..max_vnum). A fixed order matters:
+// world-max limits make which resets fire depend on who went first.
+func (a *Area) RoomsInResetOrder() []*Room {
+	rooms := make([]*Room, 0, len(a.Rooms))
+	for _, vnum := range slices.Sorted(maps.Keys(a.Rooms)) {
+		rooms = append(rooms, a.Rooms[vnum])
+	}
+	return rooms
 }
 
 // NewArea creates a new area
