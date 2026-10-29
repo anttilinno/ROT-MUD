@@ -2020,8 +2020,10 @@ func spellCharmPerson(caster *types.Character, level int, target interface{}) bo
 		victim.Leader = nil
 	}
 
-	// Set caster as victim's master
+	// Set caster as victim's master and group leader (ROT add_follower +
+	// victim->leader), so the charmie autoassists its master.
 	victim.Master = caster
+	victim.Leader = caster
 
 	af := NewAffectWithBit("charm person", level, level/4+12, types.AffCharm)
 	AddAffect(victim, af)

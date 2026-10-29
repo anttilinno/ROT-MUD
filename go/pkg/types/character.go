@@ -94,6 +94,8 @@ type Character struct {
 
 	// NPC-specific
 	MobVnum    int      // Mob template vnum (for NPCs)
+	MobRace    string   // Mob template race; Race indexes PC races only
+	MobGroup   int      // Mob template group: same-group mobs assist each other (0 = none)
 	StartPos   Position // Starting position
 	DefaultPos Position // Default position
 	Special    string   // Special behavior function name (e.g. "spec_cast_mage")

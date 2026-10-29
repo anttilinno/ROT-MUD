@@ -662,6 +662,8 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	ch.LongDesc = tmpl.LongDesc
 	ch.Desc = tmpl.Description
 	ch.Alignment = tmpl.Alignment
+	ch.MobRace = tmpl.Race
+	ch.MobGroup = tmpl.Group
 	ch.Coin = mobCoinDrop(tmpl)
 	ch.HitRoll = tmpl.Hitroll
 
@@ -850,7 +852,9 @@ var offFlagNames = map[string]types.OffFlags{
 	"berserk": types.OffBerserk, "disarm": types.OffDisarm, "dodge": types.OffDodge,
 	"fade": types.OffFade, "fast": types.OffFast, "kick": types.OffKick, "kick_dirt": types.OffKickDirt,
 	"parry": types.OffParry, "rescue": types.OffRescue, "tail": types.OffTail, "trip": types.OffTrip,
-	"crush": types.OffCrush,
+	"crush": types.OffCrush, "assist_all": types.OffAssistAll, "assist_align": types.OffAssistAlign,
+	"assist_race": types.OffAssistRace, "assist_players": types.OffAssistPlayers,
+	"assist_vnum": types.OffAssistVnum,
 }
 
 func parseOffFlags(names []string) (flags types.OffFlags) {
