@@ -10,13 +10,13 @@ sharp talons flex as she considers you for her dinner."""
 level = 40
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1525
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 3
@@ -27,6 +27,11 @@ alignment = 0
   number = 2
   size = 8
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9102
@@ -41,13 +46,13 @@ her presence."""
 level = 46
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2125
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
-alignment = 0
+alignment = -750
 
   [mobiles.hit_dice]
   number = 5
@@ -58,6 +63,11 @@ alignment = 0
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9103
@@ -70,7 +80,7 @@ because objects behind it seem to waver and are slightly blurred."""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "none"
@@ -88,6 +98,11 @@ alignment = 0
   size = 10
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9104
 keywords = ["oldstyle", "mysterious", "efreeti"]
@@ -99,13 +114,13 @@ finest ghostly silks and a headdress with an elaborate brooch."""
 level = 53
 hitroll = 0
 ac = [-80, -80, -80, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2500
 sex = "none"
 act_flags = ["npc", "scavenger"]
-affected_by = ["detect_invis", "sneak"]
-alignment = 0
+affected_by = ["detect_invis", "sneak", "sanctuary"]
+alignment = -100
 
   [mobiles.hit_dice]
   number = 5
@@ -117,6 +132,11 @@ alignment = 0
   size = 4
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 13
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9105
 keywords = ["oldstyle", "roc"]
@@ -127,12 +147,12 @@ This bird has a wingspan that stretches several spear-lengths.  Itmoves surprisi
 level = 48
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = 50
 
   [mobiles.hit_dice]
   number = 5
@@ -143,6 +163,11 @@ alignment = 0
   number = 2
   size = 10
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9106
@@ -155,12 +180,12 @@ moves surprisingly fast for something of its size."""
 level = 55
 hitroll = 0
 ac = [-80, -80, -80, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2000
 sex = "male"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = 50
 
   [mobiles.hit_dice]
   number = 6
@@ -171,6 +196,11 @@ alignment = 0
   number = 5
   size = 4
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 14
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9107
@@ -184,13 +214,13 @@ they would be quite painful.  Her eyes pierce your very soul."""
 level = 61
 hitroll = 0
 ac = [-100, -100, -100, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 3000
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -600
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -202,4 +232,9 @@ special = "spec_cast_undead"
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
 

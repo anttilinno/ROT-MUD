@@ -7,10 +7,11 @@ description = """
 Hiryuu is a beautiful silvery Dragon.  This one is
 quite loyal to her master, the great Platinum Dragon."""
 level = 102
+start_pos = "resting"
 hitroll = 999
 ac = [-9990, -9990, -9990, -9990]
 damage_type = "slash"
-off_flags = ["area_attack", "berserk", "fade", "fast", "rescue", "tail"]
+off_flags = ["area_attack", "berserk", "fade", "fast", "rescue", "tail", "assist_players"]
 imm_flags = ["charm", "bash", "fire", "acid", "poison", "disease", "drowning"]
 res_flags = ["charm", "magic", "bash", "slash", "fire", "cold", "negative", "holy", "energy", "mental", "light"]
 vuln_flags = ["weapon", "pierce", "cold", "lightning", "silver"]
@@ -18,9 +19,9 @@ size = "giant"
 race = "dragon"
 gold = 10000
 sex = "female"
-act_flags = ["npc", "sentinel", "stay_area", "train", "practice", "cleric", "mage", "warrior", "no_purge"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "pass_door", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "sentinel", "stay_area", "train", "practice", "cleric", "mage", "warrior", "no_purge", "undead", "healer", "gain", "update_always", "changer"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "pass_door", "dark_vision", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_janitor"
 
   [mobiles.hit_dice]
@@ -32,6 +33,11 @@ special = "spec_janitor"
   number = 1
   size = 1
   bonus = 999
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 29999
 
 [[mobiles]]
 vnum = 19901
@@ -47,7 +53,7 @@ level = 110
 hitroll = 999
 ac = [-500, -500, -500, -500]
 damage_type = "slash"
-off_flags = ["area_attack", "berserk", "fade", "tail", "crush"]
+off_flags = ["area_attack", "berserk", "fade", "tail", "crush", "assist_race"]
 imm_flags = ["summon", "charm", "bash", "fire", "cold", "poison", "disease"]
 res_flags = ["magic", "weapon", "slash", "fire", "cold", "acid", "energy", "mental"]
 vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
@@ -55,9 +61,9 @@ size = "giant"
 race = "draconian"
 gold = 1000
 sex = "male"
-act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage", "warrior", "no_purge"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "sneak", "hide", "flying", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage", "warrior", "no_purge", "undead", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "sneak", "hide", "flying", "dark_vision", "farsight", "berserk", "invisible", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -70,6 +76,11 @@ special = "spec_breath_any"
   size = 19
   bonus = 150
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 32000
+
 [[mobiles]]
 vnum = 19902
 keywords = ["level", "82", "mage"]
@@ -80,19 +91,20 @@ This is the weakest of the magical beings of the Fanatics' Tower.  It has
 devoted its life to the 11th {8Draconian {4ArchMage{0.  Its robes are inlaid
 with beautiful designs."""
 level = 82
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 125
 ac = [-200, -200, -200, -200]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 526
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -105,6 +117,11 @@ special = "spec_breath_any"
   size = 8
   bonus = 50
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 2000
+
 [[mobiles]]
 vnum = 19903
 keywords = ["level", "88", "mage"]
@@ -115,19 +132,20 @@ This is the second weakest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 10th {8Draconian {4ArchMage{0.  Its robes
 are inlaid with beautiful designs."""
 level = 88
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 150
 ac = [-210, -210, -210, -210]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 526
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -140,6 +158,11 @@ special = "spec_breath_any"
   size = 4
   bonus = 60
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 2750
+
 [[mobiles]]
 vnum = 19904
 keywords = ["level", "92", "mage"]
@@ -150,19 +173,20 @@ This is an ugly mage, one of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 9th {8Draconian {4ArchMage{0.  Its robes
 are inlaid with beautiful designs."""
 level = 92
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 175
 ac = [-220, -220, -220, -220]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 678
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -175,6 +199,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 75
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 3250
+
 [[mobiles]]
 vnum = 19905
 keywords = ["level", "98", "mage"]
@@ -185,19 +214,20 @@ This is a great mage, one of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 8th {8Draconian {4ArchMage{0.  Its robes
 are inlaid with beautiful designs."""
 level = 98
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 200
 ac = [-230, -230, -230, -230]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 900
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -210,6 +240,11 @@ special = "spec_breath_any"
   size = 10
   bonus = 80
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 4000
+
 [[mobiles]]
 vnum = 19906
 keywords = ["level", "102", "mage"]
@@ -220,19 +255,20 @@ This is one of the happiest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 7th {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 102
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 225
 ac = [-250, -250, -250, -250]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 978
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -244,6 +280,11 @@ special = "spec_breath_any"
   number = 6
   size = 7
   bonus = 90
+
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 5500
 
 [[mobiles]]
 vnum = 19907
@@ -258,16 +299,16 @@ level = 106
 hitroll = 250
 ac = [-300, -300, -300, -300]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 1005
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -280,6 +321,11 @@ special = "spec_breath_any"
   size = 4
   bonus = 100
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 7500
+
 [[mobiles]]
 vnum = 19908
 keywords = ["level", "110", "mage"]
@@ -290,19 +336,20 @@ This is an evil being from the magical beings of the Fanatics' Tower.  It has
 devoted its life to the 5th {8Draconian {4ArchMage{0.  Its robes are inlaid
 with beautiful designs."""
 level = 110
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 275
 ac = [-320, -320, -320, -320]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 1042
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -315,6 +362,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 110
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 9500
+
 [[mobiles]]
 vnum = 19909
 keywords = ["level", "114", "mage"]
@@ -325,19 +377,20 @@ This is a strong mage from the Fanatics' Tower.  It has devoted its life
 to the 4th {8Draconian {4ArchMage{0.  Its robes are inlaid with beautiful
 designs."""
 level = 114
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 300
 ac = [-350, -350, -350, -350]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 1152
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -350,6 +403,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 120
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 11500
+
 [[mobiles]]
 vnum = 19910
 keywords = ["level", "118", "mage"]
@@ -360,19 +418,20 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 3rd {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 118
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 325
 ac = [-370, -370, -370, -370]
 damage_type = "energy"
-off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush"]
+off_flags = ["backstab", "dodge", "fade", "kick_dirt", "crush", "assist_all"]
 imm_flags = ["weapon", "bash", "pierce"]
 res_flags = ["charm", "fire", "cold", "acid"]
 vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light", "silver"]
 race = "human"
 gold = 1459
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -385,6 +444,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 130
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 13500
+
 [[mobiles]]
 vnum = 19911
 keywords = ["level", "122", "mage"]
@@ -395,6 +459,7 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 2nd {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 122
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 325
 ac = [-400, -400, -400, -400]
 damage_type = "energy"
@@ -405,9 +470,9 @@ vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light
 race = "human"
 gold = 1700
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -420,6 +485,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 140
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 15500
+
 [[mobiles]]
 vnum = 19912
 keywords = ["level", "126", "mage"]
@@ -430,6 +500,7 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 126
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 350
 ac = [-420, -420, -420, -420]
 damage_type = "energy"
@@ -440,9 +511,9 @@ vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light
 race = "human"
 gold = 1865
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying", "haste"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "haste", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -455,6 +526,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 150
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 17500
+
 [[mobiles]]
 vnum = 19913
 keywords = ["level", "132", "mage"]
@@ -465,6 +541,7 @@ This is one of the strongest of the magical beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its robes are
 inlaid with beautiful designs."""
 level = 132
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 375
 ac = [-450, -450, -450, -450]
 damage_type = "energy"
@@ -475,9 +552,9 @@ vuln_flags = ["magic", "slash", "lightning", "poison", "holy", "disease", "light
 race = "human"
 gold = 1840
 sex = "either"
-act_flags = ["npc", "stay_area", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "stay_area", "mage", "update_always"]
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -490,6 +567,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 160
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 21500
+
 [[mobiles]]
 vnum = 19914
 keywords = ["level", "82", "warrior"]
@@ -500,19 +582,20 @@ This is the weakest of the war-like beings of the Fanatics' Tower.  It has
 devoted its life to the 11th {8Draconian {4ArchMage{0.  Its armour has been
 etched with some beautiful designs."""
 level = 82
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 125
 ac = [-200, -200, -200, -200]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 529
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -525,6 +608,11 @@ special = "spec_breath_lightning"
   size = 8
   bonus = 50
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 2000
+
 [[mobiles]]
 vnum = 19915
 keywords = ["level", "88", "warrior"]
@@ -535,19 +623,20 @@ This is the second weakest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 10th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 88
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 150
 ac = [-210, -210, -210, -210]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 634
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -560,6 +649,11 @@ special = "spec_breath_lightning"
   size = 4
   bonus = 60
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 2750
+
 [[mobiles]]
 vnum = 19916
 keywords = ["level", "92", "warrior"]
@@ -570,19 +664,20 @@ This is an ugly mob, one of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 9th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 92
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 175
 ac = [-220, -220, -220, -220]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 758
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -595,6 +690,11 @@ special = "spec_breath_lightning"
   size = 6
   bonus = 70
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 3250
+
 [[mobiles]]
 vnum = 19917
 keywords = ["level", "98", "warrior"]
@@ -605,19 +705,20 @@ This is a great warrior, one of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 8th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 98
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 200
 ac = [-210, -210, -210, -210]
 damage_type = "slash"
-off_flags = ["berserk", "disarm", "parry", "crush"]
+off_flags = ["berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 849
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -630,6 +731,11 @@ special = "spec_breath_lightning"
   size = 10
   bonus = 80
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 4000
+
 [[mobiles]]
 vnum = 19918
 keywords = ["level", "102", "warrior"]
@@ -640,19 +746,20 @@ This is one of the happiest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 7th {8Draconian {4ArchMage{0.  Its armour
 has been etched with some beautiful designs."""
 level = 102
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 225
 ac = [-250, -250, -250, -250]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 814
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -665,6 +772,11 @@ special = "spec_breath_lightning"
   size = 7
   bonus = 90
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 5500
+
 [[mobiles]]
 vnum = 19919
 keywords = ["level", "106", "warrior"]
@@ -675,19 +787,20 @@ This is one of the war-like beings of the Fanatics' Tower.  It has devoted
 its life to the 6th {8Draconian {4ArchMage{0.  Its armour has been etched
 with some beautiful designs."""
 level = 106
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 250
 ac = [-300, -300, -300, -300]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 950
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -700,6 +813,11 @@ special = "spec_breath_lightning"
   size = 4
   bonus = 100
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 7500
+
 [[mobiles]]
 vnum = 19920
 keywords = ["level", "110", "warrior"]
@@ -710,19 +828,20 @@ This is an evil being from the war-like beings of the Fanatics' Tower.  It has
 devoted its life to the 5th {8Draconian {4ArchMage{0.  Its armour has been
 etched with some beautiful designs."""
 level = 110
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 275
 ac = [-320, -320, -320, -320]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 995
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -735,6 +854,11 @@ special = "spec_breath_lightning"
   size = 6
   bonus = 110
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 9500
+
 [[mobiles]]
 vnum = 19921
 keywords = ["level", "114", "warrior"]
@@ -745,19 +869,20 @@ This is a strong warrior from the Fanatics' Tower.  It has devoted its life
 to the 4th {8Draconian {4ArchMage{0.  Its armour has been etched with some
 beautiful designs."""
 level = 114
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 300
 ac = [-350, -350, -350, -350]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 1043
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -770,6 +895,11 @@ special = "spec_breath_lightning"
   size = 6
   bonus = 120
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 11500
+
 [[mobiles]]
 vnum = 19922
 keywords = ["level", "118", "warrior"]
@@ -780,19 +910,20 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 3rd {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 118
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 325
 ac = [-370, -370, -370, -370]
 damage_type = "slash"
-off_flags = ["backstab", "berserk", "disarm", "parry", "crush"]
+off_flags = ["backstab", "berserk", "disarm", "parry", "crush", "assist_all"]
 imm_flags = ["magic", "poison", "disease"]
 res_flags = ["charm", "bash", "fire", "cold"]
 vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 1120
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -805,6 +936,11 @@ special = "spec_breath_lightning"
   size = 6
   bonus = 130
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 13500
+
 [[mobiles]]
 vnum = 19923
 keywords = ["level", "122", "warrior"]
@@ -815,6 +951,7 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 2nd {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 122
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 350
 ac = [-400, -400, -400, -400]
 damage_type = "slash"
@@ -825,9 +962,9 @@ vuln_flags = ["magic", "weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 1169
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -840,6 +977,11 @@ special = "spec_breath_lightning"
   size = 6
   bonus = 140
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 15500
+
 [[mobiles]]
 vnum = 19924
 keywords = ["level", "126", "warrior"]
@@ -850,6 +992,7 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 126
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 375
 ac = [-420, -420, -420, -420]
 damage_type = "slash"
@@ -860,9 +1003,9 @@ vuln_flags = ["magic", "weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 1534
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared", "haste"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "haste", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -875,6 +1018,11 @@ special = "spec_breath_lightning"
   size = 6
   bonus = 150
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 17500
+
 [[mobiles]]
 vnum = 19925
 keywords = ["level", "132", "warrior"]
@@ -885,6 +1033,7 @@ This is one of the strongest of the war-like beings of the Fanatics' Tower.
 It has devoted its life to the 1st {8Draconian {4ArchMage{0.  Its armour has
 been etched with some beautiful designs."""
 level = 132
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 400
 ac = [-450, -450, -450, -450]
 damage_type = "slash"
@@ -895,9 +1044,9 @@ vuln_flags = ["weapon", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 1923
 sex = "either"
-act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_hidden", "infrared", "haste"]
-alignment = 0
+act_flags = ["npc", "stay_area", "warrior", "update_always"]
+affected_by = ["detect_hidden", "infrared", "haste", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -909,6 +1058,11 @@ special = "spec_breath_lightning"
   number = 8
   size = 6
   bonus = 160
+
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 21500
 
 [[mobiles]]
 vnum = 19926
@@ -928,9 +1082,9 @@ res_flags = ["charm"]
 race = "elf"
 gold = 9999
 sex = "female"
-act_flags = ["npc", "sentinel", "stay_area", "train", "practice", "cleric", "mage", "warrior", "no_purge"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "pass_door", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "sentinel", "stay_area", "train", "practice", "cleric", "mage", "warrior", "no_purge", "healer", "gain", "update_always", "changer"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flying", "pass_door", "dark_vision", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_adept"
 
   [mobiles.hit_dice]
@@ -943,6 +1097,11 @@ special = "spec_cast_adept"
   size = 1
   bonus = 9999
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 29999
+
 [[mobiles]]
 vnum = 19927
 keywords = ["draconian", "archmage"]
@@ -952,10 +1111,12 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated by Artema..."""
 level = 90
+start_pos = "sleeping"
+default_pos = "resting"
 hitroll = 150
 ac = [-300, -300, -300, -300]
 damage_type = "slash"
-off_flags = ["area_attack", "backstab", "berserk", "fade", "tail"]
+off_flags = ["area_attack", "backstab", "berserk", "fade", "tail", "assist_all"]
 imm_flags = ["summon", "charm", "bash", "poison", "disease"]
 res_flags = ["fire", "cold", "acid"]
 vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
@@ -963,9 +1124,9 @@ size = "giant"
 race = "draconian"
 gold = 10000
 sex = "male"
-act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior", "undead", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "dark_vision", "farsight", "protect_good"]
+alignment = -1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -978,6 +1139,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 30
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 3000
+
 [[mobiles]]
 vnum = 19928
 keywords = ["draconian", "archmage"]
@@ -987,10 +1153,13 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated so long ago..."""
 level = 95
+shield_flags = ["ice", "fire", "shock"]
+start_pos = "sleeping"
+default_pos = "resting"
 hitroll = 200
 ac = [-220, -220, -220, -220]
 damage_type = "slash"
-off_flags = ["area_attack", "berserk", "fade", "tail"]
+off_flags = ["area_attack", "berserk", "fade", "tail", "assist_all"]
 imm_flags = ["summon", "charm", "bash", "poison", "disease"]
 res_flags = ["fire", "cold", "acid"]
 vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
@@ -998,9 +1167,9 @@ size = "giant"
 race = "draconian"
 gold = 10000
 sex = "male"
-act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior", "undead", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision", "farsight", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1013,6 +1182,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 50
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 3625
+
 [[mobiles]]
 vnum = 19929
 keywords = ["draconian", "archmage"]
@@ -1022,10 +1196,13 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated so long ago..."""
 level = 105
+shield_flags = ["ice", "fire", "shock"]
+start_pos = "sleeping"
+default_pos = "resting"
 hitroll = 250
 ac = [-500, -500, -500, -500]
 damage_type = "slash"
-off_flags = ["area_attack", "berserk", "fade", "tail"]
+off_flags = ["area_attack", "berserk", "fade", "tail", "assist_all"]
 imm_flags = ["summon", "charm", "bash", "poison", "disease"]
 res_flags = ["fire", "cold", "acid"]
 vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
@@ -1033,9 +1210,9 @@ size = "giant"
 race = "draconian"
 gold = 10000
 sex = "male"
-act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior", "undead", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision", "farsight", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1048,6 +1225,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 60
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 7000
+
 [[mobiles]]
 vnum = 19930
 keywords = ["draconian", "archmage"]
@@ -1057,10 +1239,13 @@ description = """
 The Avatar of a long defeated {8Draconian {4ArchMage{0 is here pondering
 how he could have been defeated so long ago..."""
 level = 115
+shield_flags = ["ice", "fire", "shock"]
+start_pos = "sleeping"
+default_pos = "resting"
 hitroll = 300
 ac = [-300, -300, -300, -300]
 damage_type = "slash"
-off_flags = ["area_attack", "berserk", "fade", "tail"]
+off_flags = ["area_attack", "berserk", "fade", "tail", "assist_all"]
 imm_flags = ["summon", "charm", "bash", "poison", "disease"]
 res_flags = ["fire", "cold", "acid"]
 vuln_flags = ["pierce", "slash", "lightning", "negative", "holy", "drowning", "light", "silver"]
@@ -1068,9 +1253,9 @@ size = "giant"
 race = "draconian"
 gold = 10000
 sex = "male"
-act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior", "undead", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "flaming", "flying", "haste", "dark_vision", "farsight", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1083,6 +1268,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 80
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 11500
+
 [[mobiles]]
 vnum = 19931
 keywords = ["level", "82", "thief"]
@@ -1091,6 +1281,8 @@ long_desc = "A thief is here, determined to kill you dead!"
 description = """
 This is the weakest of the thieving beings of the Fanatics' Tower.  It has devoted its life to the 11th {bDraconian {DArchMage{x.  Its coat is inlaid with strange designs."""
 level = 82
+affected_by = ["sanctuary", "protect_good"]
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 125
 ac = [-200, -200, -200, -200]
 damage_type = "pierce"
@@ -1102,7 +1294,7 @@ race = "human"
 gold = 0
 sex = "either"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1115,6 +1307,11 @@ special = "spec_breath_fire"
   size = 8
   bonus = 50
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 2000
+
 [[mobiles]]
 vnum = 19932
 keywords = ["level", "88", "thief"]
@@ -1123,19 +1320,20 @@ long_desc = "A fanatical thief is here, ready to stab your heart!"
 description = """
 This is the second weakest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 10th Draconian ArchMage.  It's cloak has been enlaid with beautiful designs."""
 level = 88
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 150
 ac = [-210, -210, -210, -210]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1148,6 +1346,11 @@ special = "spec_breath_fire"
   size = 4
   bonus = 60
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 2750
+
 [[mobiles]]
 vnum = 19933
 keywords = ["level", "92", "thief"]
@@ -1156,19 +1359,20 @@ long_desc = "An ugly thief is here, ready to stab your heart!"
 description = """
 This is an ugly mob, one of the thieving beings of the Fanatics' Tower. It has devoted its life to the 9th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 92
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 175
 ac = [-220, -220, -220, -220]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "assist_all"]
 imm_flags = ["bash", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1181,6 +1385,11 @@ special = "spec_breath_fire"
   size = 6
   bonus = 70
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 10
+  bonus = 3250
+
 [[mobiles]]
 vnum = 19934
 keywords = ["level", "98", "thief"]
@@ -1189,19 +1398,20 @@ long_desc = "A great thief is here, ready to stab your heart!"
 description = """
 This is a great thief, one of the thieving beings of the Fanatics' Tower. It has devoted its life to the 8th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 98
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 200
 ac = [-220, -220, -220, -220]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1214,6 +1424,11 @@ special = "spec_breath_fire"
   size = 10
   bonus = 80
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 4000
+
 [[mobiles]]
 vnum = 19935
 keywords = ["level", "102", "thief"]
@@ -1222,19 +1437,20 @@ long_desc = "A grinning thief is here, ready to stab your heart!"
 description = """
 This is one of the happiest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 7th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 102
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 225
 ac = [-250, -250, -250, -250]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1247,6 +1463,11 @@ special = "spec_breath_fire"
   size = 7
   bonus = 90
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 5500
+
 [[mobiles]]
 vnum = 19936
 keywords = ["level", "106", "thief"]
@@ -1255,19 +1476,20 @@ long_desc = "A thief is here, ready to stab your heart!"
 description = """
 This is one of the thieving beings of the Fanatics' Tower.  It has devoted its life to the 6th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 106
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 250
 ac = [-300, -300, -300, -300]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1280,6 +1502,11 @@ special = "spec_breath_fire"
   size = 4
   bonus = 100
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 7500
+
 [[mobiles]]
 vnum = 19937
 keywords = ["level", "110", "thief"]
@@ -1288,19 +1515,20 @@ long_desc = "An evil thief is here, ready to stab your heart!"
 description = """
 This is an evil being from the thieving beings of the Fanatics' Tower.  It has devoted its life to the 5th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 110
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 275
 ac = [-320, -320, -320, -320]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1313,6 +1541,11 @@ special = "spec_breath_fire"
   size = 6
   bonus = 110
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 9500
+
 [[mobiles]]
 vnum = 19938
 keywords = ["level", "114", "thief"]
@@ -1321,19 +1554,20 @@ long_desc = "A strong thief is here, ready to stab your heart!"
 description = """
 This is a strong thief from the Fanatics' Tower.  It has devoted its life to the 4th Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 114
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 300
 ac = [-350, -350, -350, -350]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1346,6 +1580,11 @@ special = "spec_breath_fire"
   size = 6
   bonus = 120
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 11500
+
 [[mobiles]]
 vnum = 19939
 keywords = ["level", "118", "thief"]
@@ -1354,19 +1593,20 @@ long_desc = "A powerful thief is here, ready to stab your heart!"
 description = """
 This is one of the strongest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 3rd Draconian ArchMage.  Its armour has been inlaid with some beautiful designs."""
 level = 118
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 325
 ac = [-370, -370, -370, -370]
 damage_type = "pierce"
-off_flags = ["backstab", "berserk", "disarm", "dodge", "kick", "parry", "trip"]
+off_flags = ["backstab", "berserk", "disarm", "dodge", "kick", "parry", "trip", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1379,6 +1619,11 @@ special = "spec_breath_fire"
   size = 6
   bonus = 130
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 13500
+
 [[mobiles]]
 vnum = 19940
 keywords = ["level", "122", "thief"]
@@ -1390,16 +1635,16 @@ level = 122
 hitroll = 350
 ac = [-400, -400, -400, -400]
 damage_type = "pierce"
-off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick", "parry", "trip", "assist_all"]
 imm_flags = ["bash", "poison", "disease"]
 res_flags = ["charm", "pierce", "fire", "cold"]
 vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "berserk", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1412,6 +1657,11 @@ special = "spec_breath_fire"
   size = 6
   bonus = 140
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 15500
+
 [[mobiles]]
 vnum = 19941
 keywords = ["level", "126", "thief"]
@@ -1420,6 +1670,7 @@ long_desc = "A very powerful thief is here, ready to stab your heart!"
 description = """
 This is one of the strongest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 1st Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 126
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 375
 ac = [-420, -420, -420, -420]
 damage_type = "pierce"
@@ -1430,9 +1681,9 @@ vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "haste", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1445,6 +1696,11 @@ special = "spec_breath_fire"
   size = 6
   bonus = 150
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 17500
+
 [[mobiles]]
 vnum = 19942
 keywords = ["level", "132", "thief"]
@@ -1453,6 +1709,7 @@ long_desc = "One of the strongest thieves is here, ready to stab your heart!"
 description = """
 This is one of the strongest of the thieving beings of the Fanatics' Tower. It has devoted its life to the 1st Draconian ArchMage.  Its cloak has been inlaid with some beautiful designs."""
 level = 132
+shield_flags = ["ice", "fire", "shock"]
 hitroll = 400
 ac = [-450, -450, -450, -450]
 damage_type = "pierce"
@@ -1463,9 +1720,9 @@ vuln_flags = ["magic", "lightning", "acid", "holy", "light"]
 race = "human"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+act_flags = ["npc", "stay_area", "update_always"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "haste", "berserk", "sanctuary", "protect_good"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1477,4 +1734,9 @@ special = "spec_breath_fire"
   number = 8
   size = 6
   bonus = 160
+
+  [mobiles.mana_dice]
+  number = 50
+  size = 10
+  bonus = 21500
 

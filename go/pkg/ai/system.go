@@ -150,7 +150,7 @@ func (a *AISystem) defaultBehavior(ch *types.Character) bool {
 	}
 
 	// Wander behavior - move randomly
-	if !ch.Act.Has(types.ActSentinel) && ch.Fighting == nil && ch.InRoom != nil {
+	if !ch.Act.Has(types.ActSentinel) && ch.Position == types.PosStanding && ch.Fighting == nil && ch.InRoom != nil {
 		if combat.NumberBits(4) == 0 {
 			// Pick a random exit
 			exits := ch.InRoom.ExitDirections()

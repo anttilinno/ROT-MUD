@@ -10,7 +10,7 @@ undetectable as it moves."""
 level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "dog"
 gold = 0
 sex = "none"
@@ -28,6 +28,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7801
 keywords = ["oldstyle", "elf", "valley"]
@@ -41,7 +46,7 @@ noticing him, and quietly disappears."""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
@@ -59,6 +64,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7802
@@ -71,7 +81,7 @@ She glares at you, then quickly disappears before you see more of her."""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
@@ -90,6 +100,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7803
 keywords = ["oldstyle", "elf", "sentry", "valley"]
@@ -101,7 +116,7 @@ He glares at your intrusion and attacks with menace."""
 level = 14
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
@@ -120,6 +135,11 @@ alignment = 0
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7804
 keywords = ["oldstyle", "elf", "sentry", "valley"]
@@ -131,7 +151,7 @@ She glares at your intrusion and attacks with menace."""
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
@@ -150,6 +170,11 @@ alignment = 0
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7805
 keywords = ["oldstyle", "elf", "scout", "valley"]
@@ -160,7 +185,7 @@ The elf notices your intrusion and attacks with determination."""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
@@ -179,6 +204,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7806
 keywords = ["oldstyle", "elf", "valley"]
@@ -190,7 +220,7 @@ when you are in her way."""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
@@ -209,6 +239,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7807
 keywords = ["oldstyle", "elf", "elder", "valley"]
@@ -220,13 +255,13 @@ quite potent, though."""
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "cleric"]
-affected_by = ["infrared"]
+affected_by = ["infrared", "sanctuary", "protect_evil"]
 alignment = 0
 special = "spec_cast_cleric"
 
@@ -240,6 +275,11 @@ special = "spec_cast_cleric"
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7808
 keywords = ["oldstyle", "elf", "elder", "valley"]
@@ -251,13 +291,13 @@ quite potent, though."""
 level = 30
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["charm"]
 race = "elf"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "mage"]
-affected_by = ["infrared"]
+affected_by = ["infrared", "protect_evil"]
 alignment = 0
 special = "spec_cast_mage"
 
@@ -271,6 +311,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7809
 keywords = ["oldstyle", "pyrohydra", "pyro", "hydra"]
@@ -282,7 +327,7 @@ regular dragon, too.  It doesn't look happy."""
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -300,6 +345,11 @@ special = "spec_breath_fire"
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7810
 keywords = ["oldstyle", "hermit", "man", "old"]
@@ -309,7 +359,7 @@ description = "He looks old and feeble."
 level = 5
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
@@ -326,6 +376,11 @@ alignment = 0
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7811
 keywords = ["oldstyle", "talemon", "wizard", "mage"]
@@ -336,7 +391,7 @@ Talemon looks harmless, but the fireballs he throws at you don't."""
 level = 50
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
@@ -354,6 +409,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7812
 keywords = ["oldstyle", "guardian", "daemon"]
@@ -365,12 +425,12 @@ anger at you!"""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 5
@@ -382,6 +442,11 @@ alignment = 0
   size = 10
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7813
 keywords = ["oldstyle", "wolf"]
@@ -392,7 +457,7 @@ The wolf is covered with brown hair.  It looks at you with fright."""
 level = 7
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "wolf"
 gold = 0
 sex = "none"
@@ -410,6 +475,11 @@ alignment = 0
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7814
 keywords = ["oldstyle", "antelope"]
@@ -421,7 +491,7 @@ image of ... an antelope."""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -437,4 +507,9 @@ alignment = 0
   number = 1
   size = 7
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 

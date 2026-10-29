@@ -9,7 +9,7 @@ skeleton looks very mindless but still dangerous ..."""
 level = 1
 hitroll = 0
 ac = [90, 90, 90, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
@@ -27,6 +27,11 @@ special = "spec_cast_undead"
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3401
 keywords = ["oldstyle", "undead", "zombie"]
@@ -39,13 +44,13 @@ human."""
 level = 8
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = -100
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -58,6 +63,11 @@ special = "spec_cast_undead"
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3402
 keywords = ["oldstyle", "undead", "ghoul"]
@@ -69,13 +79,13 @@ he looks like he hasn't forgot his fighting skills."""
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 7
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -500
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -87,6 +97,11 @@ special = "spec_cast_undead"
   number = 1
   size = 7
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3403
@@ -100,13 +115,13 @@ in his eyes."""
 level = 23
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "invisible"]
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -119,6 +134,11 @@ special = "spec_cast_undead"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3404
 keywords = ["oldstyle", "undead", "guardian", "vampire"]
@@ -130,13 +150,13 @@ arms raises. He looks mighty tough to be just a minor minion."""
 level = 55
 hitroll = 0
 ac = [-80, -80, -80, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 750
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -148,6 +168,11 @@ special = "spec_cast_undead"
   number = 5
   size = 4
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 14
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3405
@@ -161,13 +186,13 @@ this man has a sacred beauty.  You see a halo around his head."""
 level = 30
 hitroll = 0
 ac = [-20, -20, -20, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 20
 sex = "male"
 act_flags = ["npc", "sentinel", "undead", "cleric", "druid"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -179,6 +204,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 5
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3406
@@ -194,12 +224,12 @@ beings sometimes walk on all their legs and sometimes on the hind pair only."""
 level = 24
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 32
 sex = "none"
 act_flags = ["npc", "aggressive"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -210,6 +240,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3407
@@ -225,13 +260,13 @@ it has no face, only a suggestive blackness where a face ought to be ..."""
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 7
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["sneak", "hide"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -243,6 +278,11 @@ special = "spec_cast_undead"
   number = 2
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3408
@@ -258,13 +298,13 @@ voices.  A hunting horror is HUGE, normally around 40 feet long."""
 level = 40
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 100
 sex = "none"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -277,6 +317,11 @@ special = "spec_cast_undead"
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3409
 keywords = ["oldstyle", "weeds"]
@@ -286,7 +331,7 @@ description = "Just some unpleasant looking vine-like growths ..."
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 4
 sex = "none"
@@ -304,6 +349,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3410
 keywords = ["oldstyle", "snapper", "joe"]
@@ -316,13 +366,13 @@ He is called up from his service in hell in order to aid the Undying One."""
 level = 40
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 111
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -334,6 +384,11 @@ special = "spec_cast_undead"
   number = 2
   size = 8
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3411
@@ -349,13 +404,13 @@ lead you to believe that he knew that you were coming."""
 level = 33
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 78
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -367,6 +422,11 @@ special = "spec_cast_undead"
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3412
@@ -384,13 +444,13 @@ softly into the air:
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 350
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -403,6 +463,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3413
 keywords = ["oldstyle", "rock", "slug"]
@@ -413,7 +478,7 @@ It is a large brownish slug.  Got any salt?  Didn't think so ..."""
 level = 5
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -429,6 +494,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3414
@@ -448,15 +518,17 @@ Would you like hot or cold tea?  Yes the weather is ...'
 
 And on he babbles ..."""
 level = 9
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [60, 60, 60, 80]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["blind"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -468,6 +540,11 @@ special = "spec_cast_mage"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3415
@@ -483,13 +560,13 @@ resting on the shoulder of the etcher ... her husband."""
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 6
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["hide"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -502,6 +579,11 @@ special = "spec_cast_undead"
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3416
 keywords = ["oldstyle", "body"]
@@ -512,12 +594,12 @@ YUK! It's ugly, disgusting ... it smells ... it also moves a bit!"""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 4
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
-alignment = 0
+alignment = -350
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -529,4 +611,9 @@ special = "spec_cast_undead"
   number = 1
   size = 7
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 

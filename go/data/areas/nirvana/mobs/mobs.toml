@@ -9,7 +9,7 @@ level = 16
 hitroll = 0
 ac = [40, 30, 40, 50]
 damage_type = "bash"
-off_flags = ["trip"]
+off_flags = ["trip", "assist_align", "assist_race"]
 imm_flags = ["charm", "negative", "holy", "mental", "disease"]
 res_flags = ["fire", "cold", "acid"]
 race = "modron"
@@ -17,7 +17,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "scavenger", "stay_area"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 3
@@ -29,6 +29,11 @@ alignment = 0
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 9001
 keywords = ["quadrone"]
@@ -39,7 +44,7 @@ level = 21
 hitroll = 3
 ac = [10, 0, 10, 20]
 damage_type = "bash"
-off_flags = ["bash", "disarm", "parry"]
+off_flags = ["bash", "disarm", "parry", "assist_align", "assist_race"]
 imm_flags = ["charm", "negative", "holy", "mental", "disease"]
 res_flags = ["fire", "cold", "acid"]
 race = "modron"
@@ -47,7 +52,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 14
@@ -58,6 +63,11 @@ alignment = 0
   number = 3
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 9002
@@ -70,7 +80,7 @@ level = 27
 hitroll = 3
 ac = [-20, -20, 0, -10]
 damage_type = "bash"
-off_flags = ["bash", "disarm", "dodge", "rescue", "trip"]
+off_flags = ["bash", "disarm", "dodge", "rescue", "trip", "assist_align", "assist_race"]
 imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["fire", "cold", "acid"]
 race = "modron"
@@ -78,7 +88,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 15
@@ -90,6 +100,11 @@ alignment = 0
   size = 4
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 9003
 keywords = ["decaton"]
@@ -100,7 +115,7 @@ level = 34
 hitroll = 4
 ac = [-40, -40, 0, -20]
 damage_type = "bash"
-off_flags = ["area_attack", "bash", "disarm", "parry", "trip"]
+off_flags = ["area_attack", "bash", "disarm", "parry", "trip", "assist_align", "assist_race"]
 imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["fire", "cold", "acid"]
 race = "modron"
@@ -108,7 +123,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 25
@@ -120,6 +135,11 @@ alignment = 0
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 17
+  size = 8
+  bonus = 50
+
 [[mobiles]]
 vnum = 9004
 keywords = ["nonaton"]
@@ -130,7 +150,7 @@ level = 40
 hitroll = 5
 ac = [-40, -40, -20, -30]
 damage_type = "bash"
-off_flags = ["area_attack", "disarm", "dodge", "trip"]
+off_flags = ["area_attack", "disarm", "dodge", "trip", "assist_align", "assist_race"]
 imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["fire", "cold", "acid"]
 vuln_flags = ["slash"]
@@ -139,8 +159,8 @@ race = "modron"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
-affected_by = ["detect_invis", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "infrared", "sanctuary"]
+alignment = 300
 
   [mobiles.hit_dice]
   number = 11
@@ -151,6 +171,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 8
+  bonus = 75
 
 [[mobiles]]
 vnum = 9005
@@ -164,7 +189,7 @@ level = 43
 hitroll = 5
 ac = [-50, -50, -30, -40]
 damage_type = "bash"
-off_flags = ["area_attack", "bash", "disarm", "fast", "parry"]
+off_flags = ["area_attack", "bash", "disarm", "fast", "parry", "assist_align", "assist_race"]
 imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["fire", "cold", "acid"]
 vuln_flags = ["slash"]
@@ -174,7 +199,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 25
@@ -185,6 +210,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 18
+  size = 10
+  bonus = 75
 
 [[mobiles]]
 vnum = 9006
@@ -198,7 +228,7 @@ level = 48
 hitroll = 5
 ac = [-60, -60, -60, -40]
 damage_type = "bash"
-off_flags = ["area_attack", "dodge", "parry", "crush"]
+off_flags = ["area_attack", "dodge", "parry", "crush", "assist_align", "assist_race"]
 imm_flags = ["charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["fire", "cold", "acid"]
 race = "modron"
@@ -206,7 +236,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 30
@@ -217,6 +247,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 10
+  bonus = 100
 
 [[mobiles]]
 vnum = 9007
@@ -230,7 +265,7 @@ level = 52
 hitroll = 7
 ac = [-80, -80, -80, -40]
 damage_type = "slash"
-off_flags = ["area_attack", "bash", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip"]
+off_flags = ["area_attack", "bash", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "assist_align", "assist_race"]
 imm_flags = ["summon", "charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["magic", "fire", "cold", "acid"]
 size = "large"
@@ -238,8 +273,8 @@ race = "modron"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sanctuary"]
+alignment = 300
 
   [mobiles.hit_dice]
   number = 35
@@ -250,6 +285,11 @@ alignment = 0
   number = 4
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 10
+  bonus = 75
 
 [[mobiles]]
 vnum = 9008
@@ -264,7 +304,7 @@ level = 56
 hitroll = 6
 ac = [-70, -80, -60, -80]
 damage_type = "bash"
-off_flags = ["area_attack", "parry", "tail", "crush"]
+off_flags = ["area_attack", "parry", "tail", "crush", "assist_align", "assist_race"]
 imm_flags = ["summon", "charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["fire", "cold", "acid"]
 size = "large"
@@ -273,7 +313,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 10
@@ -284,6 +324,11 @@ alignment = 0
   number = 4
   size = 8
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 12
+  bonus = 100
 
 [[mobiles]]
 vnum = 9009
@@ -298,7 +343,7 @@ level = 66
 hitroll = 12
 ac = [-110, -130, -100, -90]
 damage_type = "bash"
-off_flags = ["bash", "disarm", "dodge"]
+off_flags = ["bash", "disarm", "dodge", "assist_align", "assist_race"]
 imm_flags = ["summon", "charm", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["magic", "fire", "cold", "acid"]
 size = "huge"
@@ -307,7 +352,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 1
@@ -318,6 +363,11 @@ alignment = 0
   number = 8
   size = 6
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 20
+  bonus = 50
 
 [[mobiles]]
 vnum = 9010
@@ -331,7 +381,7 @@ level = 71
 hitroll = 15
 ac = [-110, -140, -110, -120]
 damage_type = "bash"
-off_flags = ["disarm", "dodge", "fast", "kick", "parry", "trip"]
+off_flags = ["disarm", "dodge", "fast", "kick", "parry", "trip", "assist_align", "assist_race"]
 imm_flags = ["summon", "charm", "fire", "cold", "acid", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["magic", "fire", "cold", "acid"]
 size = "huge"
@@ -339,7 +389,7 @@ race = "modron"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sanctuary"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -351,6 +401,11 @@ alignment = 0
   number = 7
   size = 8
   bonus = 15
+
+  [mobiles.mana_dice]
+  number = 40
+  size = 20
+  bonus = 50
 
 [[mobiles]]
 vnum = 9011
@@ -365,7 +420,7 @@ level = 80
 hitroll = 20
 ac = [-150, -150, -150, -150]
 damage_type = "energy"
-off_flags = ["area_attack", "fast"]
+off_flags = ["area_attack", "fast", "assist_align", "assist_race"]
 imm_flags = ["summon", "charm", "fire", "cold", "acid", "negative", "holy", "mental", "disease", "drowning", "light"]
 res_flags = ["magic", "fire", "cold", "acid"]
 size = "giant"
@@ -373,7 +428,7 @@ race = "modron"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric", "mage", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sanctuary"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -385,4 +440,9 @@ alignment = 0
   number = 6
   size = 10
   bonus = 25
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 3999
 

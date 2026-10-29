@@ -32,7 +32,8 @@ python3 -I tools/rotrestore/objvalues.py /tmp/rot/rot/area go/data/areas
 | `shops.py` | `[mobiles.shop]` from #SHOPS | yes (skips done files) |
 | `roomflags.py` | room flags, heal/mana rates | yes |
 | `objvalues.py` | magic/drink/food/money/container/light/portal values | yes (skips existing sections) |
-| `audit_mobs.py` | **audit only**: per-field mob comparison | — |
+| `mobs.py` | mob alignment, start/default position, mana dice, act/affect/shield/off flags | yes |
+| `audit_mobs.py` | **audit only**: per-field mob comparison (flag-name mismatches like `nopurge`/`no_purge` and two-letter flags show as false differences) | — |
 
 ROT conventions to keep: wealth/money is silver in ROT, read as copper here;
 ROM shop close hour is inclusive, written +1 (Shop.IsOpen is exclusive); mob AC
@@ -62,25 +63,25 @@ Midgaard shops ≤ L10, shopkeepers unattackable, thief spell groups
 
 ## Next
 
-### 1. Mob fields (needs a balance check)
+### 1. Mob fields — done 2026-10-29
 
-`audit_mobs.py` shows these lost for nearly all 1341 mobs: off flags (bash,
-kick, dodge, parry, trip, disarm), damage noun, AC, mana dice, race; and for
-many: alignment (1014), res/vuln/imm (426/394/263), shield flags (352),
-hitroll (252), start position (95), `spec_fido` on 1001, act flags like
-`no_body` (276 differ, partly just spelling).
+`mobs.py` restored alignment (1013 mobs), start/default positions (95),
+mana dice, and the ROT act/affect/shield/off flags (sanctuary on 246 mobs,
+invisible, protect evil/good, elemental shields, assist_*). Race, AC,
+hitroll, damage type and imm/res/vuln were already restored in Phase 16
+(`tools/rot-import`). Spawn now uses positions, mana and every flag; mobs
+go back to their default position after a fight (ROM `stop_fighting`) and
+only standing mobs wander.
 
-Two parts:
-- **Data**: a `mobs.py` restore (template: `audit_mobs.py` already parses
-  everything). Map ROT flag names to the names the Go loader accepts.
-- **Code**: `World.CreateMobFromTemplate` ignores race, off/imm/res/vuln,
-  mana dice, damage type and start/default position even when present — wire
-  them. Race should go through the trait system (project core value).
+Balance: the mob HP floor is on effective HP, so a sanctuary mob gets half
+the floor. L30-L60 sim results are back in range; L100 sanctuary mobs whose
+own HP is above the floor (Rachal, the Alchemist) are now much harder for
+melee classes, as in ROT.
 
-Risk: mobs get much harder (defensive skills, real AC, resistances). Replace
-the `defaultMobAC` fallback only where data exists, then rerun the combat sim
-(`pkg/combat/combat_sim_test.go`, see memory note on combat tuning) and
-compare against the tuned targets before committing.
+Left over: `assist_*` off flags are in the data but nothing reads them (no
+mob assist AI yet; ROM `check_assist`); fire/ice/shock shields set
+`ShieldedBy` but deal no damage to attackers; iron/wood imm/vuln have no Go
+flag; `CanSee` hides a hidden mob even while it fights (ROM shows it).
 
 ### 2. Resets
 
@@ -113,7 +114,6 @@ register those; the rest are stubs or missing.
 - Midgaard guildmasters can't `train` (ROT original); trainer is the sailor
   (Abandoned Warehouse, `s s s e e e s` from the temple).
 
-### 5. Land the branch
+### 5. Land the branch — done
 
-Push `feat/teleport-runes`, open a PR to `master`. Remove the worktree
-`../ROT-MUD-runes` (branch `feat/teleport-runes-finish` is merged into it).
+`feat/teleport-runes` is merged into `master`.

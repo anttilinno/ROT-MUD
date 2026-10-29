@@ -10,12 +10,12 @@ one of a peaceful man leading a simple life."""
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = 350
 
   [mobiles.hit_dice]
   number = 2
@@ -27,6 +27,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 6002
 keywords = ["oldstyle", "bear"]
@@ -36,15 +41,16 @@ description = """
 The bear is a big, brown, furry animal with very large claws and very sharp
 teeth.  It doesn't resemble those cute little thingies from toy shops at all."""
 level = 16
+start_pos = "sleeping"
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["berserk", "disarm", "dodge", "trip", "crush"]
+off_flags = ["berserk", "disarm", "dodge", "trip", "crush", "assist_race"]
 res_flags = ["bash", "cold"]
 race = "bear"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
-alignment = 0
+alignment = -50
 
   [mobiles.hit_dice]
   number = 2
@@ -56,6 +62,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 6003
 keywords = ["oldstyle", "rabbit"]
@@ -66,14 +77,15 @@ This small, furry creature with long ears and big feet has been attacked by
 the dreaded rabbit rabies, a horrible disease that turns helpless and innocent
 rabbits into ferocious and bloodthirsty monsters."""
 level = 5
+start_pos = "sleeping"
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "rabbit"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
-alignment = 0
+alignment = -150
 
   [mobiles.hit_dice]
   number = 2
@@ -84,6 +96,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6004
@@ -96,13 +113,13 @@ looking back at you with an air of watchful interest."""
 level = 3
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "pet", "ranger"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 350
 
   [mobiles.hit_dice]
   number = 2
@@ -113,6 +130,11 @@ alignment = 0
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6005
@@ -124,13 +146,13 @@ It is a large fox with beautiful, red-brown fur and a long, thick brush."""
 level = 4
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "fox"
 gold = 0
 sex = "none"
 act_flags = ["npc", "stay_area"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = -50
 
   [mobiles.hit_dice]
   number = 2
@@ -141,6 +163,11 @@ alignment = 0
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6100
@@ -153,12 +180,12 @@ quickly from its long, white fangs.  It looks quite dangerous and very angry."""
 level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
-alignment = 0
+alignment = -350
 
   [mobiles.hit_dice]
   number = 2
@@ -169,6 +196,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6101
@@ -181,12 +213,12 @@ quickly from its long, white fangs.  It looks quite dangerous and very angry."""
 level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
-alignment = 0
+alignment = -350
 
   [mobiles.hit_dice]
   number = 2
@@ -198,6 +230,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 6102
 keywords = ["oldstyle", "wolf", "grey"]
@@ -208,13 +245,13 @@ The large, grey wolf eyes you with interest while licking its lips."""
 level = 5
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "wolf"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = -150
 
   [mobiles.hit_dice]
   number = 2
@@ -225,6 +262,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6103
@@ -236,13 +278,13 @@ The large, black wolf eyes you with interest while licking its lips."""
 level = 6
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "wolf"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = -150
 
   [mobiles.hit_dice]
   number = 2
@@ -253,6 +295,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6112
@@ -267,7 +314,7 @@ do."""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm", "bash", "fire"]
 vuln_flags = ["pierce", "cold"]
 race = "dragon"
@@ -275,7 +322,7 @@ gold = 2500
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+alignment = -1000
 special = "spec_breath_gas"
 
   [mobiles.hit_dice]
@@ -287,6 +334,11 @@ special = "spec_breath_gas"
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6115
@@ -300,13 +352,13 @@ he is having great fun."""
 level = 20
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy", "ranger"]
-affected_by = ["detect_invis", "sneak"]
-alignment = 0
+affected_by = ["detect_invis", "sneak", "invisible"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -317,6 +369,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 6116
@@ -329,7 +386,7 @@ he would be a tough foe."""
 level = 34
 hitroll = 0
 ac = [-30, -30, -30, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "male"
@@ -347,4 +404,9 @@ special = "spec_cast_cleric"
   number = 2
   size = 6
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 

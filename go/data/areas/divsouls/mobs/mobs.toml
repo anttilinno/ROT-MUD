@@ -22,8 +22,8 @@ race = "elf"
 gold = 400
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "mage"]
-affected_by = ["infrared", "hide", "haste"]
-alignment = 0
+affected_by = ["infrared", "hide", "haste", "invisible"]
+alignment = 900
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -35,6 +35,11 @@ special = "spec_cast_mage"
   number = 4
   size = 8
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 850
 
 [[mobiles]]
 vnum = 11601
@@ -70,6 +75,11 @@ alignment = 0
   size = 4
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 650
+
 [[mobiles]]
 vnum = 11602
 keywords = ["nightingale", "bird"]
@@ -104,6 +114,11 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 450
+
 [[mobiles]]
 vnum = 11603
 keywords = ["teacher", "woman", "statue"]
@@ -136,6 +151,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 600
 
 [[mobiles]]
 vnum = 11604
@@ -172,6 +192,11 @@ alignment = 0
   size = 7
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 520
+
 [[mobiles]]
 vnum = 11605
 keywords = ["mage", "statue", "figure", "man"]
@@ -207,6 +232,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 9
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1800
+
 [[mobiles]]
 vnum = 11606
 keywords = ["unicorn", "white", "horse"]
@@ -229,8 +259,8 @@ race = "unique"
 gold = 0
 sex = "either"
 act_flags = ["npc", "stay_area"]
-affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "detect_good"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "detect_good", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 10
@@ -241,6 +271,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 800
 
 [[mobiles]]
 vnum = 11607
@@ -278,6 +313,11 @@ alignment = 0
   size = 12
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 570
+
 [[mobiles]]
 vnum = 11608
 keywords = ["white", "knight", "figure"]
@@ -301,8 +341,8 @@ race = "human"
 gold = 500
 sex = "either"
 act_flags = ["npc", "stay_area", "warrior"]
-affected_by = ["detect_evil"]
-alignment = 0
+affected_by = ["detect_evil", "protect_evil"]
+alignment = 900
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -314,6 +354,11 @@ special = "spec_guard"
   number = 4
   size = 7
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 250
 
 [[mobiles]]
 vnum = 11609
@@ -348,6 +393,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 680
 
 [[mobiles]]
 vnum = 11610
@@ -385,6 +435,11 @@ special = "spec_thief"
   size = 7
   bonus = 11
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 620
+
 [[mobiles]]
 vnum = 11611
 keywords = ["babbling", "sculptor"]
@@ -419,6 +474,11 @@ special = "spec_thief"
   size = 4
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 500
+
 [[mobiles]]
 vnum = 11612
 keywords = ["bush", "denebi", "priest", "white", "cross"]
@@ -429,6 +489,8 @@ A white cross, seeming to glow with a light of its own, is emblazoned across
 the front of the priest's robes.  Both arms are raised in front of the figure,
 as if in prayer."""
 level = 60
+affected_by = ["protect_evil"]
+start_pos = "resting"
 hitroll = 0
 ac = [-100, -90, -110, -80]
 damage_type = "bash"
@@ -440,7 +502,7 @@ race = "unique"
 gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 800
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -452,6 +514,11 @@ special = "spec_cast_cleric"
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1000
 
 [[mobiles]]
 vnum = 11613
@@ -483,6 +550,11 @@ alignment = 0
   number = 2
   size = 12
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 500
 
 [[mobiles]]
 vnum = 11614
@@ -548,6 +620,11 @@ alignment = 0
   size = 12
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 700
+
 [[mobiles]]
 vnum = 11616
 keywords = ["crying", "spirit", "translucent", "figure"]
@@ -570,7 +647,7 @@ race = "unique"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
-affected_by = ["flying", "pass_door"]
+affected_by = ["flying", "pass_door", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -582,6 +659,11 @@ alignment = 0
   number = 3
   size = 7
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 600
 
 [[mobiles]]
 vnum = 11617
@@ -600,7 +682,7 @@ vuln_flags = ["negative", "holy", "energy"]
 race = "unique"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area", "thief"]
+act_flags = ["npc", "stay_area", "thief", "no_body", "nb_drop"]
 affected_by = ["flying", "pass_door"]
 alignment = 0
 
@@ -613,6 +695,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 620
 
 [[mobiles]]
 vnum = 11618
@@ -631,7 +718,7 @@ vuln_flags = ["negative", "holy", "energy"]
 race = "unique"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area", "thief"]
+act_flags = ["npc", "stay_area", "thief", "no_body", "nb_drop"]
 affected_by = ["flying", "pass_door"]
 alignment = 0
 
@@ -644,6 +731,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 610
 
 [[mobiles]]
 vnum = 11619
@@ -663,7 +755,7 @@ vuln_flags = ["negative", "holy", "energy"]
 race = "unique"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area", "thief"]
+act_flags = ["npc", "stay_area", "thief", "no_body", "nb_drop"]
 affected_by = ["flying", "pass_door"]
 alignment = 0
 
@@ -676,6 +768,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 640
 
 [[mobiles]]
 vnum = 11620
@@ -694,7 +791,7 @@ vuln_flags = ["negative", "holy", "energy"]
 race = "unique"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area", "thief"]
+act_flags = ["npc", "stay_area", "thief", "no_body", "nb_drop"]
 affected_by = ["flying", "pass_door"]
 alignment = 0
 
@@ -707,6 +804,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 620
 
 [[mobiles]]
 vnum = 11621
@@ -743,6 +845,11 @@ alignment = 0
   size = 8
   bonus = 13
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 850
+
 [[mobiles]]
 vnum = 11622
 keywords = ["lonari", "white", "lady"]
@@ -764,8 +871,8 @@ race = "elf"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-affected_by = ["detect_invis", "detect_good", "infrared", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_good", "infrared", "flying", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -777,6 +884,11 @@ special = "spec_cast_cleric"
   number = 3
   size = 12
   bonus = 15
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 2000
 
 [[mobiles]]
 vnum = 11623
@@ -805,7 +917,7 @@ gold = 1000
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "hide"]
-alignment = 0
+alignment = -900
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -817,6 +929,11 @@ special = "spec_cast_mage"
   number = 4
   size = 8
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1050
 
 [[mobiles]]
 vnum = 11624
@@ -852,6 +969,11 @@ alignment = 0
   size = 4
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 650
+
 [[mobiles]]
 vnum = 11625
 keywords = ["silent", "stalker"]
@@ -885,6 +1007,11 @@ special = "spec_thief"
   size = 7
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 100
+
 [[mobiles]]
 vnum = 11626
 keywords = ["twisted", "being"]
@@ -894,6 +1021,7 @@ description = """
 A horrorific construction of bones and flesh shambles around the room.  The
 dull grey eyes flash restlessly from side to side searchingly."""
 level = 64
+affected_by = ["protect_good"]
 hitroll = 0
 ac = [-130, -140, -140, -120]
 damage_type = "acid"
@@ -906,7 +1034,7 @@ race = "unique"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 10
@@ -918,6 +1046,11 @@ alignment = 0
   size = 4
   bonus = 9
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 500
+
 [[mobiles]]
 vnum = 11627
 keywords = ["screaming", "soul"]
@@ -928,6 +1061,8 @@ Flesh has been stripped off the body in long chunks, revealing bloody white
 bones beneath.  As the soul writhes with pain, larger chunks peel off and
 fall to the floor."""
 level = 52
+start_pos = "resting"
+default_pos = "resting"
 hitroll = 0
 ac = [-100, -80, -70, -50]
 damage_type = "pierce"
@@ -950,6 +1085,11 @@ alignment = 0
   size = 7
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 520
+
 [[mobiles]]
 vnum = 11628
 keywords = ["dark", "necromancer", "cowled", "figure"]
@@ -970,8 +1110,8 @@ race = "human"
 gold = 0
 sex = "either"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "mage"]
-affected_by = ["detect_invis", "detect_hidden", "detect_good"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "detect_good", "protect_good"]
+alignment = -800
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -983,6 +1123,11 @@ special = "spec_cast_mage"
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 2000
 
 [[mobiles]]
 vnum = 11629
@@ -1007,8 +1152,8 @@ race = "unique"
 gold = 0
 sex = "either"
 act_flags = ["npc", "stay_area", "cleric"]
-affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "detect_good"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "detect_good", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 10
@@ -1019,6 +1164,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 800
 
 [[mobiles]]
 vnum = 11630
@@ -1042,8 +1192,8 @@ race = "human"
 gold = 875
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-affected_by = ["dark_vision"]
-alignment = 0
+affected_by = ["dark_vision", "protect_good"]
+alignment = -800
 
   [mobiles.hit_dice]
   number = 6
@@ -1054,6 +1204,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 700
 
 [[mobiles]]
 vnum = 11631
@@ -1074,9 +1229,9 @@ vuln_flags = ["fire", "holy", "energy"]
 race = "unique"
 gold = 400
 sex = "either"
-act_flags = ["npc", "scavenger", "stay_area", "warrior"]
-affected_by = ["flying", "pass_door", "dark_vision"]
-alignment = 0
+act_flags = ["npc", "scavenger", "stay_area", "warrior", "no_body", "nb_drop", "undead"]
+affected_by = ["flying", "pass_door", "dark_vision", "protect_good"]
+alignment = -400
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -1088,6 +1243,11 @@ special = "spec_cast_undead"
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 250
 
 [[mobiles]]
 vnum = 11632
@@ -1110,7 +1270,7 @@ gold = 350
 sex = "either"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["haste"]
-alignment = 0
+alignment = -600
 
   [mobiles.hit_dice]
   number = 10
@@ -1121,6 +1281,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 680
 
 [[mobiles]]
 vnum = 11633
@@ -1150,6 +1315,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 630
 
 [[mobiles]]
 vnum = 11634
@@ -1207,8 +1377,8 @@ race = "human"
 gold = 620
 sex = "either"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "cleric"]
-affected_by = ["dark_vision"]
-alignment = 0
+affected_by = ["dark_vision", "protect_good"]
+alignment = -900
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -1220,6 +1390,11 @@ special = "spec_cast_cleric"
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1300
 
 [[mobiles]]
 vnum = 11636
@@ -1237,8 +1412,8 @@ vuln_flags = ["fire", "cold", "lightning", "acid", "negative", "holy", "energy",
 race = "unique"
 gold = 0
 sex = "none"
-act_flags = ["npc", "stay_area"]
-affected_by = ["flying"]
+act_flags = ["npc", "stay_area", "no_body", "nb_drop", "undead"]
+affected_by = ["flying", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1250,6 +1425,11 @@ alignment = 0
   number = 2
   size = 12
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 500
 
 [[mobiles]]
 vnum = 11637
@@ -1315,6 +1495,11 @@ alignment = 0
   size = 10
   bonus = 12
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 400
+
 [[mobiles]]
 vnum = 11639
 keywords = ["vampire", "janitor", "white", "fangs"]
@@ -1335,8 +1520,8 @@ race = "unique"
 gold = 565
 sex = "either"
 act_flags = ["npc", "aggressive", "stay_area"]
-affected_by = ["detect_invis", "detect_hidden", "flying", "dark_vision"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "dark_vision", "invisible", "protect_good"]
+alignment = -700
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -1348,6 +1533,11 @@ special = "spec_cast_undead"
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 700
 
 [[mobiles]]
 vnum = 11640
@@ -1364,8 +1554,8 @@ vuln_flags = ["light"]
 race = "unique"
 gold = 0
 sex = "none"
-act_flags = ["npc", "stay_area"]
-affected_by = ["flying", "pass_door"]
+act_flags = ["npc", "stay_area", "no_body", "nb_drop"]
+affected_by = ["flying", "pass_door", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1377,6 +1567,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 620
 
 [[mobiles]]
 vnum = 11641
@@ -1395,7 +1590,7 @@ vuln_flags = ["acid", "poison", "mental", "disease"]
 race = "unique"
 gold = 0
 sex = "none"
-act_flags = ["npc", "stay_area"]
+act_flags = ["npc", "stay_area", "no_body", "nb_drop"]
 affected_by = ["faerie_fire", "flying", "pass_door"]
 alignment = 0
 
@@ -1408,6 +1603,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 610
 
 [[mobiles]]
 vnum = 11642
@@ -1426,7 +1626,7 @@ vuln_flags = ["lightning", "mental", "light"]
 race = "unique"
 gold = 0
 sex = "none"
-act_flags = ["npc", "stay_area", "wimpy", "thief"]
+act_flags = ["npc", "stay_area", "wimpy", "thief", "no_body", "nb_drop"]
 affected_by = ["sneak", "hide", "flying", "pass_door"]
 alignment = 0
 special = "spec_thief"
@@ -1440,6 +1640,11 @@ special = "spec_thief"
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 640
 
 [[mobiles]]
 vnum = 11643
@@ -1457,8 +1662,8 @@ vuln_flags = ["pierce", "lightning", "mental", "light"]
 race = "unique"
 gold = 0
 sex = "either"
-act_flags = ["npc", "stay_area"]
-affected_by = ["flying", "pass_door"]
+act_flags = ["npc", "stay_area", "no_body", "nb_drop"]
+affected_by = ["flying", "pass_door", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1470,6 +1675,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 620
 
 [[mobiles]]
 vnum = 11644
@@ -1505,6 +1715,11 @@ alignment = 0
   size = 8
   bonus = 13
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 850
+
 [[mobiles]]
 vnum = 11645
 keywords = ["dierek", "black", "man"]
@@ -1526,8 +1741,8 @@ race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage", "warrior"]
-affected_by = ["detect_evil", "detect_invis"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "sanctuary", "protect_good"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 25
@@ -1538,6 +1753,11 @@ alignment = 0
   number = 3
   size = 12
   bonus = 14
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1000
 
 [[mobiles]]
 vnum = 11646
@@ -1556,7 +1776,7 @@ vuln_flags = ["weapon", "mental"]
 race = "unique"
 gold = 0
 sex = "none"
-act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
+act_flags = ["npc", "sentinel", "scavenger", "stay_area", "no_body", "nb_drop"]
 affected_by = ["hide", "pass_door"]
 alignment = 0
 
@@ -1570,6 +1790,11 @@ alignment = 0
   size = 12
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 580
+
 [[mobiles]]
 vnum = 11647
 keywords = ["terrified", "victim"]
@@ -1577,6 +1802,8 @@ short_desc = "a terrified victim"
 long_desc = "A sacrifice victim lies here, too terrified to scream."
 description = "This person is completely rigid with fear."
 level = 58
+start_pos = "resting"
+default_pos = "resting"
 hitroll = 0
 ac = [-220, -200, -210, -160]
 damage_type = "pierce"
@@ -1598,6 +1825,11 @@ alignment = 0
   number = 2
   size = 12
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 180
 
 [[mobiles]]
 vnum = 11648
@@ -1630,6 +1862,11 @@ alignment = 0
   size = 4
   bonus = 9
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 500
+
 [[mobiles]]
 vnum = 11649
 keywords = ["ghostly", "servant", "transparent", "form"]
@@ -1648,7 +1885,7 @@ race = "unique"
 gold = 100
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area"]
-affected_by = ["faerie_fire", "flying", "pass_door"]
+affected_by = ["faerie_fire", "flying", "pass_door", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1660,6 +1897,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 6700
 
 [[mobiles]]
 vnum = 11650
@@ -1692,6 +1934,11 @@ alignment = 0
   size = 8
   bonus = 14
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 850
+
 [[mobiles]]
 vnum = 11651
 keywords = ["assassin"]
@@ -1722,6 +1969,11 @@ special = "spec_thief"
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 510
 
 [[mobiles]]
 vnum = 11652
@@ -1755,6 +2007,11 @@ alignment = 0
   size = 4
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 660
+
 [[mobiles]]
 vnum = 11653
 keywords = ["figment", "imagination", "dark", "shape"]
@@ -1773,8 +2030,8 @@ vuln_flags = ["negative", "holy", "mental"]
 race = "unique"
 gold = 0
 sex = "none"
-act_flags = ["npc", "stay_area", "thief"]
-affected_by = ["flying", "pass_door"]
+act_flags = ["npc", "stay_area", "thief", "no_body", "nb_drop"]
+affected_by = ["flying", "pass_door", "invisible"]
 alignment = 0
 special = "spec_thief"
 
@@ -1787,6 +2044,11 @@ special = "spec_thief"
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 650
 
 [[mobiles]]
 vnum = 11654
@@ -1822,6 +2084,11 @@ alignment = 0
   size = 4
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 670
+
 [[mobiles]]
 vnum = 11655
 keywords = ["owl", "hatchling"]
@@ -1855,6 +2122,11 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 600
+
 [[mobiles]]
 vnum = 11656
 keywords = ["nightling", "gaunt", "shape"]
@@ -1875,7 +2147,7 @@ race = "unique"
 gold = 325
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
-affected_by = ["flying", "pass_door", "dark_vision"]
+affected_by = ["flying", "pass_door", "dark_vision", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1887,6 +2159,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 670
 
 [[mobiles]]
 vnum = 11657
@@ -1905,7 +2182,7 @@ race = "unique"
 gold = 0
 sex = "none"
 act_flags = ["npc", "stay_area"]
-affected_by = ["faerie_fire", "flying", "haste"]
+affected_by = ["faerie_fire", "flying", "haste", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -1917,6 +2194,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1000
 
 [[mobiles]]
 vnum = 11658
@@ -1948,6 +2230,11 @@ alignment = 0
   size = 10
   bonus = 11
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 720
+
 [[mobiles]]
 vnum = 11659
 keywords = ["shadowblade", "shadow", "blade", "sinister", "form"]
@@ -1977,6 +2264,11 @@ alignment = 0
   size = 10
   bonus = 11
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 720
+
 [[mobiles]]
 vnum = 11660
 keywords = ["grey", "assassin", "cloaked", "form"]
@@ -2005,6 +2297,11 @@ alignment = 0
   number = 4
   size = 8
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 850
 
 [[mobiles]]
 vnum = 11661
@@ -2039,6 +2336,11 @@ alignment = 0
   size = 6
   bonus = 13
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 780
+
 [[mobiles]]
 vnum = 11662
 keywords = ["white", "assassin", "figure"]
@@ -2057,7 +2359,7 @@ race = "elf"
 gold = 520
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "thief"]
-affected_by = ["infrared", "sneak", "dark_vision"]
+affected_by = ["infrared", "sneak", "dark_vision", "invisible"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -2069,6 +2371,11 @@ alignment = 0
   number = 5
   size = 6
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 780
 
 [[mobiles]]
 vnum = 11663
@@ -2104,6 +2411,11 @@ alignment = 0
   size = 10
   bonus = 12
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 750
+
 [[mobiles]]
 vnum = 11664
 keywords = ["yllias", "silver", "eyes"]
@@ -2134,6 +2446,11 @@ alignment = 0
   number = 3
   size = 12
   bonus = 14
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 900
 
 [[mobiles]]
 vnum = 11665
@@ -2167,6 +2484,11 @@ alignment = 0
   number = 4
   size = 8
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 820
 
 [[mobiles]]
 vnum = 11666
@@ -2203,6 +2525,11 @@ special = "spec_thief"
   size = 8
   bonus = 13
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 900
+
 [[mobiles]]
 vnum = 11667
 keywords = ["boggled", "brain"]
@@ -2232,6 +2559,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 650
 
 [[mobiles]]
 vnum = 11668
@@ -2263,6 +2595,11 @@ alignment = 0
   size = 6
   bonus = 9
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 620
+
 [[mobiles]]
 vnum = 11669
 keywords = ["mooo", "cow"]
@@ -2291,6 +2628,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 630
 
 [[mobiles]]
 vnum = 11670
@@ -2323,6 +2665,11 @@ alignment = 0
   size = 4
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 650
+
 [[mobiles]]
 vnum = 11671
 keywords = ["insanity"]
@@ -2353,6 +2700,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 800
 
 [[mobiles]]
 vnum = 11672
@@ -2385,6 +2737,11 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 10
+
 [[mobiles]]
 vnum = 11673
 keywords = ["psychiatrist", "woman"]
@@ -2416,6 +2773,11 @@ alignment = 0
   size = 7
   bonus = 11
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1000
+
 [[mobiles]]
 vnum = 11674
 keywords = ["normal", "person"]
@@ -2444,6 +2806,11 @@ alignment = 0
   size = 6
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 10
+
 [[mobiles]]
 vnum = 11675
 keywords = ["toilet", "monster", "mound", "stuff"]
@@ -2461,7 +2828,7 @@ race = "unique"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "no_align"]
-affected_by = ["dark_vision"]
+affected_by = ["dark_vision", "protect_evil", "protect_good"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -2473,6 +2840,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 650
 
 [[mobiles]]
 vnum = 11676
@@ -2506,6 +2878,11 @@ alignment = 0
   number = 3
   size = 10
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 650
 
 [[mobiles]]
 vnum = 11677
@@ -2542,6 +2919,11 @@ special = "spec_cast_mage"
   size = 12
   bonus = 15
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 1000
+
 [[mobiles]]
 vnum = 11678
 keywords = ["fax", "parrot"]
@@ -2572,4 +2954,9 @@ alignment = 0
   number = 4
   size = 8
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 900
 

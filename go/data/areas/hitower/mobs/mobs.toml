@@ -7,13 +7,13 @@ description = "It seems to be made of nothing more than darkness ..."
 level = 17
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "none"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
-affected_by = ["detect_invis", "infrared", "sneak"]
-alignment = 0
+affected_by = ["detect_invis", "infrared", "sneak", "invisible"]
+alignment = -350
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -26,6 +26,11 @@ special = "spec_cast_undead"
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1301
 keywords = ["oldstyle", "adventurer"]
@@ -34,14 +39,15 @@ long_desc = "An emaciated adventurer is here looking lost and hopeless."
 description = """
 He looks haggard and sickly; no doubt he's been lost here for quite some time."""
 level = 15
+start_pos = "sitting"
 hitroll = 0
 ac = [30, 30, 30, 80]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 14
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "wimpy", "cleric"]
-alignment = 0
+alignment = 400
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -53,6 +59,11 @@ special = "spec_cast_cleric"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1302
@@ -67,12 +78,12 @@ bunny slayer himself, Edgar the Horrible!"""
 level = 1
 hitroll = 0
 ac = [90, 90, 90, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy", "ranger"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -84,6 +95,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1303
 keywords = ["oldstyle", "diamond", "golem"]
@@ -93,13 +109,13 @@ description = "It looks quite strong."
 level = 46
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 49
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 5
@@ -110,6 +126,11 @@ alignment = 0
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1304
@@ -122,13 +143,13 @@ Then again, he may just have a headache."""
 level = 20
 hitroll = 0
 ac = [20, 20, 20, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 21
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 450
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -141,6 +162,11 @@ special = "spec_cast_mage"
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1305
 keywords = ["oldstyle", "strick", "bartender"]
@@ -151,13 +177,13 @@ He looks rather harmless, but then again so does a sleeping dragon."""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 100
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 750
 
   [mobiles.hit_dice]
   number = 5
@@ -176,6 +202,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1306
 keywords = ["oldstyle", "tatorious", "wizard"]
@@ -185,13 +216,13 @@ description = "Tatorious winks at you mischievously."
 level = 49
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 900
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -211,6 +242,11 @@ special = "spec_cast_mage"
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1307
 keywords = ["oldstyle", "ezmerelda", "cook"]
@@ -219,13 +255,13 @@ long_desc = "Ezmerelda the cook is here stirring a large pot of something."
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 54
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -238,6 +274,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1308
 keywords = ["oldstyle", "assistant", "mage"]
@@ -246,13 +287,13 @@ long_desc = "The cook's assistant is here assisting the cook."
 level = 22
 hitroll = 0
 ac = [10, 10, 10, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -200
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -264,6 +305,11 @@ special = "spec_cast_mage"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1309
@@ -280,12 +326,12 @@ He looks quite mad, no doubt he's been mistreated horribly."""
 level = 31
 hitroll = 0
 ac = [-20, -20, -20, 40]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
-alignment = 0
+alignment = 100
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -298,6 +344,11 @@ special = "spec_cast_mage"
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 16
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1310
 keywords = ["oldstyle", "jailor", "mage"]
@@ -305,15 +356,17 @@ short_desc = "the Jailor"
 long_desc = "The Jailor is here enjoying a comfortable nap."
 description = "He looks rather dirty."
 level = 34
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [-20, -20, -20, 40]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 66
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 100
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -326,6 +379,11 @@ special = "spec_cast_mage"
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1311
 keywords = ["oldstyle", "broom"]
@@ -335,13 +393,13 @@ description = "The broom screams 'Take that you lout!'"
 level = 14
 hitroll = 0
 ac = [40, 40, 40, 80]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 50
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -354,6 +412,11 @@ special = "spec_thief"
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1312
 keywords = ["oldstyle", "lesser", "guardian", "hands"]
@@ -363,12 +426,12 @@ description = "The hands twitch with anticipation of strangling someone."
 level = 17
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
-alignment = 0
+alignment = -400
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -381,6 +444,11 @@ special = "spec_cast_undead"
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1313
 keywords = ["oldstyle", "guardian", "greater", "eyes"]
@@ -390,13 +458,13 @@ description = "The eyes smolder with hatred."
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -600
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -409,6 +477,11 @@ special = "spec_cast_undead"
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1314
 keywords = ["oldstyle", "mage", "visitor"]
@@ -416,15 +489,17 @@ short_desc = "the mage"
 long_desc = "A visiting mage is here snoring away in peaceful slumber."
 description = "He looks quite sleepy."
 level = 24
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [10, 10, 10, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 36
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 250
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -437,6 +512,11 @@ special = "spec_cast_mage"
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1315
 keywords = ["oldstyle", "apprentice", "young"]
@@ -444,14 +524,16 @@ short_desc = "a young apprentice magic user"
 long_desc = "A young apprentice magic user is here doing magical studies."
 description = "She looks quite intent on her studies."
 level = 13
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 18
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
-alignment = 0
+alignment = 400
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -463,6 +545,11 @@ special = "spec_cast_mage"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1316
@@ -474,12 +561,12 @@ He looks to be oblivious to all but the spell he is memorizing."""
 level = 14
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 24
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
-alignment = 0
+alignment = 380
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -491,6 +578,11 @@ special = "spec_cast_mage"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1317
@@ -499,14 +591,16 @@ short_desc = "a young apprentice"
 long_desc = "A young apprentice is sleeping here."
 description = "He seems to be dreaming."
 level = 14
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
-alignment = 0
+alignment = 350
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -518,6 +612,11 @@ special = "spec_cast_mage"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1318
@@ -528,12 +627,12 @@ description = "He looks like a mischievous youth."
 level = 14
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 19
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
-alignment = 0
+alignment = -200
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -545,6 +644,11 @@ special = "spec_cast_mage"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1319
@@ -557,12 +661,12 @@ mark its mottled coat."""
 level = 1
 hitroll = 0
 ac = [90, 90, 90, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -574,6 +678,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1320
 keywords = ["oldstyle", "student"]
@@ -581,14 +690,16 @@ short_desc = "a student"
 long_desc = "A student of spells is here looking quite bored"
 description = "The student yawns."
 level = 15
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 13
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
-alignment = 0
+alignment = 350
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -601,6 +712,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1321
 keywords = ["oldstyle", "instructor", "teacher", "mage"]
@@ -610,13 +726,13 @@ description = "He looks quite angry at your interruption."
 level = 28
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 44
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 300
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -629,6 +745,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 14
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1322
 keywords = ["oldstyle", "student"]
@@ -639,13 +760,13 @@ He blinks in and out of existence, trying to master the spell."""
 level = 15
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 9
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "invisible"]
+alignment = 400
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -658,6 +779,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1323
 keywords = ["oldstyle", "teacher", "mage"]
@@ -666,13 +792,13 @@ long_desc = "A spell teacher screams at your interruption and attacks."
 level = 29
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 62
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "invisible"]
+alignment = 300
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -685,6 +811,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1324
 keywords = ["oldstyle", "student"]
@@ -692,15 +823,17 @@ short_desc = "a student of spells"
 long_desc = "A student of spells has fallen asleep at her desk here."
 description = "She looks to have collapsed from sheer boredom."
 level = 18
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [30, 30, 30, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 28
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 400
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -713,6 +846,11 @@ special = "spec_cast_mage"
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1325
 keywords = ["oldstyle", "wizard", "speaker", "mage"]
@@ -721,13 +859,13 @@ long_desc = "An old wizard is here making a speech"
 level = 35
 hitroll = 0
 ac = [-30, -30, -30, 40]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 123
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 400
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -740,6 +878,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 18
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1326
 keywords = ["oldstyle", "mage", "young"]
@@ -748,13 +891,13 @@ long_desc = "A young mage is here learning hand to hand combat."
 level = 18
 hitroll = 0
 ac = [30, 30, 30, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 34
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 300
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -767,6 +910,11 @@ special = "spec_cast_mage"
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1327
 keywords = ["oldstyle", "mistress", "battle"]
@@ -778,13 +926,13 @@ user."""
 level = 34
 hitroll = 0
 ac = [-20, -20, -20, 40]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 160
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 200
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -797,21 +945,28 @@ special = "spec_cast_mage"
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1328
 keywords = ["oldstyle", "mage", "teacher"]
 short_desc = "a spell teacher"
 long_desc = "A spell teacher is here relaxing."
 level = 30
+start_pos = "resting"
+default_pos = "resting"
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 200
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -824,21 +979,28 @@ special = "spec_cast_mage"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1329
 keywords = ["oldstyle", "wizard"]
 short_desc = "an aged wizard"
 long_desc = "An aged wizard is sleeping here."
 level = 40
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 78
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 350
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -851,6 +1013,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1330
 keywords = ["oldstyle", "scribe", "mage"]
@@ -859,13 +1026,13 @@ long_desc = "A scribe is here working on some manuscripts."
 level = 28
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 15
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 400
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -878,6 +1045,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 14
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1331
 keywords = ["oldstyle", "scribe", "mage"]
@@ -889,13 +1061,13 @@ lore she is translating."""
 level = 29
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 34
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -908,6 +1080,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1332
 keywords = ["oldstyle", "master", "scribe"]
@@ -919,13 +1096,13 @@ The master scribe screams 'How dare you interrupt my important work???'"""
 level = 43
 hitroll = 0
 ac = [-50, -50, -50, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 281
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 100
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -938,6 +1115,11 @@ special = "spec_cast_mage"
   size = 7
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1333
 keywords = ["oldstyle", "assistant", "scribe"]
@@ -946,13 +1128,13 @@ long_desc = "The scribe's assistant is here folding parchments."
 level = 32
 hitroll = 0
 ac = [-20, -20, -20, 40]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 52
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 100
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -965,6 +1147,11 @@ special = "spec_cast_mage"
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 16
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1334
 keywords = ["oldstyle", "master", "enchanter", "mage"]
@@ -973,13 +1160,13 @@ long_desc = "The Enchanter is here placing a dweomer upon well made sword."
 level = 45
 hitroll = 0
 ac = [-50, -50, -50, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 340
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -200
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -992,6 +1179,11 @@ special = "spec_cast_mage"
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1335
 keywords = ["oldstyle", "sword", "dancing"]
@@ -1001,12 +1193,12 @@ description = "It looks quite sharp."
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -1017,6 +1209,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1336
@@ -1031,13 +1228,13 @@ The Mad Alchemist throws back his head and cackles with insane glee!"""
 level = 48
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 117
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 150
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1050,6 +1247,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 24
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1337
 keywords = ["oldstyle", "master", "summoner"]
@@ -1058,13 +1260,13 @@ long_desc = "The master summoner is here holding gateways open to other planes."
 level = 44
 hitroll = 0
 ac = [-50, -50, -50, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -200
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1077,6 +1279,11 @@ special = "spec_cast_mage"
   size = 7
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1338
 keywords = ["oldstyle", "master", "charmer"]
@@ -1087,13 +1294,13 @@ The master charmer sizes you up, always looking for a new pet."""
 level = 45
 hitroll = 0
 ac = [-50, -50, -50, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 233
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -400
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1106,6 +1313,11 @@ special = "spec_cast_mage"
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1339
 keywords = ["oldstyle", "golem", "wooden"]
@@ -1115,13 +1327,13 @@ description = "He looks flammable."
 level = 31
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 100
 
   [mobiles.hit_dice]
   number = 3
@@ -1133,6 +1345,11 @@ alignment = 0
   size = 6
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1340
 keywords = ["oldstyle", "master", "binder"]
@@ -1142,13 +1359,13 @@ description = "The master spell binder snarls at you and attacks."
 level = 46
 hitroll = 0
 ac = [-50, -50, -50, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 115
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1161,6 +1378,11 @@ special = "spec_cast_mage"
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1341
 keywords = ["oldstyle", "master", "maker"]
@@ -1169,13 +1391,13 @@ long_desc = "The golem maker is here chiseling some stone."
 level = 42
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 133
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 300
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1188,6 +1410,11 @@ special = "spec_cast_mage"
   size = 7
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1342
 keywords = ["oldstyle", "golem", "granite"]
@@ -1198,12 +1425,12 @@ It looks like a statue, until you see it shamble towards you."""
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 3
@@ -1215,6 +1442,11 @@ alignment = 0
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1343
 keywords = ["oldstyle", "golem", "bronze"]
@@ -1224,12 +1456,12 @@ description = "He looks rather dim witted."
 level = 35
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area"]
-alignment = 0
+alignment = 350
 
   [mobiles.hit_dice]
   number = 3
@@ -1240,6 +1472,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1344
@@ -1252,12 +1489,12 @@ resemble anything human."""
 level = 23
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-alignment = 0
+alignment = 200
 
   [mobiles.hit_dice]
   number = 2
@@ -1269,6 +1506,11 @@ alignment = 0
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1345
 keywords = ["oldstyle", "golem", "cloth"]
@@ -1279,12 +1521,12 @@ It looks like a bunch of old rags, quite surprising it can actually walk."""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
-alignment = 0
+alignment = 350
 
   [mobiles.hit_dice]
   number = 2
@@ -1295,6 +1537,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1346
@@ -1307,12 +1554,12 @@ but somewhat un-intelligent."""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
-alignment = 0
+alignment = 350
 
   [mobiles.hit_dice]
   number = 5
@@ -1324,6 +1571,11 @@ alignment = 0
   size = 10
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1347
 keywords = ["oldstyle", "golem", "clay"]
@@ -1332,13 +1584,13 @@ long_desc = "A clay golem stands guard here."
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 200
 
   [mobiles.hit_dice]
   number = 3
@@ -1349,6 +1601,11 @@ alignment = 0
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1348
@@ -1361,13 +1618,13 @@ now stands a small harmless looking old man."""
 level = 41
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 117
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 150
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1379,6 +1636,11 @@ special = "spec_cast_mage"
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1349
@@ -1393,13 +1655,13 @@ The Necromancer shrieks some obscenities and orders his minions to attack."""
 level = 49
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 584
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -950
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1412,6 +1674,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1350
 keywords = ["oldstyle", "skeleton", "undead"]
@@ -1421,13 +1688,13 @@ description = "It feels no pain, and hacks at you ruthlessly."
 level = 30
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -500
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -1440,6 +1707,11 @@ special = "spec_cast_undead"
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1351
 keywords = ["oldstyle", "undead", "giant"]
@@ -1448,13 +1720,13 @@ long_desc = "An undead giant lumbers towards you."
 level = 35
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -500
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -1466,6 +1738,11 @@ special = "spec_cast_undead"
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1352
@@ -1479,13 +1756,13 @@ crawl with revulsion."""
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 107
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -450
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1498,6 +1775,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1353
 keywords = ["oldstyle", "librarian", "mage"]
@@ -1505,15 +1787,17 @@ short_desc = "the Librarian"
 long_desc = "The Librarian has fallen asleep at his desk here."
 description = "He looks like a rather peaceful old man."
 level = 46
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [-50, -50, -50, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 64
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 450
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1525,6 +1809,11 @@ special = "spec_cast_mage"
   number = 2
   size = 8
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1354
@@ -1539,7 +1828,7 @@ alone."""
 level = 47
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 336
 sex = "male"
@@ -1558,6 +1847,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 24
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1355
 keywords = ["oldstyle", "cat", "grey", "familiar"]
@@ -1569,12 +1863,12 @@ contentedly.  It looks rather harmless, until you notice its very large claws.""
 level = 30
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 race = "cat"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
-affected_by = ["sneak", "dark_vision"]
+affected_by = ["sneak", "dark_vision", "invisible"]
 alignment = 0
 special = "spec_cast_mage"
 
@@ -1588,6 +1882,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1356
 keywords = ["oldstyle", "master", "guildmaster", "grey"]
@@ -1597,12 +1896,12 @@ description = "He looks quite peaceful."
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 10]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 767
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
-affected_by = ["detect_invis"]
+affected_by = ["detect_invis", "sanctuary"]
 alignment = 0
 special = "spec_cast_mage"
 
@@ -1615,6 +1914,11 @@ special = "spec_cast_mage"
   number = 5
   size = 4
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 30
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1357
@@ -1628,13 +1932,13 @@ permanent scowl make her looks quite fearsome."""
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 693
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis", "sneak"]
-alignment = 0
+alignment = -750
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1646,6 +1950,11 @@ special = "spec_cast_mage"
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1358
@@ -1658,13 +1967,13 @@ the question."""
 level = 31
 hitroll = 0
 ac = [-20, -20, -20, 40]
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 race = "cat"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "sneak", "dark_vision"]
-alignment = 0
+alignment = -800
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1677,6 +1986,11 @@ special = "spec_cast_mage"
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 16
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1359
 keywords = ["oldstyle", "master", "guildmaster", "black"]
@@ -1686,13 +2000,13 @@ description = "The master glares at you."
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 10]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 1105
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "mage"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1704,6 +2018,11 @@ special = "spec_cast_mage"
   number = 5
   size = 4
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 30
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1360
@@ -1716,13 +2035,13 @@ The apprentice screams 'Thou art unworthy of this honor!'"""
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 370
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 750
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1735,6 +2054,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1361
 keywords = ["oldstyle", "cat", "white", "familiar"]
@@ -1745,13 +2069,13 @@ It seems to be nothing more than a large ball of fluff with claws."""
 level = 30
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 race = "cat"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "sneak", "dark_vision"]
-alignment = 0
+alignment = 800
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1764,6 +2088,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1362
 keywords = ["oldstyle", "master", "guildmaster", "white"]
@@ -1773,13 +2102,13 @@ description = "He looks like a self-righteous bastard."
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 10]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 1095
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = 1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1792,6 +2121,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 30
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1363
 keywords = ["oldstyle", "cat", "calico", "familiar"]
@@ -1803,13 +2137,13 @@ A beautiful jewel encrusted collar about its neck is its only adornment."""
 level = 50
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 race = "cat"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
 affected_by = ["detect_invis", "sneak", "dark_vision"]
-alignment = 0
+alignment = 800
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1821,6 +2155,11 @@ special = "spec_cast_mage"
   number = 4
   size = 4
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1364
@@ -1835,12 +2174,12 @@ The Grand Master pets her familiar and smiles at you in confidence."""
 level = 99
 hitroll = 0
 ac = [-190, -190, -190, -40]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 2500
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
-affected_by = ["detect_invis"]
+affected_by = ["detect_invis", "sanctuary"]
 alignment = 0
 special = "spec_cast_mage"
 
@@ -1854,6 +2193,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 17
 
+  [mobiles.mana_dice]
+  number = 50
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1365
 keywords = ["oldstyle", "wizard"]
@@ -1862,13 +2206,13 @@ long_desc = "A wandering wizard is here mumbling to himself."
 level = 33
 hitroll = 0
 ac = [-20, -20, -20, 40]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 160
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "mage"]
 affected_by = ["detect_invis", "sneak"]
-alignment = 0
+alignment = 350
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1880,3 +2224,8 @@ special = "spec_cast_mage"
   number = 1
   size = 12
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100

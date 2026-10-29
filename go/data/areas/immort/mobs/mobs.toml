@@ -12,7 +12,7 @@ level = 107
 hitroll = 30
 ac = [-200, -200, -200, -100]
 damage_type = "bash"
-off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "crush"]
+off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "crush", "assist_guard"]
 imm_flags = ["summon", "charm", "mental"]
 res_flags = ["magic", "weapon"]
 size = "large"
@@ -21,7 +21,7 @@ gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden", "infrared", "dark_vision"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -32,6 +32,11 @@ alignment = 0
   number = 5
   size = 4
   bonus = 40
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 1201
@@ -63,4 +68,9 @@ alignment = 0
   number = 7
   size = 10
   bonus = 32
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 10
+  bonus = 900
 

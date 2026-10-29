@@ -9,7 +9,7 @@ level = 22
 hitroll = 2
 ac = [-10, 0, 30, 60]
 damage_type = "pierce"
-off_flags = ["dodge", "fast", "trip", "crush"]
+off_flags = ["dodge", "fast", "trip", "crush", "assist_race"]
 res_flags = ["pierce", "poison"]
 vuln_flags = ["cold"]
 size = "large"
@@ -18,7 +18,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -200
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -31,6 +31,11 @@ special = "spec_poison"
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4001
 keywords = ["garter", "snake"]
@@ -41,7 +46,7 @@ level = 13
 hitroll = 0
 ac = [20, 30, 50, 80]
 damage_type = "pierce"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 res_flags = ["bash", "poison"]
 vuln_flags = ["cold"]
 size = "small"
@@ -49,7 +54,7 @@ race = "snake"
 gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align"]
-alignment = 0
+alignment = -100
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -62,6 +67,11 @@ special = "spec_poison"
   size = 10
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4002
 keywords = ["centipede"]
@@ -72,7 +82,7 @@ level = 5
 hitroll = 0
 ac = [60, 70, 90, 100]
 damage_type = "pierce"
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["pierce", "cold"]
 vuln_flags = ["bash"]
 size = "tiny"
@@ -81,7 +91,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = 100
 
   [mobiles.hit_dice]
   number = 3
@@ -93,6 +103,11 @@ alignment = 0
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4003
 keywords = ["kobold"]
@@ -100,6 +115,7 @@ short_desc = "the kobold"
 long_desc = "An ugly kobold mumbles something under its breath."
 description = "It looks ugly enough to scare its own mother."
 level = 7
+off_flags = ["assist_race"]
 hitroll = 0
 ac = [70, 70, 70, 100]
 damage_type = "slash"
@@ -111,7 +127,7 @@ gold = 18
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 4
@@ -123,6 +139,11 @@ alignment = 0
   size = 4
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4004
 keywords = ["orc"]
@@ -133,7 +154,7 @@ level = 10
 hitroll = 2
 ac = [70, 70, 70, 100]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "trip"]
+off_flags = ["bash", "berserk", "trip", "assist_race"]
 res_flags = ["magic", "disease"]
 vuln_flags = ["light"]
 race = "orc"
@@ -141,7 +162,7 @@ gold = 60
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -400
 
   [mobiles.hit_dice]
   number = 6
@@ -153,6 +174,11 @@ alignment = 0
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
+
 [[mobiles]]
 vnum = 4005
 keywords = ["orc"]
@@ -163,7 +189,7 @@ level = 13
 hitroll = 1
 ac = [40, 50, 50, 80]
 damage_type = "bash"
-off_flags = ["bash", "kick_dirt"]
+off_flags = ["bash", "kick_dirt", "assist_race"]
 res_flags = ["disease"]
 vuln_flags = ["light"]
 race = "orc"
@@ -171,7 +197,7 @@ gold = 120
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 6
@@ -183,6 +209,11 @@ alignment = 0
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4050
 keywords = ["warrior"]
@@ -193,12 +224,12 @@ level = 24
 hitroll = 3
 ac = [10, -10, 20, 50]
 damage_type = "bash"
-off_flags = ["bash", "kick"]
+off_flags = ["bash", "kick", "assist_align", "assist_race"]
 race = "human"
 gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
-alignment = 0
+alignment = -300
 
   [mobiles.hit_dice]
   number = 10
@@ -209,6 +240,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 4051
@@ -222,13 +258,13 @@ level = 14
 hitroll = 2
 ac = [40, 50, 40, 80]
 damage_type = "bash"
-off_flags = ["bash", "kick"]
+off_flags = ["bash", "kick", "assist_align", "assist_race"]
 vuln_flags = ["magic"]
 race = "human"
 gold = 140
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "warrior"]
-alignment = 0
+alignment = -400
 
   [mobiles.hit_dice]
   number = 8
@@ -239,6 +275,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 4052
@@ -261,7 +302,7 @@ gold = 12
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -300
 
   [mobiles.hit_dice]
   number = 6
@@ -272,6 +313,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 4053
@@ -284,14 +330,14 @@ level = 19
 hitroll = 1
 ac = [0, 20, 20, 50]
 damage_type = "pierce"
-off_flags = ["dodge", "fade", "trip"]
+off_flags = ["dodge", "fade", "trip", "assist_race"]
 res_flags = ["bash", "pierce", "poison"]
 vuln_flags = ["cold"]
 race = "snake"
 gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive", "no_align"]
-alignment = 0
+alignment = -600
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -304,6 +350,11 @@ special = "spec_poison"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4054
 keywords = ["centipede"]
@@ -314,7 +365,7 @@ level = 9
 hitroll = 0
 ac = [40, 70, 50, 100]
 damage_type = "pierce"
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["pierce", "cold"]
 vuln_flags = ["bash"]
 size = "small"
@@ -323,7 +374,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 5
@@ -334,6 +385,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 4055
@@ -347,14 +403,14 @@ level = 20
 hitroll = 2
 ac = [20, 20, 10, 50]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "kick_dirt"]
+off_flags = ["bash", "berserk", "kick_dirt", "assist_race"]
 res_flags = ["magic", "poison", "disease"]
 race = "hobgoblin"
 gold = 210
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -365,6 +421,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 4056
@@ -378,7 +439,7 @@ level = 15
 hitroll = 1
 ac = [30, 30, 20, 50]
 damage_type = "bash"
-off_flags = ["bash", "trip"]
+off_flags = ["bash", "trip", "assist_race"]
 res_flags = ["disease"]
 vuln_flags = ["light"]
 race = "orc"
@@ -386,7 +447,7 @@ gold = 60
 sex = "either"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 3
@@ -397,6 +458,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 4057
@@ -410,7 +476,7 @@ level = 18
 hitroll = 2
 ac = [0, 0, 0, 40]
 damage_type = "slash"
-off_flags = ["disarm", "dodge", "fast"]
+off_flags = ["disarm", "dodge", "fast", "assist_race"]
 res_flags = ["bash"]
 size = "large"
 race = "cat"
@@ -418,7 +484,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 4
@@ -429,6 +495,11 @@ alignment = 0
   number = 2
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 4058
@@ -443,7 +514,7 @@ level = 25
 hitroll = 2
 ac = [0, -20, 0, 40]
 damage_type = "bash"
-off_flags = ["berserk", "crush"]
+off_flags = ["berserk", "crush", "assist_race"]
 res_flags = ["weapon", "fire", "cold"]
 vuln_flags = ["lightning", "mental"]
 size = "huge"
@@ -463,6 +534,11 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 10
+  bonus = 100
+
 [[mobiles]]
 vnum = 4100
 keywords = ["mage"]
@@ -474,14 +550,14 @@ level = 26
 hitroll = 1
 ac = [-20, -20, -20, 20]
 damage_type = "bash"
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_align"]
 res_flags = ["magic"]
 race = "human"
 gold = 400
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -100
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -493,6 +569,11 @@ special = "spec_cast_mage"
   number = 1
   size = 6
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 13
+  size = 10
+  bonus = 100
 
 [[mobiles]]
 vnum = 4101
@@ -506,7 +587,7 @@ level = 23
 hitroll = 2
 ac = [0, -30, 20, 60]
 damage_type = "slash"
-off_flags = ["bash", "berserk", "disarm", "crush"]
+off_flags = ["bash", "berserk", "disarm", "crush", "assist_race"]
 res_flags = ["charm", "bash"]
 vuln_flags = ["fire", "acid"]
 size = "large"
@@ -515,7 +596,7 @@ gold = 200
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
 affected_by = ["detect_hidden", "infrared", "regeneration"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 7
@@ -526,6 +607,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 10
+  bonus = 100
 
 [[mobiles]]
 vnum = 4102
@@ -539,14 +625,14 @@ level = 19
 hitroll = 2
 ac = [0, 0, 20, 60]
 damage_type = "pierce"
-off_flags = ["fast", "tail", "trip", "crush"]
+off_flags = ["fast", "tail", "trip", "crush", "assist_race"]
 res_flags = ["pierce", "poison"]
 vuln_flags = ["slash", "cold"]
 race = "snake"
 gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-alignment = 0
+alignment = -700
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -558,6 +644,11 @@ special = "spec_poison"
   number = 2
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 4103
@@ -575,7 +666,7 @@ gold = 100
 sex = "either"
 act_flags = ["npc", "scavenger", "wimpy", "thief"]
 affected_by = ["sneak", "hide"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 6
@@ -587,6 +678,11 @@ alignment = 0
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4104
 keywords = ["orc"]
@@ -597,7 +693,7 @@ level = 13
 hitroll = 1
 ac = [40, 50, 50, 80]
 damage_type = "bash"
-off_flags = ["bash", "kick_dirt"]
+off_flags = ["bash", "kick_dirt", "assist_race"]
 res_flags = ["disease"]
 vuln_flags = ["light"]
 race = "orc"
@@ -605,7 +701,7 @@ gold = 150
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 7
@@ -616,6 +712,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 4105
@@ -629,7 +730,7 @@ level = 12
 hitroll = 1
 ac = [30, 60, 40, 100]
 damage_type = "pierce"
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["pierce", "cold"]
 vuln_flags = ["bash"]
 size = "small"
@@ -638,7 +739,7 @@ gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 8
@@ -650,6 +751,11 @@ alignment = 0
   size = 4
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4106
 keywords = ["warrior"]
@@ -660,12 +766,12 @@ level = 18
 hitroll = 2
 ac = [30, 20, 40, 60]
 damage_type = "bash"
-off_flags = ["bash", "kick_dirt"]
+off_flags = ["bash", "kick_dirt", "assist_align", "assist_vnum"]
 race = "human"
 gold = 300
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
-alignment = 0
+alignment = -300
 
   [mobiles.hit_dice]
   number = 4
@@ -677,6 +783,11 @@ alignment = 0
   size = 8
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4107
 keywords = ["kobold"]
@@ -687,7 +798,7 @@ level = 14
 hitroll = 1
 ac = [50, 50, 50, 100]
 damage_type = "slash"
-off_flags = ["trip"]
+off_flags = ["trip", "assist_race"]
 res_flags = ["poison"]
 vuln_flags = ["magic"]
 size = "small"
@@ -696,7 +807,7 @@ gold = 25
 sex = "either"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 8
@@ -708,6 +819,11 @@ alignment = 0
   size = 4
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4150
 keywords = ["bat", "blue"]
@@ -718,7 +834,7 @@ level = 13
 hitroll = 1
 ac = [40, 40, 40, 60]
 damage_type = "lightning"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 imm_flags = ["lightning"]
 vuln_flags = ["drowning", "light", "silver"]
 size = "tiny"
@@ -727,7 +843,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["flying", "dark_vision"]
-alignment = 0
+alignment = -100
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -740,6 +856,11 @@ special = "spec_breath_lightning"
   size = 9
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4151
 keywords = ["bat", "red"]
@@ -751,7 +872,7 @@ level = 14
 hitroll = 1
 ac = [40, 40, 40, 60]
 damage_type = "fire"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 imm_flags = ["fire"]
 vuln_flags = ["cold", "drowning", "light"]
 size = "tiny"
@@ -760,7 +881,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["flying", "dark_vision"]
-alignment = 0
+alignment = -100
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -773,6 +894,11 @@ special = "spec_breath_fire"
   size = 9
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4152
 keywords = ["bat", "green"]
@@ -783,7 +909,7 @@ level = 14
 hitroll = 1
 ac = [40, 40, 40, 60]
 damage_type = "pierce"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 imm_flags = ["poison"]
 vuln_flags = ["light"]
 size = "tiny"
@@ -792,7 +918,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["flying", "dark_vision"]
-alignment = 0
+alignment = -100
 special = "spec_breath_gas"
 
   [mobiles.hit_dice]
@@ -805,6 +931,11 @@ special = "spec_breath_gas"
   size = 9
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4153
 keywords = ["bat", "white"]
@@ -816,7 +947,7 @@ level = 13
 hitroll = 1
 ac = [40, 40, 40, 60]
 damage_type = "cold"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 imm_flags = ["cold"]
 vuln_flags = ["fire", "light"]
 size = "tiny"
@@ -825,7 +956,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["flying", "dark_vision"]
-alignment = 0
+alignment = -100
 special = "spec_breath_frost"
 
   [mobiles.hit_dice]
@@ -838,6 +969,11 @@ special = "spec_breath_frost"
   size = 9
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4154
 keywords = ["bat", "black"]
@@ -848,7 +984,7 @@ level = 13
 hitroll = 1
 ac = [40, 40, 40, 60]
 damage_type = "acid"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 imm_flags = ["acid"]
 vuln_flags = ["light"]
 size = "tiny"
@@ -857,7 +993,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["flying", "dark_vision"]
-alignment = 0
+alignment = -100
 special = "spec_breath_acid"
 
   [mobiles.hit_dice]
@@ -870,6 +1006,11 @@ special = "spec_breath_acid"
   size = 9
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4155
 keywords = ["thief"]
@@ -880,13 +1021,13 @@ level = 23
 hitroll = 2
 ac = [20, 0, 0, 60]
 damage_type = "bash"
-off_flags = ["backstab", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "dodge", "kick_dirt", "trip", "assist_align", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
-affected_by = ["hide"]
-alignment = 0
+affected_by = ["hide", "invisible"]
+alignment = 400
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -899,6 +1040,11 @@ special = "spec_thief"
   size = 4
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4156
 keywords = ["troll"]
@@ -909,7 +1055,7 @@ level = 27
 hitroll = 3
 ac = [-10, -30, -10, 40]
 damage_type = "slash"
-off_flags = ["bash", "berserk", "disarm", "crush"]
+off_flags = ["bash", "berserk", "disarm", "crush", "assist_race"]
 res_flags = ["charm", "bash"]
 vuln_flags = ["magic", "fire", "acid"]
 size = "huge"
@@ -918,7 +1064,7 @@ gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
 affected_by = ["detect_hidden", "infrared", "regeneration"]
-alignment = 0
+alignment = -700
 
   [mobiles.hit_dice]
   number = 8
@@ -930,6 +1076,11 @@ alignment = 0
   size = 4
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 14
+  size = 4
+  bonus = 100
+
 [[mobiles]]
 vnum = 4157
 keywords = ["mage"]
@@ -939,6 +1090,7 @@ description = """
 His little head is buried into his magic books.  He'd be very
 angry should you bother his studies."""
 level = 21
+off_flags = ["assist_align", "assist_vnum"]
 hitroll = 0
 ac = [0, 0, 0, 20]
 damage_type = "bash"
@@ -947,7 +1099,7 @@ race = "human"
 gold = 200
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "mage"]
-alignment = 0
+alignment = -200
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -960,6 +1112,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 11
+  size = 12
+  bonus = 100
+
 [[mobiles]]
 vnum = 4158
 keywords = ["snake"]
@@ -969,17 +1126,19 @@ description = """
 Sickly brown as it is, you know what it really wants is you
 for dinner."""
 level = 17
+start_pos = "fighting"
+default_pos = "fighting"
 hitroll = 1
 ac = [10, 30, 30, 60]
 damage_type = "pierce"
-off_flags = ["dodge", "fade", "trip"]
+off_flags = ["dodge", "fade", "trip", "assist_race"]
 res_flags = ["bash", "pierce", "poison"]
 vuln_flags = ["cold"]
 race = "snake"
 gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "aggressive", "no_align"]
-alignment = 0
+alignment = 200
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -992,6 +1151,11 @@ special = "spec_poison"
   size = 12
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 4159
 keywords = ["troll"]
@@ -1002,7 +1166,7 @@ level = 15
 hitroll = 2
 ac = [30, 10, 30, 60]
 damage_type = "pierce"
-off_flags = ["berserk", "disarm", "kick_dirt"]
+off_flags = ["berserk", "disarm", "kick_dirt", "assist_race"]
 res_flags = ["charm", "bash"]
 vuln_flags = ["fire", "acid"]
 size = "large"
@@ -1011,7 +1175,7 @@ gold = 100
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_hidden", "infrared", "regeneration"]
-alignment = 0
+alignment = -300
 
   [mobiles.hit_dice]
   number = 3
@@ -1023,6 +1187,11 @@ alignment = 0
   size = 5
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 8
+  size = 4
+  bonus = 100
+
 [[mobiles]]
 vnum = 4160
 keywords = ["orc"]
@@ -1033,7 +1202,7 @@ level = 17
 hitroll = 1
 ac = [20, 20, 10, 50]
 damage_type = "bash"
-off_flags = ["bash", "kick_dirt", "trip"]
+off_flags = ["bash", "kick_dirt", "trip", "assist_race"]
 res_flags = ["disease"]
 vuln_flags = ["light"]
 race = "orc"
@@ -1041,7 +1210,7 @@ gold = 150
 sex = "either"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 3
@@ -1052,4 +1221,9 @@ alignment = 0
   number = 1
   size = 8
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 

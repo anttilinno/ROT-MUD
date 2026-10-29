@@ -7,7 +7,7 @@ description = "Your typical smelly, blind flying mammal."
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 vuln_flags = ["light"]
 race = "bat"
 gold = 0
@@ -26,6 +26,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2002
 keywords = ["oldstyle", "page", "templar"]
@@ -35,12 +40,12 @@ description = "He has lost his family and everything of his former life."
 level = 14
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 30
 sex = "male"
 act_flags = ["npc", "wimpy"]
-alignment = 0
+alignment = 200
 
   [mobiles.hit_dice]
   number = 2
@@ -51,6 +56,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2003
@@ -65,13 +75,13 @@ probably won't last long."""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 40
 sex = "male"
 act_flags = ["npc", "scavenger", "wimpy"]
 affected_by = ["detect_hidden"]
-alignment = 0
+alignment = 100
 
   [mobiles.hit_dice]
   number = 2
@@ -82,6 +92,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2004
@@ -94,12 +109,12 @@ They seem like little more than zombie servants themselves."""
 level = 18
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -111,6 +126,11 @@ alignment = 0
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2005
 keywords = ["oldstyle", "mist", "swirling"]
@@ -120,12 +140,12 @@ description = "In fact it IS alive in a magical sort of sense."
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "none"
 act_flags = ["npc"]
-affected_by = ["sneak", "pass_door"]
+affected_by = ["sneak", "pass_door", "sanctuary"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -138,6 +158,11 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2006
 keywords = ["oldstyle"]
@@ -146,7 +171,7 @@ long_desc = ""
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "none"
@@ -163,6 +188,11 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2007
 keywords = ["oldstyle", "skeleton", "skeletal", "soldier"]
@@ -174,12 +204,12 @@ continues for him in his charmed state."""
 level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 55
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
-alignment = 0
+alignment = -290
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -191,6 +221,11 @@ special = "spec_cast_undead"
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2008
@@ -206,12 +241,12 @@ A templar tells you, "You must die for your sin!"."""
 level = 24
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 2
@@ -223,6 +258,11 @@ alignment = 0
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2009
 keywords = ["oldstyle", "wraith"]
@@ -233,7 +273,7 @@ Hard to tell much about the mysterious form even upon further inspection."""
 level = 23
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 30
 sex = "male"
@@ -252,6 +292,11 @@ special = "spec_cast_undead"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2010
 keywords = ["oldstyle", "officer", "templar"]
@@ -261,13 +306,13 @@ description = "A templar officer tells you \"Better move along evil one!\""
 level = 25
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 30
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 700
 
   [mobiles.hit_dice]
   number = 2
@@ -279,6 +324,11 @@ alignment = 0
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2011
 keywords = ["oldstyle", "zombie", "mage"]
@@ -288,12 +338,12 @@ description = "He seems to lack real interest in what he is doing."
 level = 25
 hitroll = 0
 ac = [0, 0, 0, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 27
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "mage"]
-alignment = 0
+alignment = -100
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -306,6 +356,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 13
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2012
 keywords = ["oldstyle", "shadow", "shadows"]
@@ -315,11 +370,11 @@ description = "Looks vaguely you-shaped."
 level = 28
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 40
 sex = "none"
-act_flags = ["npc"]
+act_flags = ["npc", "no_body", "nb_drop"]
 affected_by = ["detect_hidden", "sneak", "pass_door"]
 alignment = 0
 
@@ -333,6 +388,11 @@ alignment = 0
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2013
 keywords = ["oldstyle", "bat", "vampire"]
@@ -342,14 +402,14 @@ description = "A rather LARGE \"bat\" ..."
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 vuln_flags = ["light"]
 race = "bat"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_hidden", "flying", "dark_vision"]
-alignment = 0
+alignment = -100
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -361,6 +421,11 @@ special = "spec_cast_undead"
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2014
@@ -373,12 +438,12 @@ to kill you to get a fresh corpse!"""
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 55
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
-alignment = 0
+alignment = -888
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -391,6 +456,11 @@ special = "spec_cast_undead"
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2015
 keywords = ["oldstyle", "grand", "templar", "leader"]
@@ -402,13 +472,13 @@ of an eye he seems stern again."""
 level = 32
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 3
@@ -420,6 +490,11 @@ alignment = 0
   size = 6
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2016
 keywords = ["oldstyle", "prism", "dragon", "prismdragon"]
@@ -430,13 +505,13 @@ The spray of colored light bouncing off his scales is almost blinding."""
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = -303
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -449,6 +524,11 @@ special = "spec_breath_any"
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2017
 keywords = ["oldstyle", "darken", "dark", "beast", "darkenbeast"]
@@ -458,12 +538,12 @@ description = "You see nothing more than the sense of darkness and evil."
 level = 47
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1000
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
-alignment = 0
+alignment = -1000
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -475,4 +555,9 @@ special = "spec_poison"
   number = 2
   size = 10
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 

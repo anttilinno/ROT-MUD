@@ -11,13 +11,13 @@ looks impervious to normal weapons."""
 level = 89
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -900
 special = "spec_cast_judge"
 
   [mobiles.hit_dice]
@@ -30,6 +30,11 @@ special = "spec_cast_judge"
   size = 4
   bonus = 16
 
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10402
 keywords = ["oldstyle", "pile", "coins"]
@@ -39,13 +44,13 @@ description = "A large sparkly pile of gold coins."
 level = 59
 hitroll = 0
 ac = [-90, -90, -90, 40]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -58,6 +63,11 @@ special = "spec_thief"
   size = 12
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10403
 keywords = ["oldstyle", "male", "dee", "demon"]
@@ -69,13 +79,13 @@ muscles on his naked body make your mouth water."""
 level = 79
 hitroll = 0
 ac = [-130, -130, -130, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -88,6 +98,11 @@ special = "spec_breath_fire"
   size = 8
   bonus = 13
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10404
 keywords = ["oldstyle", "female", "dee", "demon"]
@@ -99,13 +114,13 @@ naked body make you sweat and babble uncontrollably."""
 level = 79
 hitroll = 0
 ac = [-130, -130, -130, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 15
@@ -117,6 +132,11 @@ alignment = 0
   size = 8
   bonus = 13
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10405
 keywords = ["oldstyle", "bar", "gold"]
@@ -126,13 +146,13 @@ description = "This gold bar must be worth bucks!"
 level = 73
 hitroll = 0
 ac = [-120, -120, -120, 30]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -145,6 +165,11 @@ special = "spec_thief"
   size = 10
   bonus = 11
 
+  [mobiles.mana_dice]
+  number = 18
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10406
 keywords = ["oldstyle", "chicken", "pot", "pie"]
@@ -155,13 +180,13 @@ You see a golden-crusted pot pie filled with chicken and vegetables."""
 level = 83
 hitroll = 0
 ac = [-140, -140, -140, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -800
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -174,6 +199,11 @@ special = "spec_poison"
   size = 12
   bonus = 14
 
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10407
 keywords = ["oldstyle", "beef", "pot", "pie"]
@@ -184,13 +214,13 @@ You see a golden-crusted pot pie filled with beef and vegetables."""
 level = 83
 hitroll = 0
 ac = [-140, -140, -140, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -800
 special = "spec_cast_judge"
 
   [mobiles.hit_dice]
@@ -203,6 +233,11 @@ special = "spec_cast_judge"
   size = 12
   bonus = 18
 
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10408
 keywords = ["oldstyle", "vegetable", "pot", "pie"]
@@ -212,13 +247,13 @@ description = "You see a golden-crusted pot pie filled with vegetables."
 level = 84
 hitroll = 0
 ac = [-140, -140, -140, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -800
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -231,6 +266,11 @@ special = "spec_cast_cleric"
   size = 12
   bonus = 14
 
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10409
 keywords = ["oldstyle", "damned", "soul"]
@@ -242,13 +282,13 @@ make out features that would identify it as the person it was in life."""
 level = 64
 hitroll = 0
 ac = [-100, -100, -100, 40]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "stay_area", "cleric"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -700
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -261,6 +301,11 @@ special = "spec_cast_cleric"
   size = 6
   bonus = 9
 
+  [mobiles.mana_dice]
+  number = 32
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10410
 keywords = ["oldstyle", "tortured", "soul"]
@@ -272,13 +317,13 @@ indescribable torture. It screams out at you in pain and terror."""
 level = 68
 hitroll = 0
 ac = [-110, -110, -110, 0]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -800
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -290,6 +335,11 @@ special = "spec_cast_mage"
   number = 4
   size = 6
   bonus = 9
+
+  [mobiles.mana_dice]
+  number = 34
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10411
@@ -303,13 +353,13 @@ desperate plea..."""
 level = 92
 hitroll = 0
 ac = [-160, -160, -160, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "key"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -757
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -321,6 +371,11 @@ special = "spec_cast_undead"
   number = 6
   size = 6
   bonus = 16
+
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10412
@@ -334,13 +389,13 @@ of horror, pain, and sorrow issuing from within."""
 level = 99
 hitroll = 0
 ac = [-200, -200, -200, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -1000
 special = "spec_breath_acid"
 
   [mobiles.hit_dice]
@@ -352,6 +407,11 @@ special = "spec_breath_acid"
   number = 5
   size = 8
   bonus = 19
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10413
@@ -365,13 +425,13 @@ delicious and juicy brain."""
 level = 69
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "key"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -743
 
   [mobiles.hit_dice]
   number = 10
@@ -382,6 +442,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10414
@@ -394,13 +459,13 @@ gore-covered limb makes you want to retch."""
 level = 65
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -884
 
   [mobiles.hit_dice]
   number = 10
@@ -411,6 +476,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 16
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10415
@@ -421,13 +491,13 @@ description = "This bloody foot definitely wasn't a lucky one."
 level = 65
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 10
@@ -438,6 +508,11 @@ alignment = 0
   number = 6
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 16
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10416
@@ -450,13 +525,13 @@ this nose does..."""
 level = 65
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 10
@@ -468,6 +543,11 @@ alignment = 0
   size = 4
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 16
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10417
 keywords = ["oldstyle", "blood"]
@@ -478,13 +558,13 @@ You see gallons and gallons of thick red blood gurgling in the fountain."""
 level = 90
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -950
 special = "spec_breath_gas"
 
   [mobiles.hit_dice]
@@ -497,6 +577,11 @@ special = "spec_breath_gas"
   size = 4
   bonus = 16
 
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10418
 keywords = ["oldstyle", "Lost", "soul"]
@@ -508,13 +593,13 @@ that reads #14349023402342039840293481234900049."""
 level = 88
 hitroll = 0
 ac = [-150, -150, -150, -20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -526,6 +611,11 @@ special = "spec_cast_mage"
   number = 4
   size = 8
   bonus = 14
+
+  [mobiles.mana_dice]
+  number = 44
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10419
@@ -539,13 +629,13 @@ body and devour its flesh..."""
 level = 87
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -800
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -558,6 +648,11 @@ special = "spec_breath_fire"
   size = 4
   bonus = 15
 
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10420
 keywords = ["oldstyle", "pile", "bones", "skeleton"]
@@ -569,13 +664,13 @@ by them."""
 level = 74
 hitroll = 0
 ac = [-120, -120, -120, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -700
 
   [mobiles.hit_dice]
   number = 10
@@ -586,6 +681,11 @@ alignment = 0
   number = 3
   size = 10
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 18
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10421
@@ -601,13 +701,13 @@ shadow or a ghost."""
 level = 70
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "wimpy"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -900
 special = "spec_fido"
 
   [mobiles.hit_dice]
@@ -619,6 +719,11 @@ special = "spec_fido"
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10422
@@ -632,13 +737,13 @@ the gods."""
 level = 70
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -650,6 +755,11 @@ special = "spec_breath_lightning"
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10423
@@ -663,13 +773,13 @@ breasts makes you avert your eyes."""
 level = 75
 hitroll = 0
 ac = [-130, -130, -130, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 10
@@ -680,6 +790,11 @@ alignment = 0
   number = 5
   size = 6
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 19
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10424
@@ -693,13 +808,13 @@ elbow and hangs limply by his side."""
 level = 76
 hitroll = 0
 ac = [-130, -130, -130, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 10
@@ -710,6 +825,11 @@ alignment = 0
   number = 5
   size = 6
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 19
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10425
@@ -722,13 +842,13 @@ Yellow spittle runs down the scales of his blackened skin."""
 level = 79
 hitroll = 0
 ac = [-130, -130, -130, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -800
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -741,6 +861,11 @@ special = "spec_poison"
   size = 8
   bonus = 13
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10426
 keywords = ["oldstyle", "burning", "fool"]
@@ -752,13 +877,13 @@ of Hell consuming it, and the smell of burning flesh."""
 level = 84
 hitroll = 0
 ac = [-140, -140, -140, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -900
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -770,6 +895,11 @@ special = "spec_breath_fire"
   number = 3
   size = 12
   bonus = 14
+
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10427
@@ -783,13 +913,13 @@ As you look closer at the hard hat, you notice that it says:
 level = 89
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -666
 
   [mobiles.hit_dice]
   number = 25
@@ -800,6 +930,11 @@ alignment = 0
   number = 8
   size = 4
   bonus = 16
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10428
@@ -813,13 +948,13 @@ As you look closer at the hard hat, you notice that it says:
 level = 92
 hitroll = 0
 ac = [-160, -160, -160, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -666
 
   [mobiles.hit_dice]
   number = 25
@@ -830,6 +965,11 @@ alignment = 0
   number = 6
   size = 6
   bonus = 16
+
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10430
@@ -844,13 +984,13 @@ love."""
 level = 95
 hitroll = 0
 ac = [-180, -180, -180, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -862,6 +1002,11 @@ special = "spec_breath_fire"
   number = 6
   size = 6
   bonus = 18
+
+  [mobiles.mana_dice]
+  number = 24
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10431
@@ -875,13 +1020,13 @@ to the various posts around the room."""
 level = 92
 hitroll = 0
 ac = [-160, -160, -160, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "flying", "haste"]
-alignment = 0
+alignment = -600
 
   [mobiles.hit_dice]
   number = 25
@@ -892,6 +1037,11 @@ alignment = 0
   number = 6
   size = 6
   bonus = 16
+
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10432
@@ -905,13 +1055,13 @@ that runs down its dung covered coat."""
 level = 90
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "key"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -900
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -923,6 +1073,11 @@ special = "spec_breath_fire"
   number = 8
   size = 4
   bonus = 16
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10433
@@ -936,13 +1091,13 @@ help."""
 level = 93
 hitroll = 0
 ac = [-170, -170, -170, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -900
 special = "spec_breath_frost"
 
   [mobiles.hit_dice]
@@ -954,6 +1109,11 @@ special = "spec_breath_frost"
   number = 6
   size = 6
   bonus = 17
+
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10434
@@ -969,13 +1129,13 @@ break an appendage off a nearby soul and beat the soul with it."""
 level = 102
 hitroll = 0
 ac = [-220, -220, -220, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "flying", "haste"]
-alignment = 0
+alignment = -1000
 special = "spec_breath_frost"
 
   [mobiles.hit_dice]
@@ -987,6 +1147,11 @@ special = "spec_breath_frost"
   number = 6
   size = 7
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10435
@@ -1001,13 +1166,13 @@ about again."""
 level = 97
 hitroll = 0
 ac = [-190, -190, -190, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -789
 
   [mobiles.hit_dice]
   number = 50
@@ -1018,6 +1183,11 @@ alignment = 0
   number = 4
   size = 10
   bonus = 18
+
+  [mobiles.mana_dice]
+  number = 24
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10436
@@ -1031,13 +1201,13 @@ move and wriggle with a life of its own..."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -876
 
   [mobiles.hit_dice]
   number = 50
@@ -1048,6 +1218,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10437
@@ -1060,13 +1235,13 @@ HEY! Penguins don't have teeth!"""
 level = 102
 hitroll = 0
 ac = [-210, -210, -210, -50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "mage"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -876
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -1078,6 +1253,11 @@ special = "spec_cast_mage"
   number = 4
   size = 10
   bonus = 18
+
+  [mobiles.mana_dice]
+  number = 52
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10438
@@ -1092,13 +1272,13 @@ WE ALL SCREAM FOR I SCREAM!!!'"""
 level = 102
 hitroll = 0
 ac = [-220, -220, -220, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -706
 special = "spec_breath_frost"
 
   [mobiles.hit_dice]
@@ -1110,6 +1290,11 @@ special = "spec_breath_frost"
   number = 6
   size = 7
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10439
@@ -1125,13 +1310,13 @@ written on it in large, yellow letters."""
 level = 102
 hitroll = 0
 ac = [-220, -220, -220, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -706
 special = "spec_breath_frost"
 
   [mobiles.hit_dice]
@@ -1143,6 +1328,11 @@ special = "spec_breath_frost"
   number = 6
   size = 7
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10440
@@ -1159,13 +1349,13 @@ He seems none too happy to see you."""
 level = 103
 hitroll = 0
 ac = [-230, -230, -230, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 50
@@ -1176,6 +1366,11 @@ alignment = 0
   number = 6
   size = 7
   bonus = 21
+
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10441
@@ -1189,13 +1384,13 @@ to your presence and seems fascinated by the phones."""
 level = 85
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -700
 
   [mobiles.hit_dice]
   number = 25
@@ -1206,6 +1401,11 @@ alignment = 0
   number = 3
   size = 12
   bonus = 15
+
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10442
@@ -1218,13 +1418,13 @@ AAAAAAAAAAaaaaaaaaaaaarrrrrrrrgggggghhhhh!!!!!!!!!!!"""
 level = 87
 hitroll = 0
 ac = [-150, -150, -150, 20]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -1237,6 +1437,11 @@ special = "spec_thief"
   size = 12
   bonus = 15
 
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10443
 keywords = ["oldstyle", "records", "worker"]
@@ -1248,13 +1453,13 @@ someone."""
 level = 87
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 25
@@ -1265,6 +1470,11 @@ alignment = 0
   number = 8
   size = 4
   bonus = 15
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10444
@@ -1277,13 +1487,13 @@ as jolly as you can get. Must be Santa Claus!"""
 level = 87
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 25
@@ -1294,6 +1504,11 @@ alignment = 0
   number = 8
   size = 4
   bonus = 15
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10445
@@ -1306,13 +1521,13 @@ out his emaciated face beneath the hood."""
 level = 103
 hitroll = 0
 ac = [-230, -230, -230, -10]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "cleric"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -1325,6 +1540,11 @@ special = "spec_cast_cleric"
   size = 8
   bonus = 21
 
+  [mobiles.mana_dice]
+  number = 53
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10446
 keywords = ["oldstyle", "bowl", "blood"]
@@ -1334,13 +1554,13 @@ description = "It is a wooden bowl filled with blood and bits of flesh."
 level = 96
 hitroll = 0
 ac = [-180, -180, -180, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -900
 
   [mobiles.hit_dice]
   number = 25
@@ -1352,6 +1572,11 @@ alignment = 0
   size = 6
   bonus = 18
 
+  [mobiles.mana_dice]
+  number = 24
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10447
 keywords = ["oldstyle", "jury", "member"]
@@ -1362,13 +1587,13 @@ It seems to be a lesser demon disguised as mortal. Fair trial?  Not likely."""
 level = 79
 hitroll = 0
 ac = [-130, -130, -130, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 15
@@ -1379,6 +1604,11 @@ alignment = 0
   number = 4
   size = 8
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10448
@@ -1391,13 +1621,13 @@ and is notorious for his painful and harsh punishments."""
 level = 102
 hitroll = 0
 ac = [-220, -220, -220, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_judge"
 
   [mobiles.hit_dice]
@@ -1410,6 +1640,11 @@ special = "spec_cast_judge"
   size = 7
   bonus = 20
 
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10449
 keywords = ["oldstyle", "lawyer", "hell"]
@@ -1420,13 +1655,13 @@ Slimy, sleezy, and with very sharp teeth... A lawyer all right..."""
 level = 102
 hitroll = 0
 ac = [-220, -220, -220, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 50
@@ -1437,6 +1672,11 @@ alignment = 0
   number = 6
   size = 7
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10450
@@ -1449,13 +1689,13 @@ She seems not to notice you, but is absorbed in her favorite soap,
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 50
@@ -1466,6 +1706,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10451
@@ -1480,13 +1725,13 @@ He is known to buy anything, and to sell anything sold to him."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 50
@@ -1505,6 +1750,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10452
 keywords = ["oldstyle", "maintenance", "worker"]
@@ -1515,13 +1765,13 @@ He is in a yellow jumpsuit with a large nuclear-warning symbol on the back."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 50
@@ -1533,6 +1783,11 @@ alignment = 0
   size = 8
   bonus = 20
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10453
 keywords = ["oldstyle", "weeds"]
@@ -1542,13 +1797,13 @@ description = "You see a nasty yellow-and-purple weed."
 level = 79
 hitroll = 0
 ac = [-130, -130, -130, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 15
@@ -1559,6 +1814,11 @@ alignment = 0
   number = 4
   size = 8
   bonus = 13
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10454
@@ -1572,13 +1832,13 @@ years ago."""
 level = 104
 hitroll = 0
 ac = [-240, -240, -240, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 50
@@ -1597,6 +1857,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 27
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10455
 keywords = ["oldstyle", "half", "eaten", "horse", "carcass"]
@@ -1608,13 +1873,13 @@ of it has been digested already."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1625,6 +1890,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10456
@@ -1637,13 +1907,13 @@ to move to each food item and barf acid all over it."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 special = "spec_breath_acid"
 
   [mobiles.hit_dice]
@@ -1656,6 +1926,11 @@ special = "spec_breath_acid"
   size = 8
   bonus = 20
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10457
 keywords = ["oldstyle", "rancid", "turkey", "leg"]
@@ -1667,13 +1942,13 @@ disappears, and you wonder if it just walked away...."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1684,6 +1959,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10458
@@ -1696,13 +1976,13 @@ the back."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1713,6 +1993,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10459
@@ -1725,13 +2010,13 @@ the back."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1742,6 +2027,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10460
@@ -1758,13 +2048,13 @@ for a nap."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1775,6 +2065,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10461
@@ -1785,13 +2080,13 @@ description = "Mmmmmm...Don't you just want to take a bite?"
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1802,6 +2097,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10462
@@ -1813,13 +2113,13 @@ He spots you and screams, 'Git awa froom mi food!  I'll kill you!'"""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1831,6 +2131,11 @@ alignment = 0
   size = 8
   bonus = 20
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10463
 keywords = ["oldstyle", "frantic", "lady"]
@@ -1839,13 +2144,13 @@ long_desc = "A frantic lady is here, looking in vain for a sale and tearing her 
 level = 83
 hitroll = 0
 ac = [-140, -140, -140, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -600
 
   [mobiles.hit_dice]
   number = 25
@@ -1857,6 +2162,11 @@ alignment = 0
   size = 12
   bonus = 14
 
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10464
 keywords = ["oldstyle", "nuclear", "technician"]
@@ -1865,13 +2175,13 @@ long_desc = "A nuclear technician is here, fiddling with his rad suit."
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1882,6 +2192,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10465
@@ -1891,13 +2206,13 @@ long_desc = "A stray proton is here, whizzing about."
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1908,6 +2223,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10466
@@ -1917,13 +2237,13 @@ long_desc = "The radiation in the room does unknown things to you."
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1934,6 +2254,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10467
@@ -1948,13 +2273,13 @@ are flashing and sirens are screaming in the background."""
 level = 104
 hitroll = 0
 ac = [-240, -240, -240, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -1965,6 +2290,11 @@ alignment = 0
   number = 7
   size = 6
   bonus = 22
+
+  [mobiles.mana_dice]
+  number = 27
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 10468
@@ -1980,13 +2310,13 @@ sounds of their unending pain..."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -800
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -1999,6 +2329,11 @@ special = "spec_breath_fire"
   size = 8
   bonus = 20
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10469
 keywords = ["oldstyle", "frozen", "side", "beef"]
@@ -2010,13 +2345,13 @@ large cow."""
 level = 86
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -675
 special = "spec_breath_frost"
 
   [mobiles.hit_dice]
@@ -2029,6 +2364,11 @@ special = "spec_breath_frost"
   size = 12
   bonus = 15
 
+  [mobiles.mana_dice]
+  number = 21
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10470
 keywords = ["oldstyle", "guard", "dog"]
@@ -2039,13 +2379,13 @@ A vicious-looking pit bull / demon-dog mix is here, slobbering on the donuts."""
 level = 89
 hitroll = 0
 ac = [-150, -150, -150, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "key"]
 affected_by = ["infrared", "haste"]
-alignment = 0
+alignment = -900
 special = "spec_fido"
 
   [mobiles.hit_dice]
@@ -2058,6 +2398,11 @@ special = "spec_fido"
   size = 4
   bonus = 16
 
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 10471
 keywords = ["oldstyle", "juicy", "steak"]
@@ -2068,13 +2413,13 @@ Mmmmmmm.....Steak....Mmmmmm...You feel your mouth start to water."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "haste"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 50
@@ -2085,3 +2430,8 @@ alignment = 0
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100

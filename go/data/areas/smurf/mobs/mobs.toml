@@ -9,13 +9,13 @@ urge to crush him."""
 level = 1
 hitroll = 0
 ac = [100, 100, 100, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -27,6 +27,11 @@ special = "spec_thief"
   number = 1
   size = 2
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 102
@@ -38,13 +43,13 @@ A small smurf is quietly picking berries.  He seems to hardly notice you."""
 level = 2
 hitroll = 0
 ac = [100, 100, 100, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -56,6 +61,11 @@ special = "spec_thief"
   number = 1
   size = 2
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 103
@@ -68,13 +78,13 @@ other smurfs.  They fear his knowledge.  Knowledge is power!"""
 level = 6
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -86,6 +96,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 104
@@ -98,13 +113,13 @@ give him a break, like all of his bones."""
 level = 6
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -116,6 +131,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 105
@@ -128,13 +148,13 @@ if he has ever stayed up a whole night without sleeping."""
 level = 5
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -146,6 +166,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 106
@@ -158,13 +183,13 @@ the time.  Won't do him much good when he's DEAD."""
 level = 5
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -176,6 +201,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 107
@@ -187,13 +217,13 @@ Grumpy has never been happy in his whole life.  So why don't you just end it?"""
 level = 5
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -205,6 +235,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 108
@@ -217,13 +252,13 @@ Oh well, to each his own."""
 level = 6
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -235,6 +270,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 109
@@ -247,13 +287,13 @@ size.  I wonder how much she charges the other smurfs."""
 level = 6
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -265,6 +305,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 110
@@ -278,12 +323,12 @@ is why Papa Smurf is so popular among the ladies."""
 level = 19
 hitroll = 0
 ac = [20, 20, 20, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "mage"]
-alignment = 0
+alignment = 100
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -296,6 +341,11 @@ special = "spec_cast_mage"
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 111
 keywords = ["oldstyle", "gargamel"]
@@ -307,12 +357,12 @@ before but always lets them escape.  He brings true meaning to the word moron.""
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy", "cleric"]
-alignment = 0
+alignment = -100
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -325,6 +375,11 @@ special = "spec_cast_cleric"
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 112
 keywords = ["oldstyle", "azreal", "cat"]
@@ -336,12 +391,12 @@ just grab a smurf in his teeth and chew away."""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = -100
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -353,4 +408,9 @@ special = "spec_poison"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 

@@ -10,13 +10,13 @@ saliva dripping from the beast's jaw.  The guardian beast snarls again."""
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "sneak", "hide"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 2
@@ -28,6 +28,11 @@ alignment = 0
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2801
 keywords = ["oldstyle", "young", "troll"]
@@ -38,15 +43,16 @@ He is a tall, wiry, furry humanoid.
 Your eyes lock with his.  He smiles, puts down his bone, and reaches for one
 of yours!!"""
 level = 11
+start_pos = "sitting"
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -57,6 +63,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2802
@@ -70,13 +81,13 @@ His eyes dart toward you, as he realizes you are one third his size."""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -88,6 +99,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2803
 keywords = ["oldstyle", "baby", "troll"]
@@ -98,15 +114,16 @@ He is a large, chubby, furry humanoid.
 He is trying to stuff an arm in a hole in the wall.
 He notices you and gargles "WANNA JOIN?"."""
 level = 10
+start_pos = "sitting"
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 12
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 2
@@ -118,6 +135,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2804
 keywords = ["oldstyle", "giant", "troll"]
@@ -128,9 +150,10 @@ He is a gigantic, muscular, furry humanoid.
 He gasps as he notices your intrusion.
 You gasp as you realize you have intruded upon his acts of passion!"""
 level = 25
+start_pos = "resting"
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["fire", "cold"]
 vuln_flags = ["lightning", "mental"]
 race = "giant"
@@ -138,7 +161,7 @@ gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 2
@@ -150,6 +173,11 @@ alignment = 0
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2805
 keywords = ["oldstyle", "large", "troll", "female"]
@@ -160,15 +188,16 @@ She is a huge, grotesque, furry humanoid.
 She moans in passion but gasps as she notices you.
 Her smiles turn into snarls as she screams at you!"""
 level = 22
+start_pos = "resting"
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 125
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 2
@@ -179,6 +208,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2806
@@ -191,7 +225,7 @@ It moves quickly, from corpse to corpse."""
 level = 5
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -209,6 +243,11 @@ alignment = 0
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 2807
 keywords = ["oldstyle", "roving", "beast"]
@@ -222,13 +261,13 @@ jaw.  The roving beast snarls at you."""
 level = 14
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "sneak"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 2
@@ -239,6 +278,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2808
@@ -252,13 +296,13 @@ He advances toward you."""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -269,4 +313,9 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 

@@ -18,7 +18,7 @@ gold = 15000
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 900
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -38,6 +38,11 @@ special = "spec_cast_mage"
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
+
 [[mobiles]]
 vnum = 3001
 keywords = ["baker"]
@@ -56,7 +61,7 @@ race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -75,6 +80,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3002
 keywords = ["grocer"]
@@ -92,7 +102,7 @@ race = "human"
 gold = 1300
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -111,6 +121,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3003
 keywords = ["weaponsmith"]
@@ -128,7 +143,7 @@ gold = 25000
 forge_tiers = ["fine", "superior"]
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -146,6 +161,11 @@ alignment = 0
   profit_sell = 40
   open_hour = 0
   close_hour = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3004
@@ -165,7 +185,7 @@ race = "human"
 gold = 25000
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -184,6 +204,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3005
 keywords = ["thief"]
@@ -200,7 +225,7 @@ gold = 100
 sex = "either"
 act_flags = ["npc", "scavenger", "wimpy", "thief"]
 affected_by = ["sneak", "hide"]
-alignment = 0
+alignment = -100
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -212,6 +237,11 @@ special = "spec_thief"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3006
@@ -230,7 +260,7 @@ race = "human"
 gold = 1300
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -249,6 +279,11 @@ alignment = 0
   open_hour = 6
   close_hour = 23
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3007
 keywords = ["sailor"]
@@ -265,7 +300,7 @@ race = "human"
 gold = 58
 sex = "male"
 act_flags = ["npc", "sentinel", "train", "warrior", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -276,6 +311,11 @@ alignment = 0
   number = 1
   size = 4
   bonus = 23
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3008
@@ -292,7 +332,7 @@ race = "human"
 gold = 4000
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -311,6 +351,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3009
 keywords = ["jeweller"]
@@ -328,7 +373,7 @@ race = "human"
 gold = 60000
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -346,6 +391,11 @@ alignment = 0
   profit_sell = 100
   open_hour = 0
   close_hour = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3010
@@ -365,7 +415,7 @@ race = "human"
 gold = 4500
 sex = "female"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -384,6 +434,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3011
 keywords = ["Bob"]
@@ -396,10 +451,11 @@ Mean. Very mean.
 Bob, the IRS Auditor, towers over you.  He's over 6 feet tall, every inch
 of it muscle. It would be a Bad Thing to commit a crime in his presence."""
 level = 90
+shield_flags = ["shock"]
 hitroll = 30
 ac = [-250, -250, -250, -150]
 damage_type = "bash"
-off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "crush"]
+off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "crush", "assist_guard"]
 imm_flags = ["summon", "charm", "mental"]
 res_flags = ["magic", "weapon", "fire", "cold"]
 vuln_flags = ["lightning", "mental"]
@@ -409,7 +465,7 @@ gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden", "infrared", "haste", "dark_vision"]
-alignment = 0
+alignment = -1000
 special = "spec_executioner"
 
   [mobiles.hit_dice]
@@ -421,6 +477,11 @@ special = "spec_executioner"
   number = 5
   size = 4
   bonus = 40
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 3012
@@ -439,9 +500,9 @@ imm_flags = ["summon", "charm", "magic", "weapon"]
 race = "human"
 gold = 5000
 sex = "male"
-act_flags = ["npc", "sentinel", "cleric", "no_purge"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+act_flags = ["npc", "sentinel", "cleric", "no_purge", "healer"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 1000
 special = "spec_cast_adept"
 llm_enabled = true
 llm_persona = """
@@ -466,6 +527,11 @@ mention being an AI or a game. Give only the words the healer speaks aloud."""
   size = 4
   bonus = 30
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
+
 [[mobiles]]
 vnum = 3020
 keywords = ["guildmaster", "master"]
@@ -487,7 +553,7 @@ gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "practice", "mage", "no_purge"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "dark_vision"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -499,6 +565,11 @@ special = "spec_cast_mage"
   number = 3
   size = 8
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
 
 [[mobiles]]
 vnum = 3021
@@ -518,8 +589,8 @@ race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "practice", "cleric", "no_purge"]
-affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "dark_vision"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "dark_vision", "sanctuary"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -531,6 +602,11 @@ special = "spec_cast_cleric"
   number = 3
   size = 8
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
 
 [[mobiles]]
 vnum = 3022
@@ -552,7 +628,7 @@ gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "practice", "thief", "no_purge"]
 affected_by = ["detect_invis", "detect_hidden", "dark_vision"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -563,6 +639,11 @@ alignment = 0
   number = 3
   size = 8
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3023
@@ -586,7 +667,7 @@ gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "practice", "warrior", "no_purge"]
 affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -597,6 +678,11 @@ alignment = 0
   number = 3
   size = 8
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3024
@@ -618,8 +704,8 @@ race = "elf"
 gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "mage", "warrior", "no_purge"]
-affected_by = ["detect_invis", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "infrared", "invisible"]
+alignment = 800
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -631,6 +717,11 @@ special = "spec_cast_mage"
   number = 10
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 3025
@@ -654,7 +745,7 @@ gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric", "warrior", "no_purge"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 800
 
   [mobiles.hit_dice]
   number = 1
@@ -665,6 +756,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 3026
@@ -687,7 +783,7 @@ gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "thief", "warrior", "no_purge"]
 affected_by = ["detect_invis", "detect_hidden", "sneak", "hide"]
-alignment = 0
+alignment = 800
 
   [mobiles.hit_dice]
   number = 1
@@ -698,6 +794,11 @@ alignment = 0
   number = 4
   size = 10
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3027
@@ -721,7 +822,7 @@ gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 800
 
   [mobiles.hit_dice]
   number = 1
@@ -732,6 +833,11 @@ alignment = 0
   number = 11
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3028
@@ -754,7 +860,7 @@ gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge", "ranger"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 100
 
   [mobiles.hit_dice]
   number = 1
@@ -765,6 +871,11 @@ alignment = 0
   number = 11
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3029
@@ -786,8 +897,8 @@ race = "human"
 gold = 2000
 sex = "female"
 act_flags = ["npc", "sentinel", "undead", "mage", "warrior", "no_purge", "druid"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "invisible"]
+alignment = 800
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -799,6 +910,11 @@ special = "spec_cast_mage"
   number = 10
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 3030
@@ -818,9 +934,9 @@ res_flags = ["magic", "weapon"]
 race = "human"
 gold = 2000
 sex = "none"
-act_flags = ["npc", "sentinel", "warrior", "no_purge", "vampire"]
-affected_by = ["detect_invis"]
-alignment = 0
+act_flags = ["npc", "sentinel", "warrior", "no_purge", "vampire", "undead"]
+affected_by = ["detect_invis", "invisible"]
+alignment = -800
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -832,6 +948,11 @@ special = "spec_cast_undead"
   number = 10
   size = 4
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 3040
@@ -851,7 +972,7 @@ gold = 150
 inn = true
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -870,6 +991,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3041
 keywords = ["waiter"]
@@ -887,7 +1013,7 @@ race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -898,6 +1024,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 18
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3042
@@ -916,7 +1047,7 @@ gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "mage", "no_purge"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 600
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -936,6 +1067,11 @@ special = "spec_cast_mage"
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3043
 keywords = ["waiter"]
@@ -952,7 +1088,7 @@ race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric", "no_purge"]
-alignment = 0
+alignment = 600
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -972,6 +1108,11 @@ special = "spec_cast_cleric"
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3044
 keywords = ["waiter"]
@@ -988,7 +1129,7 @@ race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "thief", "no_purge"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 1
@@ -1007,6 +1148,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3045
 keywords = ["waiter"]
@@ -1023,7 +1169,7 @@ race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 1
@@ -1041,6 +1187,11 @@ alignment = 0
   profit_sell = 100
   open_hour = 0
   close_hour = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3046
@@ -1061,7 +1212,7 @@ race = "human"
 gold = 200
 sex = "male"
 act_flags = ["npc", "sentinel", "thief", "no_purge"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 1
@@ -1080,6 +1231,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3060
 keywords = ["cityguard", "guard"]
@@ -1090,13 +1246,13 @@ level = 30
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -1109,6 +1265,11 @@ special = "spec_guard"
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
+
 [[mobiles]]
 vnum = 3061
 keywords = ["janitor"]
@@ -1118,13 +1279,13 @@ level = 2
 hitroll = 0
 ac = [100, 100, 100, 100]
 damage_type = "bash"
-off_flags = ["trip"]
+off_flags = ["trip", "assist_vnum"]
 vuln_flags = ["magic"]
 race = "human"
 gold = 10
 sex = "either"
 act_flags = ["npc", "stay_area", "wimpy"]
-alignment = 0
+alignment = 900
 special = "spec_janitor"
 
   [mobiles.hit_dice]
@@ -1136,6 +1297,11 @@ special = "spec_janitor"
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3062
@@ -1149,14 +1315,14 @@ level = 0
 hitroll = 0
 ac = [100, 100, 100, 100]
 damage_type = "pierce"
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 vuln_flags = ["magic"]
 size = "small"
 race = "fido"
 gold = 0
 sex = "either"
 act_flags = ["npc", "aggressive", "stay_area", "wimpy", "no_align"]
-alignment = 0
+alignment = -200
 special = "spec_fido"
 
   [mobiles.hit_dice]
@@ -1169,6 +1335,11 @@ special = "spec_fido"
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3063
 keywords = ["vagabond"]
@@ -1179,13 +1350,13 @@ level = 10
 hitroll = 1
 ac = [70, 50, 50, 100]
 damage_type = "bash"
-off_flags = ["backstab", "kick_dirt", "trip"]
+off_flags = ["backstab", "kick_dirt", "trip", "assist_align"]
 vuln_flags = ["magic"]
 race = "human"
 gold = 18
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 2
@@ -1197,6 +1368,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3064
 keywords = ["drunk"]
@@ -1205,6 +1381,7 @@ long_desc = "A singing, happy drunk wanders around, singing about Moria."
 description = """
 A drunk who seems to be too happy, and to carry too much money."""
 level = 4
+off_flags = ["assist_vnum"]
 hitroll = -1
 ac = [80, 80, 80, 100]
 damage_type = "bash"
@@ -1213,7 +1390,7 @@ race = "human"
 gold = 65
 sex = "male"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = 400
 
   [mobiles.hit_dice]
   number = 2
@@ -1225,6 +1402,11 @@ alignment = 0
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3065
 keywords = ["beggar"]
@@ -1235,13 +1417,13 @@ level = 2
 hitroll = 0
 ac = [80, 80, 80, 100]
 damage_type = "bash"
-off_flags = ["dodge", "kick_dirt", "trip"]
+off_flags = ["dodge", "kick_dirt", "trip", "assist_vnum"]
 vuln_flags = ["magic"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 400
 
   [mobiles.hit_dice]
   number = 2
@@ -1253,6 +1435,11 @@ alignment = 0
   size = 5
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3066
 keywords = ["cat"]
@@ -1263,7 +1450,7 @@ level = 0
 hitroll = 1
 ac = [80, 80, 80, 90]
 damage_type = "pierce"
-off_flags = ["berserk", "dodge", "fast"]
+off_flags = ["berserk", "dodge", "fast", "assist_race"]
 vuln_flags = ["magic"]
 size = "small"
 race = "cat"
@@ -1271,7 +1458,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "aggressive", "stay_area", "wimpy", "no_align"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 1
@@ -1283,6 +1470,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3067
 keywords = ["cityguard", "guard"]
@@ -1293,13 +1485,13 @@ level = 29
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -1311,6 +1503,11 @@ special = "spec_guard"
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3068
@@ -1322,13 +1519,13 @@ level = 30
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -1341,6 +1538,11 @@ special = "spec_guard"
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
+
 [[mobiles]]
 vnum = 3069
 keywords = ["cityguard", "guard"]
@@ -1351,14 +1553,14 @@ level = 40
 hitroll = 4
 ac = [-40, -60, -60, 0]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "fast", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "fast", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 500
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-affected_by = ["hide"]
-alignment = 0
+affected_by = ["hide", "invisible"]
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -1370,6 +1572,11 @@ special = "spec_guard"
   number = 2
   size = 4
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3070
@@ -1388,7 +1595,7 @@ gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric", "mage", "no_purge"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -1407,6 +1614,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
+
 [[mobiles]]
 vnum = 3071
 keywords = ["cityguard", "guard"]
@@ -1417,13 +1629,13 @@ level = 29
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 15
@@ -1434,6 +1646,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3072
@@ -1445,13 +1662,13 @@ level = 30
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 15
@@ -1462,6 +1679,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3090
@@ -1481,7 +1703,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align", "no_purge"]
 affected_by = ["dark_vision"]
-alignment = 0
+alignment = 400
 
   [mobiles.hit_dice]
   number = 2
@@ -1492,6 +1714,11 @@ alignment = 0
   number = 1
   size = 4
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3091
@@ -1511,7 +1738,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align", "no_purge"]
 affected_by = ["detect_hidden"]
-alignment = 0
+alignment = 400
 special = "spec_dog_pee"
 
   [mobiles.hit_dice]
@@ -1523,6 +1750,11 @@ special = "spec_dog_pee"
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3092
@@ -1542,7 +1774,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align", "no_purge"]
 affected_by = ["detect_hidden"]
-alignment = 0
+alignment = 400
 special = "spec_dog_pee"
 
   [mobiles.hit_dice]
@@ -1554,6 +1786,11 @@ special = "spec_dog_pee"
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3093
@@ -1572,7 +1809,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align", "no_purge"]
 affected_by = ["detect_hidden"]
-alignment = 0
+alignment = 400
 special = "spec_dog_pee"
 
   [mobiles.hit_dice]
@@ -1584,6 +1821,11 @@ special = "spec_dog_pee"
   number = 2
   size = 4
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3094
@@ -1615,6 +1857,11 @@ special = "spec_dog_pee"
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3095
 keywords = ["eagle", "bird", "pet"]
@@ -1645,6 +1892,11 @@ alignment = 0
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3096
 keywords = ["lion", "pet"]
@@ -1673,6 +1925,11 @@ alignment = 0
   number = 2
   size = 8
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3097
@@ -1703,6 +1960,11 @@ alignment = 0
   size = 4
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3100
 keywords = ["maid"]
@@ -1722,7 +1984,7 @@ race = "human"
 gold = 180
 sex = "female"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -1742,6 +2004,11 @@ special = "spec_cast_cleric"
   open_hour = 6
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3120
 keywords = ["sexton"]
@@ -1750,6 +2017,8 @@ long_desc = "A sexton is sitting here, drinking hot tea."
 description = """
 The sexton looks like he is relaxing after another grave-digging job."""
 level = 6
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [70, 70, 70, 100]
 damage_type = "bash"
@@ -1758,7 +2027,7 @@ race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 800
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -1771,6 +2040,11 @@ special = "spec_cast_cleric"
   size = 7
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3121
 keywords = ["swan"]
@@ -1781,7 +2055,7 @@ level = 1
 hitroll = 0
 ac = [80, 80, 80, 100]
 damage_type = "pierce"
-off_flags = ["bash", "dodge"]
+off_flags = ["bash", "dodge", "assist_race"]
 res_flags = ["drowning"]
 vuln_flags = ["magic"]
 size = "small"
@@ -1790,7 +2064,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["flying", "swim"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -1801,6 +2075,11 @@ alignment = 0
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3122
@@ -1813,7 +2092,7 @@ level = 0
 hitroll = 0
 ac = [100, 100, 100, 100]
 damage_type = "bash"
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["drowning"]
 vuln_flags = ["magic"]
 size = "tiny"
@@ -1822,7 +2101,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "sentinel", "no_align"]
 affected_by = ["flying", "swim"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -1834,6 +2113,11 @@ alignment = 0
   size = 1
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3123
 keywords = ["sparrow"]
@@ -1844,7 +2128,7 @@ level = 0
 hitroll = 0
 ac = [100, 100, 100, 100]
 damage_type = "pierce"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 vuln_flags = ["magic"]
 size = "tiny"
 race = "song bird"
@@ -1852,7 +2136,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "stay_area", "wimpy", "no_align"]
 affected_by = ["flying"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -1864,6 +2148,11 @@ alignment = 0
   size = 3
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3124
 keywords = ["duck"]
@@ -1874,7 +2163,7 @@ level = 2
 hitroll = 0
 ac = [100, 100, 100, 100]
 damage_type = "bash"
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["drowning"]
 vuln_flags = ["magic"]
 size = "small"
@@ -1883,7 +2172,7 @@ gold = 0
 sex = "either"
 act_flags = ["npc", "stay_area", "no_align"]
 affected_by = ["flying", "swim"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -1895,6 +2184,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3140
 keywords = ["captain"]
@@ -1905,14 +2199,14 @@ level = 33
 hitroll = 4
 ac = [-20, -20, -20, 60]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "fast", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "fast", "parry", "rescue", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 15
@@ -1924,6 +2218,11 @@ alignment = 0
   size = 4
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
+
 [[mobiles]]
 vnum = 3141
 keywords = ["cityguard", "guard"]
@@ -1934,13 +2233,13 @@ level = 29
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "fast", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "fast", "parry", "rescue", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "warrior"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 15
@@ -1952,6 +2251,11 @@ alignment = 0
   size = 4
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
+
 [[mobiles]]
 vnum = 3142
 keywords = ["secretary"]
@@ -1962,6 +2266,8 @@ She looks very busy.
 The Secretary says 'Sorry, but the Mayor is extremely busy today'.
 The Secretary says 'Please sit down and have a seat in the meantime'."""
 level = 24
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 2
 ac = [0, 0, 0, 80]
 damage_type = "bash"
@@ -1970,7 +2276,7 @@ race = "human"
 gold = 100
 sex = "female"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 4
@@ -1982,6 +2288,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3143
 keywords = ["mayor"]
@@ -1989,17 +2300,19 @@ short_desc = "the mayor"
 long_desc = "The mayor is here.  He shakes your hand."
 description = "He is a stocky, middle-aged man with thin, grey hair."
 level = 46
+affected_by = ["protect_evil"]
+start_pos = "sleeping"
 hitroll = 6
 ac = [-150, -150, -150, -150]
 damage_type = "bash"
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_players"]
 imm_flags = ["summon", "charm"]
 res_flags = ["magic", "weapon"]
 race = "human"
 gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 900
 special = "spec_mayor"
 
   [mobiles.hit_dice]
@@ -2011,6 +2324,11 @@ special = "spec_mayor"
   number = 1
   size = 8
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3144
@@ -2028,7 +2346,7 @@ race = "human"
 gold = 14
 sex = "male"
 act_flags = ["npc", "wimpy"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 2
@@ -2039,6 +2357,11 @@ alignment = 0
   number = 1
   size = 5
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3150
@@ -2058,7 +2381,7 @@ race = "human"
 gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -2076,6 +2399,11 @@ alignment = 0
   profit_sell = 100
   open_hour = 0
   close_hour = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3160
@@ -2097,7 +2425,7 @@ race = "human"
 gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -2115,6 +2443,11 @@ alignment = 0
   profit_sell = 100
   open_hour = 0
   close_hour = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3161
@@ -2177,9 +2510,9 @@ imm_flags = ["summon", "charm", "magic", "weapon"]
 race = "human"
 gold = 1000
 sex = "male"
-act_flags = ["npc", "sentinel", "no_purge"]
+act_flags = ["npc", "sentinel", "no_purge", "changer"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 900
 llm_enabled = true
 llm_persona = """
 You are Otho, the money changer in the city of Midgaard. You are a grotesquely \
@@ -2199,6 +2532,11 @@ the words Otho speaks aloud."""
   size = 6
   bonus = 20
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
+
 [[mobiles]]
 vnum = 3163
 keywords = ["thief"]
@@ -2215,7 +2553,7 @@ gold = 100
 sex = "either"
 act_flags = ["npc", "scavenger", "wimpy", "thief"]
 affected_by = ["sneak", "hide"]
-alignment = 0
+alignment = -100
 special = "spec_nasty"
 
   [mobiles.hit_dice]
@@ -2227,6 +2565,11 @@ special = "spec_nasty"
   number = 4
   size = 5
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3164
@@ -2245,9 +2588,9 @@ imm_flags = ["summon", "charm", "magic", "weapon"]
 race = "human"
 gold = 5000
 sex = "male"
-act_flags = ["npc", "sentinel", "cleric", "no_purge"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+act_flags = ["npc", "sentinel", "cleric", "no_purge", "is_satan", "healer"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 1
@@ -2258,6 +2601,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 30
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
 
 [[mobiles]]
 vnum = 3165
@@ -2276,9 +2624,9 @@ imm_flags = ["summon", "charm", "magic", "weapon"]
 race = "human"
 gold = 5000
 sex = "male"
-act_flags = ["npc", "sentinel", "cleric", "no_purge", "healer"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+act_flags = ["npc", "sentinel", "cleric", "no_purge", "healer", "is_priest"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -2289,6 +2637,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 30
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
 
 [[mobiles]]
 vnum = 3166
@@ -2303,10 +2656,11 @@ Hassan, the guardian of  the Temple of Thoth, towers over you.  He's over 12
 feet tall, every inch of it muscle. It would be a Bad Thing to commit a crime
 in his presence."""
 level = 90
+shield_flags = ["shock"]
 hitroll = 30
 ac = [-250, -250, -250, -150]
 damage_type = "bash"
-off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "crush"]
+off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "fast", "kick", "parry", "rescue", "trip", "crush", "assist_guard"]
 imm_flags = ["summon", "charm", "mental"]
 res_flags = ["magic", "weapon", "fire", "cold"]
 vuln_flags = ["lightning", "mental"]
@@ -2316,7 +2670,7 @@ gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
 affected_by = ["detect_evil", "detect_invis", "detect_hidden", "infrared", "haste", "dark_vision"]
-alignment = 0
+alignment = 1000
 special = "spec_executioner"
 
   [mobiles.hit_dice]
@@ -2328,6 +2682,11 @@ special = "spec_executioner"
   number = 5
   size = 4
   bonus = 40
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 3167
@@ -2346,9 +2705,9 @@ imm_flags = ["summon", "charm", "magic", "weapon"]
 race = "human"
 gold = 5000
 sex = "male"
-act_flags = ["npc", "sentinel", "cleric", "no_purge"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+act_flags = ["npc", "sentinel", "cleric", "no_purge", "healer"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary"]
+alignment = -1000
 special = "spec_cast_adept"
 llm_enabled = true
 llm_persona = """
@@ -2373,6 +2732,11 @@ mention being an AI or a game. Give only the words the healer speaks aloud."""
   size = 4
   bonus = 30
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
+
 [[mobiles]]
 vnum = 3168
 keywords = ["guildmaster", "master"]
@@ -2392,7 +2756,7 @@ gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "practice", "no_purge", "ranger"]
 affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -2403,6 +2767,11 @@ alignment = 0
   number = 3
   size = 8
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 
 [[mobiles]]
 vnum = 3169
@@ -2425,7 +2794,7 @@ gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "practice", "undead", "no_purge", "druid"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 1
@@ -2436,6 +2805,11 @@ alignment = 0
   number = 3
   size = 8
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
 
 [[mobiles]]
 vnum = 3170
@@ -2451,9 +2825,9 @@ imm_flags = ["summon", "charm", "magic", "weapon"]
 race = "human"
 gold = 0
 sex = "male"
-act_flags = ["npc", "sentinel", "practice", "no_purge", "vampire"]
+act_flags = ["npc", "sentinel", "practice", "no_purge", "vampire", "undead"]
 affected_by = ["detect_invis", "detect_magic", "detect_hidden", "detect_good", "infrared", "dark_vision"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -2465,6 +2839,11 @@ special = "spec_cast_undead"
   number = 3
   size = 8
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 999
 
 [[mobiles]]
 vnum = 3171
@@ -2482,7 +2861,7 @@ race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge", "ranger"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 1
@@ -2501,6 +2880,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3172
 keywords = ["waitress"]
@@ -2517,7 +2901,7 @@ race = "human"
 gold = 150
 sex = "female"
 act_flags = ["npc", "sentinel", "undead", "no_purge", "druid"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 1
@@ -2536,6 +2920,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3173
 keywords = ["waiter"]
@@ -2551,8 +2940,8 @@ res_flags = ["magic", "weapon"]
 race = "human"
 gold = 150
 sex = "male"
-act_flags = ["npc", "sentinel", "no_purge", "vampire"]
-alignment = 0
+act_flags = ["npc", "sentinel", "no_purge", "vampire", "no_body", "undead"]
+alignment = -600
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -2572,6 +2961,11 @@ special = "spec_cast_undead"
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3174
 keywords = ["zombie", "undead", "pet"]
@@ -2589,7 +2983,7 @@ vuln_flags = ["holy"]
 race = "human"
 gold = 0
 sex = "none"
-act_flags = ["npc", "sentinel", "pet", "no_align", "no_purge"]
+act_flags = ["npc", "sentinel", "pet", "no_align", "no_purge", "no_body", "nb_drop"]
 affected_by = ["detect_hidden"]
 alignment = 0
 
@@ -2603,6 +2997,11 @@ alignment = 0
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3175
 keywords = ["animated"]
@@ -2610,6 +3009,7 @@ short_desc = "an animation"
 long_desc = "An animated body part is here."
 description = "An animated body part is here."
 level = 10
+off_flags = ["assist_vnum"]
 hitroll = 0
 ac = [40, 40, 40, 30]
 damage_type = "negative"
@@ -2620,9 +3020,9 @@ size = "tiny"
 race = "unique"
 gold = 0
 sex = "none"
-act_flags = ["npc", "sentinel", "no_align"]
+act_flags = ["npc", "sentinel", "no_align", "no_body", "nb_drop"]
 affected_by = ["detect_hidden", "flying"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 2
@@ -2633,6 +3033,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 3176
@@ -2650,7 +3055,7 @@ race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -2669,6 +3074,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3177
 keywords = ["mercy"]
@@ -2685,7 +3095,7 @@ race = "human"
 gold = 500
 sex = "female"
 act_flags = ["npc", "sentinel", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -2704,20 +3114,27 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3178
 keywords = ["slave"]
 short_desc = "The slave"
 long_desc = "A slave is here, she is waiting to fulfill your every need and desire."
 level = 5
+start_pos = "resting"
+default_pos = "resting"
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -2728,6 +3145,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3179
@@ -2735,14 +3157,16 @@ keywords = ["slave"]
 short_desc = "The slave"
 long_desc = "A slave is here, he is waiting to fulfill your every need and desire."
 level = 5
+start_pos = "resting"
+default_pos = "resting"
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -2753,6 +3177,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3180
@@ -2764,13 +3193,13 @@ level = 30
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 15
@@ -2781,6 +3210,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3181
@@ -2799,7 +3233,7 @@ vuln_flags = ["holy"]
 race = "human"
 gold = 0
 sex = "none"
-act_flags = ["npc", "sentinel", "pet", "no_align", "no_purge"]
+act_flags = ["npc", "sentinel", "pet", "no_align", "no_purge", "no_body", "nb_drop"]
 affected_by = ["detect_hidden"]
 alignment = 0
 
@@ -2813,6 +3247,11 @@ alignment = 0
   size = 4
   bonus = 49
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 3182
 keywords = ["watchguard", "guard"]
@@ -2823,13 +3262,13 @@ level = 29
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -2841,6 +3280,11 @@ special = "spec_guard"
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3183
@@ -2852,13 +3296,13 @@ level = 29
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -2870,6 +3314,11 @@ special = "spec_guard"
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3184
@@ -2881,13 +3330,13 @@ level = 29
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -2899,6 +3348,11 @@ special = "spec_guard"
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149
 
 [[mobiles]]
 vnum = 3185
@@ -2910,13 +3364,13 @@ level = 29
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "parry", "rescue", "assist_guard", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 150
 sex = "either"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -2928,3 +3382,8 @@ special = "spec_guard"
   number = 2
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 149

@@ -7,12 +7,12 @@ description = "Her job is to set the level for this equipment."
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "female"
 act_flags = ["npc"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -23,4 +23,9 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 

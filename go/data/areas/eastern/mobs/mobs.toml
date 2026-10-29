@@ -9,13 +9,13 @@ some rest."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 3
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 2
@@ -26,6 +26,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5001
@@ -38,13 +43,13 @@ LOTS of rest."""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 7
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = 650
 
   [mobiles.hit_dice]
   number = 2
@@ -55,6 +60,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5002
@@ -67,14 +77,14 @@ and black."""
 level = 7
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["poison"]
 vuln_flags = ["cold"]
 race = "snake"
 gold = 0
 sex = "none"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = -10
 
   [mobiles.hit_dice]
   number = 2
@@ -86,6 +96,11 @@ alignment = 0
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5003
 keywords = ["oldstyle", "scorpion", "small"]
@@ -96,12 +111,12 @@ The little tail is mighty dangerous for such a small creature."""
 level = 5
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = -50
 
   [mobiles.hit_dice]
   number = 2
@@ -113,6 +128,11 @@ alignment = 0
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5004
 keywords = ["oldstyle", "worm", "giant", "purple"]
@@ -122,12 +142,12 @@ description = "He's big, mean, and purple. Watch out!"
 level = 36
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 127
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 3
@@ -139,6 +159,11 @@ alignment = 0
   size = 7
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5005
 keywords = ["oldstyle", "dragon", "brass"]
@@ -147,15 +172,15 @@ long_desc = "The brass dragon steps out of the darkness and says 'Hello'.\nThen 
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm", "bash", "fire"]
 vuln_flags = ["pierce", "cold"]
 race = "dragon"
 gold = 275
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary"]
+alignment = 450
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -168,6 +193,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5006
 keywords = ["oldstyle", "nomad", "leader"]
@@ -178,14 +208,16 @@ He is clad in silk robes lined with gold thread. At his side
 is a large, engraved cutlass. He has an especially haughty air
 about him."""
 level = 27
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "undead", "druid"]
-alignment = 0
+alignment = 950
 
   [mobiles.hit_dice]
   number = 2
@@ -196,6 +228,11 @@ alignment = 0
   number = 1
   size = 12
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5007
@@ -208,12 +245,12 @@ woven of silk and gold thread. A nasty cutlass hangs at his side."""
 level = 23
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 30
 sex = "male"
 act_flags = ["npc", "sentinel", "undead", "druid"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 2
@@ -225,6 +262,11 @@ alignment = 0
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5008
 keywords = ["oldstyle", "nomad", "warrior"]
@@ -233,12 +275,12 @@ long_desc = "A proud nomad warrior stands here."
 level = 20
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 15
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 700
 
   [mobiles.hit_dice]
   number = 2
@@ -250,20 +292,27 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5009
 keywords = ["oldstyle", "slave", "young"]
 short_desc = "The slave"
 long_desc = "A young slave sits here staring at you with pleading eyes."
 level = 5
+start_pos = "resting"
+default_pos = "resting"
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -274,6 +323,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5010
@@ -286,13 +340,13 @@ Obviously it no longer fears death."""
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 3750
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "undead", "druid"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -305,6 +359,11 @@ special = "spec_breath_fire"
   size = 6
   bonus = 8
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5011
 keywords = ["oldstyle", "drider", "drow"]
@@ -315,13 +374,13 @@ This half-spider, half-drow creature is a formidable opponent."""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "female"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 2
@@ -333,6 +392,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5012
 keywords = ["oldstyle", "duergar", "dwarf"]
@@ -343,13 +407,13 @@ The duergar could crush your head as easily as it does those rocks."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 8
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -850
 
   [mobiles.hit_dice]
   number = 2
@@ -360,6 +424,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5013
@@ -372,13 +441,13 @@ has the same effect)."""
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 850
 
   [mobiles.hit_dice]
   number = 2
@@ -390,6 +459,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5014
 keywords = ["oldstyle", "myconoid", "shaman"]
@@ -399,13 +473,13 @@ description = "The shaman shoots spores into the air."
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 80]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = 850
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -418,6 +492,11 @@ special = "spec_cast_cleric"
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5015
 keywords = ["oldstyle", "dustdigger"]
@@ -426,12 +505,12 @@ long_desc = "A small oasis invites you to dive in."
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 22
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 2
@@ -443,6 +522,11 @@ alignment = 0
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5017
 keywords = ["oldstyle", "camel"]
@@ -452,12 +536,12 @@ description = "Don't mess with this animal."
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 13
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive"]
-alignment = 0
+alignment = -351
 
   [mobiles.hit_dice]
   number = 2
@@ -468,4 +552,9 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 

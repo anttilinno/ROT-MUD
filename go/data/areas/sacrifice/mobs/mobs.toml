@@ -18,7 +18,7 @@ race = "human"
 gold = 1300
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior", "no_purge"]
-alignment = 0
+alignment = 900
 
   [mobiles.hit_dice]
   number = 1
@@ -37,6 +37,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 13501
 keywords = ["sea", "serpent"]
@@ -48,7 +53,7 @@ level = 32
 hitroll = 0
 ac = [-30, -60, -60, -10]
 damage_type = "acid"
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 imm_flags = ["drowning"]
 res_flags = ["summon", "charm", "bash", "fire", "cold", "acid"]
 vuln_flags = ["pierce", "cold"]
@@ -56,9 +61,9 @@ size = "huge"
 race = "dragon"
 gold = 5000
 sex = "either"
-act_flags = ["npc", "aggressive"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+act_flags = ["npc", "aggressive", "no_body", "nb_drop"]
+affected_by = ["detect_invis", "infrared", "flying", "swim"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -70,3 +75,8 @@ special = "spec_breath_any"
   number = 2
   size = 8
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 16
+  size = 9
+  bonus = 100

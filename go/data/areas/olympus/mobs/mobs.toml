@@ -10,13 +10,13 @@ You now know what true fear is."""
 level = 110
 hitroll = 0
 ac = [-300, -300, -300, -30]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "cleric"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -29,6 +29,11 @@ special = "spec_cast_cleric"
   size = 10
   bonus = 28
 
+  [mobiles.mana_dice]
+  number = 60
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 902
 keywords = ["oldstyle", "prometheus"]
@@ -40,13 +45,13 @@ looks up at you and smiles."""
 level = 101
 hitroll = 0
 ac = [-210, -210, -210, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -58,6 +63,11 @@ special = "spec_breath_fire"
   number = 5
   size = 8
   bonus = 20
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 903
@@ -71,13 +81,13 @@ even notice your presence."""
 level = 106
 hitroll = 0
 ac = [-250, -250, -250, -10]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 2500
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
-affected_by = ["detect_invis", "detect_hidden", "sneak", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "sneak", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -90,6 +100,11 @@ special = "spec_thief"
   size = 4
   bonus = 23
 
+  [mobiles.mana_dice]
+  number = 28
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 904
 keywords = ["oldstyle", "poseidon"]
@@ -100,15 +115,16 @@ He is the brother of Zeus himself, chosen to rule the seas.  He must be
 visiting Mount Olympus.  He nods at you and motions for you to enter and
 have a seat."""
 level = 109
+start_pos = "sitting"
 hitroll = 0
 ac = [-280, -280, -280, -90]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "mage"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -120,6 +136,11 @@ special = "spec_cast_mage"
   number = 10
   size = 4
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 59
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 905
@@ -133,13 +154,13 @@ that he knows more than music."""
 level = 108
 hitroll = 0
 ac = [-280, -280, -280, 10]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_adept"
 
   [mobiles.hit_dice]
@@ -152,6 +173,11 @@ special = "spec_cast_adept"
   size = 10
   bonus = 25
 
+  [mobiles.mana_dice]
+  number = 29
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 906
 keywords = ["oldstyle", "ares"]
@@ -163,13 +189,13 @@ and says 'I am very busy.  What do you want?'"""
 level = 109
 hitroll = 0
 ac = [-290, -290, -290, 10]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2500
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 50
@@ -180,6 +206,11 @@ alignment = 0
   number = 8
   size = 6
   bonus = 26
+
+  [mobiles.mana_dice]
+  number = 29
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 907
@@ -192,13 +223,13 @@ you and invites you to join her."""
 level = 106
 hitroll = 0
 ac = [-260, -260, -260, 10]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 3000
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_adept"
 
   [mobiles.hit_dice]
@@ -210,6 +241,11 @@ special = "spec_cast_adept"
   number = 10
   size = 4
   bonus = 24
+
+  [mobiles.mana_dice]
+  number = 28
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 908
@@ -223,14 +259,14 @@ way to help you.  He is attended by three golden maidens."""
 level = 105
 hitroll = 0
 ac = [-250, -250, -250, 20]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 3000
 forge_tiers = ["legendary"]
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_breath_lightning"
 
   [mobiles.hit_dice]
@@ -243,6 +279,11 @@ special = "spec_breath_lightning"
   size = 4
   bonus = 23
 
+  [mobiles.mana_dice]
+  number = 27
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 909
 keywords = ["oldstyle", "handmaid", "golden"]
@@ -254,12 +295,12 @@ gold.  She seems to be very lifelike as she assists the smith in his work."""
 level = 52
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
 alignment = 0
 special = "spec_guard"
 
@@ -273,6 +314,11 @@ special = "spec_guard"
   size = 7
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 13
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 910
 keywords = ["oldstyle", "soldier"]
@@ -284,12 +330,12 @@ realize that Ares would not have any weaklings working for him."""
 level = 69
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -301,6 +347,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 911
@@ -313,13 +364,13 @@ immortal Apollo."""
 level = 27
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 125
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -331,6 +382,11 @@ alignment = 0
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 912
 keywords = ["oldstyle", "boy", "serving", "servant"]
@@ -340,13 +396,13 @@ description = "This boy is truly lucky to be able to serve Athena herself."
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -357,6 +413,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 913
@@ -369,13 +430,13 @@ on the battle field, and you have no doubt that it does its job well."""
 level = 70
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary"]
+alignment = -600
 
   [mobiles.hit_dice]
   number = 10
@@ -386,6 +447,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 914
@@ -399,13 +465,13 @@ presence."""
 level = 110
 hitroll = 0
 ac = [-300, -300, -300, 0]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -417,6 +483,11 @@ special = "spec_breath_any"
   number = 8
   size = 6
   bonus = 28
+
+  [mobiles.mana_dice]
+  number = 30
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 915
@@ -431,13 +502,13 @@ of delicious looking foods."""
 level = 100
 hitroll = 0
 ac = [-200, -200, -200, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 50
@@ -456,6 +527,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 916
 keywords = ["oldstyle", "alchemist"]
@@ -468,13 +544,13 @@ arcane supplies."""
 level = 100
 hitroll = 0
 ac = [-200, -200, -200, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 50
@@ -485,6 +561,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 19
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 917
@@ -497,13 +578,13 @@ paid off."""
 level = 99
 hitroll = 0
 ac = [-200, -200, -200, 30]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 50
@@ -514,6 +595,11 @@ alignment = 0
   number = 5
   size = 8
   bonus = 19
+
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 918
@@ -526,13 +612,13 @@ He doesn't like what you've been doing in his city."""
 level = 68
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 10
@@ -543,6 +629,11 @@ alignment = 0
   number = 4
   size = 7
   bonus = 10
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 919
@@ -556,13 +647,13 @@ to be trifled with."""
 level = 110
 hitroll = 0
 ac = [-300, -300, -300, 0]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "rabbit"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -575,6 +666,11 @@ special = "spec_breath_any"
   size = 6
   bonus = 28
 
+  [mobiles.mana_dice]
+  number = 30
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 920
 keywords = ["oldstyle", "chimera"]
@@ -586,13 +682,13 @@ of a dragon.  It growls at you as you enter the cell, then suddenly attacks!"""
 level = 67
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -605,6 +701,11 @@ special = "spec_breath_fire"
   size = 7
   bonus = 10
 
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 921
 keywords = ["oldstyle", "hera"]
@@ -616,13 +717,13 @@ to rest and sit for a while."""
 level = 109
 hitroll = 0
 ac = [-290, -290, -290, -30]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "cleric"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -635,6 +736,11 @@ special = "spec_cast_cleric"
   size = 8
   bonus = 26
 
+  [mobiles.mana_dice]
+  number = 59
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 922
 keywords = ["oldstyle", "roc"]
@@ -646,12 +752,12 @@ looks away."""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "none"
 act_flags = ["npc", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
 alignment = 0
 special = "spec_poison"
 
@@ -665,6 +771,11 @@ special = "spec_poison"
   size = 10
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 923
 keywords = ["oldstyle", "citizen", "resident"]
@@ -675,13 +786,13 @@ He looks happy and carefree.  He smiles and tips his hat to you."""
 level = 12
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 3
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -694,6 +805,11 @@ special = "spec_thief"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 924
 keywords = ["oldstyle", "pegasus", "horse"]
@@ -705,12 +821,12 @@ threatening, it seems as though it would be dangerous if provoked."""
 level = 28
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 40
 sex = "none"
 act_flags = ["npc", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -723,6 +839,11 @@ alignment = 0
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 925
 keywords = ["oldstyle", "cook"]
@@ -733,13 +854,13 @@ This man looks as is he has been spending WAY too much time in the kitchen."""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -750,6 +871,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 926
@@ -762,12 +888,12 @@ prisoners."""
 level = 43
 hitroll = 0
 ac = [-50, -50, -50, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "mage"]
-affected_by = ["detect_invis", "detect_hidden", "flying"]
+affected_by = ["detect_invis", "detect_hidden", "flying", "invisible", "sanctuary", "protect_evil"]
 alignment = 0
 special = "spec_cast_mage"
 
@@ -780,3 +906,8 @@ special = "spec_cast_mage"
   number = 2
   size = 7
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100

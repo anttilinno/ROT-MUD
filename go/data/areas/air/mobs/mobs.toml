@@ -9,7 +9,7 @@ It gracefully dances around your head."""
 level = 9
 hitroll = 0
 ac = [60, 60, 60, 80]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 res_flags = ["charm", "bash", "fire"]
 vuln_flags = ["pierce", "cold"]
 race = "dragon"
@@ -17,7 +17,7 @@ gold = 1
 sex = "none"
 act_flags = ["npc", "stay_area", "mage"]
 affected_by = ["detect_invis", "detect_magic", "infrared", "flying"]
-alignment = 0
+alignment = 500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -30,6 +30,11 @@ special = "spec_cast_mage"
   size = 5
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1001
 keywords = ["oldstyle", "griffin"]
@@ -41,12 +46,12 @@ for the fact it is hungry and is attacking you!"""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "unique"
 gold = 25
 sex = "male"
 act_flags = ["npc", "aggressive", "stay_area"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 2
@@ -57,4 +62,9 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 

@@ -9,7 +9,7 @@ The poison bite of this snake has felled many a mighty pharoah."""
 level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -27,6 +27,11 @@ special = "spec_poison"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8701
 keywords = ["oldstyle", "cobra", "snake"]
@@ -38,7 +43,7 @@ colors designed to serve notice to its prey that it is about to strike."""
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "none"
@@ -56,6 +61,11 @@ special = "spec_poison"
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8702
 keywords = ["oldstyle", "mongoose"]
@@ -67,13 +77,13 @@ She sniffs you and appears to be looking for food in your hand."""
 level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "female"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = 10
 
   [mobiles.hit_dice]
   number = 2
@@ -84,6 +94,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8703
@@ -97,12 +112,12 @@ sand-colored clothing."""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 250
 
   [mobiles.hit_dice]
   number = 2
@@ -114,6 +129,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8704
 keywords = ["oldstyle", "thief", "tomb"]
@@ -124,13 +144,13 @@ The thief brushes against you briefly, then slinks back into the shadows."""
 level = 19
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
-alignment = 0
+alignment = -250
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -142,6 +162,11 @@ special = "spec_thief"
   number = 1
   size = 8
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8705
@@ -156,13 +181,13 @@ he might get caught, but not today..."""
 level = 35
 hitroll = 0
 ac = [-30, -30, -30, 60]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "sneak"]
-alignment = 0
+alignment = -300
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -174,6 +199,11 @@ special = "spec_thief"
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8706
@@ -187,13 +217,13 @@ above the ground!  In fact, it seems to be ALIVE!"""
 level = 17
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 12
 sex = "none"
 act_flags = ["npc", "sentinel"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -204,6 +234,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8707
@@ -216,13 +251,13 @@ animated by the distempered spirit of a long-deceased person."""
 level = 23
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 37
 sex = "none"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -600
 
   [mobiles.hit_dice]
   number = 2
@@ -233,6 +268,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8708
@@ -246,7 +286,7 @@ and sandy winds."""
 level = 28
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
@@ -264,6 +304,11 @@ alignment = 0
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8709
 keywords = ["oldstyle", "efreeti", "efreet"]
@@ -275,13 +320,13 @@ with disdain and scorn, arms folded across his mighty chest."""
 level = 40
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 550
 sex = "male"
-act_flags = ["npc", "sentinel", "aggressive"]
+act_flags = ["npc", "sentinel", "aggressive", "no_body", "nb_drop"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = -600
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -293,6 +338,11 @@ special = "spec_breath_fire"
   number = 2
   size = 8
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8710
@@ -306,7 +356,7 @@ but you can still make out a deadly stone sword in the hands of each figure."""
 level = 47
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1750
 sex = "female"
@@ -324,6 +374,11 @@ alignment = 0
   size = 10
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8711
 keywords = ["oldstyle", "djinn", "genie"]
@@ -337,13 +392,13 @@ skin, and strokes his goatee."""
 level = 56
 hitroll = 0
 ac = [-80, -80, -80, 10]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 3000
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = 600
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -355,6 +410,11 @@ special = "spec_cast_mage"
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 28
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8712
@@ -369,13 +429,13 @@ cousins."""
 level = 30
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 375
 sex = "none"
 act_flags = ["npc", "aggressive", "stay_area"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 3
@@ -386,6 +446,11 @@ alignment = 0
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8713
@@ -400,13 +465,13 @@ just heard a puzzling riddle from a cousin criosphinx."""
 level = 37
 hitroll = 0
 ac = [-40, -40, -40, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "female"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 100
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -418,6 +483,11 @@ special = "spec_cast_cleric"
   number = 3
   size = 4
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 19
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8714
@@ -431,13 +501,13 @@ and in poking occasional fun at his easily confused lesser cousins."""
 level = 46
 hitroll = 0
 ac = [-60, -60, -60, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 1250
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 300
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -449,6 +519,11 @@ special = "spec_cast_cleric"
   number = 4
   size = 4
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 23
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8715
@@ -463,13 +538,13 @@ mighty roar of this sphinx."""
 level = 54
 hitroll = 0
 ac = [-80, -80, -80, 40]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2500
 sex = "none"
 act_flags = ["npc", "sentinel", "cleric"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 400
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -481,6 +556,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 27
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8716
@@ -495,13 +575,13 @@ advised many rulers."""
 level = 81
 hitroll = 0
 ac = [-140, -140, -140, 40]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 6250
 sex = "none"
 act_flags = ["npc", "sentinel"]
-affected_by = ["detect_invis", "detect_magic"]
-alignment = 0
+affected_by = ["detect_invis", "detect_magic", "sanctuary", "protect_evil"]
+alignment = 500
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -513,6 +593,11 @@ special = "spec_breath_any"
   number = 4
   size = 8
   bonus = 14
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8717
@@ -528,13 +613,13 @@ his chest not even moving to breathe."""
 level = 75
 hitroll = 0
 ac = [-130, -130, -130, 30]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 4400
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
-affected_by = ["detect_invis", "detect_magic", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "detect_magic", "infrared", "sanctuary", "protect_evil"]
+alignment = 150
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -546,4 +631,9 @@ special = "spec_cast_cleric"
   number = 3
   size = 10
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 38
+  size = 9
+  bonus = 100
 

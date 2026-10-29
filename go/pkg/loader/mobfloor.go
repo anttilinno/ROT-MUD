@@ -37,7 +37,13 @@ var mobACFloor = [][2]int{{60, -110}, {100, -220}}
 
 // applyMobFloor brings a freshly created mob inside the floors and ceilings.
 func applyMobFloor(ch *types.Character) {
-	ch.MaxHit = max(ch.MaxHit, anchorAt(mobHPFloor, ch.Level))
+	// The floor sets fight length, so it is on effective HP: sanctuary
+	// halves damage taken, so a sanctuary mob needs half the HP.
+	hpFloor := anchorAt(mobHPFloor, ch.Level)
+	if ch.IsAffected(types.AffSanctuary) {
+		hpFloor /= 2
+	}
+	ch.MaxHit = max(ch.MaxHit, hpFloor)
 	ch.Hit = ch.MaxHit
 	ch.HitRoll = max(ch.HitRoll, anchorAt(mobHitrollFloor, ch.Level))
 

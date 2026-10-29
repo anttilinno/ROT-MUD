@@ -10,13 +10,13 @@ to disintegrate you.  Beholders are not known for their personality."""
 level = 50
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 1128
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -870
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -29,6 +29,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 25
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5201
 keywords = ["oldstyle", "lamia", "beast"]
@@ -40,12 +45,12 @@ body of a four-legged beast.  She licks her lips as she looks at you greedily.""
 level = 17
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
-alignment = 0
+alignment = -999
 
   [mobiles.hit_dice]
   number = 2
@@ -56,6 +61,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5202
@@ -68,13 +78,13 @@ front."""
 level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = 10
 
   [mobiles.hit_dice]
   number = 2
@@ -85,6 +95,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5203
@@ -94,13 +109,13 @@ long_desc = "Two skeletons lie crushed under a large boulder."
 level = 22
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -10
 
   [mobiles.hit_dice]
   number = 2
@@ -111,6 +126,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5204
@@ -120,13 +140,13 @@ long_desc = "The stone floor of this house has been ripped apart."
 level = 22
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -140
 
   [mobiles.hit_dice]
   number = 2
@@ -137,6 +157,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5205
@@ -146,13 +171,13 @@ long_desc = "Some broken shards of pottery lie strewn about the floor."
 level = 22
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = 200
 
   [mobiles.hit_dice]
   number = 2
@@ -163,6 +188,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5206
@@ -172,7 +202,7 @@ long_desc = "A few wooden planks lie stacked on a low shelf."
 level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -189,6 +219,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5207
@@ -199,7 +234,7 @@ description = "A cute little lizard, that is, if you like reptiles!"
 level = 6
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["poison"]
 vuln_flags = ["cold"]
 race = "lizard"
@@ -218,6 +253,11 @@ alignment = 0
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5208
 keywords = ["oldstyle", "golem", "stone"]
@@ -227,14 +267,15 @@ description = """
 It is a big chunk of rock that has been magically formed into a giant
 stone creature. He stands here still guarding the city."""
 level = 50
+affected_by = ["protect_evil"]
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 212
 sex = "none"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 5
@@ -245,4 +286,9 @@ alignment = 0
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 

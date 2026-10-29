@@ -5,10 +5,11 @@ short_desc = "the dwarven youth"
 long_desc = "A young dwarf plays with a toy axe."
 description = "This is a young but not totally harmless creature."
 level = 5
+start_pos = "sitting"
 hitroll = 0
 ac = [70, 60, 70, 100]
 damage_type = "bash"
-off_flags = ["berserk", "kick_dirt"]
+off_flags = ["berserk", "kick_dirt", "assist_race"]
 res_flags = ["poison", "disease"]
 vuln_flags = ["drowning"]
 size = "small"
@@ -17,7 +18,7 @@ gold = 10
 sex = "either"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -5
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -30,6 +31,11 @@ special = "spec_thief"
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 6601
 keywords = ["teddy", "bear"]
@@ -40,7 +46,7 @@ level = 1
 hitroll = 0
 ac = [80, 50, 90, 100]
 damage_type = "bash"
-off_flags = ["trip"]
+off_flags = ["trip", "assist_race"]
 imm_flags = ["cold", "poison", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["bash", "light"]
 vuln_flags = ["slash", "fire", "lightning", "acid", "energy"]
@@ -49,7 +55,7 @@ race = "doll"
 gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 1
@@ -61,6 +67,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 6602
 keywords = ["doll", "raggedy", "anne"]
@@ -68,10 +79,11 @@ short_desc = "a raggedy anne doll"
 long_desc = "A raggedy anne doll is sitting here."
 description = "You see a small little cute rag doll."
 level = 3
+start_pos = "sitting"
 hitroll = 0
 ac = [70, 40, 80, 100]
 damage_type = "bash"
-off_flags = ["dodge", "fast"]
+off_flags = ["dodge", "fast", "assist_race"]
 imm_flags = ["cold", "poison", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["bash", "light"]
 vuln_flags = ["slash", "fire", "lightning", "acid", "energy"]
@@ -80,7 +92,7 @@ race = "doll"
 gold = 0
 sex = "female"
 act_flags = ["npc", "scavenger", "stay_area"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 2
@@ -92,6 +104,11 @@ alignment = 0
   size = 5
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 6603
 keywords = ["soldier", "toy"]
@@ -102,7 +119,7 @@ level = 6
 hitroll = 1
 ac = [60, 70, 60, 90]
 damage_type = "bash"
-off_flags = ["kick"]
+off_flags = ["kick", "assist_race"]
 imm_flags = ["cold", "poison", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["bash", "slash", "light"]
 vuln_flags = ["bash", "slash", "fire", "lightning", "acid", "energy"]
@@ -111,7 +128,7 @@ race = "doll"
 gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
-alignment = 0
+alignment = -300
 
   [mobiles.hit_dice]
   number = 3
@@ -122,6 +139,11 @@ alignment = 0
   number = 1
   size = 4
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 6604
@@ -135,7 +157,7 @@ level = 5
 hitroll = 0
 ac = [60, 30, 70, 100]
 damage_type = "pierce"
-off_flags = ["berserk", "kick_dirt", "trip"]
+off_flags = ["berserk", "kick_dirt", "trip", "assist_race"]
 imm_flags = ["cold", "poison", "negative", "holy", "mental", "disease", "drowning"]
 res_flags = ["bash", "light"]
 vuln_flags = ["slash", "fire", "lightning", "acid", "energy"]
@@ -144,7 +166,7 @@ race = "doll"
 gold = 5
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive"]
-alignment = 0
+alignment = -400
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -157,6 +179,11 @@ special = "spec_thief"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 6605
 keywords = ["doll", "old"]
@@ -165,6 +192,7 @@ long_desc = "An abused and old doll is here."
 description = """
 This doll has been hugged and played with until there is almost nothing left."""
 level = 1
+off_flags = ["assist_race"]
 hitroll = 0
 ac = [80, 50, 90, 100]
 damage_type = "bash"
@@ -176,7 +204,7 @@ race = "doll"
 gold = 0
 sex = "none"
 act_flags = ["npc", "scavenger", "stay_area"]
-alignment = 0
+alignment = -2
 
   [mobiles.hit_dice]
   number = 1
@@ -187,6 +215,11 @@ alignment = 0
   number = 1
   size = 4
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 6606
@@ -200,7 +233,7 @@ level = 9
 hitroll = 1
 ac = [50, 50, 50, 100]
 damage_type = "bash"
-off_flags = ["bash", "berserk"]
+off_flags = ["bash", "berserk", "assist_race"]
 res_flags = ["poison", "disease"]
 vuln_flags = ["drowning"]
 race = "dwarf"
@@ -208,7 +241,7 @@ gold = 50
 sex = "female"
 act_flags = ["npc", "stay_area"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = 10
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -220,6 +253,11 @@ special = "spec_cast_cleric"
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 4
+  bonus = 100
 
 [[mobiles]]
 vnum = 6607
@@ -233,7 +271,7 @@ level = 16
 hitroll = 1
 ac = [30, 20, 30, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "kick_dirt"]
+off_flags = ["bash", "berserk", "kick_dirt", "assist_race"]
 res_flags = ["poison", "disease"]
 vuln_flags = ["drowning"]
 race = "dwarf"
@@ -241,7 +279,7 @@ gold = 120
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "warrior"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 3
@@ -252,6 +290,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 4
+  bonus = 100
 
 [[mobiles]]
 vnum = 6608
@@ -274,7 +317,7 @@ gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -400
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -286,4 +329,9 @@ special = "spec_thief"
   number = 2
   size = 2
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 199
 

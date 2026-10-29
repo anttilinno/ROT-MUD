@@ -9,12 +9,12 @@ It stands before you with arms folded, seemingly uninterested in you."""
 level = 73
 hitroll = 0
 ac = [-120, -120, -120, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "none"
 act_flags = ["npc", "sentinel", "warrior"]
-affected_by = ["detect_invis", "detect_hidden"]
+affected_by = ["detect_invis", "detect_hidden", "sanctuary", "protect_evil"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -26,6 +26,11 @@ alignment = 0
   number = 3
   size = 10
   bonus = 12
+
+  [mobiles.mana_dice]
+  number = 18
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7701
@@ -39,13 +44,13 @@ than the darkest night, and hooves that burn with unholy fires."""
 level = 35
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 300
 sex = "none"
 act_flags = ["npc", "key"]
 affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+alignment = -950
 
   [mobiles.hit_dice]
   number = 3
@@ -56,6 +61,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7702
@@ -69,13 +79,13 @@ master to torment."""
 level = 48
 hitroll = 0
 ac = [-60, -60, -60, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 625
 sex = "female"
 act_flags = ["npc", "key", "aggressive", "mage"]
 affected_by = ["detect_invis", "infrared"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -88,6 +98,11 @@ special = "spec_cast_mage"
   size = 4
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 24
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7703
 keywords = ["oldstyle", "stalker", "invisible"]
@@ -99,13 +114,13 @@ feel nothing, not even the slightest of motions."""
 level = 33
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "none"
 act_flags = ["npc", "key"]
-affected_by = ["flying"]
-alignment = 0
+affected_by = ["flying", "invisible"]
+alignment = 200
 
   [mobiles.hit_dice]
   number = 3
@@ -116,6 +131,11 @@ alignment = 0
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7704
@@ -128,7 +148,7 @@ mindlessly, unaware of its surroundings."""
 level = 20
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 12
 sex = "none"
@@ -145,6 +165,11 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7705
 keywords = ["oldstyle", "githyanki", "hunter"]
@@ -157,13 +182,13 @@ and sunken."""
 level = 22
 hitroll = 0
 ac = [10, 10, 10, 70]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "scavenger", "thief"]
 affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak"]
-alignment = 0
+alignment = -500
 special = "spec_thief"
 
   [mobiles.hit_dice]
@@ -175,6 +200,11 @@ special = "spec_thief"
   number = 2
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7706
@@ -189,13 +219,13 @@ whistles through the air as it slices towards your neck."""
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 125
 sex = "male"
 act_flags = ["npc"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 3
@@ -206,6 +236,11 @@ alignment = 0
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7707
@@ -220,13 +255,13 @@ whistles through the air as it slices towards your neck."""
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 3
@@ -237,6 +272,11 @@ alignment = 0
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7708
@@ -251,13 +291,13 @@ of his sword against its scabbard as it is unsheathed."""
 level = 50
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 5
@@ -268,6 +308,11 @@ alignment = 0
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7709
@@ -282,13 +327,13 @@ of his sword against its scabbard as it is unsheathed."""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 5
@@ -299,6 +344,11 @@ alignment = 0
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7710
@@ -313,13 +363,13 @@ people.  You notice this from the blast of lightning headed towards you."""
 level = 21
 hitroll = 0
 ac = [10, 10, 10, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "mage"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -331,6 +381,11 @@ special = "spec_cast_mage"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7711
@@ -345,13 +400,13 @@ people.  You notice this from the blast of lightning headed towards you."""
 level = 22
 hitroll = 0
 ac = [10, 10, 10, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "mage"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -363,6 +418,11 @@ special = "spec_cast_mage"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7712
@@ -377,13 +437,13 @@ your back."""
 level = 39
 hitroll = 0
 ac = [-40, -40, -40, 30]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "aggressive", "mage"]
 affected_by = ["detect_invis", "detect_magic", "infrared"]
-alignment = 0
+alignment = -500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -395,6 +455,11 @@ special = "spec_cast_mage"
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7713
@@ -409,13 +474,13 @@ hollow eyes sends you into paroxysms of fright."""
 level = 59
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
-affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "detect_magic", "detect_hidden", "infrared", "sanctuary"]
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -427,6 +492,11 @@ special = "spec_cast_undead"
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7714
@@ -444,13 +514,13 @@ to tighten.  You are about to die."""
 level = 69
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "infrared", "invisible", "sanctuary"]
+alignment = -900
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -462,6 +532,11 @@ special = "spec_cast_undead"
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7715
@@ -476,13 +551,13 @@ true living beings it encounters, including you."""
 level = 32
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "none"
 act_flags = ["npc"]
 affected_by = ["infrared", "flying", "pass_door"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -494,6 +569,11 @@ special = "spec_cast_undead"
   number = 2
   size = 6
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7716
@@ -507,13 +587,13 @@ are bitter enemies, and this one happened to get caught.  He intends to escape."
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -250
 
   [mobiles.hit_dice]
   number = 2
@@ -524,6 +604,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 7717
@@ -537,7 +622,7 @@ by the githyanki.  It cringes as you approach."""
 level = 15
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -555,6 +640,11 @@ special = "spec_cast_mage"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7718
 keywords = ["oldstyle", "dragon", "red", "slave"]
@@ -568,7 +658,7 @@ from his open mouth."""
 level = 55
 hitroll = 0
 ac = [-80, -80, -80, 10]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["charm", "bash", "fire"]
 vuln_flags = ["pierce", "cold"]
 race = "dragon"
@@ -576,7 +666,7 @@ gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+alignment = -400
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -589,6 +679,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 28
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 7719
 keywords = ["oldstyle", "fire", "furnace", "flame"]
@@ -599,7 +694,7 @@ The fire feeds on your skin like a living being, licking out at your hair."""
 level = 26
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "none"
@@ -617,4 +712,9 @@ special = "spec_breath_fire"
   number = 2
   size = 5
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
 

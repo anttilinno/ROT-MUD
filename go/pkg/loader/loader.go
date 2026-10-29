@@ -673,6 +673,12 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 		ch.Hit = ch.MaxHit
 	}
 
+	// ROM create_mobile rolls mana; like HP above, take the dice average.
+	if tmpl.ManaDice.Number > 0 && tmpl.ManaDice.Size > 0 {
+		ch.MaxMana = tmpl.ManaDice.Number*(tmpl.ManaDice.Size/2) + tmpl.ManaDice.Bonus
+		ch.Mana = ch.MaxMana
+	}
+
 	// Set damage dice
 	if tmpl.DamageDice.Number > 0 {
 		ch.Damage[0] = tmpl.DamageDice.Number
@@ -685,78 +691,14 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 		ch.Damage[2] = tmpl.Level / 3
 	}
 
-	// Parse act flags
 	for _, flag := range tmpl.ActFlags {
-		switch strings.ToLower(flag) {
-		case "sentinel":
-			ch.Act.Set(types.ActSentinel)
-		case "scavenger":
-			ch.Act.Set(types.ActScavenger)
-		case "aggressive":
-			ch.Act.Set(types.ActAggressive)
-		case "stay_area":
-			ch.Act.Set(types.ActStayArea)
-		case "wimpy":
-			ch.Act.Set(types.ActWimpy)
-		case "warrior":
-			ch.Act.Set(types.ActWarrior)
-		case "mage":
-			ch.Act.Set(types.ActMage)
-		case "cleric":
-			ch.Act.Set(types.ActCleric)
-		case "thief":
-			ch.Act.Set(types.ActThief)
-		case "undead":
-			ch.Act.Set(types.ActUndead)
-		case "ranger":
-			ch.Act.Set(types.ActRanger)
-		case "druid":
-			ch.Act.Set(types.ActDruid)
-		case "vampire":
-			ch.Act.Set(types.ActVampire)
-		case "train":
-			ch.Act.Set(types.ActTrain)
-		case "practice":
-			ch.Act.Set(types.ActPractice)
-		case "pet":
-			ch.Act.Set(types.ActPet)
-		case "healer", "is_healer":
-			ch.Act.Set(types.ActIsHealer)
-		case "gain":
-			ch.Act.Set(types.ActGain)
-		case "update_always":
-			ch.Act.Set(types.ActUpdateAlways)
-		case "no_align":
-			ch.Act.Set(types.ActNoAlign)
-		case "no_purge":
-			ch.Act.Set(types.ActNoPurge)
-		case "protected":
-			ch.Act.Set(types.ActProtected)
-		}
+		ch.Act.Set(actFlagNames[strings.ToLower(flag)])
 	}
-
-	// Parse affected_by flags
 	for _, flag := range tmpl.AffectedBy {
-		switch strings.ToLower(flag) {
-		case "sanctuary":
-			ch.AffectedBy.Set(types.AffSanctuary)
-		case "detect_invis":
-			ch.AffectedBy.Set(types.AffDetectInvis)
-		case "detect_hidden":
-			ch.AffectedBy.Set(types.AffDetectHidden)
-		case "detect_evil":
-			ch.AffectedBy.Set(types.AffDetectEvil)
-		case "detect_good":
-			ch.AffectedBy.Set(types.AffDetectGood)
-		case "invisible":
-			ch.AffectedBy.Set(types.AffInvisible)
-		case "hide":
-			ch.AffectedBy.Set(types.AffHide)
-		case "flying":
-			ch.AffectedBy.Set(types.AffFlying)
-		case "haste":
-			ch.AffectedBy.Set(types.AffHaste)
-		}
+		ch.AffectedBy.Set(affFlagNames[strings.ToLower(flag)])
+	}
+	for _, flag := range tmpl.ShieldFlags {
+		ch.ShieldedBy.Set(shieldFlagNames[strings.ToLower(flag)])
 	}
 
 	ch.Imm = parseImmFlags(tmpl.ImmFlags)
@@ -780,9 +722,9 @@ func (w *World) CreateMobFromTemplate(vnum int) *types.Character {
 	setMobStats(ch, ch.Off.Has(types.OffFast))
 	applyMobFloor(ch)
 
-	// Set default position
-	ch.Position = types.PosStanding
-	ch.DefaultPos = types.PosStanding
+	ch.StartPos = parseMobPosition(tmpl.StartPos)
+	ch.DefaultPos = parseMobPosition(tmpl.DefaultPos)
+	ch.Position = ch.StartPos
 
 	// Set special function (e.g. spec_cast_adept)
 	ch.Special = tmpl.Special
@@ -837,6 +779,51 @@ var immFlagNames = map[string]types.ImmFlags{
 	"negative": types.ImmNegative, "holy": types.ImmHoly, "energy": types.ImmEnergy,
 	"mental": types.ImmMental, "disease": types.ImmDisease, "drowning": types.ImmDrowning,
 	"light": types.ImmLight, "sound": types.ImmSound, "silver": types.ImmSilver,
+}
+
+var actFlagNames = map[string]types.ActFlags{
+	"npc": types.ActNPC, "sentinel": types.ActSentinel, "scavenger": types.ActScavenger,
+	"key": types.ActKey, "ranger": types.ActRanger, "aggressive": types.ActAggressive,
+	"stay_area": types.ActStayArea, "wimpy": types.ActWimpy, "pet": types.ActPet,
+	"train": types.ActTrain, "practice": types.ActPractice, "druid": types.ActDruid,
+	"no_body": types.ActNoBody, "nb_drop": types.ActNBDrop, "undead": types.ActUndead,
+	"vampire": types.ActVampire, "cleric": types.ActCleric, "mage": types.ActMage,
+	"thief": types.ActThief, "warrior": types.ActWarrior, "no_align": types.ActNoAlign,
+	"no_purge": types.ActNoPurge, "outdoors": types.ActOutdoors, "is_satan": types.ActIsSatan,
+	"indoors": types.ActIndoors, "is_priest": types.ActIsPriest, "healer": types.ActIsHealer,
+	"is_healer": types.ActIsHealer, "gain": types.ActGain, "update_always": types.ActUpdateAlways,
+	"changer": types.ActIsChanger, "banker": types.ActBanker, "protected": types.ActProtected,
+}
+
+var affFlagNames = map[string]types.AffectFlags{
+	"blind": types.AffBlind, "invisible": types.AffInvisible, "detect_evil": types.AffDetectEvil,
+	"detect_invis": types.AffDetectInvis, "detect_magic": types.AffDetectMagic,
+	"detect_hidden": types.AffDetectHidden, "detect_good": types.AffDetectGood,
+	"sanctuary": types.AffSanctuary, "faerie_fire": types.AffFaerieFire, "infrared": types.AffInfrared,
+	"curse": types.AffCurse, "farsight": types.AffFarsight, "poison": types.AffPoison,
+	"protect_evil": types.AffProtectEvil, "protect_good": types.AffProtectGood, "sneak": types.AffSneak,
+	"hide": types.AffHide, "sleep": types.AffSleep, "charm": types.AffCharm, "flying": types.AffFlying,
+	"pass_door": types.AffPassDoor, "haste": types.AffHaste, "calm": types.AffCalm,
+	"plague": types.AffPlague, "weaken": types.AffWeaken, "dark_vision": types.AffDarkVision,
+	"berserk": types.AffBerserk, "swim": types.AffSwim, "regeneration": types.AffRegeneration,
+	"slow": types.AffSlow,
+}
+
+var shieldFlagNames = map[string]types.ShieldFlags{
+	"ice": types.ShdIce, "fire": types.ShdFire, "shock": types.ShdShock,
+}
+
+// parseMobPosition reads a template position; a mob never spawns fighting.
+func parseMobPosition(s string) types.Position {
+	switch s {
+	case "sleeping":
+		return types.PosSleeping
+	case "resting":
+		return types.PosResting
+	case "sitting":
+		return types.PosSitting
+	}
+	return types.PosStanding
 }
 
 var offFlagNames = map[string]types.OffFlags{
@@ -1358,4 +1345,3 @@ func formatExitFlags(flags types.ExitFlags) []string {
 	}
 	return result
 }
-

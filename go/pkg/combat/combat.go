@@ -80,7 +80,7 @@ func StopFighting(ch *types.Character, allInRoom bool) {
 			if person.Fighting == ch {
 				person.Fighting = nil
 				if person.Position == types.PosFighting {
-					person.Position = types.PosStanding
+					person.Position = afterFightPos(person)
 				}
 			}
 		}
@@ -88,8 +88,17 @@ func StopFighting(ch *types.Character, allInRoom bool) {
 
 	ch.Fighting = nil
 	if ch.Position == types.PosFighting {
-		ch.Position = types.PosStanding
+		ch.Position = afterFightPos(ch)
 	}
+}
+
+// afterFightPos is where a character settles when a fight ends: a mob goes
+// back to its default position (ROM stop_fighting), everyone else stands.
+func afterFightPos(ch *types.Character) types.Position {
+	if ch.IsNPC() && ch.DefaultPos > types.PosStunned {
+		return ch.DefaultPos
+	}
+	return types.PosStanding
 }
 
 // IsAwake returns true if the character is awake

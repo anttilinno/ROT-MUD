@@ -9,13 +9,13 @@ He seems to be in peace with himself and his surroundings."""
 level = 25
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -27,6 +27,11 @@ alignment = 0
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 301
 keywords = ["oldstyle", "hermit", "sorbus"]
@@ -37,9 +42,11 @@ Sorbus bares the marks of a long, hard life in solitude.
 He is dressed in simple clothing and looks like he has little
 or nothing to say."""
 level = 8
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
@@ -56,6 +63,11 @@ alignment = 0
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 303
 keywords = ["oldstyle", "citizen"]
@@ -67,7 +79,7 @@ He wears normal, light clothing and has an anonymous face."""
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "male"
@@ -84,6 +96,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 304
 keywords = ["oldstyle", "citizen"]
@@ -95,7 +112,7 @@ She wears a minimum of clothing and has big ... eyes."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "female"
@@ -112,6 +129,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 305
 keywords = ["oldstyle", "worm", "Shudde-M'ell"]
@@ -124,13 +146,13 @@ for as long anyone can remember."""
 level = 48
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 683
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -141,6 +163,11 @@ alignment = 0
   number = 2
   size = 10
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 306
@@ -155,12 +182,12 @@ He looks very fit and capable of protecting his goods."""
 level = 45
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 400
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-alignment = 0
+alignment = 400
 
   [mobiles.hit_dice]
   number = 5
@@ -179,6 +206,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 308
 keywords = ["oldstyle", "keeper", "innkeeper"]
@@ -190,13 +222,13 @@ wierdest drinks known. He also looks very big."""
 level = 45
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 inn = true
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 5
@@ -215,6 +247,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 309
 keywords = ["oldstyle", "rabbit"]
@@ -224,7 +261,7 @@ description = "It is a small, furry creature with long ears and big feet."
 level = 1
 hitroll = 0
 ac = [90, 90, 90, 100]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 race = "rabbit"
 gold = 0
 sex = "none"
@@ -241,6 +278,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 350
 keywords = ["oldstyle", "dragon", "pet"]
@@ -253,15 +295,15 @@ but so far they haven't succeeded."""
 level = 20
 hitroll = 0
 ac = [20, 20, 20, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_race"]
 res_flags = ["charm", "bash", "fire"]
 vuln_flags = ["pierce", "cold"]
 race = "dragon"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy", "mage"]
-affected_by = ["detect_invis", "infrared", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "infrared", "flying", "sanctuary"]
+alignment = 1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -273,3 +315,8 @@ special = "spec_cast_mage"
   number = 1
   size = 8
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100

@@ -8,12 +8,12 @@ level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
 damage_type = "bash"
-off_flags = ["berserk", "dodge", "trip"]
+off_flags = ["berserk", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "ranger"]
-alignment = 0
+alignment = -100
 special = "spec_troll_member"
 
   [mobiles.hit_dice]
@@ -26,6 +26,11 @@ special = "spec_troll_member"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 2102
 keywords = ["ogre", "gang", "member"]
@@ -36,12 +41,12 @@ level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
 damage_type = "bash"
-off_flags = ["dodge", "kick_dirt", "trip"]
+off_flags = ["dodge", "kick_dirt", "trip", "assist_race"]
 race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "ranger"]
-alignment = 0
+alignment = 100
 special = "spec_ogre_member"
 
   [mobiles.hit_dice]
@@ -53,6 +58,11 @@ special = "spec_ogre_member"
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 2103
@@ -66,7 +76,7 @@ level = 25
 hitroll = 0
 ac = [-10, -10, -10, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "disarm", "parry"]
+off_flags = ["bash", "berserk", "disarm", "parry", "assist_vnum"]
 res_flags = ["bash"]
 race = "human"
 gold = 100
@@ -85,6 +95,11 @@ special = "spec_troll_member"
   size = 5
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 2104
 keywords = ["bruiser", "troll"]
@@ -96,14 +111,14 @@ level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "parry"]
+off_flags = ["bash", "berserk", "parry", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -333
 special = "spec_troll_member"
 
   [mobiles.hit_dice]
@@ -116,6 +131,11 @@ special = "spec_troll_member"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 2105
 keywords = ["gang", "doll"]
@@ -127,7 +147,7 @@ level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
 damage_type = "bash"
-off_flags = ["dodge", "fast", "trip"]
+off_flags = ["dodge", "fast", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
@@ -144,6 +164,11 @@ alignment = 0
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 2106
 keywords = ["patrolman", "patrol", "man"]
@@ -155,12 +180,12 @@ level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
 damage_type = "bash"
-off_flags = ["bash", "parry", "rescue"]
+off_flags = ["bash", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 350
 sex = "male"
 act_flags = ["npc", "stay_area", "warrior"]
-alignment = 0
+alignment = 700
 special = "spec_patrolman"
 
   [mobiles.hit_dice]
@@ -173,6 +198,11 @@ special = "spec_patrolman"
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 2107
 keywords = ["vandal", "ogre"]
@@ -183,13 +213,13 @@ level = 20
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
-off_flags = ["dodge", "fast", "kick_dirt", "trip"]
+off_flags = ["dodge", "fast", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "thief"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -400
 special = "spec_ogre_member"
 
   [mobiles.hit_dice]
@@ -201,6 +231,11 @@ special = "spec_ogre_member"
   number = 2
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 
 [[mobiles]]
 vnum = 2108
@@ -214,14 +249,14 @@ level = 9
 hitroll = 2
 ac = [50, 50, 50, 90]
 damage_type = "pierce"
-off_flags = ["bash", "disarm", "fade", "fast"]
+off_flags = ["bash", "disarm", "fade", "fast", "assist_align", "assist_race"]
 size = "small"
 race = "dog"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
 affected_by = ["detect_invis", "hide"]
-alignment = 0
+alignment = -100
 
   [mobiles.hit_dice]
   number = 4
@@ -232,6 +267,11 @@ alignment = 0
   number = 1
   size = 8
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 2109
@@ -244,13 +284,13 @@ level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
-off_flags = ["bash", "berserk", "dodge", "kick_dirt"]
+off_flags = ["bash", "berserk", "dodge", "kick_dirt", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "aggressive", "wimpy", "thief"]
 affected_by = ["sneak"]
-alignment = 0
+alignment = -400
 special = "spec_troll_member"
 
   [mobiles.hit_dice]
@@ -263,6 +303,11 @@ special = "spec_troll_member"
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 2110
 keywords = ["gang", "leader", "ogre"]
@@ -274,7 +319,7 @@ level = 26
 hitroll = 0
 ac = [-10, -10, -10, 80]
 damage_type = "bash"
-off_flags = ["disarm", "dodge", "fast", "kick_dirt", "parry", "trip"]
+off_flags = ["disarm", "dodge", "fast", "kick_dirt", "parry", "trip", "assist_vnum"]
 res_flags = ["slash"]
 race = "human"
 gold = 100
@@ -293,6 +338,11 @@ special = "spec_ogre_member"
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 2111
 keywords = ["thug"]
@@ -305,14 +355,14 @@ level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
-off_flags = ["kick_dirt", "parry", "trip"]
+off_flags = ["kick_dirt", "parry", "trip", "assist_vnum"]
 res_flags = ["magic"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -333
 special = "spec_ogre_member"
 
   [mobiles.hit_dice]
@@ -324,4 +374,9 @@ special = "spec_ogre_member"
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 99
 

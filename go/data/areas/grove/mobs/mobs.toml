@@ -10,13 +10,13 @@ traps and pitfalls."""
 level = 40
 hitroll = 0
 ac = [-40, -40, -40, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -28,6 +28,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 7
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8901
@@ -41,13 +46,13 @@ traps and pitfalls."""
 level = 40
 hitroll = 0
 ac = [-40, -40, -40, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -60,6 +65,11 @@ special = "spec_cast_cleric"
   size = 7
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8902
 keywords = ["oldstyle", "elder", "druid"]
@@ -69,14 +79,15 @@ description = """
 He looks ageless, as do all druids.  His grey beard contrasts strongly with
 his lack of wrinkles."""
 level = 26
+affected_by = ["protect_evil"]
 hitroll = 0
 ac = [-10, -10, -10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -88,6 +99,11 @@ special = "spec_cast_cleric"
   number = 1
   size = 10
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 13
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8903
@@ -97,14 +113,15 @@ long_desc = "An elder druidess stands here, watching the local fauna and feeding
 description = """
 She looks ageless, as do all druids.  She smiles a beautiful smile at you."""
 level = 25
+affected_by = ["protect_evil"]
 hitroll = 0
 ac = [-10, -10, -10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -116,6 +133,11 @@ special = "spec_cast_cleric"
   number = 1
   size = 10
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 13
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8904
@@ -128,7 +150,7 @@ she sniffs at you, but she goes back to chewing some grass."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
@@ -145,6 +167,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8905
 keywords = ["oldstyle", "deer"]
@@ -156,7 +183,7 @@ albeit ineffectively."""
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
@@ -173,6 +200,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8906
 keywords = ["oldstyle", "stag", "deer", "large"]
@@ -183,7 +215,7 @@ He eyes you with contained anger.  You'd better leave him alone!"""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
@@ -200,6 +232,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8907
 keywords = ["oldstyle", "bunny", "rabbit"]
@@ -210,7 +247,7 @@ This bunny looks so adorable, you wished you had one just like this!"""
 level = 3
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -227,6 +264,11 @@ alignment = 0
   size = 5
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8908
 keywords = ["oldstyle", "snake"]
@@ -236,7 +278,7 @@ description = "Upon careful inspection, you are sure it is NOT a cobra!"
 level = 8
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["poison"]
 vuln_flags = ["cold"]
 race = "snake"
@@ -257,6 +299,11 @@ special = "spec_poison"
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 8909
 keywords = ["oldstyle", "druid"]
@@ -267,13 +314,13 @@ He doesn't like you bothering him, but is too polite to ask you to leave."""
 level = 20
 hitroll = 0
 ac = [10, 10, 10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -285,6 +332,11 @@ special = "spec_cast_cleric"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 8910
@@ -296,13 +348,13 @@ She wonders why you are staring at her, and how you got in here."""
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -314,4 +366,9 @@ special = "spec_cast_cleric"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
 

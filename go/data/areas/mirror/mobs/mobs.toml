@@ -10,13 +10,13 @@ their playful personality.  Hmmm....  It looks like the baby is teething!"""
 level = 9
 hitroll = 0
 ac = [60, 60, 60, 80]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 11
 sex = "none"
 act_flags = ["npc", "sentinel", "scavenger", "wimpy", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -29,6 +29,11 @@ special = "spec_cast_mage"
   size = 5
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5301
 keywords = ["oldstyle", "lamia", "pet"]
@@ -40,12 +45,12 @@ body of a four-legged beast."""
 level = 8
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "female"
 act_flags = ["npc", "scavenger", "wimpy"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -56,6 +61,11 @@ alignment = 0
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5302
@@ -68,12 +78,12 @@ choice but to reciprocate."""
 level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -85,6 +95,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5303
 keywords = ["oldstyle", "guard", "imperial", "cityguard"]
@@ -94,14 +109,15 @@ description = """
 He is dressed in plate, and he looks quite formidable.  At the moment, though,
 he is just giggling with a kid running about."""
 level = 33
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -113,6 +129,11 @@ special = "spec_guard"
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5304
@@ -126,12 +147,12 @@ attention, if only for a moment."""
 level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -143,6 +164,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5305
 keywords = ["oldstyle", "gordon", "defender"]
@@ -153,14 +179,15 @@ Gordon is dressed in full mithril plate, and he looks indestructible.  He eyes
 you suspiciously not only because you are a stranger, but because you are an
 ARMED stranger.  Better not do any funny stuff in his presence."""
 level = 70
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -172,6 +199,11 @@ special = "spec_guard"
   number = 4
   size = 7
   bonus = 11
+
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5306
@@ -186,12 +218,12 @@ and he clenches it at you.  Other than that, he is dressed all in black."""
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy", "cleric"]
-alignment = 0
+alignment = -500
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -204,6 +236,11 @@ special = "spec_cast_cleric"
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5307
 keywords = ["oldstyle", "priest"]
@@ -213,14 +250,15 @@ description = """
 He stands here gloriously telling of Thalos's history, how it is now referred by
 the world as 'The City of Peace'.  He is very happy to be the high priest here."""
 level = 39
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-40, -40, -40, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -233,6 +271,11 @@ special = "spec_cast_cleric"
   size = 7
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 20
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5308
 keywords = ["oldstyle", "golem", "stone"]
@@ -242,14 +285,15 @@ description = """
 It is a big chunk of rock that has been magically formed into a giant
 stone creature.  It stands here guarding the city."""
 level = 59
+affected_by = ["protect_evil"]
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 212
 sex = "none"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 6
@@ -260,6 +304,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5309
@@ -272,12 +321,12 @@ He looks very proud of his work."""
 level = 40
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 800
 
   [mobiles.hit_dice]
   number = 3
@@ -289,6 +338,11 @@ alignment = 0
   size = 8
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5310
 keywords = ["oldstyle", "dan", "barkeep"]
@@ -298,12 +352,12 @@ description = "He looks at you, and says, 'What's your poison, stranger?'"
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 6
@@ -322,6 +376,11 @@ alignment = 0
   open_hour = 0
   close_hour = 24
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5311
 keywords = ["oldstyle", "george", "butcher"]
@@ -333,12 +392,12 @@ he asks, 'How much you want?'"""
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 6
@@ -357,6 +416,11 @@ alignment = 0
   open_hour = 6
   close_hour = 21
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5312
 keywords = ["oldstyle", "farmer", "betty"]
@@ -366,12 +430,12 @@ description = "She smiles at you meekly."
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 650
 
   [mobiles.hit_dice]
   number = 6
@@ -390,6 +454,11 @@ alignment = 0
   open_hour = 7
   close_hour = 20
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5313
 keywords = ["oldstyle", "thaellor", "dwarf"]
@@ -401,12 +470,12 @@ metal into items of defense and destruction."""
 level = 59
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 550
 
   [mobiles.hit_dice]
   number = 6
@@ -425,6 +494,11 @@ alignment = 0
   open_hour = 5
   close_hour = 22
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5314
 keywords = ["oldstyle", "ben", "smith"]
@@ -434,12 +508,12 @@ description = "Ben tries to pawn his various wares to you."
 level = 59
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 6
@@ -458,6 +532,11 @@ alignment = 0
   open_hour = 8
   close_hour = 19
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5315
 keywords = ["oldstyle", "librarian"]
@@ -467,12 +546,12 @@ description = "The librarian looks busy and whispers, 'Shhh!'"
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -484,6 +563,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5316
 keywords = ["oldstyle", "scholar", "boy"]
@@ -493,12 +577,12 @@ description = "This young scholar is studying to be a priest."
 level = 12
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -510,6 +594,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5317
 keywords = ["oldstyle", "wizard"]
@@ -520,13 +609,13 @@ This old wizard almost looks like he is about to fall over and sleep."""
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 10]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = 550
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -546,6 +635,11 @@ special = "spec_cast_mage"
   open_hour = 9
   close_hour = 18
 
+  [mobiles.mana_dice]
+  number = 30
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5318
 keywords = ["oldstyle", "masseuse", "woman"]
@@ -558,12 +652,12 @@ attention, and you jump to her offer for a massage."""
 level = 8
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "female"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 700
 
   [mobiles.hit_dice]
   number = 2
@@ -574,6 +668,11 @@ alignment = 0
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5319
@@ -586,12 +685,12 @@ choice but to reciprocate and join him and the others in the soothing pool."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
-alignment = 0
+alignment = 650
 
   [mobiles.hit_dice]
   number = 2
@@ -603,6 +702,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5320
 keywords = ["oldstyle", "guard", "imperial", "cityguard"]
@@ -613,14 +717,15 @@ He is dressed in plate, and he looks quite formidable.  At the moment,
 he is looking at a map of Thalos aside his fellow co-workers keeping
 track of each city patrol."""
 level = 33
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -632,6 +737,11 @@ special = "spec_guard"
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5321
@@ -642,14 +752,15 @@ description = """
 He is dressed in plate, and he looks quite formidable.  At the moment,
 he is watching the children play with amusement."""
 level = 34
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -661,6 +772,11 @@ special = "spec_guard"
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5322
@@ -673,7 +789,7 @@ she sniffs at you, but she goes back to chewing some grass."""
 level = 9
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
@@ -690,6 +806,11 @@ alignment = 0
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5323
 keywords = ["oldstyle", "deer"]
@@ -701,7 +822,7 @@ albeit ineffectively."""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
@@ -718,6 +839,11 @@ alignment = 0
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5324
 keywords = ["oldstyle", "stag", "deer"]
@@ -728,7 +854,7 @@ He eyes you with contained anger.  You'd better leave him alone!"""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
@@ -745,6 +871,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5325
 keywords = ["oldstyle", "bunny", "rabbit"]
@@ -755,7 +886,7 @@ This bunny looks so adorable, you wished you had one just like this!"""
 level = 4
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "none"
@@ -772,6 +903,11 @@ alignment = 0
   size = 5
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5326
 keywords = ["oldstyle", "snake"]
@@ -781,7 +917,7 @@ description = "Upon careful inspection, you are sure it is NOT a cobra!"
 level = 7
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["poison"]
 vuln_flags = ["cold"]
 race = "snake"
@@ -801,6 +937,11 @@ alignment = 0
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5327
 keywords = ["oldstyle", "druid"]
@@ -811,13 +952,13 @@ He doesn't like you bothering him, but is too polite to ask you to leave."""
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -829,6 +970,11 @@ special = "spec_cast_cleric"
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 5328
@@ -840,13 +986,13 @@ She wonders why you are staring at her, and how you got in here."""
 level = 20
 hitroll = 0
 ac = [10, 10, 10, 70]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "female"
 act_flags = ["npc", "stay_area", "wimpy", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "protect_evil"]
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -859,6 +1005,11 @@ special = "spec_cast_cleric"
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5329
 keywords = ["oldstyle", "musician", "bard"]
@@ -869,12 +1020,12 @@ This musical fellow plays a happy song with his fellow comrades."""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-alignment = 0
+alignment = 450
 
   [mobiles.hit_dice]
   number = 2
@@ -886,6 +1037,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5330
 keywords = ["oldstyle", "musician", "bard"]
@@ -896,12 +1052,12 @@ This musical fellow wanders the world singing of the glory of Thalos."""
 level = 17
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 7
 sex = "male"
 act_flags = ["npc", "scavenger"]
-alignment = 0
+alignment = 550
 
   [mobiles.hit_dice]
   number = 2
@@ -913,6 +1069,11 @@ alignment = 0
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5331
 keywords = ["oldstyle", "cityguard", "guard"]
@@ -922,12 +1083,12 @@ description = "A big, strong, helpful, trustworthy guard."
 level = 30
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -940,6 +1101,11 @@ special = "spec_guard"
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5332
 keywords = ["oldstyle", "janitor"]
@@ -948,12 +1114,12 @@ long_desc = "A janitor is walking around, cleaning up."
 level = 1
 hitroll = 0
 ac = [90, 90, 90, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc"]
-alignment = 0
+alignment = 900
 special = "spec_janitor"
 
   [mobiles.hit_dice]
@@ -966,6 +1132,11 @@ special = "spec_janitor"
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5333
 keywords = ["oldstyle", "fido", "dog"]
@@ -977,13 +1148,13 @@ around his teeth."""
 level = 0
 hitroll = 0
 ac = [100, 100, 100, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 vuln_flags = ["magic"]
 race = "fido"
 gold = 0
 sex = "male"
 act_flags = ["npc", "aggressive", "wimpy"]
-alignment = 0
+alignment = -200
 special = "spec_fido"
 
   [mobiles.hit_dice]
@@ -996,6 +1167,11 @@ special = "spec_fido"
   size = 2
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 1
+  bonus = 99
+
 [[mobiles]]
 vnum = 5334
 keywords = ["oldstyle", "cityguard", "guard"]
@@ -1005,12 +1181,12 @@ description = "A big, strong, helpful, trustworthy guard."
 level = 30
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue"]
+off_flags = ["bash", "berserk", "disarm", "kick", "parry", "rescue", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
-alignment = 0
+alignment = 1000
 special = "spec_guard"
 
   [mobiles.hit_dice]
@@ -1022,3 +1198,8 @@ special = "spec_guard"
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100

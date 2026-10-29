@@ -130,6 +130,7 @@ type MobileData struct {
 	Alignment   int       `toml:"alignment"`
 	ActFlags    []string  `toml:"act_flags"`
 	AffectedBy  []string  `toml:"affected_by"`
+	ShieldFlags []string  `toml:"shield_flags"` // elemental shields: ice, fire, shock
 	OffFlags    []string  `toml:"off_flags"`
 	ImmFlags    []string  `toml:"imm_flags"`
 	ResFlags    []string  `toml:"res_flags"`

@@ -19,8 +19,8 @@ race = "human"
 gold = 4922
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "sanctuary", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 6
@@ -31,6 +31,11 @@ alignment = 0
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 16001
@@ -47,12 +52,12 @@ alone!"""
 level = 50
 hitroll = 9
 ac = [-200, -200, -200, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_evil", "detect_invis", "detect_magic", "infrared"]
+affected_by = ["detect_evil", "detect_invis", "detect_magic", "infrared", "sanctuary", "protect_evil"]
 alignment = 0
 special = "spec_cast_mage"
 
@@ -65,6 +70,11 @@ special = "spec_cast_mage"
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 100
+  bonus = 300
 
 [[mobiles]]
 vnum = 16002
@@ -79,13 +89,13 @@ his position on the ship as a First Mate."""
 level = 50
 hitroll = 15
 ac = [-200, -200, -200, 0]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sanctuary", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -96,6 +106,11 @@ alignment = 0
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 100
+  bonus = 200
 
 [[mobiles]]
 vnum = 16003
@@ -111,7 +126,7 @@ calls it food.  For some strange reason, you loose your appetite."""
 level = 45
 hitroll = 7
 ac = [-100, -100, -100, 0]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1000
 sex = "male"
@@ -129,6 +144,11 @@ alignment = 0
   size = 4
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
+
 [[mobiles]]
 vnum = 16004
 keywords = ["Hired", "Assassin", "Guard"]
@@ -141,13 +161,13 @@ on his bad side!"""
 level = 55
 hitroll = 10
 ac = [-200, -200, -200, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2000
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "hide"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sneak", "hide", "invisible", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 6
@@ -159,6 +179,11 @@ alignment = 0
   size = 4
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 200
+
 [[mobiles]]
 vnum = 16005
 keywords = ["sleeping", "pirate"]
@@ -169,15 +194,17 @@ The pirate looks quite at peace.  The harsh lines of trouble are gone
 from his face, taken away by the sandman.  I bet he would be VERY
 upset if you woke him up, so step lightly."""
 level = 38
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 3
 ac = [-100, -100, -100, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "warrior"]
-affected_by = ["infrared", "sleep"]
-alignment = 0
+affected_by = ["infrared", "sleep", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 3
@@ -188,6 +215,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16006
@@ -201,13 +233,13 @@ the bird or the pirate?"""
 level = 45
 hitroll = 3
 ac = [-100, -100, -100, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
-affected_by = ["infrared"]
-alignment = 0
+affected_by = ["infrared", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -218,6 +250,11 @@ alignment = 0
   number = 4
   size = 4
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16007
@@ -230,13 +267,13 @@ you do to make him so mad?"""
 level = 45
 hitroll = 5
 ac = [-100, -100, -100, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
-affected_by = ["infrared"]
-alignment = 0
+affected_by = ["infrared", "sanctuary", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -247,6 +284,11 @@ alignment = 0
   number = 4
   size = 4
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16008
@@ -260,13 +302,13 @@ out of his mouth. Yuk!"""
 level = 45
 hitroll = 3
 ac = [-100, -100, -100, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "warrior"]
-affected_by = ["infrared"]
-alignment = 0
+affected_by = ["infrared", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -277,6 +319,11 @@ alignment = 0
   number = 4
   size = 4
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16009
@@ -289,13 +336,13 @@ a really bad tan.  He sure could use a friend to talk to."""
 level = 47
 hitroll = 3
 ac = [-200, -200, -200, -200]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "infrared", "protect_evil"]
+alignment = -500
 
   [mobiles.hit_dice]
   number = 5
@@ -306,6 +353,11 @@ alignment = 0
   number = 3
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16010
@@ -318,12 +370,12 @@ be very deadly in combat."""
 level = 47
 hitroll = 3
 ac = [-200, -200, -200, -200]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sanctuary", "protect_evil"]
 alignment = 0
 
   [mobiles.hit_dice]
@@ -335,6 +387,11 @@ alignment = 0
   number = 3
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16011
@@ -348,13 +405,13 @@ all we do everyday! WORK!""""
 level = 35
 hitroll = 3
 ac = [-100, -100, -100, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
-affected_by = ["infrared"]
-alignment = 0
+affected_by = ["infrared", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 3
@@ -365,6 +422,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16012
@@ -376,13 +438,13 @@ He looks like a happy-go-lucky man who takes things as they come."""
 level = 35
 hitroll = 3
 ac = [-100, -100, -100, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 200
 sex = "male"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy", "warrior"]
-affected_by = ["infrared"]
-alignment = 0
+affected_by = ["infrared", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 3
@@ -393,6 +455,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
 
 [[mobiles]]
 vnum = 16013
@@ -404,13 +471,13 @@ This is the BIGGEST rat you've ever seen!  He has razor sharp teeth!"""
 level = 35
 hitroll = 3
 ac = [-100, -100, -100, -100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area", "wimpy", "warrior"]
 affected_by = ["infrared", "plague"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 3
@@ -422,6 +489,11 @@ alignment = 0
   size = 7
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 100
+  bonus = 100
+
 [[mobiles]]
 vnum = 16014
 keywords = ["lookout"]
@@ -432,13 +504,13 @@ He peers intently in all directions and keeps an eye on the weather."""
 level = 50
 hitroll = 15
 ac = [-500, -500, -500, 0]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5000
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden", "infrared"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "infrared", "sanctuary", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -449,6 +521,11 @@ alignment = 0
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 100
+  bonus = 200
 
 [[mobiles]]
 vnum = 16015
@@ -466,8 +543,8 @@ race = "human"
 gold = 3473
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "sanctuary", "protect_evil"]
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 1
@@ -485,6 +562,11 @@ alignment = 0
   profit_sell = 80
   open_hour = 0
   close_hour = 24
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499
 
 [[mobiles]]
 vnum = 16100
@@ -505,8 +587,8 @@ race = "human"
 gold = 3927
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area", "warrior"]
-affected_by = ["detect_invis", "detect_hidden"]
-alignment = 0
+affected_by = ["detect_invis", "detect_hidden", "sanctuary", "protect_evil"]
+alignment = -1000
 special = "spec_cast_adept"
 
   [mobiles.hit_dice]
@@ -518,3 +600,8 @@ special = "spec_cast_adept"
   number = 5
   size = 10
   bonus = 25
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 499

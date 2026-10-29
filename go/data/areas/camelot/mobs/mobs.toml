@@ -13,8 +13,8 @@ race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel", "no_align"]
-affected_by = ["haste"]
-alignment = 0
+affected_by = ["haste", "protect_evil"]
+alignment = 250
 
   [mobiles.hit_dice]
   number = 2
@@ -26,6 +26,11 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 100
+
 [[mobiles]]
 vnum = 3805
 keywords = ["guard", "castle"]
@@ -34,6 +39,7 @@ long_desc = "A young man stands here defending Camelot from intruders."
 description = """
 A well-armored man watches over those who enter and pass through his master's residence.  The man looks upon you with a suspicious gaze; he has learned through experience that adventurers are often troublesome travellers."""
 level = 23
+affected_by = ["protect_evil"]
 hitroll = 3
 ac = [-40, -40, -40, 0]
 damage_type = "bash"
@@ -42,7 +48,7 @@ race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
-alignment = 0
+alignment = 850
 
   [mobiles.hit_dice]
   number = 2
@@ -53,6 +59,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 150
 
 [[mobiles]]
 vnum = 3807
@@ -84,6 +95,11 @@ special = "spec_thief"
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 75
+
 [[mobiles]]
 vnum = 3810
 keywords = ["cook", "chef"]
@@ -112,6 +128,11 @@ alignment = 0
   size = 10
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 75
+
 [[mobiles]]
 vnum = 3821
 keywords = ["prisoner"]
@@ -129,7 +150,7 @@ gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["plague"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -140,6 +161,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 200
 
 [[mobiles]]
 vnum = 3822
@@ -159,7 +185,7 @@ gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["weaken"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -170,6 +196,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 200
 
 [[mobiles]]
 vnum = 3840
@@ -187,8 +218,8 @@ race = "human"
 gold = 25
 sex = "male"
 act_flags = ["npc", "sentinel", "warrior"]
-affected_by = ["detect_evil", "detect_invis", "haste"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "haste", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -199,6 +230,11 @@ alignment = 0
   number = 2
   size = 5
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 240
 
 [[mobiles]]
 vnum = 3842
@@ -221,8 +257,8 @@ race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-affected_by = ["detect_evil", "detect_invis", "haste"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "haste", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -233,6 +269,11 @@ alignment = 0
   number = 2
   size = 5
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 250
 
 [[mobiles]]
 vnum = 3844
@@ -257,8 +298,8 @@ race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-affected_by = ["detect_evil", "detect_invis", "haste"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "haste", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 2
@@ -269,6 +310,11 @@ alignment = 0
   number = 2
   size = 5
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 250
 
 [[mobiles]]
 vnum = 3846
@@ -291,8 +337,8 @@ race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-affected_by = ["detect_evil", "detect_invis", "haste"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "haste", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 3
@@ -303,6 +349,11 @@ alignment = 0
   number = 2
   size = 6
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 250
 
 [[mobiles]]
 vnum = 3848
@@ -326,7 +377,7 @@ race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "stay_area"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -338,6 +389,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 5
   bonus = 3
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 250
 
 [[mobiles]]
 vnum = 3860
@@ -358,8 +414,8 @@ race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
-affected_by = ["detect_invis", "flying", "haste"]
-alignment = 0
+affected_by = ["detect_invis", "flying", "haste", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 3
@@ -370,6 +426,11 @@ alignment = 0
   number = 2
   size = 6
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 300
 
 [[mobiles]]
 vnum = 3865
@@ -394,8 +455,8 @@ race = "human"
 gold = 150
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage", "warrior"]
-affected_by = ["detect_invis", "detect_magic", "flying"]
-alignment = 0
+affected_by = ["detect_invis", "detect_magic", "flying", "sanctuary", "protect_evil"]
+alignment = 1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -407,6 +468,11 @@ special = "spec_cast_mage"
   number = 2
   size = 6
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 4
+  bonus = 400
 
 [[mobiles]]
 vnum = 3870
@@ -429,8 +495,8 @@ race = "unique"
 gold = 325
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "warrior"]
-affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "flying", "haste"]
-alignment = 0
+affected_by = ["detect_evil", "detect_invis", "detect_magic", "detect_hidden", "flying", "haste", "sanctuary", "protect_evil"]
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 3
@@ -441,4 +507,9 @@ alignment = 0
   number = 3
   size = 4
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 1
+  bonus = 300
 

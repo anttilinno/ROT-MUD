@@ -8,14 +8,16 @@ He is a tall but bulky man in his late fifties.  His features are worn with
 decades of hard work and his somewhat crouched expression is one of deep
 sorrow and depression.  He is haunted by a memory of a lost paradise."""
 level = 8
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = 350
 
   [mobiles.hit_dice]
   number = 2
@@ -27,6 +29,11 @@ alignment = 0
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3601
 keywords = ["oldstyle", "zombie"]
@@ -36,13 +43,13 @@ description = "Maggots crawl all over its decaying body."
 level = 8
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -54,6 +61,11 @@ special = "spec_cast_undead"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3602
@@ -66,13 +78,13 @@ resemble claws.  Its eyes are a dark yellow colour and glare hungrily at you."""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -85,6 +97,11 @@ special = "spec_cast_undead"
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3603
 keywords = ["oldstyle", "skeleton"]
@@ -96,13 +113,13 @@ time."""
 level = 5
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -114,6 +131,11 @@ special = "spec_cast_undead"
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 3604
@@ -126,13 +148,13 @@ time."""
 level = 6
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -145,6 +167,11 @@ special = "spec_cast_undead"
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 3605
 keywords = ["oldstyle", "zombie"]
@@ -154,13 +181,13 @@ description = "Maggots crawl all over its decaying body."
 level = 7
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
 act_flags = ["npc", "aggressive"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -750
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -172,4 +199,9 @@ special = "spec_cast_undead"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 

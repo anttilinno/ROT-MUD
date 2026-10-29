@@ -7,7 +7,7 @@ description = "You will become him if you are not careful."
 level = 8
 hitroll = 0
 ac = [70, 70, 70, 90]
-off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip"]
+off_flags = ["backstab", "disarm", "dodge", "kick_dirt", "trip", "assist_vnum"]
 race = "human"
 gold = 5
 sex = "male"
@@ -26,6 +26,11 @@ special = "spec_thief"
   size = 6
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9302
 keywords = ["oldstyle", "star"]
@@ -35,12 +40,12 @@ description = "You can't tell what the star looks like, she is too bright!"
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -52,6 +57,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9303
 keywords = ["oldstyle", "nebula", "young"]
@@ -61,12 +71,12 @@ description = "It hasn't got a definite shape, it is just a cloud of mist."
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
 act_flags = ["npc", "stay_area"]
-alignment = 0
+alignment = 200
 
   [mobiles.hit_dice]
   number = 2
@@ -77,6 +87,11 @@ alignment = 0
   number = 2
   size = 4
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9304
@@ -88,12 +103,12 @@ You see the offspring of Halley's comet, here just to wipe everything out."""
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "scavenger", "aggressive", "stay_area"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -105,6 +120,11 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9305
 keywords = ["oldstyle", "red", "supergiant"]
@@ -114,9 +134,11 @@ description = """
 You notice the giant is not as tough as his name sounds ...
 Still he can be very powerful."""
 level = 29
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 100
 sex = "male"
@@ -133,6 +155,11 @@ alignment = 0
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9306
 keywords = ["oldstyle", "white", "dwarf"]
@@ -144,7 +171,7 @@ But somehow he manages to escape.  Though tiny, it can take a lot of hits!"""
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 100
 sex = "male"
@@ -161,6 +188,11 @@ alignment = 0
   size = 6
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9307
 keywords = ["oldstyle", "horsehead", "nebula"]
@@ -170,15 +202,17 @@ description = """
 You can only make out its shape from the darkness.  He was cursed to stay in
 here and his face may never be seen by anyone again."""
 level = 35
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
 affected_by = ["sneak", "hide"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 3
@@ -189,6 +223,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9308
@@ -199,14 +238,15 @@ description = """
 She was once a princess of beauty.  However, her beauty has led to a Goddess's
 jealousy and she has to suffer here endlessly until Perseus comes."""
 level = 35
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 375
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "ranger"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 3
@@ -217,6 +257,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9309
@@ -228,14 +273,15 @@ He has been put to do the Ten Labours -- ten impossible tasks, by Hera, the
 queen goddess, who disliked him.  But he finished them all and at the end was
 granted immortality. He is a very brave and strong fighter."""
 level = 38
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 375
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
-alignment = 0
+alignment = 1000
 
   [mobiles.hit_dice]
   number = 3
@@ -247,6 +293,11 @@ alignment = 0
   size = 7
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9310
 keywords = ["oldstyle", "pegasus"]
@@ -256,12 +307,12 @@ description = "It is the legendary horse with wings on its back."
 level = 34
 hitroll = 0
 ac = [-30, -30, -30, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "none"
 act_flags = ["npc", "sentinel", "stay_area", "wimpy"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 3
@@ -272,6 +323,11 @@ alignment = 0
   number = 3
   size = 4
   bonus = 4
+
+  [mobiles.mana_dice]
+  number = 8
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9311
@@ -284,14 +340,15 @@ killed by Scorpio.  The gods put them both up as constellations but one
 appears on one side of the sky and the other the other side so they will
 never meet."""
 level = 37
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-40, -40, -40, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 375
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 3
@@ -302,6 +359,11 @@ alignment = 0
   number = 2
   size = 7
   bonus = 5
+
+  [mobiles.mana_dice]
+  number = 9
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9312
@@ -314,12 +376,12 @@ one knows; even the Gods themselves have forgotten."""
 level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 150
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area"]
-alignment = 0
+alignment = 300
 
   [mobiles.hit_dice]
   number = 2
@@ -330,6 +392,11 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9313
@@ -343,13 +410,13 @@ hitting the head is certainly not easy."""
 level = 49
 hitroll = 0
 ac = [-70, -70, -70, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 750
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -1000
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -361,6 +428,11 @@ special = "spec_breath_fire"
   number = 2
   size = 10
   bonus = 7
+
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9314
@@ -374,12 +446,12 @@ we are on now?"""
 level = 17
 hitroll = 0
 ac = [20, 20, 20, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 200
 sex = "none"
 act_flags = ["npc", "scavenger", "stay_area", "wimpy"]
-alignment = 0
+alignment = -700
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -392,6 +464,11 @@ special = "spec_breath_fire"
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9315
 keywords = ["oldstyle", "aries"]
@@ -401,14 +478,17 @@ description = """
 You see a white goat here, the first guardian of the Zodiac,
 also the ruler of Spring. He looks as if he is expecting you."""
 level = 44
+affected_by = ["sanctuary"]
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 700
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -420,6 +500,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9316
@@ -432,13 +517,13 @@ he can fight well ... indeed he has fought with Orion before and survived."""
 level = 44
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -100
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -450,6 +535,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9317
@@ -460,14 +550,15 @@ description = """
 As soon as you see him you know that he is the most perfect man you have seen.
 You can't find any imperfections on him."""
 level = 44
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -479,6 +570,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9318
@@ -491,13 +587,13 @@ How can there be such a contrast?  You wonder ..."""
 level = 29
 hitroll = 0
 ac = [-20, -20, -20, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive", "stay_area", "wimpy", "cleric"]
-affected_by = ["detect_invis", "pass_door"]
-alignment = 0
+affected_by = ["detect_invis", "pass_door", "sanctuary"]
+alignment = -1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -510,6 +606,11 @@ special = "spec_cast_cleric"
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9319
 keywords = ["oldstyle", "cancer"]
@@ -520,9 +621,10 @@ You see a gigantic crab (YES, it is bigger than you!) with a crushed shell.
 Legend is that he was crushed by Hercules when he was sent by Hera to kill him.
 So Hera made Cancer a constellation for his work."""
 level = 44
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 600
 sex = "male"
@@ -539,6 +641,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9320
@@ -552,13 +659,13 @@ his bare hands to tear the lion into two from its mouth!"""
 level = 43
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -100
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -570,6 +677,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9321
@@ -581,14 +693,17 @@ From what you have seen, you now realize that legends are legends, and Virgo
 may not be the maid of chastity and purity at all!  But still she looks
 gorgeous and is waiting for your first move, whatever it is ..."""
 level = 43
+affected_by = ["sanctuary"]
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -600,6 +715,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9322
@@ -610,14 +730,15 @@ description = """
 He is a wise old man and can see people's thoughts through their eyes....
 Now all he can see from you is greed and bloodshed."""
 level = 44
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -629,6 +750,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9323
@@ -641,13 +767,13 @@ Sagittarius' arrow aimed at his heart forever."""
 level = 43
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -200
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -659,6 +785,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9324
@@ -668,14 +799,15 @@ long_desc = "Sagittarius the centaur is waiting to let go of his well aimed arro
 description = """
 He is a centaur and a well trained archer. No one can escape his arrows."""
 level = 44
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -687,6 +819,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9325
@@ -698,14 +835,15 @@ You see a mean-looking ram here.  He used to be a fierce fighter in the ancient
 war but now the gods have decided to put him here, to live out the rest of his 
 days in peace."""
 level = 44
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 700
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -717,6 +855,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9326
@@ -727,14 +870,15 @@ description = """
 The pretty Water Bearer is smiling at you, you think you'd better give her a 
 hand with holding the vessel."""
 level = 44
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -746,6 +890,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9327
@@ -756,14 +905,17 @@ description = """
 She has been forced to serve her husband, who had been cursed to turn into a
 fish and she deserves your pity."""
 level = 43
+affected_by = ["sanctuary"]
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "cleric"]
-alignment = 0
+alignment = 1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -775,6 +927,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9328
@@ -785,14 +942,15 @@ description = """
 He was once a very handsome man but now has turned into an ugly big fish.
 So he becomes jealous of any living thing which is more handsome than him."""
 level = 43
+affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-50, -50, -50, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -804,6 +962,11 @@ special = "spec_cast_cleric"
   number = 2
   size = 8
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 22
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9329
@@ -816,13 +979,13 @@ You think you'd better turn back.  At least you have got a chance of survival.""
 level = 53
 hitroll = 0
 ac = [-80, -80, -80, 40]
-off_flags = ["berserk", "disarm", "kick", "parry", "crush"]
+off_flags = ["berserk", "disarm", "kick", "parry", "crush", "assist_race"]
 res_flags = ["bash", "cold"]
 race = "bear"
 gold = 750
 sex = "none"
 act_flags = ["npc", "sentinel", "aggressive", "stay_area", "cleric"]
-affected_by = ["detect_invis"]
+affected_by = ["detect_invis", "sanctuary"]
 alignment = 0
 special = "spec_cast_cleric"
 
@@ -836,6 +999,11 @@ special = "spec_cast_cleric"
   size = 10
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 27
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 9330
 keywords = ["oldstyle", "cassiopeia", "queen"]
@@ -844,15 +1012,17 @@ long_desc = "Cassiopeia, the queen of the Universe, is sitting on her throne."
 description = """
 She is the Queen of Dignity; facing her you feel all your dignity has gone."""
 level = 51
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [-70, -70, -70, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 600
 sex = "female"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = 700
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -864,6 +1034,11 @@ special = "spec_cast_mage"
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9331
@@ -874,14 +1049,17 @@ description = """
 He is the King of Might as well as of the Universe. You suddenly feel very
 weak and useless in front of him."""
 level = 52
+affected_by = ["sanctuary"]
+start_pos = "sitting"
+default_pos = "sitting"
 hitroll = 0
 ac = [-70, -70, -70, 20]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 600
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area", "mage"]
-alignment = 0
+alignment = 700
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -893,6 +1071,11 @@ special = "spec_cast_mage"
   number = 3
   size = 6
   bonus = 6
+
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 9332
@@ -907,13 +1090,13 @@ here at all?"""
 level = 60
 hitroll = 0
 ac = [-90, -90, -90, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1000
 sex = "male"
 act_flags = ["npc", "sentinel", "stay_area"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "invisible", "sanctuary"]
+alignment = 1000
 special = "spec_breath_acid"
 
   [mobiles.hit_dice]
@@ -925,4 +1108,9 @@ special = "spec_breath_acid"
   number = 4
   size = 6
   bonus = 8
+
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
 

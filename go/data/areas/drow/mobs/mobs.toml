@@ -5,9 +5,11 @@ short_desc = "the goblin slave"
 long_desc = "A goblin slave lies here asleep."
 description = "The defenseless goblin begs for mercy."
 level = 2
+start_pos = "sleeping"
+default_pos = "sleeping"
 hitroll = 0
 ac = [90, 90, 90, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_race"]
 res_flags = ["mental"]
 vuln_flags = ["holy", "light", "silver"]
 race = "goblin"
@@ -15,7 +17,7 @@ gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "wimpy"]
 affected_by = ["infrared"]
-alignment = 0
+alignment = -450
 
   [mobiles.hit_dice]
   number = 2
@@ -27,6 +29,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5101
 keywords = ["oldstyle", "drow", "commoner"]
@@ -36,13 +43,13 @@ description = "I doubt he is the type to give directions."
 level = 19
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 15
 sex = "male"
 act_flags = ["npc", "key", "aggressive", "stay_area"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 2
@@ -54,6 +61,11 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5102
 keywords = ["oldstyle", "drow", "noble", "warrior"]
@@ -63,13 +75,13 @@ description = "He looks pissed off!"
 level = 27
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 2
@@ -81,6 +93,11 @@ alignment = 0
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5103
 keywords = ["oldstyle", "drow", "noble", "mage"]
@@ -90,13 +107,13 @@ description = "The mage prepares to cast a spell ... at you!!"
 level = 30
 hitroll = 0
 ac = [-10, -10, -10, 50]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 100
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive", "mage"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -109,6 +126,11 @@ special = "spec_cast_mage"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5104
 keywords = ["oldstyle", "drow", "priestess"]
@@ -118,13 +140,13 @@ description = "I wouldn't want go get on her bad side!"
 level = 33
 hitroll = 0
 ac = [-30, -30, -30, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 200
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive", "cleric"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -137,6 +159,11 @@ special = "spec_cast_cleric"
   size = 6
   bonus = 4
 
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5105
 keywords = ["oldstyle", "drow", "master"]
@@ -146,13 +173,13 @@ description = "The drow master is ALWAYS ready for a fight."
 level = 42
 hitroll = 0
 ac = [-50, -50, -50, 70]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 500
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 4
@@ -164,6 +191,11 @@ alignment = 0
   size = 4
   bonus = 5
 
+  [mobiles.mana_dice]
+  number = 10
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5106
 keywords = ["oldstyle", "drow", "weapons", "master"]
@@ -173,13 +205,13 @@ description = "He definitely knows his way around in combat."
 level = 45
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 750
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -191,6 +223,11 @@ alignment = 0
   size = 6
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 11
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5107
 keywords = ["oldstyle", "drow", "matron", "mother"]
@@ -200,13 +237,13 @@ description = "She looks really pissed off!"
 level = 48
 hitroll = 0
 ac = [-60, -60, -60, 60]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1500
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_invis"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 5
@@ -218,6 +255,11 @@ alignment = 0
   size = 10
   bonus = 6
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5108
 keywords = ["oldstyle", "drow", "matron", "mother"]
@@ -227,13 +269,13 @@ description = "She looks like she is about to rip your head off and eat it."
 level = 51
 hitroll = 0
 ac = [-70, -70, -70, 50]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 1500
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive", "cleric"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -1000
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -246,6 +288,11 @@ special = "spec_cast_cleric"
   size = 10
   bonus = 7
 
+  [mobiles.mana_dice]
+  number = 26
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5109
 keywords = ["oldstyle", "yochlol"]
@@ -255,13 +302,13 @@ description = "The yochlol is not in a good mood."
 level = 70
 hitroll = 0
 ac = [-110, -110, -110, 50]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1500
 sex = "female"
 act_flags = ["npc", "sentinel", "aggressive"]
-affected_by = ["detect_invis"]
-alignment = 0
+affected_by = ["detect_invis", "sanctuary"]
+alignment = -1000
 special = "spec_breath_any"
 
   [mobiles.hit_dice]
@@ -274,6 +321,11 @@ special = "spec_breath_any"
   size = 7
   bonus = 11
 
+  [mobiles.mana_dice]
+  number = 17
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5110
 keywords = ["oldstyle", "drow", "guard"]
@@ -284,13 +336,13 @@ The drow guard blends so well with his environment, you barely see his form."""
 level = 23
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["infrared", "hide"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 2
@@ -302,6 +354,11 @@ alignment = 0
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 5111
 keywords = ["oldstyle", "drow", "scout"]
@@ -312,13 +369,13 @@ The drow scout blends so well with her environment, you barely see her form."""
 level = 21
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "female"
 act_flags = ["npc", "aggressive", "wimpy"]
 affected_by = ["sneak", "hide"]
-alignment = 0
+alignment = -1000
 
   [mobiles.hit_dice]
   number = 2
@@ -329,4 +386,9 @@ alignment = 0
   number = 1
   size = 10
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
 

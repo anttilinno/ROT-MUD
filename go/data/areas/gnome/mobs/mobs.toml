@@ -9,12 +9,12 @@ just want to pick him up and hug him."""
 level = 6
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 2
 sex = "male"
 act_flags = ["npc", "scavenger", "ranger"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 2
@@ -25,6 +25,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1501
@@ -37,12 +42,12 @@ She's starting to look pretty attractive to you ..."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 25
 sex = "female"
 act_flags = ["npc", "scavenger", "ranger"]
-alignment = 0
+alignment = 600
 
   [mobiles.hit_dice]
   number = 2
@@ -53,6 +58,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1502
@@ -65,12 +75,12 @@ same time an intelligent creature who could outsmart you."""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 22
 sex = "male"
 act_flags = ["npc", "scavenger"]
-alignment = 0
+alignment = 500
 
   [mobiles.hit_dice]
   number = 2
@@ -81,6 +91,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1503
@@ -93,12 +108,12 @@ to make.  His hair is white, but he looks fairly strong."""
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 70]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 50
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "mage"]
-alignment = 0
+alignment = 500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -110,6 +125,11 @@ special = "spec_cast_mage"
   number = 1
   size = 5
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1504
@@ -122,12 +142,12 @@ he makes up for it with his weapons skill."""
 level = 15
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 75
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = 400
 
   [mobiles.hit_dice]
   number = 2
@@ -138,6 +158,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 2
+
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1505
@@ -150,12 +175,12 @@ but wise and resourceful.  You better not mess with him."""
 level = 30
 hitroll = 0
 ac = [-20, -20, -20, 60]
-off_flags = ["disarm", "kick", "parry"]
+off_flags = ["disarm", "kick", "parry", "assist_vnum"]
 race = "human"
 gold = 400
 sex = "male"
 act_flags = ["npc", "sentinel", "cleric"]
-alignment = 0
+alignment = 550
 special = "spec_cast_cleric"
 
   [mobiles.hit_dice]
@@ -168,6 +193,11 @@ special = "spec_cast_cleric"
   size = 5
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 15
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1507
 keywords = ["oldstyle", "troll", "small"]
@@ -179,7 +209,7 @@ but with the eyes and fangs of a wild beast."""
 level = 16
 hitroll = 0
 ac = [30, 30, 30, 90]
-off_flags = ["berserk", "disarm", "dodge", "trip"]
+off_flags = ["berserk", "disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm", "bash"]
 vuln_flags = ["fire", "acid"]
 race = "troll"
@@ -187,7 +217,7 @@ gold = 40
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_hidden", "infrared", "regeneration"]
-alignment = 0
+alignment = -900
 
   [mobiles.hit_dice]
   number = 2
@@ -199,6 +229,11 @@ alignment = 0
   size = 7
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 4
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1508
 keywords = ["oldstyle", "mouse", "field"]
@@ -208,12 +243,12 @@ description = "The Mouse is a cute little creature."
 level = 1
 hitroll = 0
 ac = [90, 90, 90, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "pet"]
-alignment = 0
+alignment = 100
 
   [mobiles.hit_dice]
   number = 2
@@ -225,6 +260,11 @@ alignment = 0
   size = 4
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 0
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1509
 keywords = ["oldstyle", "rat"]
@@ -234,12 +274,12 @@ description = "The rat is a little evil creature that deserves death."
 level = 4
 hitroll = 0
 ac = [80, 80, 80, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger"]
-alignment = 0
+alignment = -200
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -252,6 +292,11 @@ special = "spec_poison"
   size = 5
   bonus = 0
 
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1510
 keywords = ["oldstyle", "rat", "large"]
@@ -261,12 +306,12 @@ description = "You have the urge to kill this vile creature."
 level = 7
 hitroll = 0
 ac = [60, 60, 60, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "scavenger"]
-alignment = 0
+alignment = -200
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -279,6 +324,11 @@ special = "spec_poison"
   size = 5
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1511
 keywords = ["oldstyle", "rat", "giant"]
@@ -288,12 +338,12 @@ description = "This rat has grown up to be the size of an average dog."
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 1
 sex = "male"
 act_flags = ["npc", "scavenger"]
-alignment = 0
+alignment = -200
 special = "spec_poison"
 
   [mobiles.hit_dice]
@@ -306,6 +356,11 @@ special = "spec_poison"
   size = 7
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1512
 keywords = ["oldstyle", "troll"]
@@ -317,7 +372,7 @@ he lifts his powerful arm to bludgeon you."""
 level = 28
 hitroll = 0
 ac = [-10, -10, -10, 80]
-off_flags = ["berserk", "disarm", "dodge", "trip"]
+off_flags = ["berserk", "disarm", "dodge", "trip", "assist_race"]
 res_flags = ["charm", "bash"]
 vuln_flags = ["fire", "acid"]
 race = "troll"
@@ -325,7 +380,7 @@ gold = 450
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
 affected_by = ["detect_hidden", "infrared", "regeneration"]
-alignment = 0
+alignment = -800
 
   [mobiles.hit_dice]
   number = 2
@@ -337,6 +392,11 @@ alignment = 0
   size = 12
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 7
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1513
 keywords = ["oldstyle", "bat", "black"]
@@ -347,14 +407,14 @@ The bat is a grotesque little creature with large wings and fangs."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 vuln_flags = ["light"]
 race = "bat"
 gold = 0
 sex = "none"
 act_flags = ["npc"]
 affected_by = ["flying", "dark_vision"]
-alignment = 0
+alignment = -500
 special = "spec_breath_acid"
 
   [mobiles.hit_dice]
@@ -367,6 +427,11 @@ special = "spec_breath_acid"
   size = 6
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1514
 keywords = ["oldstyle", "zombie", "gnome"]
@@ -378,12 +443,12 @@ pulled out of its resting place by some evil force."""
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 34
 sex = "none"
 act_flags = ["npc"]
-alignment = 0
+alignment = -700
 special = "spec_cast_undead"
 
   [mobiles.hit_dice]
@@ -396,6 +461,11 @@ special = "spec_cast_undead"
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1515
 keywords = ["oldstyle", "bat", "fire"]
@@ -407,14 +477,14 @@ hangs from the ceiling and bites at you."""
 level = 24
 hitroll = 0
 ac = [0, 0, 0, 80]
-off_flags = ["disarm", "dodge", "fast", "trip"]
+off_flags = ["disarm", "dodge", "fast", "trip", "assist_race"]
 vuln_flags = ["light"]
 race = "bat"
 gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
 affected_by = ["detect_invis", "flying", "dark_vision"]
-alignment = 0
+alignment = -900
 special = "spec_breath_fire"
 
   [mobiles.hit_dice]
@@ -427,6 +497,11 @@ special = "spec_breath_fire"
   size = 10
   bonus = 3
 
+  [mobiles.mana_dice]
+  number = 6
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1516
 keywords = ["oldstyle", "guard", "hobgoblin"]
@@ -438,12 +513,12 @@ as he attempts to brain you."""
 level = 11
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 37
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
-alignment = 0
+alignment = -700
 
   [mobiles.hit_dice]
   number = 2
@@ -454,6 +529,11 @@ alignment = 0
   number = 1
   size = 7
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1517
@@ -466,12 +546,12 @@ of the elite guards.  He looks pissed."""
 level = 6
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel", "aggressive"]
-alignment = 0
+alignment = -600
 
   [mobiles.hit_dice]
   number = 2
@@ -482,6 +562,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1518
@@ -494,12 +579,12 @@ stature.  He grins a toothy grin as he prepares to attack."""
 level = 13
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 30
 sex = "male"
 act_flags = ["npc", "sentinel"]
-alignment = 0
+alignment = -500
 
   [mobiles.hit_dice]
   number = 2
@@ -511,6 +596,11 @@ alignment = 0
   size = 8
   bonus = 1
 
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1519
 keywords = ["oldstyle", "king", "hobgoblin"]
@@ -520,14 +610,15 @@ description = """
 The king is a silly looking hobgoblin whose muscles bulge out of his robes,
 destroying the sophisticated effect he was trying to create."""
 level = 23
+start_pos = "sitting"
 hitroll = 0
 ac = [10, 10, 10, 60]
-off_flags = ["dodge"]
+off_flags = ["dodge", "assist_vnum"]
 race = "human"
 gold = 300
 sex = "male"
 act_flags = ["npc", "sentinel", "mage"]
-alignment = 0
+alignment = -500
 special = "spec_cast_mage"
 
   [mobiles.hit_dice]
@@ -540,6 +631,11 @@ special = "spec_cast_mage"
   size = 8
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 12
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1520
 keywords = ["oldstyle", "miner", "hobgoblin"]
@@ -549,12 +645,12 @@ description = "The miner is totally covered in dust."
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 35
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-alignment = 0
+alignment = -400
 
   [mobiles.hit_dice]
   number = 2
@@ -565,6 +661,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1521
@@ -577,12 +678,12 @@ can only see a couple feet in front of him."""
 level = 20
 hitroll = 0
 ac = [10, 10, 10, 80]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 250
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-alignment = 0
+alignment = -200
 
   [mobiles.hit_dice]
   number = 2
@@ -594,6 +695,11 @@ alignment = 0
   size = 4
   bonus = 2
 
+  [mobiles.mana_dice]
+  number = 5
+  size = 9
+  bonus = 100
+
 [[mobiles]]
 vnum = 1522
 keywords = ["oldstyle", "prisoner", "gnome"]
@@ -601,14 +707,15 @@ short_desc = "a gnome prisoner"
 long_desc = "A gnome prisoner is here resting in the straw."
 description = "The prisoner is just barely alive."
 level = 6
+start_pos = "resting"
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-alignment = 0
+alignment = 100
 
   [mobiles.hit_dice]
   number = 2
@@ -619,6 +726,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1523
@@ -627,14 +739,15 @@ short_desc = "a human prisoner"
 long_desc = "A human prisoner is here resting in the straw."
 description = "The prisoner is just barely alive."
 level = 6
+start_pos = "resting"
 hitroll = 0
 ac = [70, 70, 70, 100]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 0
 sex = "female"
 act_flags = ["npc", "sentinel", "scavenger"]
-alignment = 0
+alignment = 100
 
   [mobiles.hit_dice]
   number = 2
@@ -645,6 +758,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 0
+
+  [mobiles.mana_dice]
+  number = 1
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1524
@@ -657,12 +775,12 @@ to wake it up."""
 level = 10
 hitroll = 0
 ac = [50, 50, 50, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 10
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger", "aggressive"]
-alignment = 0
+alignment = -10
 
   [mobiles.hit_dice]
   number = 2
@@ -673,6 +791,11 @@ alignment = 0
   number = 1
   size = 6
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 2
+  size = 9
+  bonus = 100
 
 [[mobiles]]
 vnum = 1526
@@ -685,12 +808,12 @@ in a pot."""
 level = 14
 hitroll = 0
 ac = [40, 40, 40, 90]
-off_flags = ["disarm", "dodge", "trip"]
+off_flags = ["disarm", "dodge", "trip", "assist_vnum"]
 race = "human"
 gold = 130
 sex = "male"
 act_flags = ["npc", "sentinel", "scavenger"]
-alignment = 0
+alignment = -300
 
   [mobiles.hit_dice]
   number = 2
@@ -701,4 +824,9 @@ alignment = 0
   number = 1
   size = 8
   bonus = 1
+
+  [mobiles.mana_dice]
+  number = 3
+  size = 9
+  bonus = 100
 
