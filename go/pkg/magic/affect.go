@@ -87,9 +87,7 @@ func AffectTick(ch *types.Character, registry *SpellRegistry) []string {
 		// Reverse the modifier for expired affects
 		reverseModifier(ch, af)
 
-		// Recalculate AffectedBy and ShieldedBy flags
-		ch.AffectedBy = ch.Affected.GetBitVector()
-		ch.ShieldedBy = ch.Affected.GetShieldVector()
+		ch.DropAffectBits(af)
 
 		// Get wear-off message from spell, else from non-spell affects (power forms)
 		if registry != nil {
