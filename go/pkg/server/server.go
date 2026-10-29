@@ -447,6 +447,7 @@ func (s *Server) LoadWorld() error {
 
 	// Initialize the reset system for periodic resets
 	s.GameLoop.Resets = game.NewResetSystem(world)
+	s.GameLoop.Resets.OnSpawn = s.GameLoop.AddCharacter
 	s.GameLoop.Areas = world.Areas
 	s.GameLoop.World = world
 

@@ -13,6 +13,9 @@ import (
 type ResetSystem struct {
 	World  *loader.World
 	Output OutputFunc
+	// OnSpawn registers a freshly reset mob with the game loop, so it fights,
+	// wanders and ticks like the mobs spawned at boot.
+	OnSpawn func(*types.Character)
 }
 
 // NewResetSystem creates a new reset system
@@ -104,6 +107,9 @@ func (r *ResetSystem) executeMobReset(room *types.Room, reset *types.MobReset) {
 		// Place in room
 		mob.InRoom = room
 		room.People = append(room.People, mob)
+		if r.OnSpawn != nil {
+			r.OnSpawn(mob)
+		}
 
 		// Equip the mob with items
 		for _, equipReset := range reset.Equips {
