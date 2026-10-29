@@ -490,24 +490,9 @@ func (d *CommandDispatcher) castObjectSpell(ch, victim *types.Character, obj *ty
 	if d.Magic == nil || spellSlot <= 0 {
 		return
 	}
-
-	// Look up spell by slot number
-	spell := d.Magic.Registry.FindBySlot(spellSlot)
-	if spell == nil {
-		return
-	}
-
-	// Cast directly without mana cost
-	target := interface{}(victim)
-	if victim == nil {
-		target = ch
-	}
-
-	if spell.Fizzles(target) {
-		d.send(ch, "Nothing happens.\r\n")
-		return
-	}
-	spell.Func(ch, level, target)
+	// Cast without mana cost; ObjectCast picks the target by spell type, so
+	// object spells (enchant, detect poison) get the item.
+	d.Magic.ObjectCast(spellSlot, level, ch, victim, obj)
 }
 
 // doRecite implements the recite command for scrolls

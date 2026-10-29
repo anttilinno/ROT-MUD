@@ -30,6 +30,8 @@ func (ch *Character) Modify(af *Affect, sign int) {
 		ch.DamRoll += mod
 	case ApplySaves:
 		ch.Saves += mod
+	case ApplySex:
+		ch.Sex += Sex(mod)
 	}
 }
 

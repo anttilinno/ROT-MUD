@@ -783,3 +783,71 @@ func TestSpellSlotsUnique(t *testing.T) {
 		seen[sp.Slot] = sp.Name
 	}
 }
+
+// Enchanting a weapon adds hitroll and damroll; enchanting it again raises
+// the same two affects instead of adding more.
+func TestEnchantWeapon(t *testing.T) {
+	m := NewMagicSystem()
+	enchant := m.Registry.FindByName("enchant weapon").Func
+	mage := types.NewCharacter("Mage")
+	sword := types.NewObject(1, "sword", types.ItemTypeWeapon)
+
+	total := 0
+	for i := 0; i < 50 && total < 2; i++ {
+		enchant(mage, 60, sword)
+		hit, dam := 0, 0
+		for _, af := range sword.Affects.All() {
+			switch af.Location {
+			case types.ApplyHitroll:
+				hit += af.Modifier
+			case types.ApplyDamroll:
+				dam += af.Modifier
+			}
+		}
+		if hit != dam || sword.Affects.Len() > 2 {
+			t.Fatalf("hit %d dam %d with %d affects, want equal bonuses on two affects", hit, dam, sword.Affects.Len())
+		}
+		total = hit
+	}
+	if total < 2 || !sword.ExtraFlags.Has(types.ItemMagic) {
+		t.Errorf("after two enchants hitroll = %d, magic = %v", total, sword.ExtraFlags.Has(types.ItemMagic))
+	}
+}
+
+// Cancellation strips a player's spells but won't touch a mob.
+func TestCancellation(t *testing.T) {
+	m := NewMagicSystem()
+	cancel := m.Registry.FindByName("cancellation").Func
+	caster, friend := types.NewCharacter("Caster"), types.NewCharacter("Friend")
+
+	for i := 0; i < 20; i++ { // each try fails 5% of the time
+		AddAffect(friend, NewAffect("armor", 1, 10, types.ApplyAC, -20))
+		if cancel(caster, 60, friend) {
+			break
+		}
+	}
+	if IsAffectedBy(friend, "armor") || friend.Armor[types.ACPierce] != 0 {
+		t.Error("cancellation left armor on the target")
+	}
+
+	mob := types.NewNPC(1, "mob", 1)
+	AddAffect(mob, NewAffect("armor", 1, 10, types.ApplyAC, -20))
+	if cancel(caster, 60, mob) || !IsAffectedBy(mob, "armor") {
+		t.Error("a player cancelled a mob's spells")
+	}
+}
+
+// Change sex shifts sex by its affect and restores it when the affect ends.
+func TestChangeSexAffect(t *testing.T) {
+	ch := types.NewCharacter("Pat")
+	ch.Sex = types.SexMale
+	af := NewAffect("change sex", 10, 20, types.ApplySex, 1)
+	AddAffect(ch, af)
+	if ch.Sex != types.SexFemale {
+		t.Errorf("sex = %v, want female", ch.Sex)
+	}
+	RemoveAffect(ch, af)
+	if ch.Sex != types.SexMale {
+		t.Errorf("sex = %v after wear-off, want male", ch.Sex)
+	}
+}

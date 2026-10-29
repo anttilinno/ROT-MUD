@@ -216,7 +216,7 @@ func (p *PlayerPersistence) characterToSave(ch *types.Character) *PlayerSave {
 		Level:     ch.Level,
 		Class:     ch.Class,
 		Race:      ch.Race,
-		Sex:       int(ch.Sex),
+		Sex:       int(ch.Sex) - ch.ModifierSum(types.ApplySex),
 		Alignment: ch.Alignment,
 		Hit:       min(ch.Hit, maxHit),
 		MaxHit:    maxHit,

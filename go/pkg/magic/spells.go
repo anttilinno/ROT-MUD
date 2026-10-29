@@ -89,66 +89,80 @@ const (
 // skill_table min_position (spells not listed need POS_STANDING). The last
 // four are this port's own combat spells.
 var spellMinPosition = map[string]types.Position{
-	"acid blast":      types.PosFighting,
-	"blindness":       types.PosFighting,
-	"burning hands":   types.PosFighting,
-	"call lightning":  types.PosFighting,
-	"calm":            types.PosFighting,
-	"cause critical":  types.PosFighting,
-	"cause light":     types.PosFighting,
-	"cause serious":   types.PosFighting,
-	"chain lightning": types.PosFighting,
-	"chill touch":     types.PosFighting,
-	"colour spray":    types.PosFighting,
-	"cure blindness":  types.PosFighting,
-	"cure critical":   types.PosFighting,
-	"cure light":      types.PosFighting,
-	"cure serious":    types.PosFighting,
-	"curse":           types.PosFighting,
-	"demonfire":       types.PosFighting,
-	"dispel evil":     types.PosFighting,
-	"dispel good":     types.PosFighting,
-	"dispel magic":    types.PosFighting,
-	"earthquake":      types.PosFighting,
-	"empower":         types.PosResting,
-	"energy drain":    types.PosFighting,
-	"faerie fire":     types.PosFighting,
-	"fireball":        types.PosFighting,
-	"flamestrike":     types.PosFighting,
-	"gate":            types.PosFighting,
-	"general purpose": types.PosFighting,
-	"harm":            types.PosFighting,
-	"haste":           types.PosFighting,
-	"heal":            types.PosFighting,
-	"heat metal":      types.PosFighting,
-	"high explosive":  types.PosFighting,
-	"holy word":       types.PosFighting,
-	"lightning bolt":  types.PosFighting,
-	"magic missile":   types.PosFighting,
-	"poison":          types.PosFighting,
-	"ray of truth":    types.PosFighting,
-	"shocking grasp":  types.PosFighting,
-	"slow":            types.PosFighting,
-	"teleport":        types.PosFighting,
-	"word of recall":  types.PosResting,
-	"meteor swarm":    types.PosFighting,
-	"implode":         types.PosFighting,
-	"disintegrate":    types.PosFighting,
-	"unholy word":     types.PosFighting,
+	"acid blast":       types.PosFighting,
+	"acid breath":      types.PosFighting,
+	"blindness":        types.PosFighting,
+	"burning hands":    types.PosFighting,
+	"call lightning":   types.PosFighting,
+	"calm":             types.PosFighting,
+	"cancellation":     types.PosFighting,
+	"cause critical":   types.PosFighting,
+	"cause light":      types.PosFighting,
+	"cause serious":    types.PosFighting,
+	"chain lightning":  types.PosFighting,
+	"change sex":       types.PosFighting,
+	"chill touch":      types.PosFighting,
+	"colour spray":     types.PosFighting,
+	"cure blindness":   types.PosFighting,
+	"cure critical":    types.PosFighting,
+	"cure light":       types.PosFighting,
+	"cure serious":     types.PosFighting,
+	"curse":            types.PosFighting,
+	"demonfire":        types.PosFighting,
+	"dispel evil":      types.PosFighting,
+	"dispel good":      types.PosFighting,
+	"dispel magic":     types.PosFighting,
+	"earthquake":       types.PosFighting,
+	"empower":          types.PosResting,
+	"energy drain":     types.PosFighting,
+	"faerie fire":      types.PosFighting,
+	"fire breath":      types.PosFighting,
+	"fireball":         types.PosFighting,
+	"flamestrike":      types.PosFighting,
+	"frost breath":     types.PosFighting,
+	"gas breath":       types.PosFighting,
+	"gate":             types.PosFighting,
+	"general purpose":  types.PosFighting,
+	"harm":             types.PosFighting,
+	"haste":            types.PosFighting,
+	"heal":             types.PosFighting,
+	"heat metal":       types.PosFighting,
+	"high explosive":   types.PosFighting,
+	"holy word":        types.PosFighting,
+	"know alignment":   types.PosFighting,
+	"lightning bolt":   types.PosFighting,
+	"lightning breath": types.PosFighting,
+	"magic missile":    types.PosFighting,
+	"poison":           types.PosFighting,
+	"ray of truth":     types.PosFighting,
+	"shocking grasp":   types.PosFighting,
+	"slow":             types.PosFighting,
+	"teleport":         types.PosFighting,
+	"weaken":           types.PosFighting,
+	"word of recall":   types.PosResting,
+	"meteor swarm":     types.PosFighting,
+	"implode":          types.PosFighting,
+	"disintegrate":     types.PosFighting,
+	"unholy word":      types.PosFighting,
 }
 
 // addLaterClassSpells gives ranger, druid and ghoul their spells. The
 // registry only had levels for the four base classes, so those classes could
 // cast nothing. Their levels come from ROT's table (AllSpells), which runs to
 // level 101; halving puts them on the registry's ROM scale (ROT acid blast 55
-// vs 30 here, fireball 45 vs 22). 102+ means cannot learn.
+// vs 30 here, fireball 45 vs 22). 102+ means cannot learn. Spells registered
+// without levels get the four base classes the same way.
 func addLaterClassSpells(r *SpellRegistry) {
 	for _, d := range AllSpells {
 		sp := r.FindByName(d.Name)
 		if sp == nil {
 			continue
 		}
-		for _, class := range []int{types.ClassRanger, types.ClassDruid, types.ClassGhoul} {
+		classes := []int{types.ClassRanger, types.ClassDruid, types.ClassGhoul}
+		if len(sp.Levels) == 0 { // registered without ROM levels
+			classes = append(classes, types.ClassMage, types.ClassCleric, types.ClassThief, types.ClassWarrior)
+		}
+		for _, class := range classes {
 			if lv := d.Levels[class]; lv < 102 {
 				sp.Levels[types.ClassName(class)] = (lv + 1) / 2
 			}
@@ -347,7 +361,7 @@ func DefaultSpells() *SpellRegistry {
 	r.Register(NewSpell("dispel magic", SlotDispelMagic, TargetCharOffense, 15, spellDispelMagic).
 		SetLevels(map[string]int{"mage": 16, "cleric": 24, "thief": 53, "warrior": 53}))
 
-	r.Register(NewSpell("word of recall", SlotWordOfRecall, TargetCharSelf, 5, spellWordOfRecall).
+	r.Register(NewSpell("word of recall", SlotWordOfRecall, TargetCharSelf, 5, spellNeedsSystem).
 		SetLevels(map[string]int{"mage": 32, "cleric": 28, "thief": 53, "warrior": 53}))
 
 	r.Register(NewSpell("calm", SlotCalmness, TargetCharOffense, 15, spellCalm).
@@ -569,6 +583,52 @@ func DefaultSpells() *SpellRegistry {
 
 	r.Register(NewSpell("voodoo", SlotVoodoo, TargetIgnore, 50, spellVoodoo).
 		SetLevels(map[string]int{"mage": 102, "cleric": 102, "thief": 102, "warrior": 102, "necromancer": 25, "warlock": 20}))
+
+	// === Spells used by items and mobs ===
+	// Registered without levels: addLaterClassSpells takes them all from
+	// ROT's table. Slots 609+ stand in for ROT slots taken above.
+
+	r.Register(NewSpell("weaken", 68, TargetCharOffense, 20, spellWeaken).
+		SetWearOff("You feel stronger."))
+
+	r.Register(NewSpell("change sex", 82, TargetCharDefense, 15, spellChangeSex).
+		SetWearOff("Your body feels familiar again."))
+
+	r.Register(NewSpell("faerie fog", 73, TargetIgnore, 12, spellNeedsSystem))
+
+	r.Register(NewSpell("mass invis", 69, TargetIgnore, 20, spellNeedsSystem).
+		SetWearOff("You are no longer invisible."))
+
+	r.Register(NewSpell("cancellation", 609, TargetCharDefense, 20, spellNeedsSystem))
+
+	r.Register(NewSpell("enchant weapon", 610, TargetObjInv, 100, spellNeedsSystem))
+
+	r.Register(NewSpell("enchant armor", 611, TargetObjInv, 100, spellNeedsSystem))
+
+	r.Register(NewSpell("detect poison", 612, TargetObjInv, 5, spellNeedsSystem))
+
+	r.Register(NewSpell("know alignment", 613, TargetCharDefense, 9, spellNeedsSystem))
+
+	// Breaths stay NPC and item only: ROT lets mages learn them, but here they
+	// would outclass every mage damage spell.
+	r.Register(NewSpell("acid breath", 200, TargetCharOffense, 100, spellAcidBreath).
+		SetLevels(map[string]int{"mage": 102, "cleric": 102, "thief": 102, "warrior": 102}).
+		SetDamageNoun("blast of acid"))
+
+	r.Register(NewSpell("fire breath", 201, TargetCharOffense, 200, spellFireBreath).
+		SetLevels(map[string]int{"mage": 102, "cleric": 102, "thief": 102, "warrior": 102}).
+		SetDamageNoun("blast of flame"))
+
+	r.Register(NewSpell("frost breath", 202, TargetCharOffense, 125, spellFrostBreath).
+		SetLevels(map[string]int{"mage": 102, "cleric": 102, "thief": 102, "warrior": 102}).
+		SetDamageNoun("blast of frost"))
+
+	r.Register(NewSpell("gas breath", 203, TargetIgnore, 175, spellGasBreath).
+		SetLevels(map[string]int{"mage": 102, "cleric": 102, "thief": 102, "warrior": 102}))
+
+	r.Register(NewSpell("lightning breath", 204, TargetCharOffense, 150, spellLightningBreath).
+		SetLevels(map[string]int{"mage": 102, "cleric": 102, "thief": 102, "warrior": 102}).
+		SetDamageNoun("blast of lightning"))
 
 	for _, sp := range r.All() {
 		if pos, ok := spellMinPosition[sp.Name]; ok {
@@ -1244,9 +1304,10 @@ func spellDispelMagic(caster *types.Character, level int, target interface{}) bo
 	return dispelled
 }
 
-// spellWordOfRecall is replaced by MagicSystem.spellWordOfRecall in
-// NewMagicSystem; this stub only keeps DefaultSpells self-contained.
-func spellWordOfRecall(caster *types.Character, level int, target interface{}) bool {
+// spellNeedsSystem stands in for spells that need the MagicSystem's hooks
+// (output, moving characters); NewMagicSystem replaces it. It only keeps
+// DefaultSpells self-contained.
+func spellNeedsSystem(caster *types.Character, level int, target interface{}) bool {
 	return false
 }
 
@@ -1839,61 +1900,6 @@ func spellChainLightning(caster *types.Character, level int, target interface{})
 	return true
 }
 
-// Mass Invis - Mage area buff spell
-// Makes all group members in the room invisible
-func spellMassInvis(caster *types.Character, level int, target interface{}) bool {
-	if caster.InRoom == nil {
-		return false
-	}
-
-	affected := false
-	for _, member := range caster.InRoom.People {
-		// Only affect group members
-		if member == caster ||
-			member.Leader == caster ||
-			(caster.Leader != nil && member.Leader == caster.Leader) ||
-			member.Leader == caster.Leader {
-
-			// Skip if already invisible or fighting
-			if member.IsAffected(types.AffInvisible) {
-				continue
-			}
-			if member.InCombat() {
-				continue
-			}
-
-			af := NewAffectWithBit("mass invis", level, level/4+12, types.AffInvisible)
-			AddAffect(member, af)
-			affected = true
-		}
-	}
-
-	// Also affect caster
-	if !caster.IsAffected(types.AffInvisible) && !caster.InCombat() {
-		af := NewAffectWithBit("mass invis", level, level/4+12, types.AffInvisible)
-		AddAffect(caster, af)
-		affected = true
-	}
-
-	return affected
-}
-
-// Know Alignment - Cleric detection spell
-// Reveals the target's alignment (good/neutral/evil)
-// The actual message output is handled by the game system's spell output
-func spellKnowAlignment(caster *types.Character, level int, target interface{}) bool {
-	victim, ok := target.(*types.Character)
-	if !ok || victim == nil {
-		return false
-	}
-
-	// Spell succeeds - alignment info is stored in the victim
-	// The game system reads victim.Alignment and generates appropriate message:
-	// < -750: satanic, -750 to -350: evil, -350 to 350: neutral,
-	// 350 to 750: good, > 750: angelic
-	return true
-}
-
 // Fire Shield - Mage defensive spell
 // Surrounds the target with a fiery shield that damages attackers
 func spellFireShield(caster *types.Character, level int, target interface{}) bool {
@@ -1963,14 +1969,16 @@ func spellShockShield(caster *types.Character, level int, target interface{}) bo
 	return true
 }
 
-// Weaken - Mage debuff spell
+// Weaken - Mage debuff spell (ROT spell_weaken)
 func spellWeaken(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
-	if !ok || victim == nil {
+	if !ok || victim == nil || IsAffectedBy(victim, "weaken") ||
+		combat.SavesSpell(level, victim, types.DamOther) {
 		return false
 	}
 
-	af := NewAffect("weaken", level, level/4+12, types.ApplyStr, -(level/5 + 1))
+	af := NewAffect("weaken", level, level/2, types.ApplyStr, -(level / 5))
+	af.BitVector = types.AffWeaken
 	AddAffect(victim, af)
 	return true
 }
@@ -2071,138 +2079,20 @@ func spellContinualLight(caster *types.Character, level int, target interface{})
 	return true
 }
 
-// Change Sex - Mage utility spell
-// Randomly changes the target's sex
+// Change Sex - Mage utility spell (ROT spell_change_sex)
+// Gives the target a random different sex for 2*level hours.
 func spellChangeSex(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
-	if !ok || victim == nil {
+	if !ok || victim == nil || IsAffectedBy(victim, "change sex") ||
+		combat.SavesSpell(level, victim, types.DamOther) {
 		return false
 	}
 
-	// Already affected
-	if IsAffectedBy(victim, "change sex") {
-		return false
+	mod := 0
+	for mod == 0 {
+		mod = combat.NumberRange(0, 2) - int(victim.Sex)
 	}
-
-	// Save negates for hostile targets
-	if victim != caster && combat.NumberPercent() < 50+victim.Level-level {
-		return false
-	}
-
-	// Determine new sex (randomly different from current)
-	var newSex types.Sex
-	switch victim.Sex {
-	case types.SexMale:
-		newSex = types.SexFemale
-	case types.SexFemale:
-		newSex = types.SexMale
-	default:
-		// Neutral becomes random
-		if combat.NumberPercent() < 50 {
-			newSex = types.SexMale
-		} else {
-			newSex = types.SexFemale
-		}
-	}
-
-	// Store original sex in modifier for restoration
-	originalSex := int(victim.Sex)
-	victim.Sex = newSex
-
-	af := NewAffect("change sex", level, 10*level, types.ApplySex, originalSex)
-	AddAffect(victim, af)
-	return true
-}
-
-// Cancellation - Mage utility spell
-// Removes all magical effects from the target (defensive version of dispel magic)
-// Only works on willing targets (self or group members)
-func spellCancellation(caster *types.Character, level int, target interface{}) bool {
-	victim, ok := target.(*types.Character)
-	if !ok || victim == nil {
-		return false
-	}
-
-	// Can only cancel self or group members (not enemies)
-	if victim != caster {
-		// Check if they're in the same group
-		if caster.Leader != victim && victim.Leader != caster &&
-			(caster.Leader == nil || caster.Leader != victim.Leader) {
-			return false
-		}
-	}
-
-	cancelled := false
-
-	// Remove beneficial and harmful magical effects
-	spellsToRemove := []string{
-		"armor", "bless", "blindness", "calm", "change sex", "charm person",
-		"chill touch", "curse", "detect evil", "detect good", "detect hidden",
-		"detect invis", "detect magic", "faerie fire", "fly", "frenzy",
-		"giant strength", "haste", "infravision", "invisibility", "mass invis",
-		"pass door", "plague", "poison", "protection evil", "protection good",
-		"sanctuary", "shield", "sleep", "slow", "stone skin", "weaken",
-		"farsight",
-	}
-
-	for _, spellName := range spellsToRemove {
-		if IsAffectedBy(victim, spellName) {
-			RemoveAffectByType(victim, spellName)
-			cancelled = true
-		}
-	}
-
-	return cancelled
-}
-
-// Faerie Fog - Mage utility spell
-// Reveals hidden and invisible characters in the room
-func spellFaerieFog(caster *types.Character, level int, target interface{}) bool {
-	if caster.InRoom == nil {
-		return false
-	}
-
-	revealed := false
-	for _, victim := range caster.InRoom.People {
-		if victim == caster {
-			continue
-		}
-
-		// Remove invisibility
-		if victim.IsAffected(types.AffInvisible) {
-			RemoveAffectByType(victim, "invisibility")
-			RemoveAffectByType(victim, "mass invis")
-			revealed = true
-		}
-
-		// Remove hide
-		if victim.IsAffected(types.AffHide) {
-			RemoveAffectByType(victim, "hide")
-			victim.AffectedBy.Remove(types.AffHide)
-			revealed = true
-		}
-
-		// Remove sneak
-		if victim.IsAffected(types.AffSneak) {
-			RemoveAffectByType(victim, "sneak")
-			victim.AffectedBy.Remove(types.AffSneak)
-			revealed = true
-		}
-	}
-
-	return revealed || len(caster.InRoom.People) > 1
-}
-
-// Detect Poison - Cleric detection spell
-func spellDetectPoison(caster *types.Character, level int, target interface{}) bool {
-	obj, ok := target.(*types.Object)
-	if ok && obj != nil {
-		if obj.ItemType == types.ItemTypeFood || obj.ItemType == types.ItemTypeDrinkCon {
-			if obj.Values[3] != 0 { // Poisoned
-				// Would show poison status
-			}
-		}
-	}
+	AddAffect(victim, NewAffect("change sex", level, 2*level, types.ApplySex, mod))
 	return true
 }
 
@@ -2590,219 +2480,6 @@ func spellRecharge(caster *types.Character, level int, target interface{}) bool 
 	return false
 }
 
-// Enchant Armor - Mage utility spell
-// Adds AC bonus to armor with chance of failure/destruction
-func spellEnchantArmor(caster *types.Character, level int, target interface{}) bool {
-	obj, ok := target.(*types.Object)
-	if !ok || obj == nil {
-		return false
-	}
-
-	if obj.ItemType != types.ItemTypeArmor {
-		return false
-	}
-
-	// Can't enchant worn items
-	if obj.IsWorn() {
-		return false
-	}
-
-	// Calculate failure chance based on existing enchantments
-	fail := 25 // Base 25% failure chance
-
-	// Check existing affects on armor
-	for _, aff := range obj.Affects.All() {
-		if aff.Location == types.ApplyAC {
-			// Harder to enchant already enchanted items
-			fail += 5 * (aff.Modifier * aff.Modifier)
-		} else {
-			fail += 20
-		}
-	}
-
-	// Level helps
-	fail -= level
-
-	// Blessed/glowing items easier to enchant
-	if obj.ExtraFlags.Has(types.ItemBless) {
-		fail -= 15
-	}
-	if obj.ExtraFlags.Has(types.ItemGlow) {
-		fail -= 5
-	}
-
-	// Clamp failure chance
-	if fail < 5 {
-		fail = 5
-	}
-	if fail > 85 {
-		fail = 85
-	}
-
-	result := combat.NumberRange(1, 100)
-
-	// Catastrophic failure - item destroyed
-	if result < fail/5 {
-		// Object is destroyed (set a flag for caller to handle)
-		obj.Timer = -999 // Mark for destruction
-		return false
-	}
-
-	// Moderate failure - item disenchanted
-	if result < fail/3 {
-		obj.Affects.Clear()
-		obj.ExtraFlags = 0
-		return false
-	}
-
-	// Regular failure
-	if result <= fail {
-		return false
-	}
-
-	// Success! Add or improve AC bonus
-	added := -1 // AC bonus (negative is better)
-	if result > 90-level/5 {
-		// Exceptional success
-		added = -2
-		obj.ExtraFlags.Set(types.ItemGlow)
-	}
-
-	obj.ExtraFlags.Set(types.ItemMagic)
-
-	// Find existing AC affect or add new one
-	acFound := false
-	for _, aff := range obj.Affects.All() {
-		if aff.Location == types.ApplyAC {
-			aff.Modifier += added
-			aff.Level = level
-			acFound = true
-			break
-		}
-	}
-
-	if !acFound {
-		// Add new AC affect
-		aff := types.NewAffect("enchant armor", level, -1, types.ApplyAC, added, 0)
-		obj.Affects.Add(aff)
-	}
-
-	// Increase level slightly
-	if obj.Level < 91 {
-		obj.Level++
-	}
-
-	return true
-}
-
-// Enchant Weapon - Mage utility spell
-// Adds hitroll/damroll bonus to weapons with chance of failure/destruction
-func spellEnchantWeapon(caster *types.Character, level int, target interface{}) bool {
-	obj, ok := target.(*types.Object)
-	if !ok || obj == nil {
-		return false
-	}
-
-	if obj.ItemType != types.ItemTypeWeapon {
-		return false
-	}
-
-	// Can't enchant wielded items
-	if obj.IsWorn() {
-		return false
-	}
-
-	// Calculate failure chance
-	fail := 25
-
-	// Check existing affects
-	for _, aff := range obj.Affects.All() {
-		if aff.Location == types.ApplyHitroll || aff.Location == types.ApplyDamroll {
-			fail += 5 * (aff.Modifier * aff.Modifier)
-		} else {
-			fail += 20
-		}
-	}
-
-	fail -= level
-
-	if obj.ExtraFlags.Has(types.ItemBless) {
-		fail -= 15
-	}
-	if obj.ExtraFlags.Has(types.ItemGlow) {
-		fail -= 5
-	}
-
-	if fail < 5 {
-		fail = 5
-	}
-	if fail > 95 {
-		fail = 95
-	}
-
-	result := combat.NumberRange(1, 100)
-
-	// Catastrophic failure
-	if result < fail/5 {
-		obj.Timer = -999 // Mark for destruction
-		return false
-	}
-
-	// Moderate failure
-	if result < fail/3 {
-		obj.Affects.Clear()
-		obj.ExtraFlags = 0
-		return false
-	}
-
-	// Regular failure
-	if result <= fail {
-		return false
-	}
-
-	// Success!
-	added := 1 // Hitroll/damroll bonus
-	if result > 90-level/5 {
-		added = 2
-		obj.ExtraFlags.Set(types.ItemGlow)
-	}
-
-	obj.ExtraFlags.Set(types.ItemMagic)
-
-	// Find and improve existing hitroll/damroll or add new
-	hitFound := false
-	damFound := false
-
-	for _, aff := range obj.Affects.All() {
-		if aff.Location == types.ApplyHitroll {
-			aff.Modifier += added
-			aff.Level = level
-			hitFound = true
-		}
-		if aff.Location == types.ApplyDamroll {
-			aff.Modifier += added
-			aff.Level = level
-			damFound = true
-		}
-	}
-
-	if !hitFound {
-		aff := types.NewAffect("enchant weapon", level, -1, types.ApplyHitroll, added, 0)
-		obj.Affects.Add(aff)
-	}
-	if !damFound {
-		aff := types.NewAffect("enchant weapon", level, -1, types.ApplyDamroll, added, 0)
-		obj.Affects.Add(aff)
-	}
-
-	// Increase level slightly
-	if obj.Level < 91 {
-		obj.Level++
-	}
-
-	return true
-}
-
 // Floating Disc - Mage utility spell
 // Creates a floating container that follows the caster
 // The disc has capacity based on caster level
@@ -2827,14 +2504,43 @@ func spellCreateRose(caster *types.Character, level int, target interface{}) boo
 	return true
 }
 
-// Breath Weapons (for special creatures)
+// Breath Weapons (ROT spell_*_breath). Damage is a share of the breather's
+// hit points plus dice(level, size), whichever dominates. ROT's item-burning
+// side effects (fire_effect etc.) are not ported.
+
+// breathDam combines a breath's hit-point and dice damage as ROT does.
+func breathDam(hpDam, diceDam int) int {
+	return max(hpDam+diceDam/10, diceDam+hpDam/10)
+}
+
+// breathRoom deals a cone breath: full damage to the victim, half to everyone
+// else in the room (each halved again on a save). NPCs only hit NPCs they are
+// fighting.
+func breathRoom(caster, victim *types.Character, level, dam int, damType types.DamageType) {
+	if victim.InRoom == nil {
+		return
+	}
+	for _, vch := range slices.Clone(victim.InRoom.People) {
+		if vch == caster || combat.IsSafe(caster, vch) ||
+			(vch.IsNPC() && caster.IsNPC() && (caster.Fighting != vch || vch.Fighting != caster)) {
+			continue
+		}
+		if vch == victim {
+			spellDamageSave(caster, vch, level, dam, damType)
+		} else {
+			spellDamageSave(caster, vch, level-2, dam/2, damType)
+		}
+	}
+}
+
 func spellAcidBreath(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
 	if !ok || victim == nil {
 		return false
 	}
 
-	dam := combat.Dice(10, 16) + level
+	hpch := max(12, caster.Hit)
+	dam := breathDam(combat.NumberRange(hpch/11+1, hpch/6), combat.Dice(level, 16))
 	spellDamageSave(caster, victim, level, dam, types.DamAcid)
 	return true
 }
@@ -2845,8 +2551,9 @@ func spellFireBreath(caster *types.Character, level int, target interface{}) boo
 		return false
 	}
 
-	dam := combat.Dice(11, 20) + level
-	spellDamageSave(caster, victim, level, dam, types.DamFire)
+	hpch := max(10, caster.Hit)
+	dam := breathDam(combat.NumberRange(hpch/9+1, hpch/5), combat.Dice(level, 20))
+	breathRoom(caster, victim, level, dam, types.DamFire)
 	return true
 }
 
@@ -2856,19 +2563,27 @@ func spellFrostBreath(caster *types.Character, level int, target interface{}) bo
 		return false
 	}
 
-	dam := combat.Dice(8, 12) + level
-	spellDamageSave(caster, victim, level, dam, types.DamCold)
+	hpch := max(12, caster.Hit)
+	dam := breathDam(combat.NumberRange(hpch/11+1, hpch/6), combat.Dice(level, 16))
+	breathRoom(caster, victim, level, dam, types.DamCold)
 	return true
 }
 
+// spellGasBreath hits everyone in the caster's room. ROT's NPC check is the
+// reverse of the cones': an NPC's gas spares the NPC it is fighting.
 func spellGasBreath(caster *types.Character, level int, target interface{}) bool {
-	// Area effect gas attack
-	for _, victim := range slices.Clone(caster.InRoom.People) {
-		if victim == caster {
+	if caster.InRoom == nil {
+		return false
+	}
+
+	hpch := max(16, caster.Hit)
+	dam := breathDam(combat.NumberRange(hpch/15+1, 8), combat.Dice(level, 12))
+	for _, vch := range slices.Clone(caster.InRoom.People) {
+		if vch == caster || combat.IsSafe(caster, vch) ||
+			(caster.IsNPC() && vch.IsNPC() && (caster.Fighting == vch || vch.Fighting == caster)) {
 			continue
 		}
-		dam := combat.Dice(6, 10) + level/2
-		spellDamageSave(caster, victim, level, dam, types.DamPoison)
+		spellDamageSave(caster, vch, level, dam, types.DamPoison)
 	}
 	return true
 }
@@ -2879,7 +2594,8 @@ func spellLightningBreath(caster *types.Character, level int, target interface{}
 		return false
 	}
 
-	dam := combat.Dice(10, 14) + level
+	hpch := max(10, caster.Hit)
+	dam := breathDam(combat.NumberRange(hpch/9+1, hpch/5), combat.Dice(level, 20))
 	spellDamageSave(caster, victim, level, dam, types.DamLightning)
 	return true
 }
