@@ -3,6 +3,7 @@ package game
 import (
 	"strings"
 
+	"rotmud/pkg/combat"
 	"rotmud/pkg/loader"
 	"rotmud/pkg/magic"
 	"rotmud/pkg/types"
@@ -44,6 +45,8 @@ func (r *ResetSystem) resetRoom(room *types.Room) {
 		}
 	}
 
+	shuffleExits(room)
+
 	// Execute mob resets
 	for _, reset := range room.MobResets {
 		r.executeMobReset(room, &reset)
@@ -52,6 +55,21 @@ func (r *ResetSystem) resetRoom(room *types.Room) {
 	// Execute object resets
 	for _, reset := range room.ObjResets {
 		r.executeObjReset(room, &reset)
+	}
+}
+
+// shuffleExits swaps the room's first RandomExits exits around, for mazes
+// (ROM reset_room 'R'). Only this side moves; the rooms behind stay as built.
+func shuffleExits(room *types.Room) {
+	n := min(room.RandomExits, len(room.Exits))
+	for d0 := 0; d0 < n-1; d0++ {
+		d1 := combat.NumberRange(d0, n-1)
+		room.Exits[d0], room.Exits[d1] = room.Exits[d1], room.Exits[d0]
+	}
+	for d, exit := range room.Exits[:n] {
+		if exit != nil {
+			exit.Direction = types.Direction(d)
+		}
 	}
 }
 

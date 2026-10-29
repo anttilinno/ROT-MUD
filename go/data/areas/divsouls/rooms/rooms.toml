@@ -2536,6 +2536,7 @@ A rip in the fabric of the void shimmers overhead."""
 [[rooms]]
 vnum = 11686
 name = "Something Resembling an Intersection.."
+random_exits = 4
 sector = "city"
 description = """
 The brick road loops under and over itself, shooting off in various
@@ -2628,6 +2629,7 @@ description = "The red brick road twists east and south here."
 [[rooms]]
 vnum = 11690
 name = "Another Intersection.."
+random_exits = 4
 sector = "city"
 description = """
 Oh god.. not another intersection.  The road loops around itself so many

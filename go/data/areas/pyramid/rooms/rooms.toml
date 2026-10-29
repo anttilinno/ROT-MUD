@@ -1607,6 +1607,7 @@ The sand is very white, and very sandy.  There sure is a lot of it."""
 [[rooms]]
 vnum = 8754
 name = "A Swirling Sandstorm"
+random_exits = 4
 sector = "desert"
 description = """
 You are caught in the midst of a massive sandstorm.  Howling winds
@@ -1642,6 +1643,7 @@ interesting sand, only white, dry, and blowing all over the place."""
 [[rooms]]
 vnum = 8755
 name = "A Swirling Sandstorm"
+random_exits = 4
 sector = "desert"
 description = """
 You are caught in the midst of a massive sandstorm.  Howling winds
@@ -1677,6 +1679,7 @@ interesting sand, only white, dry, and blowing all over the place."""
 [[rooms]]
 vnum = 8756
 name = "A Swirling Sandstorm"
+random_exits = 4
 sector = "desert"
 description = """
 You are caught in the midst of a massive sandstorm.  Howling winds
@@ -1712,6 +1715,7 @@ interesting sand, only white, dry, and blowing all over the place."""
 [[rooms]]
 vnum = 8757
 name = "A Swirling Sandstorm"
+random_exits = 4
 sector = "desert"
 description = """
 You are caught in the midst of a massive sandstorm.  Howling winds

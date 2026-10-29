@@ -105,8 +105,9 @@ type Room struct {
 	Light             int                 // Light level
 
 	// Reset data (loaded from TOML)
-	MobResets []MobReset // Mobs that spawn here
-	ObjResets []ObjReset // Objects that spawn here
+	MobResets   []MobReset // Mobs that spawn here
+	ObjResets   []ObjReset // Objects that spawn here
+	RandomExits int        // Shuffle the first N exits at each reset (ROM 'R')
 
 	// Runtime data (not persisted)
 	Area    *Area        // Area this room belongs to

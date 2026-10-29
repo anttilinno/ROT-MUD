@@ -73,6 +73,7 @@ type RoomData struct {
 	ExtraDescs  []ExtraDescData `toml:"extra_descs"`
 	MobResets   []MobResetData  `toml:"mob_resets"`
 	ObjResets   []ObjResetData  `toml:"obj_resets"`
+	RandomExits int             `toml:"random_exits"` // shuffle the first N exits at each reset (ROM 'R')
 }
 
 // MobResetData defines a mob that spawns in a room

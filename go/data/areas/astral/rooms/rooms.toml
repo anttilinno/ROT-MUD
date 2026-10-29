@@ -257,6 +257,7 @@ of this plane of existence."""
 [[rooms]]
 vnum = 7708
 name = "Exploring the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -287,6 +288,7 @@ bearings and sense of direction."""
 [[rooms]]
 vnum = 7709
 name = "Exploring the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -317,6 +319,7 @@ bearings and sense of direction."""
 [[rooms]]
 vnum = 7710
 name = "Exploring the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -347,6 +350,7 @@ bearings and sense of direction."""
 [[rooms]]
 vnum = 7711
 name = "Exploring the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -377,6 +381,7 @@ bearings and sense of direction."""
 [[rooms]]
 vnum = 7712
 name = "Exploring the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -407,6 +412,7 @@ bearings and sense of direction."""
 [[rooms]]
 vnum = 7713
 name = "Roaming the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -449,6 +455,7 @@ of this environment is somewhat disorienting.
 [[rooms]]
 vnum = 7714
 name = "Roaming the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -491,6 +498,7 @@ of this environment is somewhat disorienting.
 [[rooms]]
 vnum = 7715
 name = "Roaming the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -534,6 +542,7 @@ close to home.
 [[rooms]]
 vnum = 7716
 name = "Roaming the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -577,6 +586,7 @@ close to home.
 [[rooms]]
 vnum = 7717
 name = "Roaming the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -620,6 +630,7 @@ close to home.
 [[rooms]]
 vnum = 7718
 name = "Wandering the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -671,6 +682,7 @@ strand of light.
 [[rooms]]
 vnum = 7719
 name = "Wandering the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -714,6 +726,7 @@ strand of light.
 [[rooms]]
 vnum = 7720
 name = "Wandering the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -773,6 +786,7 @@ strand of light.
 [[rooms]]
 vnum = 7721
 name = "Wandering the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -816,6 +830,7 @@ strand of light.
 [[rooms]]
 vnum = 7722
 name = "Wandering the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -863,6 +878,7 @@ strand of light.
 [[rooms]]
 vnum = 7723
 name = "Travelling the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -910,6 +926,7 @@ strand of light.
 [[rooms]]
 vnum = 7724
 name = "Travelling the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -961,6 +978,7 @@ strand of light.
 [[rooms]]
 vnum = 7725
 name = "Travelling the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -996,6 +1014,7 @@ strand of light.
 [[rooms]]
 vnum = 7726
 name = "Travelling the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -1039,6 +1058,7 @@ strand of light.
 [[rooms]]
 vnum = 7727
 name = "Travelling the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself floating in a field of blackness, filled with tiny tendrils
@@ -1086,6 +1106,7 @@ strand of light.
 [[rooms]]
 vnum = 7728
 name = "Traversing the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself deep within in a dark field filled with tiny tendrils
@@ -1121,6 +1142,7 @@ keeping your sense of direction.
 [[rooms]]
 vnum = 7729
 name = "Traversing the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself deep within in a dark field filled with tiny tendrils
@@ -1164,6 +1186,7 @@ keeping your sense of direction.
 [[rooms]]
 vnum = 7730
 name = "Traversing the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself deep within in a dark field filled with tiny tendrils
@@ -1227,6 +1250,7 @@ keeping your sense of direction.
 [[rooms]]
 vnum = 7731
 name = "Traversing the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself deep within in a dark field filled with tiny tendrils
@@ -1270,6 +1294,7 @@ keeping your sense of direction.
 [[rooms]]
 vnum = 7732
 name = "Traversing the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself deep within in a dark field filled with tiny tendrils
@@ -1305,6 +1330,7 @@ keeping your sense of direction.
 [[rooms]]
 vnum = 7733
 name = "Lost in the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself in in a field of blackness, filled with tiny tendrils
@@ -1344,6 +1370,7 @@ keeping your senses straight.
 [[rooms]]
 vnum = 7734
 name = "Lost in the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself in in a field of blackness, filled with tiny tendrils
@@ -1383,6 +1410,7 @@ keeping your senses straight.
 [[rooms]]
 vnum = 7735
 name = "Lost in the Astral Plane"
+random_exits = 6
 sector = "field"
 description = """
 You find yourself in in a field of blackness, filled with tiny tendrils
@@ -1414,6 +1442,7 @@ keeping your senses straight.
 [[rooms]]
 vnum = 7736
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1430,6 +1459,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7737
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1446,6 +1476,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7738
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1462,6 +1493,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7739
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1478,6 +1510,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7740
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1494,6 +1527,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7741
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1510,6 +1544,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7742
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1526,6 +1561,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7743
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns
@@ -1542,6 +1578,7 @@ through the astral field."""
 [[rooms]]
 vnum = 7744
 name = "Walking the Silvery Strand"
+random_exits = 6
 sector = "field"
 description = """
 You are standing atop a silvery strand of light that twists and turns

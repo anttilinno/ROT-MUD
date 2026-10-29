@@ -387,6 +387,7 @@ that you don't get lost."""
 [[rooms]]
 vnum = 6613
 name = "Mini-Maze"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors"]
 description = """
@@ -407,6 +408,7 @@ You are in a small passage that looks just like every other one."""
 [[rooms]]
 vnum = 6614
 name = "Mini-Maze"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors"]
 description = """
@@ -423,6 +425,7 @@ You are in a small passage that looks just like every other one."""
 [[rooms]]
 vnum = 6615
 name = "Mini-Maze"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors"]
 description = """
@@ -439,6 +442,7 @@ You are in a small passage that looks just like every other one."""
 [[rooms]]
 vnum = 6616
 name = "Mini-Maze"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors"]
 description = """

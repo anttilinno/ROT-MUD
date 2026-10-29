@@ -21,6 +21,7 @@ back and go back the way you've come.
 [[rooms]]
 vnum = 1301
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -48,6 +49,7 @@ sounds of moaning and growling come from all directions.
 [[rooms]]
 vnum = 1302
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -79,6 +81,7 @@ sounds moaning and growling come from all directions.
 [[rooms]]
 vnum = 1303
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -106,6 +109,7 @@ sounds of moaning and growling come from all directions.
 [[rooms]]
 vnum = 1304
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -137,6 +141,7 @@ sounds of moaning and growling come from all directions.
 [[rooms]]
 vnum = 1305
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -164,6 +169,7 @@ sounds of moaning and growling come from all directions.
 [[rooms]]
 vnum = 1306
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -195,6 +201,7 @@ sounds of moaning and growling come from all directions.
 [[rooms]]
 vnum = 1307
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -226,6 +233,7 @@ sounds of moaning and growling come from all directions.
 [[rooms]]
 vnum = 1308
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -257,6 +265,7 @@ sounds of moaning and growling come from all directions.
 [[rooms]]
 vnum = 1309
 name = "The Shadow Grove"
+random_exits = 4
 sector = "forest"
 room_flags = ["dark", "no_recall"]
 description = """
@@ -2305,6 +2314,7 @@ magical glow which provides enough light to see by.
 [[rooms]]
 vnum = 1392
 name = "Inside the Energy Field"
+random_exits = 6
 sector = "inside"
 room_flags = ["indoors", "no_recall"]
 description = """

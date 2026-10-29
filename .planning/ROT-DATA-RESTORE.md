@@ -33,6 +33,8 @@ python3 -I tools/rotrestore/objvalues.py /tmp/rot/rot/area go/data/areas
 | `roomflags.py` | room flags, heal/mana rates | yes |
 | `objvalues.py` | magic/drink/food/money/container/light/portal values | yes (skips existing sections) |
 | `mobs.py` | mob alignment, start/default position, mana dice, act/affect/shield/off flags | yes |
+| `containers.py` | container contents (`P` resets) | yes |
+| `randomexits.py` | maze exit shuffling (`R` resets) | yes |
 | `audit_mobs.py` | **audit only**: per-field mob comparison (flag-name mismatches like `nopurge`/`no_purge` and two-letter flags show as false differences) | — |
 
 ROT conventions to keep: wealth/money is silver in ROT, read as copper here;
@@ -83,13 +85,15 @@ mob assist AI yet; ROM `check_assist`); fire/ice/shock shields set
 `ShieldedBy` but deal no damage to attackers; iron/wood imm/vuln have no Go
 flag; `CanSee` hides a hidden mob even while it fights (ROM shows it).
 
-### 2. Resets
+### 2. Resets — done 2026-10-29
 
-- 86 `P` resets (objects put in containers) are missing — containers spawn
-  empty. Needs a TOML shape for container contents + reset support.
-- ~183 `M` resets missing (3009 in ROT vs 2826) — find which and why.
-- 97 `R` resets (randomised exits) — check whether the Go reset system has
-  any support.
+- `containers.py`: all 86 `P` resets, as `contents` on the obj reset or mob
+  equip that loads the container. Resets top room containers up and
+  re-lock them; no refill while players are in the area (ROT).
+- `randomexits.py`: all 97 `R` resets, as `random_exits = N` on the room;
+  each reset shuffles that room's first N exits (ROM). Only that side moves.
+- `M` resets were never missing: the 3009 counted area files ROT doesn't
+  load (not in `area.lst`). M, O, G/E all match.
 
 ### 3. Spells referenced by items but not registered
 

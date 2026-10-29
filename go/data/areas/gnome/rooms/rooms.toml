@@ -1020,6 +1020,7 @@ around the corner."""
 [[rooms]]
 vnum = 1548
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """
@@ -1049,6 +1050,7 @@ seems to be greater here, as well as your fear."""
 [[rooms]]
 vnum = 1549
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """
@@ -1066,6 +1068,7 @@ seems to be greater here, as well as your fear."""
 [[rooms]]
 vnum = 1550
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """
@@ -1091,6 +1094,7 @@ seems to be greater here, as well as your fear."""
 [[rooms]]
 vnum = 1551
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """
@@ -1116,6 +1120,7 @@ seems to be greater here, as well as your fear."""
 [[rooms]]
 vnum = 1552
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """
@@ -1133,6 +1138,7 @@ seems to be greater here, as well as your fear."""
 [[rooms]]
 vnum = 1553
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """
@@ -1158,6 +1164,7 @@ seems to be greater here, as well as your fear."""
 [[rooms]]
 vnum = 1554
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """
@@ -1179,6 +1186,7 @@ seems to be greater here, as well as your fear."""
 [[rooms]]
 vnum = 1555
 name = "A Damp Hallway"
+random_exits = 4
 sector = "field"
 room_flags = ["dark", "indoors", "no_recall"]
 description = """

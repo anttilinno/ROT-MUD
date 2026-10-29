@@ -1,6 +1,7 @@
 [[rooms]]
 vnum = 8600
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -35,6 +36,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8601
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -69,6 +71,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8602
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -103,6 +106,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8603
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -137,6 +141,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8604
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_mob", "no_recall"]
 description = """
@@ -171,6 +176,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8605
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -205,6 +211,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8606
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -239,6 +246,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8607
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -273,6 +281,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8608
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -307,6 +316,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8610
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -341,6 +351,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8611
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -375,6 +386,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8612
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -409,6 +421,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8613
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -443,6 +456,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8614
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -477,6 +491,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8615
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -511,6 +526,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8616
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -545,6 +561,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8617
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -579,6 +596,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8618
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -613,6 +631,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8620
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -647,6 +666,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8621
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -681,6 +701,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8622
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -715,6 +736,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8623
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -749,6 +771,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8624
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -783,6 +806,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8625
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -817,6 +841,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8626
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -851,6 +876,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8627
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """
@@ -885,6 +911,7 @@ same obsidian color as the ground and you can't find a horizon."""
 [[rooms]]
 vnum = 8628
 name = "The Void"
+random_exits = 6
 sector = "field"
 room_flags = ["no_recall"]
 description = """

@@ -445,6 +445,7 @@ func (l *AreaLoader) convertRoom(rd *RoomData, area *types.Area) *types.Room {
 	}
 
 	room.ObjResets = parseObjResets(rd.ObjResets)
+	room.RandomExits = rd.RandomExits
 
 	return room
 }
@@ -1117,6 +1118,7 @@ func (w *World) SaveRoom(room *types.Room, basePath string) error {
 	}
 
 	rd.ObjResets = formatObjResets(room.ObjResets)
+	rd.RandomExits = room.RandomExits
 
 	// Determine filename based on room vnum
 	filename := fmt.Sprintf("room_%d.toml", room.Vnum)

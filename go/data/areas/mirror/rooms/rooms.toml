@@ -2442,6 +2442,7 @@ foundation."""
 [[rooms]]
 vnum = 5375
 name = "The Void"
+random_exits = 5
 sector = "forest"
 description = """
 You are standing in the middle of something you cannot explain.  You see
@@ -2474,6 +2475,7 @@ a ladder standing vertical."""
 [[rooms]]
 vnum = 5376
 name = "The Void"
+random_exits = 6
 sector = "forest"
 description = """
 You are standing in the middle of something you cannot explain.  You see
@@ -2509,6 +2511,7 @@ rainbow then back to its normal state."""
 [[rooms]]
 vnum = 5377
 name = "The Void"
+random_exits = 6
 sector = "forest"
 description = """
 You are standing in the middle of something you cannot explain.  You see
@@ -2544,6 +2547,7 @@ rainbow then back to its normal state."""
 [[rooms]]
 vnum = 5378
 name = "The Void"
+random_exits = 5
 sector = "forest"
 description = """
 You are standing in the middle of something you cannot explain.  You see

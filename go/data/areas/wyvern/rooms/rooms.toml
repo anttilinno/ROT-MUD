@@ -727,6 +727,7 @@ comes a strange inky blackness.  A spiral staircase leads down."""
 [[rooms]]
 vnum = 1644
 name = "It's too dark to see anything!"
+random_exits = 0
 sector = "forest"
 room_flags = ["dark", "indoors"]
 description = ""
