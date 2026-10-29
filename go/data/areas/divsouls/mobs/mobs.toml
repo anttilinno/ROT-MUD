@@ -820,6 +820,7 @@ Despite the silence of its movements, powerful muscles controlled by a smooth
 feline grace betray the danger beneath the quiet.  Slitted silver eyes seem
 to watch your every move."""
 level = 80
+group = 11621
 hitroll = 2
 ac = [-200, -240, -220, -210]
 damage_type = "slash"
@@ -860,6 +861,7 @@ Cascades of shimmering golden hair frame a fine boned elfin face and clear
 blue eyes.  The pale blue irises seem almost white.. as if blind.  Yet the
 lady can clearly see.. though what she is looking at is not visible to you."""
 level = 85
+group = 11621
 hitroll = 0
 ac = [-200, -230, -250, -230]
 damage_type = "bash"
@@ -1690,6 +1692,7 @@ description = """
 Slitted silver eyes gleam warily from the powerful cat form as she prowls
 silently, like a living shadow."""
 level = 80
+group = 11644
 hitroll = 2
 ac = [-220, -210, -190, -200]
 damage_type = "slash"
@@ -1730,6 +1733,7 @@ Raven black hair frames handsome, chiseled features and a powerful human
 build.  The dark silver eyes, shadowed with pain, are strangely at odds with
 the cruel smile that seems to have permanently twisted the human lips."""
 level = 85
+group = 11644
 hitroll = 0
 ac = [-200, -230, -250, -230]
 damage_type = "bash"
@@ -2424,6 +2428,7 @@ long_desc = "Slitted silver eyes glint from the shadows."
 description = """
 The silver eyes gleam menacingly, like twin daggers in the darkness."""
 level = 85
+group = 11664
 hitroll = 2
 ac = [-270, -270, -260, -250]
 damage_type = "energy"
@@ -2461,6 +2466,7 @@ description = """
 Peering into the shadows, you can barely make out the looming form of a
 dark hawk."""
 level = 80
+group = 11664
 hitroll = 0
 ac = [-200, -190, -200, -180]
 damage_type = "slash"
@@ -2893,6 +2899,7 @@ description = """
 The swirling light continuously forms and reforms.  At the moment, it
 resembles a giant rabbit."""
 level = 86
+group = 11677
 hitroll = 0
 ac = [-270, -270, -280, -260]
 damage_type = "energy"
@@ -2931,6 +2938,7 @@ short_desc = "Fax"
 long_desc = "A bright red parrot perches here, mimicking your movements."
 description = "He looks back at you.  You boggle, he boggles.  Argh.."
 level = 80
+group = 11677
 hitroll = 0
 ac = [-200, -200, -190, -180]
 damage_type = "bash"

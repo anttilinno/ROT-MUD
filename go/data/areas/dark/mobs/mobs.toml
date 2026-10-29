@@ -249,6 +249,7 @@ description = """
 This soldier has an alert look about him.  With his pointed beard and
 sharp sword the security he provides comes mostly from his presence."""
 level = 15
+group = 3000
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "pierce"
@@ -284,6 +285,7 @@ description = """
 This soldier greets you with a bared blade. I don't think you'll be
 sneaking up on him."""
 level = 15
+group = 3000
 hitroll = 3
 ac = [0, 0, 0, 80]
 damage_type = "slash"
@@ -318,6 +320,7 @@ long_desc = "This Sleepy Soldier doesn't see you."
 description = """
 Without looking in his eye you have no idea how tough he would be."""
 level = 17
+group = 3000
 start_pos = "sleeping"
 default_pos = "sleeping"
 hitroll = 0
@@ -355,6 +358,7 @@ description = """
 This female Watcher is one of those cultist who protect the rest of the
 world from those they determine are evil."""
 level = 20
+group = 3000
 hitroll = 4
 ac = [-40, -60, -60, 0]
 damage_type = "bash"

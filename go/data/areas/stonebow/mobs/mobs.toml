@@ -7,6 +7,7 @@ description = """
 A pretty, darkhaired woman bustles about.  She speaks in a broad New York
 accent."""
 level = 50
+group = 13000
 hitroll = 1
 ac = [-70, -70, -70, -70]
 damage_type = "pierce"
@@ -50,6 +51,7 @@ long_desc = "Serge flutters about, clicking his tongue."
 description = """
 A pale, dark haired man flutters about, waving his hands and looking upset."""
 level = 10
+group = 13001
 hitroll = 1
 ac = [-30, -30, -30, 90]
 damage_type = "bash"
@@ -87,6 +89,7 @@ description = """
 This young, dark haired woman is very organized, but very nervous and rather
 shy."""
 level = 50
+group = 13002
 hitroll = 0
 ac = [-70, -70, -70, -70]
 damage_type = "bash"
@@ -131,6 +134,7 @@ A middle-aged, pudgy Englishman dressed in a khaki safari suit.  He is
 balding, has a squidgy little mustache, and apparently feels intellectually
 superior."""
 level = 100
+group = 13003
 hitroll = 0
 ac = [-200, -200, -200, -200]
 damage_type = "pierce"
@@ -178,6 +182,7 @@ and mustache, and blue eyes.  Magnum is wearing a gaudy Hawaiian shirt,
 shorts, and sandals, and he has a pair of sunglasses hanging from a string
 around his neck."""
 level = 100
+group = 13004
 hitroll = 0
 ac = [-200, -200, -200, -200]
 damage_type = "bash"
@@ -221,6 +226,7 @@ description = """
 A man of medium build.  He has greying hair, and wears a dark blue yachting
 suit and deck shoes."""
 level = 50
+group = 13005
 hitroll = 0
 ac = [-70, -70, -70, -70]
 damage_type = "bash"
@@ -263,6 +269,7 @@ description = """
 A slender young man stands here.  He has a heavy-lidded, sleepy look and a
 slow, drowsy smile."""
 level = 70
+group = 13006
 affected_by = ["sanctuary", "protect_evil"]
 hitroll = 1
 ac = [-110, -110, -110, -110]
@@ -305,6 +312,7 @@ long_desc = "Crow looks at you and laughs."
 description = """
 A short golden robot with keen white bulbous eyes stands here."""
 level = 50
+group = 13007
 affected_by = ["sanctuary", "protect_evil"]
 hitroll = 1
 ac = [-70, -70, -70, -70]
@@ -344,6 +352,7 @@ description = """
 A short robot with a gumball-machine head and short slinky arms is here,
 wheeling around and insulting Crow."""
 level = 50
+group = 13008
 affected_by = ["protect_evil"]
 hitroll = 0
 ac = [-70, -70, -70, -70]
@@ -384,6 +393,7 @@ out in rakish spikes pointing in every direction.  He scowls at
  you through hideous neon-green hornrimmed glasses.  He wears
  a bright green labcoat and grimaces at you condescendingly."""
 level = 90
+group = 13009
 hitroll = 1
 ac = [-150, -150, -150, -150]
 damage_type = "pierce"
@@ -419,6 +429,7 @@ long_desc = "TV's Frank raises an eyebrow, chortles, and nods is head slowly."
 description = """
 A pudgy, stupid man stands here grinning and trying to be intelligent."""
 level = 86
+group = 13009
 hitroll = 0
 ac = [-150, -150, -150, -150]
 off_flags = ["area_attack", "kick"]
@@ -454,6 +465,7 @@ description = """
 The disgusting rat is mud-caked and filthy, and is covered in blood and
 dripping with pus.  It has blazing red eyes and long, vicious yellow fangs."""
 level = 21
+group = 13100
 hitroll = 0
 ac = [20, 0, 10, 50]
 damage_type = "pierce"
@@ -533,6 +545,7 @@ The pickpocket looks like a vagabond, only more confident; it leers
 at you lopsidedly.  The pickpocket is wearing nondescript clothes,
 and blends into the crowd rather well."""
 level = 26
+group = 13013
 hitroll = 0
 ac = [-10, -10, -10, 30]
 damage_type = "bash"
@@ -572,6 +585,7 @@ She is dressed in dirty, tattered cloth and stockings that sport huge holes.
 Her bodice conveniently laces up the front and exposes a shockingly vast
 amount of her wares..."""
 level = 42
+group = 13014
 hitroll = 0
 ac = [-50, -50, -50, 0]
 off_flags = ["berserk", "disarm", "dodge", "kick", "parry"]
@@ -609,6 +623,7 @@ This pathetic creature is wearing a shift that barely covers what she's
 offering for sale.  She smells pretty rancid, and you shudder involuntarily.
 Sliding up and groping you, the slut winks and leers."""
 level = 22
+group = 13015
 hitroll = 0
 ac = [10, 10, 10, 60]
 damage_type = "pierce"
@@ -646,6 +661,7 @@ description = """
 Dressed in simple dark Church vestments, the monk in quite unobtrusive.
 Beaming and looking cheerful, he crosses you and bows."""
 level = 38
+group = 13016
 hitroll = 0
 ac = [-40, -40, -40, -40]
 damage_type = "holy"
@@ -682,6 +698,7 @@ description = """
 Dressed in black vestments, the priest fingers his beads and peers at you.
 He wears a large, heavy iron crucifix around his neck."""
 level = 78
+group = 13017
 hitroll = 1
 ac = [-130, -130, -130, -130]
 damage_type = "holy"
@@ -719,6 +736,7 @@ The friar is wearing a dark brown, simple robe, cinched at the waist by a
 plain cord.  Softly muttering prayers, the friar wanders about, lost in
 thought."""
 level = 58
+group = 13018
 hitroll = 1
 ac = [-90, -90, -90, -90]
 damage_type = "holy"
@@ -757,6 +775,7 @@ Her garments are clean, though well-worn, probably hand-me-downs.  She wears
 a simply lacing bodice and colorful though faded skirt.  She wears a
 loose-fitting shawl.  Brushing against you, the 'streeter winks suggestively."""
 level = 52
+group = 13019
 hitroll = 1
 ac = [-80, -80, -80, -20]
 damage_type = "bash"
@@ -796,6 +815,7 @@ to make her rich.  She is dressed in a bright crimson, tight-fitting dress
 with a low-cut neckline and many buttons.  Looking shrewd, the madame watches
 her girls and counts her money."""
 level = 98
+group = 13020
 hitroll = 2
 ac = [-190, -190, -190, -120]
 off_flags = ["area_attack", "berserk", "disarm", "dodge"]
@@ -831,6 +851,7 @@ description = """
 Dressed in simple black robes and wimple, the nun is rather nondescript.
 Humming and singing, she cheerfully smiles and offers to pray for you."""
 level = 58
+group = 13021
 hitroll = 1
 ac = [-90, -90, -90, -90]
 damage_type = "holy"
@@ -868,6 +889,7 @@ The knight is dressed in heavy studded plate armor and wears a massive
 shield.  He carries a heavy longsword, its hilt decorated with simple gems.
 He watches the crowd warily for troublemakers and pickpockets."""
 level = 105
+group = 13022
 hitroll = 2
 ac = [-250, -250, -250, -200]
 off_flags = ["area_attack", "bash", "disarm", "dodge", "fast", "parry", "assist_players"]
@@ -906,6 +928,7 @@ Dressed in light armor and tabard, the squire has more mobility than his
 knight.  He wears a slouch hat with a long, trailing feather and carries a
 small sword."""
 level = 90
+group = 13023
 hitroll = 1
 ac = [-150, -150, -150, -100]
 off_flags = ["bash", "berserk", "disarm", "dodge", "fast", "parry", "assist_players"]
@@ -944,6 +967,7 @@ The young girl is dressed in tatters and bare feet.  A simple shawl is
 draped about her, and she wears one of her flowers in her hair.  The
  poor but proud young girl offers you a fresh flower from her basket."""
 level = 30
+group = 13024
 affected_by = ["sanctuary", "protect_evil"]
 hitroll = 0
 ac = [-20, -20, -20, 40]
@@ -990,6 +1014,7 @@ The seller is dressed in colorful cotton and is wearing a big canvas apron.
 Pushing a small cart laden with fruit and candies, the seller smiles and
 offers you a sweet."""
 level = 46
+group = 13025
 affected_by = ["protect_evil"]
 hitroll = 0
 ac = [-60, -60, -60, 0]
@@ -1027,6 +1052,7 @@ long_desc = "A mangy dog scratches its fleas and pants at you."
 description = """
 A large, nondescript, shaggy dog is here scratching its fleas."""
 level = 6
+group = 13026
 hitroll = -1
 ac = [70, 70, 70, 100]
 damage_type = "pierce"
@@ -1063,6 +1089,7 @@ description = """
 The large grey dog appears to have blood dripping from a piece of flesh in
 its mouth."""
 level = 24
+group = 13027
 hitroll = 0
 ac = [0, 0, 0, 60]
 damage_type = "pierce"
@@ -1097,6 +1124,7 @@ long_desc = "A rich nobleman is here, looking proud."
 description = """
 Dressed in rich silks, the nobleman is looking for a bargain."""
 level = 76
+group = 13028
 hitroll = 1
 ac = [-130, -130, -130, -90]
 damage_type = "energy"
@@ -1135,6 +1163,7 @@ description = """
 Dressed in fine robes, the merchant is examining goods and counting his
 cash."""
 level = 50
+group = 13029
 hitroll = 1
 ac = [-70, -70, -70, -30]
 off_flags = ["area_attack", "bash", "berserk", "disarm", "dodge", "parry"]
@@ -1173,6 +1202,7 @@ Dressed in a simple, shapeless brown wool robe cinched at the waist with a
 dark cord, the monk is the epitome of "simplistic".  He smiles at you and
 bows his head."""
 level = 38
+group = 13030
 hitroll = 0
 ac = [-40, -40, -40, -10]
 damage_type = "holy"
@@ -1209,6 +1239,7 @@ description = """
 Dressed in black vestments and starched white collar, the priest fingers his
 beads and peers at you questioningly."""
 level = 78
+group = 13031
 hitroll = 0
 ac = [-130, -130, -130, -90]
 damage_type = "holy"
@@ -1245,6 +1276,7 @@ description = """
 He is wearing long, flowing purple robes and a tall, pointed hat.
 He carries a long staff adorned with a large silver crucifix."""
 level = 104
+group = 13132
 hitroll = 0
 ac = [-2500, -2500, -2500, -2500]
 damage_type = "holy"
@@ -1283,6 +1315,7 @@ description = """
 The High Priest is dressed in deep purple robes spangled with tiny silver
 stars.  There is an amulet in the shape of a crescent around his neck."""
 level = 107
+group = 13133
 hitroll = 0
 ac = [-290, -290, -290, -190]
 damage_type = "holy"
@@ -1322,6 +1355,7 @@ The High Priestess is wearing low-cut deep purple robes with tiny silver
 stars around the neckling, hem, and sleeves.  She is wearing a circlet with a
 crescent moon in the center of her forehead."""
 level = 107
+group = 13134
 hitroll = 0
 ac = [-290, -290, -290, -190]
 damage_type = "holy"
@@ -1361,6 +1395,7 @@ The angry father is looking for a PARTICULAR man to marry his daughter!
 The father wears worn overalls and a flannel workshirt.  He is clutching a
 long, double-barrelled shotgun."""
 level = 66
+group = 13135
 hitroll = 0
 ac = [-110, -110, -110, -10]
 damage_type = "bash"
@@ -1400,6 +1435,7 @@ This cockroach looks like it has lived a LONG time...considering it's the
 size of a large dog!! Oily, glistening, its mandibles clicking, it stares at
 you with fathomless, cold eyes."""
 level = 36
+group = 13136
 hitroll = 0
 ac = [-200, -200, -200, -180]
 damage_type = "pierce"
@@ -1438,6 +1474,7 @@ description = """
 The honeymooning bride is dressed in a comfortable yet pretty dress and
 shoes.  She is carrying a large bag."""
 level = 46
+group = 13137
 affected_by = ["sanctuary", "protect_evil"]
 hitroll = 0
 ac = [-60, -60, -60, 30]
@@ -1476,6 +1513,7 @@ description = """
 The groom is dressed in comfortable tabard and tights.  He is carrying a
 large wallet."""
 level = 46
+group = 13138
 affected_by = ["sanctuary", "protect_evil"]
 hitroll = 0
 ac = [-60, -60, -60, 30]
@@ -1512,6 +1550,7 @@ short_desc = "a young noble"
 long_desc = "A young noble is here looking to spend a LOT of money."
 description = "A young noble is here looking to spend a LOT of money."
 level = 101
+group = 13139
 hitroll = 0
 ac = [-290, -290, -290, -100]
 damage_type = "pierce"
@@ -1550,6 +1589,7 @@ description = """
 The soldier is wearing a navy blue tabard and striped tights.  He is
 holding a long, glittering sword.  He watches you suspiciously."""
 level = 36
+group = 13140
 hitroll = 0
 ac = [-90, -90, -90, -20]
 damage_type = "bash"
@@ -1588,6 +1628,7 @@ description = """
 The choir boy is dressed in his choir robes.  He holds a candle in one
 hand, and a songbook in the other."""
 level = 18
+group = 13141
 hitroll = 0
 ac = [-20, -20, -20, 60]
 damage_type = "bash"
@@ -1625,6 +1666,7 @@ description = """
 The gardener is dressed in simple grey flannel robes.  He is carrying a
 pruning knife."""
 level = 66
+group = 13142
 hitroll = 0
 ac = [-70, -70, -70, 0]
 damage_type = "bash"
@@ -1662,6 +1704,7 @@ description = """
 The guildsman is dressed in brightly-colored robes.  He is carrying a pack
 of his wares."""
 level = 68
+group = 13143
 affected_by = ["sanctuary"]
 hitroll = 0
 ac = [-130, -130, -130, -80]
@@ -1700,6 +1743,7 @@ The dancer is dark-skinned and dark-eyed with exotic features.  She is
 wearing handcrafted scarves in many layers, adorned with colorful ribbons.
 She is carrying a tambourine."""
 level = 68
+group = 13144
 hitroll = 0
 ac = [-110, -110, -110, -110]
 damage_type = "pierce"
@@ -1737,6 +1781,7 @@ description = """
 The musician is swarthy and wears dark reds and purples and blues; his
 vest is cropped short, and he wears baggy silk pants.  He is playing a drum."""
 level = 68
+group = 13145
 hitroll = 0
 ac = [-110, -110, -110, -110]
 off_flags = ["backstab", "bash", "fast", "trip"]
@@ -1773,6 +1818,7 @@ description = """
 The gypsy leader is dressed in bright colors and wears a bright red head
 scarf."""
 level = 105
+group = 13146
 hitroll = 0
 ac = [-280, -280, -280, -280]
 damage_type = "bash"
@@ -1811,6 +1857,7 @@ description = """
 A crying mother is dressed in black and is sobbing into an expensive lace
 handkerchief."""
 level = 40
+group = 13147
 hitroll = 0
 ac = [-40, -40, -40, 50]
 off_flags = ["berserk", "assist_race"]
@@ -1848,6 +1895,7 @@ description = """
 The townsman is dressed in plain, earthy browns and greens.  He holds a
 mug in one hand, and grins lopsidedly as you approach."""
 level = 78
+group = 13148
 hitroll = 0
 ac = [-130, -130, -130, -20]
 damage_type = "bash"
@@ -1884,6 +1932,7 @@ description = """
 The townswoman is dressed in plain colors and wears a shawl.  She carries a
 willow basket."""
 level = 78
+group = 13149
 hitroll = 0
 ac = [-130, -130, -130, -20]
 damage_type = "bash"
@@ -1920,6 +1969,7 @@ description = """
 Fonzie is dressed in jeans and a leather jacket.  He has slicked back dark
 hair and admires himself in the mirror.  He is carrying a comb."""
 level = 109
+group = 13150
 hitroll = 1
 ac = [-300, -300, -300, -150]
 damage_type = "bash"
@@ -1959,6 +2009,7 @@ The friar is wearing a long, simple brown robe and sandals.  He has a cord
 tied around his waist to adjust the fit of his garment.  He is carrying a
 bota of nectar."""
 level = 86
+group = 13151
 hitroll = 0
 ac = [-120, -120, -120, -60]
 damage_type = "holy"
@@ -1998,6 +2049,7 @@ The healer is dressed in simply-cut blue silk robes and sandals.  He sits
 cross-legged on a zabuton pillow, quietly tending the ailing.  He appears to
 be very, VERY old...and very wise."""
 level = 109
+group = 13152
 start_pos = "sitting"
 default_pos = "sitting"
 hitroll = 0
@@ -2039,6 +2091,7 @@ Father Tom is dressed in flowing black robes and is wearing a heavy Celtic
 cross.  He is wearing the Ring of the Grand Inquisitor and carries an incense
 burner."""
 level = 109
+group = 13153
 hitroll = 2
 ac = [-300, -300, -300, -300]
 damage_type = "holy"
@@ -2078,6 +2131,7 @@ description = """
 Yuri appears much fiercer than he really is.  His hair and beard are wild,
 but he has kind grey eyes.  He is smoking an immaculate meerschaum pipe."""
 level = 98
+group = 13154
 affected_by = ["sanctuary", "protect_evil"]
 hitroll = 0
 ac = [-200, -200, -200, -80]
@@ -2115,6 +2169,7 @@ description = """
 Bella is heavyset, motherly woman.  She wears a simple workdress and apron,
 and carries a dusting cloth."""
 level = 92
+group = 13155
 affected_by = ["sanctuary", "protect_evil"]
 hitroll = 0
 ac = [-180, -180, -180, -60]
@@ -2154,6 +2209,7 @@ Mother Superior is an older woman with sharp features and gentle, wise blue
 eyes.  She is wearing dark nun's robes and a starched wimple.  There is a
 heavy silver crucifix around her neck."""
 level = 107
+group = 13156
 hitroll = 0
 ac = [-270, -270, -270, -250]
 damage_type = "holy"
@@ -2193,6 +2249,7 @@ The young barmaid is slender and buxom.  She has long dark curly hair and
 soft blue eyes.  She wears simple, colorful skirts and a plain bodice.
 She dimples at you prettily as you look at her."""
 level = 42
+group = 13157
 affected_by = ["protect_evil"]
 hitroll = 0
 ac = [-70, -70, -70, 50]

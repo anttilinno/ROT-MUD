@@ -5,6 +5,7 @@ short_desc = "a troll gang member"
 long_desc = "A member of the Trolls wanders about here."
 description = "He's lived a life of violence ever since he was little."
 level = 9
+group = 2100
 hitroll = 0
 ac = [50, 50, 50, 90]
 damage_type = "bash"
@@ -38,6 +39,7 @@ short_desc = "an ogre gang member"
 long_desc = "A member of the Ogres wanders about here."
 description = "He wants to rid the world of every last Troll gang member."
 level = 9
+group = 2101
 hitroll = 0
 ac = [50, 50, 50, 90]
 damage_type = "bash"
@@ -73,6 +75,7 @@ description = """
 He's risen to be leader through brute force and cunning leadership, you'd
 guess mostly brute force from the size of his muscles."""
 level = 25
+group = 2100
 hitroll = 0
 ac = [-10, -10, -10, 80]
 damage_type = "bash"
@@ -108,6 +111,7 @@ long_desc = "A big, mean bruiser is looking for limbs to break."
 description = """
 He's 6'6" 245 pounds and enough muscle to bash your head in. How like a Troll."""
 level = 21
+group = 2100
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
@@ -210,6 +214,7 @@ short_desc = "a vandal"
 long_desc = "A vandal is spray painting pro-gang slogans on the wall here."
 description = "He has a wary eye and a fine hand for art."
 level = 20
+group = 2101
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
@@ -281,6 +286,7 @@ long_desc = "A punk is here, carving his initials into a wall."
 description = """
 He's a sterling example of rehabilitation at work.  Not nice."""
 level = 19
+group = 2100
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
@@ -316,6 +322,7 @@ long_desc = "The Ogre gang leader snaps out his stiletto. \"Care to dance?\""
 description = """
 He's smaller, but undoubtably smarter, than the Troll's leader."""
 level = 26
+group = 2101
 hitroll = 0
 ac = [-10, -10, -10, 80]
 damage_type = "bash"
@@ -352,6 +359,7 @@ description = """
 The thug isn't quite as big as the Troll's bruisers, but you can tell he loves
 breaking heads for the Ogres."""
 level = 21
+group = 2101
 hitroll = 0
 ac = [10, 10, 10, 80]
 damage_type = "bash"
