@@ -56,8 +56,9 @@ type Character struct {
 	DamType DamageType // Default damage type
 
 	// Location
-	InRoom    *Room // Current room
-	WasInRoom *Room // Previous room (for return after combat)
+	InRoom    *Room   // Current room
+	WasInRoom *Room   // Previous room (for return after combat)
+	On        *Object // Furniture being sat/rested/slept/stood on (ROT ch->on)
 
 	// Relationships
 	Master *Character // Who this character follows

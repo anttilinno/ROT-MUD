@@ -24,7 +24,6 @@ type Object struct {
 	InRoom    *Room      // If on the ground
 	CarriedBy *Character // If in inventory/equipped
 	Contents  []*Object  // If this is a container
-	On        *Object    // If on furniture
 
 	// Enchantment
 	Enchanted bool       // Has been enchanted
