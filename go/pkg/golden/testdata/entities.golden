@@ -3,57 +3,57 @@
 # Coverage: 19 races x warrior Lv20 + 14 classes x human Lv20 + spells + skills + mob templates
 
 === RACE x WARRIOR (Lv 20, seed=42) ===
-Race=human        HP=343  Str=18 Dex=18 Con=18 Hit%= 36.7 Dam= 257 Imm=- Res=- Vuln=-
-Race=elf          HP=314  Str=16 Dex=21 Con=15 Hit%= 43.3 Dam= 279 Imm=- Res=- Vuln=-
-Race=dwarf        HP=381  Str=20 Dex=15 Con=22 Hit%= 50.0 Dam= 357 Imm=- Res=- Vuln=-
-Race=giant        HP=371  Str=22 Dex=14 Con=21 Hit%= 64.3 Dam= 435 Imm=- Res=- Vuln=-
-Race=pixie        HP=305  Str=11 Dex=21 Con=13 Hit%= 70.0 Dam= 370 Imm=- Res=- Vuln=-
-Race=halfling     HP=343  Str=13 Dex=20 Con=18 Hit%= 66.7 Dam= 315 Imm=- Res=- Vuln=-
-Race=halforc      HP=371  Str=20 Dex=17 Con=21 Hit%= 50.0 Dam= 354 Imm=- Res=- Vuln=-
-Race=goblin       HP=343  Str=14 Dex=20 Con=18 Hit%= 60.0 Dam= 345 Imm=- Res=- Vuln=-
-Race=halfelf      HP=333  Str=17 Dex=18 Con=17 Hit%= 60.0 Dam= 429 Imm=- Res=- Vuln=-
-Race=avian        HP=333  Str=14 Dex=18 Con=17 Hit%= 46.7 Dam= 261 Imm=- Res=- Vuln=-
-Race=gnome        HP=305  Str=13 Dex=15 Con=14 Hit%= 46.7 Dam= 245 Imm=- Res=- Vuln=-
-Race=draconian    HP=371  Str=22 Dex=14 Con=21 Hit%= 36.7 Dam= 295 Imm=- Res=- Vuln=-
-Race=centaur      HP=371  Str=21 Dex=17 Con=21 Hit%= 46.7 Dam= 332 Imm=- Res=- Vuln=-
-Race=gnoll        HP=362  Str=20 Dex=17 Con=20 Hit%= 53.3 Dam= 369 Imm=- Res=- Vuln=-
-Race=heucuva      HP=352  Str=21 Dex=16 Con=19 Hit%= 56.7 Dam= 418 Imm=- Res=- Vuln=-
-Race=kenku        HP=314  Str=16 Dex=21 Con=15 Hit%= 60.0 Dam= 374 Imm=- Res=- Vuln=-
-Race=minotaur     HP=381  Str=23 Dex=14 Con=22 Hit%= 40.0 Dam= 325 Imm=- Res=- Vuln=-
-Race=satyr        HP=362  Str=21 Dex=17 Con=20 Hit%= 46.7 Dam= 364 Imm=- Res=- Vuln=-
-Race=titan        HP=400  Str=25 Dex=12 Con=24 Hit%= 66.7 Dam= 451 Imm=- Res=- Vuln=-
+Race=human        HP=343  Str=18 Dex=18 Con=18 Hit%= 50.0 Dam= 360 Imm=- Res=- Vuln=-
+Race=elf          HP=314  Str=16 Dex=21 Con=15 Hit%= 40.0 Dam= 250 Imm=- Res=- Vuln=-
+Race=dwarf        HP=381  Str=20 Dex=15 Con=22 Hit%= 40.0 Dam= 285 Imm=- Res=- Vuln=-
+Race=giant        HP=371  Str=22 Dex=14 Con=21 Hit%= 50.0 Dam= 352 Imm=- Res=- Vuln=-
+Race=pixie        HP=305  Str=11 Dex=21 Con=13 Hit%= 56.7 Dam= 280 Imm=- Res=- Vuln=-
+Race=halfling     HP=343  Str=13 Dex=20 Con=18 Hit%= 40.0 Dam= 204 Imm=- Res=- Vuln=-
+Race=halforc      HP=371  Str=20 Dex=17 Con=21 Hit%= 53.3 Dam= 364 Imm=- Res=- Vuln=-
+Race=goblin       HP=343  Str=14 Dex=20 Con=18 Hit%= 53.3 Dam= 337 Imm=- Res=- Vuln=-
+Race=halfelf      HP=333  Str=17 Dex=18 Con=17 Hit%= 50.0 Dam= 338 Imm=- Res=- Vuln=-
+Race=avian        HP=333  Str=14 Dex=18 Con=17 Hit%= 50.0 Dam= 273 Imm=- Res=- Vuln=-
+Race=gnome        HP=305  Str=13 Dex=15 Con=14 Hit%= 53.3 Dam= 279 Imm=- Res=- Vuln=-
+Race=draconian    HP=371  Str=22 Dex=14 Con=21 Hit%= 33.3 Dam= 267 Imm=- Res=- Vuln=-
+Race=centaur      HP=371  Str=21 Dex=17 Con=21 Hit%= 53.3 Dam= 393 Imm=- Res=- Vuln=-
+Race=gnoll        HP=362  Str=20 Dex=17 Con=20 Hit%= 64.3 Dam= 445 Imm=- Res=- Vuln=-
+Race=heucuva      HP=352  Str=21 Dex=16 Con=19 Hit%= 36.7 Dam= 273 Imm=- Res=- Vuln=-
+Race=kenku        HP=314  Str=16 Dex=21 Con=15 Hit%= 43.3 Dam= 234 Imm=- Res=- Vuln=-
+Race=minotaur     HP=381  Str=23 Dex=14 Con=22 Hit%= 53.3 Dam= 412 Imm=- Res=- Vuln=-
+Race=satyr        HP=362  Str=21 Dex=17 Con=20 Hit%= 60.0 Dam= 442 Imm=- Res=- Vuln=-
+Race=titan        HP=400  Str=25 Dex=12 Con=24 Hit%= 43.3 Dam= 363 Imm=- Res=- Vuln=-
 
 === CLASS x HUMAN (Lv 20, seed=42) ===
-Class=mage         THAC0_00=20  THAC0_32=6   HP=172  Mana=510  HitRoll=6   DamRoll=5   Hit%= 26.7 Dam= 136
-Class=cleric       THAC0_00=20  THAC0_32=2   HP=210  Mana=270  HitRoll=6   DamRoll=5   Hit%= 33.3 Dam= 198
-Class=thief        THAC0_00=20  THAC0_32=-4  HP=248  Mana=190  HitRoll=6   DamRoll=5   Hit%= 66.7 Dam= 406
-Class=warrior      THAC0_00=20  THAC0_32=-10 HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 53.3 Dam= 324
-Class=ranger       THAC0_00=20  THAC0_32=-6  HP=267  Mana=190  HitRoll=6   DamRoll=7   Hit%= 43.3 Dam= 289
-Class=druid        THAC0_00=20  THAC0_32=2   HP=210  Mana=190  HitRoll=6   DamRoll=5   Hit%= 36.7 Dam= 241
-Class=ghoul        THAC0_00=20  THAC0_32=-3  HP=191  Mana=190  HitRoll=6   DamRoll=5   Hit%= 40.0 Dam= 192
-Class=demon        THAC0_00=20  THAC0_32=-10 HP=362  Mana=190  HitRoll=6   DamRoll=5   Hit%= 40.0 Dam= 237
-Class=vampire      THAC0_00=20  THAC0_32=-6  HP=286  Mana=190  HitRoll=6   DamRoll=5   Hit%= 43.3 Dam= 279
-Class=werewolf     THAC0_00=20  THAC0_32=-9  HP=362  Mana=190  HitRoll=6   DamRoll=5   Hit%= 73.3 Dam= 428
-Class=magus        THAC0_00=20  THAC0_32=2   HP=229  Mana=590  HitRoll=6   DamRoll=5   Hit%= 36.7 Dam= 254
-Class=highlander   THAC0_00=20  THAC0_32=-12 HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 56.7 Dam= 355
-Class=angel        THAC0_00=20  THAC0_32=-8  HP=324  Mana=390  HitRoll=6   DamRoll=5   Hit%= 53.3 Dam= 345
+Class=mage         THAC0_00=20  THAC0_32=6   HP=172  Mana=510  HitRoll=6   DamRoll=5   Hit%= 53.3 Dam= 274
+Class=cleric       THAC0_00=20  THAC0_32=2   HP=210  Mana=270  HitRoll=6   DamRoll=5   Hit%= 53.3 Dam= 332
+Class=thief        THAC0_00=20  THAC0_32=-4  HP=248  Mana=190  HitRoll=6   DamRoll=5   Hit%= 33.3 Dam= 212
+Class=warrior      THAC0_00=20  THAC0_32=-10 HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 43.3 Dam= 267
+Class=ranger       THAC0_00=20  THAC0_32=-6  HP=267  Mana=190  HitRoll=6   DamRoll=7   Hit%= 30.0 Dam= 194
+Class=druid        THAC0_00=20  THAC0_32=2   HP=210  Mana=190  HitRoll=6   DamRoll=5   Hit%= 43.3 Dam= 259
+Class=ghoul        THAC0_00=20  THAC0_32=-3  HP=191  Mana=190  HitRoll=6   DamRoll=5   Hit%= 63.3 Dam= 312
+Class=demon        THAC0_00=20  THAC0_32=-10 HP=362  Mana=190  HitRoll=6   DamRoll=5   Hit%= 50.0 Dam= 296
+Class=vampire      THAC0_00=20  THAC0_32=-6  HP=286  Mana=190  HitRoll=6   DamRoll=5   Hit%= 60.0 Dam= 361
+Class=werewolf     THAC0_00=20  THAC0_32=-9  HP=362  Mana=190  HitRoll=6   DamRoll=5   Hit%= 53.3 Dam= 301
+Class=magus        THAC0_00=20  THAC0_32=2   HP=229  Mana=590  HitRoll=6   DamRoll=5   Hit%= 53.3 Dam= 312
+Class=highlander   THAC0_00=20  THAC0_32=-12 HP=343  Mana=190  HitRoll=6   DamRoll=5   Hit%= 56.7 Dam= 339
+Class=angel        THAC0_00=20  THAC0_32=-8  HP=324  Mana=390  HitRoll=6   DamRoll=5   Hit%= 46.7 Dam= 291
 
 === SPELL EXECUTIONS (seed=42) ===
-Spell=acid blast         Lv=22  Class=mage       success=true  dHP=86    dMana=0    victimHp=1000->914
+Spell=acid blast         Lv=22  Class=mage       success=true  dHP=74    dMana=0    victimHp=1000->926
 Spell=bless              Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 Spell=cure light         Lv=10  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 Spell=fireball           Lv=22  Class=mage       success=true  dHP=28    dMana=0    victimHp=1000->972
 Spell=heal               Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
-Spell=magic missile      Lv=10  Class=mage       success=true  dHP=11    dMana=0    victimHp=1000->989
+Spell=magic missile      Lv=10  Class=mage       success=true  dHP=12    dMana=0    victimHp=1000->988
 Spell=sanctuary          Lv=20  Class=cleric     success=true  dHP=0     dMana=0    victimHp=1000->1000
 
 === SKILL EXECUTIONS (seed=42) ===
 Backstab Lv=20  thief vs mob: victimHp=430->430 damage=0 fighting=false
 Kick Lv=20  warrior vs mob: victimHp=430->430 damage=0
-Defense Lv=20  warrior    vs thief     : dodged=27  parried=36  blocked=0   hit=37 
-Defense Lv=20  thief      vs warrior   : dodged=21  parried=43  blocked=0   hit=36 
+Defense Lv=20  warrior    vs thief     : dodged=28  parried=38  blocked=0   hit=34 
+Defense Lv=20  thief      vs warrior   : dodged=27  parried=36  blocked=0   hit=37 
 
 === MOB TEMPLATES (seed=42) ===
 MobImm   Lv=20  name=Mob        Imm=[fire,silver] Res=[charm] Vuln=[cold]
-MobAggro Lv=20  name=AggroMob   Act=aggressive aggroFired=false victim=-
+MobAggro Lv=20  name=AggroMob   Act=aggressive aggroFired=true  victim=AggroTarget
 MobCast  Lv=22  name=CasterMob  Special=spec_cast_mage fighting=true  spellAttempted=none            castFired=false victimHp=1000->1000

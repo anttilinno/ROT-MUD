@@ -69,8 +69,11 @@ func (c *CombatSystem) OneHit(ch, victim *types.Character, secondary bool) Damag
 		victimAC += 6
 	}
 
-	// Roll to hit (d20)
-	diceroll := NumberBits(5) % 20
+	// Roll to hit (d20); reroll 20-31 like ROT fight.c, % 20 biases low
+	diceroll := NumberBits(5)
+	for diceroll >= 20 {
+		diceroll = NumberBits(5)
+	}
 
 	// Check for hit
 	// Roll of 0 always misses, roll of 19 always hits
