@@ -85,6 +85,7 @@ func NewMagicSystem() *MagicSystem {
 		"enchant armor":  m.spellEnchantArmor,
 		"detect poison":  m.spellDetectPoison,
 		"know alignment": m.spellKnowAlignment,
+		"ventriloquate":  m.spellVentriloquate,
 	} {
 		m.Registry.FindByName(name).Func = fn
 	}
@@ -426,6 +427,40 @@ func (m *MagicSystem) spellDetectPoison(caster *types.Character, level int, targ
 	return true
 }
 
+// spellVentriloquate makes speaker (the first word) appear to say the rest;
+// listeners who save see through it (ROT spell_ventriloquate).
+func (m *MagicSystem) spellVentriloquate(caster *types.Character, level int, target interface{}) bool {
+	arg, _ := target.(string)
+	speaker, words, _ := strings.Cut(arg, " ")
+	speaker = strings.ToLower(speaker)
+	if speaker == "" || caster.InRoom == nil {
+		return false
+	}
+	said := strings.ToUpper(speaker[:1]) + speaker[1:] + " says '" + words + "'.\r\n"
+	fake := "Someone makes " + speaker + " say '" + words + "'.\r\n"
+	for _, vch := range caster.InRoom.People {
+		if isName(speaker, vch.Name) {
+			continue
+		}
+		if combat.SavesSpell(level, vch, types.DamOther) {
+			m.send(vch, fake)
+		} else {
+			m.send(vch, said)
+		}
+	}
+	return true
+}
+
+// isName reports whether word starts one of the keywords in name.
+func isName(word, name string) bool {
+	for _, kw := range strings.Fields(strings.ToLower(name)) {
+		if strings.HasPrefix(kw, word) {
+			return true
+		}
+	}
+	return false
+}
+
 // spellKnowAlignment describes the target's alignment.
 func (m *MagicSystem) spellKnowAlignment(caster *types.Character, level int, target interface{}) bool {
 	victim, ok := target.(*types.Character)
@@ -672,6 +707,9 @@ type TargetFinder func(ch *types.Character, name string, offensive bool) interfa
 func (m *MagicSystem) resolveTarget(caster *types.Character, spell *Spell, arg string, findTarget TargetFinder) (interface{}, string) {
 	switch spell.Target {
 	case TargetIgnore:
+		if arg != "" {
+			return arg, "" // spells like ventriloquate read the words (ROT target_name)
+		}
 		return nil, ""
 
 	case TargetCharSelf:

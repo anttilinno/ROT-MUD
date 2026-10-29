@@ -609,6 +609,8 @@ func DefaultSpells() *SpellRegistry {
 
 	r.Register(NewSpell("know alignment", 613, TargetCharDefense, 9, spellNeedsSystem))
 
+	r.Register(NewSpell("ventriloquate", 41, TargetIgnore, 5, spellNeedsSystem))
+
 	// Breaths stay NPC and item only: ROT lets mages learn them, but here they
 	// would outclass every mage damage spell.
 	r.Register(NewSpell("acid breath", 200, TargetCharOffense, 100, spellAcidBreath).
@@ -2038,26 +2040,6 @@ func spellCharmPerson(caster *types.Character, level int, target interface{}) bo
 	af := NewAffectWithBit("charm person", level, level/4+12, types.AffCharm)
 	AddAffect(victim, af)
 	return true
-}
-
-// Ventriloquate - Mage utility spell
-// Makes caster's voice appear to come from another character or object
-// The actual speech output is handled by the game system
-func spellVentriloquate(caster *types.Character, level int, target interface{}) bool {
-	// Target can be a character or object
-	// Speech will appear to come from the target
-	// Viewers get a saving throw to notice the deception
-	victim, isChar := target.(*types.Character)
-	if isChar && victim != nil {
-		return true
-	}
-
-	obj, isObj := target.(*types.Object)
-	if isObj && obj != nil {
-		return true
-	}
-
-	return false
 }
 
 // Continual Light - Mage/Cleric utility spell

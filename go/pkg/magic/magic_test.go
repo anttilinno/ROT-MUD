@@ -867,3 +867,27 @@ func TestBless(t *testing.T) {
 		}
 	}
 }
+
+// Ventriloquate puts words in the speaker's mouth for everyone but the
+// speaker; a listener who saves sees who is behind it.
+func TestVentriloquate(t *testing.T) {
+	m := NewMagicSystem()
+	heard := map[*types.Character]string{}
+	m.Output = func(ch *types.Character, msg string) { heard[ch] += msg }
+	caster := types.NewCharacter("Caster")
+	guard := types.NewNPC(1, "cityguard guard", 5)
+	listener := types.NewNPC(2, "listener", 1)
+	room := types.NewRoom(1, "r", "r")
+	for _, ch := range []*types.Character{caster, guard, listener} {
+		room.AddPerson(ch)
+		ch.InRoom = room
+	}
+
+	m.Registry.FindByName("ventriloquate").Func(caster, 60, "guard Hello there")
+	if heard[guard] != "" {
+		t.Errorf("the speaker heard %q", heard[guard])
+	}
+	if got := heard[listener]; got != "Guard says 'Hello there'.\r\n" && got != "Someone makes guard say 'Hello there'.\r\n" {
+		t.Errorf("listener heard %q", got)
+	}
+}
