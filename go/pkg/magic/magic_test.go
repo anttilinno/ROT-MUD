@@ -771,3 +771,15 @@ func TestThiefSpellLevels(t *testing.T) {
 		t.Error("thieves should not get fireball")
 	}
 }
+
+// Items store spells by slot, so two spells sharing a slot make a potion of
+// one cast the other (cure critical potions cast call lightning).
+func TestSpellSlotsUnique(t *testing.T) {
+	seen := map[int]string{}
+	for _, sp := range DefaultSpells().All() {
+		if other, ok := seen[sp.Slot]; ok {
+			t.Errorf("slot %d shared by %q and %q", sp.Slot, other, sp.Name)
+		}
+		seen[sp.Slot] = sp.Name
+	}
+}

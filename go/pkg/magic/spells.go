@@ -77,6 +77,11 @@ const (
 	SlotEmpower          = 421
 	SlotConjure          = 422
 	SlotVoodoo           = 423
+
+	// 600+ are this port's own slots for spells whose ROT slot is already
+	// taken by the numbering above. Items cast by slot, so slots must be
+	// unique.
+	SlotCreateFood = 600
 )
 
 // DefaultSpells returns a registry populated with default spells
@@ -401,10 +406,10 @@ func DefaultSpells() *SpellRegistry {
 
 	// === Utility Spells ===
 
-	r.Register(NewSpell("create food", 12, TargetIgnore, 5, spellCreateFood).
+	r.Register(NewSpell("create food", SlotCreateFood, TargetIgnore, 5, spellCreateFood).
 		SetLevels(map[string]int{"mage": 53, "cleric": 3, "thief": 53, "warrior": 53}))
 
-	r.Register(NewSpell("create water", 13, TargetObjInv, 5, spellCreateWater).
+	r.Register(NewSpell("create water", 601, TargetObjInv, 5, spellCreateWater).
 		SetLevels(map[string]int{"mage": 53, "cleric": 4, "thief": 53, "warrior": 53}))
 
 	r.Register(NewSpell("create spring", 80, TargetIgnore, 20, spellCreateSpring).
@@ -417,10 +422,10 @@ func DefaultSpells() *SpellRegistry {
 
 	// === Area Effect Spells ===
 
-	r.Register(NewSpell("earthquake", 23, TargetIgnore, 15, spellEarthquake).
+	r.Register(NewSpell("earthquake", 602, TargetIgnore, 15, spellEarthquake).
 		SetLevels(map[string]int{"mage": 53, "cleric": 10, "thief": 53, "warrior": 53}))
 
-	r.Register(NewSpell("call lightning", 6, TargetIgnore, 15, spellCallLightning).
+	r.Register(NewSpell("call lightning", 603, TargetIgnore, 15, spellCallLightning).
 		SetLevels(map[string]int{"mage": 53, "cleric": 18, "thief": 53, "warrior": 53}))
 
 	// === Additional Damage Spells ===
@@ -429,7 +434,7 @@ func DefaultSpells() *SpellRegistry {
 		SetLevels(map[string]int{"mage": 30, "cleric": 53, "thief": 53, "warrior": 53}).
 		SetDamageNoun("acid blast"))
 
-	r.Register(NewSpell("colour spray", 10, TargetCharOffense, 15, spellColourSpray).
+	r.Register(NewSpell("colour spray", 604, TargetCharOffense, 15, spellColourSpray).
 		SetLevels(map[string]int{"mage": 16, "cleric": 53, "thief": 53, "warrior": 53}).
 		SetDamageNoun("colour spray"))
 
@@ -437,11 +442,11 @@ func DefaultSpells() *SpellRegistry {
 		SetLevels(map[string]int{"mage": 53, "cleric": 34, "thief": 53, "warrior": 53}).
 		SetDamageNoun("torments"))
 
-	r.Register(NewSpell("energy drain", 25, TargetCharOffense, 35, spellEnergyDrain).
+	r.Register(NewSpell("energy drain", 605, TargetCharOffense, 35, spellEnergyDrain).
 		SetLevels(map[string]int{"mage": 35, "cleric": 53, "thief": 53, "warrior": 53}).
 		SetDamageNoun("energy drain"))
 
-	r.Register(NewSpell("flamestrike", 28, TargetCharOffense, 20, spellFlamestrike).
+	r.Register(NewSpell("flamestrike", 65, TargetCharOffense, 20, spellFlamestrike).
 		SetLevels(map[string]int{"mage": 53, "cleric": 20, "thief": 53, "warrior": 53}).
 		SetDamageNoun("flamestrike"))
 
@@ -449,15 +454,15 @@ func DefaultSpells() *SpellRegistry {
 		SetLevels(map[string]int{"mage": 33, "cleric": 53, "thief": 53, "warrior": 53}).
 		SetDamageNoun("lightning"))
 
-	r.Register(NewSpell("meteor swarm", 520, TargetCharOffense, 35, spellMeteorSwarm).
+	r.Register(NewSpell("meteor swarm", 606, TargetCharOffense, 35, spellMeteorSwarm).
 		SetLevels(map[string]int{"mage": 45, "cleric": 53, "thief": 53, "warrior": 53}).
 		SetDamageNoun("meteors"))
 
-	r.Register(NewSpell("implode", 521, TargetCharOffense, 30, spellImplode).
+	r.Register(NewSpell("implode", 607, TargetCharOffense, 30, spellImplode).
 		SetLevels(map[string]int{"mage": 40, "cleric": 53, "thief": 53, "warrior": 53}).
 		SetDamageNoun("implosion"))
 
-	r.Register(NewSpell("disintegrate", 522, TargetCharOffense, 40, spellDisintegrate).
+	r.Register(NewSpell("disintegrate", 608, TargetCharOffense, 40, spellDisintegrate).
 		SetLevels(map[string]int{"mage": 45, "cleric": 53, "thief": 53, "warrior": 53}).
 		SetDamageNoun("disintegration"))
 

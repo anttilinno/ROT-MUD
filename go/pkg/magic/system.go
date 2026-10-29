@@ -202,7 +202,7 @@ func (m *MagicSystem) Cast(caster *types.Character, spellName string, targetArg 
 		m.handleLocateObject(caster, targetArg, caster.Level)
 	}
 
-	if success && spell.Slot == 12 { // Create food slot
+	if success && spell.Slot == SlotCreateFood {
 		m.handleCreateFood(caster, caster.Level)
 	}
 
