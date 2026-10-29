@@ -342,3 +342,34 @@ func (d *CommandDispatcher) cmdPray(ch *types.Character, args string) {
 		sp.Func(adept, adept.Level, ch)
 	}
 }
+
+// teleportRoom picks a random room teleport can land ch in (ROT
+// get_random_room): one ch may enter that isn't private, solitary or safe,
+// and for players not a law room.
+func (d *CommandDispatcher) teleportRoom(ch *types.Character) *types.Room {
+	if d.GameLoop == nil {
+		return nil
+	}
+	clan := 0
+	if ch.PCData != nil {
+		clan = ch.PCData.Clan
+	}
+	var rooms []*types.Room
+	for _, room := range d.GameLoop.Rooms {
+		f := room.Flags
+		if f.Has(types.RoomPrivate) || f.Has(types.RoomSolitary) || f.Has(types.RoomSafe) ||
+			(f.Has(types.RoomImpOnly) && ch.Trust < types.MaxLevel && ch.Level < types.MaxLevel) ||
+			(f.Has(types.RoomGodsOnly) && !ch.IsImmortal()) ||
+			(f.Has(types.RoomHeroesOnly) && ch.Level < types.LevelHero) ||
+			(f.Has(types.RoomNewbiesOnly) && ch.Level > 9 && ch.Level < types.LevelHero) ||
+			(!ch.IsImmortal() && room.Clan != 0 && clan != room.Clan) ||
+			(!ch.IsNPC() && f.Has(types.RoomLaw)) {
+			continue
+		}
+		rooms = append(rooms, room)
+	}
+	if len(rooms) == 0 {
+		return nil
+	}
+	return rooms[combat.NumberRange(0, len(rooms)-1)]
+}

@@ -1,6 +1,7 @@
 package magic
 
 import (
+	"slices"
 	"strings"
 
 	"rotmud/pkg/combat"
@@ -21,6 +22,12 @@ type WeatherControlFunc func(change int)
 
 // CharacterToRoomFunc moves a character to a room
 type CharacterToRoomFunc func(ch *types.Character, room *types.Room)
+
+// CharFinderFunc finds a character anywhere in the world by name
+type CharFinderFunc func(ch *types.Character, name string) *types.Character
+
+// RandomRoomFunc picks a random room ch may be teleported to
+type RandomRoomFunc func(ch *types.Character) *types.Room
 
 // RoomFinderFunc finds a room by vnum
 type RoomFinderFunc func(vnum int) *types.Room
@@ -60,6 +67,8 @@ type MagicSystem struct {
 	WeatherControl  WeatherControlFunc  // For control weather spell
 	CharacterToRoom CharacterToRoomFunc // For teleport/summon/gate spells
 	RoomFinder      RoomFinderFunc      // For finding rooms by vnum
+	CharFinder      CharFinderFunc      // For summon/gate (ROT get_char_world)
+	RandomRoom      RandomRoomFunc      // For teleport (ROT get_random_room)
 	PortalCreator   PortalCreatorFunc   // For portal/nexus spells
 	PetCreator      PetCreatorFunc      // For animate/resurrect/conjure spells
 	CorpseFinder    CorpseFinderFunc    // For finding corpses in room
@@ -74,9 +83,477 @@ func NewMagicSystem() *MagicSystem {
 	m := &MagicSystem{
 		Registry: DefaultSpells(),
 	}
-	// Spells that move characters need the system's hooks.
-	m.Registry.FindBySlot(SlotWordOfRecall).Func = m.spellWordOfRecall
+	// Spells that move characters or talk need the system's hooks.
+	for name, fn := range map[string]SpellFunc{
+		"word of recall": m.spellWordOfRecall,
+		"teleport":       m.spellTeleport,
+		"summon":         m.spellSummon,
+		"gate":           m.spellGate,
+		"faerie fog":     m.spellFaerieFog,
+		"mass invis":     m.spellMassInvis,
+		"cancellation":   m.spellCancellation,
+		"enchant weapon": m.spellEnchantWeapon,
+		"enchant armor":  m.spellEnchantArmor,
+		"detect poison":  m.spellDetectPoison,
+		"know alignment": m.spellKnowAlignment,
+	} {
+		m.Registry.FindByName(name).Func = fn
+	}
 	return m
+}
+
+// moveChar takes ch out of any fight and moves it to room with the given
+// departure and arrival messages for the rooms.
+func (m *MagicSystem) moveChar(ch *types.Character, room *types.Room, leave, arrive string) {
+	if ch.Fighting != nil {
+		combat.StopFighting(ch, true)
+	}
+	m.toRoom(ch, ch.Name+leave)
+	m.CharacterToRoom(ch, room)
+	m.toRoom(ch, ch.Name+arrive)
+}
+
+// spellTeleport sends the target to a random room (ROT spell_teleport).
+func (m *MagicSystem) spellTeleport(caster *types.Character, level int, target interface{}) bool {
+	victim, ok := target.(*types.Character)
+	if !ok || victim == nil || victim.InRoom == nil || m.RandomRoom == nil || m.CharacterToRoom == nil {
+		return false
+	}
+	if victim.InRoom.Flags.Has(types.RoomNoRecall) ||
+		(victim != caster && victim.Imm.Has(types.ImmSummon)) ||
+		(!caster.IsNPC() && victim.Fighting != nil) ||
+		(victim != caster && combat.SavesSpell(level-5, victim, types.DamOther)) {
+		return false
+	}
+	room := m.RandomRoom(victim)
+	if room == nil {
+		return false
+	}
+	if victim != caster {
+		m.send(victim, "You have been teleported!\r\n")
+	}
+	m.moveChar(victim, room, " vanishes!", " slowly fades into existence.")
+	return true
+}
+
+// refusesTravel reports whether a room bars summoning and gating.
+func refusesTravel(room *types.Room) bool {
+	return room.Flags.Has(types.RoomSafe) || room.Flags.Has(types.RoomPrivate) ||
+		room.Flags.Has(types.RoomSolitary) || room.Flags.Has(types.RoomNoRecall)
+}
+
+// spellSummon brings the named character to the caster (ROT spell_summon).
+// ROT's clan and shopkeeper checks are not ported.
+func (m *MagicSystem) spellSummon(caster *types.Character, level int, target interface{}) bool {
+	name, _ := target.(string)
+	if name == "" || caster.InRoom == nil || m.CharFinder == nil || m.CharacterToRoom == nil {
+		return false
+	}
+	victim := m.CharFinder(caster, name)
+	if victim == nil || victim == caster || victim.InRoom == nil ||
+		caster.InRoom.Flags.Has(types.RoomSafe) || refusesTravel(victim.InRoom) ||
+		(victim.IsNPC() && victim.Act.Has(types.ActAggressive)) ||
+		victim.Level >= level+3 ||
+		(!victim.IsNPC() && victim.Level >= types.LevelImmortal) ||
+		victim.Fighting != nil ||
+		(victim.IsNPC() && victim.Imm.Has(types.ImmSummon)) ||
+		(!victim.IsNPC() && victim.PlayerAct.Has(types.PlrNoSummon)) ||
+		(victim.IsNPC() && combat.SavesSpell(level, victim, types.DamOther)) {
+		return false
+	}
+	m.moveChar(victim, caster.InRoom, " disappears suddenly.", " arrives suddenly.")
+	m.send(victim, caster.Name+" has summoned you!\r\n")
+	return true
+}
+
+// spellGate takes the caster, and a pet beside them, to the named
+// character (ROT spell_gate). ROT's clan check is not ported.
+func (m *MagicSystem) spellGate(caster *types.Character, level int, target interface{}) bool {
+	name, _ := target.(string)
+	if name == "" || caster.InRoom == nil || m.CharFinder == nil || m.CharacterToRoom == nil {
+		return false
+	}
+	victim := m.CharFinder(caster, name)
+	if victim == nil || victim == caster || victim.InRoom == nil ||
+		refusesTravel(victim.InRoom) || caster.InRoom.Flags.Has(types.RoomNoRecall) ||
+		victim.Level >= level+3 ||
+		(!victim.IsNPC() && victim.Level >= types.LevelHero) ||
+		(victim.IsNPC() && victim.Imm.Has(types.ImmSummon)) ||
+		(victim.IsNPC() && combat.SavesSpell(level, victim, types.DamOther)) {
+		return false
+	}
+	pet := caster.Pet
+	travellers := []*types.Character{caster}
+	if pet != nil && pet.InRoom == caster.InRoom {
+		travellers = append(travellers, pet)
+	}
+	for _, ch := range travellers {
+		m.send(ch, "You step through a gate and vanish.\r\n")
+		m.moveChar(ch, victim.InRoom, " steps through a gate and vanishes.", " has arrived through a gate.")
+	}
+	return true
+}
+
+// toRoom sends msg to everyone awake in ch's room but ch.
+func (m *MagicSystem) toRoom(ch *types.Character, msg string) {
+	if ch.InRoom == nil {
+		return
+	}
+	for _, p := range ch.InRoom.People {
+		if p != ch && p.Position > types.PosSleeping {
+			m.send(p, msg+"\r\n")
+		}
+	}
+}
+
+// spellFaerieFog strips invisibility, hiding and sneaking from everyone in
+// the room who fails a save (ROT spell_faerie_fog).
+func (m *MagicSystem) spellFaerieFog(caster *types.Character, level int, target interface{}) bool {
+	if caster.InRoom == nil {
+		return false
+	}
+	m.toRoom(caster, caster.Name+" conjures a cloud of purple smoke.")
+	m.send(caster, "You conjure a cloud of purple smoke.\r\n")
+	for _, ich := range slices.Clone(caster.InRoom.People) {
+		if ich == caster || combat.SavesSpell(level, ich, types.DamOther) {
+			continue
+		}
+		RemoveAffectByType(ich, "invisibility")
+		RemoveAffectByType(ich, "mass invis")
+		RemoveAffectByType(ich, "sneak")
+		ich.AffectedBy.Remove(types.AffHide | types.AffInvisible | types.AffSneak)
+		ich.ShieldedBy.Remove(types.ShdInvisible)
+		m.toRoom(ich, ich.Name+" is revealed!")
+		m.send(ich, "You are revealed!\r\n")
+	}
+	return true
+}
+
+// spellMassInvis turns the caster's group in the room invisible for 24 hours
+// (ROT spell_mass_invis).
+func (m *MagicSystem) spellMassInvis(caster *types.Character, level int, target interface{}) bool {
+	if caster.InRoom == nil {
+		return false
+	}
+	for _, gch := range caster.InRoom.People {
+		if !sameGroup(gch, caster) || gch.IsAffected(types.AffInvisible) {
+			continue
+		}
+		m.toRoom(gch, gch.Name+" slowly fades out of existence.")
+		m.send(gch, "You slowly fade out of existence.\r\n")
+		AddAffect(gch, NewAffectWithBit("mass invis", level/2, 24, types.AffInvisible))
+	}
+	return true
+}
+
+// sameGroup reports whether a and b follow the same leader (ROM is_same_group).
+func sameGroup(a, b *types.Character) bool {
+	if a.Leader != nil {
+		a = a.Leader
+	}
+	if b.Leader != nil {
+		b = b.Leader
+	}
+	return a == b
+}
+
+// checkDispel tries to strip one spell's affects from victim, as ROT's
+// check_dispel: each failed attempt weakens the affect by a level.
+func (m *MagicSystem) checkDispel(level int, victim *types.Character, name string) bool {
+	for _, af := range victim.Affected.All() {
+		if af.Type != name {
+			continue
+		}
+		save := af.Level
+		if af.Duration == -1 {
+			save += 5 // permanent effects are very hard to dispel
+		}
+		if combat.NumberPercent() >= max(5, min(95, 50+(save-level)*5)) {
+			RemoveAffectByType(victim, name)
+			if sp := m.Registry.FindByName(name); sp != nil && sp.WearOff != "" {
+				m.send(victim, sp.WearOff+"\r\n")
+			}
+			return true
+		}
+		af.Level--
+	}
+	return false
+}
+
+// cancellationSpells are the spells cancellation strips, with the message
+// the room sees (ROT spell_cancellation).
+var cancellationSpells = []struct{ name, room string }{
+	{"armor", ""}, {"bless", ""},
+	{"blindness", " is no longer blinded."},
+	{"calm", " no longer looks so peaceful..."},
+	{"change sex", " looks more like themself again."},
+	{"charm person", " regains their free will."},
+	{"chill touch", " looks warmer."},
+	{"curse", ""}, {"detect evil", ""}, {"detect good", ""}, {"detect hidden", ""},
+	{"detect invis", ""}, {"detect hidden", ""}, {"detect magic", ""},
+	{"faerie fire", "'s outline fades."},
+	{"fly", " falls to the ground!"},
+	{"frenzy", " no longer looks so wild."},
+	{"giant strength", " no longer looks so mighty."},
+	{"haste", " is no longer moving so quickly."},
+	{"infravision", ""},
+	{"invisibility", " fades into existance."},
+	{"mass invis", " fades into existance."},
+	{"pass door", ""}, {"protection evil", ""}, {"protection good", ""},
+	{"sanctuary", "The white aura around $n's body vanishes."},
+	{"shield", "The shield protecting $n vanishes."},
+	{"sleep", ""},
+	{"slow", " is no longer moving so slowly."},
+	{"stone skin", "'s skin regains its normal texture."},
+	{"weaken", " looks stronger."},
+}
+
+// spellCancellation dispels a willing target's spells with no save; players
+// can't cancel mobs (but their charmed followers can cancel their master),
+// and mobs can't cancel players.
+func (m *MagicSystem) spellCancellation(caster *types.Character, level int, target interface{}) bool {
+	victim, ok := target.(*types.Character)
+	if !ok || victim == nil {
+		return false
+	}
+	level += 2
+	if (!caster.IsNPC() && victim.IsNPC() && !(caster.IsAffected(types.AffCharm) && caster.Master == victim)) ||
+		(caster.IsNPC() && !victim.IsNPC()) {
+		m.send(caster, "You failed, try dispel magic.\r\n")
+		return false
+	}
+
+	found := false
+	for _, c := range cancellationSpells {
+		if !m.checkDispel(level, victim, c.name) {
+			continue
+		}
+		found = true
+		switch {
+		case c.room == "":
+		case strings.Contains(c.room, "$n"):
+			m.toRoom(victim, strings.ReplaceAll(c.room, "$n", victim.Name))
+		default:
+			m.toRoom(victim, victim.Name+c.room)
+		}
+	}
+	return found
+}
+
+// spellEnchantArmor adds -1 AC to carried armour (-2 on an exceptional
+// roll); the more it is already enchanted the likelier it fails, is
+// disenchanted or evaporates (ROT spell_enchant_armor).
+func (m *MagicSystem) spellEnchantArmor(caster *types.Character, level int, target interface{}) bool {
+	obj, ok := target.(*types.Object)
+	if !ok || obj == nil {
+		return false
+	}
+	if obj.ItemType != types.ItemTypeArmor {
+		m.send(caster, "That isn't an armor.\r\n")
+		return false
+	}
+	if obj.IsWorn() {
+		m.send(caster, "The item must be carried to be enchanted.\r\n")
+		return false
+	}
+
+	fail := 25
+	acFound := false
+	for _, af := range obj.Affects.All() {
+		if af.Location == types.ApplyAC {
+			acFound = true
+			fail += 5 * af.Modifier * af.Modifier
+		} else {
+			fail += 20
+		}
+	}
+	fail -= level
+	if obj.ExtraFlags.Has(types.ItemBless) {
+		fail -= 15
+	}
+	if obj.ExtraFlags.Has(types.ItemGlow) {
+		fail -= 5
+	}
+	fail = max(5, min(fail, 85))
+
+	result := combat.NumberPercent()
+	if m.enchantMishap(caster, obj, result, fail, fail/3, "flares blindingly... and evaporates!") {
+		return true
+	}
+
+	added := -1
+	msg := " shimmers with a gold aura."
+	obj.ExtraFlags.Set(types.ItemMagic)
+	if result > 90-level/5 {
+		added, msg = -2, " glows a brillant gold!"
+		obj.ExtraFlags.Set(types.ItemGlow)
+	}
+	m.send(caster, obj.ShortDesc+msg+"\r\n")
+	m.toRoom(caster, obj.ShortDesc+msg)
+
+	if obj.Level < types.LevelHero {
+		obj.Level = min(types.LevelHero-1, obj.Level+1)
+	}
+	if !acFound {
+		obj.Affects.Add(types.NewAffect("enchant armor", level, -1, types.ApplyAC, added, 0))
+		return true
+	}
+	for _, af := range obj.Affects.All() {
+		if af.Location == types.ApplyAC {
+			af.Type = "enchant armor"
+			af.Modifier += added
+			af.Level = max(af.Level, level)
+		}
+	}
+	return true
+}
+
+// spellEnchantWeapon adds +1 hitroll and damroll to a carried weapon (+2 on
+// an exceptional roll), with the same risks as enchant armor (ROT
+// spell_enchant_weapon).
+func (m *MagicSystem) spellEnchantWeapon(caster *types.Character, level int, target interface{}) bool {
+	obj, ok := target.(*types.Object)
+	if !ok || obj == nil {
+		return false
+	}
+	if obj.ItemType != types.ItemTypeWeapon {
+		m.send(caster, "That isn't a weapon.\r\n")
+		return false
+	}
+	if obj.IsWorn() {
+		m.send(caster, "The item must be carried to be enchanted.\r\n")
+		return false
+	}
+
+	fail := 25
+	hitFound, damFound := false, false
+	for _, af := range obj.Affects.All() {
+		switch af.Location {
+		case types.ApplyHitroll:
+			hitFound = true
+			fail += 2 * af.Modifier * af.Modifier
+		case types.ApplyDamroll:
+			damFound = true
+			fail += 2 * af.Modifier * af.Modifier
+		default:
+			fail += 25
+		}
+	}
+	fail -= 3 * level / 2
+	if obj.ExtraFlags.Has(types.ItemBless) {
+		fail -= 15
+	}
+	if obj.ExtraFlags.Has(types.ItemGlow) {
+		fail -= 5
+	}
+	fail = max(5, min(fail, 95))
+
+	result := combat.NumberPercent()
+	if m.enchantMishap(caster, obj, result, fail, fail/2, "shivers violently and explodes!") {
+		return true
+	}
+
+	added := 1
+	msg := " glows blue."
+	obj.ExtraFlags.Set(types.ItemMagic)
+	if result > 100-level/5 {
+		added, msg = 2, " glows a brillant blue!"
+		obj.ExtraFlags.Set(types.ItemGlow)
+	}
+	m.send(caster, obj.ShortDesc+msg+"\r\n")
+	m.toRoom(caster, obj.ShortDesc+msg)
+
+	if obj.Level < types.LevelHero-1 {
+		obj.Level = min(types.LevelHero-1, obj.Level+1)
+	}
+	for _, loc := range []struct {
+		apply types.ApplyType
+		found bool
+	}{{types.ApplyDamroll, damFound}, {types.ApplyHitroll, hitFound}} {
+		if !loc.found {
+			obj.Affects.Add(types.NewAffect("enchant weapon", level, -1, loc.apply, added, 0))
+			continue
+		}
+		for _, af := range obj.Affects.All() {
+			if af.Location == loc.apply {
+				af.Type = "enchant weapon"
+				af.Modifier += added
+				af.Level = max(af.Level, level)
+				if af.Modifier > 4 {
+					obj.ExtraFlags.Set(types.ItemHum)
+				}
+			}
+		}
+	}
+	return true
+}
+
+// enchantMishap handles an enchant roll at or under fail: below fail/5 the
+// item is destroyed, below disenchant it loses every affect and flag,
+// otherwise nothing happens. It reports whether the roll failed.
+func (m *MagicSystem) enchantMishap(caster *types.Character, obj *types.Object, result, fail, disenchant int, destroyed string) bool {
+	switch {
+	case result < fail/5:
+		m.send(caster, obj.ShortDesc+" "+destroyed+"\r\n")
+		m.toRoom(caster, obj.ShortDesc+" "+destroyed)
+		if m.ExtractObject != nil {
+			m.ExtractObject(obj)
+		}
+	case result < disenchant:
+		m.send(caster, obj.ShortDesc+" glows brightly, then fades...oops.\r\n")
+		m.toRoom(caster, obj.ShortDesc+" glows brightly, then fades.")
+		obj.Affects.Clear()
+		obj.ExtraFlags = 0
+	case result <= fail:
+		m.send(caster, "Nothing seemed to happen.\r\n")
+	default:
+		return false
+	}
+	return true
+}
+
+// spellDetectPoison tells whether food or drink is poisoned.
+func (m *MagicSystem) spellDetectPoison(caster *types.Character, level int, target interface{}) bool {
+	obj, ok := target.(*types.Object)
+	if !ok || obj == nil {
+		return false
+	}
+	switch {
+	case obj.ItemType != types.ItemTypeDrinkCon && obj.ItemType != types.ItemTypeFood:
+		m.send(caster, "It doesn't look poisoned.\r\n")
+	case obj.Values[3] != 0:
+		m.send(caster, "You smell poisonous fumes.\r\n")
+	default:
+		m.send(caster, "It looks delicious.\r\n")
+	}
+	return true
+}
+
+// spellKnowAlignment describes the target's alignment.
+func (m *MagicSystem) spellKnowAlignment(caster *types.Character, level int, target interface{}) bool {
+	victim, ok := target.(*types.Character)
+	if !ok || victim == nil {
+		return false
+	}
+	var msg string
+	switch ap := victim.Alignment; {
+	case ap > 700:
+		msg = " has a pure and good aura."
+	case ap > 350:
+		msg = " is of excellent moral character."
+	case ap > 100:
+		msg = " is often kind and thoughtful."
+	case ap > -100:
+		msg = " doesn't have a firm moral commitment."
+	case ap > -350:
+		msg = " lies to their friends."
+	case ap > -700:
+		msg = " is a black-hearted murderer."
+	default:
+		msg = " is the embodiment of pure evil!."
+	}
+	m.send(caster, victim.Name+msg+"\r\n")
+	return true
 }
 
 // spellWordOfRecall sends the target to their bound recall room (`bind`), or
@@ -202,7 +679,7 @@ func (m *MagicSystem) Cast(caster *types.Character, spellName string, targetArg 
 		m.handleLocateObject(caster, targetArg, caster.Level)
 	}
 
-	if success && spell.Slot == 12 { // Create food slot
+	if success && spell.Slot == SlotCreateFood {
 		m.handleCreateFood(caster, caster.Level)
 	}
 
@@ -298,6 +775,9 @@ type TargetFinder func(ch *types.Character, name string, offensive bool) interfa
 func (m *MagicSystem) resolveTarget(caster *types.Character, spell *Spell, arg string, findTarget TargetFinder) (interface{}, string) {
 	switch spell.Target {
 	case TargetIgnore:
+		if arg != "" {
+			return arg, "" // summon and gate read a name (ROT target_name)
+		}
 		return nil, ""
 
 	case TargetCharSelf:

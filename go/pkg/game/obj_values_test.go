@@ -34,3 +34,22 @@ func TestSpawnedObjectValues(t *testing.T) {
 		t.Errorf("furniture 11615 values = %v", throne.Values)
 	}
 }
+
+// Every spell named on a potion, scroll, wand, staff or pill is registered.
+// Quest pill is left out: there are no quest points to give.
+func TestItemSpellsRegistered(t *testing.T) {
+	world, err := loader.NewAreaLoader("../../data/areas").LoadAll()
+	if err != nil {
+		t.Fatalf("load world: %v", err)
+	}
+	for vnum, tmpl := range world.ObjTemplates {
+		if tmpl.Magic == nil {
+			continue
+		}
+		for _, name := range tmpl.Magic.Spells {
+			if name != "quest pill" && spellSlot(name) == 0 {
+				t.Errorf("object %d: spell %q is not registered", vnum, name)
+			}
+		}
+	}
+}

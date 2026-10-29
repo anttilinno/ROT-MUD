@@ -771,3 +771,142 @@ func TestThiefSpellLevels(t *testing.T) {
 		t.Error("thieves should not get fireball")
 	}
 }
+
+// Items store spells by slot, so two spells sharing a slot make a potion of
+// one cast the other (cure critical potions cast call lightning).
+func TestSpellSlotsUnique(t *testing.T) {
+	seen := map[int]string{}
+	for _, sp := range DefaultSpells().All() {
+		if other, ok := seen[sp.Slot]; ok {
+			t.Errorf("slot %d shared by %q and %q", sp.Slot, other, sp.Name)
+		}
+		seen[sp.Slot] = sp.Name
+	}
+}
+
+// Enchanting a weapon adds hitroll and damroll; enchanting it again raises
+// the same two affects instead of adding more.
+func TestEnchantWeapon(t *testing.T) {
+	m := NewMagicSystem()
+	enchant := m.Registry.FindByName("enchant weapon").Func
+	mage := types.NewCharacter("Mage")
+	sword := types.NewObject(1, "sword", types.ItemTypeWeapon)
+
+	total := 0
+	for i := 0; i < 50 && total < 2; i++ {
+		enchant(mage, 60, sword)
+		hit, dam := 0, 0
+		for _, af := range sword.Affects.All() {
+			switch af.Location {
+			case types.ApplyHitroll:
+				hit += af.Modifier
+			case types.ApplyDamroll:
+				dam += af.Modifier
+			}
+		}
+		if hit != dam || sword.Affects.Len() > 2 {
+			t.Fatalf("hit %d dam %d with %d affects, want equal bonuses on two affects", hit, dam, sword.Affects.Len())
+		}
+		total = hit
+	}
+	if total < 2 || !sword.ExtraFlags.Has(types.ItemMagic) {
+		t.Errorf("after two enchants hitroll = %d, magic = %v", total, sword.ExtraFlags.Has(types.ItemMagic))
+	}
+}
+
+// Cancellation strips a player's spells but won't touch a mob.
+func TestCancellation(t *testing.T) {
+	m := NewMagicSystem()
+	cancel := m.Registry.FindByName("cancellation").Func
+	caster, friend := types.NewCharacter("Caster"), types.NewCharacter("Friend")
+
+	for i := 0; i < 20; i++ { // each try fails 5% of the time
+		AddAffect(friend, NewAffect("armor", 1, 10, types.ApplyAC, -20))
+		if cancel(caster, 60, friend) {
+			break
+		}
+	}
+	if IsAffectedBy(friend, "armor") || friend.Armor[types.ACPierce] != 0 {
+		t.Error("cancellation left armor on the target")
+	}
+
+	mob := types.NewNPC(1, "mob", 1)
+	AddAffect(mob, NewAffect("armor", 1, 10, types.ApplyAC, -20))
+	if cancel(caster, 60, mob) || !IsAffectedBy(mob, "armor") {
+		t.Error("a player cancelled a mob's spells")
+	}
+}
+
+// Change sex shifts sex by its affect and restores it when the affect ends.
+func TestChangeSexAffect(t *testing.T) {
+	ch := types.NewCharacter("Pat")
+	ch.Sex = types.SexMale
+	af := NewAffect("change sex", 10, 20, types.ApplySex, 1)
+	AddAffect(ch, af)
+	if ch.Sex != types.SexFemale {
+		t.Errorf("sex = %v, want female", ch.Sex)
+	}
+	RemoveAffect(ch, af)
+	if ch.Sex != types.SexMale {
+		t.Errorf("sex = %v after wear-off, want male", ch.Sex)
+	}
+}
+
+// Bless at level 60 is ROT's: +7 hitroll and -7 saves for 66 hours.
+func TestBless(t *testing.T) {
+	ch := types.NewCharacter("Newbie")
+	if !spellBless(ch, 60, ch) {
+		t.Fatal("bless failed")
+	}
+	if ch.HitRoll != 7 || ch.Saves != -7 {
+		t.Errorf("hitroll %d saves %d, want 7 and -7", ch.HitRoll, ch.Saves)
+	}
+	for _, af := range ch.Affected.All() {
+		if af.Duration != 66 {
+			t.Errorf("%v lasts %d hours, want 66", af.Location, af.Duration)
+		}
+	}
+}
+
+// Teleport, summon and gate move characters through the system's hooks.
+func TestTravelSpellsMove(t *testing.T) {
+	m := NewMagicSystem()
+	here, there := types.NewRoom(1, "here", "here"), types.NewRoom(2, "there", "there")
+	mage, friend := types.NewCharacter("Mage"), types.NewCharacter("Friend")
+	mage.Level, friend.Level = 30, 10
+	move := func(ch *types.Character, room *types.Room) {
+		if ch.InRoom != nil {
+			ch.InRoom.RemovePerson(ch)
+		}
+		room.AddPerson(ch)
+		ch.InRoom = room
+	}
+	m.CharacterToRoom = move
+	m.RandomRoom = func(*types.Character) *types.Room { return there }
+	m.CharFinder = func(_ *types.Character, name string) *types.Character {
+		if name == "friend" {
+			return friend
+		}
+		return nil
+	}
+	cast := func(spell string, target interface{}) bool {
+		return m.Registry.FindByName(spell).Func(mage, 30, target)
+	}
+
+	move(mage, here)
+	move(friend, there)
+	if !cast("teleport", mage) || mage.InRoom != there {
+		t.Error("teleport did not move the caster")
+	}
+	move(mage, here)
+	if !cast("gate", "friend") || mage.InRoom != there {
+		t.Error("gate did not take the caster to the target")
+	}
+	move(mage, here)
+	if !cast("summon", "friend") || friend.InRoom != here {
+		t.Error("summon did not bring the target")
+	}
+	if cast("summon", "nobody") {
+		t.Error("summoned someone who doesn't exist")
+	}
+}
