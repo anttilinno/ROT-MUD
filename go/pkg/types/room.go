@@ -183,8 +183,10 @@ func (r *Room) AddPerson(ch *Character) {
 	r.People = append(r.People, ch)
 }
 
-// RemovePerson removes a character from the room
+// RemovePerson removes a character from the room. Leaving a room gets
+// them off any furniture, like ROT char_from_room.
 func (r *Room) RemovePerson(ch *Character) {
+	ch.On = nil
 	for i, p := range r.People {
 		if p == ch {
 			r.People = append(r.People[:i], r.People[i+1:]...)
@@ -198,8 +200,14 @@ func (r *Room) AddObject(obj *Object) {
 	r.Objects = append(r.Objects, obj)
 }
 
-// RemoveObject removes an object from the room floor
+// RemoveObject removes an object from the room floor. Anyone using it as
+// furniture is now on the floor, like ROT obj_from_room.
 func (r *Room) RemoveObject(obj *Object) {
+	for _, ch := range r.People {
+		if ch.On == obj {
+			ch.On = nil
+		}
+	}
 	for i, o := range r.Objects {
 		if o == obj {
 			r.Objects = append(r.Objects[:i], r.Objects[i+1:]...)

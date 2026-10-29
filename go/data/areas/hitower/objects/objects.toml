@@ -933,6 +933,13 @@ extra_flags = ["magic"]
   location = "saves"
   modifier = -1
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 1366
 keywords = ["potion", "blue"]

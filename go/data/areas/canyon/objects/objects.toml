@@ -18,6 +18,13 @@ extra_flags = ["bless"]
   location = "int"
   modifier = 1
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 9202
 keywords = ["breastplate", "stoney", "breast", "plate"]

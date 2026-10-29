@@ -2374,10 +2374,8 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 			// ROM show_char_to_char_0: an NPC at its default position shows its long description
 			if char.IsNPC() && char.LongDesc != "" && char.Position == char.DefaultPos {
 				d.send(ch, strings.TrimRight(char.LongDesc, "\r\n")+"\r\n")
-			} else if char.IsNPC() && char.ShortDesc != "" {
-				d.send(ch, fmt.Sprintf("%s is here.\r\n", char.ShortDesc))
 			} else {
-				d.send(ch, fmt.Sprintf("%s is here.\r\n", char.Name))
+				d.send(ch, roomDisplayName(char)+positionPhrase(char, ch)+"\r\n")
 			}
 		}
 	}
@@ -2388,6 +2386,55 @@ func (d *CommandDispatcher) doLook(ch *types.Character, args string) {
 	for _, line := range lines {
 		d.send(ch, line+"\r\n")
 	}
+}
+
+func roomDisplayName(ch *types.Character) string {
+	if ch.IsNPC() && ch.ShortDesc != "" {
+		return ch.ShortDesc
+	}
+	return ch.Name
+}
+
+// positionPhrase is how victim is shown in a room to viewer, including the
+// furniture they are on. Based on ROT show_char_to_char_0.
+func positionPhrase(victim, viewer *types.Character) string {
+	on := func(verb string, at, onFlag int) string {
+		if victim.On == nil {
+			return " is " + verb + " here."
+		}
+		return " is " + verb + " " + furnitureVerb(victim.On, at, onFlag) + " " + victim.On.ShortDesc + "."
+	}
+	switch victim.Position {
+	case types.PosDead:
+		return " is DEAD!!"
+	case types.PosMortal:
+		return " is mortally wounded."
+	case types.PosIncap:
+		return " is incapacitated."
+	case types.PosStunned:
+		return " is lying here stunned."
+	case types.PosSleeping:
+		return on("sleeping", types.SleepAt, types.SleepOn)
+	case types.PosResting:
+		return on("resting", types.RestAt, types.RestOn)
+	case types.PosSitting:
+		return on("sitting", types.SitAt, types.SitOn)
+	case types.PosFighting:
+		switch f := victim.Fighting; {
+		case f == nil:
+			return " is here, fighting thin air??"
+		case f == viewer:
+			return " is here, fighting YOU!"
+		case f.InRoom == victim.InRoom:
+			return " is here, fighting " + roomDisplayName(f) + "."
+		default:
+			return " is here, fighting someone who left??"
+		}
+	}
+	if victim.On == nil {
+		return " is here."
+	}
+	return " is standing " + furnitureVerb(victim.On, types.StandAt, types.StandOn) + " " + victim.On.ShortDesc + "."
 }
 
 // lookAtCharacter displays information about a character

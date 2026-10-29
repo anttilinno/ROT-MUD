@@ -1,6 +1,6 @@
 """Restore object values in go/data/areas objects TOML from ROT .are files.
 
-Writes [objects.container|light|magic|drink|food|money|portal] sections from
+Writes [objects.container|light|magic|drink|food|money|portal|furniture] sections from
 the ROT value line (v0..v4), skipping objects that already have that section.
 usage: python3 -I objvalues.py <rot/area dir> <go/data/areas dir> [--write]
 """
@@ -8,6 +8,7 @@ import glob, json, os, re, sys
 from collections import Counter
 
 CONT = {"A": "closeable", "B": "pickproof", "C": "closed", "D": "locked"}
+FURN = dict(zip("ABCDEFGHIJKLMNO", [f"{v}_{p}" for v in ("stand", "sit", "rest", "sleep", "put") for p in ("at", "on", "in")]))
 
 
 def tok(line):
@@ -48,6 +49,9 @@ def section(typ, v):
         return "food", {"full": num(v[0]), "hunger": num(v[1]), "poisoned": num(v[3]) != 0 or v[3].isalpha()}
     if typ == "money":
         return "money", {"amount": num(v[0]) + num(v[1]) * 100}
+    if typ == "furniture":
+        flags = sorted(FURN[c] for c in letters(v[2]) if c in FURN)
+        return "furniture", {"max_people": num(v[0]), "max_weight": num(v[1]), "flags": flags, "heal_bonus": num(v[3]), "mana_bonus": num(v[4])}
     if typ == "portal":
         return "portal", {"charges": num(v[0]), "dest_vnum": num(v[3])}
     return None, None

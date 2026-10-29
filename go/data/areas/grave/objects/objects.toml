@@ -145,6 +145,13 @@ The dusty bones are almost brown.  It must have been buried for a very long
 time.
 A dusty skeleton is in an excellent condition."""
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 3611
 keywords = ["amethyst", "gem"]

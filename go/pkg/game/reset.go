@@ -404,6 +404,10 @@ func (r *ResetSystem) CreateObjFromTemplate(vnum int) *types.Object {
 		obj.Cost = tmpl.Money.Amount // coin piles carry their copper in Cost
 	}
 
+	if f := tmpl.Furniture; f != nil {
+		obj.Values = [5]int{f.MaxPeople, f.MaxWeight, types.FurnitureFlagBits(f.Flags), f.HealBonus, f.ManaBonus}
+	}
+
 	if tmpl.Light != nil {
 		obj.Values[2] = tmpl.Light.Duration
 	}

@@ -205,6 +205,7 @@ type ObjectData struct {
 	Drink      *DrinkData      `toml:"drink"` // drink containers and fountains
 	Food       *FoodData       `toml:"food"`
 	Money      *MoneyData      `toml:"money"`
+	Furniture  *FurnitureData  `toml:"furniture"`
 	Affects    []AffectData    `toml:"affects"`
 	ExtraDescs []ExtraDescData `toml:"extra_descs"`
 }
@@ -240,6 +241,17 @@ type LightData struct {
 type PortalData struct {
 	DestVnum int `toml:"dest_vnum"`
 	Charges  int `toml:"charges"`
+}
+
+// FurnitureData is ROT's furniture value layout: v0 max people, v1 max
+// weight, v2 flags (stand/sit/rest/sleep/put at/on/in), v3 heal and v4 mana
+// regen bonus in percent of 90.
+type FurnitureData struct {
+	MaxPeople int      `toml:"max_people"`
+	MaxWeight int      `toml:"max_weight"`
+	Flags     []string `toml:"flags"`
+	HealBonus int      `toml:"heal_bonus"`
+	ManaBonus int      `toml:"mana_bonus"`
 }
 
 type AffectData struct {

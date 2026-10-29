@@ -475,6 +475,13 @@ level = 0
 weight = 0
 cost = 0
 
+  [objects.furniture]
+  max_people = 1
+  max_weight = 40
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 250
+  mana_bonus = 250
+
 [[objects]]
 vnum = 14526
 keywords = ["basket", "fruit"]
@@ -535,6 +542,13 @@ level = 0
 weight = 500
 cost = 0
 
+  [objects.furniture]
+  max_people = 2
+  max_weight = 40
+  flags = ["put_in", "rest_in", "sit_in", "sleep_in", "stand_in"]
+  heal_bonus = 400
+  mana_bonus = 400
+
 [[objects]]
 vnum = 14530
 keywords = ["wooden", "table"]
@@ -544,6 +558,13 @@ item_type = "furniture"
 level = 0
 weight = 500
 cost = 0
+
+  [objects.furniture]
+  max_people = 10
+  max_weight = 40
+  flags = ["put_on", "rest_on", "sit_on", "stand_on"]
+  heal_bonus = 400
+  mana_bonus = 400
 
 [[objects]]
 vnum = 14531
@@ -565,6 +586,13 @@ The upturned lips signifies the possession of secret knowledge."""
 keywords = ["secret", "knowledge"]
 description = """
 This portrait is of Siren, the Goddess of the Mist."""
+
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
 
 [[objects]]
 vnum = 14532
