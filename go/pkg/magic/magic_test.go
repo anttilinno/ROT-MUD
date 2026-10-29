@@ -851,3 +851,19 @@ func TestChangeSexAffect(t *testing.T) {
 		t.Errorf("sex = %v after wear-off, want male", ch.Sex)
 	}
 }
+
+// Bless at level 60 is ROT's: +7 hitroll and -7 saves for 66 hours.
+func TestBless(t *testing.T) {
+	ch := types.NewCharacter("Newbie")
+	if !spellBless(ch, 60, ch) {
+		t.Fatal("bless failed")
+	}
+	if ch.HitRoll != 7 || ch.Saves != -7 {
+		t.Errorf("hitroll %d saves %d, want 7 and -7", ch.HitRoll, ch.Saves)
+	}
+	for _, af := range ch.Affected.All() {
+		if af.Duration != 66 {
+			t.Errorf("%v lasts %d hours, want 66", af.Location, af.Duration)
+		}
+	}
+}

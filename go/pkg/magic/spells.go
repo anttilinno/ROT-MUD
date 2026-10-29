@@ -773,15 +773,14 @@ func spellBless(caster *types.Character, level int, target interface{}) bool {
 		return false
 	}
 
-	if IsAffectedBy(victim, "bless") {
+	if victim.Position == types.PosFighting || IsAffectedBy(victim, "bless") {
 		return false
 	}
 
-	af := NewAffect("bless", level, level/2+6, types.ApplyHitroll, level/8+1)
-	AddAffect(victim, af)
-
-	af2 := NewAffect("bless", level, level/2+6, types.ApplySaves, -(level/8 + 1))
-	AddAffect(victim, af2)
+	// ROT spell_bless: two separate affects (AddAffect would merge the second
+	// into the first, doubling the duration and dropping the save bonus).
+	victim.AddAffect(NewAffect("bless", level, 6+level, types.ApplyHitroll, level/8))
+	victim.AddAffect(NewAffect("bless", level, 6+level, types.ApplySaves, -(level / 8)))
 
 	return true
 }
