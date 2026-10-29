@@ -61,6 +61,13 @@ town.
 					The Thain
 					Peacekeeper of the Shire"""
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 1103
 keywords = ["pipeweed", "bread"]
@@ -357,3 +364,10 @@ level = 0
 weight = 0
 cost = 0
 extra_flags = ["nonmetal", "melt_drop"]
+
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0

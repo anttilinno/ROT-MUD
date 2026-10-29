@@ -126,6 +126,13 @@ Tattered black felt lines the inside of the coffin.  Dark splotches of dried
 blood harden the felt in places.  Strips of felt, obviously rent by sharp
 claws, hang loosely revealing the bare pine underneath."""
 
+  [objects.furniture]
+  max_people = 2
+  max_weight = 500
+  flags = ["put_in", "rest_in", "sit_in", "sleep_in", "stand_in"]
+  heal_bonus = 110
+  mana_bonus = 120
+
 [[objects]]
 vnum = 11606
 keywords = ["darkness"]
@@ -163,6 +170,13 @@ description = """
 Upon closer examination, you notice that the altar is made of a smooth,
 slightly offwhite substance similar to bone.."""
 
+  [objects.furniture]
+  max_people = 2
+  max_weight = 3000
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 115
+  mana_bonus = 115
+
 [[objects]]
 vnum = 11608
 keywords = ["bloody", "black", "obsidian", "altar"]
@@ -181,6 +195,13 @@ Streamers of wet blood spatter the obsidian altar.  The blood seems to
 blend in with the black stone, giving it the appearance of some twisted
 form of red-streaked marble."""
 
+  [objects.furniture]
+  max_people = 2
+  max_weight = 3000
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 85
+  mana_bonus = 85
+
 [[objects]]
 vnum = 11609
 keywords = ["gleaming", "white", "throne"]
@@ -198,6 +219,13 @@ description = """
 It appears to be made of some weird glowing substance.. strangely like
 polished bone."""
 
+  [objects.furniture]
+  max_people = 3
+  max_weight = 1500
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 100
+  mana_bonus = 100
+
 [[objects]]
 vnum = 11610
 keywords = ["forbidding", "dark", "black", "throne"]
@@ -214,6 +242,13 @@ keywords = ["forbidding", "dark", "black", "throne"]
 description = """
 The throne seems to be made of a polished black substance similar to
 blackened bone."""
+
+  [objects.furniture]
+  max_people = 3
+  max_weight = 1500
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 100
+  mana_bonus = 100
 
 [[objects]]
 vnum = 11611
@@ -275,6 +310,13 @@ decide which way they should point and made arrows in all directions just
 to be safe.  Which makes it pretty useless as a signpost.. but it looks
 like a mighty comfy bench anyway :)"""
 
+  [objects.furniture]
+  max_people = 4
+  max_weight = 2000
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 100
+  mana_bonus = 100
+
 [[objects]]
 vnum = 11614
 keywords = ["leather", "couch"]
@@ -293,6 +335,13 @@ The couch seems to hum continuously.  Under your scrutiny, you think you
 hear it mutter something about "..neuro deficiency leading to..", but
 maybe it's just your imagination..  Need a seat?"""
 
+  [objects.furniture]
+  max_people = 2
+  max_weight = 2000
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 100
+  mana_bonus = 100
+
 [[objects]]
 vnum = 11615
 keywords = ["neon", "green", "throne"]
@@ -304,6 +353,13 @@ weight = 0
 cost = 0
 extra_flags = ["glow"]
 
+  [objects.furniture]
+  max_people = 2
+  max_weight = 2000
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 100
+  mana_bonus = 100
+
 [[objects]]
 vnum = 11616
 keywords = ["parrot", "perch"]
@@ -313,6 +369,13 @@ item_type = "furniture"
 level = 0
 weight = 0
 cost = 0
+
+  [objects.furniture]
+  max_people = 3
+  max_weight = 3000
+  flags = ["rest_on", "sit_on"]
+  heal_bonus = 100
+  mana_bonus = 100
 
 [[objects]]
 vnum = 11617
@@ -2720,6 +2783,13 @@ weight = 70
 cost = 5500
 wear_flags = ["take", "hold"]
 extra_flags = ["dark", "magic"]
+
+  [objects.furniture]
+  max_people = 2
+  max_weight = 1200
+  flags = ["put_on", "rest_on", "sit_on", "sleep_on", "stand_on"]
+  heal_bonus = 115
+  mana_bonus = 115
 
 [[objects]]
 vnum = 11697

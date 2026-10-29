@@ -888,6 +888,13 @@ weight = 2
 cost = 1000
 wear_flags = ["take"]
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 16038
 keywords = ["carcass", "rat", "dead"]

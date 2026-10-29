@@ -28,4 +28,9 @@ func TestSpawnedObjectValues(t *testing.T) {
 	if torch.ItemType != types.ItemTypeLight || torch.Values[2] != 50 {
 		t.Errorf("torch values = %v, want 50 hours", torch.Values)
 	}
+	throne := r.CreateObjFromTemplate(11615) // ROT divsouls.are: 2 2000 BEHKN 100 100
+	if throne.ItemType != types.ItemTypeFurniture ||
+		throne.Values != [5]int{2, 2000, types.StandOn | types.SitOn | types.RestOn | types.SleepOn | types.PutOn, 100, 100} {
+		t.Errorf("furniture 11615 values = %v", throne.Values)
+	}
 }

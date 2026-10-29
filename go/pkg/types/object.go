@@ -150,3 +150,41 @@ func (o *Object) ContentsWeight() int {
 func (o *Object) TotalWeight() int {
 	return o.Weight + o.ContentsWeight()
 }
+
+// Furniture flags (furniture v2), from ROT merc.h STAND_AT..PUT_IN.
+const (
+	StandAt = 1 << iota
+	StandOn
+	StandIn
+	SitAt
+	SitOn
+	SitIn
+	RestAt
+	RestOn
+	RestIn
+	SleepAt
+	SleepOn
+	SleepIn
+	PutAt
+	PutOn
+	PutIn
+)
+
+var furnitureFlagNames = []string{
+	"stand_at", "stand_on", "stand_in", "sit_at", "sit_on", "sit_in",
+	"rest_at", "rest_on", "rest_in", "sleep_at", "sleep_on", "sleep_in",
+	"put_at", "put_on", "put_in",
+}
+
+// FurnitureFlagBits converts TOML furniture flag names to v2 bits.
+func FurnitureFlagBits(flags []string) int {
+	bits := 0
+	for _, f := range flags {
+		for i, name := range furnitureFlagNames {
+			if f == name {
+				bits |= 1 << i
+			}
+		}
+	}
+	return bits
+}

@@ -1398,6 +1398,13 @@ weight = 40
 cost = 600
 wear_flags = ["take"]
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 9589
 keywords = ["crop", "riding"]

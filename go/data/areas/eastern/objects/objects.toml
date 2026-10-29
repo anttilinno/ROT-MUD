@@ -197,6 +197,13 @@ weight = 120
 cost = 20
 wear_flags = ["take"]
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 5012
 keywords = ["stakes"]
@@ -208,6 +215,13 @@ weight = 60
 cost = 20
 wear_flags = ["take"]
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 5013
 keywords = ["map"]
@@ -218,6 +232,13 @@ level = 0
 weight = 10
 cost = 5
 wear_flags = ["take"]
+
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
 
 [[objects]]
 vnum = 5014

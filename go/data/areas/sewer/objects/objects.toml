@@ -700,6 +700,13 @@ extra_flags = ["magic", "anti_good"]
   location = "damroll"
   modifier = 2
 
+  [objects.furniture]
+  max_people = 9
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 7307
 keywords = ["skull", "dragonhelm", "red"]

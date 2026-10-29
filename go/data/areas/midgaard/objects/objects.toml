@@ -1731,6 +1731,13 @@ It is a quite heavy but very comfortable bench.  It is placed with its front
 towards the river so you can sit and watch the river and the houses on the
 other side."""
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 3135
 keywords = ["fountain", "water"]
@@ -1823,6 +1830,13 @@ The letter is written in a bold and feminine Carolinian hand.
 
     Diana the Receptionist"""
 
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
+
 [[objects]]
 vnum = 3140
 keywords = ["notice", "liquidation", "bank"]
@@ -1846,6 +1860,13 @@ The letter is written in a reserved and dignified Spencer hand.
         no longer required.
 
     Midgaard City Bank"""
+
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
 
 [[objects]]
 vnum = 3150
@@ -3411,6 +3432,13 @@ The sign reads:
 
         {BYou may now use the {Rdonate{x command to send donations{x
         {Bdirectly to the donation pit from anywhere in the realm.{x"""
+
+  [objects.furniture]
+  max_people = 0
+  max_weight = 0
+  flags = []
+  heal_bonus = 0
+  mana_bonus = 0
 
 [[objects]]
 vnum = 3381
